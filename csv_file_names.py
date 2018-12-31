@@ -54,11 +54,11 @@ def create_csv():
             while index_dif < len(file):
                 file_string += str(index_dif + 1) + "\t" + file[index_dif]
                 if index_dif == len(file) - 1:
-                	file_string += "\t" + file[index_dif] + ".html"
+                	file_string += "\t" + "_".join(file) + ".html"
                 else:
                     file_string += ("\n" + str(index_dif + 2) +
                                     "\tAbout the dir: " + file[index_dif] +
-                                    "\t" + file[index_dif].strip(".") +
+                                    "\t" + "_".join(file[:index_dif + 1]) + "_" + file[index_dif] +
                                     ".html")
                 file_string += "\n"
                 index_dif += 1

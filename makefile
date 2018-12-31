@@ -1,12 +1,12 @@
 # Need to export as ENV var
 export TEMPLATE_DIR = templates
-# PYTHONFILES = $(shell find ../NYCOpenRecords -name '*.py')
-FILES = $(shell find ../NYCOpenRecords \( -name '*.py' -or -name '*.js' -or -name '*.yml' -or -name '*.sh' \))
+CODE_FILES = $(shell find ../NYCOpenRecords \( -name '*.py' -or -name '*.js' -or -name '*.yml' -or -name '*.sh' \))
 PTML_DIR = html_src
 UTILS_DIR = utils
 MENU_INP = $(TEMPLATE_DIR)/menu_input.txt
 SITE_OUTLINE = $(TEMPLATE_DIR)/site_struct.txt
 NAV_BAR = $(TEMPLATE_DIR)/navbar.txt
+PTML_TEMPL = $(TEMPLATE_DIR)/template.ptml
 
 INCS = $(NAV_BAR) $(TEMPLATE_DIR)/head.txt
 
@@ -19,6 +19,10 @@ HTMLFILES = $(shell ls $(PTML_DIR)/*.ptml | sed -e 's/.ptml/.html/' | sed -e 's/
 	$(UTILS_DIR)/html_include.awk <$< >$@
 	git add $@
 
+# update our submodules:
+submods:
+	git submodule foreach 'git pull origin master'
+
 website: $(INCS) $(HTMLFILES)
 	-git commit -a 
 	git pull origin master
@@ -29,17 +33,17 @@ local: $(HTMLFILES)
 clean:
 	touch $(PTML_DIR)/*.ptml; make local
 
-menu_inp: $(FILES)
-	echo $(FILES) > $(MENU_INP)
+menu_inp: $(CODE_FILES)
+	echo $(CODE_FILES) > $(MENU_INP)
 
 site_outline: menu_inp
 	python3 csv_file_names.py > $(SITE_OUTLINE)
 
 menu: site_outline
-	python3 $(UTILS_DIR)/create_menu.py $(SITE_OUTLINE) $(NAV_BAR)
+	python3 $(UTILS_DIR)/create_menu.py $(SITE_OUTLINE) > $(NAV_BAR)
 
-ptml_files: site_outline
-	python3 $(UTILS_DIR)/create_pages.py $(SITE_OUTLINE) $(TEMPLATE_DIR)/template.ptml $(PTML_DIR)
+ptml_files: site_outline $(PTML_TEMPL) $(SITE_OUTLINE)
+	python3 $(UTILS_DIR)/create_pages.py $(SITE_OUTLINE) $(PTML_TEMPL) $(PTML_DIR)
 
 site_struct: menu ptml_files
 	git add $(PTML_DIR)/*.ptml

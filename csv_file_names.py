@@ -37,14 +37,14 @@ def check_directories(lst1, lst2):
 def create_csv():
     # menu_file = open("html_menu.txt", "w")
     file_names = read_file_names()
-    file_string = str(0) + "\tNYCOpenDocs\t\tNYCDocs\n"
-    file_string += str(1) + "\tHome\tindex.html\t\tglyphicon-home\n"
+    output = str(0) + "\tNYCOpenDocs\t\tNYCDocs\n"
+    output += str(1) + "\tHome\tindex.html\t\tglyphicon-home\n"
     current_dir = []
     # loop through the file names
     for file in file_names:
         # if file is a string, it's not in a sub directory
         if isinstance(file, str):
-            file_string += str(1) + "\t" + file + ".html\n"
+            output += str(1) + "\t" + file + ".html\n"
             current_dir = []
         # otherwise, check the directory paths
         # number of tabs = the index we start at that was
@@ -52,20 +52,20 @@ def create_csv():
         else:
             index_dif = check_directories(current_dir, file)
             while index_dif < len(file):
-                file_string += str(index_dif + 1) + "\t" + file[index_dif]
+                output += str(index_dif + 1) + "\t" + file[index_dif]
                 if index_dif == len(file) - 1:
-                	file_string += "\t" + "_".join(file) + ".html"
+                	output += "\t" + "_".join(file) + ".html"
                 else:
-                    file_string += ("\n" + str(index_dif + 2) +
-                                    "\tAbout the dir: " + file[index_dif] +
-                                    "\t" + "_".join(file[:index_dif + 1]) + "_" + file[index_dif] +
-                                    ".html")
-                file_string += "\n"
+                    output += ("\n" + str(index_dif + 2) +
+                               "\tAbout the directory '" + file[index_dif] + "'" +
+                               "\t" + "_".join(file[:index_dif + 1]) + "_" + file[index_dif] +
+                               ".html")
+                output += "\n"
                 index_dif += 1
             current_dir = file
-    # menu_file.write(file_string)
+    # menu_file.write(output)
     # menu_file.close()
-    sys.stdout.write(file_string)
+    sys.stdout.write(output)
 
 
 def main():

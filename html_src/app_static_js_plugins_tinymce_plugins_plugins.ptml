@@ -3,7 +3,7 @@
     <head>
 <!--include head.txt -->
         <title>
-            About the dir: plugins
+            About the directory 'plugins'
         </title>
     </head>
 
@@ -19,7 +19,7 @@
                     </figcaption>
                 </figure>
                 <h1>
-                    About the dir: plugins
+                    About the directory 'plugins'
                 </h1>
 
                 <details>

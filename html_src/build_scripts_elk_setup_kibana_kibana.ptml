@@ -3,7 +3,7 @@
     <head>
 <!--include head.txt -->
         <title>
-            About the dir: kibana
+            About the directory 'kibana'
         </title>
     </head>
 
@@ -19,7 +19,7 @@
                     </figcaption>
                 </figure>
                 <h1>
-                    About the dir: kibana
+                    About the directory 'kibana'
                 </h1>
 
                 <details>

@@ -3,7 +3,7 @@
     <head>
 <!--include head.txt -->
         <title>
-            About the dir: sentry_setup
+            About the directory 'sentry_setup'
         </title>
     </head>
 
@@ -19,7 +19,7 @@
                     </figcaption>
                 </figure>
                 <h1>
-                    About the dir: sentry_setup
+                    About the directory 'sentry_setup'
                 </h1>
 
                 <details>

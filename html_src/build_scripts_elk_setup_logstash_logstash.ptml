@@ -3,7 +3,7 @@
     <head>
 <!--include head.txt -->
         <title>
-            About the dir: logstash
+            About the directory 'logstash'
         </title>
     </head>
 
@@ -19,7 +19,7 @@
                     </figcaption>
                 </figure>
                 <h1>
-                    About the dir: logstash
+                    About the directory 'logstash'
                 </h1>
 
                 <details>

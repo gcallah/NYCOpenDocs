@@ -3,7 +3,7 @@
     <head>
 <!--include head.txt -->
         <title>
-            About the dir: user_request
+            About the directory 'user_request'
         </title>
     </head>
 
@@ -19,7 +19,7 @@
                     </figcaption>
                 </figure>
                 <h1>
-                    About the dir: user_request
+                    About the directory 'user_request'
                 </h1>
 
                 <details>

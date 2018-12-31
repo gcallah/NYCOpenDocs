@@ -38,6 +38,7 @@ def create_csv():
     # menu_file = open("html_menu.txt", "w")
     file_names = read_file_names()
     file_string = str(0) + "\tNYCOpenDocs\t\tNYCDocs\n"
+    file_string += str(1) + "\tHome\tindex.html\t\tglyphicon-home\n"
     current_dir = []
     # loop through the file names
     for file in file_names:

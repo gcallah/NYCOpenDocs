@@ -3,6 +3,8 @@ export TEMPLATE_DIR = templates
 PYTHONFILES = $(shell find ../NYCOpenRecords -name '*.py')
 PTML_DIR = html_src
 UTILS_DIR = utils
+MENU_INP = $(TEMPLATE_DIR)/menu_input.txt
+SITE_STRUCT = $(TEMPLATE_DIR)/site_struct.txt
 
 INCS = $(TEMPLATE_DIR)/navbar.txt $(TEMPLATE_DIR)/head.txt
 
@@ -25,5 +27,18 @@ local: $(HTMLFILES)
 clean:
 	touch $(PTML_DIR)/*.ptml; make local
 
-menu: $(PYTHONFILES)
-	echo $(PYTHONFILES) > menu.txt
+menu_inp: $(PYTHONFILES)
+	echo $(PYTHONFILES) > $(MENU_INP)
+
+site_struct: $(MENU_INP)
+	csv_file_names.py  > $(SITE_STRUCT)
+
+menu: $(SITE_STRUCT)
+	$(UTILS_DIR)/create_menu.py $(SITE_STRUCT) $(TEMPLATE_DIR)/navbar.txt
+
+ptml_files: $(SITE_STRUCT)
+	$(UTILS_DIR)/create_pages.py $(SITE_STRUCT) $(UTILS_DIR)/templates/template.ptml $(PTML_DIR)
+
+course_struct: menu ptml_files
+	git add $(PTML_DIR)/*.ptml
+	make local

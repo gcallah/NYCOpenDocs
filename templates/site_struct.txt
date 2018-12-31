@@ -1,4 +1,5 @@
 0	NYCOpenDocs		NYCDocs
+1	Home	index.html		glyphicon-home
 1	.codeclimate.yml.html
 1	.eslintrc.yml.html
 1	.startup

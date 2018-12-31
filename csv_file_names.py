@@ -55,6 +55,11 @@ def create_csv():
                 file_string += str(index_dif + 1) + "\t" + file[index_dif]
                 if index_dif == len(file) - 1:
                 	file_string += "\t" + file[index_dif] + ".html"
+                else:
+                    file_string += ("\n" + str(index_dif + 2) +
+                                    "\tAbout the dir: " + file[index_dif] +
+                                    "\t" + file[index_dif].strip(".") +
+                                    ".html")
                 file_string += "\n"
                 index_dif += 1
             current_dir = file

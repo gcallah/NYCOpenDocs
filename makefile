@@ -36,10 +36,10 @@ site_outline: menu_inp
 	python3 csv_file_names.py > $(SITE_OUTLINE)
 
 menu: site_outline
-	python3 $(UTILS_DIR)/create_menu.py $(SITE_OUTLINE) > $(NAV_BAR)
+	python3 $(UTILS_DIR)/create_menu.py $(SITE_OUTLINE) $(NAV_BAR)
 
 ptml_files: site_outline
-	python3 $(UTILS_DIR)/create_pages.py $(SITE_OUTLINE) $(UTILS_DIR)/templates/template.ptml $(PTML_DIR)
+	python3 $(UTILS_DIR)/create_pages.py $(SITE_OUTLINE) $(TEMPLATE_DIR)/template.ptml $(PTML_DIR)
 
 site_struct: menu ptml_files
 	git add $(PTML_DIR)/*.ptml

@@ -21,6 +21,9 @@
                 <h1>
                     redis_utils.py
                 </h1>
+                <p>
+<a href="https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/lib/redis_utils.py">Source code</a>
+                </p>
 
                 <details>
                     <summary class="sum1">

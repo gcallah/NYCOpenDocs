@@ -21,6 +21,9 @@
                 <h1>
                     nginx_setup.sh
                 </h1>
+                <p>
+<a href="https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/consul-vault_setup/nginx/nginx_setup.sh">Source code</a>
+                </p>
 
                 <details>
                     <summary class="sum1">

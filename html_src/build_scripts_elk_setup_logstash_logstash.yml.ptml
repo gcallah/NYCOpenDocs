@@ -21,6 +21,9 @@
                 <h1>
                     logstash.yml
                 </h1>
+                <p>
+<a href="https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/elk_setup/logstash/logstash.yml">Source code</a>
+                </p>
 
                 <details>
                     <summary class="sum1">

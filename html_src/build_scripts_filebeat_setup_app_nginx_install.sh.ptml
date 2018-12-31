@@ -21,6 +21,9 @@
                 <h1>
                     install.sh
                 </h1>
+                <p>
+<a href="https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/filebeat_setup/app_nginx/install.sh">Source code</a>
+                </p>
 
                 <details>
                     <summary class="sum1">

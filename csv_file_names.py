@@ -40,11 +40,12 @@ def create_csv():
     output = str(0) + "\tNYCOpenDocs\t\tNYCDocs\n"
     output += str(1) + "\tHome\tindex.html\t\tglyphicon-home\n"
     current_dir = []
+    source_code = "https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/"
     # loop through the file names
     for file in file_names:
         # if file is a string, it's not in a sub directory
         if isinstance(file, str):
-            output += str(1) + "\t" + file + ".html\n"
+            output += str(1) + "\t" + file + "\t" + file.strip(".") + ".html\t\t\t" + source_code + file + "\n"
             current_dir = []
         # otherwise, check the directory paths
         # number of tabs = the index we start at that was
@@ -54,7 +55,8 @@ def create_csv():
             while index_dif < len(file):
                 output += str(index_dif + 1) + "\t" + file[index_dif]
                 if index_dif == len(file) - 1:
-                	output += "\t" + "_".join(file) + ".html"
+                    output += "\t" + "_".join(file) + ".html"
+                    output += "\t\t\t" + source_code + "/".join(file)
                 else:
                     output += ("\n" + str(index_dif + 2) +
                                "\tAbout the directory '" + file[index_dif] + "'" +

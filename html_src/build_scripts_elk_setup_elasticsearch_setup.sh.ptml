@@ -21,6 +21,9 @@
                 <h1>
                     setup.sh
                 </h1>
+                <p>
+<a href="https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/elk_setup/elasticsearch/setup.sh">Source code</a>
+                </p>
 
                 <details>
                     <summary class="sum1">

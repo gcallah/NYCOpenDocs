@@ -21,6 +21,9 @@
                 <h1>
                     subscription_manager.sh
                 </h1>
+                <p>
+<a href="https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/subscription_manager.sh">Source code</a>
+                </p>
 
                 <details>
                     <summary class="sum1">

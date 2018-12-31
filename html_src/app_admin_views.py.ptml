@@ -21,6 +21,9 @@
                 <h1>
                     views.py
                 </h1>
+                <p>
+<a href="https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/admin/views.py">Source code</a>
+                </p>
 
                 <details>
                     <summary class="sum1">

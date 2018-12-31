@@ -21,6 +21,9 @@
                 <h1>
                     test_requests.py
                 </h1>
+                <p>
+<a href="https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/tests/functional/test_requests.py">Source code</a>
+                </p>
 
                 <details>
                     <summary class="sum1">

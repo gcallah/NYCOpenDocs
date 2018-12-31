@@ -31,7 +31,7 @@ menu_inp: $(PYTHONFILES)
 	echo $(PYTHONFILES) > $(MENU_INP)
 
 site_struct: $(MENU_INP)
-	csv_file_names.py  > $(SITE_STRUCT)
+	python3 csv_file_names.py > $(SITE_STRUCT)
 
 menu: $(SITE_STRUCT)
 	$(UTILS_DIR)/create_menu.py $(SITE_STRUCT) $(TEMPLATE_DIR)/navbar.txt

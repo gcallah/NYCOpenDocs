@@ -1,3 +1,6 @@
+import sys
+
+
 def read_file_names():
     names = open("menu.txt", "r")
     file_names = names.read()
@@ -32,7 +35,7 @@ def check_directories(lst1, lst2):
 
 
 def create_csv():
-    menu_file = open("html_menu.txt", "w")
+    # menu_file = open("html_menu.txt", "w")
     file_names = read_file_names()
     file_string = ""
     current_dir = []
@@ -51,8 +54,9 @@ def create_csv():
                 file_string += str(index_dif) + "\t" + file[index_dif] + "\n"
                 index_dif += 1
             current_dir = file
-    menu_file.write(file_string)
-    menu_file.close()
+    # menu_file.write(file_string)
+    # menu_file.close()
+    sys.stdout.write(file_string)
 
 
 def main():

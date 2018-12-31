@@ -1,6 +1,7 @@
 # Need to export as ENV var
 export TEMPLATE_DIR = templates
-PYTHONFILES = $(shell find ../NYCOpenRecords -name '*.py')
+# PYTHONFILES = $(shell find ../NYCOpenRecords -name '*.py')
+FILES = $(shell find ../NYCOpenRecords \( -name '*.py' -or -name '*.js' -or -name '*.yml' -or -name '*.sh' \))
 PTML_DIR = html_src
 UTILS_DIR = utils
 MENU_INP = $(TEMPLATE_DIR)/menu_input.txt
@@ -27,8 +28,8 @@ local: $(HTMLFILES)
 clean:
 	touch $(PTML_DIR)/*.ptml; make local
 
-menu_inp: $(PYTHONFILES)
-	echo $(PYTHONFILES) > $(MENU_INP)
+menu_inp: $(FILES)
+	echo $(FILES) > $(MENU_INP)
 
 site_struct: $(MENU_INP)
 	python3 csv_file_names.py > $(SITE_STRUCT)

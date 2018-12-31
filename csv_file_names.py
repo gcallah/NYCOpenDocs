@@ -2,7 +2,7 @@ import sys
 
 
 def read_file_names():
-    names = open("menu.txt", "r")
+    names = open("templates/menu_input.txt", "r")
     file_names = names.read()
     # when echo is called, all the names were concatenated into
     # a single string

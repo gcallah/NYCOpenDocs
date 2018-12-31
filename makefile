@@ -10,7 +10,7 @@ PTML_TEMPL = $(TEMPLATE_DIR)/template.ptml
 
 INCS = $(NAV_BAR) $(TEMPLATE_DIR)/head.txt
 
-HTMLFILES = $(shell find $(PTML_DIR) -name *.ptml | sed -e 's/.ptml/.html/' | sed -e 's/html_src\///')
+HTMLFILES = $(shell ls $(PTML_DIR)/*.ptml | sed -e 's/.ptml/.html/' | sed -e 's/html_src\///')
 
 %.html: $(PTML_DIR)/%.ptml $(INCS)
 	python3 $(UTILS_DIR)/html_checker.py $< 

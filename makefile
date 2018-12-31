@@ -28,7 +28,7 @@ website: $(INCS) $(HTMLFILES)
 	git pull origin master
 	git push origin master
 
-local: $(HTMLFILES)
+local: $(HTMLFILES) $(INCS)
 
 clean:
 	touch $(PTML_DIR)/*.ptml; make local
@@ -39,7 +39,7 @@ menu_inp: $(CODE_FILES)
 site_outline: menu_inp
 	python3 csv_file_names.py > $(SITE_OUTLINE)
 
-menu: site_outline
+menu: site_outline $(SITE_OUTLINE)
 	python3 $(UTILS_DIR)/create_menu.py $(SITE_OUTLINE) > $(NAV_BAR)
 
 ptml_files: site_outline $(PTML_TEMPL) $(SITE_OUTLINE)

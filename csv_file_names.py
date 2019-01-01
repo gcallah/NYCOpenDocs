@@ -1,5 +1,12 @@
 import sys
 
+LEVEL = 0
+TITLE = 1
+URL = 2
+SHORT_TITLE = 3
+GLYPHICON = 4
+LINK_INSERT = 5
+
 
 def read_file_names():
     names = open("templates/menu_input.txt", "r")
@@ -34,44 +41,70 @@ def check_directories(lst1, lst2):
     return min(len(lst1), len(lst2)) - 1
 
 
-def create_csv():
-    # menu_file = open("html_menu.txt", "w")
+def create_csv(connector):
     file_names = read_file_names()
-    output = str(0) + "\tNYCOpenDocs\t\tNYCDocs\n"
-    output += str(1) + "\tHome\tindex.html\t\tglyphicon-home\n"
+    # make a list of strings for the output 
+    # each string has fields filled in
+    output = []
+    header = ["0", "NYCOpenDocs", "", "NYCDocs"]
+    header = connector.join(header)
+    home = ["1", "Home", "index.html", "", "glyphicon-home"]
+    home = connector.join(home)
+    output.append(header)
+    output.append(home)
     current_dir = []
     source_code = "https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/"
     # loop through the file names
     for file in file_names:
+        output_lst = ["", "", "", "", "", ""]
         # if file is a string, it's not in a sub directory
         if isinstance(file, str):
-            output += str(1) + "\t" + file + "\t" + file.strip(".") + ".html\t\t\t" + source_code + file + "\n"
+            output_lst[LEVEL] = str(1)
+            output_lst[TITLE] = file
+            output_lst[URL] = file.strip(".") + ".html"
+            output_lst[LINK_INSERT] = source_code + file
+            output.append(connector.join(output_lst))
             current_dir = []
         # otherwise, check the directory paths
         # number of tabs = the index we start at that was
         # returned from check directories
         else:
+            output_dir_lst = ["", "", ""]
+            # have a boolean in case we are dealing with a directory
+            # not a file
+            out_dir = False
             index_dif = check_directories(current_dir, file)
             while index_dif < len(file):
-                output += str(index_dif + 1) + "\t" + file[index_dif]
+                output_lst[LEVEL] = str(index_dif + 1)
+                output_lst[TITLE] = file[index_dif]
                 if index_dif == len(file) - 1:
-                    output += "\t" + "_".join(file) + ".html"
-                    output += "\t\t\t" + source_code + "/".join(file)
+                    output_lst[URL] = "_".join(file) + ".html"
+                    output_lst[LINK_INSERT] = source_code + "/".join(file)
                 else:
-                    output += ("\n" + str(index_dif + 2) +
-                               "\tAbout the directory '" + file[index_dif] + "'" +
-                               "\t" + "_".join(file[:index_dif + 1]) + "_" + file[index_dif] +
-                               ".html")
-                output += "\n"
+                    output_dir_lst[LEVEL] = str(index_dif + 2)
+                    output_dir_lst[TITLE] = "About the directory '" + file[index_dif] + "'"
+                    output_dir_lst[URL] = "_".join(file[:index_dif + 1]) + "_" + file[index_dif] + ".html"
+                    out_dir = True
+                # append the output_lst, joined by the connector
+                # strip off remaining connectors in case the last fields
+                # are not filled in
+                output.append(connector.join(output_lst).strip(connector))
+                output_lst = ["", "", "", "", "", ""]
+                # if we filled in for a directory
+                # append this after the output_lst
+                if out_dir:
+                    output.append(connector.join(output_dir_lst))
+                    out_dir = False
+                    output_dir_lst = ["", "", ""]
                 index_dif += 1
             current_dir = file
-    # menu_file.write(output)
-    # menu_file.close()
+    # construct the output string by joining on new lines
+    output = "\n".join(output)
     sys.stdout.write(output)
 
 
 def main():
-    create_csv()
+    create_csv("\t")
 
 
 main()

@@ -3,6 +3,7 @@ export TEMPLATE_DIR = templates
 CODE_FILES = $(shell find ../NYCOpenRecords \( -name '*.py' -or -name '*.js' -or -name '*.yml' -or -name '*.sh' \))
 PTML_DIR = html_src
 UTILS_DIR = utils
+HTML_DIR = html
 MENU_INP = $(TEMPLATE_DIR)/menu_input.txt
 SITE_OUTLINE = $(TEMPLATE_DIR)/site_struct.txt
 NAV_BAR = $(TEMPLATE_DIR)/navbar.txt
@@ -10,9 +11,9 @@ PTML_TEMPL = $(TEMPLATE_DIR)/template.ptml
 
 INCS = $(NAV_BAR) $(TEMPLATE_DIR)/head.txt
 
-HTMLFILES = $(shell ls $(PTML_DIR)/*.ptml | sed -e 's/.ptml/.html/' | sed -e 's/html_src\///')
+HTMLFILES = $(shell ls $(PTML_DIR)/*.ptml | sed -e 's/.ptml/.html/' | sed -e 's/html_src\//html\//')
 
-%.html: $(PTML_DIR)/%.ptml $(INCS)
+$(HTML_DIR)/%.html: $(PTML_DIR)/%.ptml $(INCS)
 	python3 $(UTILS_DIR)/html_checker.py $< 
 	# python3 $(UTILS_DIR)/url_checker.py $<
 	# https://gcallah.github.io/NYCOpenDocs

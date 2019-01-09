@@ -10,23 +10,23 @@
     </div>
     <ul class="list-unstyled components">
         <li>
-            <a href="https://gcallah.github.io/NYCOpenDocs/index.html">
+            <a href="/index.html">
                 <i class="glyphicon glyphicon-home"></i>
                 Home
             </a>
         </li>
         <li>
-            <a href="https://gcallah.github.io/NYCOpenDocs/html/codeclimate.yml.html">
+            <a href="/html/codeclimate.yml.html">
                 .codeclimate.yml
             </a>
         </li>
         <li>
-            <a href="https://gcallah.github.io/NYCOpenDocs/html/eslintrc.yml.html">
+            <a href="/html/eslintrc.yml.html">
                 .eslintrc.yml
             </a>
         </li>
         <li>
-            <a href="https://gcallah.github.io/NYCOpenDocs/html/travis.yml.html">
+            <a href="/html/travis.yml.html">
                 .travis.yml
             </a>
         </li>
@@ -37,12 +37,12 @@
         </li>
         <ul class="collapse list-unstyled" id="Submenu0">
             <li>
-                <a href="https://gcallah.github.io/NYCOpenDocs/html/app_app.html">
+                <a href="/html/app_app.html">
                     About the directory 'app'
                 </a>
             </li>
             <li>
-                <a href="https://gcallah.github.io/NYCOpenDocs/html/app___init__.py.html">
+                <a href="/html/app___init__.py.html">
                     __init__.py
                 </a>
             </li>
@@ -53,27 +53,27 @@
             </li>
             <ul class="collapse list-unstyled" id="Submenu1">
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_admin_admin.html">
+                    <a href="/html/app_admin_admin.html">
                         About the directory 'admin'
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_admin___init__.py.html">
+                    <a href="/html/app_admin___init__.py.html">
                         __init__.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_admin_forms.py.html">
+                    <a href="/html/app_admin_forms.py.html">
                         forms.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_admin_utils.py.html">
+                    <a href="/html/app_admin_utils.py.html">
                         utils.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_admin_views.py.html">
+                    <a href="/html/app_admin_views.py.html">
                         views.py
                     </a>
                 </li>
@@ -85,12 +85,12 @@
             </li>
             <ul class="collapse list-unstyled" id="Submenu2">
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_agency_agency.html">
+                    <a href="/html/app_agency_agency.html">
                         About the directory 'agency'
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_agency___init__.py.html">
+                    <a href="/html/app_agency___init__.py.html">
                         __init__.py
                     </a>
                 </li>
@@ -101,33 +101,33 @@
                 </li>
                 <ul class="collapse list-unstyled" id="Submenu3">
                     <li>
-                        <a href="https://gcallah.github.io/NYCOpenDocs/html/app_agency_api_api.html">
+                        <a href="/html/app_agency_api_api.html">
                             About the directory 'api'
                         </a>
                     </li>
                     <li>
-                        <a href="https://gcallah.github.io/NYCOpenDocs/html/app_agency_api___init__.py.html">
+                        <a href="/html/app_agency_api___init__.py.html">
                             __init__.py
                         </a>
                     </li>
                     <li>
-                        <a href="https://gcallah.github.io/NYCOpenDocs/html/app_agency_api_utils.py.html">
+                        <a href="/html/app_agency_api_utils.py.html">
                             utils.py
                         </a>
                     </li>
                     <li>
-                        <a href="https://gcallah.github.io/NYCOpenDocs/html/app_agency_api_views.py.html">
+                        <a href="/html/app_agency_api_views.py.html">
                             views.py
                         </a>
                     </li>
                 </ul>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_agency_utils.py.html">
+                    <a href="/html/app_agency_utils.py.html">
                         utils.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_agency_views.py.html">
+                    <a href="/html/app_agency_views.py.html">
                         views.py
                     </a>
                 </li>
@@ -139,12 +139,12 @@
             </li>
             <ul class="collapse list-unstyled" id="Submenu4">
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_auth_auth.html">
+                    <a href="/html/app_auth_auth.html">
                         About the directory 'auth'
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_auth___init__.py.html">
+                    <a href="/html/app_auth___init__.py.html">
                         __init__.py
                     </a>
                 </li>
@@ -155,33 +155,33 @@
                 </li>
                 <ul class="collapse list-unstyled" id="Submenu5">
                     <li>
-                        <a href="https://gcallah.github.io/NYCOpenDocs/html/app_auth_constants_constants.html">
+                        <a href="/html/app_auth_constants_constants.html">
                             About the directory 'constants'
                         </a>
                     </li>
                     <li>
-                        <a href="https://gcallah.github.io/NYCOpenDocs/html/app_auth_constants___init__.py.html">
+                        <a href="/html/app_auth_constants___init__.py.html">
                             __init__.py
                         </a>
                     </li>
                     <li>
-                        <a href="https://gcallah.github.io/NYCOpenDocs/html/app_auth_constants_error_msg.py.html">
+                        <a href="/html/app_auth_constants_error_msg.py.html">
                             error_msg.py
                         </a>
                     </li>
                 </ul>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_auth_forms.py.html">
+                    <a href="/html/app_auth_forms.py.html">
                         forms.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_auth_utils.py.html">
+                    <a href="/html/app_auth_utils.py.html">
                         utils.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_auth_views.py.html">
+                    <a href="/html/app_auth_views.py.html">
                         views.py
                     </a>
                 </li>
@@ -193,72 +193,72 @@
             </li>
             <ul class="collapse list-unstyled" id="Submenu6">
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_constants_constants.html">
+                    <a href="/html/app_constants_constants.html">
                         About the directory 'constants'
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_constants___init__.py.html">
+                    <a href="/html/app_constants___init__.py.html">
                         __init__.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_constants_agency_features.py.html">
+                    <a href="/html/app_constants_agency_features.py.html">
                         agency_features.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_constants_communication_methods.py.html">
+                    <a href="/html/app_constants_communication_methods.py.html">
                         communication_methods.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_constants_determination_type.py.html">
+                    <a href="/html/app_constants_determination_type.py.html">
                         determination_type.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_constants_event_type.py.html">
+                    <a href="/html/app_constants_event_type.py.html">
                         event_type.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_constants_letter_type.py.html">
+                    <a href="/html/app_constants_letter_type.py.html">
                         letter_type.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_constants_pdf.py.html">
+                    <a href="/html/app_constants_pdf.py.html">
                         pdf.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_constants_permission.py.html">
+                    <a href="/html/app_constants_permission.py.html">
                         permission.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_constants_request_date.py.html">
+                    <a href="/html/app_constants_request_date.py.html">
                         request_date.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_constants_request_status.py.html">
+                    <a href="/html/app_constants_request_status.py.html">
                         request_status.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_constants_response_privacy.py.html">
+                    <a href="/html/app_constants_response_privacy.py.html">
                         response_privacy.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_constants_response_type.py.html">
+                    <a href="/html/app_constants_response_type.py.html">
                         response_type.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_constants_role_name.py.html">
+                    <a href="/html/app_constants_role_name.py.html">
                         role_name.py
                     </a>
                 </li>
@@ -269,33 +269,33 @@
                 </li>
                 <ul class="collapse list-unstyled" id="Submenu7">
                     <li>
-                        <a href="https://gcallah.github.io/NYCOpenDocs/html/app_constants_schemas_schemas.html">
+                        <a href="/html/app_constants_schemas_schemas.html">
                             About the directory 'schemas'
                         </a>
                     </li>
                     <li>
-                        <a href="https://gcallah.github.io/NYCOpenDocs/html/app_constants_schemas___init__.py.html">
+                        <a href="/html/app_constants_schemas___init__.py.html">
                             __init__.py
                         </a>
                     </li>
                 </ul>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_constants_submission_methods.py.html">
+                    <a href="/html/app_constants_submission_methods.py.html">
                         submission_methods.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_constants_user_type_auth.py.html">
+                    <a href="/html/app_constants_user_type_auth.py.html">
                         user_type_auth.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_constants_user_type_request.py.html">
+                    <a href="/html/app_constants_user_type_request.py.html">
                         user_type_request.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_constants_web_services.py.html">
+                    <a href="/html/app_constants_web_services.py.html">
                         web_services.py
                     </a>
                 </li>
@@ -307,67 +307,67 @@
             </li>
             <ul class="collapse list-unstyled" id="Submenu8">
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_lib_lib.html">
+                    <a href="/html/app_lib_lib.html">
                         About the directory 'lib'
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_lib___init__.py.html">
+                    <a href="/html/app_lib___init__.py.html">
                         __init__.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_lib_date_utils.py.html">
+                    <a href="/html/app_lib_date_utils.py.html">
                         date_utils.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_lib_db_utils.py.html">
+                    <a href="/html/app_lib_db_utils.py.html">
                         db_utils.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_lib_email_utils.py.html">
+                    <a href="/html/app_lib_email_utils.py.html">
                         email_utils.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_lib_file_utils.py.html">
+                    <a href="/html/app_lib_file_utils.py.html">
                         file_utils.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_lib_jinja_filters.py.html">
+                    <a href="/html/app_lib_jinja_filters.py.html">
                         jinja_filters.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_lib_json_schema.py.html">
+                    <a href="/html/app_lib_json_schema.py.html">
                         json_schema.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_lib_pdf.py.html">
+                    <a href="/html/app_lib_pdf.py.html">
                         pdf.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_lib_permission_utils.py.html">
+                    <a href="/html/app_lib_permission_utils.py.html">
                         permission_utils.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_lib_redis_utils.py.html">
+                    <a href="/html/app_lib_redis_utils.py.html">
                         redis_utils.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_lib_user_information.py.html">
+                    <a href="/html/app_lib_user_information.py.html">
                         user_information.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_lib_utils.py.html">
+                    <a href="/html/app_lib_utils.py.html">
                         utils.py
                     </a>
                 </li>
@@ -379,23 +379,23 @@
             </li>
             <ul class="collapse list-unstyled" id="Submenu9">
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_main_main.html">
+                    <a href="/html/app_main_main.html">
                         About the directory 'main'
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_main___init__.py.html">
+                    <a href="/html/app_main___init__.py.html">
                         __init__.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_main_views.py.html">
+                    <a href="/html/app_main_views.py.html">
                         views.py
                     </a>
                 </li>
             </ul>
             <li>
-                <a href="https://gcallah.github.io/NYCOpenDocs/html/app_models.py.html">
+                <a href="/html/app_models.py.html">
                     models.py
                 </a>
             </li>
@@ -406,22 +406,22 @@
             </li>
             <ul class="collapse list-unstyled" id="Submenu10">
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_permissions_permissions.html">
+                    <a href="/html/app_permissions_permissions.html">
                         About the directory 'permissions'
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_permissions___init__.py.html">
+                    <a href="/html/app_permissions___init__.py.html">
                         __init__.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_permissions_utils.py.html">
+                    <a href="/html/app_permissions_utils.py.html">
                         utils.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_permissions_views.py.html">
+                    <a href="/html/app_permissions_views.py.html">
                         views.py
                     </a>
                 </li>
@@ -433,22 +433,22 @@
             </li>
             <ul class="collapse list-unstyled" id="Submenu11">
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_report_report.html">
+                    <a href="/html/app_report_report.html">
                         About the directory 'report'
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_report___init__.py.html">
+                    <a href="/html/app_report___init__.py.html">
                         __init__.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_report_forms.py.html">
+                    <a href="/html/app_report_forms.py.html">
                         forms.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_report_views.py.html">
+                    <a href="/html/app_report_views.py.html">
                         views.py
                     </a>
                 </li>
@@ -460,12 +460,12 @@
             </li>
             <ul class="collapse list-unstyled" id="Submenu12">
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_request_request.html">
+                    <a href="/html/app_request_request.html">
                         About the directory 'request'
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_request___init__.py.html">
+                    <a href="/html/app_request___init__.py.html">
                         __init__.py
                     </a>
                 </li>
@@ -476,38 +476,38 @@
                 </li>
                 <ul class="collapse list-unstyled" id="Submenu13">
                     <li>
-                        <a href="https://gcallah.github.io/NYCOpenDocs/html/app_request_api_api.html">
+                        <a href="/html/app_request_api_api.html">
                             About the directory 'api'
                         </a>
                     </li>
                     <li>
-                        <a href="https://gcallah.github.io/NYCOpenDocs/html/app_request_api___init__.py.html">
+                        <a href="/html/app_request_api___init__.py.html">
                             __init__.py
                         </a>
                     </li>
                     <li>
-                        <a href="https://gcallah.github.io/NYCOpenDocs/html/app_request_api_utils.py.html">
+                        <a href="/html/app_request_api_utils.py.html">
                             utils.py
                         </a>
                     </li>
                     <li>
-                        <a href="https://gcallah.github.io/NYCOpenDocs/html/app_request_api_views.py.html">
+                        <a href="/html/app_request_api_views.py.html">
                             views.py
                         </a>
                     </li>
                 </ul>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_request_forms.py.html">
+                    <a href="/html/app_request_forms.py.html">
                         forms.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_request_utils.py.html">
+                    <a href="/html/app_request_utils.py.html">
                         utils.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_request_views.py.html">
+                    <a href="/html/app_request_views.py.html">
                         views.py
                     </a>
                 </li>
@@ -519,22 +519,22 @@
             </li>
             <ul class="collapse list-unstyled" id="Submenu14">
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_response_response.html">
+                    <a href="/html/app_response_response.html">
                         About the directory 'response'
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_response___init__.py.html">
+                    <a href="/html/app_response___init__.py.html">
                         __init__.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_response_utils.py.html">
+                    <a href="/html/app_response_utils.py.html">
                         utils.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_response_views.py.html">
+                    <a href="/html/app_response_views.py.html">
                         views.py
                     </a>
                 </li>
@@ -546,27 +546,27 @@
             </li>
             <ul class="collapse list-unstyled" id="Submenu15">
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_search_search.html">
+                    <a href="/html/app_search_search.html">
                         About the directory 'search'
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_search___init__.py.html">
+                    <a href="/html/app_search___init__.py.html">
                         __init__.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_search_constants.py.html">
+                    <a href="/html/app_search_constants.py.html">
                         constants.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_search_utils.py.html">
+                    <a href="/html/app_search_utils.py.html">
                         utils.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_search_views.py.html">
+                    <a href="/html/app_search_views.py.html">
                         views.py
                     </a>
                 </li>
@@ -578,7 +578,7 @@
             </li>
             <ul class="collapse list-unstyled" id="Submenu16">
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_static.html">
+                    <a href="/html/app_static_static.html">
                         About the directory 'static'
                     </a>
                 </li>
@@ -589,7 +589,7 @@
                 </li>
                 <ul class="collapse list-unstyled" id="Submenu17">
                     <li>
-                        <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_js.html">
+                        <a href="/html/app_static_js_js.html">
                             About the directory 'js'
                         </a>
                     </li>
@@ -600,12 +600,12 @@
                     </li>
                     <ul class="collapse list-unstyled" id="Submenu18">
                         <li>
-                            <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_admin_admin.html">
+                            <a href="/html/app_static_js_admin_admin.html">
                                 About the directory 'admin'
                             </a>
                         </li>
                         <li>
-                            <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_admin_main.js.html">
+                            <a href="/html/app_static_js_admin_main.js.html">
                                 main.js
                             </a>
                         </li>
@@ -617,17 +617,17 @@
                     </li>
                     <ul class="collapse list-unstyled" id="Submenu19">
                         <li>
-                            <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_auth_auth.html">
+                            <a href="/html/app_static_js_auth_auth.html">
                                 About the directory 'auth'
                             </a>
                         </li>
                         <li>
-                            <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_auth_manage-account.js.html">
+                            <a href="/html/app_static_js_auth_manage-account.js.html">
                                 manage-account.js
                             </a>
                         </li>
                         <li>
-                            <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_auth_session-monitor.js.html">
+                            <a href="/html/app_static_js_auth_session-monitor.js.html">
                                 session-monitor.js
                             </a>
                         </li>
@@ -639,102 +639,102 @@
                     </li>
                     <ul class="collapse list-unstyled" id="Submenu20">
                         <li>
-                            <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_plugins_plugins.html">
+                            <a href="/html/app_static_js_plugins_plugins.html">
                                 About the directory 'plugins'
                             </a>
                         </li>
                         <li>
-                            <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_plugins_Chart.min.js.html">
+                            <a href="/html/app_static_js_plugins_Chart.min.js.html">
                                 Chart.min.js
                             </a>
                         </li>
                         <li>
-                            <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_plugins_bootstrap-editable.min.js.html">
+                            <a href="/html/app_static_js_plugins_bootstrap-editable.min.js.html">
                                 bootstrap-editable.min.js
                             </a>
                         </li>
                         <li>
-                            <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_plugins_bootstrap.min.js.html">
+                            <a href="/html/app_static_js_plugins_bootstrap.min.js.html">
                                 bootstrap.min.js
                             </a>
                         </li>
                         <li>
-                            <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_plugins_jquery-ui.js.html">
+                            <a href="/html/app_static_js_plugins_jquery-ui.js.html">
                                 jquery-ui.js
                             </a>
                         </li>
                         <li>
-                            <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_plugins_jquery-ui.min.js.html">
+                            <a href="/html/app_static_js_plugins_jquery-ui.min.js.html">
                                 jquery-ui.min.js
                             </a>
                         </li>
                         <li>
-                            <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_plugins_jquery.blockUI.js.html">
+                            <a href="/html/app_static_js_plugins_jquery.blockUI.js.html">
                                 jquery.blockUI.js
                             </a>
                         </li>
                         <li>
-                            <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_plugins_jquery.fileupload-process.js.html">
+                            <a href="/html/app_static_js_plugins_jquery.fileupload-process.js.html">
                                 jquery.fileupload-process.js
                             </a>
                         </li>
                         <li>
-                            <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_plugins_jquery.fileupload-ui.js.html">
+                            <a href="/html/app_static_js_plugins_jquery.fileupload-ui.js.html">
                                 jquery.fileupload-ui.js
                             </a>
                         </li>
                         <li>
-                            <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_plugins_jquery.fileupload-validate.js.html">
+                            <a href="/html/app_static_js_plugins_jquery.fileupload-validate.js.html">
                                 jquery.fileupload-validate.js
                             </a>
                         </li>
                         <li>
-                            <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_plugins_jquery.fileupload.js.html">
+                            <a href="/html/app_static_js_plugins_jquery.fileupload.js.html">
                                 jquery.fileupload.js
                             </a>
                         </li>
                         <li>
-                            <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_plugins_jquery.iframe-transport.js.html">
+                            <a href="/html/app_static_js_plugins_jquery.iframe-transport.js.html">
                                 jquery.iframe-transport.js
                             </a>
                         </li>
                         <li>
-                            <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_plugins_jquery.js.html">
+                            <a href="/html/app_static_js_plugins_jquery.js.html">
                                 jquery.js
                             </a>
                         </li>
                         <li>
-                            <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_plugins_jquery.mask.js.html">
+                            <a href="/html/app_static_js_plugins_jquery.mask.js.html">
                                 jquery.mask.js
                             </a>
                         </li>
                         <li>
-                            <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_plugins_jquery.timepicker.min.js.html">
+                            <a href="/html/app_static_js_plugins_jquery.timepicker.min.js.html">
                                 jquery.timepicker.min.js
                             </a>
                         </li>
                         <li>
-                            <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_plugins_jstz.min.js.html">
+                            <a href="/html/app_static_js_plugins_jstz.min.js.html">
                                 jstz.min.js
                             </a>
                         </li>
                         <li>
-                            <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_plugins_juniper.js.html">
+                            <a href="/html/app_static_js_plugins_juniper.js.html">
                                 juniper.js
                             </a>
                         </li>
                         <li>
-                            <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_plugins_moment.min.js.html">
+                            <a href="/html/app_static_js_plugins_moment.min.js.html">
                                 moment.min.js
                             </a>
                         </li>
                         <li>
-                            <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_plugins_parsley.min.js.html">
+                            <a href="/html/app_static_js_plugins_parsley.min.js.html">
                                 parsley.min.js
                             </a>
                         </li>
                         <li>
-                            <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_plugins_sprintf.min.js.html">
+                            <a href="/html/app_static_js_plugins_sprintf.min.js.html">
                                 sprintf.min.js
                             </a>
                         </li>
@@ -745,12 +745,12 @@
                         </li>
                         <ul class="collapse list-unstyled" id="Submenu21">
                             <li>
-                                <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_plugins_tinymce_tinymce.html">
+                                <a href="/html/app_static_js_plugins_tinymce_tinymce.html">
                                     About the directory 'tinymce'
                                 </a>
                             </li>
                             <li>
-                                <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_plugins_tinymce_jquery.tinymce.min.js.html">
+                                <a href="/html/app_static_js_plugins_tinymce_jquery.tinymce.min.js.html">
                                     jquery.tinymce.min.js
                                 </a>
                             </li>
@@ -761,7 +761,7 @@
                             </li>
                             <ul class="collapse list-unstyled" id="Submenu22">
                                 <li>
-                                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_plugins_tinymce_plugins_plugins.html">
+                                    <a href="/html/app_static_js_plugins_tinymce_plugins_plugins.html">
                                         About the directory 'plugins'
                                     </a>
                                 </li>
@@ -772,19 +772,19 @@
                                 </li>
                                 <ul class="collapse list-unstyled" id="Submenu23">
                                     <li>
-                                        <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_plugins_tinymce_plugins_noneditable_noneditable.html">
+                                        <a href="/html/app_static_js_plugins_tinymce_plugins_noneditable_noneditable.html">
                                             About the directory 'noneditable'
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_plugins_tinymce_plugins_noneditable_plugin.min.js.html">
+                                        <a href="/html/app_static_js_plugins_tinymce_plugins_noneditable_plugin.min.js.html">
                                             plugin.min.js
                                         </a>
                                     </li>
                                 </ul>
                             </ul>
                             <li>
-                                <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_plugins_tinymce_preventdelete.js.html">
+                                <a href="/html/app_static_js_plugins_tinymce_preventdelete.js.html">
                                     preventdelete.js
                                 </a>
                             </li>
@@ -795,7 +795,7 @@
                             </li>
                             <ul class="collapse list-unstyled" id="Submenu24">
                                 <li>
-                                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_plugins_tinymce_themes_themes.html">
+                                    <a href="/html/app_static_js_plugins_tinymce_themes_themes.html">
                                         About the directory 'themes'
                                     </a>
                                 </li>
@@ -806,12 +806,12 @@
                                 </li>
                                 <ul class="collapse list-unstyled" id="Submenu25">
                                     <li>
-                                        <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_plugins_tinymce_themes_inlite_inlite.html">
+                                        <a href="/html/app_static_js_plugins_tinymce_themes_inlite_inlite.html">
                                             About the directory 'inlite'
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_plugins_tinymce_themes_inlite_theme.min.js.html">
+                                        <a href="/html/app_static_js_plugins_tinymce_themes_inlite_theme.min.js.html">
                                             theme.min.js
                                         </a>
                                     </li>
@@ -823,30 +823,30 @@
                                 </li>
                                 <ul class="collapse list-unstyled" id="Submenu26">
                                     <li>
-                                        <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_plugins_tinymce_themes_modern_modern.html">
+                                        <a href="/html/app_static_js_plugins_tinymce_themes_modern_modern.html">
                                             About the directory 'modern'
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_plugins_tinymce_themes_modern_theme.min.js.html">
+                                        <a href="/html/app_static_js_plugins_tinymce_themes_modern_theme.min.js.html">
                                             theme.min.js
                                         </a>
                                     </li>
                                 </ul>
                             </ul>
                             <li>
-                                <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_plugins_tinymce_tinymce.min.js.html">
+                                <a href="/html/app_static_js_plugins_tinymce_tinymce.min.js.html">
                                     tinymce.min.js
                                 </a>
                             </li>
                         </ul>
                         <li>
-                            <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_plugins_tmpl.min.js.html">
+                            <a href="/html/app_static_js_plugins_tmpl.min.js.html">
                                 tmpl.min.js
                             </a>
                         </li>
                         <li>
-                            <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_plugins_tota11y.min.js.html">
+                            <a href="/html/app_static_js_plugins_tota11y.min.js.html">
                                 tota11y.min.js
                             </a>
                         </li>
@@ -858,72 +858,72 @@
                     </li>
                     <ul class="collapse list-unstyled" id="Submenu27">
                         <li>
-                            <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_request_request.html">
+                            <a href="/html/app_static_js_request_request.html">
                                 About the directory 'request'
                             </a>
                         </li>
                         <li>
-                            <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_request_action-buttons-mobile-toggle.js.html">
+                            <a href="/html/app_static_js_request_action-buttons-mobile-toggle.js.html">
                                 action-buttons-mobile-toggle.js
                             </a>
                         </li>
                         <li>
-                            <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_request_character-count.js.html">
+                            <a href="/html/app_static_js_request_character-count.js.html">
                                 character-count.js
                             </a>
                         </li>
                         <li>
-                            <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_request_contact.js.html">
+                            <a href="/html/app_static_js_request_contact.js.html">
                                 contact.js
                             </a>
                         </li>
                         <li>
-                            <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_request_edit_requester_info.js.html">
+                            <a href="/html/app_static_js_request_edit_requester_info.js.html">
                                 edit_requester_info.js
                             </a>
                         </li>
                         <li>
-                            <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_request_main.js.html">
+                            <a href="/html/app_static_js_request_main.js.html">
                                 main.js
                             </a>
                         </li>
                         <li>
-                            <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_request_new-request-agency.js.html">
+                            <a href="/html/app_static_js_request_new-request-agency.js.html">
                                 new-request-agency.js
                             </a>
                         </li>
                         <li>
-                            <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_request_new-request-anon.js.html">
+                            <a href="/html/app_static_js_request_new-request-anon.js.html">
                                 new-request-anon.js
                             </a>
                         </li>
                         <li>
-                            <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_request_new-request-user.js.html">
+                            <a href="/html/app_static_js_request_new-request-user.js.html">
                                 new-request-user.js
                             </a>
                         </li>
                         <li>
-                            <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_request_search.js.html">
+                            <a href="/html/app_static_js_request_search.js.html">
                                 search.js
                             </a>
                         </li>
                         <li>
-                            <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_request_validate-recaptcha.js.html">
+                            <a href="/html/app_static_js_request_validate-recaptcha.js.html">
                                 validate-recaptcha.js
                             </a>
                         </li>
                         <li>
-                            <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_request_view-request-contact.js.html">
+                            <a href="/html/app_static_js_request_view-request-contact.js.html">
                                 view-request-contact.js
                             </a>
                         </li>
                         <li>
-                            <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_request_view-request-history.js.html">
+                            <a href="/html/app_static_js_request_view-request-history.js.html">
                                 view-request-history.js
                             </a>
                         </li>
                         <li>
-                            <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_request_view-request-responses.js.html">
+                            <a href="/html/app_static_js_request_view-request-responses.js.html">
                                 view-request-responses.js
                             </a>
                         </li>
@@ -935,12 +935,12 @@
                     </li>
                     <ul class="collapse list-unstyled" id="Submenu28">
                         <li>
-                            <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_upload_upload.html">
+                            <a href="/html/app_static_js_upload_upload.html">
                                 About the directory 'upload'
                             </a>
                         </li>
                         <li>
-                            <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_upload_fileupload.js.html">
+                            <a href="/html/app_static_js_upload_fileupload.js.html">
                                 fileupload.js
                             </a>
                         </li>
@@ -952,12 +952,12 @@
                     </li>
                     <ul class="collapse list-unstyled" id="Submenu29">
                         <li>
-                            <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_validation_validation.html">
+                            <a href="/html/app_static_js_validation_validation.html">
                                 About the directory 'validation'
                             </a>
                         </li>
                         <li>
-                            <a href="https://gcallah.github.io/NYCOpenDocs/html/app_static_js_validation_custom_validators.js.html">
+                            <a href="/html/app_static_js_validation_custom_validators.js.html">
                                 custom_validators.js
                             </a>
                         </li>
@@ -971,12 +971,12 @@
             </li>
             <ul class="collapse list-unstyled" id="Submenu30">
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_upload_upload.html">
+                    <a href="/html/app_upload_upload.html">
                         About the directory 'upload'
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_upload___init__.py.html">
+                    <a href="/html/app_upload___init__.py.html">
                         __init__.py
                     </a>
                 </li>
@@ -987,28 +987,28 @@
                 </li>
                 <ul class="collapse list-unstyled" id="Submenu31">
                     <li>
-                        <a href="https://gcallah.github.io/NYCOpenDocs/html/app_upload_constants_constants.html">
+                        <a href="/html/app_upload_constants_constants.html">
                             About the directory 'constants'
                         </a>
                     </li>
                     <li>
-                        <a href="https://gcallah.github.io/NYCOpenDocs/html/app_upload_constants___init__.py.html">
+                        <a href="/html/app_upload_constants___init__.py.html">
                             __init__.py
                         </a>
                     </li>
                     <li>
-                        <a href="https://gcallah.github.io/NYCOpenDocs/html/app_upload_constants_upload_status.py.html">
+                        <a href="/html/app_upload_constants_upload_status.py.html">
                             upload_status.py
                         </a>
                     </li>
                 </ul>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_upload_utils.py.html">
+                    <a href="/html/app_upload_utils.py.html">
                         utils.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_upload_views.py.html">
+                    <a href="/html/app_upload_views.py.html">
                         views.py
                     </a>
                 </li>
@@ -1020,17 +1020,17 @@
             </li>
             <ul class="collapse list-unstyled" id="Submenu32">
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_user_user.html">
+                    <a href="/html/app_user_user.html">
                         About the directory 'user'
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_user___init__.py.html">
+                    <a href="/html/app_user___init__.py.html">
                         __init__.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_user_views.py.html">
+                    <a href="/html/app_user_views.py.html">
                         views.py
                     </a>
                 </li>
@@ -1042,27 +1042,27 @@
             </li>
             <ul class="collapse list-unstyled" id="Submenu33">
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_user_request_user_request.html">
+                    <a href="/html/app_user_request_user_request.html">
                         About the directory 'user_request'
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_user_request___init__.py.html">
+                    <a href="/html/app_user_request___init__.py.html">
                         __init__.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_user_request_forms.py.html">
+                    <a href="/html/app_user_request_forms.py.html">
                         forms.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_user_request_utils.py.html">
+                    <a href="/html/app_user_request_utils.py.html">
                         utils.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/app_user_request_views.py.html">
+                    <a href="/html/app_user_request_views.py.html">
                         views.py
                     </a>
                 </li>
@@ -1075,7 +1075,7 @@
         </li>
         <ul class="collapse list-unstyled" id="Submenu34">
             <li>
-                <a href="https://gcallah.github.io/NYCOpenDocs/html/build_scripts_build_scripts.html">
+                <a href="/html/build_scripts_build_scripts.html">
                     About the directory 'build_scripts'
                 </a>
             </li>
@@ -1086,12 +1086,12 @@
             </li>
             <ul class="collapse list-unstyled" id="Submenu35">
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/build_scripts_app_setup_app_setup.html">
+                    <a href="/html/build_scripts_app_setup_app_setup.html">
                         About the directory 'app_setup'
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/build_scripts_app_setup_app_setup.sh.html">
+                    <a href="/html/build_scripts_app_setup_app_setup.sh.html">
                         app_setup.sh
                     </a>
                 </li>
@@ -1103,12 +1103,12 @@
             </li>
             <ul class="collapse list-unstyled" id="Submenu36">
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/build_scripts_consul-vault_setup_consul-vault_setup.html">
+                    <a href="/html/build_scripts_consul-vault_setup_consul-vault_setup.html">
                         About the directory 'consul-vault_setup'
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/build_scripts_consul-vault_setup_consul_setup.sh.html">
+                    <a href="/html/build_scripts_consul-vault_setup_consul_setup.sh.html">
                         consul_setup.sh
                     </a>
                 </li>
@@ -1119,18 +1119,18 @@
                 </li>
                 <ul class="collapse list-unstyled" id="Submenu37">
                     <li>
-                        <a href="https://gcallah.github.io/NYCOpenDocs/html/build_scripts_consul-vault_setup_nginx_nginx.html">
+                        <a href="/html/build_scripts_consul-vault_setup_nginx_nginx.html">
                             About the directory 'nginx'
                         </a>
                     </li>
                     <li>
-                        <a href="https://gcallah.github.io/NYCOpenDocs/html/build_scripts_consul-vault_setup_nginx_nginx_setup.sh.html">
+                        <a href="/html/build_scripts_consul-vault_setup_nginx_nginx_setup.sh.html">
                             nginx_setup.sh
                         </a>
                     </li>
                 </ul>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/build_scripts_consul-vault_setup_vault_setup.sh.html">
+                    <a href="/html/build_scripts_consul-vault_setup_vault_setup.sh.html">
                         vault_setup.sh
                     </a>
                 </li>
@@ -1142,27 +1142,27 @@
             </li>
             <ul class="collapse list-unstyled" id="Submenu38">
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/build_scripts_db_setup_db_setup.html">
+                    <a href="/html/build_scripts_db_setup_db_setup.html">
                         About the directory 'db_setup'
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/build_scripts_db_setup_backup.py.html">
+                    <a href="/html/build_scripts_db_setup_backup.py.html">
                         backup.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/build_scripts_db_setup_backup.sh.html">
+                    <a href="/html/build_scripts_db_setup_backup.sh.html">
                         backup.sh
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/build_scripts_db_setup_db_setup.sh.html">
+                    <a href="/html/build_scripts_db_setup_db_setup.sh.html">
                         db_setup.sh
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/build_scripts_db_setup_postgres.sh.html">
+                    <a href="/html/build_scripts_db_setup_postgres.sh.html">
                         postgres.sh
                     </a>
                 </li>
@@ -1174,7 +1174,7 @@
             </li>
             <ul class="collapse list-unstyled" id="Submenu39">
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/build_scripts_elk_setup_elk_setup.html">
+                    <a href="/html/build_scripts_elk_setup_elk_setup.html">
                         About the directory 'elk_setup'
                     </a>
                 </li>
@@ -1185,17 +1185,17 @@
                 </li>
                 <ul class="collapse list-unstyled" id="Submenu40">
                     <li>
-                        <a href="https://gcallah.github.io/NYCOpenDocs/html/build_scripts_elk_setup_elasticsearch_elasticsearch.html">
+                        <a href="/html/build_scripts_elk_setup_elasticsearch_elasticsearch.html">
                             About the directory 'elasticsearch'
                         </a>
                     </li>
                     <li>
-                        <a href="https://gcallah.github.io/NYCOpenDocs/html/build_scripts_elk_setup_elasticsearch_elasticsearch.yml.html">
+                        <a href="/html/build_scripts_elk_setup_elasticsearch_elasticsearch.yml.html">
                             elasticsearch.yml
                         </a>
                     </li>
                     <li>
-                        <a href="https://gcallah.github.io/NYCOpenDocs/html/build_scripts_elk_setup_elasticsearch_setup.sh.html">
+                        <a href="/html/build_scripts_elk_setup_elasticsearch_setup.sh.html">
                             setup.sh
                         </a>
                     </li>
@@ -1207,17 +1207,17 @@
                 </li>
                 <ul class="collapse list-unstyled" id="Submenu41">
                     <li>
-                        <a href="https://gcallah.github.io/NYCOpenDocs/html/build_scripts_elk_setup_kibana_kibana.html">
+                        <a href="/html/build_scripts_elk_setup_kibana_kibana.html">
                             About the directory 'kibana'
                         </a>
                     </li>
                     <li>
-                        <a href="https://gcallah.github.io/NYCOpenDocs/html/build_scripts_elk_setup_kibana_kibana.yml.html">
+                        <a href="/html/build_scripts_elk_setup_kibana_kibana.yml.html">
                             kibana.yml
                         </a>
                     </li>
                     <li>
-                        <a href="https://gcallah.github.io/NYCOpenDocs/html/build_scripts_elk_setup_kibana_setup.sh.html">
+                        <a href="/html/build_scripts_elk_setup_kibana_setup.sh.html">
                             setup.sh
                         </a>
                     </li>
@@ -1229,17 +1229,17 @@
                 </li>
                 <ul class="collapse list-unstyled" id="Submenu42">
                     <li>
-                        <a href="https://gcallah.github.io/NYCOpenDocs/html/build_scripts_elk_setup_logstash_logstash.html">
+                        <a href="/html/build_scripts_elk_setup_logstash_logstash.html">
                             About the directory 'logstash'
                         </a>
                     </li>
                     <li>
-                        <a href="https://gcallah.github.io/NYCOpenDocs/html/build_scripts_elk_setup_logstash_logstash.yml.html">
+                        <a href="/html/build_scripts_elk_setup_logstash_logstash.yml.html">
                             logstash.yml
                         </a>
                     </li>
                     <li>
-                        <a href="https://gcallah.github.io/NYCOpenDocs/html/build_scripts_elk_setup_logstash_setup.sh.html">
+                        <a href="/html/build_scripts_elk_setup_logstash_setup.sh.html">
                             setup.sh
                         </a>
                     </li>
@@ -1251,12 +1251,12 @@
                 </li>
                 <ul class="collapse list-unstyled" id="Submenu43">
                     <li>
-                        <a href="https://gcallah.github.io/NYCOpenDocs/html/build_scripts_elk_setup_nginx_nginx.html">
+                        <a href="/html/build_scripts_elk_setup_nginx_nginx.html">
                             About the directory 'nginx'
                         </a>
                     </li>
                     <li>
-                        <a href="https://gcallah.github.io/NYCOpenDocs/html/build_scripts_elk_setup_nginx_setup.sh.html">
+                        <a href="/html/build_scripts_elk_setup_nginx_setup.sh.html">
                             setup.sh
                         </a>
                     </li>
@@ -1269,17 +1269,17 @@
             </li>
             <ul class="collapse list-unstyled" id="Submenu44">
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/build_scripts_es_setup_es_setup.html">
+                    <a href="/html/build_scripts_es_setup_es_setup.html">
                         About the directory 'es_setup'
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/build_scripts_es_setup_elasticsearch.yml.html">
+                    <a href="/html/build_scripts_es_setup_elasticsearch.yml.html">
                         elasticsearch.yml
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/build_scripts_es_setup_es_setup.sh.html">
+                    <a href="/html/build_scripts_es_setup_es_setup.sh.html">
                         es_setup.sh
                     </a>
                 </li>
@@ -1291,7 +1291,7 @@
             </li>
             <ul class="collapse list-unstyled" id="Submenu45">
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/build_scripts_filebeat_setup_filebeat_setup.html">
+                    <a href="/html/build_scripts_filebeat_setup_filebeat_setup.html">
                         About the directory 'filebeat_setup'
                     </a>
                 </li>
@@ -1302,29 +1302,29 @@
                 </li>
                 <ul class="collapse list-unstyled" id="Submenu46">
                     <li>
-                        <a href="https://gcallah.github.io/NYCOpenDocs/html/build_scripts_filebeat_setup_app_nginx_app_nginx.html">
+                        <a href="/html/build_scripts_filebeat_setup_app_nginx_app_nginx.html">
                             About the directory 'app_nginx'
                         </a>
                     </li>
                     <li>
-                        <a href="https://gcallah.github.io/NYCOpenDocs/html/build_scripts_filebeat_setup_app_nginx_filebeat.yml.html">
+                        <a href="/html/build_scripts_filebeat_setup_app_nginx_filebeat.yml.html">
                             filebeat.yml
                         </a>
                     </li>
                     <li>
-                        <a href="https://gcallah.github.io/NYCOpenDocs/html/build_scripts_filebeat_setup_app_nginx_install.sh.html">
+                        <a href="/html/build_scripts_filebeat_setup_app_nginx_install.sh.html">
                             install.sh
                         </a>
                     </li>
                     <li>
-                        <a href="https://gcallah.github.io/NYCOpenDocs/html/build_scripts_filebeat_setup_app_nginx_setup.sh.html">
+                        <a href="/html/build_scripts_filebeat_setup_app_nginx_setup.sh.html">
                             setup.sh
                         </a>
                     </li>
                 </ul>
             </ul>
             <li>
-                <a href="https://gcallah.github.io/NYCOpenDocs/html/build_scripts_proxy.sh.html">
+                <a href="/html/build_scripts_proxy.sh.html">
                     proxy.sh
                 </a>
             </li>
@@ -1335,43 +1335,43 @@
             </li>
             <ul class="collapse list-unstyled" id="Submenu47">
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/build_scripts_sentry_setup_sentry_setup.html">
+                    <a href="/html/build_scripts_sentry_setup_sentry_setup.html">
                         About the directory 'sentry_setup'
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/build_scripts_sentry_setup_config.yml.html">
+                    <a href="/html/build_scripts_sentry_setup_config.yml.html">
                         config.yml
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/build_scripts_sentry_setup_db_setup_config.sh.html">
+                    <a href="/html/build_scripts_sentry_setup_db_setup_config.sh.html">
                         db_setup_config.sh
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/build_scripts_sentry_setup_db_setup_install.sh.html">
+                    <a href="/html/build_scripts_sentry_setup_db_setup_install.sh.html">
                         db_setup_install.sh
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/build_scripts_sentry_setup_nginx_setup.sh.html">
+                    <a href="/html/build_scripts_sentry_setup_nginx_setup.sh.html">
                         nginx_setup.sh
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/build_scripts_sentry_setup_sentry.conf.py.html">
+                    <a href="/html/build_scripts_sentry_setup_sentry.conf.py.html">
                         sentry.conf.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/build_scripts_sentry_setup_setup.sh.html">
+                    <a href="/html/build_scripts_sentry_setup_setup.sh.html">
                         setup.sh
                     </a>
                 </li>
             </ul>
             <li>
-                <a href="https://gcallah.github.io/NYCOpenDocs/html/build_scripts_subscription_manager.sh.html">
+                <a href="/html/build_scripts_subscription_manager.sh.html">
                     subscription_manager.sh
                 </a>
             </li>
@@ -1382,39 +1382,39 @@
             </li>
             <ul class="collapse list-unstyled" id="Submenu48">
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/build_scripts_web_setup_web_setup.html">
+                    <a href="/html/build_scripts_web_setup_web_setup.html">
                         About the directory 'web_setup'
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/build_scripts_web_setup_web_setup.sh.html">
+                    <a href="/html/build_scripts_web_setup_web_setup.sh.html">
                         web_setup.sh
                     </a>
                 </li>
             </ul>
         </ul>
         <li>
-            <a href="https://gcallah.github.io/NYCOpenDocs/html/celery_worker.py.html">
+            <a href="/html/celery_worker.py.html">
                 celery_worker.py
             </a>
         </li>
         <li>
-            <a href="https://gcallah.github.io/NYCOpenDocs/html/config.py.html">
+            <a href="/html/config.py.html">
                 config.py
             </a>
         </li>
         <li>
-            <a href="https://gcallah.github.io/NYCOpenDocs/html/gunicorn_config.py.html">
+            <a href="/html/gunicorn_config.py.html">
                 gunicorn_config.py
             </a>
         </li>
         <li>
-            <a href="https://gcallah.github.io/NYCOpenDocs/html/jobs.py.html">
+            <a href="/html/jobs.py.html">
                 jobs.py
             </a>
         </li>
         <li>
-            <a href="https://gcallah.github.io/NYCOpenDocs/html/manage.py.html">
+            <a href="/html/manage.py.html">
                 manage.py
             </a>
         </li>
@@ -1425,7 +1425,7 @@
         </li>
         <ul class="collapse list-unstyled" id="Submenu49">
             <li>
-                <a href="https://gcallah.github.io/NYCOpenDocs/html/migrations_migrations.html">
+                <a href="/html/migrations_migrations.html">
                     About the directory 'migrations'
                 </a>
             </li>
@@ -1436,18 +1436,18 @@
             </li>
             <ul class="collapse list-unstyled" id="Submenu50">
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/migrations_custom_custom.html">
+                    <a href="/html/migrations_custom_custom.html">
                         About the directory 'custom'
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/migrations_custom_openrecords_v1.py.html">
+                    <a href="/html/migrations_custom_openrecords_v1.py.html">
                         openrecords_v1.py
                     </a>
                 </li>
             </ul>
             <li>
-                <a href="https://gcallah.github.io/NYCOpenDocs/html/migrations_env.py.html">
+                <a href="/html/migrations_env.py.html">
                     env.py
                 </a>
             </li>
@@ -1458,149 +1458,149 @@
             </li>
             <ul class="collapse list-unstyled" id="Submenu51">
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/migrations_versions_versions.html">
+                    <a href="/html/migrations_versions_versions.html">
                         About the directory 'versions'
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/migrations_versions_13de5f42768b_add_session_id_to_users_table.py.html">
+                    <a href="/html/migrations_versions_13de5f42768b_add_session_id_to_users_table.py.html">
                         13de5f42768b_add_session_id_to_users_table.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/migrations_versions_1920035b3a1f_140_character_limit_file_title.py.html">
+                    <a href="/html/migrations_versions_1920035b3a1f_140_character_limit_file_title.py.html">
                         1920035b3a1f_140_character_limit_file_title.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/migrations_versions_22b97712d5db_add_letters_and_envelopes_to_type_enum.py.html">
+                    <a href="/html/migrations_versions_22b97712d5db_add_letters_and_envelopes_to_type_enum.py.html">
                         22b97712d5db_add_letters_and_envelopes_to_type_enum.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/migrations_versions_24e110b4489b_drop_Users_agency_ein_column.py.html">
+                    <a href="/html/migrations_versions_24e110b4489b_drop_Users_agency_ein_column.py.html">
                         24e110b4489b_drop_Users_agency_ein_column.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/migrations_versions_24e110b4489b_drop_the_users-agency_ein_column.py.html">
+                    <a href="/html/migrations_versions_24e110b4489b_drop_the_users-agency_ein_column.py.html">
                         24e110b4489b_drop_the_users-agency_ein_column.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/migrations_versions_32dec7b290bb_added_is_editable_to_responses_table.py.html">
+                    <a href="/html/migrations_versions_32dec7b290bb_added_is_editable_to_responses_table.py.html">
                         32dec7b290bb_added_is_editable_to_responses_table.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/migrations_versions_445e50628f6b_add_communication_methods.py.html">
+                    <a href="/html/migrations_versions_445e50628f6b_add_communication_methods.py.html">
                         445e50628f6b_add_communication_methods.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/migrations_versions_52a4062502bb_adding_agencyusers.py.html">
+                    <a href="/html/migrations_versions_52a4062502bb_adding_agencyusers.py.html">
                         52a4062502bb_adding_agencyusers.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/migrations_versions_58a5abdd94ac_added_agency_acronym_to_db.py.html">
+                    <a href="/html/migrations_versions_58a5abdd94ac_added_agency_acronym_to_db.py.html">
                         58a5abdd94ac_added_agency_acronym_to_db.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/migrations_versions_60116f094400_increase_length_of_file_title_to_250_.py.html">
+                    <a href="/html/migrations_versions_60116f094400_increase_length_of_file_title_to_250_.py.html">
                         60116f094400_increase_length_of_file_title_to_250_.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/migrations_versions_6ab8af7a1347_removing_response_token_expiration_date.py.html">
+                    <a href="/html/migrations_versions_6ab8af7a1347_removing_response_token_expiration_date.py.html">
                         6ab8af7a1347_removing_response_token_expiration_date.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/migrations_versions_7ba6fbb131bb_add_signature_to_users.py.html">
+                    <a href="/html/migrations_versions_7ba6fbb131bb_add_signature_to_users.py.html">
                         7ba6fbb131bb_add_signature_to_users.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/migrations_versions_7e0434686370_added_custom_request_forms_table.py.html">
+                    <a href="/html/migrations_versions_7e0434686370_added_custom_request_forms_table.py.html">
                         7e0434686370_added_custom_request_forms_table.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/migrations_versions_85068c55138a_added_notification_email.py.html">
+                    <a href="/html/migrations_versions_85068c55138a_added_notification_email.py.html">
                         85068c55138a_added_notification_email.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/migrations_versions_8797e9a71f62_user_requests_events_on_update_cascade.py.html">
+                    <a href="/html/migrations_versions_8797e9a71f62_user_requests_events_on_update_cascade.py.html">
                         8797e9a71f62_user_requests_events_on_update_cascade.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/migrations_versions_9005ab594598_add_lettertemplates.py.html">
+                    <a href="/html/migrations_versions_9005ab594598_add_lettertemplates.py.html">
                         9005ab594598_add_lettertemplates.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/migrations_versions_949aebe9e480_letters_table.py.html">
+                    <a href="/html/migrations_versions_949aebe9e480_letters_table.py.html">
                         949aebe9e480_letters_table.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/migrations_versions_971f341c0204_adding_agency_features_json_column_to_.py.html">
+                    <a href="/html/migrations_versions_971f341c0204_adding_agency_features_json_column_to_.py.html">
                         971f341c0204_adding_agency_features_json_column_to_.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/migrations_versions_9908a9bf1dbd_json_to_jsonb.py.html">
+                    <a href="/html/migrations_versions_9908a9bf1dbd_json_to_jsonb.py.html">
                         9908a9bf1dbd_json_to_jsonb.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/migrations_versions_a2547b706641_initial_migration.py.html">
+                    <a href="/html/migrations_versions_a2547b706641_initial_migration.py.html">
                         a2547b706641_initial_migration.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/migrations_versions_a3d80d04b0f1_add_date_closed_to_requests_table.py.html">
+                    <a href="/html/migrations_versions_a3d80d04b0f1_add_date_closed_to_requests_table.py.html">
                         a3d80d04b0f1_add_date_closed_to_requests_table.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/migrations_versions_b3c0c76ac2e6_add_envelope_functionality.py.html">
+                    <a href="/html/migrations_versions_b3c0c76ac2e6_add_envelope_functionality.py.html">
                         b3c0c76ac2e6_add_envelope_functionality.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/migrations_versions_b722969f38a6_added_minimum_required_to_custom_.py.html">
+                    <a href="/html/migrations_versions_b722969f38a6_added_minimum_required_to_custom_.py.html">
                         b722969f38a6_added_minimum_required_to_custom_.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/migrations_versions_c7f05adcf7d9_added_point_of_contact.py.html">
+                    <a href="/html/migrations_versions_c7f05adcf7d9_added_point_of_contact.py.html">
                         c7f05adcf7d9_added_point_of_contact.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/migrations_versions_cf62ec87d973_agency_description_to_agency_request_.py.html">
+                    <a href="/html/migrations_versions_cf62ec87d973_agency_description_to_agency_request_.py.html">
                         cf62ec87d973_agency_description_to_agency_request_.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/migrations_versions_dc926c74551d_added_category_to_custom_request_forms.py.html">
+                    <a href="/html/migrations_versions_dc926c74551d_added_category_to_custom_request_forms.py.html">
                         dc926c74551d_added_category_to_custom_request_forms.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/migrations_versions_ebeb3491636e_add_re-opening_to_reasons_enum.py.html">
+                    <a href="/html/migrations_versions_ebeb3491636e_add_re-opening_to_reasons_enum.py.html">
                         ebeb3491636e_add_re-opening_to_reasons_enum.py
                     </a>
                 </li>
             </ul>
         </ul>
         <li>
-            <a href="https://gcallah.github.io/NYCOpenDocs/html/setup.sh.html">
+            <a href="/html/setup.sh.html">
                 setup.sh
             </a>
         </li>
@@ -1611,17 +1611,17 @@
         </li>
         <ul class="collapse list-unstyled" id="Submenu52">
             <li>
-                <a href="https://gcallah.github.io/NYCOpenDocs/html/tests_tests.html">
+                <a href="/html/tests_tests.html">
                     About the directory 'tests'
                 </a>
             </li>
             <li>
-                <a href="https://gcallah.github.io/NYCOpenDocs/html/tests___init__.py.html">
+                <a href="/html/tests___init__.py.html">
                     __init__.py
                 </a>
             </li>
             <li>
-                <a href="https://gcallah.github.io/NYCOpenDocs/html/tests_conftest.py.html">
+                <a href="/html/tests_conftest.py.html">
                     conftest.py
                 </a>
             </li>
@@ -1632,17 +1632,17 @@
             </li>
             <ul class="collapse list-unstyled" id="Submenu53">
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/tests_functional_functional.html">
+                    <a href="/html/tests_functional_functional.html">
                         About the directory 'functional'
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/tests_functional_test_main.py.html">
+                    <a href="/html/tests_functional_test_main.py.html">
                         test_main.py
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/tests_functional_test_requests.py.html">
+                    <a href="/html/tests_functional_test_requests.py.html">
                         test_requests.py
                     </a>
                 </li>
@@ -1654,12 +1654,12 @@
             </li>
             <ul class="collapse list-unstyled" id="Submenu54">
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/tests_helpers_helpers.html">
+                    <a href="/html/tests_helpers_helpers.html">
                         About the directory 'helpers'
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/tests_helpers_utils.py.html">
+                    <a href="/html/tests_helpers_utils.py.html">
                         utils.py
                     </a>
                 </li>
@@ -1671,19 +1671,19 @@
             </li>
             <ul class="collapse list-unstyled" id="Submenu55">
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/tests_unit_unit.html">
+                    <a href="/html/tests_unit_unit.html">
                         About the directory 'unit'
                     </a>
                 </li>
                 <li>
-                    <a href="https://gcallah.github.io/NYCOpenDocs/html/tests_unit_test_factory.py.html">
+                    <a href="/html/tests_unit_test_factory.py.html">
                         test_factory.py
                     </a>
                 </li>
             </ul>
         </ul>
         <li>
-            <a href="https://gcallah.github.io/NYCOpenDocs/html/update_definitions.sh.html">
+            <a href="/html/update_definitions.sh.html">
                 update_definitions.sh
             </a>
         </li>

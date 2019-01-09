@@ -1745,6 +1745,66 @@
                     </summary>
 
 <!-- Include the text material here! -->
+"""
+
+.. module:: auth.forms
+
+    :synopsis: Defines the forms used to manage Authentication requests
+"""
+
+class StripFieldsForm(Form):    """
+    Any field data that can be stripped, will be stripped.
+    http://stackoverflow.com/questions/26232165/automatically-strip-all-values-in-wtforms
+    """
+
+class Meta:
+        def bind_field(self, form, unbound_field, options):
+
+def strip_filter(value):
+
+class ManageUserAccountForm(StripFieldsForm):    """
+    This form manages the OpenRecords specific account fields for a user account:
+        Title: The job title for the user (e.g. Reporter); This is optional
+        Organization: The company for the user (e.g. New York Times); This is optional
+        Notification Email: The email to send OpenRecords notifications to
+        Phone Number: The user's phone number; This is optional
+        Fax Number: The user's fax number: This is optional
+        Mailing Address: The user's mailing address; Optional;
+            Format: Address One, Address Two, City, State, Zip (5 Digits)
+    """
+
+    def __init__(self, user=None):
+        """
+        :type user: app.models.Users
+        """
+
+    def autofill(self):
+
+    def validate(self):
+        """ One mthod of contact must be provided. """
+
+class ManageAgencyUserAccountForm(StripFieldsForm):    """
+    This form manages the OpenRecords specific account fields for a user account:
+        Title: The job title for the user (e.g. Reporter); This is optional
+        Organization: The company for the user (e.g. New York Times); This is optional
+        Notification Email: The email to send OpenRecords notifications to
+        Phone Number: The user's phone number; This is optional
+        Fax Number: The user's fax number: This is optional
+        Mailing Address: The user's mailing address; Optional;
+            Format: Address One, Address Two, City, State, Zip (5 Digits)
+    """
+
+    def __init__(self, user=None):
+        """
+        :type user: app.models.Users
+        """
+
+    def autofill(self):
+
+    def validate(self):
+        """ One mthod of contact must be provided. """
+
+class LDAPLoginForm(Form):
                 </details>
 
             </div>

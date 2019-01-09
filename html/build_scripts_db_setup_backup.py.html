@@ -1745,6 +1745,14 @@
                     </summary>
 
 <!-- Include the text material here! -->
+dumper = """/opt/rh/rh-postgresql95/root/usr/bin/pg_dump -U %s -h 127.0.0.1 -Z 9 -f %s -F c %s  """
+email = """From: OpenRecords Backup Report <backup@records.nyc.go>
+To: OpenRecords Support Staff <openrecords@records.nyc.gov>
+Subject: OpenRecords Backup Report %s
+
+""" % strftime("%Y-%m-%d %H-%M-%S", localtime())
+
+def log(string):
                 </details>
 
             </div>

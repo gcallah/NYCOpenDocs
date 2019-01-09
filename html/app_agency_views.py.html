@@ -1745,6 +1745,31 @@
                     </summary>
 
 <!-- Include the text material here! -->
+def patch(agency_ein):
+    """
+    Only accessible by Super Users
+
+    Currently only changes:
+        is_active
+    """
+
+def agency_features(agency_ein):
+    """
+    Retrieve the agency features JSON for the specified agency.
+
+    :param agency_ein: Agency EIN (String)
+
+    :return: JSON Object
+    """
+
+def agency_feature(agency_ein, feature):
+    """
+    Retrieve the information for the specified agency_feature in the specified agency, if exists.
+    :param agency_ein: Agency EIN (String)
+    :param feature: Feature specified. See app/lib/constants/agency_features for possible values (String)
+
+    :return: JSON Object
+    """
                 </details>
 
             </div>

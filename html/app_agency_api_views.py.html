@@ -1745,6 +1745,53 @@
                     </summary>
 
 <!-- Include the text material here! -->
+def get_active_users(agency_ein):
+    """
+    Retrieve the active users for the specified agency.
+
+    :param agency_ein: Agency EIN (String)
+
+    :return: JSON Object({"active_users": [('', 'All'), ('o8pj0k', 'John Doe')],
+                          "is_admin": True}), 200
+    """
+
+def get_agency_reasons(agency_ein, reason_type=None):
+    """Retrieve an agencies determination reasons for Denials, Closings, and Re-Openings
+
+    Args:
+        agency_ein (str): Agency EIN
+        reason_type (str): One of ("denial", "closing", "re-opening")
+            All other determination types do not have reasons.
+
+    Returns:
+        JSON Object (dict): Keys are the reason type, values are an array of tuples (id, title)
+
+    """
+
+def get_agency_letter_templates(agency_ein, letter_type=None):
+    """
+    Retrieve letter templates for the specified agency. If letter type is provided, only those templates will be
+    provided, otherwise all templates will be returned.
+
+    :param agency_ein: Agency EIN (String)
+    :param letter_type: One of "acknowledgment", "denial", "closing", "letter", "extension", "re-opening".
+
+    :return: JSON Object (keys are template types, values are arrays of tuples (id, name))
+    """
+
+def get_custom_request_form_options(agency_ein):
+    """
+    Retrieve the custom request forms for the specified agency.
+
+    :param agency_ein: Agency EIN (String)
+    :return: JSON Object (keys are the id of the custom request form, values are the names of the forms)
+    """
+
+def get_custom_request_form_fields():
+    """
+    Get the custom request form field definitions based on form id and agency ein
+    :return: JSON object containing the form field definitions
+    """
                 </details>
 
             </div>

@@ -1745,6 +1745,65 @@
                     </summary>
 
 <!-- Include the text material here! -->
+"""
+    app.lib.db_utils
+    ~~~~~~~~~~~~~~~~
+    synopsis: Handles the functions for database control
+"""
+
+def create_object(obj):
+    """
+    Add a database record and its elasticsearch counterpart.
+
+    If 'obj' is a Requests object, nothing will be added to
+    the es index since a UserRequests record is created after
+    its associated request and the es doc requires a
+    requester id. 'es_create' is called explicitly for a
+    Requests object in app.request.utils.
+
+    :param obj: object (instance of sqlalchemy model) to create
+
+    :return: string representation of created object
+        or None if creation failed
+    """
+
+def update_object(data, obj_type, obj_id, es_update=True):
+    """
+    Update a database record and its elasticsearch counterpart.
+
+    :param data: a dictionary of attribute-value pairs
+    :param obj_type: sqlalchemy model
+    :param obj_id: id of record
+    :param es_update: update the elasticsearch index
+
+    :return: was the record updated successfully?
+    """
+
+def delete_object(obj):
+    """
+    Delete a database record.
+
+    :param obj: object (instance of sqlalchemy model) to delete
+    :return: was the record deleted successfully?
+    """
+
+def bulk_delete(query):
+    """
+    Delete multiple database records via a bulk delete query.
+
+    http://docs.sqlalchemy.org/en/latest/orm/query.html#sqlalchemy.orm.query.Query.delete
+
+    :param query: Query object
+    :return: the number of records deleted
+    """
+
+def get_object(obj_type, obj_id):
+    """
+    Safely retrieve a database record by its id
+    and its sqlalchemy object type.
+    """
+
+def get_agency_choices():
                 </details>
 
             </div>

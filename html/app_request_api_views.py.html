@@ -1745,6 +1745,48 @@
                     </summary>
 
 <!-- Include the text material here! -->
+"""
+.. module:: api.request.views.
+
+   :synopsis: Handles the API request URL endpoints for the OpenRecords application
+"""
+
+def edit_privacy():
+    """
+    Edits the privacy privacy options of a request's title and agency description.
+    Retrieves updated privacy options from AJAX call on view_request page and stores changes into database.
+
+    :return: JSON Response with updated title and agency description privacy options
+    """
+
+def edit_request_info():
+    """
+    Edits the title and agency description of a FOIL request through an API PUT method.
+    Retrieves updated edited content from AJAX call on view_request page and stores changes into database.
+
+    :return: JSON Response with updated content: either request title or agency description)
+    """
+
+def get_request_events():
+    """
+    Returns a set of events (id, type, and template),
+    ordered by date descending, and starting from a specific index.
+
+    Request parameters:
+    - start: (int) starting index
+    - request_id: FOIL request id
+    - with_template: (default: False) include html rows for each event
+    """
+
+def get_request_responses():
+    """
+    Returns a set of responses (id, type, and template),
+    ordered by date descending, and starting from a specified index.
+    Request parameters:
+    - start: (int) starting index
+    - request_id: FOIL request id
+    - with_template: (default: False) include html (rows and modals) for each response
+    """
                 </details>
 
             </div>

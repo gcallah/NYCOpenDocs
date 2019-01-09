@@ -1745,6 +1745,29 @@
                     </summary>
 
 <!-- Include the text material here! -->
+"""
+.. module:: report.views.
+
+   :synopsis: Handles the report URL endpoints for the OpenRecords application
+"""
+
+def show_report():
+    """
+    This function handles the rendering of the reports page
+
+    :return: redirect to reports page
+    """
+
+def get():
+    """
+    This function handles the retrieval of report data to generate the chart on the frontend.
+    Takes in agency_ein or user_guid from the frontend and filters for the number of requests closed and requests
+    opened.
+
+    :return: json object({"labels": ["Opened", "Closed"],
+                          "values": [150, 135],
+                          "active_users": [('', ''), ('o8pj0k', 'John Doe')]}), 200
+    """
                 </details>
 
             </div>

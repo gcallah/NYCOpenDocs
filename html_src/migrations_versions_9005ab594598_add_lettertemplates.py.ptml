@@ -31,6 +31,7 @@
                     </summary>
 
 <!-- Include the text material here! -->
+<!--include templates/migrations_versions_9005ab594598_add_lettertemplates.py.txt -->
                 </details>
 
             </div>

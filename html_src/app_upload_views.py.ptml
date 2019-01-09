@@ -31,6 +31,7 @@
                     </summary>
 
 <!-- Include the text material here! -->
+<!--include templates/app_upload_views.py.txt -->
                 </details>
 
             </div>

@@ -1745,6 +1745,227 @@
                     </summary>
 
 <!-- Include the text material here! -->
+"""
+.. module:: auth.views.
+
+   :synopsis: Authentication utilities for NYC OpenRecords
+
+"""
+
+def user_loader(user_id):
+    """
+    Given a user_id (GUID + UserType), return the associated User object.
+
+    :param unicode user_id: user_id (GUID + UserType) of user to retrieve
+    :return: User object
+    """
+
+def update_openrecords_user(form):
+    """
+    Update OpenRecords-specific user attributes.
+    :param form: validated ManageUserAccountForm or ManageAgencyUserAccountForm
+    :type form: app.auth.forms.ManageUserAccountForm or app.auth.forms.ManageAgencyUserAccountForm
+    """
+
+def is_safe_url(target):
+    """ Taken from http://flask.pocoo.org/snippets/62/ with the help of Liam Neeson """
+
+def find_user_by_email(email):
+    """
+    Find a user by email address stored in the database.
+    If LDAP login is being used, non-agency users and users
+    without an LDAP auth type are ignored.
+    If OAUTH login is being used, anonymous users are ignored.
+
+    :param email: Email address
+    :return: User object or None if no user found.
+    """
+
+def oauth_user_web_service_request(method="GET", user_session=session):
+    """
+    Invoke the OAuth User Web Service with specified method.
+    https://nyc4d.nycnet/nycid/mobile.shtml#get-oauth-user-web-service
+
+    * Assumes the access token is stored in the session. *
+
+    :returns: response for user web services request
+    """
+
+def revoke_and_remove_access_token(user_session=None):
+    """
+    Invoke the Delete OAuth User Web Service
+    to revoke an access token and remove the
+    token from the session.
+
+    * Assumes the access token is stored in the session. *
+
+    """
+
+def fetch_user_json():
+    """
+    Invoke the Get OAuth User Web Service to fetch
+    a JSON-formatted user.
+    https://nyc4d.nycnet/nycid/search.shtml#json-formatted-users
+
+    * Assumes the access token is stored in the session. *
+
+    :return: response status code, user data json dict
+    """
+
+def handle_user_data(guid,
+    """
+    Interpret the result of processing the specified
+    user data and act accordingly:
+    - If a redirect url is returned, redirect to that url.
+    - If a user is returned, login that user and return
+      a redirect to the specified next_url, the home page url,
+      or to the 404 page if next_url is provided and is unsafe.
+    """
+
+def _session_regenerate_persist_token():
+
+def _process_user_data(guid,
+    """
+    Kickoff email validation (if the user did not authenticate
+    with a federated identity) or terms-of-use acceptance if the
+    user has not validated their email or has not accepted the
+    latest terms of use version.
+
+    Otherwise, create or update a user with the specified fields.
+
+    If no first_name is provided, the mailbox portion of the email
+    will be used (e.g. jdoe@records.nyc.gov -> first_name: jdoe).
+
+    If a user cannot be found using the specified guid and user_type,
+    a second attempt is made with the specified email.
+
+    NOTE: A user's agency is not determined here. After login, a user's
+    agency supervisor must email us requesting that user be added
+    to the agency.
+
+    :return: (redirect required?, user that has been found or created OR redirect url)
+    """
+
+def _update_user_data(user, guid, user_type, email, first_name, middle_initial, last_name):
+    """
+    Update specified user with the information provided, which is
+    assumed to have originated from an NYC Service Account, and set
+    `email_validated` and `terms_of_use_accepted` (this function
+    should be called AFTER email validation and terms-of-use acceptance
+    has been completed).
+
+    Update any database objects this user is associated with.
+    - user_requests
+    - events
+    In order to prevent a possbile negative performance impact
+    (due to foreign keys CASCADE), guid and user_type are compared with
+    stored user attributes and are excluded from the update if both are identical.
+
+    Update search index for searching by assigned user.
+    """
+
+def _validate_email(email_validation_flag, guid, email_address, user_type):
+    """
+    If the user did not log in via NYC.ID
+    (i.e. user_type is not 'EDIRSSO'),
+    no email validation is necessary.
+
+    A email is considered to have been validated if the
+    email validation flag is
+    - not provided
+    - 'TRUE'
+    - 'true'
+    - 'Unavailable'
+    - True
+
+    If the email validation flag is not one of the above (i.e. FALSE),
+    the Email Validation Web Service is invoked.
+
+    If the returned validation status equals false,
+    return url to the 'Email Confirmation Required' page
+    where the user can request a validation email.
+
+    :return: redirect url or None
+    """
+
+def _accept_terms_of_use(terms_of_use, guid, user_type):
+    """
+    If the user has logged in using the NYC Employees button
+    (i.e. the user_type is 'Saml2In: NYC Employees'),
+    no TOU acceptance is necessary.
+
+    Otherwise, invoke the Terms of Use Web Service to determine
+    if the user has accepted the latest TOU version.
+    If not, return url to 'NYC. TOU' page where the user can
+    accept the latest terms of use.
+
+    :return: redirect url or None
+    """
+
+def _enroll(guid, user_type):
+    """
+    Create an enrollment record for a specified user
+    if the user has not yet been enrolled.
+    """
+
+def _unenroll(guid, user_type):
+    """
+    Delete an enrollment.
+    *Included for possible future use.*
+    """
+
+def _check_web_services_response(response, msg):
+    """
+    Log an error message if the specified response's
+    status code is not 200.
+    """
+
+def _web_services_request(endpoint, params, method='GET'):
+    """
+    Perform a request on an NYC.ID Web Services endpoint.
+    'userName' and 'signature' are added to the specified params.
+
+    :param endpoint: web services endpoint (e.g. "/account/validateEmail.htm")
+    :param params: request parameters excluding 'userName' and 'signature'
+    :param method: HTTP method
+    :return: request response
+    """
+
+def _generate_string_to_sign(method, path, params):
+    """
+    Generate a string that can be signed to produce an
+    authentication signature.
+
+    :param method: HTTP method
+    :param path: path part of HTTP request URI
+    :param params: querystring parameters
+    :return: string to sign
+    """
+
+def _generate_signature(password, string):
+    """
+    Generate an NYC.ID Web Services authentication signature using HMAC-SHA1
+
+    https://nyc4d.nycnet/nycid/web-services.shtml#signature
+
+    :param password: NYC.ID Service Account password
+    :param string: string to sign
+    :return: the authentication signature or None on failure
+    """
+
+def ldap_authentication(email, password):
+    """
+    Authenticate the provided user with an LDAP Server.
+    :param email: Users username
+    :param password: Users password
+    :return: Boolean
+    """
+
+def _ldap_server_connect():
+    """
+    Connect to an LDAP server
+    :return: LDAP Context
+    """
                 </details>
 
             </div>

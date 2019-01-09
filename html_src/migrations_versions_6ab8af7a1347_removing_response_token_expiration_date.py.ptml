@@ -31,6 +31,7 @@
                     </summary>
 
 <!-- Include the text material here! -->
+<!--include templates/migrations_versions_6ab8af7a1347_removing_response_token_expiration_date.py.txt -->
                 </details>
 
             </div>

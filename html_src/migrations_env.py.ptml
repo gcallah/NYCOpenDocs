@@ -31,6 +31,7 @@
                     </summary>
 
 <!-- Include the text material here! -->
+<!--include templates/migrations_env.py.txt -->
                 </details>
 
             </div>

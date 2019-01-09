@@ -1745,6 +1745,741 @@
                     </summary>
 
 <!-- Include the text material here! -->
+"""
+    app.response.utils
+    ~~~~~~~~~~~~~~~~
+
+    synopsis: Handles the functions for responses
+
+"""
+
+# TODO: class ResponseProducer()
+def add_file(request_id, filename, title, privacy, is_editable):
+    """
+    Create and store the file response object for the specified request.
+    Gets the file mimetype and magic file check from a helper function in lib.file_utils
+    File privacy options can be either Release and Public, Release and Private, or Private.
+    Provides parameters for the process_response function to create and store responses and events object.
+    :param request_id: Request ID that the file is being added to
+    :param filename: The secured_filename of the file.
+    :param title: The title of the file which is entered by the uploader.
+    :param privacy: The privacy option of the file.
+    """
+
+def add_note(request_id, note_content, email_content, privacy, is_editable, is_requester):
+    """
+    Create and store the note object for the specified request.
+    Store the note content into the Notes table.
+    Provides parameters for the process_response function to create and store responses and events object.
+
+    :param request_id: FOIL request ID for the note
+    :param note_content: string content of the note to be created and stored as a note object
+    :param email_content: email body content of the email to be created and stored as a email object
+    :param privacy: The privacy option of the note
+    :param is_editable: editability of the note
+    :param is_requester: requester is creator of the note
+
+    """
+
+def add_acknowledgment(request_id, info, days, date, tz_name, content, method, letter_template_id):
+    """
+    Create and store an acknowledgement-determination response for
+    the specified request and update the request accordingly.
+
+    :param request_id: FOIL request ID
+    :param info: additional information pertaining to the acknowledgment
+    :param days: days until request completion
+    :param date: date of request completion
+    :param tz_name: client's timezone name
+    :param content: body text associated with the acknowledgment
+    :param method: the communication method of the acknowledgement ('letter' or 'email')
+    :param letter_template_id: id of the letter template
+
+    """
+
+def add_denial(request_id, reason_ids, content, method, letter_template_id):
+    """
+    Create and store a denial-determination response for
+    the specified request and update the request accordingly.
+
+    :param request_id: FOIL request ID
+    :param reason_ids: reason for denial
+    :param content: body text associated with the denial
+    :param method: the communication method of the denial ('letter' or 'email')
+    :param letter_template_id: id of the letter template
+
+    """
+
+def add_closing(request_id, reason_ids, content, method, letter_template_id):
+    """
+    Create and store a closing-determination response for the specified request and update the request accordingly.
+
+    :param request_id: FOIL request ID
+    :param reason_ids: reason(s) for closing
+    :param content: body text associated with the closing
+    :param method: the communication method of the closing ('letter' or 'email')
+    :param letter_template_id: id of the letter template
+
+    """
+
+def add_reopening(request_id, date, tz_name, content, reason, method, letter_template_id=None):
+    """
+    Create and store a re-opened-determination for the specified request and update the request accordingly.
+
+    :param request_id: FOIL request ID
+    :param date: string of new date of request completion
+    :param tz_name: client's timezone name
+    :param content: email body associated with the reopened request
+    :param reason: Reason for re-opening
+    :param method: Method of delivery (email or letters)
+    :param letter_template_id: id of the letter template, if generating a letter
+
+    """
+
+def add_extension(request_id, length, reason, custom_due_date, tz_name, content, method, letter_template_id):
+    """
+    Create and store the extension object for the specified request.
+    Extension's privacy is always Release and Public.
+    Provides parameters for the process_response function to create and store responses and events object.
+    Calls email notification function to email both requester and agency users detailing the extension.
+
+    :param request_id: FOIL request ID for the extension
+    :param length: length in business days that the request is being extended by
+    :param reason: reason for the extension of the request
+    :param custom_due_date: if custom_due_date is inputted from the frontend, the new extended date of the request
+    :param tz_name: client's timezone name
+    :param content: body text associated with the extension
+    :param method: the communication method of the extension ('letter' or 'email')
+    :param letter_template_id: id of the letter template
+
+    """
+
+def add_link(request_id, title, url_link, email_content, privacy, is_editable=True):
+    """
+    Create and store the link object for the specified request.
+    Store the link content into the Links table.
+    Provides parameters for the process_response function to create and store responses and events object
+    Calls email notification function to email both requester and agency users detailing the link.
+
+    :param request_id: FOIL request ID for the link
+    :param title: title of the link to be stored in the Links table and as a response value
+    :param url_link: link url to be stored in the Links table and as a response value
+    :param email_content: string of HTML email content to be created and stored as a email object
+    :param privacy: The privacy option of the link
+
+    """
+
+def add_instruction(request_id, instruction_content, email_content, privacy, is_editable=True):
+    """
+    Creates and stores the instruction object for the specified request.
+    Stores the instruction content into the Instructions table.
+    Provides parameters for the process_response function to create and store responses and events object.
+
+    :param request_id: FOIL request ID for the instruction
+    :param instruction_content: string content of the instruction to be created and stored as a instruction object
+    :param email_content: email body content of the email to be created and stored as a email object
+    :param privacy: The privacy option of the instruction
+
+    """
+
+def add_response_letter(request_id, content, letter_template_id):
+    """
+    Generate and email a PDF of the response letter.
+    Create and store the response_letters and communication_methods objects.
+
+    :param request_id: FOIL request ID
+    :param content: (string) HTML of the response letter
+    :param letter_template_id: id of the letter template
+    """
+
+def _add_email(request_id, subject, email_content, to=None, cc=None, bcc=None):
+    """
+    Create and store the email object for the specified request.
+    Store the email metadata into the Emails table.
+    Provides parameters for the process_response function to create and store responses and events object.
+
+    :param request_id: takes in FOIL request ID as an argument for the process_response function
+    :param subject: subject of the email to be created and stored as a email object
+    :param email_content: string of HTML email content to be created and stored as a email object
+    :param to: list of person(s) email is being sent to
+    :param cc: list of person(s) email is being cc'ed to
+    :param bcc: list of person(s) email is being bcc'ed
+
+    """
+
+def _add_letter(request_id, letter_title, letter_content, letter_type):
+    """
+    Create and store a letter object for the specified request.
+    Stores the letter metadata in the Letters table.
+    Provides parameters for the process_response function to create and store responses and events objects.
+
+    :param request_id: FOIL Request Unique Identifier
+    :param letter_content: HTML content of the letter (used to format PDF for printing)
+    :param letter_type: letter type created
+    :return: Response Identifier (int)
+    """
+
+def add_envelope(request_id, template_id, envelope_data):
+    """
+    Create and store an envelope object for the specified request.
+    Stores the envelope LaTeX in the Letters table.
+
+    :param request_id: FOIL Request Unique Identifier (String)
+    :param template_id: ID of the template to use to generate the envelope (String)
+    :param envelope_data: Dictionary of data to fill in the envelope. (EnvelopeDict)
+    :return: PDF File object
+    """
+
+def add_sms():
+    """
+    Will add an SMS to the database for the specified request.
+    :return:
+    """
+
+def add_push():
+    """
+    Will add a push to the database for the specified request.
+    :return:
+    """
+
+def format_determination_reasons(reason_ids):
+
+def _get_new_due_date(request_id, extension_length, custom_due_date, tz_name):
+    """
+    Gets the new due date from either generating with extension length, or setting from an inputted custom due date.
+    If the extension length is -1, then we use the custom_due_date to determine the new_due_date.
+    Or else, extension length has an length (20, 30, 60, 90, or 120) and new_due_date will be determined by
+    generate_due_date.
+
+    :param request_id: FOIL request ID that is being passed in to generate_new_due_date
+    :param extension_length: number of days the due date is being extended by
+    :param custom_due_date: custom due date of the request (string in format '%m/%d/%Y')
+    :param tz_name: client's timezone name
+
+    :return: new_due_date of the request
+    """
+
+def process_upload_data(form):
+    """
+    Helper function that processes the uploaded file form data.
+    A files dictionary is first created and then populated with keys and their respective values of the form data.
+
+    :param form: form object to be processed and separated into appropriate keys and values
+
+    :return: A dictionary that contains the uploaded file(s)'s metadata.
+    """
+
+def process_letter_template_request(request_id, data):
+    """
+    Process the letter template for the request.
+
+    Generate a letter based on the template from the agency. Will include any headers and signatures (non-editable).
+    :param request_id: FOIL Request ID
+    :param data: Data from the frontend AJAX call (JSON)
+    :return: the HTML of the rendered template
+    """
+
+def process_email_template_request(request_id, data):
+    """
+    Process the email template for responses. Determine the type of response from passed in data and follows
+    the appropriate execution path to render the email template.
+
+    :param data: Data from the frontend AJAX call
+    :param request_id: FOIL request ID
+
+    :return: the HTML of the rendered template
+    """
+
+def assign_point_of_contact(point_of_contact):
+    """
+    Assign a user to be the point of contact in emails/letters
+
+    :param point_of_contact: A string containing the user_guid if point of contact has been set for a request
+    :return: A User object to be designated as the point of contact for a request
+    """
+
+def assign_point_of_contact(point_of_contact):
+    """
+    Assign a user to be the point of contact in emails/letters
+
+    :param point_of_contact: A string containing the user_guid if point of contact has been set for a request
+    :return: A User object to be designated as the point of contact for a request
+    """
+
+def _acknowledgment_email_handler(request_id, data, page, agency_name, email_template):
+    """
+    Process email template for an acknowledgement.
+
+    :param request_id: FOIL request ID
+    :param data: data from frontend AJAX call
+    :param page: string url link of the request
+    :param agency_name: string name of the agency of the request
+    :param email_template: raw HTML email template of a response
+
+    :return: the HTML of the rendered template of an acknowledgement email.
+    """
+
+def _acknowledgment_letter_handler(request_id, data):
+    """
+    Process letter template for an acknowledgment.
+
+    :param request_id: FOIL Request ID
+    :param data: data from the frontend AJAX call
+    :return: the HTML of a rendered template of an acknowledgment letter.
+    """
+
+def _extension_letter_handler(request_id, data):
+    """
+    Process letter template for an extension.
+
+    :param request_id: FOIL Request ID
+    :param data: data from the frontend AJAX call
+    :return: the HTML of a rendered template of an extension letter.
+    """
+
+def _closing_letter_handler(request_id, data):
+    """
+    Process letter templates for a closing
+
+    :param request_id: FOIL Request ID
+    :param data: data from the frontend AJAX call
+    :return: the HTML of a rendered template of a closing letter.
+    """
+
+def _denial_letter_handler(request_id, data):
+    """
+    Process letter templates for a denial
+
+    :param request_id: FOIL Request ID
+    :param data: data from the frontend AJAX call
+    :return: the HTML of a rendered template of a denial letter.
+    """
+
+def _reopening_email_handler(request_id, data, page, agency_name, email_template):
+    """
+    Process email template for reopening a request.
+
+    :param request_id (String): FOIL request ID
+    :param data (JSON Dict): data from frontend AJAX call
+    :param page (String): string url link of the request
+    :param agency_name (String): string name of the agency of the request
+    :param email_template (String [HTML Formatted]): raw HTML email template of a response
+
+    :return: the HTML of the rendered email template of a reopening
+    """
+
+def _reopening_letter_handler(request_id, data):
+    """
+
+    Process letter templates for a re-opening
+
+    :param request_id: FOIL Request ID
+    :param data: data from the frontend AJAX call
+    :return: the HTML of a rendered template of a re-opening letter.
+    """
+
+def _response_letter_handler(request_id, data):
+    """
+    Process letter template for a response.
+
+    :param request_id: FOIL Request ID
+    :param data: data from the frontend AJAX call
+    :return: the HTML of a rendered template of a response letter.
+    """
+
+def _denial_email_handler(request_id, data, page, agency_name, email_template):
+    """
+    Process email template for denying a request.
+
+    :param request_id: FOIL request ID
+    :param data: data from frontend AJAX call
+    :param page: string url link of the request
+    :param agency_name: string name of the agency of the request
+    :param email_template: raw HTML email template of a response
+
+    :return: the HTML of the rendered template of a closing
+    """
+
+def _closing_email_handler(request_id, data, page, agency_name, email_template):
+    """
+    Process email template for closing a request.
+
+    :param request_id: FOIL request ID
+    :param data: data from frontend AJAX call
+    :param page: string url link of the request
+    :param agency_name: string name of the agency of the request
+    :param email_template: raw HTML email template of a response
+
+    :return: the HTML of the rendered template of a closing
+    """
+
+def _user_request_added_email_handler(request_id, data, page, agency_name, email_template):
+    """
+    Process email template for reopening a request.
+
+    :param request_id: FOIL request ID
+    :param data: data from frontend AJAX call
+    :param page: string url link of the request
+    :param agency_name: string name of the agency of the request
+    :param email_template: raw HTML email template of a response
+
+    :return: the HTML of the rendered email template of a reopening
+    """
+
+def _user_request_edited_email_handler(request_id, data, page, agency_name, email_template):
+    """
+    Process email template for reopening a request.
+
+    :param request_id: FOIL request ID
+    :param data: data from frontend AJAX call
+    :param page: string url link of the request
+    :param agency_name: string name of the agency of the request
+    :param email_template: raw HTML email template of a response
+
+    :return: the HTML of the rendered email template of a reopening
+    """
+
+def _user_request_removed_email_handler(request_id, data, page, agency_name, email_template):
+    """
+    Process email template for reopening a request.
+
+    :param request_id: FOIL request ID
+    :param data: data from frontend AJAX call
+    :param page: string url link of the request
+    :param agency_name: string name of the agency of the request
+    :param email_template: raw HTML email template of a response
+
+    :return: the HTML of the rendered email template of a reopening
+    """
+
+def _extension_email_handler(request_id, data, page, agency_name, email_template):
+    """
+    Process email template for an extension.
+    Checks if dictionary of extension data exists. If not, renders the default response email template.
+    If extension dictionary exists, renders the extension response template with provided arguments.
+
+    :param request_id: FOIL request ID of the request being extended
+    :param data: data from the frontend AJAX call
+    :param page: string url link of the request
+    :param agency_name: string name of the agency of the request
+    :param email_template: raw HTML email template of a response
+
+    :return: the HTML of the rendered template of an extension response
+    """
+
+def _file_email_handler(request_id, data, page, agency_name, email_template):
+    """
+    Process email template for a file.
+    Checks if dictionary of file data exists. If not, renders the default response email template.
+    If file dictionary exists, renders the file response template with provided arguments.
+
+    :param request_id: FOIL request ID of the request the file is being added to
+    :param data: data from the frontend AJAX call
+    :param page: string url link of the request
+    :param agency_name: string name of the agency of the request
+    :param email_template: raw HTML email template of a response
+
+    :return: the HTML of the rendered template of a file response
+    """
+
+def _link_email_handler(request_id, data, page, agency_name, email_template):
+    """
+    Process email template for a link instruction.
+    Checks if dictionary of link data exists and renders the default response email template.
+    If link dictionary does not exist, use email_content from frontend to render confirmation.
+
+    :param request_id: FOIL request ID of the request the file is being added to
+    :param data: data from the frontend AJAX call
+    :param page: string url link of the request
+    :param agency_name: string name of the agency of the request
+    :param email_template: raw HTML email template of a response
+
+    :return: the HTML of the rendered template of a file response
+    """
+
+def _note_email_handler(request_id, data, page, agency_name, email_template):
+    """
+    Process email template for note
+    Checks if dictionary of note data exists and renders the default response email template.
+    If note dictionary does not exist, use email_content from frontend to render confirmation.
+
+    :param request_id: FOIL request ID of the request the note is being added to
+    :param data: data from the frontend AJAX call
+    :param page: string url link of the request
+    :param agency_name: string name of the agency of the request
+    :param email_template: raw HTML email template of a response
+
+    :return: the HTML of the rendered template of a note response
+    """
+
+def _instruction_email_handler(request_id, data, page, agency_name, email_template):
+    """
+    Process email template for an offline instruction.
+    Checks if dictionary of instruction data exists and renders the default response email template.
+    If instruction dictionary does not exist, use email_content from frontend to render confirmation.
+
+    :param request_id: FOIL request ID of the request the instruction is being added to
+    :param data: data from the frontend AJAX call
+    :param page: string url link of the request
+    :param agency_name: string name of the agency of the request
+    :param email_template: raw HTML email template of a response
+
+    :return: the HTML of the rendered template of an instruction response
+    """
+
+def _edit_email_handler(data):
+    """
+    Process email template for a editing a response.
+    Checks if confirmation is true. If not, renders the default edit response email template.
+    If confirmation is true, renders the edit response template with provided arguments.
+
+    :param data: data from the frontend AJAX call
+
+    :return: the HTML of the rendered template of an edited response
+    """
+
+def _get_edit_response_template(editor):
+    """
+    Get the email template(s) and header for confirmation page, for the edit response workflow, based on privacy options.
+
+
+:param editor: editor object from class ResponseEditor:param editor: editor object from class ResponseEditor
+    :return: email template for agency users.
+             email template for requester if privacy is not private.
+             header for confirmation page
+
+    """
+
+def get_email_key(response_id, requester=False):
+    """
+    Returns a formatted key for an email.
+    Intended for storing the body of an email.
+
+    :param response_id: id of the response
+    :param requester: will the stored content be emailed to a requester?
+
+    :return: the formatted key
+        Ex.
+            1_requester
+            1_agency
+    """
+
+def get_file_links(response, release_public_links, release_private_links, private_links):
+    """
+    Create file links for a file response based on privacy.
+    Append a file_link dictionary to either release_public_links, release_private_links, and private_links, based on
+    privacy option.
+
+    :param response: response object
+    :param release_public_links: list of dictionaries of release and public files containing key and values of filename,
+                                 title, and link to file
+    :param release_private_links: list of dictionaries of release and public files containing key and values of
+                                  filename, title, and link to file
+    :param private_links: list of dictionaries of private files containing key and values of filename, title, and
+                          link to file
+
+    :return: list with appended file_link dictionary based on privacy
+    """
+
+def send_file_email(request_id, release_public_links, release_private_links, private_links, email_content,
+    """
+    Send email with file links detailing a file response has been added to the request.
+    Requester receives email only if release_public_links and release_private_links list is not empty.
+    Agency users are BCCed on the email the requester receives.
+    Agency users receive a separate email if only private files were uploaded.
+
+    :param request_id: FOIL request ID
+    :param release_public_links: list of dictionaries of release and public files containing key and values of filename,
+                                 title, and link to file
+    :param release_private_links: list of dictionaries of release and public files containing key and values of
+    filename, title, and link to file
+    :param private_links: list of dictionaries of private files containing key and values of filename, title, and
+                          link to file
+    :param email_content: string body of email from tinymce textarea
+    :param replace_string: alphanumeric random 32 character string to be replaced in email_content
+    :param tz_name:
+
+    """
+
+def _send_edit_response_email(request_id, email_content_agency, email_content_requester=None):
+    """
+    Send email detailing a response has been edited.
+    Always sends email to agency users on the request.
+    Requester is emailed only if email_content_requester is provided.
+
+    :param request_id: FOIL request ID
+    :param email_content_agency: body of email being sent to agency users
+    :param email_content_requester: body of email being sent to requester
+
+    :type email_content_agency: str
+    :type email_content_requester: str
+
+    """
+
+def _send_response_email(request_id, privacy, email_content, subject):
+    """
+    Function that sends email detailing a specific response has been added to a request.
+    If the file privacy is private, only agency_ein users are emailed.
+    If the file privacy is release, the requester is emailed and the agency_ein users are bcced.
+    Call safely_send_and_add_email to send email notification detailing a specific response has been added to the
+    request.
+
+    :param request_id: FOIL request ID for the specific link
+    :param email_content: content body of the email notification being sent
+    :param privacy: privacy option of link
+
+    """
+
+def _send_delete_response_email(request_id, response):
+    """
+    Send an email notification to all agency users regarding
+    a deleted response.
+
+    """
+
+def safely_send_and_add_email(request_id,
+    """
+    Send email based on given arguments and create and store email object into the Emails table.
+    Print error messages if there is Assertion or Exception error occurs.
+
+    :param request_id: FOIL request ID
+    :param email_content: string of HTML email content that can be used as a message template
+    :param subject: subject of the email (current is for TESTING purposes)
+    :param template: path of the HTML template to be passed into and rendered in send_email
+    :param to: list of person(s) email is being sent to
+    :param bcc: list of person(s) email is being bcc'ed
+
+    """
+
+def create_response_event(events_type, response, previous_value=None, user=current_user):
+    """
+    Create and store event object for given response.
+
+    :param response: response object
+    :param events_type: one of app.constants.event_type
+    :param previous_value: JSON to be stored in previous_value of Events (for Acknowledgements and Extensions)
+
+    """
+
+def _create_communication_method(response_id, method_id, method_type):
+    """
+    Create and store communication_method object for a given response.
+
+    :param response_id: response ID
+    :param method_id: response ID of the method
+    :param method_type: 'letters' or 'emails'
+    """
+
+class ResponseEditor(metaclass=ABCMeta):    """
+
+Abstract base class for editing a response.Abstract base class for editing a response.
+
+All derived classes must implement the 'editable_fields' method andAll derived classes must implement the 'editable_fields' method and    should override the `set_edited_data` method with any additional logic.
+    """
+
+    def __init__(self, user, response, flask_request, update=True):
+
+    def set_data_values(self, key, old, new):
+
+    def event_type(self):
+
+    def editable_fields(self):
+        """ List of fields that can be edited directly. """
+
+    def requester_viewable_keys(self):
+        """ List of keys for edited data that can be viewed by a requester. """
+
+    def requester_viewable(self):
+        """ Can a requester view the changes made to the response? """
+
+    def set_edited_data(self):
+        """
+        For the editable fields, populates the old and new data containers
+        if the field values differ from their database counterparts.
+        """
+
+    def _bool_check(self, value):
+
+    def validate_deleted(self):
+        """
+        Removes the 'deleted' key-value pair from the data containers
+        if the confirmation string (see response PATCH) is not valid.
+        """
+
+    def add_event_and_update(self):
+        """
+        Creates an 'edited' Event and updates the response record.
+        """
+
+    def get_response_release_date(self):
+
+    def deleted(self):
+
+    def send_email(self):
+        """
+        Send an email to all relevant request participants.
+        Email content varies according to which response fields have changed.
+        """
+
+class RespFileEditor(ResponseEditor):
+    def editable_fields(self):
+
+    def set_edited_data(self):
+        """
+        If the file itself is being edited, gather
+        its metadata. The values of the 'size', 'name', 'mime_type',
+        and 'hash' fields are determined by the new file.
+        """
+
+    def replace_old_file(self, updated_filepath):
+        """
+        Move the new file out of the 'updated' directory
+        and delete the file it is replacing.
+        """
+
+    def handle_response_token(self, file_changed):
+        """
+        Handle the response token based on privacy option and if file has been replaced
+        """
+
+    def file_link_for_user(self):
+        """
+        Get the link(s) of the file being edited.
+
+        :return: dictionary with a nested dictionary, filename, with key of requester and agency and values of the
+        respective file link(s).
+        File link to the requester is not created if privacy is private.
+        """
+
+    def send_email(self):
+        """
+        Send an email to all relevant request participants for editing a file.
+        Email content varies according to which response fields have changed.
+        """
+
+    def move_deleted_file(self):
+        """
+        Move the file of a deleted response to the
+        designated directory for deleted files.
+
+        from:
+
+            UPLOAD_DIRECTORY/<FOIL-ID>/
+
+        to:
+
+            UPLOAD_DIRECTORY/deleted/<response-ID>/
+
+        """
+
+class RespNoteEditor(ResponseEditor):
+    def editable_fields(self):
+
+class RespLinkEditor(ResponseEditor):
+    def editable_fields(self):
+
+class RespInstructionsEditor(ResponseEditor):
+    def editable_fields(self):
                 </details>
 
             </div>

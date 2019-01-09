@@ -1745,6 +1745,133 @@
                     </summary>
 
 <!-- Include the text material here! -->
+"""
+.. module:: request.forms.
+
+    :synopsis: Defines forms used to create FOIL requests.
+"""
+
+class PublicUserRequestForm(Form):    """
+    Form for public users to create a new FOIL request.
+    For a public user, the required fields are:
+
+    # Request information
+    agency: agency selected for the request
+    title: name or title of the request
+    description: detailed description of the request
+
+    """
+
+    def __init__(self):
+
+class AgencyUserRequestForm(Form):    """
+    Form for agency users to create a new FOIL request.
+    For an agency user, the required fields are:
+
+    # Request Information
+    agency: agency selected for the request
+    title: name or title of the request
+    description: detailed description of the request
+    request_date: date the request was made
+    method_received: format the request was received
+
+    # Personal Information
+    first_name: first name of the requester
+    last_name: last name of the requester
+
+    # Contact Information (at least one form on contact is required)
+    email: requester's email address
+    phone: requester's phone number
+    fax: requester's fax number
+    address, city, state, zip: requester's address
+    """
+
+# TODO: when refactoring these classes, include length and other validators
+    def __init__(self):
+
+class AnonymousRequestForm(Form):    """
+    Form for anonymous users to create a new FOIL request.
+    For a anonymous user, the required fields are:
+
+    # Request Information
+    agency: agency selected for the request
+    title: name or title of the request
+    description: detailed description of the request
+
+    # Personal Information
+    first_name: first name of the requester
+    last_name: last name of the requester
+
+    # Contact Information (at least one form on contact is required)
+    email: requester's email address
+    phone: requester's phone number
+    fax: requester's fax number
+    address, city, state, zip: requester's address
+    """
+
+    def __init__(self):
+
+class EditRequesterForm(Form):
+# TODO: Add class docstring
+    def __init__(self, requester):
+        """
+        :type requester: app.models.Users
+        """
+
+class DeterminationForm(Form):
+# TODO: Add class docstring
+    def __init__(self, agency_ein):
+
+    def reasons(self):
+        """ SelectMultipleField or SelectField """
+
+    def ultimate_determination_type(self):
+        """ Closing or Denial """
+
+class DenyRequestForm(DeterminationForm):
+# TODO: Add class docstring
+class CloseRequestForm(DeterminationForm):
+# TODO: Add class docstring
+class ReopenRequestForm(DeterminationForm):
+# TODO: Add class docstring
+class GenerateEnvelopeForm(Form):
+# TODO: Add class docstring
+    def __init__(self, agency_ein, requester):
+        """
+        :type requester: app.models.Users
+        """
+
+class GenerateLetterForm(Form):
+# TODO: Add class docstring
+    def __init__(self, agency_ein):
+
+    def letter_templates(self):
+        """ SelectField """
+
+    def letter_type(self):
+        """ Acknowledgement, Extension, """
+
+class GenerateAcknowledgmentLetterForm(GenerateLetterForm):
+# TODO: Add class docstring
+class GenerateDenialLetterForm(GenerateLetterForm):
+# TODO: Add class docstring
+class GenerateClosingLetterForm(GenerateLetterForm):
+# TODO: Add class docstring
+    def __init__(self, agency_ein):
+
+class GenerateExtensionLetterForm(GenerateLetterForm):
+# TODO: Add class docstring
+class GenerateReopeningLetterForm(GenerateLetterForm):
+# TODO: Add class docstring
+class GenerateResponseLetterForm(GenerateLetterForm):
+# TODO: Add class docstring
+class SearchRequestsForm(Form):
+# TODO: Add class docstring
+    def __init__(self):
+
+class ContactAgencyForm(Form):
+# TODO: Add class docstring
+    def __init__(self, request):
                 </details>
 
             </div>

@@ -1745,6 +1745,31 @@
                     </summary>
 
 <!-- Include the text material here! -->
+def update_agency_active_status(agency_ein, is_active):
+    """
+    Update the active status of an agency.
+    :param agency_ein: String identifier for agency (4 characters)
+    :param is_active: Boolean value for agency active status (True = Active)
+    :return: Boolean value (True if successfully changed active status)
+    """
+
+def get_agency_feature(agency_ein, feature):
+    """
+    Retrieve the specified agency feature for the specified agency.
+
+    :param agency_ein:  String identifier for agency (4 characters)
+    :param feature: Feature specified. See app/lib/constants/agency_features.py for possible values (String)
+
+    :return: JSON Object
+    """
+
+def get_agency_features(agency_ein):
+    """
+    Retrieve the agency features JSON object for the specified agency.
+
+    :param agency_ein: String identifier for agency (4 characters)
+    :return: JSON Object
+    """
                 </details>
 
             </div>

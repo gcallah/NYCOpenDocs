@@ -1745,6 +1745,47 @@
                     </summary>
 
 <!-- Include the text material here! -->
+def has_permission(permission: int):
+    """
+    Checks to see if the current_user has the appropriate permission for this endpoint.
+
+    :param f: View function that is being wrapped.
+    :param permissions: List of permission values.
+    :return:
+    """
+
+    def decorator(f):
+
+        def decorated_function(request_id, *args, **kwargs):
+
+def has_super():
+    """
+    Checks to see if the current_user is a super user.
+
+    :param f: Function that is being wrapped.
+    :return:
+    """
+
+    def decorator(f):
+
+        def decorated_function(*args, **kwargs):
+
+def is_allowed(user: Users, request_id: str, permission: int):
+    """
+
+    :param user:
+    :param request_id:
+    :param permissions:
+    :return:
+    """
+
+def get_permission(permission_type: str, response_type: Responses):
+    """
+
+    :param permission_type:
+    :param response_type:
+    :return:
+    """
                 </details>
 
             </div>

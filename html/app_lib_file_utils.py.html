@@ -1745,6 +1745,94 @@
                     </summary>
 
 <!-- Include the text material here! -->
+"""
+    app.file.utils
+    ~~~~~~~~~~~~~~~~
+
+    synopsis: Helpers for manipulating files.
+    Switches file-handling interface between sftp and os depending on configuration.
+
+"""
+
+class MaxTransferSizeExceededException(Exception):
+class SFTPCredentialsException(Exception):
+def sftp_ctx():
+    """
+    Context manager that provides an SFTP client object
+    (an SFTP session across an open SSH Transport)
+    """
+
+def _sftp_switch(sftp_func):
+    """
+    Check if app is using SFTP and, if so, connect to SFTP server
+    and call passed function (sftp_func) with connected client,
+    otherwise call decorated function (which should be using
+    the os library to accomplish the same file-related action).
+    """
+
+    def decorator(os_func):
+
+        def wrapper(*args, **kwargs):
+
+def _raise_if_too_big(bytes_transferred, _):
+
+def _sftp_get_size(sftp, path):
+
+def _sftp_exists(sftp, path):
+
+def _sftp_mkdir(sftp, path):
+
+def _sftp_makedirs(sftp, path):
+    """ os.makedirs(path, exists_ok=True) """
+
+def _sftp_remove(sftp, path):
+
+def _sftp_rename(sftp, oldpath, newpath):
+
+def _sftp_move(sftp, localpath, remotepath):
+
+def _sftp_get_mime_type(sftp, path):
+
+def _sftp_get_hash(sftp, path):
+
+def _sftp_send_file(sftp, directory, filename, **kwargs):
+
+def _get_file_serving_path(directory, filename):
+    """
+    Returns the upload serving directory path for a file determined by supplied directory and filename.
+    """
+
+def getsize(path):
+
+def exists(path):
+
+def mkdir(path):
+
+def makedirs(path, **kwargs):
+
+def remove(path):
+
+def rename(oldpath, newpath):
+
+def move(oldpath, newpath):
+    """
+    Use this instead of 'rename' if, when using sftp, 'oldpath'
+    represents a local file path and 'newpath' a remote path.
+    """
+
+def get_mime_type(path):
+
+def os_get_mime_type(path):
+
+def get_hash(path):
+    """
+    Returns the sha1 hash of a file a string of
+    hexadecimal digits.
+    """
+
+def os_get_hash(path):
+
+def send_file(directory, filename, **kwargs):
                 </details>
 
             </div>

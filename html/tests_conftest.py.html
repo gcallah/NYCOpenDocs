@@ -1745,6 +1745,55 @@
                     </summary>
 
 <!-- Include the text material here! -->
+"""ConfigTest Module
+
+This module handles the setup for running tests agains the OpenRecords application.
+
+.. _Flask Tutorial:
+   http://flask.pocoo.org/docs/1.0/tutorial/
+"""
+
+def app():
+    """
+    Create a session
+    Yields:
+        app (Flask): Instance of a Flask application
+
+    """
+
+def client(app: Flask):
+    """Retrieve an instance of the Flask test_client.
+
+    .. _Flask Test Client:
+        http://flask.pocoo.org/docs/1.0/api/#flask.Flask.test_client
+
+    Args:
+        app (Flask): Instance of the Flask application
+
+    Returns:
+        app.test_client (Flask.test_client): Returns a client used to test the Flask application
+    """
+
+def db(app: Flask):
+    """
+    Create all of the database tables and yield an instance of the database.
+    Args:
+        app (Flask): Instance of the flask application.
+
+    Yields:
+        db (SQLAlchemy): Instance of the SQLAlchemy DB connector
+    """
+
+def session(db: SQLAlchemy):
+    """Create a database session to be used for the function.
+
+    Args:
+        db (SQLAlchemy): Instance of the SQLAlchemy DB connector
+
+    Yields:
+        session_ (SQLAlchemy.session): Session object to be used by the function
+
+    """
                 </details>
 
             </div>

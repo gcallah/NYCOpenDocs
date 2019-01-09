@@ -1745,6 +1745,32 @@
                     </summary>
 
 <!-- Include the text material here! -->
+def redis_set_file_metadata(request_or_response_id, filepath, is_update=False):
+    """
+    Stores a file's size, mime type, and hash.
+    """
+
+def redis_get_file_metadata(request_or_response_id, filepath, is_update=False):
+    """
+    Returns a tuple containing a file's
+        ( size (int), mime type (str), and hash (str) ).
+    """
+
+def redis_delete_file_metadata(request_or_response_id, filepath, is_update=False):
+
+def _get_file_metadata_key(request_or_response_id, filepath, is_update):
+    """
+    See upload.utils.get_upload_key
+
+    Since this key is being stored in upload_redis, a pipe
+    is used instead of an underscore to avoid any key conflicts.
+    """
+
+def redis_get_user_session(session_id):
+
+session_class = KVSession
+s = session_class(serialization_method.loads(
+def redis_delete_user_session(session_id):
                 </details>
 
             </div>

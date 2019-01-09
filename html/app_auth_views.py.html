@@ -1745,6 +1745,68 @@
                     </summary>
 
 <!-- Include the text material here! -->
+"""
+.. module:: auth.views.
+
+   :synopsis: Handles OAUTH and LDAP authentication endpoints for NYC OpenRecords
+
+"""
+
+def login():
+    """
+    Based off of: https://flask-login.readthedocs.io/en/latest/#login-example
+
+    If using LDAP, see ldap_login().
+
+    If using SAML/OAuth, check for the presence of an access token
+    in the session, which is used to fetch user information for processing.
+    If no token exists, send the user to the authorization url
+    (first leg of the OAuth 2 workflow).
+
+    * NOTE *
+    Since we are using OAuth Mobile Application Flow to fetch the information
+    normally retrieved in a SAML Assertion, the url resulting from authorization
+    is in the format 'redirect_uri#access_token=123guid=ABC...'. Notice the fragment
+    identifier ('#') in place of what would normally be the '?' separator.
+    Since Flask drops everything after the identifier, we must extract these values
+    client-side in order to forward them to the server. Therefore, the redirect uri
+    we are using is our home page (main.index, along with the 'next' url if present)
+    which contains a script that detects the presence of an access token
+    and redirects to the intended OAuth callback (auth.authorize).
+
+    https://tools.ietf.org/html/rfc3986#section-3.5
+
+    """
+
+def authorize():
+    """
+    Store access token and a UTC timestamp for its
+    expiration date and time in the session, then
+    process SAML Assertion information.
+
+    See: https://nyc4d.nycnet/nycidauthentication.shtml
+    """
+
+def logout():
+    """
+    Provides a unified interface for logging out users.
+
+    Accepts two request arguments:
+        :param timeout: Logout being called due to a session timeout.
+        :type timeout: Boolean; Default = False
+        :param forced_logout: Logout being called to close any duplicate sessions.
+        :param forced_logout: Boolean; Default = False
+
+    :return:
+    """
+
+def manage():
+
+def ldap_login():
+
+def ldap_logout(timed_out=False, forced_logout=False):
+
+def oauth_logout():
                 </details>
 
             </div>

@@ -1745,6 +1745,229 @@
                     </summary>
 
 <!-- Include the text material here! -->
+"""
+Migrate data and files from OpenRecords V1 database and file server.
+
+Dependencies (not listed in requirements.txt)
+    nameparser
+    progressbar2 (optional)
+
+Usage:
+    PYTHONPATH=/.../openrecords_v2_0 python migrations/custom/openrecords_v1.py
+
+"""
+
+class MockProgressBar(object):    """
+    Mock progressbar.ProgressBar
+    (Used if progressbar2 is not installed.)
+    """
+
+    def __init__(self, max_value):
+
+    def update(self, num):
+
+    def finish(self):
+
+def transfer(tablename, query):
+
+    def decorator(transfer_func):
+        """
+        Run args.transfer_func for every row fetched by args.query,
+        committing every 500 rows.
+        """
+
+        def wrapped(*args):
+
+def _get_due_date(date_submitted, days_until_due):
+    """
+    Script-compatible app.lib.date_utils.get_due_date
+
+    :param date_submitted: local time expected (to match v1 db)
+    """
+
+def _process_due_date(due_date):
+    """
+    Script-compatible app.lib.date_utils.process_due_date
+
+    :param due_date: local time expected (to match v1 db)
+    """
+
+def _get_compatible_status(request):
+    """
+    Get compatible v1 request status for v2.
+
+    Any v1 status that is not 'Closed' or 'Open' is
+    determined by the request's due date.
+
+    """
+
+def transfer_requests(agency_next_request_number, request):
+    """
+    Since categories were not stored per request in v1, transferred
+    requests are given a category of "All" (the default for v2 requests).
+
+    Since agency description privacy was not stored in v1, the privacy for
+    transferred requests is set if no description due date is present.
+    """
+
+def _create_response(obj, type_, release_date, privacy=None, date_created=None):
+    """
+    Create openrecords_v2.public.responses row.
+
+    :param obj: database record containing request id (via `id` or `request_id`)
+                and privacy (if not provided as kwarg)
+    :returns: response id
+    """
+
+def _get_release_date(start_date):
+
+def _get_note_release_date(note):
+
+def transfer_notes(note):
+
+def transfer_denials(note):
+    """
+    Any note corresponding to a request that was NOT determined to have an
+    acknowledgment through transfer_acknowledgments_from_email and
+    transfer_acknowledgments_from_request, is considered a note representing
+    a denial.
+    """
+
+def transfer_closings(note):
+    """
+    Any note corresponding to a request that was determined to have an
+    acknowledgment through transfer_acknowledgments_from_email and
+    transfer_acknowledgments_from_request and containing a text in the
+    format "{...}" (indicating a list of reasons), is considered a not
+    representing a closing.
+    """
+
+def transfer_acknowledgments_from_email(email):
+    """
+    An acknowledgment is created for every email with a subject
+    containing the string 'Acknowledged'.
+
+    For requests associated with submission notification emails,
+    their original due date (pre-acknowledgment) is calculated
+    via the email's content ('due date').
+    Otherwise, the date is set to the request's reception date
+    plus 5 days (acknowledgment days until due).
+
+    The due date at the time of acknowledgment is then calculated
+    via the corresponding email's content ('acknowledgment status').
+    """
+
+def transfer_acknowledgments_from_request(request):
+    """
+    Any request (excluding those for which an acknowledgment can been
+    found via email notification) without an 'Open' status and
+    without a previous status of 'Open' if its current status is 'Closed',
+    is considered to have been, at some point, acknowledged.
+
+    For a request that...
+                                responses.date_modified     acknowledgments.date
+    ...has NOT been extended:   request.date_received       request.due_date
+    ...has been extended:       request.date_received       date_received + 5 + 20
+
+    """
+
+def transfer_reopenings(email):
+    """
+    Since v1 Re-openings do not require a new request due date, the `date` field of
+    transferred re-openings is set to the current due date of the associated request.
+
+    """
+
+def transfer_extensions_from_email(email):
+
+def transfer_extensions_from_note(note):
+
+def _get_record_release_date(record):
+
+def _sftp_get_mime_type(sftp, path):
+    """
+    Script-compatible app.lib.file_utils._sftp_get_mime_type.
+
+    The only difference between this and its file_utils counterpart
+    is the substitution of current_app.config['MAGIC_FILE'] with
+    CONFIG.MAGIC_FILE.
+
+    """
+
+def transfer_files(sftp, record):
+    """
+    It is assumed all v1 uploads have been copied to the v2 file server.
+    This function will FAIL otherwise!
+    """
+
+def transfer_links(record):
+
+def transfer_instructions(record):
+    """
+    For records with non-null description fields, the description and access
+    content are joined and stored in instructions.content.
+    """
+
+def transfer_emails(email):
+
+def transfer_users(user_ids_to_guids, user):
+    """
+    Agency users are determined by the presence of a department_id, otherwise
+    a user is stored as anonymous.
+    A user's first and last name and middle initial are parsed from `alias`.
+
+    :param user_ids_to_guids: empty dictionary that will be populated
+
+    """
+
+def transfer_user_requests_assigned_users(user_ids_to_guids, owner):
+    """
+    :param user_ids_to_guids: the presence of owner.user_id within this dictionary indicates
+                              a transferable user request.
+    :return: -1 if user_id not found (used to shift max_value of progress bar)
+    """
+
+def transfer_user_requests_requesters(user_ids_to_guids, request):
+    """
+    User ids are fetched from v1 subscriber table.
+    :param user_ids_to_guids: used to fetch generated requester guid
+    """
+
+def get_ssh_credentials():
+    """
+    Prompt user for and return credentials necessary
+    for remote access to the server holding v1 request files.
+    """
+
+def sftp_openrecords_v2_ctx():
+    """
+    Script-compatible app.lib.file_utils.sftp_ctx
+    """
+
+def copy_files(jcastillo_use_password, jcastillo_password_or_key_file, openfoil_password):
+    """
+    Copy v1 files to v2 data directory.
+    """
+
+            def _copy_files():
+
+def update_agencies_next_request_numbers(agency_next_request_number):
+
+def transfer_all():
+    """
+    Migrate all data from v1 to v2 db (call all transfer functions).
+    """
+
+def assign_admins():
+    """
+    Assign every agency admin to their agency's requests if
+    they have not been assigned already.
+
+    Why would there be agencies with unassigned admins?
+        In V1, special users that represented agencies as a whole
+        would be automatically assigned. V2 no longer handles assigning
+        these types of users so they are never transferred.
+    """
                 </details>
 
             </div>

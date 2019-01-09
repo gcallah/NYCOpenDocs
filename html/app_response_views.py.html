@@ -1745,6 +1745,260 @@
                     </summary>
 
 <!-- Include the text material here! -->
+"""
+.. module:: response.views.
+
+   :synopsis: Handles the response URL endpoints for the OpenRecords application
+"""
+
+def response_note(request_id):
+    """
+    Note response endpoint that takes in the content of a note for a specific request from the frontend.
+    Check if required data from form is retrieved.
+    Flash error message if required form data is missing.
+    Call add_link to process the extension form data.
+
+    :param request_id: FOIL request ID for the specific note.
+    :return: redirect to view request page
+    """
+
+def response_file(request_id):
+    """
+    File response endpoint that takes in the metadata of a file for a specific request from the frontend.
+    Call process_upload_data to process the uploaded file form data.
+    Pass data into helper function in response.utils to update changes into database.
+    Send email notification to requester and bcc agency users if privacy is release.
+    Render specific template and send email notification bcc agency users if privacy is private.
+
+    :param request_id: FOIL request ID for the specific file.
+
+    :return: redirect to view request page
+    """
+
+def response_acknowledgment(request_id):
+
+def response_denial(request_id):
+
+def response_closing(request_id):
+    """
+    Endpoint for closing a request that takes in form data from the front end.
+    Required form data include:
+        -reasons: a list of closing reasons
+        -email-summary: string email body from the confirmation page
+
+    :param request_id: FOIL request ID
+
+    :return: redirect to view request page
+    """
+
+def response_reopening(request_id):
+    """
+    Endpoint for reopening a request that takes in form data from the frontend.
+    Required form data include:
+        -date: string of new date of request completion
+        -tz-name: name of the timezone the user is accessing the application in
+        -email-summary: string email body from the confirmation page
+
+    :param request_id: FOIL request ID
+
+    :return: redirect to view request page
+    """
+
+def response_extension(request_id):
+    """
+    Extension response endpoint that takes in the metadata of an extension for a specific request from the frontend.
+    Check if required data from form is retrieved.
+    Flash error message if required form data is missing.
+    Call add_extension to process the extension form data.
+
+    :param request_id: FOIL request ID for the specific extension.
+
+    :return: redirect to view request page
+    """
+
+def response_link(request_id):
+    """
+    Link response endpoint that takes in the metadata of a link for a specific request from the frontend.
+    Check if required data from form is retrieved.
+    Flash error message if required form data is missing.
+    Call add_link to process the extension form data.
+
+    :param request_id: FOIL request ID for the specific link.
+
+    :return: redirect to view request page
+    """
+
+def response_instructions(request_id):
+    """
+    Instruction response endpoint that takes in from the frontend, the content of a instruction for a specific request.
+    Check if required data from form is retrieved.
+    Flash error message if required form data is missing.
+    Call add_instruction to process the extension form data.
+
+    :param request_id: FOIL request ID for the specific note.
+
+    :return: redirect to view request page
+    """
+
+def response_generate_envelope():
+    """
+    Create an Envelope for the Request.
+    :return: redirect to view request page
+    """
+
+def response_email():
+    """
+    Return email template for a particular response workflow step.
+
+    Request Parameters:
+    - request_id: FOIL request ID
+    - type: response type
+    - privacy: selected privacy option
+    - extension: data for populating html template
+        - length: selected value of extension length (-1, 20, 30, 60, 90)
+        - custom_due_date: new custom due date of request (default is current request due_date)
+        - reason: reason for extension
+    - link: data for populating html template
+        - url: url link inputted by user from front end
+    - offline_instructions: data for populating html template
+        - instruction: json object with key and values of content and privacy
+    - note: data for populating html template
+        - note: json object with key and values of content and privacy
+    - file: data for populating html template
+        - files: json object with key and values of filename and privacy
+    - email_content: (on second next click) html template of specific response which may include edits
+
+    Ex:
+    {
+         "request_id": "FOIL-XXX",
+         "type": "extension",
+         "extension": {
+               "length": "20",
+               "custom_due_date": "2016-11-14",
+               "reason": "We need more time to process your request."
+         }
+         "email_content": HTML
+    }
+
+    :return: the json response and HTTP status code
+    Ex1:
+    {
+        "template": HTML rendered response template,
+        "header": "The following will be emailed to all associated participants:"
+    }
+
+    Ex2:
+    {
+        "error": "No changes detected."
+    }
+    """
+
+def response_sms(request_id):
+
+def response_push(request_id):
+
+def response_visiblity(request_id):
+
+def patch(response_id):
+    """
+    Edit a response's fields and send a notification email.
+
+    Expects a request body containing field names and updated values.
+    Ex:
+    {
+        'privacy': 'release_public',
+        'title': 'new title'
+        'filename': 'uploaded_file_name.ext'  # REQUIRED for updates to Files metadata
+    }
+    Ex (for delete):
+    {
+        'deleted': true,
+        'confirmation': string checked against 'DELETE'
+            if the strings do not match, the 'deleted' field will not be updated
+    }
+
+    :return: on success:
+    {
+        'old': { original attributes and their values }
+        'new': { updated attributes and their values }
+    }
+
+    """
+
+def get_yearly_holidays(year):
+    """
+    Retrieve a list of dates that are holidays in the specified year
+
+    :param year: 4-digit year.
+
+    :return: List of strings ["YYYY-MM-DD"]
+    """
+
+def get_response_content(response_id):
+    """
+    Currently only supports File Responses.
+
+    Request Parameters:
+    - token: (optional) ephemeral access token
+
+    :return: response file contents or
+             redirect to login if user not authenticated and no token provided or
+             400 error if response/file not found
+    """
+
+                def remove(resp):
+
+                            def remove(resp):
+
+                        def remove(resp):
+
+def response_generate_letter():
+    """
+    Return letter template for the generate letter workflow step.
+
+    Request Parameters:
+    - request_id: FOIL request ID
+    - agency_ein: Agency ID (for the specified request)
+    - letter_template_id: Letter Template unique identifier
+
+    Ex:
+    {
+        "request_id": "FOIL-XXX",
+        "letter_template_id": 10
+    }
+
+    :return: the json response and HTTP status code
+    Ex1:
+    {
+        "template": HTML rendered letter template,
+        "header": "The following letter will be generated as a PDF:"
+    }
+    """
+
+def response_get_envelope(request_id, response_id):
+    """
+    Return a PDF envelope as an attachment.
+
+    :param request_id: FOIL Request ID for which the letter exists
+    :param response_id: Response ID for the letter.
+    :return: PDF Attachment.
+    """
+
+def response_letter(request_id):
+    """
+
+    :param request_id:
+    :return:
+    """
+
+def response_get_letter(request_id, response_id):
+    """
+    Return a PDF letter as an attachment.
+
+    :param request_id: FOIL Request ID for which the letter exists
+    :param response_id: Response ID for the letter.
+    :return: PDF Attachment.
+    """
                 </details>
 
             </div>

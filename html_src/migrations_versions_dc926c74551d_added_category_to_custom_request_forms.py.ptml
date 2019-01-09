@@ -31,6 +31,7 @@
                     </summary>
 
 <!-- Include the text material here! -->
+<!--include templates/migrations_versions_dc926c74551d_added_category_to_custom_request_forms.py.txt -->
                 </details>
 
             </div>

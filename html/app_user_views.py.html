@@ -1745,6 +1745,52 @@
                     </summary>
 
 <!-- Include the text material here! -->
+def patch(user_id):
+    """
+    Request Parameters:
+    - title
+    - organization
+    - email
+    - phone_number
+    - fax_number
+    - mailing_address
+    - is_super
+    - is_agency_active
+    - is_agency_admin
+    (Mailing Address)
+    - zip
+    - city
+    - state
+    - address_one
+    - address_two
+
+    Restrictions:
+    - Anonymous Users
+        - cannot access this endpoint
+    - Agency Administrators
+        - cannot change their agency status
+        - can only update the agency status of users within their agency
+        - cannot change any super user status
+    - Super Users
+        - cannot change their super user status
+    - Agency Users
+        - cannot change any user except for themselves or
+          *anonymous* requesters for requests they are assigned to
+        - cannot change super user or agency status
+    - Public Users
+        - can only update themselves
+        - cannot change super user or agency status
+
+    """
+
+                    def set_permissions_and_create_event(user_req, perms):
+                        """
+                        Set permissions for a user request and create a
+                        'user_permissions_changed' Event.
+
+                        :param user_req: user request
+                        :param perms: permissions to set for user request
+                        """
                 </details>
 
             </div>

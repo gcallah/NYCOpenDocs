@@ -1745,6 +1745,65 @@
                     </summary>
 
 <!-- Include the text material here! -->
+def get_active_users_as_choices(agency_ein: str) -> List[Tuple[str, str]]:
+    """Retrieve a list of tuples representing users that are active for a given agency. Each tuple contains the
+       following elements:
+            (Users.guid, Users.name)
+
+    Params:
+        agency_ein (str): Agency EIN (4 Character String)
+
+    Returns:
+        List(Tuple(str, str)): A list of tuples with the following elements:
+            (Users.guid, Users.name)
+    """
+
+def get_reasons(agency_ein: str, reason_type: str = None) -> Dict:
+    """Retrieve the determination reasons (used in emails) for the specified agency as a JSON object. If reason_type is
+    provided, only retrieve determination_reasons of that type.
+
+    Args:
+        agency_ein (str): Agency EIN
+        reason_type (str): One of ("denial", "closing", "re-opening")
+
+    Returns:
+        Dict:
+            {
+                'type_', [(reason_id, reason_title),...]
+            }
+    """
+
+def get_letter_templates(agency_ein: str, template_type: str = None) -> Dict:
+    """Retrieve letter templates for the specified agency as a dictionary. If template type is provided, only get
+    templates of that type
+
+    Params:
+            Args:
+        agency_ein (str): Agency EIN
+        reason_type (str): One of "acknowledgment", "denial", "closing", "letter", "extension", "re-opening"
+
+    Returns:
+        Dict:
+        {
+            'type_': [(template_id, template_name),...]
+        }
+    """
+
+def _group_items(items: Sequence[Sequence], sort_index: int) -> Tuple[Any, list]:
+    """Group a collection of items by a specified key
+    
+    Args:
+        collections (Sequence): A collection of items to be grouped
+        sort_index (int): Index of the item to use for grouping
+    
+    Yields:
+        tuple:
+            (
+                items[sort_index_1], (Sequence[i], Sequence[j], ...),
+                items[sort_index_2], (Sequence[i], Sequence[j], ...),
+                ...
+            )        
+    """
                 </details>
 
             </div>

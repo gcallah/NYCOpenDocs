@@ -1745,6 +1745,96 @@
                     </summary>
 
 <!-- Include the text material here! -->
+"""
+ .. module:: upload.utils
+
+    :synopsis: Helper functions for uploads
+"""
+
+def parse_content_range(header):
+    """
+    Extracts the starting byte position and resource length.
+
+    Content-Range = "Content-Range" ":" content-range-spec
+
+    content-range-spec      = byte-content-range-spec
+    byte-content-range-spec = bytes-unit SP
+                              byte-range-resp-spec "/"
+                              ( instance-length | "*" )
+    byte-range-resp-spec    = (first-byte-pos "-" last-byte-pos)
+                                  | "*"
+    instance-length         = 1*DIGIT
+
+    :param header: the rhs of the content-range header
+    :return: the first-byte-pos and instance-length
+    """
+
+def upload_exists(request_id, filename, response_id=None):
+    """
+    Checks for an existing uploaded file. If a response id
+    is given, the file name associated with that response is ignored.
+
+    :param request_id: id of request associated with the upload
+    :param filename: the name of the uploaded file
+    :param response_id: id of response associated with the upload
+    :return: whether the file exists or not
+    """
+
+def is_valid_file_type(obj):
+    """
+    Validates the mime type of a file.
+    Content type header is ignored.
+
+    :param obj: the file storage object to check
+    :type obj: werkzeug.datastructures.FileStorage
+
+    :return: (whether the mime type is allowed or not,
+        the mime type)
+    """
+
+def get_upload_key(request_id, upload_filename, for_update=False):
+    """
+    Returns a formatted key for an upload.
+    Intended for tracking the status of an upload.
+
+    :param request_id: id of the request associated with the upload
+    :param upload_filename: the name of the uploaded file
+    :param for_update: will the uploaded file replace an existing file?
+        (this is required to make keys unique, as the uploaded file
+        may share the same name as the existing file)
+
+    :return: the formatted key
+        Ex.
+            FOIL-ID_filename.ext_new
+            FOIL_ID_filename.ext_update
+    """
+
+class VirusDetectedException(Exception):    """
+    Raise when scanner detects an infected file.
+    """
+
+    def __init__(self, filename):
+
+def scan_and_complete_upload(request_id, filepath, is_update=False, response_id=None):
+    """
+    Scans an uploaded file (see scan_file) and moves
+    it to the data directory if it is clean. If is_update is set,
+    the file will also be placed under the 'updated' directory.
+    Updates redis accordingly.
+
+    :param request_id: id of request associated with the upload
+    :param filepath: path to uploaded and quarantined file
+    :param is_update: will the file replace an existing one?
+    :param response_id: id of response associated with the upload
+    """
+
+def scan_file(filepath):
+    """
+    Scans a file for viruses using McAfee Virus Scan. If an infected
+    file is detected, removes the file and raises VirusDetectedException.
+
+    :param filepath: path of file to scan
+    """
                 </details>
 
             </div>

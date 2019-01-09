@@ -1745,6 +1745,59 @@
                     </summary>
 
 <!-- Include the text material here! -->
+class LatexCompiler:    """
+    Generates a PDF from a LaTeX file.
+
+    Slightly modified from: https://github.com/AKuederle/flask-template-master/
+    """
+
+    def __init__(self, latex_command=None):
+
+    def _create_file(self, document):
+
+    def compile(self, document):
+        """
+        Compile a LaTeX document to PDF.
+        :param document: LaTeX formatted document (UTF-8 Formatted String)
+        :return: PDF File Object
+        """
+
+def generate_pdf(pdf_data):
+    """
+    Generate a PDF from a string of data.
+    :param pdf_data: String of data to input into PDF.
+    :return: PDF File object
+    """
+
+def generate_pdf_flask_response(pdf_data):
+    """
+    Return a Flask response object with a PDF as an attachment.
+    :param pdf_data: String of data to input into PDF.
+    :return: Flask Response
+    """
+
+def generate_envelope(template_name, data):
+    """
+    Generate the LaTeX for an envelope with the provided data pre-filled.
+
+    :param template_name: The LaTeX template to be used.
+    :param data: Data to be filled in to the LaTeX template (Dict())
+    :return: LaTeX document
+    """
+
+def generate_envelope_pdf(document):
+    """
+    Generate a PDF envelope.
+    :param document: LaTeX document.
+    :return: PDF File Object
+    """
+
+def escape_latex_characters(line):
+    """
+    Replace a string with the escaped LaTeX version of reserved characters
+    :param line: a string to be used in a LaTeX template
+    :return: a string with the escaped LaTeX version of reserved characters
+    """
                 </details>
 
             </div>

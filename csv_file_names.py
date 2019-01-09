@@ -48,7 +48,9 @@ def create_csv(connector):
     output = []
     header = ["0", "NYCOpenDocs", "", "NYCDocs"]
     header = connector.join(header)
-    home = ["1", "Home", "/index.html", "", "glyphicon-home"]
+    base_url = "/NYCOpenDocs/"
+    html_url = base_url + "html/"
+    home = ["1", "Home", base_url + "index.html", "", "glyphicon-home"]
     home = connector.join(home)
     output.append(header)
     output.append(home)
@@ -61,7 +63,7 @@ def create_csv(connector):
         if isinstance(file, str):
             output_lst[LEVEL] = str(1)
             output_lst[TITLE] = file
-            output_lst[URL] = "/html/" + file.strip(".") + ".html"
+            output_lst[URL] = html_url + file.strip(".") + ".html"
             output_lst[LINK_INSERT] = source_code + file
             output.append(connector.join(output_lst))
             current_dir = []
@@ -78,12 +80,15 @@ def create_csv(connector):
                 output_lst[LEVEL] = str(index_dif + 1)
                 output_lst[TITLE] = file[index_dif]
                 if index_dif == len(file) - 1:
-                    output_lst[URL] = "/html/" + "_".join(file) + ".html"
+                    output_lst[URL] = html_url + "_".join(file) + ".html"
                     output_lst[LINK_INSERT] = source_code + "/".join(file)
                 else:
                     output_dir_lst[LEVEL] = str(index_dif + 2)
-                    output_dir_lst[TITLE] = "About the directory '" + file[index_dif] + "'"
-                    output_dir_lst[URL] = "/html/" + "_".join(file[:index_dif + 1]) + "_" + file[index_dif] + ".html"
+                    output_dir_lst[TITLE] = ("About the directory '" +
+                                             file[index_dif] + "'")
+                    output_dir_lst[URL] = html_url
+                    output_dir_lst[URL] += ("_".join(file[:index_dif + 1]) +
+                                            "_" + file[index_dif] + ".html")
                     out_dir = True
                 # append the output_lst, joined by the connector
                 # strip off remaining connectors in case the last fields

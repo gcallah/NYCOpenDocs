@@ -1,314 +1,314 @@
 0	NYCOpenDocs		NYCDocs
-1	Home	/index.html		glyphicon-home
-1	.codeclimate.yml	/html/codeclimate.yml.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/.codeclimate.yml
-1	.eslintrc.yml	/html/eslintrc.yml.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/.eslintrc.yml
-1	.travis.yml	/html/travis.yml.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/.travis.yml
+1	Home	/NYCOpenDocs/index.html		glyphicon-home
+1	.codeclimate.yml	/NYCOpenDocs/html/codeclimate.yml.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/.codeclimate.yml
+1	.eslintrc.yml	/NYCOpenDocs/html/eslintrc.yml.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/.eslintrc.yml
+1	.travis.yml	/NYCOpenDocs/html/travis.yml.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/.travis.yml
 1	app
-2	About the directory 'app'	/html/app_app.html
-2	__init__.py	/html/app___init__.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/__init__.py
+2	About the directory 'app'	/NYCOpenDocs/html/app_app.html
+2	__init__.py	/NYCOpenDocs/html/app___init__.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/__init__.py
 2	admin
-3	About the directory 'admin'	/html/app_admin_admin.html
-3	__init__.py	/html/app_admin___init__.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/admin/__init__.py
-3	forms.py	/html/app_admin_forms.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/admin/forms.py
-3	utils.py	/html/app_admin_utils.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/admin/utils.py
-3	views.py	/html/app_admin_views.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/admin/views.py
+3	About the directory 'admin'	/NYCOpenDocs/html/app_admin_admin.html
+3	__init__.py	/NYCOpenDocs/html/app_admin___init__.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/admin/__init__.py
+3	forms.py	/NYCOpenDocs/html/app_admin_forms.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/admin/forms.py
+3	utils.py	/NYCOpenDocs/html/app_admin_utils.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/admin/utils.py
+3	views.py	/NYCOpenDocs/html/app_admin_views.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/admin/views.py
 2	agency
-3	About the directory 'agency'	/html/app_agency_agency.html
-3	__init__.py	/html/app_agency___init__.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/agency/__init__.py
+3	About the directory 'agency'	/NYCOpenDocs/html/app_agency_agency.html
+3	__init__.py	/NYCOpenDocs/html/app_agency___init__.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/agency/__init__.py
 3	api
-4	About the directory 'api'	/html/app_agency_api_api.html
-4	__init__.py	/html/app_agency_api___init__.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/agency/api/__init__.py
-4	utils.py	/html/app_agency_api_utils.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/agency/api/utils.py
-4	views.py	/html/app_agency_api_views.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/agency/api/views.py
-3	utils.py	/html/app_agency_utils.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/agency/utils.py
-3	views.py	/html/app_agency_views.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/agency/views.py
+4	About the directory 'api'	/NYCOpenDocs/html/app_agency_api_api.html
+4	__init__.py	/NYCOpenDocs/html/app_agency_api___init__.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/agency/api/__init__.py
+4	utils.py	/NYCOpenDocs/html/app_agency_api_utils.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/agency/api/utils.py
+4	views.py	/NYCOpenDocs/html/app_agency_api_views.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/agency/api/views.py
+3	utils.py	/NYCOpenDocs/html/app_agency_utils.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/agency/utils.py
+3	views.py	/NYCOpenDocs/html/app_agency_views.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/agency/views.py
 2	auth
-3	About the directory 'auth'	/html/app_auth_auth.html
-3	__init__.py	/html/app_auth___init__.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/auth/__init__.py
+3	About the directory 'auth'	/NYCOpenDocs/html/app_auth_auth.html
+3	__init__.py	/NYCOpenDocs/html/app_auth___init__.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/auth/__init__.py
 3	constants
-4	About the directory 'constants'	/html/app_auth_constants_constants.html
-4	__init__.py	/html/app_auth_constants___init__.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/auth/constants/__init__.py
-4	error_msg.py	/html/app_auth_constants_error_msg.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/auth/constants/error_msg.py
-3	forms.py	/html/app_auth_forms.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/auth/forms.py
-3	utils.py	/html/app_auth_utils.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/auth/utils.py
-3	views.py	/html/app_auth_views.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/auth/views.py
+4	About the directory 'constants'	/NYCOpenDocs/html/app_auth_constants_constants.html
+4	__init__.py	/NYCOpenDocs/html/app_auth_constants___init__.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/auth/constants/__init__.py
+4	error_msg.py	/NYCOpenDocs/html/app_auth_constants_error_msg.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/auth/constants/error_msg.py
+3	forms.py	/NYCOpenDocs/html/app_auth_forms.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/auth/forms.py
+3	utils.py	/NYCOpenDocs/html/app_auth_utils.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/auth/utils.py
+3	views.py	/NYCOpenDocs/html/app_auth_views.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/auth/views.py
 2	constants
-3	About the directory 'constants'	/html/app_constants_constants.html
-3	__init__.py	/html/app_constants___init__.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/constants/__init__.py
-3	agency_features.py	/html/app_constants_agency_features.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/constants/agency_features.py
-3	communication_methods.py	/html/app_constants_communication_methods.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/constants/communication_methods.py
-3	determination_type.py	/html/app_constants_determination_type.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/constants/determination_type.py
-3	event_type.py	/html/app_constants_event_type.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/constants/event_type.py
-3	letter_type.py	/html/app_constants_letter_type.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/constants/letter_type.py
-3	pdf.py	/html/app_constants_pdf.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/constants/pdf.py
-3	permission.py	/html/app_constants_permission.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/constants/permission.py
-3	request_date.py	/html/app_constants_request_date.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/constants/request_date.py
-3	request_status.py	/html/app_constants_request_status.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/constants/request_status.py
-3	response_privacy.py	/html/app_constants_response_privacy.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/constants/response_privacy.py
-3	response_type.py	/html/app_constants_response_type.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/constants/response_type.py
-3	role_name.py	/html/app_constants_role_name.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/constants/role_name.py
+3	About the directory 'constants'	/NYCOpenDocs/html/app_constants_constants.html
+3	__init__.py	/NYCOpenDocs/html/app_constants___init__.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/constants/__init__.py
+3	agency_features.py	/NYCOpenDocs/html/app_constants_agency_features.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/constants/agency_features.py
+3	communication_methods.py	/NYCOpenDocs/html/app_constants_communication_methods.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/constants/communication_methods.py
+3	determination_type.py	/NYCOpenDocs/html/app_constants_determination_type.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/constants/determination_type.py
+3	event_type.py	/NYCOpenDocs/html/app_constants_event_type.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/constants/event_type.py
+3	letter_type.py	/NYCOpenDocs/html/app_constants_letter_type.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/constants/letter_type.py
+3	pdf.py	/NYCOpenDocs/html/app_constants_pdf.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/constants/pdf.py
+3	permission.py	/NYCOpenDocs/html/app_constants_permission.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/constants/permission.py
+3	request_date.py	/NYCOpenDocs/html/app_constants_request_date.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/constants/request_date.py
+3	request_status.py	/NYCOpenDocs/html/app_constants_request_status.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/constants/request_status.py
+3	response_privacy.py	/NYCOpenDocs/html/app_constants_response_privacy.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/constants/response_privacy.py
+3	response_type.py	/NYCOpenDocs/html/app_constants_response_type.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/constants/response_type.py
+3	role_name.py	/NYCOpenDocs/html/app_constants_role_name.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/constants/role_name.py
 3	schemas
-4	About the directory 'schemas'	/html/app_constants_schemas_schemas.html
-4	__init__.py	/html/app_constants_schemas___init__.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/constants/schemas/__init__.py
-3	submission_methods.py	/html/app_constants_submission_methods.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/constants/submission_methods.py
-3	user_type_auth.py	/html/app_constants_user_type_auth.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/constants/user_type_auth.py
-3	user_type_request.py	/html/app_constants_user_type_request.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/constants/user_type_request.py
-3	web_services.py	/html/app_constants_web_services.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/constants/web_services.py
+4	About the directory 'schemas'	/NYCOpenDocs/html/app_constants_schemas_schemas.html
+4	__init__.py	/NYCOpenDocs/html/app_constants_schemas___init__.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/constants/schemas/__init__.py
+3	submission_methods.py	/NYCOpenDocs/html/app_constants_submission_methods.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/constants/submission_methods.py
+3	user_type_auth.py	/NYCOpenDocs/html/app_constants_user_type_auth.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/constants/user_type_auth.py
+3	user_type_request.py	/NYCOpenDocs/html/app_constants_user_type_request.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/constants/user_type_request.py
+3	web_services.py	/NYCOpenDocs/html/app_constants_web_services.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/constants/web_services.py
 2	lib
-3	About the directory 'lib'	/html/app_lib_lib.html
-3	__init__.py	/html/app_lib___init__.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/lib/__init__.py
-3	date_utils.py	/html/app_lib_date_utils.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/lib/date_utils.py
-3	db_utils.py	/html/app_lib_db_utils.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/lib/db_utils.py
-3	email_utils.py	/html/app_lib_email_utils.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/lib/email_utils.py
-3	file_utils.py	/html/app_lib_file_utils.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/lib/file_utils.py
-3	jinja_filters.py	/html/app_lib_jinja_filters.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/lib/jinja_filters.py
-3	json_schema.py	/html/app_lib_json_schema.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/lib/json_schema.py
-3	pdf.py	/html/app_lib_pdf.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/lib/pdf.py
-3	permission_utils.py	/html/app_lib_permission_utils.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/lib/permission_utils.py
-3	redis_utils.py	/html/app_lib_redis_utils.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/lib/redis_utils.py
-3	user_information.py	/html/app_lib_user_information.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/lib/user_information.py
-3	utils.py	/html/app_lib_utils.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/lib/utils.py
+3	About the directory 'lib'	/NYCOpenDocs/html/app_lib_lib.html
+3	__init__.py	/NYCOpenDocs/html/app_lib___init__.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/lib/__init__.py
+3	date_utils.py	/NYCOpenDocs/html/app_lib_date_utils.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/lib/date_utils.py
+3	db_utils.py	/NYCOpenDocs/html/app_lib_db_utils.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/lib/db_utils.py
+3	email_utils.py	/NYCOpenDocs/html/app_lib_email_utils.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/lib/email_utils.py
+3	file_utils.py	/NYCOpenDocs/html/app_lib_file_utils.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/lib/file_utils.py
+3	jinja_filters.py	/NYCOpenDocs/html/app_lib_jinja_filters.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/lib/jinja_filters.py
+3	json_schema.py	/NYCOpenDocs/html/app_lib_json_schema.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/lib/json_schema.py
+3	pdf.py	/NYCOpenDocs/html/app_lib_pdf.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/lib/pdf.py
+3	permission_utils.py	/NYCOpenDocs/html/app_lib_permission_utils.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/lib/permission_utils.py
+3	redis_utils.py	/NYCOpenDocs/html/app_lib_redis_utils.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/lib/redis_utils.py
+3	user_information.py	/NYCOpenDocs/html/app_lib_user_information.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/lib/user_information.py
+3	utils.py	/NYCOpenDocs/html/app_lib_utils.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/lib/utils.py
 2	main
-3	About the directory 'main'	/html/app_main_main.html
-3	__init__.py	/html/app_main___init__.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/main/__init__.py
-3	views.py	/html/app_main_views.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/main/views.py
-2	models.py	/html/app_models.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/models.py
+3	About the directory 'main'	/NYCOpenDocs/html/app_main_main.html
+3	__init__.py	/NYCOpenDocs/html/app_main___init__.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/main/__init__.py
+3	views.py	/NYCOpenDocs/html/app_main_views.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/main/views.py
+2	models.py	/NYCOpenDocs/html/app_models.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/models.py
 2	permissions
-3	About the directory 'permissions'	/html/app_permissions_permissions.html
-3	__init__.py	/html/app_permissions___init__.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/permissions/__init__.py
-3	utils.py	/html/app_permissions_utils.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/permissions/utils.py
-3	views.py	/html/app_permissions_views.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/permissions/views.py
+3	About the directory 'permissions'	/NYCOpenDocs/html/app_permissions_permissions.html
+3	__init__.py	/NYCOpenDocs/html/app_permissions___init__.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/permissions/__init__.py
+3	utils.py	/NYCOpenDocs/html/app_permissions_utils.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/permissions/utils.py
+3	views.py	/NYCOpenDocs/html/app_permissions_views.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/permissions/views.py
 2	report
-3	About the directory 'report'	/html/app_report_report.html
-3	__init__.py	/html/app_report___init__.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/report/__init__.py
-3	forms.py	/html/app_report_forms.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/report/forms.py
-3	views.py	/html/app_report_views.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/report/views.py
+3	About the directory 'report'	/NYCOpenDocs/html/app_report_report.html
+3	__init__.py	/NYCOpenDocs/html/app_report___init__.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/report/__init__.py
+3	forms.py	/NYCOpenDocs/html/app_report_forms.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/report/forms.py
+3	views.py	/NYCOpenDocs/html/app_report_views.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/report/views.py
 2	request
-3	About the directory 'request'	/html/app_request_request.html
-3	__init__.py	/html/app_request___init__.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/request/__init__.py
+3	About the directory 'request'	/NYCOpenDocs/html/app_request_request.html
+3	__init__.py	/NYCOpenDocs/html/app_request___init__.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/request/__init__.py
 3	api
-4	About the directory 'api'	/html/app_request_api_api.html
-4	__init__.py	/html/app_request_api___init__.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/request/api/__init__.py
-4	utils.py	/html/app_request_api_utils.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/request/api/utils.py
-4	views.py	/html/app_request_api_views.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/request/api/views.py
-3	forms.py	/html/app_request_forms.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/request/forms.py
-3	utils.py	/html/app_request_utils.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/request/utils.py
-3	views.py	/html/app_request_views.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/request/views.py
+4	About the directory 'api'	/NYCOpenDocs/html/app_request_api_api.html
+4	__init__.py	/NYCOpenDocs/html/app_request_api___init__.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/request/api/__init__.py
+4	utils.py	/NYCOpenDocs/html/app_request_api_utils.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/request/api/utils.py
+4	views.py	/NYCOpenDocs/html/app_request_api_views.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/request/api/views.py
+3	forms.py	/NYCOpenDocs/html/app_request_forms.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/request/forms.py
+3	utils.py	/NYCOpenDocs/html/app_request_utils.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/request/utils.py
+3	views.py	/NYCOpenDocs/html/app_request_views.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/request/views.py
 2	response
-3	About the directory 'response'	/html/app_response_response.html
-3	__init__.py	/html/app_response___init__.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/response/__init__.py
-3	utils.py	/html/app_response_utils.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/response/utils.py
-3	views.py	/html/app_response_views.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/response/views.py
+3	About the directory 'response'	/NYCOpenDocs/html/app_response_response.html
+3	__init__.py	/NYCOpenDocs/html/app_response___init__.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/response/__init__.py
+3	utils.py	/NYCOpenDocs/html/app_response_utils.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/response/utils.py
+3	views.py	/NYCOpenDocs/html/app_response_views.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/response/views.py
 2	search
-3	About the directory 'search'	/html/app_search_search.html
-3	__init__.py	/html/app_search___init__.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/search/__init__.py
-3	constants.py	/html/app_search_constants.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/search/constants.py
-3	utils.py	/html/app_search_utils.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/search/utils.py
-3	views.py	/html/app_search_views.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/search/views.py
+3	About the directory 'search'	/NYCOpenDocs/html/app_search_search.html
+3	__init__.py	/NYCOpenDocs/html/app_search___init__.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/search/__init__.py
+3	constants.py	/NYCOpenDocs/html/app_search_constants.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/search/constants.py
+3	utils.py	/NYCOpenDocs/html/app_search_utils.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/search/utils.py
+3	views.py	/NYCOpenDocs/html/app_search_views.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/search/views.py
 2	static
-3	About the directory 'static'	/html/app_static_static.html
+3	About the directory 'static'	/NYCOpenDocs/html/app_static_static.html
 3	js
-4	About the directory 'js'	/html/app_static_js_js.html
+4	About the directory 'js'	/NYCOpenDocs/html/app_static_js_js.html
 4	admin
-5	About the directory 'admin'	/html/app_static_js_admin_admin.html
-5	main.js	/html/app_static_js_admin_main.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/admin/main.js
+5	About the directory 'admin'	/NYCOpenDocs/html/app_static_js_admin_admin.html
+5	main.js	/NYCOpenDocs/html/app_static_js_admin_main.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/admin/main.js
 4	auth
-5	About the directory 'auth'	/html/app_static_js_auth_auth.html
-5	manage-account.js	/html/app_static_js_auth_manage-account.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/auth/manage-account.js
-5	session-monitor.js	/html/app_static_js_auth_session-monitor.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/auth/session-monitor.js
+5	About the directory 'auth'	/NYCOpenDocs/html/app_static_js_auth_auth.html
+5	manage-account.js	/NYCOpenDocs/html/app_static_js_auth_manage-account.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/auth/manage-account.js
+5	session-monitor.js	/NYCOpenDocs/html/app_static_js_auth_session-monitor.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/auth/session-monitor.js
 4	plugins
-5	About the directory 'plugins'	/html/app_static_js_plugins_plugins.html
-5	Chart.min.js	/html/app_static_js_plugins_Chart.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/Chart.min.js
-5	bootstrap-editable.min.js	/html/app_static_js_plugins_bootstrap-editable.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/bootstrap-editable.min.js
-5	bootstrap.min.js	/html/app_static_js_plugins_bootstrap.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/bootstrap.min.js
-5	jquery-ui.js	/html/app_static_js_plugins_jquery-ui.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/jquery-ui.js
-5	jquery-ui.min.js	/html/app_static_js_plugins_jquery-ui.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/jquery-ui.min.js
-5	jquery.blockUI.js	/html/app_static_js_plugins_jquery.blockUI.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/jquery.blockUI.js
-5	jquery.fileupload-process.js	/html/app_static_js_plugins_jquery.fileupload-process.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/jquery.fileupload-process.js
-5	jquery.fileupload-ui.js	/html/app_static_js_plugins_jquery.fileupload-ui.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/jquery.fileupload-ui.js
-5	jquery.fileupload-validate.js	/html/app_static_js_plugins_jquery.fileupload-validate.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/jquery.fileupload-validate.js
-5	jquery.fileupload.js	/html/app_static_js_plugins_jquery.fileupload.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/jquery.fileupload.js
-5	jquery.iframe-transport.js	/html/app_static_js_plugins_jquery.iframe-transport.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/jquery.iframe-transport.js
-5	jquery.js	/html/app_static_js_plugins_jquery.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/jquery.js
-5	jquery.mask.js	/html/app_static_js_plugins_jquery.mask.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/jquery.mask.js
-5	jquery.timepicker.min.js	/html/app_static_js_plugins_jquery.timepicker.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/jquery.timepicker.min.js
-5	jstz.min.js	/html/app_static_js_plugins_jstz.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/jstz.min.js
-5	juniper.js	/html/app_static_js_plugins_juniper.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/juniper.js
-5	moment.min.js	/html/app_static_js_plugins_moment.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/moment.min.js
-5	parsley.min.js	/html/app_static_js_plugins_parsley.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/parsley.min.js
-5	sprintf.min.js	/html/app_static_js_plugins_sprintf.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/sprintf.min.js
+5	About the directory 'plugins'	/NYCOpenDocs/html/app_static_js_plugins_plugins.html
+5	Chart.min.js	/NYCOpenDocs/html/app_static_js_plugins_Chart.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/Chart.min.js
+5	bootstrap-editable.min.js	/NYCOpenDocs/html/app_static_js_plugins_bootstrap-editable.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/bootstrap-editable.min.js
+5	bootstrap.min.js	/NYCOpenDocs/html/app_static_js_plugins_bootstrap.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/bootstrap.min.js
+5	jquery-ui.js	/NYCOpenDocs/html/app_static_js_plugins_jquery-ui.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/jquery-ui.js
+5	jquery-ui.min.js	/NYCOpenDocs/html/app_static_js_plugins_jquery-ui.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/jquery-ui.min.js
+5	jquery.blockUI.js	/NYCOpenDocs/html/app_static_js_plugins_jquery.blockUI.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/jquery.blockUI.js
+5	jquery.fileupload-process.js	/NYCOpenDocs/html/app_static_js_plugins_jquery.fileupload-process.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/jquery.fileupload-process.js
+5	jquery.fileupload-ui.js	/NYCOpenDocs/html/app_static_js_plugins_jquery.fileupload-ui.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/jquery.fileupload-ui.js
+5	jquery.fileupload-validate.js	/NYCOpenDocs/html/app_static_js_plugins_jquery.fileupload-validate.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/jquery.fileupload-validate.js
+5	jquery.fileupload.js	/NYCOpenDocs/html/app_static_js_plugins_jquery.fileupload.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/jquery.fileupload.js
+5	jquery.iframe-transport.js	/NYCOpenDocs/html/app_static_js_plugins_jquery.iframe-transport.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/jquery.iframe-transport.js
+5	jquery.js	/NYCOpenDocs/html/app_static_js_plugins_jquery.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/jquery.js
+5	jquery.mask.js	/NYCOpenDocs/html/app_static_js_plugins_jquery.mask.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/jquery.mask.js
+5	jquery.timepicker.min.js	/NYCOpenDocs/html/app_static_js_plugins_jquery.timepicker.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/jquery.timepicker.min.js
+5	jstz.min.js	/NYCOpenDocs/html/app_static_js_plugins_jstz.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/jstz.min.js
+5	juniper.js	/NYCOpenDocs/html/app_static_js_plugins_juniper.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/juniper.js
+5	moment.min.js	/NYCOpenDocs/html/app_static_js_plugins_moment.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/moment.min.js
+5	parsley.min.js	/NYCOpenDocs/html/app_static_js_plugins_parsley.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/parsley.min.js
+5	sprintf.min.js	/NYCOpenDocs/html/app_static_js_plugins_sprintf.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/sprintf.min.js
 5	tinymce
-6	About the directory 'tinymce'	/html/app_static_js_plugins_tinymce_tinymce.html
-6	jquery.tinymce.min.js	/html/app_static_js_plugins_tinymce_jquery.tinymce.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/tinymce/jquery.tinymce.min.js
+6	About the directory 'tinymce'	/NYCOpenDocs/html/app_static_js_plugins_tinymce_tinymce.html
+6	jquery.tinymce.min.js	/NYCOpenDocs/html/app_static_js_plugins_tinymce_jquery.tinymce.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/tinymce/jquery.tinymce.min.js
 6	plugins
-7	About the directory 'plugins'	/html/app_static_js_plugins_tinymce_plugins_plugins.html
+7	About the directory 'plugins'	/NYCOpenDocs/html/app_static_js_plugins_tinymce_plugins_plugins.html
 7	noneditable
-8	About the directory 'noneditable'	/html/app_static_js_plugins_tinymce_plugins_noneditable_noneditable.html
-8	plugin.min.js	/html/app_static_js_plugins_tinymce_plugins_noneditable_plugin.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/tinymce/plugins/noneditable/plugin.min.js
-6	preventdelete.js	/html/app_static_js_plugins_tinymce_preventdelete.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/tinymce/preventdelete.js
+8	About the directory 'noneditable'	/NYCOpenDocs/html/app_static_js_plugins_tinymce_plugins_noneditable_noneditable.html
+8	plugin.min.js	/NYCOpenDocs/html/app_static_js_plugins_tinymce_plugins_noneditable_plugin.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/tinymce/plugins/noneditable/plugin.min.js
+6	preventdelete.js	/NYCOpenDocs/html/app_static_js_plugins_tinymce_preventdelete.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/tinymce/preventdelete.js
 6	themes
-7	About the directory 'themes'	/html/app_static_js_plugins_tinymce_themes_themes.html
+7	About the directory 'themes'	/NYCOpenDocs/html/app_static_js_plugins_tinymce_themes_themes.html
 7	inlite
-8	About the directory 'inlite'	/html/app_static_js_plugins_tinymce_themes_inlite_inlite.html
-8	theme.min.js	/html/app_static_js_plugins_tinymce_themes_inlite_theme.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/tinymce/themes/inlite/theme.min.js
+8	About the directory 'inlite'	/NYCOpenDocs/html/app_static_js_plugins_tinymce_themes_inlite_inlite.html
+8	theme.min.js	/NYCOpenDocs/html/app_static_js_plugins_tinymce_themes_inlite_theme.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/tinymce/themes/inlite/theme.min.js
 7	modern
-8	About the directory 'modern'	/html/app_static_js_plugins_tinymce_themes_modern_modern.html
-8	theme.min.js	/html/app_static_js_plugins_tinymce_themes_modern_theme.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/tinymce/themes/modern/theme.min.js
-6	tinymce.min.js	/html/app_static_js_plugins_tinymce_tinymce.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/tinymce/tinymce.min.js
-5	tmpl.min.js	/html/app_static_js_plugins_tmpl.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/tmpl.min.js
-5	tota11y.min.js	/html/app_static_js_plugins_tota11y.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/tota11y.min.js
+8	About the directory 'modern'	/NYCOpenDocs/html/app_static_js_plugins_tinymce_themes_modern_modern.html
+8	theme.min.js	/NYCOpenDocs/html/app_static_js_plugins_tinymce_themes_modern_theme.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/tinymce/themes/modern/theme.min.js
+6	tinymce.min.js	/NYCOpenDocs/html/app_static_js_plugins_tinymce_tinymce.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/tinymce/tinymce.min.js
+5	tmpl.min.js	/NYCOpenDocs/html/app_static_js_plugins_tmpl.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/tmpl.min.js
+5	tota11y.min.js	/NYCOpenDocs/html/app_static_js_plugins_tota11y.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/tota11y.min.js
 4	request
-5	About the directory 'request'	/html/app_static_js_request_request.html
-5	action-buttons-mobile-toggle.js	/html/app_static_js_request_action-buttons-mobile-toggle.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/action-buttons-mobile-toggle.js
-5	character-count.js	/html/app_static_js_request_character-count.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/character-count.js
-5	contact.js	/html/app_static_js_request_contact.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/contact.js
-5	edit_requester_info.js	/html/app_static_js_request_edit_requester_info.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/edit_requester_info.js
-5	main.js	/html/app_static_js_request_main.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/main.js
-5	new-request-agency.js	/html/app_static_js_request_new-request-agency.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/new-request-agency.js
-5	new-request-anon.js	/html/app_static_js_request_new-request-anon.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/new-request-anon.js
-5	new-request-user.js	/html/app_static_js_request_new-request-user.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/new-request-user.js
-5	search.js	/html/app_static_js_request_search.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/search.js
-5	validate-recaptcha.js	/html/app_static_js_request_validate-recaptcha.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/validate-recaptcha.js
-5	view-request-contact.js	/html/app_static_js_request_view-request-contact.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/view-request-contact.js
-5	view-request-history.js	/html/app_static_js_request_view-request-history.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/view-request-history.js
-5	view-request-responses.js	/html/app_static_js_request_view-request-responses.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/view-request-responses.js
+5	About the directory 'request'	/NYCOpenDocs/html/app_static_js_request_request.html
+5	action-buttons-mobile-toggle.js	/NYCOpenDocs/html/app_static_js_request_action-buttons-mobile-toggle.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/action-buttons-mobile-toggle.js
+5	character-count.js	/NYCOpenDocs/html/app_static_js_request_character-count.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/character-count.js
+5	contact.js	/NYCOpenDocs/html/app_static_js_request_contact.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/contact.js
+5	edit_requester_info.js	/NYCOpenDocs/html/app_static_js_request_edit_requester_info.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/edit_requester_info.js
+5	main.js	/NYCOpenDocs/html/app_static_js_request_main.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/main.js
+5	new-request-agency.js	/NYCOpenDocs/html/app_static_js_request_new-request-agency.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/new-request-agency.js
+5	new-request-anon.js	/NYCOpenDocs/html/app_static_js_request_new-request-anon.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/new-request-anon.js
+5	new-request-user.js	/NYCOpenDocs/html/app_static_js_request_new-request-user.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/new-request-user.js
+5	search.js	/NYCOpenDocs/html/app_static_js_request_search.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/search.js
+5	validate-recaptcha.js	/NYCOpenDocs/html/app_static_js_request_validate-recaptcha.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/validate-recaptcha.js
+5	view-request-contact.js	/NYCOpenDocs/html/app_static_js_request_view-request-contact.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/view-request-contact.js
+5	view-request-history.js	/NYCOpenDocs/html/app_static_js_request_view-request-history.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/view-request-history.js
+5	view-request-responses.js	/NYCOpenDocs/html/app_static_js_request_view-request-responses.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/view-request-responses.js
 4	upload
-5	About the directory 'upload'	/html/app_static_js_upload_upload.html
-5	fileupload.js	/html/app_static_js_upload_fileupload.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/upload/fileupload.js
+5	About the directory 'upload'	/NYCOpenDocs/html/app_static_js_upload_upload.html
+5	fileupload.js	/NYCOpenDocs/html/app_static_js_upload_fileupload.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/upload/fileupload.js
 4	validation
-5	About the directory 'validation'	/html/app_static_js_validation_validation.html
-5	custom_validators.js	/html/app_static_js_validation_custom_validators.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/validation/custom_validators.js
+5	About the directory 'validation'	/NYCOpenDocs/html/app_static_js_validation_validation.html
+5	custom_validators.js	/NYCOpenDocs/html/app_static_js_validation_custom_validators.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/validation/custom_validators.js
 2	upload
-3	About the directory 'upload'	/html/app_upload_upload.html
-3	__init__.py	/html/app_upload___init__.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/upload/__init__.py
+3	About the directory 'upload'	/NYCOpenDocs/html/app_upload_upload.html
+3	__init__.py	/NYCOpenDocs/html/app_upload___init__.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/upload/__init__.py
 3	constants
-4	About the directory 'constants'	/html/app_upload_constants_constants.html
-4	__init__.py	/html/app_upload_constants___init__.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/upload/constants/__init__.py
-4	upload_status.py	/html/app_upload_constants_upload_status.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/upload/constants/upload_status.py
-3	utils.py	/html/app_upload_utils.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/upload/utils.py
-3	views.py	/html/app_upload_views.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/upload/views.py
+4	About the directory 'constants'	/NYCOpenDocs/html/app_upload_constants_constants.html
+4	__init__.py	/NYCOpenDocs/html/app_upload_constants___init__.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/upload/constants/__init__.py
+4	upload_status.py	/NYCOpenDocs/html/app_upload_constants_upload_status.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/upload/constants/upload_status.py
+3	utils.py	/NYCOpenDocs/html/app_upload_utils.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/upload/utils.py
+3	views.py	/NYCOpenDocs/html/app_upload_views.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/upload/views.py
 2	user
-3	About the directory 'user'	/html/app_user_user.html
-3	__init__.py	/html/app_user___init__.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/user/__init__.py
-3	views.py	/html/app_user_views.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/user/views.py
+3	About the directory 'user'	/NYCOpenDocs/html/app_user_user.html
+3	__init__.py	/NYCOpenDocs/html/app_user___init__.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/user/__init__.py
+3	views.py	/NYCOpenDocs/html/app_user_views.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/user/views.py
 2	user_request
-3	About the directory 'user_request'	/html/app_user_request_user_request.html
-3	__init__.py	/html/app_user_request___init__.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/user_request/__init__.py
-3	forms.py	/html/app_user_request_forms.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/user_request/forms.py
-3	utils.py	/html/app_user_request_utils.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/user_request/utils.py
-3	views.py	/html/app_user_request_views.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/user_request/views.py
+3	About the directory 'user_request'	/NYCOpenDocs/html/app_user_request_user_request.html
+3	__init__.py	/NYCOpenDocs/html/app_user_request___init__.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/user_request/__init__.py
+3	forms.py	/NYCOpenDocs/html/app_user_request_forms.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/user_request/forms.py
+3	utils.py	/NYCOpenDocs/html/app_user_request_utils.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/user_request/utils.py
+3	views.py	/NYCOpenDocs/html/app_user_request_views.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/user_request/views.py
 1	build_scripts
-2	About the directory 'build_scripts'	/html/build_scripts_build_scripts.html
+2	About the directory 'build_scripts'	/NYCOpenDocs/html/build_scripts_build_scripts.html
 2	app_setup
-3	About the directory 'app_setup'	/html/build_scripts_app_setup_app_setup.html
-3	app_setup.sh	/html/build_scripts_app_setup_app_setup.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/app_setup/app_setup.sh
+3	About the directory 'app_setup'	/NYCOpenDocs/html/build_scripts_app_setup_app_setup.html
+3	app_setup.sh	/NYCOpenDocs/html/build_scripts_app_setup_app_setup.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/app_setup/app_setup.sh
 2	consul-vault_setup
-3	About the directory 'consul-vault_setup'	/html/build_scripts_consul-vault_setup_consul-vault_setup.html
-3	consul_setup.sh	/html/build_scripts_consul-vault_setup_consul_setup.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/consul-vault_setup/consul_setup.sh
+3	About the directory 'consul-vault_setup'	/NYCOpenDocs/html/build_scripts_consul-vault_setup_consul-vault_setup.html
+3	consul_setup.sh	/NYCOpenDocs/html/build_scripts_consul-vault_setup_consul_setup.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/consul-vault_setup/consul_setup.sh
 3	nginx
-4	About the directory 'nginx'	/html/build_scripts_consul-vault_setup_nginx_nginx.html
-4	nginx_setup.sh	/html/build_scripts_consul-vault_setup_nginx_nginx_setup.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/consul-vault_setup/nginx/nginx_setup.sh
-3	vault_setup.sh	/html/build_scripts_consul-vault_setup_vault_setup.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/consul-vault_setup/vault_setup.sh
+4	About the directory 'nginx'	/NYCOpenDocs/html/build_scripts_consul-vault_setup_nginx_nginx.html
+4	nginx_setup.sh	/NYCOpenDocs/html/build_scripts_consul-vault_setup_nginx_nginx_setup.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/consul-vault_setup/nginx/nginx_setup.sh
+3	vault_setup.sh	/NYCOpenDocs/html/build_scripts_consul-vault_setup_vault_setup.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/consul-vault_setup/vault_setup.sh
 2	db_setup
-3	About the directory 'db_setup'	/html/build_scripts_db_setup_db_setup.html
-3	backup.py	/html/build_scripts_db_setup_backup.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/db_setup/backup.py
-3	backup.sh	/html/build_scripts_db_setup_backup.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/db_setup/backup.sh
-3	db_setup.sh	/html/build_scripts_db_setup_db_setup.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/db_setup/db_setup.sh
-3	postgres.sh	/html/build_scripts_db_setup_postgres.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/db_setup/postgres.sh
+3	About the directory 'db_setup'	/NYCOpenDocs/html/build_scripts_db_setup_db_setup.html
+3	backup.py	/NYCOpenDocs/html/build_scripts_db_setup_backup.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/db_setup/backup.py
+3	backup.sh	/NYCOpenDocs/html/build_scripts_db_setup_backup.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/db_setup/backup.sh
+3	db_setup.sh	/NYCOpenDocs/html/build_scripts_db_setup_db_setup.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/db_setup/db_setup.sh
+3	postgres.sh	/NYCOpenDocs/html/build_scripts_db_setup_postgres.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/db_setup/postgres.sh
 2	elk_setup
-3	About the directory 'elk_setup'	/html/build_scripts_elk_setup_elk_setup.html
+3	About the directory 'elk_setup'	/NYCOpenDocs/html/build_scripts_elk_setup_elk_setup.html
 3	elasticsearch
-4	About the directory 'elasticsearch'	/html/build_scripts_elk_setup_elasticsearch_elasticsearch.html
-4	elasticsearch.yml	/html/build_scripts_elk_setup_elasticsearch_elasticsearch.yml.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/elk_setup/elasticsearch/elasticsearch.yml
-4	setup.sh	/html/build_scripts_elk_setup_elasticsearch_setup.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/elk_setup/elasticsearch/setup.sh
+4	About the directory 'elasticsearch'	/NYCOpenDocs/html/build_scripts_elk_setup_elasticsearch_elasticsearch.html
+4	elasticsearch.yml	/NYCOpenDocs/html/build_scripts_elk_setup_elasticsearch_elasticsearch.yml.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/elk_setup/elasticsearch/elasticsearch.yml
+4	setup.sh	/NYCOpenDocs/html/build_scripts_elk_setup_elasticsearch_setup.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/elk_setup/elasticsearch/setup.sh
 3	kibana
-4	About the directory 'kibana'	/html/build_scripts_elk_setup_kibana_kibana.html
-4	kibana.yml	/html/build_scripts_elk_setup_kibana_kibana.yml.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/elk_setup/kibana/kibana.yml
-4	setup.sh	/html/build_scripts_elk_setup_kibana_setup.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/elk_setup/kibana/setup.sh
+4	About the directory 'kibana'	/NYCOpenDocs/html/build_scripts_elk_setup_kibana_kibana.html
+4	kibana.yml	/NYCOpenDocs/html/build_scripts_elk_setup_kibana_kibana.yml.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/elk_setup/kibana/kibana.yml
+4	setup.sh	/NYCOpenDocs/html/build_scripts_elk_setup_kibana_setup.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/elk_setup/kibana/setup.sh
 3	logstash
-4	About the directory 'logstash'	/html/build_scripts_elk_setup_logstash_logstash.html
-4	logstash.yml	/html/build_scripts_elk_setup_logstash_logstash.yml.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/elk_setup/logstash/logstash.yml
-4	setup.sh	/html/build_scripts_elk_setup_logstash_setup.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/elk_setup/logstash/setup.sh
+4	About the directory 'logstash'	/NYCOpenDocs/html/build_scripts_elk_setup_logstash_logstash.html
+4	logstash.yml	/NYCOpenDocs/html/build_scripts_elk_setup_logstash_logstash.yml.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/elk_setup/logstash/logstash.yml
+4	setup.sh	/NYCOpenDocs/html/build_scripts_elk_setup_logstash_setup.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/elk_setup/logstash/setup.sh
 3	nginx
-4	About the directory 'nginx'	/html/build_scripts_elk_setup_nginx_nginx.html
-4	setup.sh	/html/build_scripts_elk_setup_nginx_setup.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/elk_setup/nginx/setup.sh
+4	About the directory 'nginx'	/NYCOpenDocs/html/build_scripts_elk_setup_nginx_nginx.html
+4	setup.sh	/NYCOpenDocs/html/build_scripts_elk_setup_nginx_setup.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/elk_setup/nginx/setup.sh
 2	es_setup
-3	About the directory 'es_setup'	/html/build_scripts_es_setup_es_setup.html
-3	elasticsearch.yml	/html/build_scripts_es_setup_elasticsearch.yml.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/es_setup/elasticsearch.yml
-3	es_setup.sh	/html/build_scripts_es_setup_es_setup.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/es_setup/es_setup.sh
+3	About the directory 'es_setup'	/NYCOpenDocs/html/build_scripts_es_setup_es_setup.html
+3	elasticsearch.yml	/NYCOpenDocs/html/build_scripts_es_setup_elasticsearch.yml.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/es_setup/elasticsearch.yml
+3	es_setup.sh	/NYCOpenDocs/html/build_scripts_es_setup_es_setup.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/es_setup/es_setup.sh
 2	filebeat_setup
-3	About the directory 'filebeat_setup'	/html/build_scripts_filebeat_setup_filebeat_setup.html
+3	About the directory 'filebeat_setup'	/NYCOpenDocs/html/build_scripts_filebeat_setup_filebeat_setup.html
 3	app_nginx
-4	About the directory 'app_nginx'	/html/build_scripts_filebeat_setup_app_nginx_app_nginx.html
-4	filebeat.yml	/html/build_scripts_filebeat_setup_app_nginx_filebeat.yml.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/filebeat_setup/app_nginx/filebeat.yml
-4	install.sh	/html/build_scripts_filebeat_setup_app_nginx_install.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/filebeat_setup/app_nginx/install.sh
-4	setup.sh	/html/build_scripts_filebeat_setup_app_nginx_setup.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/filebeat_setup/app_nginx/setup.sh
-2	proxy.sh	/html/build_scripts_proxy.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/proxy.sh
+4	About the directory 'app_nginx'	/NYCOpenDocs/html/build_scripts_filebeat_setup_app_nginx_app_nginx.html
+4	filebeat.yml	/NYCOpenDocs/html/build_scripts_filebeat_setup_app_nginx_filebeat.yml.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/filebeat_setup/app_nginx/filebeat.yml
+4	install.sh	/NYCOpenDocs/html/build_scripts_filebeat_setup_app_nginx_install.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/filebeat_setup/app_nginx/install.sh
+4	setup.sh	/NYCOpenDocs/html/build_scripts_filebeat_setup_app_nginx_setup.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/filebeat_setup/app_nginx/setup.sh
+2	proxy.sh	/NYCOpenDocs/html/build_scripts_proxy.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/proxy.sh
 2	sentry_setup
-3	About the directory 'sentry_setup'	/html/build_scripts_sentry_setup_sentry_setup.html
-3	config.yml	/html/build_scripts_sentry_setup_config.yml.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/sentry_setup/config.yml
-3	db_setup_config.sh	/html/build_scripts_sentry_setup_db_setup_config.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/sentry_setup/db_setup_config.sh
-3	db_setup_install.sh	/html/build_scripts_sentry_setup_db_setup_install.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/sentry_setup/db_setup_install.sh
-3	nginx_setup.sh	/html/build_scripts_sentry_setup_nginx_setup.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/sentry_setup/nginx_setup.sh
-3	sentry.conf.py	/html/build_scripts_sentry_setup_sentry.conf.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/sentry_setup/sentry.conf.py
-3	setup.sh	/html/build_scripts_sentry_setup_setup.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/sentry_setup/setup.sh
-2	subscription_manager.sh	/html/build_scripts_subscription_manager.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/subscription_manager.sh
+3	About the directory 'sentry_setup'	/NYCOpenDocs/html/build_scripts_sentry_setup_sentry_setup.html
+3	config.yml	/NYCOpenDocs/html/build_scripts_sentry_setup_config.yml.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/sentry_setup/config.yml
+3	db_setup_config.sh	/NYCOpenDocs/html/build_scripts_sentry_setup_db_setup_config.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/sentry_setup/db_setup_config.sh
+3	db_setup_install.sh	/NYCOpenDocs/html/build_scripts_sentry_setup_db_setup_install.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/sentry_setup/db_setup_install.sh
+3	nginx_setup.sh	/NYCOpenDocs/html/build_scripts_sentry_setup_nginx_setup.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/sentry_setup/nginx_setup.sh
+3	sentry.conf.py	/NYCOpenDocs/html/build_scripts_sentry_setup_sentry.conf.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/sentry_setup/sentry.conf.py
+3	setup.sh	/NYCOpenDocs/html/build_scripts_sentry_setup_setup.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/sentry_setup/setup.sh
+2	subscription_manager.sh	/NYCOpenDocs/html/build_scripts_subscription_manager.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/subscription_manager.sh
 2	web_setup
-3	About the directory 'web_setup'	/html/build_scripts_web_setup_web_setup.html
-3	web_setup.sh	/html/build_scripts_web_setup_web_setup.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/web_setup/web_setup.sh
-1	celery_worker.py	/html/celery_worker.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/celery_worker.py
-1	config.py	/html/config.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/config.py
-1	gunicorn_config.py	/html/gunicorn_config.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/gunicorn_config.py
-1	jobs.py	/html/jobs.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/jobs.py
-1	manage.py	/html/manage.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/manage.py
+3	About the directory 'web_setup'	/NYCOpenDocs/html/build_scripts_web_setup_web_setup.html
+3	web_setup.sh	/NYCOpenDocs/html/build_scripts_web_setup_web_setup.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/build_scripts/web_setup/web_setup.sh
+1	celery_worker.py	/NYCOpenDocs/html/celery_worker.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/celery_worker.py
+1	config.py	/NYCOpenDocs/html/config.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/config.py
+1	gunicorn_config.py	/NYCOpenDocs/html/gunicorn_config.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/gunicorn_config.py
+1	jobs.py	/NYCOpenDocs/html/jobs.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/jobs.py
+1	manage.py	/NYCOpenDocs/html/manage.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/manage.py
 1	migrations
-2	About the directory 'migrations'	/html/migrations_migrations.html
+2	About the directory 'migrations'	/NYCOpenDocs/html/migrations_migrations.html
 2	custom
-3	About the directory 'custom'	/html/migrations_custom_custom.html
-3	openrecords_v1.py	/html/migrations_custom_openrecords_v1.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/custom/openrecords_v1.py
-2	env.py	/html/migrations_env.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/env.py
+3	About the directory 'custom'	/NYCOpenDocs/html/migrations_custom_custom.html
+3	openrecords_v1.py	/NYCOpenDocs/html/migrations_custom_openrecords_v1.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/custom/openrecords_v1.py
+2	env.py	/NYCOpenDocs/html/migrations_env.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/env.py
 2	versions
-3	About the directory 'versions'	/html/migrations_versions_versions.html
-3	13de5f42768b_add_session_id_to_users_table.py	/html/migrations_versions_13de5f42768b_add_session_id_to_users_table.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/13de5f42768b_add_session_id_to_users_table.py
-3	1920035b3a1f_140_character_limit_file_title.py	/html/migrations_versions_1920035b3a1f_140_character_limit_file_title.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/1920035b3a1f_140_character_limit_file_title.py
-3	22b97712d5db_add_letters_and_envelopes_to_type_enum.py	/html/migrations_versions_22b97712d5db_add_letters_and_envelopes_to_type_enum.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/22b97712d5db_add_letters_and_envelopes_to_type_enum.py
-3	24e110b4489b_drop_Users_agency_ein_column.py	/html/migrations_versions_24e110b4489b_drop_Users_agency_ein_column.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/24e110b4489b_drop_Users_agency_ein_column.py
-3	24e110b4489b_drop_the_users-agency_ein_column.py	/html/migrations_versions_24e110b4489b_drop_the_users-agency_ein_column.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/24e110b4489b_drop_the_users-agency_ein_column.py
-3	32dec7b290bb_added_is_editable_to_responses_table.py	/html/migrations_versions_32dec7b290bb_added_is_editable_to_responses_table.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/32dec7b290bb_added_is_editable_to_responses_table.py
-3	445e50628f6b_add_communication_methods.py	/html/migrations_versions_445e50628f6b_add_communication_methods.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/445e50628f6b_add_communication_methods.py
-3	52a4062502bb_adding_agencyusers.py	/html/migrations_versions_52a4062502bb_adding_agencyusers.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/52a4062502bb_adding_agencyusers.py
-3	58a5abdd94ac_added_agency_acronym_to_db.py	/html/migrations_versions_58a5abdd94ac_added_agency_acronym_to_db.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/58a5abdd94ac_added_agency_acronym_to_db.py
-3	60116f094400_increase_length_of_file_title_to_250_.py	/html/migrations_versions_60116f094400_increase_length_of_file_title_to_250_.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/60116f094400_increase_length_of_file_title_to_250_.py
-3	6ab8af7a1347_removing_response_token_expiration_date.py	/html/migrations_versions_6ab8af7a1347_removing_response_token_expiration_date.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/6ab8af7a1347_removing_response_token_expiration_date.py
-3	7ba6fbb131bb_add_signature_to_users.py	/html/migrations_versions_7ba6fbb131bb_add_signature_to_users.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/7ba6fbb131bb_add_signature_to_users.py
-3	7e0434686370_added_custom_request_forms_table.py	/html/migrations_versions_7e0434686370_added_custom_request_forms_table.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/7e0434686370_added_custom_request_forms_table.py
-3	85068c55138a_added_notification_email.py	/html/migrations_versions_85068c55138a_added_notification_email.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/85068c55138a_added_notification_email.py
-3	8797e9a71f62_user_requests_events_on_update_cascade.py	/html/migrations_versions_8797e9a71f62_user_requests_events_on_update_cascade.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/8797e9a71f62_user_requests_events_on_update_cascade.py
-3	9005ab594598_add_lettertemplates.py	/html/migrations_versions_9005ab594598_add_lettertemplates.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/9005ab594598_add_lettertemplates.py
-3	949aebe9e480_letters_table.py	/html/migrations_versions_949aebe9e480_letters_table.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/949aebe9e480_letters_table.py
-3	971f341c0204_adding_agency_features_json_column_to_.py	/html/migrations_versions_971f341c0204_adding_agency_features_json_column_to_.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/971f341c0204_adding_agency_features_json_column_to_.py
-3	9908a9bf1dbd_json_to_jsonb.py	/html/migrations_versions_9908a9bf1dbd_json_to_jsonb.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/9908a9bf1dbd_json_to_jsonb.py
-3	a2547b706641_initial_migration.py	/html/migrations_versions_a2547b706641_initial_migration.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/a2547b706641_initial_migration.py
-3	a3d80d04b0f1_add_date_closed_to_requests_table.py	/html/migrations_versions_a3d80d04b0f1_add_date_closed_to_requests_table.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/a3d80d04b0f1_add_date_closed_to_requests_table.py
-3	b3c0c76ac2e6_add_envelope_functionality.py	/html/migrations_versions_b3c0c76ac2e6_add_envelope_functionality.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/b3c0c76ac2e6_add_envelope_functionality.py
-3	b722969f38a6_added_minimum_required_to_custom_.py	/html/migrations_versions_b722969f38a6_added_minimum_required_to_custom_.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/b722969f38a6_added_minimum_required_to_custom_.py
-3	c7f05adcf7d9_added_point_of_contact.py	/html/migrations_versions_c7f05adcf7d9_added_point_of_contact.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/c7f05adcf7d9_added_point_of_contact.py
-3	cf62ec87d973_agency_description_to_agency_request_.py	/html/migrations_versions_cf62ec87d973_agency_description_to_agency_request_.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/cf62ec87d973_agency_description_to_agency_request_.py
-3	dc926c74551d_added_category_to_custom_request_forms.py	/html/migrations_versions_dc926c74551d_added_category_to_custom_request_forms.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/dc926c74551d_added_category_to_custom_request_forms.py
-3	ebeb3491636e_add_re-opening_to_reasons_enum.py	/html/migrations_versions_ebeb3491636e_add_re-opening_to_reasons_enum.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/ebeb3491636e_add_re-opening_to_reasons_enum.py
-1	setup.sh	/html/setup.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/setup.sh
+3	About the directory 'versions'	/NYCOpenDocs/html/migrations_versions_versions.html
+3	13de5f42768b_add_session_id_to_users_table.py	/NYCOpenDocs/html/migrations_versions_13de5f42768b_add_session_id_to_users_table.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/13de5f42768b_add_session_id_to_users_table.py
+3	1920035b3a1f_140_character_limit_file_title.py	/NYCOpenDocs/html/migrations_versions_1920035b3a1f_140_character_limit_file_title.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/1920035b3a1f_140_character_limit_file_title.py
+3	22b97712d5db_add_letters_and_envelopes_to_type_enum.py	/NYCOpenDocs/html/migrations_versions_22b97712d5db_add_letters_and_envelopes_to_type_enum.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/22b97712d5db_add_letters_and_envelopes_to_type_enum.py
+3	24e110b4489b_drop_Users_agency_ein_column.py	/NYCOpenDocs/html/migrations_versions_24e110b4489b_drop_Users_agency_ein_column.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/24e110b4489b_drop_Users_agency_ein_column.py
+3	24e110b4489b_drop_the_users-agency_ein_column.py	/NYCOpenDocs/html/migrations_versions_24e110b4489b_drop_the_users-agency_ein_column.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/24e110b4489b_drop_the_users-agency_ein_column.py
+3	32dec7b290bb_added_is_editable_to_responses_table.py	/NYCOpenDocs/html/migrations_versions_32dec7b290bb_added_is_editable_to_responses_table.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/32dec7b290bb_added_is_editable_to_responses_table.py
+3	445e50628f6b_add_communication_methods.py	/NYCOpenDocs/html/migrations_versions_445e50628f6b_add_communication_methods.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/445e50628f6b_add_communication_methods.py
+3	52a4062502bb_adding_agencyusers.py	/NYCOpenDocs/html/migrations_versions_52a4062502bb_adding_agencyusers.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/52a4062502bb_adding_agencyusers.py
+3	58a5abdd94ac_added_agency_acronym_to_db.py	/NYCOpenDocs/html/migrations_versions_58a5abdd94ac_added_agency_acronym_to_db.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/58a5abdd94ac_added_agency_acronym_to_db.py
+3	60116f094400_increase_length_of_file_title_to_250_.py	/NYCOpenDocs/html/migrations_versions_60116f094400_increase_length_of_file_title_to_250_.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/60116f094400_increase_length_of_file_title_to_250_.py
+3	6ab8af7a1347_removing_response_token_expiration_date.py	/NYCOpenDocs/html/migrations_versions_6ab8af7a1347_removing_response_token_expiration_date.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/6ab8af7a1347_removing_response_token_expiration_date.py
+3	7ba6fbb131bb_add_signature_to_users.py	/NYCOpenDocs/html/migrations_versions_7ba6fbb131bb_add_signature_to_users.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/7ba6fbb131bb_add_signature_to_users.py
+3	7e0434686370_added_custom_request_forms_table.py	/NYCOpenDocs/html/migrations_versions_7e0434686370_added_custom_request_forms_table.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/7e0434686370_added_custom_request_forms_table.py
+3	85068c55138a_added_notification_email.py	/NYCOpenDocs/html/migrations_versions_85068c55138a_added_notification_email.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/85068c55138a_added_notification_email.py
+3	8797e9a71f62_user_requests_events_on_update_cascade.py	/NYCOpenDocs/html/migrations_versions_8797e9a71f62_user_requests_events_on_update_cascade.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/8797e9a71f62_user_requests_events_on_update_cascade.py
+3	9005ab594598_add_lettertemplates.py	/NYCOpenDocs/html/migrations_versions_9005ab594598_add_lettertemplates.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/9005ab594598_add_lettertemplates.py
+3	949aebe9e480_letters_table.py	/NYCOpenDocs/html/migrations_versions_949aebe9e480_letters_table.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/949aebe9e480_letters_table.py
+3	971f341c0204_adding_agency_features_json_column_to_.py	/NYCOpenDocs/html/migrations_versions_971f341c0204_adding_agency_features_json_column_to_.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/971f341c0204_adding_agency_features_json_column_to_.py
+3	9908a9bf1dbd_json_to_jsonb.py	/NYCOpenDocs/html/migrations_versions_9908a9bf1dbd_json_to_jsonb.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/9908a9bf1dbd_json_to_jsonb.py
+3	a2547b706641_initial_migration.py	/NYCOpenDocs/html/migrations_versions_a2547b706641_initial_migration.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/a2547b706641_initial_migration.py
+3	a3d80d04b0f1_add_date_closed_to_requests_table.py	/NYCOpenDocs/html/migrations_versions_a3d80d04b0f1_add_date_closed_to_requests_table.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/a3d80d04b0f1_add_date_closed_to_requests_table.py
+3	b3c0c76ac2e6_add_envelope_functionality.py	/NYCOpenDocs/html/migrations_versions_b3c0c76ac2e6_add_envelope_functionality.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/b3c0c76ac2e6_add_envelope_functionality.py
+3	b722969f38a6_added_minimum_required_to_custom_.py	/NYCOpenDocs/html/migrations_versions_b722969f38a6_added_minimum_required_to_custom_.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/b722969f38a6_added_minimum_required_to_custom_.py
+3	c7f05adcf7d9_added_point_of_contact.py	/NYCOpenDocs/html/migrations_versions_c7f05adcf7d9_added_point_of_contact.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/c7f05adcf7d9_added_point_of_contact.py
+3	cf62ec87d973_agency_description_to_agency_request_.py	/NYCOpenDocs/html/migrations_versions_cf62ec87d973_agency_description_to_agency_request_.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/cf62ec87d973_agency_description_to_agency_request_.py
+3	dc926c74551d_added_category_to_custom_request_forms.py	/NYCOpenDocs/html/migrations_versions_dc926c74551d_added_category_to_custom_request_forms.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/dc926c74551d_added_category_to_custom_request_forms.py
+3	ebeb3491636e_add_re-opening_to_reasons_enum.py	/NYCOpenDocs/html/migrations_versions_ebeb3491636e_add_re-opening_to_reasons_enum.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/ebeb3491636e_add_re-opening_to_reasons_enum.py
+1	setup.sh	/NYCOpenDocs/html/setup.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/setup.sh
 1	tests
-2	About the directory 'tests'	/html/tests_tests.html
-2	__init__.py	/html/tests___init__.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/tests/__init__.py
-2	conftest.py	/html/tests_conftest.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/tests/conftest.py
+2	About the directory 'tests'	/NYCOpenDocs/html/tests_tests.html
+2	__init__.py	/NYCOpenDocs/html/tests___init__.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/tests/__init__.py
+2	conftest.py	/NYCOpenDocs/html/tests_conftest.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/tests/conftest.py
 2	functional
-3	About the directory 'functional'	/html/tests_functional_functional.html
-3	test_main.py	/html/tests_functional_test_main.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/tests/functional/test_main.py
-3	test_requests.py	/html/tests_functional_test_requests.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/tests/functional/test_requests.py
+3	About the directory 'functional'	/NYCOpenDocs/html/tests_functional_functional.html
+3	test_main.py	/NYCOpenDocs/html/tests_functional_test_main.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/tests/functional/test_main.py
+3	test_requests.py	/NYCOpenDocs/html/tests_functional_test_requests.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/tests/functional/test_requests.py
 2	helpers
-3	About the directory 'helpers'	/html/tests_helpers_helpers.html
-3	utils.py	/html/tests_helpers_utils.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/tests/helpers/utils.py
+3	About the directory 'helpers'	/NYCOpenDocs/html/tests_helpers_helpers.html
+3	utils.py	/NYCOpenDocs/html/tests_helpers_utils.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/tests/helpers/utils.py
 2	unit
-3	About the directory 'unit'	/html/tests_unit_unit.html
-3	test_factory.py	/html/tests_unit_test_factory.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/tests/unit/test_factory.py
-1	update_definitions.sh	/html/update_definitions.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/update_definitions.sh
+3	About the directory 'unit'	/NYCOpenDocs/html/tests_unit_unit.html
+3	test_factory.py	/NYCOpenDocs/html/tests_unit_test_factory.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/tests/unit/test_factory.py
+1	update_definitions.sh	/NYCOpenDocs/html/update_definitions.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/update_definitions.sh

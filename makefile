@@ -1,6 +1,6 @@
 # Need to export as ENV var
 export TEMPLATE_DIR = templates
-CODE_FILES = $(shell find ../NYCOpenRecords \( -name '*.py' -or -name '*.js' -or -name '*.yml' -or -name '*.sh' \))
+CODE_FILES = $(shell find ../NYCOpenRecords \( -name '*.py' -or -name '*.js' -or -name '*.yml' -or -name '*.sh' or -name '*.html' \))
 PTML_DIR = html_src
 UTILS_DIR = utils
 HTML_DIR = html
@@ -24,7 +24,7 @@ $(HTML_DIR)/%.html: $(PTML_DIR)/%.ptml $(INCS)
 submods:
 	git submodule foreach 'git pull origin master'
 
-website: $(INCS) $(HTMLFILES)
+prod: $(INCS) $(HTMLFILES)
 	-git commit -a 
 	git pull origin master
 	git push origin master

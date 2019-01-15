@@ -1,6 +1,6 @@
 # Need to export as ENV var
 export TEMPLATE_DIR = templates
-CODE_FILES = $(shell find ../NYCOpenRecords \( -name '*.py' -or -name '*.js' -or -name '*.yml' -or -name '*.sh' or -name '*.html' or -name '*.css' \))
+CODE_FILES = $(shell find ../NYCOpenRecords \( -name '*.py' -or -name '*.js' -or -name '*.yml' -or -name '*.sh' -or -name '*.html' -or -name '*.css' \))
 PTML_DIR = html_src
 UTILS_DIR = utils
 HTML_DIR = html

@@ -53,7 +53,7 @@ def read_docstrings(file_name):
     # write the output to templates/name of file 
     write_filenm = file_name.split("NYCOpenRecords/")[-1]
     write_filenm = "_".join(write_filenm.split("/"))
-    write_filenm += ".txt"
+    write_filenm += "_ex.txt"
     output_file = open("templates/" + write_filenm, "w")
     output_file.write(output)
     output_file.close()
@@ -65,7 +65,7 @@ def read_docs():
     '''
     file_names = read_file_names()
     for filenm in file_names:
-        if "app/user/views.py" in filenm:
+        if ".py" in filenm:
             read_docstrings(filenm)
 
 

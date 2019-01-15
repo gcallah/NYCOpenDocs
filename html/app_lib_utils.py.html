@@ -1746,72 +1746,66 @@
 
 <!-- Include the text material here! -->
 """
- .. module: utils
-
-"""
-
-class InvalidUserException(Exception):
-    def __init__(self, user):
-        """
-        Exception used when an invalid user is detected.
-
-        :param user: the current_user as defined in flask_login
-        """
-
-class InvalidDeterminationException(Exception):
-    def __init__(self, request_id, dtype, missing_field):
-        """
-        Exception used to handle missing information for a determination.
-        :param request_id: Unique request identifier
-        :param dtype: Type of determination (Acknowledgment, Extension, Closing, Denial, Re-Opening)
-        :param missing_field: The field missing from the determination.
-        """
-
-class UserRequestException(Exception):
-    def __init__(self, action, request_id, reason):
-        """
-        Exception used to handle errors performing actions on a request.
-
-        :param action: Action attempted
-        :param request_id: Unique request identifier
-        :param reason: Description of failure reason
-        """
-
-class DuplicateFileException(Exception):
-    def __init__(self, file_name, request_id):
-        """
-        Exception used when a duplicate file is added to a request.
-
-        :param file_name: Name of file uploaded
-        :param request_id: Unique request identifier
-        """
-
-class PDFCreationException(Exception):
-    def __init__(self, status_code, stdout=b'', stderr=b''):
-        """
-        Exception used when xhtml2pdf fails to create a PDF.
-        :param status_code: Process exit status code
-        :param stdout: STDOUT output
-        :param stderr: STDERR output
-        """
-
-def b64decode_lenient(data):
-    """
-    Decodes base64 (bytes or str), padding being optional.
-
-    :param data: a string or bytes-like object of base64 data
-    :return: a decoded string
-    """
-
-def eval_request_bool(val, default=False):
-    """
-    Evaluates the boolean value of a request parameter.
-
-    :param val: the value to check
-    :param default: bool to return by default
-
-    :return: Boolean
-    """
+<br>  .. module: utils
+<br>
+<br>"""
+<br>class InvalidUserException(Exception):
+<br>&emsp;    def __init__(self, user):
+<br>&emsp;&emsp;                """
+<br>&emsp;&emsp;                Exception used when an invalid user is detected.
+<br>
+<br>&emsp;&emsp;                :param user: the current_user as defined in flask_login
+<br>        """
+<br>class InvalidDeterminationException(Exception):
+<br>&emsp;    def __init__(self, request_id, dtype, missing_field):
+<br>&emsp;&emsp;                """
+<br>&emsp;&emsp;                Exception used to handle missing information for a determination.
+<br>&emsp;&emsp;                :param request_id: Unique request identifier
+<br>&emsp;&emsp;                :param dtype: Type of determination (Acknowledgment, Extension, Closing, Denial, Re-Opening)
+<br>&emsp;&emsp;                :param missing_field: The field missing from the determination.
+<br>        """
+<br>class UserRequestException(Exception):
+<br>&emsp;    def __init__(self, action, request_id, reason):
+<br>&emsp;&emsp;                """
+<br>&emsp;&emsp;                Exception used to handle errors performing actions on a request.
+<br>
+<br>&emsp;&emsp;                :param action: Action attempted
+<br>&emsp;&emsp;                :param request_id: Unique request identifier
+<br>&emsp;&emsp;                :param reason: Description of failure reason
+<br>        """
+<br>class DuplicateFileException(Exception):
+<br>&emsp;    def __init__(self, file_name, request_id):
+<br>&emsp;&emsp;                """
+<br>&emsp;&emsp;                Exception used when a duplicate file is added to a request.
+<br>
+<br>&emsp;&emsp;                :param file_name: Name of file uploaded
+<br>&emsp;&emsp;                :param request_id: Unique request identifier
+<br>        """
+<br>class PDFCreationException(Exception):
+<br>&emsp;    def __init__(self, status_code, stdout=b'', stderr=b''):
+<br>&emsp;&emsp;                """
+<br>&emsp;&emsp;                Exception used when xhtml2pdf fails to create a PDF.
+<br>&emsp;&emsp;                :param status_code: Process exit status code
+<br>&emsp;&emsp;                :param stdout: STDOUT output
+<br>&emsp;&emsp;                :param stderr: STDERR output
+<br>        """
+<br>def b64decode_lenient(data):
+<br>&emsp;        """
+<br>&emsp;        Decodes base64 (bytes or str), padding being optional.
+<br>
+<br>&emsp;        :param data: a string or bytes-like object of base64 data
+<br>&emsp;        :return: a decoded string
+<br>    """
+<br>def eval_request_bool(val, default=False):
+<br>&emsp;        """
+<br>&emsp;        Evaluates the boolean value of a request parameter.
+<br>
+<br>&emsp;        :param val: the value to check
+<br>&emsp;        :param default: bool to return by default
+<br>
+<br>&emsp;        :return: Boolean
+<br>    """
+<br>
                 </details>
 
             </div>

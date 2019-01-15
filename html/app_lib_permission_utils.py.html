@@ -1746,46 +1746,40 @@
 
 <!-- Include the text material here! -->
 def has_permission(permission: int):
-    """
-    Checks to see if the current_user has the appropriate permission for this endpoint.
-
-    :param f: View function that is being wrapped.
-    :param permissions: List of permission values.
-    :return:
-    """
-
-    def decorator(f):
-
-        def decorated_function(request_id, *args, **kwargs):
-
-def has_super():
-    """
-    Checks to see if the current_user is a super user.
-
-    :param f: Function that is being wrapped.
-    :return:
-    """
-
-    def decorator(f):
-
-        def decorated_function(*args, **kwargs):
-
-def is_allowed(user: Users, request_id: str, permission: int):
-    """
-
-    :param user:
-    :param request_id:
-    :param permissions:
-    :return:
-    """
-
-def get_permission(permission_type: str, response_type: Responses):
-    """
-
-    :param permission_type:
-    :param response_type:
-    :return:
-    """
+<br>&emsp;        """
+<br>&emsp;        Checks to see if the current_user has the appropriate permission for this endpoint.
+<br>
+<br>&emsp;        :param f: View function that is being wrapped.
+<br>&emsp;        :param permissions: List of permission values.
+<br>&emsp;        :return:
+<br>    """
+<br>&emsp;    def decorator(f):
+<br>&emsp;&emsp;        def decorated_function(request_id, *args, **kwargs):
+<br>def has_super():
+<br>&emsp;        """
+<br>&emsp;        Checks to see if the current_user is a super user.
+<br>
+<br>&emsp;        :param f: Function that is being wrapped.
+<br>&emsp;        :return:
+<br>    """
+<br>&emsp;    def decorator(f):
+<br>&emsp;&emsp;        def decorated_function(*args, **kwargs):
+<br>def is_allowed(user: Users, request_id: str, permission: int):
+<br>&emsp;        """
+<br>
+<br>&emsp;        :param user:
+<br>&emsp;        :param request_id:
+<br>&emsp;        :param permissions:
+<br>&emsp;        :return:
+<br>    """
+<br>def get_permission(permission_type: str, response_type: Responses):
+<br>&emsp;        """
+<br>
+<br>&emsp;        :param permission_type:
+<br>&emsp;        :param response_type:
+<br>&emsp;        :return:
+<br>    """
+<br>
                 </details>
 
             </div>

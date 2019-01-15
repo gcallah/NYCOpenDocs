@@ -15,34 +15,40 @@ def read_docstrings(file_name):
     program_file = open(file_name, "r")
     docstring = False
     for line in program_file:
+        spaces = 0
         # if found a function or class 
         if "def " in line or "class" in line:
             if "class" in line:
-                    line = line.strip()
-            if len(output) != 0:
-                output += "\n"
-            output += line
+                spaces = line.find("class")
+            else:
+                spaces = line.find("def")
+            output += (spaces // 4) * "&emsp;" + line + "<br>"
         # check for docstrings 
         elif "'''" in line or '"""' in line:
             quotes_occurrence = 0
             if line.count("'''") != 0:
                 quotes_occurrence = line.count("'''")
+                spaces = line.find("'''")
             else:
                 quotes_occurrence = line.count('"""')
+                spaces = line.find('"""')
             # check if start and end of docstring are on the same line
             # if so, add the line
             # otherwise have a boolean to determine which lines 
             # are part of the docstring
             if quotes_occurrence == 2:
-                output += line
+                output += (spaces // 4) * "&emsp;" + line + "<br>"
             else:
                 if not docstring:
                     docstring = True
                 else:
-                    output += line
+                    output += (spaces // 4) * "&emsp;" + line + "<br>"
                     docstring = False
         if docstring:
-            output += line
+            with_space = len(line)
+            without_space = len(line.strip(" "))
+            spaces = with_space - without_space
+            output += (spaces // 4) * "&emsp;" + line + "<br>"
     program_file.close()
     # write the output to templates/name of file 
     write_filenm = file_name.split("NYCOpenRecords/")[-1]
@@ -59,7 +65,7 @@ def read_docs():
     '''
     file_names = read_file_names()
     for filenm in file_names:
-        if ".py" in filenm:
+        if "app/user/views.py" in filenm:
             read_docstrings(filenm)
 
 

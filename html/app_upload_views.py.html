@@ -1746,72 +1746,70 @@
 
 <!-- Include the text material here! -->
 """
-...module:: upload.views.
-
-    :synopsis: Handles Upload endpoints for NYC OpenRecords
-"""
-
-def post(request_id):
-    """
-    Create a new upload.
-
-    Handles chunked files through the Content-Range header.
-    For filesize validation and more upload logic, see:
-        /static/js/upload/fileupload.js
-
-    Optional request body parameters:
-    - update (bool)
-        save the uploaded file to the 'updated' directory
-        (this indicates the file is meant to replace
-        a previously uploaded file)
-    - response_id (int)
-        the id of a response associated with the file
-        this upload is replacing
-        - REQUIRED if 'update' is 'true'
-        - ignored if 'update' is 'false'
-
-    :returns: {
-        "name": file name,
-        "size": file size
-    }
-    """
-
-def delete(r_id_type, r_id, filecode):
-    """
-    Removes an uploaded file.
-
-    :param r_id_type: "response" or "request"
-    :param r_id: the Response or Request identifier
-    :param filecode: the encoded name of the uploaded file
-        (base64 without padding)
-
-    Optional request body parameters:
-    - quarantined_only (bool)
-        only delete the file if it is quarantined
-        (beware: takes precedence over 'updated_only')
-    - updated_only (bool)
-        only delete the file if it is in the 'updated' directory
-
-    :returns:
-        On success:
-            { "deleted": filename }
-        On failure:
-            { "error": error message }
-    """
-
-def status():
-    """
-    Check the status of an upload.
-
-    Request Parameters:
-        - request_id
-        - filename
-        - for_update (bool, optional)
-
-    :returns: {
-        "status": upload status
-    }
-    """
+<br>...module:: upload.views.
+<br>
+<br>&emsp;        :synopsis: Handles Upload endpoints for NYC OpenRecords
+<br>"""
+<br>def post(request_id):
+<br>&emsp;        """
+<br>&emsp;        Create a new upload.
+<br>
+<br>&emsp;        Handles chunked files through the Content-Range header.
+<br>&emsp;        For filesize validation and more upload logic, see:
+<br>&emsp;&emsp;                /static/js/upload/fileupload.js
+<br>
+<br>&emsp;        Optional request body parameters:
+<br>&emsp;        - update (bool)
+<br>&emsp;&emsp;                save the uploaded file to the 'updated' directory
+<br>&emsp;&emsp;                (this indicates the file is meant to replace
+<br>&emsp;&emsp;                a previously uploaded file)
+<br>&emsp;        - response_id (int)
+<br>&emsp;&emsp;                the id of a response associated with the file
+<br>&emsp;&emsp;                this upload is replacing
+<br>&emsp;&emsp;                - REQUIRED if 'update' is 'true'
+<br>&emsp;&emsp;                - ignored if 'update' is 'false'
+<br>
+<br>&emsp;        :returns: {
+<br>&emsp;&emsp;                "name": file name,
+<br>&emsp;&emsp;                "size": file size
+<br>&emsp;        }
+<br>    """
+<br>def delete(r_id_type, r_id, filecode):
+<br>&emsp;        """
+<br>&emsp;        Removes an uploaded file.
+<br>
+<br>&emsp;        :param r_id_type: "response" or "request"
+<br>&emsp;        :param r_id: the Response or Request identifier
+<br>&emsp;        :param filecode: the encoded name of the uploaded file
+<br>&emsp;&emsp;                (base64 without padding)
+<br>
+<br>&emsp;        Optional request body parameters:
+<br>&emsp;        - quarantined_only (bool)
+<br>&emsp;&emsp;                only delete the file if it is quarantined
+<br>&emsp;&emsp;                (beware: takes precedence over 'updated_only')
+<br>&emsp;        - updated_only (bool)
+<br>&emsp;&emsp;                only delete the file if it is in the 'updated' directory
+<br>
+<br>&emsp;        :returns:
+<br>&emsp;&emsp;                On success:
+<br>&emsp;&emsp;&emsp;                        { "deleted": filename }
+<br>&emsp;&emsp;                On failure:
+<br>&emsp;&emsp;&emsp;                        { "error": error message }
+<br>    """
+<br>def status():
+<br>&emsp;        """
+<br>&emsp;        Check the status of an upload.
+<br>
+<br>&emsp;        Request Parameters:
+<br>&emsp;&emsp;                - request_id
+<br>&emsp;&emsp;                - filename
+<br>&emsp;&emsp;                - for_update (bool, optional)
+<br>
+<br>&emsp;        :returns: {
+<br>&emsp;&emsp;                "status": upload status
+<br>&emsp;        }
+<br>    """
+<br>
                 </details>
 
             </div>

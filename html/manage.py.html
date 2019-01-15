@@ -1746,40 +1746,32 @@
 
 <!-- Include the text material here! -->
 def make_shell_context():
-
-def create_user(
-    """Create an agency user."""
-
-def import_data(users, agencies, filename):
-    """Import data from CSV file."""
-
-help="Specify tests (file, class, or specific test)",
-def test(cov=False, test_name=None, verbose=False):
-    """Run the unit tests."""
-
-def profile(length=25, profile_dir=None):
-    """Start the application under the code profiler."""
-
-def deploy():
-    """Run deployment tasks."""
-
-def es_recreate():
-    """Recreate elasticsearch index and request docs."""
-
-def routes():
-    """
-    Generate a list of HTTP routes for the application.
-    """
-
-def create_missing_request_status_changed_events():
-    """
-    http://nycrecords.atlassian.net/browse/OP-1532
-    """
-
-def fix_incorrect_key_events():
-    """
-    Fixes Events table for request_status_changed events with a key of 'request' instead of 'status'
-    """
+<br>def create_user(
+<br>    """Create an agency user."""
+<br>def import_data(users, agencies, filename):
+<br>    """Import data from CSV file."""
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;    help="Specify tests (file, class, or specific test)",
+<br>def test(cov=False, test_name=None, verbose=False):
+<br>    """Run the unit tests."""
+<br>def profile(length=25, profile_dir=None):
+<br>    """Start the application under the code profiler."""
+<br>def deploy():
+<br>    """Run deployment tasks."""
+<br>def es_recreate():
+<br>    """Recreate elasticsearch index and request docs."""
+<br>def routes():
+<br>&emsp;        """
+<br>&emsp;        Generate a list of HTTP routes for the application.
+<br>    """
+<br>def create_missing_request_status_changed_events():
+<br>&emsp;        """
+<br>&emsp;        http://nycrecords.atlassian.net/browse/OP-1532
+<br>    """
+<br>def fix_incorrect_key_events():
+<br>&emsp;        """
+<br>&emsp;        Fixes Events table for request_status_changed events with a key of 'request' instead of 'status'
+<br>    """
+<br>
                 </details>
 
             </div>

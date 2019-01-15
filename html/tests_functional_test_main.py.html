@@ -1746,88 +1746,82 @@
 
 <!-- Include the text material here! -->
 """Test Main Module
-
-This module contains the tests for the OpenRecords `/` endpoint.
-"""
-
-def test_index(client: Flask.test_client):
-    """ Test the `/` endpoint works properly.
-
-    Args:
-        client (Flask.test_client): The test client used to access the endpoint
-    """
-
-assert b"""                    <button class="btn btn-primary btn-lg btn-block request-record-button-size">Check for Similar                    </button>""" in response.data
-
-assert b"""<button class="btn btn-primary btn-lg btn-block request-record-button-size">Request a Recordassert b"""<button class="btn btn-primary btn-lg btn-block request-record-button-size">Request a Record                    </button>""" in response.data
-
-def test_status(client: Flask.test_client):
-    """Test the `/index.html` and `/status` status endpoint always returns 200 on GET
-
-    Args:
-        client (Flask.test_client): The test client used to access the endpoint
-    """
-
-def test_get_contact(
-    """Test the technical support endpoint / form for OpenRecords
-
-    Args:
-        client (Flask.test_client): Test client used to access the technical-support page
-    """
-
-assert b'<h2 class="text-center">Technical Support</h2>' in response.data
-def test_post_contact(
-    """Test the technical support form for OpenRecords
-
-    Args:
-        db (SQLAlchemy): DB instance setup for testing.
-        client (Flask.test_client): Test client used to access the technical-support page
-        name (str): Name of the person submitting the form (required)
-        email (str): Email of the person submitting the form (required)
-        subject (str): Subject of the message being sent out
-        message (str): Message being sent out
-        app_response (str): Message displayed after post
-        num_db_entries (int): Number of database entries that should exist after post
-    """
-
-def test_get_technical_support(
-    """Test the technical support endpoint / form for OpenRecords
-
-    Args:
-        client (Flask.test_client): Test client used to access the technical-support page
-    """
-
-assert b'<h2 class="text-center">Technical Support</h2>' in response.data
-def test_post_technical_support(
-    """Test the technical support form for OpenRecords
-
-    Args:
-        db (SQLAlchemy): DB instance setup for testing.
-        client (Flask.test_client): Test client used to access the technical-support page
-        name (str): Name of the person submitting the form (required)
-        email (str): Email of the person submitting the form (required)
-        subject (str): Subject of the message being sent out
-        message (str): Message being sent out
-        app_response (str): Message displayed after post
-        num_db_entries (int): Number of database entries that should exist after post
-    """
-
-def test_faq(
-    """Test the FAQ page for OpenRecords
-
-    Args:
-        client (Flask.test_client: Test client used toa ccess the FAQ page
-    """
-
-assert b'<h2 class="text-center" id="faq-header">Frequently Asked Questions</h2>' in response.data
-def test_about(
-    """Test the FAQ page for OpenRecords
-
-    Args:
-        client (Flask.test_client: Test client used toa ccess the FAQ page
-    """
-
-assert b'''<h1 id="about" class="text-center">            </h1>''' in response.data
+<br>
+<br>This module contains the tests for the OpenRecords `/` endpoint.
+<br>"""
+<br>def test_index(client: Flask.test_client):
+<br>&emsp;        """ Test the `/` endpoint works properly.
+<br>
+<br>&emsp;        Args:
+<br>&emsp;&emsp;                client (Flask.test_client): The test client used to access the endpoint
+<br>    """
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;    assert b"""                    <button class="btn btn-primary btn-lg btn-block request-record-button-size">Check for Similar
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                                        </button>""" in response.data
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;    assert b"""<button class="btn btn-primary btn-lg btn-block request-record-button-size">Request a Record
+<br>&emsp;        assert b"""<button class="btn btn-primary btn-lg btn-block request-record-button-size">Request a Record
+<br>                    </button>""" in response.data
+<br>def test_status(client: Flask.test_client):
+<br>&emsp;        """Test the `/index.html` and `/status` status endpoint always returns 200 on GET
+<br>
+<br>&emsp;        Args:
+<br>&emsp;&emsp;                client (Flask.test_client): The test client used to access the endpoint
+<br>    """
+<br>def test_get_contact(
+<br>&emsp;        """Test the technical support endpoint / form for OpenRecords
+<br>
+<br>&emsp;        Args:
+<br>&emsp;&emsp;                client (Flask.test_client): Test client used to access the technical-support page
+<br>    """
+<br>&emsp;&emsp;&emsp;&emsp;    assert b'<h2 class="text-center">Technical Support</h2>' in response.data
+<br>def test_post_contact(
+<br>&emsp;        """Test the technical support form for OpenRecords
+<br>
+<br>&emsp;        Args:
+<br>&emsp;&emsp;                db (SQLAlchemy): DB instance setup for testing.
+<br>&emsp;&emsp;                client (Flask.test_client): Test client used to access the technical-support page
+<br>&emsp;&emsp;                name (str): Name of the person submitting the form (required)
+<br>&emsp;&emsp;                email (str): Email of the person submitting the form (required)
+<br>&emsp;&emsp;                subject (str): Subject of the message being sent out
+<br>&emsp;&emsp;                message (str): Message being sent out
+<br>&emsp;&emsp;                app_response (str): Message displayed after post
+<br>&emsp;&emsp;                num_db_entries (int): Number of database entries that should exist after post
+<br>    """
+<br>def test_get_technical_support(
+<br>&emsp;        """Test the technical support endpoint / form for OpenRecords
+<br>
+<br>&emsp;        Args:
+<br>&emsp;&emsp;                client (Flask.test_client): Test client used to access the technical-support page
+<br>    """
+<br>&emsp;&emsp;&emsp;&emsp;    assert b'<h2 class="text-center">Technical Support</h2>' in response.data
+<br>def test_post_technical_support(
+<br>&emsp;        """Test the technical support form for OpenRecords
+<br>
+<br>&emsp;        Args:
+<br>&emsp;&emsp;                db (SQLAlchemy): DB instance setup for testing.
+<br>&emsp;&emsp;                client (Flask.test_client): Test client used to access the technical-support page
+<br>&emsp;&emsp;                name (str): Name of the person submitting the form (required)
+<br>&emsp;&emsp;                email (str): Email of the person submitting the form (required)
+<br>&emsp;&emsp;                subject (str): Subject of the message being sent out
+<br>&emsp;&emsp;                message (str): Message being sent out
+<br>&emsp;&emsp;                app_response (str): Message displayed after post
+<br>&emsp;&emsp;                num_db_entries (int): Number of database entries that should exist after post
+<br>    """
+<br>def test_faq(
+<br>&emsp;        """Test the FAQ page for OpenRecords
+<br>
+<br>&emsp;        Args:
+<br>&emsp;&emsp;                client (Flask.test_client: Test client used toa ccess the FAQ page
+<br>    """
+<br>&emsp;&emsp;&emsp;&emsp;    assert b'<h2 class="text-center" id="faq-header">Frequently Asked Questions</h2>' in response.data
+<br>def test_about(
+<br>&emsp;        """Test the FAQ page for OpenRecords
+<br>
+<br>&emsp;        Args:
+<br>&emsp;&emsp;                client (Flask.test_client: Test client used toa ccess the FAQ page
+<br>    """
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;    assert b'''<h1 id="about" class="text-center">
+<br>&emsp;&emsp;&emsp;                        </h1>''' in response.data
+<br>
                 </details>
 
             </div>

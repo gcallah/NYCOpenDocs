@@ -1745,59 +1745,53 @@
                     </summary>
 
 <!-- Include the text material here! -->
-class LatexCompiler:    """
-    Generates a PDF from a LaTeX file.
-
-    Slightly modified from: https://github.com/AKuederle/flask-template-master/
-    """
-
-    def __init__(self, latex_command=None):
-
-    def _create_file(self, document):
-
-    def compile(self, document):
-        """
-        Compile a LaTeX document to PDF.
-        :param document: LaTeX formatted document (UTF-8 Formatted String)
-        :return: PDF File Object
-        """
-
-def generate_pdf(pdf_data):
-    """
-    Generate a PDF from a string of data.
-    :param pdf_data: String of data to input into PDF.
-    :return: PDF File object
-    """
-
-def generate_pdf_flask_response(pdf_data):
-    """
-    Return a Flask response object with a PDF as an attachment.
-    :param pdf_data: String of data to input into PDF.
-    :return: Flask Response
-    """
-
-def generate_envelope(template_name, data):
-    """
-    Generate the LaTeX for an envelope with the provided data pre-filled.
-
-    :param template_name: The LaTeX template to be used.
-    :param data: Data to be filled in to the LaTeX template (Dict())
-    :return: LaTeX document
-    """
-
-def generate_envelope_pdf(document):
-    """
-    Generate a PDF envelope.
-    :param document: LaTeX document.
-    :return: PDF File Object
-    """
-
-def escape_latex_characters(line):
-    """
-    Replace a string with the escaped LaTeX version of reserved characters
-    :param line: a string to be used in a LaTeX template
-    :return: a string with the escaped LaTeX version of reserved characters
-    """
+class LatexCompiler:
+<br>&emsp;        """
+<br>&emsp;        Generates a PDF from a LaTeX file.
+<br>
+<br>&emsp;        Slightly modified from: https://github.com/AKuederle/flask-template-master/
+<br>    """
+<br>&emsp;    def __init__(self, latex_command=None):
+<br>&emsp;    def _create_file(self, document):
+<br>&emsp;    def compile(self, document):
+<br>&emsp;&emsp;                """
+<br>&emsp;&emsp;                Compile a LaTeX document to PDF.
+<br>&emsp;&emsp;                :param document: LaTeX formatted document (UTF-8 Formatted String)
+<br>&emsp;&emsp;                :return: PDF File Object
+<br>        """
+<br>def generate_pdf(pdf_data):
+<br>&emsp;        """
+<br>&emsp;        Generate a PDF from a string of data.
+<br>&emsp;        :param pdf_data: String of data to input into PDF.
+<br>&emsp;        :return: PDF File object
+<br>    """
+<br>def generate_pdf_flask_response(pdf_data):
+<br>&emsp;        """
+<br>&emsp;        Return a Flask response object with a PDF as an attachment.
+<br>&emsp;        :param pdf_data: String of data to input into PDF.
+<br>&emsp;        :return: Flask Response
+<br>    """
+<br>def generate_envelope(template_name, data):
+<br>&emsp;        """
+<br>&emsp;        Generate the LaTeX for an envelope with the provided data pre-filled.
+<br>
+<br>&emsp;        :param template_name: The LaTeX template to be used.
+<br>&emsp;        :param data: Data to be filled in to the LaTeX template (Dict())
+<br>&emsp;        :return: LaTeX document
+<br>    """
+<br>def generate_envelope_pdf(document):
+<br>&emsp;        """
+<br>&emsp;        Generate a PDF envelope.
+<br>&emsp;        :param document: LaTeX document.
+<br>&emsp;        :return: PDF File Object
+<br>    """
+<br>def escape_latex_characters(line):
+<br>&emsp;        """
+<br>&emsp;        Replace a string with the escaped LaTeX version of reserved characters
+<br>&emsp;        :param line: a string to be used in a LaTeX template
+<br>&emsp;        :return: a string with the escaped LaTeX version of reserved characters
+<br>    """
+<br>
                 </details>
 
             </div>

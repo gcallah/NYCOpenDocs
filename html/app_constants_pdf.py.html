@@ -1745,25 +1745,25 @@
                     </summary>
 
 <!-- Include the text material here! -->
-class EnvelopeDict(dict):    """
-    Dict with pre-set keys used for filling in a default envelope template.
-
-    Sample Dictionary:
-
-    {
-        'request_id': 'REQUEST ID',
-        'recipient_name': 'NAME',
-        'organization': 'ORGANIZATION',
-        'street_address': 'STREET ADDRESS',
-        'city': 'CITY',
-        'state': 'STATE',
-        'zipcode: 'ZIPCODE'
-    }
-    """
-
-    def __init__(self,
-
-    def __setitem__(self, key, value):
+class EnvelopeDict(dict):
+<br>&emsp;        """
+<br>&emsp;        Dict with pre-set keys used for filling in a default envelope template.
+<br>
+<br>&emsp;        Sample Dictionary:
+<br>
+<br>&emsp;        {
+<br>&emsp;&emsp;                'request_id': 'REQUEST ID',
+<br>&emsp;&emsp;                'recipient_name': 'NAME',
+<br>&emsp;&emsp;                'organization': 'ORGANIZATION',
+<br>&emsp;&emsp;                'street_address': 'STREET ADDRESS',
+<br>&emsp;&emsp;                'city': 'CITY',
+<br>&emsp;&emsp;                'state': 'STATE',
+<br>&emsp;&emsp;                'zipcode: 'ZIPCODE'
+<br>&emsp;        }
+<br>    """
+<br>&emsp;    def __init__(self,
+<br>&emsp;    def __setitem__(self, key, value):
+<br>
                 </details>
 
             </div>

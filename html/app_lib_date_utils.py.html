@@ -1746,55 +1746,48 @@
 
 <!-- Include the text material here! -->
 def get_following_date(date_created):
-    """
-    Generates the date submitted for a request.
-
-    :param date_created: date (local) the request was made
-    :return: date submitted (local) which is the date_created rounded off to the next business day
-    """
-
-def get_next_business_day():
-    """
-    Generates the next business day based on the current date
-    :return: datetime object with the next business day set to 13:00 PM UTC (09:00 AM EST)
-    """
-
-def get_due_date(date_submitted, days_until_due, tz_name):
-    """
-    Generates the due date for a request.
-
-    :param date_submitted: date submitted (local) which is the date_created rounded off to the next business day
-    :param days_until_due: number of business days until a request is due
-    :param tz_name: time zone name (e.g. "America/New_York")
-
-    :return: due date (utc) with time set to 22:00 PM (5:00 PM EST)
-    """
-
-def process_due_date(due_date):
-    """
-    Returns the given datetime object with a utc time equivalent to 5:00 PM local time (app).
-
-    :param due_date: unprocessed request due date (local)
-    :return: naive datetime object
-    """
-
-def local_to_utc(date, tz_name):
-
-def utc_to_local(date, tz_name):
-
-def get_timezone_offset(date, tz_name):
-
-def get_holidays_date_list(year_start, year_end=None):
-    """
-    Generate a list of holiday dates in the range of specified years (including year_end)
-
-    :param year_start: 4 digit year e.g. 2016
-    :param year_end: 4 digit year e.g. 2022
-
-    :return: List of dates formatted as strings ['MM/DD/YYYY']
-    """
-
-def get_release_date(initial_date, days_until_release, tz_name):
+<br>&emsp;        """
+<br>&emsp;        Generates the date submitted for a request.
+<br>
+<br>&emsp;        :param date_created: date (local) the request was made
+<br>&emsp;        :return: date submitted (local) which is the date_created rounded off to the next business day
+<br>    """
+<br>def get_next_business_day():
+<br>&emsp;        """
+<br>&emsp;        Generates the next business day based on the current date
+<br>&emsp;        :return: datetime object with the next business day set to 13:00 PM UTC (09:00 AM EST)
+<br>    """
+<br>def get_due_date(date_submitted, days_until_due, tz_name):
+<br>&emsp;        """
+<br>&emsp;        Generates the due date for a request.
+<br>
+<br>&emsp;        :param date_submitted: date submitted (local) which is the date_created rounded off to the next business day
+<br>&emsp;        :param days_until_due: number of business days until a request is due
+<br>&emsp;        :param tz_name: time zone name (e.g. "America/New_York")
+<br>
+<br>&emsp;        :return: due date (utc) with time set to 22:00 PM (5:00 PM EST)
+<br>    """
+<br>def process_due_date(due_date):
+<br>&emsp;        """
+<br>&emsp;        Returns the given datetime object with a utc time equivalent to 5:00 PM local time (app).
+<br>
+<br>&emsp;        :param due_date: unprocessed request due date (local)
+<br>&emsp;        :return: naive datetime object
+<br>    """
+<br>def local_to_utc(date, tz_name):
+<br>def utc_to_local(date, tz_name):
+<br>def get_timezone_offset(date, tz_name):
+<br>def get_holidays_date_list(year_start, year_end=None):
+<br>&emsp;        """
+<br>&emsp;        Generate a list of holiday dates in the range of specified years (including year_end)
+<br>
+<br>&emsp;        :param year_start: 4 digit year e.g. 2016
+<br>&emsp;        :param year_end: 4 digit year e.g. 2022
+<br>
+<br>&emsp;        :return: List of dates formatted as strings ['MM/DD/YYYY']
+<br>    """
+<br>def get_release_date(initial_date, days_until_release, tz_name):
+<br>
                 </details>
 
             </div>

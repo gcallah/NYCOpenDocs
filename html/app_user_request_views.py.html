@@ -1746,51 +1746,49 @@
 
 <!-- Include the text material here! -->
 """
-...module:: user_request.views.
-
-    :synopsis: Endpoints for User Requests
-"""
-
-def create(request_id):
-    """
-     Creates a users permissions entry for a request and sends notification emails.
-
-    Expects a request body containing the user's guid and new permissions.
-    Ex:
-    {
-        'user': '7khz9y',
-        1: true,
-        5: false
-    }
-    :return:
-    """
-
-def edit(request_id):
-    """
-    Updates a users permissions on a request and sends notification emails.
-
-    Expects a request body containing the user's guid and updated permissions.
-    Ex:
-    {
-        'user': '7khz9y',
-        1: true,
-        5: false
-    }
-    :return:
-    """
-
-def delete(request_id):
-    """
-    Removes a user from a request and send notification emails.
-
-    Expects a request body containing user's guid and confirmation string.
-    Ex:
-    {
-        'user': '7khz9y',
-        'remove-confirmation-string': 'remove'
-    }
-    :return:
-    """
+<br>...module:: user_request.views.
+<br>
+<br>&emsp;        :synopsis: Endpoints for User Requests
+<br>"""
+<br>def create(request_id):
+<br>&emsp;        """
+<br>&emsp;          Creates a users permissions entry for a request and sends notification emails.
+<br>
+<br>&emsp;        Expects a request body containing the user's guid and new permissions.
+<br>&emsp;        Ex:
+<br>&emsp;        {
+<br>&emsp;&emsp;                'user': '7khz9y',
+<br>&emsp;&emsp;                1: true,
+<br>&emsp;&emsp;                5: false
+<br>&emsp;        }
+<br>&emsp;        :return:
+<br>    """
+<br>def edit(request_id):
+<br>&emsp;        """
+<br>&emsp;        Updates a users permissions on a request and sends notification emails.
+<br>
+<br>&emsp;        Expects a request body containing the user's guid and updated permissions.
+<br>&emsp;        Ex:
+<br>&emsp;        {
+<br>&emsp;&emsp;                'user': '7khz9y',
+<br>&emsp;&emsp;                1: true,
+<br>&emsp;&emsp;                5: false
+<br>&emsp;        }
+<br>&emsp;        :return:
+<br>    """
+<br>def delete(request_id):
+<br>&emsp;        """
+<br>&emsp;        Removes a user from a request and send notification emails.
+<br>
+<br>&emsp;        Expects a request body containing user's guid and confirmation string.
+<br>&emsp;        Ex:
+<br>&emsp;        {
+<br>&emsp;&emsp;                'user': '7khz9y',
+<br>&emsp;&emsp;                'remove-confirmation-string': 'remove'
+<br>&emsp;        }
+<br>&emsp;        :return:
+<br>    """
+<br>
                 </details>
 
             </div>

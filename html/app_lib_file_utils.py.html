@@ -1746,93 +1746,66 @@
 
 <!-- Include the text material here! -->
 """
-    app.file.utils
-    ~~~~~~~~~~~~~~~~
-
-    synopsis: Helpers for manipulating files.
-    Switches file-handling interface between sftp and os depending on configuration.
-
-"""
-
-class MaxTransferSizeExceededException(Exception):
-class SFTPCredentialsException(Exception):
-def sftp_ctx():
-    """
-    Context manager that provides an SFTP client object
-    (an SFTP session across an open SSH Transport)
-    """
-
-def _sftp_switch(sftp_func):
-    """
-    Check if app is using SFTP and, if so, connect to SFTP server
-    and call passed function (sftp_func) with connected client,
-    otherwise call decorated function (which should be using
-    the os library to accomplish the same file-related action).
-    """
-
-    def decorator(os_func):
-
-        def wrapper(*args, **kwargs):
-
-def _raise_if_too_big(bytes_transferred, _):
-
-def _sftp_get_size(sftp, path):
-
-def _sftp_exists(sftp, path):
-
-def _sftp_mkdir(sftp, path):
-
-def _sftp_makedirs(sftp, path):
-    """ os.makedirs(path, exists_ok=True) """
-
-def _sftp_remove(sftp, path):
-
-def _sftp_rename(sftp, oldpath, newpath):
-
-def _sftp_move(sftp, localpath, remotepath):
-
-def _sftp_get_mime_type(sftp, path):
-
-def _sftp_get_hash(sftp, path):
-
-def _sftp_send_file(sftp, directory, filename, **kwargs):
-
-def _get_file_serving_path(directory, filename):
-    """
-    Returns the upload serving directory path for a file determined by supplied directory and filename.
-    """
-
-def getsize(path):
-
-def exists(path):
-
-def mkdir(path):
-
-def makedirs(path, **kwargs):
-
-def remove(path):
-
-def rename(oldpath, newpath):
-
-def move(oldpath, newpath):
-    """
-    Use this instead of 'rename' if, when using sftp, 'oldpath'
-    represents a local file path and 'newpath' a remote path.
-    """
-
-def get_mime_type(path):
-
-def os_get_mime_type(path):
-
-def get_hash(path):
-    """
-    Returns the sha1 hash of a file a string of
-    hexadecimal digits.
-    """
-
-def os_get_hash(path):
-
-def send_file(directory, filename, **kwargs):
+<br>&emsp;        app.file.utils
+<br>&emsp;        ~~~~~~~~~~~~~~~~
+<br>
+<br>&emsp;        synopsis: Helpers for manipulating files.
+<br>&emsp;        Switches file-handling interface between sftp and os depending on configuration.
+<br>
+<br>"""
+<br>class MaxTransferSizeExceededException(Exception):
+<br>class SFTPCredentialsException(Exception):
+<br>def sftp_ctx():
+<br>&emsp;        """
+<br>&emsp;        Context manager that provides an SFTP client object
+<br>&emsp;        (an SFTP session across an open SSH Transport)
+<br>    """
+<br>def _sftp_switch(sftp_func):
+<br>&emsp;        """
+<br>&emsp;        Check if app is using SFTP and, if so, connect to SFTP server
+<br>&emsp;        and call passed function (sftp_func) with connected client,
+<br>&emsp;        otherwise call decorated function (which should be using
+<br>&emsp;        the os library to accomplish the same file-related action).
+<br>    """
+<br>&emsp;    def decorator(os_func):
+<br>&emsp;&emsp;        def wrapper(*args, **kwargs):
+<br>def _raise_if_too_big(bytes_transferred, _):
+<br>def _sftp_get_size(sftp, path):
+<br>def _sftp_exists(sftp, path):
+<br>def _sftp_mkdir(sftp, path):
+<br>def _sftp_makedirs(sftp, path):
+<br>    """ os.makedirs(path, exists_ok=True) """
+<br>def _sftp_remove(sftp, path):
+<br>def _sftp_rename(sftp, oldpath, newpath):
+<br>def _sftp_move(sftp, localpath, remotepath):
+<br>def _sftp_get_mime_type(sftp, path):
+<br>def _sftp_get_hash(sftp, path):
+<br>def _sftp_send_file(sftp, directory, filename, **kwargs):
+<br>def _get_file_serving_path(directory, filename):
+<br>&emsp;        """
+<br>&emsp;        Returns the upload serving directory path for a file determined by supplied directory and filename.
+<br>    """
+<br>def getsize(path):
+<br>def exists(path):
+<br>def mkdir(path):
+<br>def makedirs(path, **kwargs):
+<br>def remove(path):
+<br>def rename(oldpath, newpath):
+<br>def move(oldpath, newpath):
+<br>&emsp;        """
+<br>&emsp;        Use this instead of 'rename' if, when using sftp, 'oldpath'
+<br>&emsp;        represents a local file path and 'newpath' a remote path.
+<br>    """
+<br>def get_mime_type(path):
+<br>def os_get_mime_type(path):
+<br>def get_hash(path):
+<br>&emsp;        """
+<br>&emsp;        Returns the sha1 hash of a file a string of
+<br>&emsp;        hexadecimal digits.
+<br>    """
+<br>def os_get_hash(path):
+<br>def send_file(directory, filename, **kwargs):
+<br>
                 </details>
 
             </div>

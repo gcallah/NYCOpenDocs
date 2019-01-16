@@ -27,11 +27,19 @@
 
                 <details>
                     <summary class="sum1">
+                    Documentation drawn from source code 
+                    </summary>
+
+<!-- Include the documentation here! -->
+<!--include templates/app_request_utils.py_ex.txt -->
+                </details>
+
+                <details>
+                    <summary class="sum1">
                     About this file
                     </summary>
 
 <!-- Include the text material here! -->
-<!--include templates/app_request_utils.py.txt -->
                 </details>
 
             </div>

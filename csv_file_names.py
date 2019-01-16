@@ -6,7 +6,7 @@ URL = 2
 SHORT_TITLE = 3
 GLYPHICON = 4
 LINK_INSERT = 5
-TEMPLATE_TXT = 6
+DOC_TXT = 6
 
 
 def read_file_names():
@@ -69,7 +69,7 @@ def create_csv(connector):
             output_lst[URL] = html_url + file.strip(".") + ".html"
             output_lst[LINK_INSERT] = source_code + file
             if py_file:
-                output_lst[TEMPLATE_TXT] = template_dir + file.strip(".") + ".txt"
+                output_lst[DOC_TXT] = template_dir + file.strip(".") + "_ex.txt"
             output.append(connector.join(output_lst))
             current_dir = []
         # otherwise, check the directory paths
@@ -89,7 +89,7 @@ def create_csv(connector):
                     output_lst[URL] = html_url + "_".join(file) + ".html"
                     output_lst[LINK_INSERT] = source_code + "/".join(file)
                     if py_file:
-                        output_lst[TEMPLATE_TXT] = template_dir + "_".join(file) + ".txt"
+                        output_lst[DOC_TXT] = template_dir + "_".join(file) + "_ex.txt"
                 else:
                     output_dir_lst[LEVEL] = str(index_dif + 2)
                     output_dir_lst[TITLE] = ("About the directory '" +

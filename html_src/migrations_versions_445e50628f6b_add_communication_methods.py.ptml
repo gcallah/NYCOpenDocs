@@ -27,11 +27,19 @@
 
                 <details>
                     <summary class="sum1">
+                    Documentation drawn from source code 
+                    </summary>
+
+<!-- Include the documentation here! -->
+<!--include templates/migrations_versions_445e50628f6b_add_communication_methods.py_ex.txt -->
+                </details>
+
+                <details>
+                    <summary class="sum1">
                     About this file
                     </summary>
 
 <!-- Include the text material here! -->
-<!--include templates/migrations_versions_445e50628f6b_add_communication_methods.py.txt -->
                 </details>
 
             </div>

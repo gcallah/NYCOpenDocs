@@ -27,11 +27,19 @@
 
                 <details>
                     <summary class="sum1">
+                    Documentation drawn from source code 
+                    </summary>
+
+<!-- Include the documentation here! -->
+<!--include templates/migrations_versions_a2547b706641_initial_migration.py_ex.txt -->
+                </details>
+
+                <details>
+                    <summary class="sum1">
                     About this file
                     </summary>
 
 <!-- Include the text material here! -->
-<!--include templates/migrations_versions_a2547b706641_initial_migration.py.txt -->
                 </details>
 
             </div>

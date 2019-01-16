@@ -21,9 +21,6 @@
                 <h1>
                     view_request.css
                 </h1>
-                <p>
-<a href="https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/view_request.css">Source code</a>
-                </p>
 
                 <details>
                     <summary class="sum1">
@@ -41,6 +38,10 @@
 <!-- Include the text material here! -->
                 </details>
 
+<!-- Include source code here! -->
+                <p>
+<a href="https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/view_request.css">Source code</a>
+                </p>
             </div>
         </div>
 

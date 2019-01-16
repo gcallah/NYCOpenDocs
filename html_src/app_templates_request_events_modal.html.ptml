@@ -21,9 +21,6 @@
                 <h1>
                     modal.html
                 </h1>
-                <p>
-<a href="https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/request/events/modal.html">Source code</a>
-                </p>
 
                 <details>
                     <summary class="sum1">
@@ -41,6 +38,10 @@
 <!-- Include the text material here! -->
                 </details>
 
+<!-- Include source code here! -->
+                <p>
+<a href="https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/request/events/modal.html">Source code</a>
+                </p>
             </div>
         </div>
 

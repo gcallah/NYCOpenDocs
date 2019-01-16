@@ -21,9 +21,6 @@
                 <h1>
                     24e110b4489b_drop_Users_agency_ein_column.py
                 </h1>
-                <p>
-<a href="https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/24e110b4489b_drop_Users_agency_ein_column.py">Source code</a>
-                </p>
 
                 <details>
                     <summary class="sum1">
@@ -42,6 +39,10 @@
 <!-- Include the text material here! -->
                 </details>
 
+<!-- Include source code here! -->
+                <p>
+<a href="https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/24e110b4489b_drop_Users_agency_ein_column.py">Source code</a>
+                </p>
             </div>
         </div>
 

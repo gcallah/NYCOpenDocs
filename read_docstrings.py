@@ -10,7 +10,7 @@ def read_file_names():
     return file_names
 
 
-def read_docstrings(file_name):
+def read_doc_py(file_name):
     output = ""
     program_file = open(file_name, "r")
     docstring = False
@@ -58,6 +58,37 @@ def read_docstrings(file_name):
     output_file.write(output)
     output_file.close()
 
+def read_doc_js(file_name):
+    output = ""
+    program_file = open(file_name, "r")
+    docstring = False
+    one_line_doc = False
+    for line in program_file:
+        if "//" in line:
+            continue
+        # check for docstrings 
+        elif "/*" in line and "*/" in line:
+            one_line_doc = True
+        elif "/*" in line:
+            docstring = True
+        if "function" in line or one_line_doc or docstring:
+            with_space = len(line)
+            without_space = len(line.strip(" "))
+            spaces = with_space - without_space
+            output += (spaces // 4) * "&emsp;" + line + "<br>"
+        if "*/" in line:
+            docstring = False
+        if one_line_doc:
+            one_line_doc = False
+    program_file.close()
+    # write the output to templates/name of file 
+    write_filenm = file_name.split("NYCOpenRecords/")[-1]
+    write_filenm = "_".join(write_filenm.split("/"))
+    write_filenm += "_ex.txt"
+    output_file = open("templates/" + write_filenm, "w")
+    output_file.write(output)
+    output_file.close()
+
 
 def read_docs():
     '''
@@ -66,7 +97,9 @@ def read_docs():
     file_names = read_file_names()
     for filenm in file_names:
         if ".py" in filenm:
-            read_docstrings(filenm)
+            read_doc_py(filenm)
+        elif ".js" in filenm:
+            read_doc_js(filenm)
 
 
 def main():

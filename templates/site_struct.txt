@@ -111,42 +111,42 @@
 4	About the directory 'js'	/NYCOpenDocs/html/app_static_js_js.html
 4	admin
 5	About the directory 'admin'	/NYCOpenDocs/html/app_static_js_admin_admin.html
-5	main.js	/NYCOpenDocs/html/app_static_js_admin_main.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/admin/main.js
+5	main.js	/NYCOpenDocs/html/app_static_js_admin_main.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/admin/main.js	templates/app_static_js_admin_main.js_ex.txt
 4	auth
 5	About the directory 'auth'	/NYCOpenDocs/html/app_static_js_auth_auth.html
-5	manage-account.js	/NYCOpenDocs/html/app_static_js_auth_manage-account.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/auth/manage-account.js
-5	session-monitor.js	/NYCOpenDocs/html/app_static_js_auth_session-monitor.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/auth/session-monitor.js
+5	manage-account.js	/NYCOpenDocs/html/app_static_js_auth_manage-account.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/auth/manage-account.js	templates/app_static_js_auth_manage-account.js_ex.txt
+5	session-monitor.js	/NYCOpenDocs/html/app_static_js_auth_session-monitor.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/auth/session-monitor.js	templates/app_static_js_auth_session-monitor.js_ex.txt
 4	plugins
 5	About the directory 'plugins'	/NYCOpenDocs/html/app_static_js_plugins_plugins.html
-5	Chart.min.js	/NYCOpenDocs/html/app_static_js_plugins_Chart.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/Chart.min.js
-5	bootstrap-editable.min.js	/NYCOpenDocs/html/app_static_js_plugins_bootstrap-editable.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/bootstrap-editable.min.js
-5	bootstrap.min.js	/NYCOpenDocs/html/app_static_js_plugins_bootstrap.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/bootstrap.min.js
-5	jquery-ui.js	/NYCOpenDocs/html/app_static_js_plugins_jquery-ui.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/jquery-ui.js
+5	Chart.min.js	/NYCOpenDocs/html/app_static_js_plugins_Chart.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/Chart.min.js	templates/app_static_js_plugins_Chart.min.js_ex.txt
+5	bootstrap-editable.min.js	/NYCOpenDocs/html/app_static_js_plugins_bootstrap-editable.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/bootstrap-editable.min.js	templates/app_static_js_plugins_bootstrap-editable.min.js_ex.txt
+5	bootstrap.min.js	/NYCOpenDocs/html/app_static_js_plugins_bootstrap.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/bootstrap.min.js	templates/app_static_js_plugins_bootstrap.min.js_ex.txt
+5	jquery-ui.js	/NYCOpenDocs/html/app_static_js_plugins_jquery-ui.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/jquery-ui.js	templates/app_static_js_plugins_jquery-ui.js_ex.txt
 5	jquery-ui.min.css	/NYCOpenDocs/html/app_static_js_plugins_jquery-ui.min.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/jquery-ui.min.css
-5	jquery-ui.min.js	/NYCOpenDocs/html/app_static_js_plugins_jquery-ui.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/jquery-ui.min.js
-5	jquery.blockUI.js	/NYCOpenDocs/html/app_static_js_plugins_jquery.blockUI.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/jquery.blockUI.js
-5	jquery.fileupload-process.js	/NYCOpenDocs/html/app_static_js_plugins_jquery.fileupload-process.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/jquery.fileupload-process.js
-5	jquery.fileupload-ui.js	/NYCOpenDocs/html/app_static_js_plugins_jquery.fileupload-ui.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/jquery.fileupload-ui.js
-5	jquery.fileupload-validate.js	/NYCOpenDocs/html/app_static_js_plugins_jquery.fileupload-validate.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/jquery.fileupload-validate.js
-5	jquery.fileupload.js	/NYCOpenDocs/html/app_static_js_plugins_jquery.fileupload.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/jquery.fileupload.js
-5	jquery.iframe-transport.js	/NYCOpenDocs/html/app_static_js_plugins_jquery.iframe-transport.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/jquery.iframe-transport.js
-5	jquery.js	/NYCOpenDocs/html/app_static_js_plugins_jquery.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/jquery.js
-5	jquery.mask.js	/NYCOpenDocs/html/app_static_js_plugins_jquery.mask.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/jquery.mask.js
-5	jquery.timepicker.min.js	/NYCOpenDocs/html/app_static_js_plugins_jquery.timepicker.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/jquery.timepicker.min.js
-5	jstz.min.js	/NYCOpenDocs/html/app_static_js_plugins_jstz.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/jstz.min.js
-5	juniper.js	/NYCOpenDocs/html/app_static_js_plugins_juniper.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/juniper.js
-5	moment.min.js	/NYCOpenDocs/html/app_static_js_plugins_moment.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/moment.min.js
-5	parsley.min.js	/NYCOpenDocs/html/app_static_js_plugins_parsley.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/parsley.min.js
-5	sprintf.min.js	/NYCOpenDocs/html/app_static_js_plugins_sprintf.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/sprintf.min.js
+5	jquery-ui.min.js	/NYCOpenDocs/html/app_static_js_plugins_jquery-ui.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/jquery-ui.min.js	templates/app_static_js_plugins_jquery-ui.min.js_ex.txt
+5	jquery.blockUI.js	/NYCOpenDocs/html/app_static_js_plugins_jquery.blockUI.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/jquery.blockUI.js	templates/app_static_js_plugins_jquery.blockUI.js_ex.txt
+5	jquery.fileupload-process.js	/NYCOpenDocs/html/app_static_js_plugins_jquery.fileupload-process.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/jquery.fileupload-process.js	templates/app_static_js_plugins_jquery.fileupload-process.js_ex.txt
+5	jquery.fileupload-ui.js	/NYCOpenDocs/html/app_static_js_plugins_jquery.fileupload-ui.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/jquery.fileupload-ui.js	templates/app_static_js_plugins_jquery.fileupload-ui.js_ex.txt
+5	jquery.fileupload-validate.js	/NYCOpenDocs/html/app_static_js_plugins_jquery.fileupload-validate.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/jquery.fileupload-validate.js	templates/app_static_js_plugins_jquery.fileupload-validate.js_ex.txt
+5	jquery.fileupload.js	/NYCOpenDocs/html/app_static_js_plugins_jquery.fileupload.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/jquery.fileupload.js	templates/app_static_js_plugins_jquery.fileupload.js_ex.txt
+5	jquery.iframe-transport.js	/NYCOpenDocs/html/app_static_js_plugins_jquery.iframe-transport.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/jquery.iframe-transport.js	templates/app_static_js_plugins_jquery.iframe-transport.js_ex.txt
+5	jquery.js	/NYCOpenDocs/html/app_static_js_plugins_jquery.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/jquery.js	templates/app_static_js_plugins_jquery.js_ex.txt
+5	jquery.mask.js	/NYCOpenDocs/html/app_static_js_plugins_jquery.mask.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/jquery.mask.js	templates/app_static_js_plugins_jquery.mask.js_ex.txt
+5	jquery.timepicker.min.js	/NYCOpenDocs/html/app_static_js_plugins_jquery.timepicker.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/jquery.timepicker.min.js	templates/app_static_js_plugins_jquery.timepicker.min.js_ex.txt
+5	jstz.min.js	/NYCOpenDocs/html/app_static_js_plugins_jstz.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/jstz.min.js	templates/app_static_js_plugins_jstz.min.js_ex.txt
+5	juniper.js	/NYCOpenDocs/html/app_static_js_plugins_juniper.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/juniper.js	templates/app_static_js_plugins_juniper.js_ex.txt
+5	moment.min.js	/NYCOpenDocs/html/app_static_js_plugins_moment.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/moment.min.js	templates/app_static_js_plugins_moment.min.js_ex.txt
+5	parsley.min.js	/NYCOpenDocs/html/app_static_js_plugins_parsley.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/parsley.min.js	templates/app_static_js_plugins_parsley.min.js_ex.txt
+5	sprintf.min.js	/NYCOpenDocs/html/app_static_js_plugins_sprintf.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/sprintf.min.js	templates/app_static_js_plugins_sprintf.min.js_ex.txt
 5	tinymce
 6	About the directory 'tinymce'	/NYCOpenDocs/html/app_static_js_plugins_tinymce_tinymce.html
-6	jquery.tinymce.min.js	/NYCOpenDocs/html/app_static_js_plugins_tinymce_jquery.tinymce.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/tinymce/jquery.tinymce.min.js
+6	jquery.tinymce.min.js	/NYCOpenDocs/html/app_static_js_plugins_tinymce_jquery.tinymce.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/tinymce/jquery.tinymce.min.js	templates/app_static_js_plugins_tinymce_jquery.tinymce.min.js_ex.txt
 6	plugins
 7	About the directory 'plugins'	/NYCOpenDocs/html/app_static_js_plugins_tinymce_plugins_plugins.html
 7	noneditable
 8	About the directory 'noneditable'	/NYCOpenDocs/html/app_static_js_plugins_tinymce_plugins_noneditable_noneditable.html
-8	plugin.min.js	/NYCOpenDocs/html/app_static_js_plugins_tinymce_plugins_noneditable_plugin.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/tinymce/plugins/noneditable/plugin.min.js
-6	preventdelete.js	/NYCOpenDocs/html/app_static_js_plugins_tinymce_preventdelete.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/tinymce/preventdelete.js
+8	plugin.min.js	/NYCOpenDocs/html/app_static_js_plugins_tinymce_plugins_noneditable_plugin.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/tinymce/plugins/noneditable/plugin.min.js	templates/app_static_js_plugins_tinymce_plugins_noneditable_plugin.min.js_ex.txt
+6	preventdelete.js	/NYCOpenDocs/html/app_static_js_plugins_tinymce_preventdelete.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/tinymce/preventdelete.js	templates/app_static_js_plugins_tinymce_preventdelete.js_ex.txt
 6	skins
 7	About the directory 'skins'	/NYCOpenDocs/html/app_static_js_plugins_tinymce_skins_skins.html
 7	lightgray
@@ -159,34 +159,34 @@
 7	About the directory 'themes'	/NYCOpenDocs/html/app_static_js_plugins_tinymce_themes_themes.html
 7	inlite
 8	About the directory 'inlite'	/NYCOpenDocs/html/app_static_js_plugins_tinymce_themes_inlite_inlite.html
-8	theme.min.js	/NYCOpenDocs/html/app_static_js_plugins_tinymce_themes_inlite_theme.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/tinymce/themes/inlite/theme.min.js
+8	theme.min.js	/NYCOpenDocs/html/app_static_js_plugins_tinymce_themes_inlite_theme.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/tinymce/themes/inlite/theme.min.js	templates/app_static_js_plugins_tinymce_themes_inlite_theme.min.js_ex.txt
 7	modern
 8	About the directory 'modern'	/NYCOpenDocs/html/app_static_js_plugins_tinymce_themes_modern_modern.html
-8	theme.min.js	/NYCOpenDocs/html/app_static_js_plugins_tinymce_themes_modern_theme.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/tinymce/themes/modern/theme.min.js
-6	tinymce.min.js	/NYCOpenDocs/html/app_static_js_plugins_tinymce_tinymce.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/tinymce/tinymce.min.js
-5	tmpl.min.js	/NYCOpenDocs/html/app_static_js_plugins_tmpl.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/tmpl.min.js
-5	tota11y.min.js	/NYCOpenDocs/html/app_static_js_plugins_tota11y.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/tota11y.min.js
+8	theme.min.js	/NYCOpenDocs/html/app_static_js_plugins_tinymce_themes_modern_theme.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/tinymce/themes/modern/theme.min.js	templates/app_static_js_plugins_tinymce_themes_modern_theme.min.js_ex.txt
+6	tinymce.min.js	/NYCOpenDocs/html/app_static_js_plugins_tinymce_tinymce.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/tinymce/tinymce.min.js	templates/app_static_js_plugins_tinymce_tinymce.min.js_ex.txt
+5	tmpl.min.js	/NYCOpenDocs/html/app_static_js_plugins_tmpl.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/tmpl.min.js	templates/app_static_js_plugins_tmpl.min.js_ex.txt
+5	tota11y.min.js	/NYCOpenDocs/html/app_static_js_plugins_tota11y.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/tota11y.min.js	templates/app_static_js_plugins_tota11y.min.js_ex.txt
 4	request
 5	About the directory 'request'	/NYCOpenDocs/html/app_static_js_request_request.html
-5	action-buttons-mobile-toggle.js	/NYCOpenDocs/html/app_static_js_request_action-buttons-mobile-toggle.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/action-buttons-mobile-toggle.js
-5	character-count.js	/NYCOpenDocs/html/app_static_js_request_character-count.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/character-count.js
-5	contact.js	/NYCOpenDocs/html/app_static_js_request_contact.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/contact.js
-5	edit_requester_info.js	/NYCOpenDocs/html/app_static_js_request_edit_requester_info.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/edit_requester_info.js
-5	main.js	/NYCOpenDocs/html/app_static_js_request_main.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/main.js
-5	new-request-agency.js	/NYCOpenDocs/html/app_static_js_request_new-request-agency.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/new-request-agency.js
-5	new-request-anon.js	/NYCOpenDocs/html/app_static_js_request_new-request-anon.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/new-request-anon.js
-5	new-request-user.js	/NYCOpenDocs/html/app_static_js_request_new-request-user.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/new-request-user.js
-5	search.js	/NYCOpenDocs/html/app_static_js_request_search.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/search.js
-5	validate-recaptcha.js	/NYCOpenDocs/html/app_static_js_request_validate-recaptcha.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/validate-recaptcha.js
-5	view-request-contact.js	/NYCOpenDocs/html/app_static_js_request_view-request-contact.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/view-request-contact.js
-5	view-request-history.js	/NYCOpenDocs/html/app_static_js_request_view-request-history.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/view-request-history.js
-5	view-request-responses.js	/NYCOpenDocs/html/app_static_js_request_view-request-responses.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/view-request-responses.js
+5	action-buttons-mobile-toggle.js	/NYCOpenDocs/html/app_static_js_request_action-buttons-mobile-toggle.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/action-buttons-mobile-toggle.js	templates/app_static_js_request_action-buttons-mobile-toggle.js_ex.txt
+5	character-count.js	/NYCOpenDocs/html/app_static_js_request_character-count.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/character-count.js	templates/app_static_js_request_character-count.js_ex.txt
+5	contact.js	/NYCOpenDocs/html/app_static_js_request_contact.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/contact.js	templates/app_static_js_request_contact.js_ex.txt
+5	edit_requester_info.js	/NYCOpenDocs/html/app_static_js_request_edit_requester_info.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/edit_requester_info.js	templates/app_static_js_request_edit_requester_info.js_ex.txt
+5	main.js	/NYCOpenDocs/html/app_static_js_request_main.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/main.js	templates/app_static_js_request_main.js_ex.txt
+5	new-request-agency.js	/NYCOpenDocs/html/app_static_js_request_new-request-agency.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/new-request-agency.js	templates/app_static_js_request_new-request-agency.js_ex.txt
+5	new-request-anon.js	/NYCOpenDocs/html/app_static_js_request_new-request-anon.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/new-request-anon.js	templates/app_static_js_request_new-request-anon.js_ex.txt
+5	new-request-user.js	/NYCOpenDocs/html/app_static_js_request_new-request-user.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/new-request-user.js	templates/app_static_js_request_new-request-user.js_ex.txt
+5	search.js	/NYCOpenDocs/html/app_static_js_request_search.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/search.js	templates/app_static_js_request_search.js_ex.txt
+5	validate-recaptcha.js	/NYCOpenDocs/html/app_static_js_request_validate-recaptcha.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/validate-recaptcha.js	templates/app_static_js_request_validate-recaptcha.js_ex.txt
+5	view-request-contact.js	/NYCOpenDocs/html/app_static_js_request_view-request-contact.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/view-request-contact.js	templates/app_static_js_request_view-request-contact.js_ex.txt
+5	view-request-history.js	/NYCOpenDocs/html/app_static_js_request_view-request-history.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/view-request-history.js	templates/app_static_js_request_view-request-history.js_ex.txt
+5	view-request-responses.js	/NYCOpenDocs/html/app_static_js_request_view-request-responses.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/view-request-responses.js	templates/app_static_js_request_view-request-responses.js_ex.txt
 4	upload
 5	About the directory 'upload'	/NYCOpenDocs/html/app_static_js_upload_upload.html
-5	fileupload.js	/NYCOpenDocs/html/app_static_js_upload_fileupload.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/upload/fileupload.js
+5	fileupload.js	/NYCOpenDocs/html/app_static_js_upload_fileupload.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/upload/fileupload.js	templates/app_static_js_upload_fileupload.js_ex.txt
 4	validation
 5	About the directory 'validation'	/NYCOpenDocs/html/app_static_js_validation_validation.html
-5	custom_validators.js	/NYCOpenDocs/html/app_static_js_validation_custom_validators.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/validation/custom_validators.js
+5	custom_validators.js	/NYCOpenDocs/html/app_static_js_validation_custom_validators.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/validation/custom_validators.js	templates/app_static_js_validation_custom_validators.js_ex.txt
 3	styles
 4	About the directory 'styles'	/NYCOpenDocs/html/app_static_styles_styles.html
 4	about.css	/NYCOpenDocs/html/app_static_styles_about.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/about.css
@@ -241,7 +241,7 @@
 4	manage_account.html	/NYCOpenDocs/html/app_templates_auth_manage_account.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/auth/manage_account.html
 4	session_timeout_modal.html	/NYCOpenDocs/html/app_templates_auth_session_timeout_modal.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/auth/session_timeout_modal.html
 3	base.html	/NYCOpenDocs/html/app_templates_base.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/base.html
-3	base.js.html	/NYCOpenDocs/html/app_templates_base.js.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/base.js.html
+3	base.js.html	/NYCOpenDocs/html/app_templates_base.js.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/base.js.html	templates/app_templates_base.js.html_ex.txt
 3	custom_request_form_templates
 4	About the directory 'custom_request_form_templates'	/NYCOpenDocs/html/app_templates_custom_request_form_templates_custom_request_form_templates.html
 4	date_template.html	/NYCOpenDocs/html/app_templates_custom_request_form_templates_date_template.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/custom_request_form_templates/date_template.html
@@ -309,22 +309,22 @@
 3	report
 4	About the directory 'report'	/NYCOpenDocs/html/app_templates_report_report.html
 4	reports.html	/NYCOpenDocs/html/app_templates_report_reports.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/report/reports.html
-4	reports.js.html	/NYCOpenDocs/html/app_templates_report_reports.js.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/report/reports.js.html
+4	reports.js.html	/NYCOpenDocs/html/app_templates_report_reports.js.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/report/reports.js.html	templates/app_templates_report_reports.js.html_ex.txt
 3	request
 4	About the directory 'request'	/NYCOpenDocs/html/app_templates_request_request.html
 4	_agency_search_form.html	/NYCOpenDocs/html/app_templates_request__agency_search_form.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/request/_agency_search_form.html
 4	_edit_requester_info.html	/NYCOpenDocs/html/app_templates_request__edit_requester_info.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/request/_edit_requester_info.html
 4	_public_search_form.html	/NYCOpenDocs/html/app_templates_request__public_search_form.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/request/_public_search_form.html
 4	_view_request_contact_modal.html	/NYCOpenDocs/html/app_templates_request__view_request_contact_modal.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/request/_view_request_contact_modal.html
-4	_view_request_edit_visibility.js.html	/NYCOpenDocs/html/app_templates_request__view_request_edit_visibility.js.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/request/_view_request_edit_visibility.js.html
+4	_view_request_edit_visibility.js.html	/NYCOpenDocs/html/app_templates_request__view_request_edit_visibility.js.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/request/_view_request_edit_visibility.js.html	templates/app_templates_request__view_request_edit_visibility.js.html_ex.txt
 4	_view_request_history.html	/NYCOpenDocs/html/app_templates_request__view_request_history.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/request/_view_request_history.html
 4	_view_request_info.html	/NYCOpenDocs/html/app_templates_request__view_request_info.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/request/_view_request_info.html
-4	_view_request_info_x-editable.js.html	/NYCOpenDocs/html/app_templates_request__view_request_info_x-editable.js.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/request/_view_request_info_x-editable.js.html
+4	_view_request_info_x-editable.js.html	/NYCOpenDocs/html/app_templates_request__view_request_info_x-editable.js.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/request/_view_request_info_x-editable.js.html	templates/app_templates_request__view_request_info_x-editable.js.html_ex.txt
 4	_view_request_responses.html	/NYCOpenDocs/html/app_templates_request__view_request_responses.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/request/_view_request_responses.html
 4	all.html	/NYCOpenDocs/html/app_templates_request_all.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/request/all.html
 4	confirmation_email.html	/NYCOpenDocs/html/app_templates_request_confirmation_email.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/request/confirmation_email.html
 4	confirmation_non_email.html	/NYCOpenDocs/html/app_templates_request_confirmation_non_email.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/request/confirmation_non_email.html
-4	edit_requester_info.js.html	/NYCOpenDocs/html/app_templates_request_edit_requester_info.js.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/request/edit_requester_info.js.html
+4	edit_requester_info.js.html	/NYCOpenDocs/html/app_templates_request_edit_requester_info.js.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/request/edit_requester_info.js.html	templates/app_templates_request_edit_requester_info.js.html_ex.txt
 4	events
 5	About the directory 'events'	/NYCOpenDocs/html/app_templates_request_events_events.html
 5	modal.html	/NYCOpenDocs/html/app_templates_request_events_modal.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/request/events/modal.html
@@ -345,8 +345,8 @@
 6	requester_information_edited.html	/NYCOpenDocs/html/app_templates_request_events_modal_body_requester_information_edited.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/request/events/modal_body/requester_information_edited.html
 6	user_permissions_changed.html	/NYCOpenDocs/html/app_templates_request_events_modal_body_user_permissions_changed.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/request/events/modal_body/user_permissions_changed.html
 5	row.html	/NYCOpenDocs/html/app_templates_request_events_row.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/request/events/row.html
-4	fileupload_add_file.js.html	/NYCOpenDocs/html/app_templates_request_fileupload_add_file.js.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/request/fileupload_add_file.js.html
-4	fileupload_update_templates.js.html	/NYCOpenDocs/html/app_templates_request_fileupload_update_templates.js.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/request/fileupload_update_templates.js.html
+4	fileupload_add_file.js.html	/NYCOpenDocs/html/app_templates_request_fileupload_add_file.js.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/request/fileupload_add_file.js.html	templates/app_templates_request_fileupload_add_file.js.html_ex.txt
+4	fileupload_update_templates.js.html	/NYCOpenDocs/html/app_templates_request_fileupload_update_templates.js.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/request/fileupload_update_templates.js.html	templates/app_templates_request_fileupload_update_templates.js.html_ex.txt
 4	new_request_agency.html	/NYCOpenDocs/html/app_templates_request_new_request_agency.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/request/new_request_agency.html
 4	new_request_anon.html	/NYCOpenDocs/html/app_templates_request_new_request_anon.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/request/new_request_anon.html
 4	new_request_user.html	/NYCOpenDocs/html/app_templates_request_new_request_user.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/request/new_request_user.html
@@ -369,37 +369,37 @@
 4	result_row.html	/NYCOpenDocs/html/app_templates_request_result_row.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/request/result_row.html
 4	status.html	/NYCOpenDocs/html/app_templates_request_status.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/request/status.html
 4	view_request.html	/NYCOpenDocs/html/app_templates_request_view_request.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/request/view_request.html
-4	view_request.js.html	/NYCOpenDocs/html/app_templates_request_view_request.js.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/request/view_request.js.html
+4	view_request.js.html	/NYCOpenDocs/html/app_templates_request_view_request.js.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/request/view_request.js.html	templates/app_templates_request_view_request.js.html_ex.txt
 3	response
 4	About the directory 'response'	/NYCOpenDocs/html/app_templates_response_response.html
 4	add_acknowledgment.html	/NYCOpenDocs/html/app_templates_response_add_acknowledgment.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/response/add_acknowledgment.html
-4	add_acknowledgment.js.html	/NYCOpenDocs/html/app_templates_response_add_acknowledgment.js.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/response/add_acknowledgment.js.html
+4	add_acknowledgment.js.html	/NYCOpenDocs/html/app_templates_response_add_acknowledgment.js.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/response/add_acknowledgment.js.html	templates/app_templates_response_add_acknowledgment.js.html_ex.txt
 4	add_closing.html	/NYCOpenDocs/html/app_templates_response_add_closing.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/response/add_closing.html
-4	add_closing.js.html	/NYCOpenDocs/html/app_templates_response_add_closing.js.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/response/add_closing.js.html
+4	add_closing.js.html	/NYCOpenDocs/html/app_templates_response_add_closing.js.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/response/add_closing.js.html	templates/app_templates_response_add_closing.js.html_ex.txt
 4	add_denial.html	/NYCOpenDocs/html/app_templates_response_add_denial.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/response/add_denial.html
-4	add_denial.js.html	/NYCOpenDocs/html/app_templates_response_add_denial.js.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/response/add_denial.js.html
+4	add_denial.js.html	/NYCOpenDocs/html/app_templates_response_add_denial.js.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/response/add_denial.js.html	templates/app_templates_response_add_denial.js.html_ex.txt
 4	add_extension.html	/NYCOpenDocs/html/app_templates_response_add_extension.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/response/add_extension.html
-4	add_extension.js.html	/NYCOpenDocs/html/app_templates_response_add_extension.js.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/response/add_extension.js.html
+4	add_extension.js.html	/NYCOpenDocs/html/app_templates_response_add_extension.js.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/response/add_extension.js.html	templates/app_templates_response_add_extension.js.html_ex.txt
 4	add_file.html	/NYCOpenDocs/html/app_templates_response_add_file.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/response/add_file.html
-4	add_file.js.html	/NYCOpenDocs/html/app_templates_response_add_file.js.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/response/add_file.js.html
+4	add_file.js.html	/NYCOpenDocs/html/app_templates_response_add_file.js.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/response/add_file.js.html	templates/app_templates_response_add_file.js.html_ex.txt
 4	add_instruction.html	/NYCOpenDocs/html/app_templates_response_add_instruction.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/response/add_instruction.html
-4	add_instruction.js.html	/NYCOpenDocs/html/app_templates_response_add_instruction.js.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/response/add_instruction.js.html
+4	add_instruction.js.html	/NYCOpenDocs/html/app_templates_response_add_instruction.js.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/response/add_instruction.js.html	templates/app_templates_response_add_instruction.js.html_ex.txt
 4	add_link.html	/NYCOpenDocs/html/app_templates_response_add_link.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/response/add_link.html
-4	add_link.js.html	/NYCOpenDocs/html/app_templates_response_add_link.js.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/response/add_link.js.html
+4	add_link.js.html	/NYCOpenDocs/html/app_templates_response_add_link.js.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/response/add_link.js.html	templates/app_templates_response_add_link.js.html_ex.txt
 4	add_note.html	/NYCOpenDocs/html/app_templates_response_add_note.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/response/add_note.html
-4	add_note.js.html	/NYCOpenDocs/html/app_templates_response_add_note.js.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/response/add_note.js.html
+4	add_note.js.html	/NYCOpenDocs/html/app_templates_response_add_note.js.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/response/add_note.js.html	templates/app_templates_response_add_note.js.html_ex.txt
 4	add_reopening.html	/NYCOpenDocs/html/app_templates_response_add_reopening.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/response/add_reopening.html
-4	add_reopening.js.html	/NYCOpenDocs/html/app_templates_response_add_reopening.js.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/response/add_reopening.js.html
+4	add_reopening.js.html	/NYCOpenDocs/html/app_templates_response_add_reopening.js.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/response/add_reopening.js.html	templates/app_templates_response_add_reopening.js.html_ex.txt
 4	add_user_request.html	/NYCOpenDocs/html/app_templates_response_add_user_request.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/response/add_user_request.html
-4	add_user_request.js.html	/NYCOpenDocs/html/app_templates_response_add_user_request.js.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/response/add_user_request.js.html
+4	add_user_request.js.html	/NYCOpenDocs/html/app_templates_response_add_user_request.js.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/response/add_user_request.js.html	templates/app_templates_response_add_user_request.js.html_ex.txt
 4	edit_user_request.html	/NYCOpenDocs/html/app_templates_response_edit_user_request.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/response/edit_user_request.html
-4	edit_user_request.js.html	/NYCOpenDocs/html/app_templates_response_edit_user_request.js.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/response/edit_user_request.js.html
+4	edit_user_request.js.html	/NYCOpenDocs/html/app_templates_response_edit_user_request.js.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/response/edit_user_request.js.html	templates/app_templates_response_edit_user_request.js.html_ex.txt
 4	generate_envelope.html	/NYCOpenDocs/html/app_templates_response_generate_envelope.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/response/generate_envelope.html
-4	generate_envelope.js.html	/NYCOpenDocs/html/app_templates_response_generate_envelope.js.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/response/generate_envelope.js.html
+4	generate_envelope.js.html	/NYCOpenDocs/html/app_templates_response_generate_envelope.js.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/response/generate_envelope.js.html	templates/app_templates_response_generate_envelope.js.html_ex.txt
 4	generate_letter.html	/NYCOpenDocs/html/app_templates_response_generate_letter.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/response/generate_letter.html
-4	generate_letter.js.html	/NYCOpenDocs/html/app_templates_response_generate_letter.js.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/response/generate_letter.js.html
+4	generate_letter.js.html	/NYCOpenDocs/html/app_templates_response_generate_letter.js.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/response/generate_letter.js.html	templates/app_templates_response_generate_letter.js.html_ex.txt
 4	remove_user_request.html	/NYCOpenDocs/html/app_templates_response_remove_user_request.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/response/remove_user_request.html
-4	remove_user_request.js.html	/NYCOpenDocs/html/app_templates_response_remove_user_request.js.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/response/remove_user_request.js.html
+4	remove_user_request.js.html	/NYCOpenDocs/html/app_templates_response_remove_user_request.js.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/response/remove_user_request.js.html	templates/app_templates_response_remove_user_request.js.html_ex.txt
 2	upload
 3	About the directory 'upload'	/NYCOpenDocs/html/app_upload_upload.html
 3	__init__.py	/NYCOpenDocs/html/app_upload___init__.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/upload/__init__.py	templates/app_upload___init__.py_ex.txt

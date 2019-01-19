@@ -37,6 +37,7 @@
                     </summary>
 
 <!-- Include the text material here! -->
+<!--include templates/migrations_versions_7e0434686370_added_custom_request_forms_table.py_hw.txt -->
                 </details>
 
 <!-- Include source code here! -->

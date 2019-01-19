@@ -37,6 +37,7 @@
                     </summary>
 
 <!-- Include the text material here! -->
+<!--include templates/migrations_versions_9908a9bf1dbd_json_to_jsonb.py_hw.txt -->
                 </details>
 
 <!-- Include source code here! -->

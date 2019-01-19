@@ -28,6 +28,7 @@
                     </summary>
 
 <!-- Include the documentation here! -->
+<!--include templates/app_templates_request_status.html_ex.txt -->
                 </details>
 
                 <details>
@@ -36,6 +37,7 @@
                     </summary>
 
 <!-- Include the text material here! -->
+<!--include templates/app_templates_request_status.html_hw.txt -->
                 </details>
 
 <!-- Include source code here! -->

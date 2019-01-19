@@ -37,6 +37,7 @@
                     </summary>
 
 <!-- Include the text material here! -->
+<!--include templates/app_main___init__.py_hw.txt -->
                 </details>
 
 <!-- Include source code here! -->

@@ -37,6 +37,7 @@
                     </summary>
 
 <!-- Include the text material here! -->
+<!--include templates/migrations_versions_22b97712d5db_add_letters_and_envelopes_to_type_enum.py_hw.txt -->
                 </details>
 
 <!-- Include source code here! -->

@@ -37,6 +37,7 @@
                     </summary>
 
 <!-- Include the text material here! -->
+<!--include templates/app_constants_event_type.py_hw.txt -->
                 </details>
 
 <!-- Include source code here! -->

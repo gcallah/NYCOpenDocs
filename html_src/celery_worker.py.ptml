@@ -28,7 +28,7 @@
                     </summary>
 
 <!-- Include the documentation here! -->
-<!--include templates/celery_worker.py_ex.txt -->
+<!--include templates/celery_worker.py_hw.txt -->
                 </details>
 
                 <details>

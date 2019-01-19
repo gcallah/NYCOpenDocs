@@ -37,6 +37,7 @@
                     </summary>
 
 <!-- Include the text material here! -->
+<!--include templates/migrations_versions_445e50628f6b_add_communication_methods.py_hw.txt -->
                 </details>
 
 <!-- Include source code here! -->

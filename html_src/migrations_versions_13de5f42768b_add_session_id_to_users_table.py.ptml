@@ -37,6 +37,7 @@
                     </summary>
 
 <!-- Include the text material here! -->
+<!--include templates/migrations_versions_13de5f42768b_add_session_id_to_users_table.py_hw.txt -->
                 </details>
 
 <!-- Include source code here! -->

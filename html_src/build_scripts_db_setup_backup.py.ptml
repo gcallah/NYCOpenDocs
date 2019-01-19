@@ -37,6 +37,7 @@
                     </summary>
 
 <!-- Include the text material here! -->
+<!--include templates/build_scripts_db_setup_backup.py_hw.txt -->
                 </details>
 
 <!-- Include source code here! -->

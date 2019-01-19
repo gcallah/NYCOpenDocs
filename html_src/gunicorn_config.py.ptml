@@ -28,7 +28,7 @@
                     </summary>
 
 <!-- Include the documentation here! -->
-<!--include templates/gunicorn_config.py_ex.txt -->
+<!--include templates/gunicorn_config.py_hw.txt -->
                 </details>
 
                 <details>

@@ -101,8 +101,8 @@ def read_docs():
     Read documention of python files for now 
     '''
     file_names = read_file_names()
-    output = ""
     for filenm in file_names:
+        output = "\n"
         if ".py" in filenm:
             output = read_doc_py(filenm)
         elif ".js" in filenm:
@@ -111,7 +111,7 @@ def read_docs():
             output = read_doc_css(filenm)
         # write the output to templates/name of file 
         write_filenm = filenm.split("NYCOpenRecords/")[-1]
-        write_filenm = "_".join(filenm.split("/"))
+        write_filenm = "_".join(write_filenm.split("/"))
         write_filenm += "_ex.txt"
         output_file = open("templates/" + write_filenm, "w")
         output_file.write(output)

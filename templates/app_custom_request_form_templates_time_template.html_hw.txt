@@ -1,1 +1,0 @@
-For the form, the user signs the form with this time template. It has a placeholder as an example of the time to be inputted.

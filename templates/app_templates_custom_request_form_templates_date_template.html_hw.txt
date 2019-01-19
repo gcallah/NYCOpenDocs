@@ -1,0 +1,1 @@
+For the form, the user signs the form with this date template. It has a placeholder as an example of the date to be inputted.

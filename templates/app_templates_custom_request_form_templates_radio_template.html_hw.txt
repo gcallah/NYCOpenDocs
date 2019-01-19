@@ -1,0 +1,1 @@
+Contains the template for radio buttons, displaying the field info and options.

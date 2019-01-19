@@ -1,0 +1,1 @@
+Includes a statement to an agency, saying that an envelope has been created by a user for the request.

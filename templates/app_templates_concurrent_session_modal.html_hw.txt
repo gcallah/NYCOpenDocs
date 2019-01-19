@@ -1,0 +1,1 @@
+This file detects that the current user is logged into multiple sessions and notifies the user that he/she will be logged out of the other sessions. It has a "Continue" button to force the user to log out of the other sessions.

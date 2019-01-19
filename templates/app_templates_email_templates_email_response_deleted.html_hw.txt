@@ -1,0 +1,1 @@
+Contains a message saying that the response has been deleted.

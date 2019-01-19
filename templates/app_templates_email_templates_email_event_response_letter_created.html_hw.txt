@@ -1,0 +1,1 @@
+Includes a response statement to an agency, saying that a user has generated a response letter for the request.

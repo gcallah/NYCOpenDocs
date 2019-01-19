@@ -1,0 +1,1 @@
+The input template contains the structure of an input field, with the field name, min and max length, and placeholder. It also depicts how many characters are remaining upon inputting into the field.

@@ -1,0 +1,1 @@
+The input template contains the structure of a textarea field, with the field name, min and max length, and placeholder. It also depicts a counter and amount of characters remaining upon inputting into the textarea field.

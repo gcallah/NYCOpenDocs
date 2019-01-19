@@ -1,0 +1,1 @@
+Includes the acknowledgement letter message to the agency, saying that a request has been acknowledged by a user. 

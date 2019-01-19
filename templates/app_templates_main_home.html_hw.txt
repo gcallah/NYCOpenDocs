@@ -1,0 +1,1 @@
+This is OpenRecord's home page, describing te FOIL process. A list of anchor links are provided, such as for the publications portal and official website of City of New York. A script is used to redirect url with fields inputted.

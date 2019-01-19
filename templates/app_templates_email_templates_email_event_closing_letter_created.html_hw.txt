@@ -1,0 +1,1 @@
+Includes a closing letter statement to an agency, saying that a request has been closed by the a user.

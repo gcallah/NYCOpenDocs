@@ -1,0 +1,1 @@
+Contains the header of the OpenRecords page. If a user is logged in and is not anonymous, there is an option to log out. Header also contains a link to view the user's profile page if logged in.

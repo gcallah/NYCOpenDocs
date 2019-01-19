@@ -1,0 +1,1 @@
+Base of the NYC OpenRecords page includes html templates, such as navbar and header, and JavaScript files. Flashed messages can be seen on this page as well.

@@ -1,0 +1,1 @@
+Contains scripts for the base page of NYC Open Records. Some of the scripts include setting the profile link, creating a logout page in a new tab with a timer, and starting a session timeout monitor. 

@@ -58,17 +58,17 @@ def create_csv(connector):
     current_dir = []
     source_code = "https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/"
     template_dir = "templates/"
+    # current types of files with docstrings extracted
     # loop through the file names
     for file in file_names:
         output_lst = ["", "", "", "", "", "", ""]
         # if file is a string, it's not in a sub directory
         if isinstance(file, str):
-            py_js_file = ".py" in file or ".js" in file
             output_lst[LEVEL] = str(1)
             output_lst[TITLE] = file
             output_lst[URL] = html_url + file.strip(".") + ".html"
             output_lst[LINK_INSERT] = source_code + file
-            if py_js_file:
+            if ".py" in file or ".js" in file or ".css" in file:
                 output_lst[DOC_TXT] = template_dir + file.strip(".") + "_ex.txt"
             output.append(connector.join(output_lst))
             current_dir = []
@@ -76,7 +76,6 @@ def create_csv(connector):
         # number of tabs = the index we start at that was
         # returned from check directories
         else:
-            py_js_file = ".py" in file[-1] or ".js" in file[-1]
             output_dir_lst = ["", "", ""]
             # have a boolean in case we are dealing with a directory
             # not a file
@@ -88,7 +87,7 @@ def create_csv(connector):
                 if index_dif == len(file) - 1:
                     output_lst[URL] = html_url + "_".join(file) + ".html"
                     output_lst[LINK_INSERT] = source_code + "/".join(file)
-                    if py_js_file:
+                    if ".py" in file[-1] or ".js" in file[-1] or ".css" in file[-1]:
                         output_lst[DOC_TXT] = template_dir + "_".join(file) + "_ex.txt"
                 else:
                     output_dir_lst[LEVEL] = str(index_dif + 2)

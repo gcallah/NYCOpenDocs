@@ -122,7 +122,7 @@
 5	bootstrap-editable.min.js	/NYCOpenDocs/html/app_static_js_plugins_bootstrap-editable.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/bootstrap-editable.min.js	templates/app_static_js_plugins_bootstrap-editable.min.js_ex.txt
 5	bootstrap.min.js	/NYCOpenDocs/html/app_static_js_plugins_bootstrap.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/bootstrap.min.js	templates/app_static_js_plugins_bootstrap.min.js_ex.txt
 5	jquery-ui.js	/NYCOpenDocs/html/app_static_js_plugins_jquery-ui.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/jquery-ui.js	templates/app_static_js_plugins_jquery-ui.js_ex.txt
-5	jquery-ui.min.css	/NYCOpenDocs/html/app_static_js_plugins_jquery-ui.min.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/jquery-ui.min.css
+5	jquery-ui.min.css	/NYCOpenDocs/html/app_static_js_plugins_jquery-ui.min.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/jquery-ui.min.css	templates/app_static_js_plugins_jquery-ui.min.css_ex.txt
 5	jquery-ui.min.js	/NYCOpenDocs/html/app_static_js_plugins_jquery-ui.min.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/jquery-ui.min.js	templates/app_static_js_plugins_jquery-ui.min.js_ex.txt
 5	jquery.blockUI.js	/NYCOpenDocs/html/app_static_js_plugins_jquery.blockUI.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/jquery.blockUI.js	templates/app_static_js_plugins_jquery.blockUI.js_ex.txt
 5	jquery.fileupload-process.js	/NYCOpenDocs/html/app_static_js_plugins_jquery.fileupload-process.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/jquery.fileupload-process.js	templates/app_static_js_plugins_jquery.fileupload-process.js_ex.txt
@@ -151,10 +151,10 @@
 7	About the directory 'skins'	/NYCOpenDocs/html/app_static_js_plugins_tinymce_skins_skins.html
 7	lightgray
 8	About the directory 'lightgray'	/NYCOpenDocs/html/app_static_js_plugins_tinymce_skins_lightgray_lightgray.html
-8	content.inline.min.css	/NYCOpenDocs/html/app_static_js_plugins_tinymce_skins_lightgray_content.inline.min.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/tinymce/skins/lightgray/content.inline.min.css
-8	content.min.css	/NYCOpenDocs/html/app_static_js_plugins_tinymce_skins_lightgray_content.min.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/tinymce/skins/lightgray/content.min.css
-8	skin.ie7.min.css	/NYCOpenDocs/html/app_static_js_plugins_tinymce_skins_lightgray_skin.ie7.min.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/tinymce/skins/lightgray/skin.ie7.min.css
-8	skin.min.css	/NYCOpenDocs/html/app_static_js_plugins_tinymce_skins_lightgray_skin.min.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/tinymce/skins/lightgray/skin.min.css
+8	content.inline.min.css	/NYCOpenDocs/html/app_static_js_plugins_tinymce_skins_lightgray_content.inline.min.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/tinymce/skins/lightgray/content.inline.min.css	templates/app_static_js_plugins_tinymce_skins_lightgray_content.inline.min.css_ex.txt
+8	content.min.css	/NYCOpenDocs/html/app_static_js_plugins_tinymce_skins_lightgray_content.min.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/tinymce/skins/lightgray/content.min.css	templates/app_static_js_plugins_tinymce_skins_lightgray_content.min.css_ex.txt
+8	skin.ie7.min.css	/NYCOpenDocs/html/app_static_js_plugins_tinymce_skins_lightgray_skin.ie7.min.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/tinymce/skins/lightgray/skin.ie7.min.css	templates/app_static_js_plugins_tinymce_skins_lightgray_skin.ie7.min.css_ex.txt
+8	skin.min.css	/NYCOpenDocs/html/app_static_js_plugins_tinymce_skins_lightgray_skin.min.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/plugins/tinymce/skins/lightgray/skin.min.css	templates/app_static_js_plugins_tinymce_skins_lightgray_skin.min.css_ex.txt
 6	themes
 7	About the directory 'themes'	/NYCOpenDocs/html/app_static_js_plugins_tinymce_themes_themes.html
 7	inlite
@@ -189,41 +189,41 @@
 5	custom_validators.js	/NYCOpenDocs/html/app_static_js_validation_custom_validators.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/validation/custom_validators.js	templates/app_static_js_validation_custom_validators.js_ex.txt
 3	styles
 4	About the directory 'styles'	/NYCOpenDocs/html/app_static_styles_styles.html
-4	about.css	/NYCOpenDocs/html/app_static_styles_about.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/about.css
-4	add_acknowledgment.css	/NYCOpenDocs/html/app_static_styles_add_acknowledgment.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/add_acknowledgment.css
-4	add_closing.css	/NYCOpenDocs/html/app_static_styles_add_closing.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/add_closing.css
-4	add_denial.css	/NYCOpenDocs/html/app_static_styles_add_denial.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/add_denial.css
-4	add_extension.css	/NYCOpenDocs/html/app_static_styles_add_extension.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/add_extension.css
-4	add_file.css	/NYCOpenDocs/html/app_static_styles_add_file.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/add_file.css
-4	add_instruction.css	/NYCOpenDocs/html/app_static_styles_add_instruction.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/add_instruction.css
-4	add_link.css	/NYCOpenDocs/html/app_static_styles_add_link.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/add_link.css
-4	add_note.css	/NYCOpenDocs/html/app_static_styles_add_note.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/add_note.css
-4	admin.css	/NYCOpenDocs/html/app_static_styles_admin.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/admin.css
-4	base.css	/NYCOpenDocs/html/app_static_styles_base.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/base.css
-4	home.css	/NYCOpenDocs/html/app_static_styles_home.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/home.css
+4	about.css	/NYCOpenDocs/html/app_static_styles_about.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/about.css	templates/app_static_styles_about.css_ex.txt
+4	add_acknowledgment.css	/NYCOpenDocs/html/app_static_styles_add_acknowledgment.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/add_acknowledgment.css	templates/app_static_styles_add_acknowledgment.css_ex.txt
+4	add_closing.css	/NYCOpenDocs/html/app_static_styles_add_closing.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/add_closing.css	templates/app_static_styles_add_closing.css_ex.txt
+4	add_denial.css	/NYCOpenDocs/html/app_static_styles_add_denial.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/add_denial.css	templates/app_static_styles_add_denial.css_ex.txt
+4	add_extension.css	/NYCOpenDocs/html/app_static_styles_add_extension.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/add_extension.css	templates/app_static_styles_add_extension.css_ex.txt
+4	add_file.css	/NYCOpenDocs/html/app_static_styles_add_file.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/add_file.css	templates/app_static_styles_add_file.css_ex.txt
+4	add_instruction.css	/NYCOpenDocs/html/app_static_styles_add_instruction.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/add_instruction.css	templates/app_static_styles_add_instruction.css_ex.txt
+4	add_link.css	/NYCOpenDocs/html/app_static_styles_add_link.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/add_link.css	templates/app_static_styles_add_link.css_ex.txt
+4	add_note.css	/NYCOpenDocs/html/app_static_styles_add_note.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/add_note.css	templates/app_static_styles_add_note.css_ex.txt
+4	admin.css	/NYCOpenDocs/html/app_static_styles_admin.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/admin.css	templates/app_static_styles_admin.css_ex.txt
+4	base.css	/NYCOpenDocs/html/app_static_styles_base.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/base.css	templates/app_static_styles_base.css_ex.txt
+4	home.css	/NYCOpenDocs/html/app_static_styles_home.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/home.css	templates/app_static_styles_home.css_ex.txt
 4	new_request
 5	About the directory 'new_request'	/NYCOpenDocs/html/app_static_styles_new_request_new_request.html
-5	new-request.css	/NYCOpenDocs/html/app_static_styles_new_request_new-request.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/new_request/new-request.css
-4	nyc_gov.css	/NYCOpenDocs/html/app_static_styles_nyc_gov.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/nyc_gov.css
+5	new-request.css	/NYCOpenDocs/html/app_static_styles_new_request_new-request.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/new_request/new-request.css	templates/app_static_styles_new_request_new-request.css_ex.txt
+4	nyc_gov.css	/NYCOpenDocs/html/app_static_styles_nyc_gov.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/nyc_gov.css	templates/app_static_styles_nyc_gov.css_ex.txt
 4	plugins
 5	About the directory 'plugins'	/NYCOpenDocs/html/app_static_styles_plugins_plugins.html
-5	bootstrap-editable.css	/NYCOpenDocs/html/app_static_styles_plugins_bootstrap-editable.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/plugins/bootstrap-editable.css
-5	bootstrap-theme.css	/NYCOpenDocs/html/app_static_styles_plugins_bootstrap-theme.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/plugins/bootstrap-theme.css
-5	bootstrap.min.css	/NYCOpenDocs/html/app_static_styles_plugins_bootstrap.min.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/plugins/bootstrap.min.css
-5	jquery-ui.css	/NYCOpenDocs/html/app_static_styles_plugins_jquery-ui.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/plugins/jquery-ui.css
-5	jquery.fileupload-noscript.css	/NYCOpenDocs/html/app_static_styles_plugins_jquery.fileupload-noscript.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/plugins/jquery.fileupload-noscript.css
-5	jquery.fileupload-ui-noscript.css	/NYCOpenDocs/html/app_static_styles_plugins_jquery.fileupload-ui-noscript.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/plugins/jquery.fileupload-ui-noscript.css
-5	jquery.fileupload-ui.css	/NYCOpenDocs/html/app_static_styles_plugins_jquery.fileupload-ui.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/plugins/jquery.fileupload-ui.css
-5	jquery.fileupload.css	/NYCOpenDocs/html/app_static_styles_plugins_jquery.fileupload.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/plugins/jquery.fileupload.css
-5	jquery.timepicker.min.css	/NYCOpenDocs/html/app_static_styles_plugins_jquery.timepicker.min.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/plugins/jquery.timepicker.min.css
-5	juniper.css	/NYCOpenDocs/html/app_static_styles_plugins_juniper.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/plugins/juniper.css
-5	parsley.css	/NYCOpenDocs/html/app_static_styles_plugins_parsley.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/plugins/parsley.css
-4	reports.css	/NYCOpenDocs/html/app_static_styles_reports.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/reports.css
-4	request_info.css	/NYCOpenDocs/html/app_static_styles_request_info.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/request_info.css
-4	status.css	/NYCOpenDocs/html/app_static_styles_status.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/status.css
-4	styles.css	/NYCOpenDocs/html/app_static_styles_styles.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/styles.css
-4	view_all.css	/NYCOpenDocs/html/app_static_styles_view_all.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/view_all.css
-4	view_request.css	/NYCOpenDocs/html/app_static_styles_view_request.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/view_request.css
+5	bootstrap-editable.css	/NYCOpenDocs/html/app_static_styles_plugins_bootstrap-editable.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/plugins/bootstrap-editable.css	templates/app_static_styles_plugins_bootstrap-editable.css_ex.txt
+5	bootstrap-theme.css	/NYCOpenDocs/html/app_static_styles_plugins_bootstrap-theme.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/plugins/bootstrap-theme.css	templates/app_static_styles_plugins_bootstrap-theme.css_ex.txt
+5	bootstrap.min.css	/NYCOpenDocs/html/app_static_styles_plugins_bootstrap.min.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/plugins/bootstrap.min.css	templates/app_static_styles_plugins_bootstrap.min.css_ex.txt
+5	jquery-ui.css	/NYCOpenDocs/html/app_static_styles_plugins_jquery-ui.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/plugins/jquery-ui.css	templates/app_static_styles_plugins_jquery-ui.css_ex.txt
+5	jquery.fileupload-noscript.css	/NYCOpenDocs/html/app_static_styles_plugins_jquery.fileupload-noscript.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/plugins/jquery.fileupload-noscript.css	templates/app_static_styles_plugins_jquery.fileupload-noscript.css_ex.txt
+5	jquery.fileupload-ui-noscript.css	/NYCOpenDocs/html/app_static_styles_plugins_jquery.fileupload-ui-noscript.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/plugins/jquery.fileupload-ui-noscript.css	templates/app_static_styles_plugins_jquery.fileupload-ui-noscript.css_ex.txt
+5	jquery.fileupload-ui.css	/NYCOpenDocs/html/app_static_styles_plugins_jquery.fileupload-ui.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/plugins/jquery.fileupload-ui.css	templates/app_static_styles_plugins_jquery.fileupload-ui.css_ex.txt
+5	jquery.fileupload.css	/NYCOpenDocs/html/app_static_styles_plugins_jquery.fileupload.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/plugins/jquery.fileupload.css	templates/app_static_styles_plugins_jquery.fileupload.css_ex.txt
+5	jquery.timepicker.min.css	/NYCOpenDocs/html/app_static_styles_plugins_jquery.timepicker.min.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/plugins/jquery.timepicker.min.css	templates/app_static_styles_plugins_jquery.timepicker.min.css_ex.txt
+5	juniper.css	/NYCOpenDocs/html/app_static_styles_plugins_juniper.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/plugins/juniper.css	templates/app_static_styles_plugins_juniper.css_ex.txt
+5	parsley.css	/NYCOpenDocs/html/app_static_styles_plugins_parsley.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/plugins/parsley.css	templates/app_static_styles_plugins_parsley.css_ex.txt
+4	reports.css	/NYCOpenDocs/html/app_static_styles_reports.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/reports.css	templates/app_static_styles_reports.css_ex.txt
+4	request_info.css	/NYCOpenDocs/html/app_static_styles_request_info.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/request_info.css	templates/app_static_styles_request_info.css_ex.txt
+4	status.css	/NYCOpenDocs/html/app_static_styles_status.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/status.css	templates/app_static_styles_status.css_ex.txt
+4	styles.css	/NYCOpenDocs/html/app_static_styles_styles.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/styles.css	templates/app_static_styles_styles.css_ex.txt
+4	view_all.css	/NYCOpenDocs/html/app_static_styles_view_all.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/view_all.css	templates/app_static_styles_view_all.css_ex.txt
+4	view_request.css	/NYCOpenDocs/html/app_static_styles_view_request.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/view_request.css	templates/app_static_styles_view_request.css_ex.txt
 2	templates
 3	About the directory 'templates'	/NYCOpenDocs/html/app_templates_templates.html
 3	_nyc_gov_footer.html	/NYCOpenDocs/html/app_templates__nyc_gov_footer.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/_nyc_gov_footer.html

@@ -50,13 +50,8 @@ def read_doc_py(file_name):
             spaces = with_space - without_space
             output += (spaces // 4) * "&emsp;" + line + "<br>"
     program_file.close()
-    # write the output to templates/name of file 
-    write_filenm = file_name.split("NYCOpenRecords/")[-1]
-    write_filenm = "_".join(write_filenm.split("/"))
-    write_filenm += "_ex.txt"
-    output_file = open("templates/" + write_filenm, "w")
-    output_file.write(output)
-    output_file.close()
+    return output
+
 
 def read_doc_js(file_name):
     output = ""
@@ -81,25 +76,46 @@ def read_doc_js(file_name):
         if one_line_doc:
             one_line_doc = False
     program_file.close()
-    # write the output to templates/name of file 
-    write_filenm = file_name.split("NYCOpenRecords/")[-1]
-    write_filenm = "_".join(write_filenm.split("/"))
-    write_filenm += "_ex.txt"
-    output_file = open("templates/" + write_filenm, "w")
-    output_file.write(output)
-    output_file.close()
+    return output
 
+
+def read_doc_css(file_name):
+    output = ""
+    program_file = open(file_name, "r")
+    docstring = False
+    one_line_doc = False
+    for line in program_file:
+        if "{" in line or "}" in line or "/*" in line:
+            with_space = len(line)
+            without_space = len(line.strip(" "))
+            spaces = with_space - without_space
+            output += (spaces // 4) * "&emsp;" + line + "<br>"
+        if "}" in line:
+            output += "<br>"
+    program_file.close()
+    return output
+    # write the output to templates/name of file 
 
 def read_docs():
     '''
     Read documention of python files for now 
     '''
     file_names = read_file_names()
+    output = ""
     for filenm in file_names:
         if ".py" in filenm:
-            read_doc_py(filenm)
+            output = read_doc_py(filenm)
         elif ".js" in filenm:
-            read_doc_js(filenm)
+            output = read_doc_js(filenm)
+        elif ".css" in filenm:
+            output = read_doc_css(filenm)
+        # write the output to templates/name of file 
+        write_filenm = filenm.split("NYCOpenRecords/")[-1]
+        write_filenm = "_".join(filenm.split("/"))
+        write_filenm += "_ex.txt"
+        output_file = open("templates/" + write_filenm, "w")
+        output_file.write(output)
+        output_file.close()
 
 
 def main():

@@ -1,0 +1,1 @@
+The CSS file contains styles for the admin page, where the user attributes' styles are set and margins are set for radio buttons, checkboxes, etc.

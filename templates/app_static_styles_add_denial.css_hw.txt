@@ -1,0 +1,1 @@
+This CSS file contains styles for the class "summary", used for adding denial responses upon viewing requests.

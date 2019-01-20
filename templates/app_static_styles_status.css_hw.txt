@@ -1,0 +1,1 @@
+This CSS file contains styles for viewing the statuses of requests, specifically setting the colors depending on the statuses. Styles are also set for the request attributes. 

@@ -1,0 +1,4 @@
+This CSS file contains styles for the page that allows users to add offline instructions. Styles are set for the label of class "instruction-label", the textarea of the instruction, and the div with class "instruction-control".
+
+<br><br>
+* In the comment for instruction-label, the comment states that the styles are set for the <b>extension</b> form.

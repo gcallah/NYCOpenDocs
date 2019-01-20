@@ -1,0 +1,1 @@
+The CSS file contains styles set for the home page, including styles set for the headers, home page description, request buttons, and links.

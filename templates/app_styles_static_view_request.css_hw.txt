@@ -1,0 +1,1 @@
+This CSS file contains style for viewing a request. The styles are style for previous, next, and submit buttons; styles ar also set for the request and responses' display. Padding and displays are also set for offline instructions and for adding notes.

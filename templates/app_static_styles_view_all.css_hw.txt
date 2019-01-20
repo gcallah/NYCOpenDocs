@@ -1,0 +1,1 @@
+This CSS file contains styles for viewing all requests: open, closed, in-progress, due-soon, and overdue, as well as new requests. Styles are also set of advanced options.

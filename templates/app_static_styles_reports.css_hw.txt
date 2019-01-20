@@ -1,0 +1,1 @@
+This CSS file contains the style set for the report graph displayed on reports.html.

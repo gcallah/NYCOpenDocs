@@ -1,0 +1,1 @@
+This CSS file mainly contains styles set for the header, footer, and navbar of OpenRecords. 

@@ -1,0 +1,3 @@
+The JS functions alternate displaying the letter and email generation depending on what the user chooses. The forms uses Parsley to validate the information, and the JS scripts checks to make sure that the informaton required is completed. 
+
+<br> The form is then stringified using JSON upon clicking the next buttons.

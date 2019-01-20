@@ -1,0 +1,1 @@
+A letter can be generated for a request by an agency. This html creates the template of the letter.

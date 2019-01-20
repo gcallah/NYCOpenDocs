@@ -1,0 +1,1 @@
+An agency can deny a request by generating a letter or an email and provide the reasons for denying using the template in the file.

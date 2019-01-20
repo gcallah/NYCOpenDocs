@@ -1,0 +1,1 @@
+A user can remove another user from a request, and the file contains the template for removing. 

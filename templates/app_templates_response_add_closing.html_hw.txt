@@ -1,0 +1,1 @@
+An agency can close a request by generating a letter or an email and provide the reasons for closing using the template in the file.

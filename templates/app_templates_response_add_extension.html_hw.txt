@@ -1,0 +1,1 @@
+An agency can extend a request by generating a letter or an email and can choose the amount of business days until completion. The agency can also provide reasons for extending the request.

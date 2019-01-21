@@ -1,0 +1,1 @@
+In this CSS file, styles are set for attributes related to the file uploading button bar, the progress bar and animation,  file upload processing, and for the files.

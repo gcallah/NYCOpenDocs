@@ -1,0 +1,1 @@
+Please refer to the documentation provided here for X-editable Bootstrap: <a href="http://github.com/vitalets/x-editable"></a>

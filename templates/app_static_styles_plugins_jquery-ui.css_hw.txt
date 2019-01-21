@@ -1,0 +1,1 @@
+Please refer to the jQuery UI documentation for the CSS file.

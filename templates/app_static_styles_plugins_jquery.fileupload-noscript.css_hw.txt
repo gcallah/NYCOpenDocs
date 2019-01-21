@@ -1,0 +1,1 @@
+Attributes for the file input button (input and span) have styles set in this CSS file.

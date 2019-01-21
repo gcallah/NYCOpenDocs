@@ -1,0 +1,1 @@
+Styles are set for the parsley container and for the list of parsley errors in this CSS file.

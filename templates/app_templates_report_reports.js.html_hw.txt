@@ -1,1 +1,3 @@
 Contains the scripts to draw the reports in a chart form. The scripts also draw the reports dependent on the changes made in filters.
+<br>
+It is used to define the chart used for displaying the number of requests assigned to a specific agency from the database.

@@ -1,1 +1,6 @@
-This request page displays the requests opened by OpenRecords and the status. Uswers can filter the requests assigned to an agency. If the current user is an agency, the user can filter the requests by users. 
+This request page displays the requests opened by OpenRecords and the status.<br>
+Users can filter the requests assigned to an agency. If the current user is an agency, the user can filter the requests by users.
+<br>
+This page displays a chart representing the aggregate data of all requests opened on OpenRecords, along with the status of all requests.<br>
+This allows the graph to be filtered by the number of requests assigned to a specific agency.<br>
+And static/js/plugins/Chart.min.js is used to show the charts.

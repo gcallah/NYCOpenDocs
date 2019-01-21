@@ -3033,7 +3033,15 @@ $(function() {
                     </summary>
 
 <!-- Include the text material here! -->
-<p>We attempted to read from templates/app_static_js_request_search.js_hw.txt but failed.</p>
+dateInvalid function: handles and adds attributes in the case that the date element is invalid
+<br>dataValid function: removes attributes in the case that the date element is valid
+<br>valiDate function: checks whether the checkDateElem item is a valid date (look in the above documentation extracted for what is valid)
+<br>valiDates: checks whether the range of dates given (fromDateElem - toDateElem) are valid. If not valid, then the search button is disabled; otherwise, the user can click on the search button. 
+<br>Several fields allow for users to input dates, such as selecting range of closed or due dates. On the changes in input, the valiDates function is called on. 
+<br>The enter button can be used to click on the search button, but does not submit the search form. 
+<br>Upon searching, if results are found, they are rendered onto the html page and the generate document button can be clicked. Otherwise it is reported on the html page that no results were found and the generate document button is disabled
+<br>Filtering is handled through a function. If filtering by FOIL ID, filtering by title, descripting, agency request summary, and requester names are disabled.
+<br>cycleSort function: handles sorting data in ascending, descending, or no orderr and with the corresponding glyphicon.
                 </details>
 
 <!-- Include source code here! -->

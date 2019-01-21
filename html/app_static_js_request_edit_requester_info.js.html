@@ -2995,7 +2995,9 @@ $(function () {
                     </summary>
 
 <!-- Include the text material here! -->
-<p>We attempted to read from templates/app_static_js_request_edit_requester_info.js_hw.txt but failed.</p>
+Fields for editing the requester information are given the data-parsley-required attribute and a validation message. Fields are also given a character limit.
+<br>Restrictions are made for the telephone and fax fields so that non-numerical characters are not allowed.
+<br>As long as one of the required fields is filled out, the form is valid. Otherwise, an error message is displayed in html indicating that one of the required fields (in strong tags) needs to be filled out.
                 </details>
 
 <!-- Include source code here! -->

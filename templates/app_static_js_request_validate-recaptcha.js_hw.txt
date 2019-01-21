@@ -1,0 +1,1 @@
+Function checks if recaptcha response is valid.

@@ -1,0 +1,1 @@
+Function assigns the data-parsley-required and validation message to required fields. Character limits are also assigned to fields: first name, last name, email, and message. Character counts are displayed for the fields, except for email. The contact form is checked for valid responses in the form. 

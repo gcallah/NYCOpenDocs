@@ -1,0 +1,1 @@
+Depending on the size of the window, the JavaScript function adds or removes the attribute "tabs-left" to the action button column, as seen in view_request.html.

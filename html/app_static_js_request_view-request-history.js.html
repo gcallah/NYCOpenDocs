@@ -2994,7 +2994,10 @@ $(function() {
                     </summary>
 
 <!-- Include the text material here! -->
-<p>We attempted to read from templates/app_static_js_request_view-request-history.js_hw.txt but failed.</p>
+Upon showing the request history, the previous button is disabled. 
+<br>showHistory(): Clears out the history html and renders the history list template
+<br>loadMore(): Retrieves the history log of requests and if enables the next button to display more events.
+<br>When the previous button is clicked on, this indicates that the current set of requests being shown is not the starting set. The next button is then disabled. After clicking the previous button, if the starting set of history is loaded, the previous button is then disabled. Similarly, when then the next button is clicked on, if the last set of the request history is loaded, the next button is then disabled. 
                 </details>
 
 <!-- Include source code here! -->

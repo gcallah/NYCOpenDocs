@@ -1,0 +1,1 @@
+Refer to jQuery's file upload plugin. See extracted for GitHub link.

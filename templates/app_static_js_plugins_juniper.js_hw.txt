@@ -1,0 +1,1 @@
+JS file contains a function that allows for addition of parsley validation to x-editable form documents, written by Ben Tempchin.

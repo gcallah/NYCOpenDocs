@@ -2975,6 +2975,7 @@
                     Documentation drawn from source code 
                     </summary>
 
+                    <p>
 <!-- Include the documentation here! -->
 sessionMonitor = function(options) {
 <br>&emsp;&emsp;&emsp;            ping: function() {
@@ -2987,6 +2988,7 @@ sessionMonitor = function(options) {
 <br>&emsp;    function _resetTimers() {
 <br>&emsp;    function _onTimeout() {
 <br>
+                   </p>
                 </details>
 
                 <details>
@@ -2994,12 +2996,14 @@ sessionMonitor = function(options) {
                     About this file
                     </summary>
 
+                    <p>
 <!-- Include the text material here! -->
 JS file has functions that handle timing the session. The server is pinged to extend the session via the ping URL using a HTTP POST request. 
 <br>onwarning(): The user is notified how long he/she has left until session expiration. If the user clicks to stay logged in, then the session time is extended. Otherwise. user will be logged out upon clicking the logout button.
 <br>When the session is timed out, the user is logged out and the URL changes to the timeout URL. 
 <br>extendsess(): extends session. Given a declared minimum ping interval, if the accumulated time since the last ping is greater than the minimum, the timers are reset and the server is pinged.
 <br>_resetTimers(): handles resetting warning and expiration timers.
+                    </p>
                 </details>
 
 <!-- Include source code here! -->

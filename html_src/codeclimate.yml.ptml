@@ -27,7 +27,9 @@
                     Documentation drawn from source code 
                     </summary>
 
+                    <p>
 <!-- Include the documentation here! -->
+                   </p>
                 </details>
 
                 <details>
@@ -35,7 +37,9 @@
                     About this file
                     </summary>
 
+                    <p>
 <!-- Include the text material here! -->
+                    </p>
                 </details>
 
 <!-- Include source code here! -->

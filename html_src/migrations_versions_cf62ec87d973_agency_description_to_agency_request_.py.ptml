@@ -27,8 +27,10 @@
                     Documentation drawn from source code 
                     </summary>
 
+                    <p>
 <!-- Include the documentation here! -->
 <!--include templates/migrations_versions_cf62ec87d973_agency_description_to_agency_request_.py_ex.txt -->
+                   </p>
                 </details>
 
                 <details>
@@ -36,8 +38,10 @@
                     About this file
                     </summary>
 
+                    <p>
 <!-- Include the text material here! -->
 <!--include templates/migrations_versions_cf62ec87d973_agency_description_to_agency_request_.py_hw.txt -->
+                    </p>
                 </details>
 
 <!-- Include source code here! -->

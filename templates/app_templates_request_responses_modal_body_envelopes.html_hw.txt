@@ -1,0 +1,1 @@
+Displays the request id and message that this is the envelope for the current request.

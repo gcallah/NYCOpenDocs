@@ -1,0 +1,1 @@
+Changes in the note response for the request are displayed in the modal body; changes include change in content and privacy.

@@ -1,0 +1,1 @@
+Users can add a note as a response to the request in this modal_body. There is a character counter for the content.

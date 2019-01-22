@@ -1,0 +1,1 @@
+Changes to the requester's information are displayed in the modal body. For each key in the requester's information (such as email, phone number, mailing address), if there is a change, it is reported. Added and removed information are also displayed.

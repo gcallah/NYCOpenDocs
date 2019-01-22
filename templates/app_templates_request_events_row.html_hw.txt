@@ -1,0 +1,6 @@
+Template for a row:
+<br>- Row number
+<br>- Event timestamps
+<br>- History content
+<br>
+<br>Events include modifying content, requester information, privacy, etc.

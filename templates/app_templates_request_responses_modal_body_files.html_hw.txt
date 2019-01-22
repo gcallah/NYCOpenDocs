@@ -1,0 +1,1 @@
+Agencies can upload or replace files as a response to the request. They can also modify the privacy of the response and the titles of the files.

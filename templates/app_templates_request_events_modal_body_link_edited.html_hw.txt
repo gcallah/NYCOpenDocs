@@ -1,0 +1,1 @@
+Changes in the link response for the request are displayed in the modal body. Changes include URL, title, and privacy of the response.

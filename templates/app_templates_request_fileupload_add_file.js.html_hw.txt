@@ -1,0 +1,1 @@
+Script adds the uploaded file to the page.

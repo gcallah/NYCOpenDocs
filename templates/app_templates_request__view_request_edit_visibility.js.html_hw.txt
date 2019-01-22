@@ -1,0 +1,1 @@
+When the privacy buttons are clicked, the script handles sending data values to editt those attributes' visibility.

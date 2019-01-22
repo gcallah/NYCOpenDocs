@@ -1,0 +1,1 @@
+This html page allows users to view events for the request. Navigation buttons are displayed to assist the user.

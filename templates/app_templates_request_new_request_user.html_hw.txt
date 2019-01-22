@@ -1,0 +1,1 @@
+A user can request a record using the form and providing the necessary information on this html page.

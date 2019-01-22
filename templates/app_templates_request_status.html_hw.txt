@@ -1,0 +1,1 @@
+A user can view the status of a request. If the current user is an agency, agency can edit the requester info, and the assigned agency users are displayed. The due date of the request is displayed.

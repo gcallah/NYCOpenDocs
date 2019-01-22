@@ -1,0 +1,1 @@
+Users can view information about a request such as title, privacy, and description. Certain information is not visible to anonymous users, such as the request description. At the end of the information consists of the requester's way of contact.

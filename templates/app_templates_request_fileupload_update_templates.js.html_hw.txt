@@ -1,0 +1,1 @@
+Displays the files available for upload and the uploaded files. After selecting files for uploading, users can view the uploading progress and can cancel or remove the file.

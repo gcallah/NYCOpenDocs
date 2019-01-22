@@ -1,0 +1,1 @@
+This html page allows users to view agency responses (including documents) for the request. Navigation buttons are displayed to assist the user.

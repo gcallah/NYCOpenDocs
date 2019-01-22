@@ -1,0 +1,3 @@
+Contains constants for acknowledgments, categories, states, default expirations, email templates, OpenRecords email, and confirmation headers. 
+
+<br>Email templates have constants for the types of events, for request responses, and the creation of determination letters.

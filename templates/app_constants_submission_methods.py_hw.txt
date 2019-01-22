@@ -1,0 +1,1 @@
+Contains constatns for submission methods: direct input, fax, phone, email, in-person, and 311.

@@ -1,0 +1,1 @@
+Contains constants for user authentication. Has different constants for anonymous users, agency users, and public users. 

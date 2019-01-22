@@ -1,0 +1,1 @@
+Contains constants for the response type, such as note, files, or links. Also contains a set of constants to define email workflow.

@@ -1,0 +1,1 @@
+Contains endpoints constants for the web server; endpoints are urls.

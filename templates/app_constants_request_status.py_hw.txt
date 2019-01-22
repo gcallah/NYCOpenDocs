@@ -1,0 +1,1 @@
+Contains constants for the request status: open, in-progress, due soon, overdue, and closed.

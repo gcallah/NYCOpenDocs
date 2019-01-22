@@ -1,0 +1,1 @@
+Contains the constant for the public release time; currently set to 20 days.

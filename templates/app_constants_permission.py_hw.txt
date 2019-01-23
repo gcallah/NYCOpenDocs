@@ -1,3 +1,3 @@
-Defines a tuple of values as PermissionPair, matching a permission value to a permission label. 
+This file defines a PermissionPair, which is a tuple of values. In the pair, a permission value is matched to a permission label. 
 <br>Request information permissions and response permissions are assigned a value. Then PermissionPairs are formed by the values and the associated title names of the permissions.
 <br>Example: PermissionPair(CLOSE, "Close Request"), where CLOSE represents the permission value for closing a request.

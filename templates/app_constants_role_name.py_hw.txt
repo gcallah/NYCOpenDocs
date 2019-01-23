@@ -1,1 +1,1 @@
-Constants for role names of the request and of the agency.
+This file contains constants for role names of the request and of the agency.

@@ -1,1 +1,1 @@
-Contains a list of constants associated with the determination type of the request(acknowledgment, extension, closing, denial, reopening), and the response type(letter) to define the letter_type constant.
+This file contains a list of constants associated with the determination type of the request(acknowledgment, extension, closing, denial, reopening), and the response type(letter) to define the letter_type constant.

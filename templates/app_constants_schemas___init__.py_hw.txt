@@ -1,1 +1,1 @@
-Contains constant for agencies schema
+This file contains the constant for the agencies schema.

@@ -1,1 +1,1 @@
-Contains constants for the event types, such as reopening a request, adding a file. The events are categorized in list form by request history, addition types to response, edited types to response, removal types for response, and system types pertaining to user and agency.
+This file contains constants for the event types, such as reopening a request, adding a file. The events are categorized in list form by request history, addition types to response, edited types to response, removal types for response, and system types pertaining to user and agency.

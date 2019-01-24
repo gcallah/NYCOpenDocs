@@ -1,0 +1,1 @@
+This file contains a script that handles the note addition form validation upon clicking the next buttons. The second next button when clicked on performs a trigger save. Required fields of the form are given the data-parsley-required attribute and an associated max character length.

@@ -1,0 +1,1 @@
+This file contains a script that handle file form validation upon clicking the next buttons. If the user selects the event to add a file, the user is required to add a file. If file is not fully uploaded, the user cannot proceed to the next part of the form. Once the file form is validated, an array of files is created, with the matching privacy to each file.

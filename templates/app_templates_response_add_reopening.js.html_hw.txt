@@ -1,0 +1,2 @@
+This file contains a script that handles the re-opening request form validation. The script handles creating a drop down of reasons and handles selecting a date.
+<br>The form is validated upon click the next buttons.

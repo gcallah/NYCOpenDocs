@@ -1,0 +1,2 @@
+This file contains a script that handles the link form validation upon clicking the next button. Required fields of the form are given the data-parsley-required attribute and an associated max character length.
+<br>A custom validator is implemented to check that the link url is valid.

@@ -1,0 +1,1 @@
+This file contains a script that handles the instruction form validation upon clicking the next button. Required fields of the form are given the data-parsley-required attribute and an associated max character length.

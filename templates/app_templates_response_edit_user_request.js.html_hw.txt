@@ -1,0 +1,1 @@
+This file contains a script that handles editing a user's credentials. A user's permissions are determined by checking with what permissions have been selected. The script also checks to see if the permissions have changed at all.

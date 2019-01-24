@@ -1,0 +1,1 @@
+The function in this file checks for valid values in the form attributes for generating a letter. Using parsley, the required fields are checked. Once the form has been validated after clicking the first next button, the user is able to click the second next button.

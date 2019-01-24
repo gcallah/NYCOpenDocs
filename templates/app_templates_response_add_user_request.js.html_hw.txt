@@ -1,0 +1,1 @@
+This file contains a script that handles adding a user to the request. The script handles finding the user added and the permissions, and GUID associated with the user.

@@ -1,1 +1,1 @@
-The JS functions alternate displaying the letter and email generation of denying a request depending on what the user chooses. The forms uses Parsley to validate the information, and the JS scripts checks to make sure that the informaton required is completed. 
+The JS functions alternate displaying the letter and email generation of denying a request depending on what the user chooses. The form uses Parsley to validate the information, and the JS scripts checks to make sure that the informaton required is completed. 

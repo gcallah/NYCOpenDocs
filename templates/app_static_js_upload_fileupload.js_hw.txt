@@ -1,1 +1,1 @@
-The JS file handles uploading files in chunks and checking status of the upload. In this file, file deletion is also hamdled
+The JS file handles uploading files in chunks and checking status of the upload. In this file, file deletion is also handled.

@@ -1,1 +1,1 @@
-Contains a confirmation message for the user upon submitting a request and message notifies user that requested documents can be posted at any time.
+This html file contains a confirmation message for the user upon submitting a request and message notifies user that requested documents can be posted at any time.

@@ -1,1 +1,1 @@
-Reports the change in privacy for the request in the modal body.
+This file reports the change in privacy for the request in the modal body.

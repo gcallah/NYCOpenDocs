@@ -1,1 +1,1 @@
-Contains a confirmation message for the user upon submitting a request. 
+This html file contains a confirmation message for the user upon submitting a request. 

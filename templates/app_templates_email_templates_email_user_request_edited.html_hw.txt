@@ -1,1 +1,1 @@
-An agency's admins are notified when a user's permissions have been edited for a request. The user is also notified. Email also lists the current active and disable permissions.
+In this html file, an agency's admins are notified when a user's permissions have been edited for a request. The user is also notified. The email also lists the current active and disable permissions.

@@ -1,3 +1,1 @@
-This contains a list of FAQs for OpenRecords.<br>
-It is the frequently asked question page.<br>
-The links are linked to static/js/request/faq.js .
+This is the FAQ page for OpenRecords.<br> The links are linked to static/js/request/faq.js.

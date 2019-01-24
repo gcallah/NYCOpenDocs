@@ -1,0 +1,1 @@
+In this html file, an agency's admins are notified when a user has been added to a request. The user is also notified. The email also lists the current active and disable permissions.

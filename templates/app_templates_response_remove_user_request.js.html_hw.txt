@@ -1,1 +1,1 @@
-The function confirms the removal of a user and checks to make sure that the input fields and removal attributes match.
+The function in this file confirms the removal of a user and checks to make sure that the input fields and removal attributes match.

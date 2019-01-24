@@ -1,1 +1,1 @@
-Displays the request id and message that this is the envelope for the current request.
+This file displays the request ID and the message that this page is the envelope for the current request.

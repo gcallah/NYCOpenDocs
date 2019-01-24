@@ -1,1 +1,1 @@
-Displays changes made to a file in request, such as content, file name, or privacy change. 
+This html file displays changes made to a file in request, such as content, file name, or privacy change. 

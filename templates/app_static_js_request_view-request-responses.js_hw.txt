@@ -1,12 +1,12 @@
 Upon showing the request responses, the previous button is disabled. 
-<br>showResponses(): Clears out the response html and renders the history list template
-<br>loadMoreResponse(): Retrieves the responses log and loads the next set of responses.
+<br>showResponses() clears out the response html and renders the history list template
+<br>loadMoreResponse() retrieves the responses log and loads the next set of responses.
 <br>When the previous button is clicked on, this indicates that the current set of responses being shown is not the starting set. The next button is then disabled. After clicking the previous button, if the starting set of responses is loaded, the previous button is then disabled. Similarly, when then the next button is clicked on, if the last set of the responses is loaded, the next button is then disabled. 
-<br>setEditResponseWorkflow(response_id, response_type): Different cases are detected: file uploads, notes, instructions, and links. 
+<br>For the setEditResponseWorkflow function, different cases are detected: file uploads, notes, instructions, and links. 
 <br>- Files
-<br>Enable tinymce for specific textareas; constraints are placed on file uploads. Users can upload forms when editing a response and the upload form is validated using parsley. An error appears if the file has not been fully uploaded. Upon clicking the next button of the second modal, a save is triggered, and values are stored inside the data template. A confirmation header and email summary are then rendered. Upon clicking the submit button, the form is turned into an array of data and sent; page is then reloaded.
+<br>Tinymce is enabled for specific textareas; constraints are placed on file uploads. Users can upload forms when editing a response and the upload form is validated using parsley. An error appears if the file has not been fully uploaded. Upon clicking the next button of the second modal, a save is triggered, and values are stored inside the data template. A confirmation header and email summary are then rendered. Upon clicking the submit button, the form is turned into an array of data and sent; page is then reloaded.
 <br>Required input fields are given the data-parsley-required field.
 <br>- Notes, Instructions, Links
 <br>The form is validated upon clicking the next button. If valid, the data template is filled out with the fields for the note. If not, then an error messag is displayed. If the next button of the second modal is clicked on, a save is triggered, values are stored inside the data template. A confirmation header and email summary are rendered. Upon clicking the submit button, the form is transformed into an array and is stored inside the data template. The page is reloaded.
 <br>Required fields are given the data-parsley-required field; fields are also given character limits. Character counters are displayed.
-<br>setDeleteResponseWorkflow(response_id): handles deleting a response and disables the delete button upon deletion; sends to the backend that the response is deleted (making deleted = true), and then reloads the page.
+<br>The setDeleteResponseWorkflow function handles deleting a response and disables the delete button upon deletion; it sends to the backend that the response is deleted (making deleted = true), and then reloads the page.

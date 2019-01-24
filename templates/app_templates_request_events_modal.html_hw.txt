@@ -1,1 +1,1 @@
-This is the template for the modal; includes event ID and type; events can be editing links or notes, editing request information, etc.
+This is the template for the modal, which includes event ID and type; events can be editing links or notes, editing request information, etc.

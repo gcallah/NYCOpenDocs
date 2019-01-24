@@ -1,1 +1,1 @@
-Please reefer to Igor Escobar's documentation for jquery Mask. 
+Please refer to Igor Escobar's documentation for jquery Mask. 

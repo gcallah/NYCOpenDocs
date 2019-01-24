@@ -4,4 +4,4 @@ If a user is logged in, the user can view the attributes. Otherwise, the user ne
 
 The user's status is displayed, whether the user is authenticated, anonymous, public, or an agency.
 
-Could have a comment about what paint_logout is.
+<br>This file could have a comment about what paint_logout is.

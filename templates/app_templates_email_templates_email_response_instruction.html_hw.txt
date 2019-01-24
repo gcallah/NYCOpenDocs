@@ -1,1 +1,1 @@
-The email content contains information with instructions for offline access in the case that the agency has responded to the FOIL request. The information contains anchor links to the instruction pages. 
+In this html file, the email content contains information with instructions for offline access in the case that the agency has responded to the FOIL request. The information contains anchor links to the instruction pages. 

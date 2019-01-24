@@ -1,2 +1,1 @@
-Notifies user that the page is down due to maintenance.<br>
-Format for displaying messages related to maintenance.
+This html file notifies user that the page is down due to maintenance and contains the format for displaying messages related to the maintenance.

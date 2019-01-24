@@ -1,1 +1,1 @@
-Template for a row in a response. Consists of row number and response type. Also has the response timestamp, preview, and response time modification.
+This file contains the html template for a row in a response. The template consists of the row number and response type. It also has the response timestamp, preview, and response time modification.

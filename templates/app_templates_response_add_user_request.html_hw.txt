@@ -1,1 +1,1 @@
-A user can be added to a request, and the user adding can assign the user multiple permissions.
+In this file, a user can be added to a request, and the user adding can assign the user multiple permissions.

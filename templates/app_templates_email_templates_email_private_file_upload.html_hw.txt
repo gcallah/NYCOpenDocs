@@ -1,1 +1,1 @@
-Notifies user of privately added files to a request.
+The file notifies/displays a message to the user that files were privately added to a request.

@@ -1,1 +1,1 @@
-When the privacy buttons are clicked, the script handles sending data values to editt those attributes' visibility.
+This file contains the script that handles sending data values to edit those attributes' visibility upon clicking the privacy buttons.

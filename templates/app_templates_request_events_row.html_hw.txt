@@ -1,4 +1,4 @@
-Template for a row:
+This file contains the html template for displaying a row:
 <br>- Row number
 <br>- Event timestamps
 <br>- History content

@@ -1,1 +1,1 @@
-Function checks if recaptcha response is valid.
+The function in this file checks if recaptcha response is valid.

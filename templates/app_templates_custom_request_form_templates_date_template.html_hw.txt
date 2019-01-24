@@ -1,2 +1,2 @@
-This consists of templates for different inputs in a request form.<br>
+This file consists of templates for different inputs in a request form.<br>
 For the form, the user signs the form with this date template. It has a placeholder as an example of the date to be inputted.

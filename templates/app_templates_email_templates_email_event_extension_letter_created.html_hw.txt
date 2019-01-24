@@ -1,1 +1,1 @@
-Includes an extension statement to the agency, saying that a user extended the request.
+This file displays a request extension statement to the agency, saying that a user extended the request.

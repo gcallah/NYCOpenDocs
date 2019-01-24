@@ -1,1 +1,1 @@
-Displays a list of users and tests user log in and logout. 
+This page displays a list of users, and it tests user log in and logout. 

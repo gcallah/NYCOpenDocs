@@ -1,1 +1,1 @@
-Contains a statement that the request has been closed and for what reasons. In the email, an email is provided if the user would like to appeal the decision to deny access to information requested. The request is also displayed in the email.
+The file contains a statement that the request has been closed and for what reasons. In the email, an email is provided if the user would like to appeal the decision to deny access to information requested. The request is also displayed in the email.

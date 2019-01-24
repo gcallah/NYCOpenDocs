@@ -1,1 +1,1 @@
-Contains the template for a drop down using the select tags, displaying the field info and options.
+This file contains the template for displaying a drop down using the select tags by defining how to display the field info and options.

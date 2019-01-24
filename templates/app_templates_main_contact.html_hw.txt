@@ -1,4 +1,3 @@
-‘Technical Support’ tab from navigation bar.<br>
-Parsley plugin is used in this page for form validation.
-And the requests are sent using contact.js.<br>
-This contains a form to contact for technical support. The form contains name, email, subject, and a message field.
+This file contains a form to contact for technical support, which can be found as the ‘Technical Support’ tab from navigation bar.<br> 
+The form contains name, email, subject, and a message field.
+<br>Parsley plugin is used in this page for form validation. The requests are sent using contact.js.

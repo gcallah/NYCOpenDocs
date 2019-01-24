@@ -1,1 +1,1 @@
-Displays and tests email functionality for OpenRecords. In the form, the token, labels, bcc, cc, and subject of the email are displayed.
+This html page displays and tests email functionality for OpenRecords. In the form, the token, labels, bcc, cc, and subject of the email are displayed.

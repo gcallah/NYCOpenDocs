@@ -1,1 +1,1 @@
-Upon logging in, the user is notified that the log in credentials is being processed.
+Upon logging in, the user is notified that the log in credentials are being processed.

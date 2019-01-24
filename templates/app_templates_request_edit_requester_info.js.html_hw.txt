@@ -1,1 +1,1 @@
-Script submits the edited requester information and reloads the page. If there is an error, the error will be displayed and the submit button will be enabled.
+The script in this file submits the edited requester information and reloads the page. If there is an error, the error will be displayed and the submit button will be enabled.

@@ -1,1 +1,1 @@
-Contains the template for radio buttons, displaying the field info and options.
+This file contains the template for displaying radio buttons with the field info and options.

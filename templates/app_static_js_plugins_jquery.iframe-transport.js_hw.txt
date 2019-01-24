@@ -1,1 +1,1 @@
-Refer to jQuery's Iframe Transport plugin. See extracted for GitHub link.
+Refer to jQuery's Iframe Transport plugin. See extracted documentation for GitHub link.

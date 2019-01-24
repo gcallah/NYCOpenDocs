@@ -1,1 +1,1 @@
-Lists the public and private file links in the response that will or will not be publicly available on the portal.
+This html file lists the public and private file links in the response that will or will not be publicly available on the portal.

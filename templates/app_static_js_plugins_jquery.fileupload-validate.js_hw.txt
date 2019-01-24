@@ -1,1 +1,1 @@
-Refer to jQuery's file upload validation plugin. See extracted for GitHub link.
+Refer to jQuery's file upload validation plugin. See extracted documentation for GitHub link.

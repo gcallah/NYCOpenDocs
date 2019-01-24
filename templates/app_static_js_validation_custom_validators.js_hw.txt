@@ -1,1 +1,1 @@
-Uses Parsley to add a validator named maxFileSize. Assigns the validator a type and an error message.
+The function in this file uses Parsley to add a validator named maxFileSize and assigns the validator a type and an error message.

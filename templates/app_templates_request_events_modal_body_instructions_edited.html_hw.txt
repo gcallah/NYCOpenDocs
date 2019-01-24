@@ -1,1 +1,1 @@
-Changes of the instructions are displayed in the modal body; changes: content, privacy
+Changes of the instructions are displayed in the modal body; Some changes are change in content or privacy.

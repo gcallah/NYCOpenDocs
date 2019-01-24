@@ -1,9 +1,9 @@
 characterCounter and generate_character_counter_handler handles displaying character counters for fields. If current amount of characters is out of the valid range of characters, the text color is red, otherwise black. 
 <br>regexURLChecker checks whether the url link inputted is value by using a regex expression; return true or false.
 <br>notHolidayorWeekend checks whether the date inputted falls on a holiday or weekend.
-<br>getRequestAgencyInstructions(): additional information for an agency is hidden or displayed depending on the type of users.
+<br>getRequestAgencyInstructions(): Additional information for an agency is hidden or displayed depending on the type of users.
 <br>populateDropdown(): populates an empty droopdown and renders it
-<br>renderCustomRequestForm(target): renders fields based on the target given; restricts certain key pressed for when choosing data and time; fields are assigned character counters. Popovers and tooltips are assigned to the data fields for placement, trigger, toggle, and content. If the entire form is not displayed, show additional content, otherwise, hide. 
+<br>renderCustomRequestForm(target): This function renders fields based on the target given; this function also restricts certain key pressed for when choosing data and time; fields are assigned character counters. Popovers and tooltips are assigned to the data fields for placement, trigger, toggle, and content. If the entire form is not displayed, additional content is shown; otherwise, hide the additional content. 
 <br>handleCategorySwitch handles creating a new form upon a category change. Counters are reset and added divs are removed.
-<br>checkRequestTypeDropdowns(): checks to ensure that the form has a selected type.
-<br>processCustomRequestFormData(): form is jsonified but if the number of completed fields does not meet the minimum requirement, an alert is displayed.
+<br>checkRequestTypeDropdowns() checks to ensure that the form has a selected type.
+<br>processCustomRequestFormData(): The form is jsonified but if the number of completed fields does not meet the minimum requirement, an alert is displayed.

@@ -1,1 +1,1 @@
-Script adds the uploaded file to the page.
+The script in this file adds the uploaded file to the page.

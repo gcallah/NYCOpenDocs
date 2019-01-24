@@ -1,1 +1,1 @@
-Contains file links to the responses depending on whether the requester is an agency, a user, or an anonymous user. The file links display new names if they have been changed
+This file contains file links to the responses depending on whether the requester is an agency, a user, or an anonymous user. The file links display new names if they have been changed.

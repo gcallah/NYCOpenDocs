@@ -1,2 +1,1 @@
-Signature for the response letter.<br>
-This contains a sample of a signature for a letter, including user's name, title, and agency name.
+This contains a sample of a signature for a response letter, including user's name, title, and agency name.

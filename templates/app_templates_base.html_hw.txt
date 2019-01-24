@@ -1,3 +1,3 @@
-Base of the NYC OpenRecords page includes html templates, such as navbar and header, and JavaScript files. Flashed messages can be seen on this page as well.<br>
+This html file is the html base of the NYC OpenRecords page includes html templates, such as the navigation bar and the header, and JavaScript files. Flashed messages can be seen on this page as well.<br>
 This is the main file which defines the theme of the website. This file remains constant in all the different navigated pages.<br>
 And that is why base.html is extended in most of the files like request, response, etc. The user logged in defined as per the auth/login_processing_model.html.

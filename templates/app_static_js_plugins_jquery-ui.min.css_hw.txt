@@ -1,1 +1,1 @@
-Sets styles for css involved with jQuery. Refer to jQuery's documentation.
+This file sets styles for css involved with jQuery. Refer to jQuery's documentation.

@@ -24,17 +24,6 @@
 
                 <details>
                     <summary class="sum1">
-                    Documentation drawn from source code 
-                    </summary>
-
-                    <p>
-<!-- Include the documentation here! -->
-<!--include templates/app_static_styles_plugins_jquery-ui.css_ex.txt -->
-                   </p>
-                </details>
-
-                <details>
-                    <summary class="sum1">
                     About this file
                     </summary>
 
@@ -42,6 +31,17 @@
 <!-- Include the text material here! -->
 <!--include templates/app_static_styles_plugins_jquery-ui.css_hw.txt -->
                     </p>
+                </details>
+
+                <details>
+                    <summary class="sum1">
+                    Documentation drawn from source code 
+                    </summary>
+
+                    <p>
+<!-- Include the documentation here! -->
+<!--include templates/app_static_styles_plugins_jquery-ui.css_ex.txt -->
+                   </p>
                 </details>
 
 <!-- Include source code here! -->

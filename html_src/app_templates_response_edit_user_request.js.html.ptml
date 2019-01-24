@@ -24,17 +24,6 @@
 
                 <details>
                     <summary class="sum1">
-                    Documentation drawn from source code 
-                    </summary>
-
-                    <p>
-<!-- Include the documentation here! -->
-<!--include templates/app_templates_response_edit_user_request.js.html_ex.txt -->
-                   </p>
-                </details>
-
-                <details>
-                    <summary class="sum1">
                     About this file
                     </summary>
 
@@ -42,6 +31,17 @@
 <!-- Include the text material here! -->
 <!--include templates/app_templates_response_edit_user_request.js.html_hw.txt -->
                     </p>
+                </details>
+
+                <details>
+                    <summary class="sum1">
+                    Documentation drawn from source code 
+                    </summary>
+
+                    <p>
+<!-- Include the documentation here! -->
+<!--include templates/app_templates_response_edit_user_request.js.html_ex.txt -->
+                   </p>
                 </details>
 
 <!-- Include source code here! -->

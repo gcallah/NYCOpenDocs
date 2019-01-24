@@ -24,6 +24,16 @@
 
                 <details>
                     <summary class="sum1">
+                    About this file
+                    </summary>
+
+                    <p>
+<!-- Include the text material here! -->
+                    </p>
+                </details>
+
+                <details>
+                    <summary class="sum1">
                     Documentation drawn from source code 
                     </summary>
 
@@ -31,16 +41,6 @@
 <!-- Include the documentation here! -->
 <!--include templates/manage.py_hw.txt -->
                    </p>
-                </details>
-
-                <details>
-                    <summary class="sum1">
-                    About this file
-                    </summary>
-
-                    <p>
-<!-- Include the text material here! -->
-                    </p>
                 </details>
 
 <!-- Include source code here! -->

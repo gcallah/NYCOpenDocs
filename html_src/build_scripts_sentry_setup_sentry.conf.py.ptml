@@ -24,17 +24,6 @@
 
                 <details>
                     <summary class="sum1">
-                    Documentation drawn from source code 
-                    </summary>
-
-                    <p>
-<!-- Include the documentation here! -->
-<!--include templates/build_scripts_sentry_setup_sentry.conf.py_ex.txt -->
-                   </p>
-                </details>
-
-                <details>
-                    <summary class="sum1">
                     About this file
                     </summary>
 
@@ -42,6 +31,17 @@
 <!-- Include the text material here! -->
 <!--include templates/build_scripts_sentry_setup_sentry.conf.py_hw.txt -->
                     </p>
+                </details>
+
+                <details>
+                    <summary class="sum1">
+                    Documentation drawn from source code 
+                    </summary>
+
+                    <p>
+<!-- Include the documentation here! -->
+<!--include templates/build_scripts_sentry_setup_sentry.conf.py_ex.txt -->
+                   </p>
                 </details>
 
 <!-- Include source code here! -->

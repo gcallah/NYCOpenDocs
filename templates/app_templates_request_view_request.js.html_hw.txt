@@ -1,0 +1,1 @@
+This file contains a script that enables tinymce on specific textarea classes. Those classes then have properties defined, such as plugins, elementpath, toolbar.

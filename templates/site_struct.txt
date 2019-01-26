@@ -2,6 +2,13 @@
 1	Home	/NYCOpenDocs/index.html		glyphicon-home
 1	.codeclimate.yml	/NYCOpenDocs/html/codeclimate.yml.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/.codeclimate.yml		
 1	.eslintrc.yml	/NYCOpenDocs/html/eslintrc.yml.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/.eslintrc.yml		
+1	.startup
+2	About the directory '.startup'	/NYCOpenDocs/html/.startup_.startup.html
+2	celery_beat_startup.sh	/NYCOpenDocs/html/.startup_celery_beat_startup.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/.startup/celery_beat_startup.sh
+2	celery_startup.sh	/NYCOpenDocs/html/.startup_celery_startup.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/.startup/celery_startup.sh
+2	fakesmtp_startup.sh	/NYCOpenDocs/html/.startup_fakesmtp_startup.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/.startup/fakesmtp_startup.sh
+2	flask_startup.sh	/NYCOpenDocs/html/.startup_flask_startup.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/.startup/flask_startup.sh
+2	tmux_setup.sh	/NYCOpenDocs/html/.startup_tmux_setup.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/.startup/tmux_setup.sh
 1	.travis.yml	/NYCOpenDocs/html/travis.yml.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/.travis.yml		
 1	app
 2	About the directory 'app'	/NYCOpenDocs/html/app_app.html
@@ -32,6 +39,7 @@
 3	forms.py	/NYCOpenDocs/html/app_auth_forms.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/auth/forms.py	templates/app_auth_forms.py_ex.txt	templates/app_auth_forms.py_hw.txt
 3	utils.py	/NYCOpenDocs/html/app_auth_utils.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/auth/utils.py	templates/app_auth_utils.py_ex.txt	templates/app_auth_utils.py_hw.txt
 3	views.py	/NYCOpenDocs/html/app_auth_views.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/auth/views.py	templates/app_auth_views.py_ex.txt	templates/app_auth_views.py_hw.txt
+2	celery_config.py	/NYCOpenDocs/html/app_celery_config.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/celery_config.py	templates/app_celery_config.py_ex.txt	templates/app_celery_config.py_hw.txt
 2	constants
 3	About the directory 'constants'	/NYCOpenDocs/html/app_constants_constants.html
 3	__init__.py	/NYCOpenDocs/html/app_constants___init__.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/constants/__init__.py	templates/app_constants___init__.py_ex.txt	templates/app_constants___init__.py_hw.txt
@@ -54,6 +62,7 @@
 3	user_type_auth.py	/NYCOpenDocs/html/app_constants_user_type_auth.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/constants/user_type_auth.py	templates/app_constants_user_type_auth.py_ex.txt	templates/app_constants_user_type_auth.py_hw.txt
 3	user_type_request.py	/NYCOpenDocs/html/app_constants_user_type_request.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/constants/user_type_request.py	templates/app_constants_user_type_request.py_ex.txt	templates/app_constants_user_type_request.py_hw.txt
 3	web_services.py	/NYCOpenDocs/html/app_constants_web_services.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/constants/web_services.py	templates/app_constants_web_services.py_ex.txt	templates/app_constants_web_services.py_hw.txt
+2	jobs.py	/NYCOpenDocs/html/app_jobs.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/jobs.py	templates/app_jobs.py_ex.txt	templates/app_jobs.py_hw.txt
 2	lib
 3	About the directory 'lib'	/NYCOpenDocs/html/app_lib_lib.html
 3	__init__.py	/NYCOpenDocs/html/app_lib___init__.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/lib/__init__.py	templates/app_lib___init__.py_ex.txt	templates/app_lib___init__.py_hw.txt
@@ -172,6 +181,7 @@
 5	character-count.js	/NYCOpenDocs/html/app_static_js_request_character-count.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/character-count.js	templates/app_static_js_request_character-count.js_ex.txt	templates/app_static_js_request_character-count.js_hw.txt
 5	contact.js	/NYCOpenDocs/html/app_static_js_request_contact.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/contact.js	templates/app_static_js_request_contact.js_ex.txt	templates/app_static_js_request_contact.js_hw.txt
 5	edit_requester_info.js	/NYCOpenDocs/html/app_static_js_request_edit_requester_info.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/edit_requester_info.js	templates/app_static_js_request_edit_requester_info.js_ex.txt	templates/app_static_js_request_edit_requester_info.js_hw.txt
+5	faq.js	/NYCOpenDocs/html/app_static_js_request_faq.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/faq.js	templates/app_static_js_request_faq.js_ex.txt	templates/app_static_js_request_faq.js_hw.txt
 5	main.js	/NYCOpenDocs/html/app_static_js_request_main.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/main.js	templates/app_static_js_request_main.js_ex.txt	templates/app_static_js_request_main.js_hw.txt
 5	new-request-agency.js	/NYCOpenDocs/html/app_static_js_request_new-request-agency.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/new-request-agency.js	templates/app_static_js_request_new-request-agency.js_ex.txt	templates/app_static_js_request_new-request-agency.js_hw.txt
 5	new-request-anon.js	/NYCOpenDocs/html/app_static_js_request_new-request-anon.js.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/new-request-anon.js	templates/app_static_js_request_new-request-anon.js_ex.txt	templates/app_static_js_request_new-request-anon.js_hw.txt
@@ -200,6 +210,7 @@
 4	add_note.css	/NYCOpenDocs/html/app_static_styles_add_note.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/add_note.css	templates/app_static_styles_add_note.css_ex.txt	templates/app_static_styles_add_note.css_hw.txt
 4	admin.css	/NYCOpenDocs/html/app_static_styles_admin.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/admin.css	templates/app_static_styles_admin.css_ex.txt	templates/app_static_styles_admin.css_hw.txt
 4	base.css	/NYCOpenDocs/html/app_static_styles_base.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/base.css	templates/app_static_styles_base.css_ex.txt	templates/app_static_styles_base.css_hw.txt
+4	faq.css	/NYCOpenDocs/html/app_static_styles_faq.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/faq.css	templates/app_static_styles_faq.css_ex.txt	templates/app_static_styles_faq.css_hw.txt
 4	home.css	/NYCOpenDocs/html/app_static_styles_home.css.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/home.css	templates/app_static_styles_home.css_ex.txt	templates/app_static_styles_home.css_hw.txt
 4	new_request
 5	About the directory 'new_request'	/NYCOpenDocs/html/app_static_styles_new_request_new_request.html
@@ -237,6 +248,7 @@
 4	concurrent_session_modal.html	/NYCOpenDocs/html/app_templates_auth_concurrent_session_modal.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/auth/concurrent_session_modal.html	templates/app_templates_auth_concurrent_session_modal.html_ex.txt	templates/app_templates_auth_concurrent_session_modal.html_hw.txt
 4	index.html	/NYCOpenDocs/html/app_templates_auth_index.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/auth/index.html	templates/app_templates_auth_index.html_ex.txt	templates/app_templates_auth_index.html_hw.txt
 4	ldap_login_form.html	/NYCOpenDocs/html/app_templates_auth_ldap_login_form.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/auth/ldap_login_form.html	templates/app_templates_auth_ldap_login_form.html_ex.txt	templates/app_templates_auth_ldap_login_form.html_hw.txt
+4	local_login_form.html	/NYCOpenDocs/html/app_templates_auth_local_login_form.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/auth/local_login_form.html	templates/app_templates_auth_local_login_form.html_ex.txt	templates/app_templates_auth_local_login_form.html_hw.txt
 4	login_processing_modal.html	/NYCOpenDocs/html/app_templates_auth_login_processing_modal.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/auth/login_processing_modal.html	templates/app_templates_auth_login_processing_modal.html_ex.txt	templates/app_templates_auth_login_processing_modal.html_hw.txt
 4	manage_account.html	/NYCOpenDocs/html/app_templates_auth_manage_account.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/auth/manage_account.html	templates/app_templates_auth_manage_account.html_ex.txt	templates/app_templates_auth_manage_account.html_hw.txt
 4	session_timeout_modal.html	/NYCOpenDocs/html/app_templates_auth_session_timeout_modal.html.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/auth/session_timeout_modal.html	templates/app_templates_auth_session_timeout_modal.html_ex.txt	templates/app_templates_auth_session_timeout_modal.html_hw.txt
@@ -495,7 +507,6 @@
 1	celery_worker.py	/NYCOpenDocs/html/celery_worker.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/celery_worker.py	templates/celery_worker.py_hw.txt	
 1	config.py	/NYCOpenDocs/html/config.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/config.py	templates/config.py_hw.txt	
 1	gunicorn_config.py	/NYCOpenDocs/html/gunicorn_config.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/gunicorn_config.py	templates/gunicorn_config.py_hw.txt	
-1	jobs.py	/NYCOpenDocs/html/jobs.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/jobs.py	templates/jobs.py_hw.txt	
 1	manage.py	/NYCOpenDocs/html/manage.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/manage.py	templates/manage.py_hw.txt	
 1	migrations
 2	About the directory 'migrations'	/NYCOpenDocs/html/migrations_migrations.html

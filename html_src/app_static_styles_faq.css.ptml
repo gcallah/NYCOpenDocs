@@ -3,7 +3,7 @@
     <head>
 <!--include head.txt -->
         <title>
-            jobs.py
+            faq.css
         </title>
     </head>
 
@@ -19,7 +19,7 @@
                     </figcaption>
                 </figure>
                 <h1>
-                    jobs.py
+                    faq.css
                 </h1>
 
                 <details>
@@ -29,6 +29,7 @@
 
                     <p>
 <!-- Include the text material here! -->
+<!--include templates/app_static_styles_faq.css_hw.txt -->
                     </p>
                 </details>
 
@@ -39,13 +40,13 @@
 
                     <p>
 <!-- Include the documentation here! -->
-<!--include templates/jobs.py_hw.txt -->
+<!--include templates/app_static_styles_faq.css_ex.txt -->
                    </p>
                 </details>
 
 <!-- Include source code here! -->
                 <p>
-<a href="https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/jobs.py">Source code</a>
+<a href="https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/faq.css">Source code</a>
                 </p>
             </div>
         </div>

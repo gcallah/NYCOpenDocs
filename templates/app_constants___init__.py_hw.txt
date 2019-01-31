@@ -1,3 +1,7 @@
-This file contains constants for acknowledgments, categories, states, default expirations, email templates, OpenRecords email, and confirmation headers. 
-
+Constants are set in advance so that if some variable value which is being used at various locations has to be changed, it can be changed at just one place.
+<br>It is better to define them at one place to avoid problems during such incidents of value change.
+<br>
+This file contains constants for acknowledgments, categories, states, default expirations, email templates, OpenRecords email, and confirmation headers.
+<br>
+This file imports values from response_type, determination_type and event_type.
 <br>Email templates have constants for the types of events, for request responses, and the creation of determination letters.

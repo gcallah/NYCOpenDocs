@@ -1,2 +1,2 @@
-This file contains a latex template constant that contains a dictionary of values for the template, such as comments, blocks, and variables. 
-<br>It also contains an EnvelopeDict class that has keys for request ID, recipient name, organization, and address.
+This file contains a latex template constant that contains a dictionary of values for the template, such as comments, blocks, and variables.
+<br>It also contains an EnvelopeDict class that has pre-set keys for request ID, recipient name, organization, and address.

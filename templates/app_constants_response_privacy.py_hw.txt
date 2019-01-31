@@ -1,1 +1,1 @@
-This file contains constants for the response privacy to the request.
+This file contains constants for the response privacy to the request: 'private', 'release_private' and 'release_public'.

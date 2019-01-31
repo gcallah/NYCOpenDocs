@@ -1,1 +1,1 @@
-This file contains constants for submission methods: direct input, fax, phone, email, in-person, and 311.
+This file contains constants for submission methods: 'Direct Input', 'Fax', 'Phone', 'Email', 'Mail', 'In-Person' and '311'.

@@ -1,0 +1,3 @@
+The files contains the class LatexCompiler, which is used to create PDF from a LaTeX layout. The _create_file of the class creates the .tex file in the output directory and writes the data inside the inputted document into the .tex file. 
+
+<br>This file also contains functiosn that generates a flask response with a pdf file attached, a LaTeX template for an envelope, and a PDF envelope. In addition, the escape_latex_characters function replaces characters with the LaTeX version. 

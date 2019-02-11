@@ -1,0 +1,1 @@
+This file contains the NYCHolidays class, extended from the HolidayBase class. When calling the _populate method, observed holidays are added to its list of holidays, such as Labor Day and Thanksgiving.

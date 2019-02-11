@@ -1,0 +1,1 @@
+This file contains functions for sending emails to a contact and for sneding emails with attachments. The file also contains a function to return a list of emails of admins, users, and the agency default email. 

@@ -1,0 +1,1 @@
+This file contains the utils for using Redis. The functions included in this file pertain to storing a file's metadata, returning the stored file's metadata, obtaining the file's upload key, returning the user session ID. A file's metadata includes the file size, mime type, and hash.

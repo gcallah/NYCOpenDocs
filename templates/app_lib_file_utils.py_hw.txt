@@ -1,0 +1,1 @@
+The file contains functions pertaining to file information, such as getting the size and checking if the file exists. Other file functions including renaming, moving, and removing the file, as well as getting the hash and mime type. The send_file function sends the file from the specified directory.

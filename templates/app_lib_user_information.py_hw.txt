@@ -1,0 +1,1 @@
+This file contains the function to return a JSON object of the mailing address properties, such as address and city.

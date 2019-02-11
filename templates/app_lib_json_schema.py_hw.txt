@@ -1,0 +1,1 @@
+This file contains the function to validate JSON against an inputted schema file. An error is reported if there was an error upon validation.

@@ -1,1 +1,36 @@
-This file contains the utils functions pertaining to dates. The functions creates the date submission for a request, returns the next business date, returns the due date, converts data to utc, returns timezone difference, and returns a list of holidays. 
+This file contains the utils functions pertaining to dates. <br>
+The functions creates the date submission for a request, returns the next business date, returns the due date, converts data to utc, returns timezone difference, and returns a list of holidays.
+<br>
+
+<br>
+Few functions explanation:
+<br>
+'get_following_date(date_created)'
+<br>
+This generates the date submitted for a request. It returns the date_created rounded off to the next business day.
+<br>
+<br>
+'get_next_business_day()'
+<br>
+This generates the next business day based on the current date. And it returns
+the datetime object with the next business day set to 13:00 PM UTC (09:00 AM EST).
+
+<br>
+<br>
+'get_due_date(date_submitted, days_until_due, tz_name)'
+<br>
+This generates the due date for a request.
+It returns the due date (utc) with time set to 22:00 PM (5:00 PM EST).
+
+<br>
+<br>
+'process_due_date(due_date)'
+<br>
+This returns the given datetime object with a utc time equivalent to 5:00 PM local time (app).
+
+<br>
+<br>
+'get_holidays_date_list(year_start, year_end=None)'
+<br>
+This generates a list of holiday dates in the range of specified years (including year_end).
+It returns a list of dates formatted as strings ['MM/DD/YYYY']

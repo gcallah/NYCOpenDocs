@@ -3034,7 +3034,23 @@
 
                     <p>
 <!-- Include the text material here! -->
-The file contains functions pertaining to file information, such as getting the size and checking if the file exists. Other file functions including renaming, moving, and removing the file, as well as getting the hash and mime type. The send_file function sends the file from the specified directory.
+The file contains functions pertaining to file information, such as getting the size and checking if the file exists.
+Other file functions including renaming, moving, and removing the file, as well as getting the hash and mime type.
+The send_file function sends the file from the specified directory.
+<br>
+<br>
+The 'sftp_ctx()' function is the context manager that provides an SFTP client object.<br>
+The '_sftp_switch(sftp_func)' function checks if app is using SFTP.
+If it is using then app connects to SFTP server and passed function (sftp_func) is called with connected client.
+Else the 'os_func(*args, **kwargs)' which is os library to accomplish the same file-related action.
+<br><br>
+The '_get_file_serving_path(directory, filename)' help in returning the upload
+serving directory path for a file determined by supplied directory and filename.
+<br><br>
+Function 'move(oldpath, newpath)' is used instead of 'rename' if,
+when using sftp, 'oldpath' represents a local file path and 'newpath' a remote path.
+<br><br>
+Function 'get_hash(path)' returns the sha1 hash of a file a string of hexadecimal digits.
                     </p>
                 </details>
 

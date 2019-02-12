@@ -3045,7 +3045,12 @@ The script in this file submits the edited requester information and reloads the
 
                     <p>
 <!-- Include the documentation here! -->
-<p>We attempted to read from templates/app_templates_request_edit_requester_info.js.html_ex.txt but failed.</p>
+
+&emsp;    $(function () {
+<br>&emsp;&emsp;        $("#user-info").submit(function (e) {
+<br>&emsp;&emsp;&emsp;&emsp;                success: function (response) {
+<br>&emsp;&emsp;&emsp;&emsp;                error: function(data) {
+<br>
                    </p>
                 </details>
 

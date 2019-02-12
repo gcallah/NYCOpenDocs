@@ -3045,7 +3045,29 @@
 
                     <p>
 <!-- Include the documentation here! -->
-<p>We attempted to read from templates/app_report_views.py_ex.txt but failed.</p>
+
+"""
+<br>.. module:: report.views.
+<br>
+<br>   :synopsis: Handles the report URL endpoints for the OpenRecords application
+<br>"""
+<br>def show_report():
+<br>&emsp;    """
+<br>&emsp;    This function handles the rendering of the reports page
+<br>
+<br>&emsp;    :return: redirect to reports page
+<br>&emsp;    """
+<br>def get():
+<br>&emsp;    """
+<br>&emsp;    This function handles the retrieval of report data to generate the chart on the frontend.
+<br>&emsp;    Takes in agency_ein or user_guid from the frontend and filters for the number of requests closed and requests
+<br>&emsp;    opened.
+<br>
+<br>&emsp;    :return: json object({"labels": ["Opened", "Closed"],
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                          "values": [150, 135],
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                          "active_users": [('', ''), ('o8pj0k', 'John Doe')]}), 200
+<br>&emsp;    """
+<br>
                    </p>
                 </details>
 

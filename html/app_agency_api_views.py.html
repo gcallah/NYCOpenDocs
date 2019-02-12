@@ -3045,7 +3045,51 @@
 
                     <p>
 <!-- Include the documentation here! -->
-<p>We attempted to read from templates/app_agency_api_views.py_ex.txt but failed.</p>
+
+def get_active_users(agency_ein):
+<br>&emsp;    """
+<br>&emsp;    Retrieve the active users for the specified agency.
+<br>
+<br>&emsp;    :param agency_ein: Agency EIN (String)
+<br>
+<br>&emsp;    :return: JSON Object({"active_users": [('', 'All'), ('o8pj0k', 'John Doe')],
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                          "is_admin": True}), 200
+<br>&emsp;    """
+<br>def get_agency_reasons(agency_ein, reason_type=None):
+<br>&emsp;    """Retrieve an agencies determination reasons for Denials, Closings, and Re-Openings
+<br>
+<br>&emsp;    Args:
+<br>&emsp;&emsp;        agency_ein (str): Agency EIN
+<br>&emsp;&emsp;        reason_type (str): One of ("denial", "closing", "re-opening")
+<br>&emsp;&emsp;&emsp;            All other determination types do not have reasons.
+<br>
+<br>&emsp;    Returns:
+<br>&emsp;&emsp;        JSON Object (dict): Keys are the reason type, values are an array of tuples (id, title)
+<br>
+<br>&emsp;    """
+<br>def get_agency_letter_templates(agency_ein, letter_type=None):
+<br>&emsp;    """
+<br>&emsp;    Retrieve letter templates for the specified agency. If letter type is provided, only those templates will be
+<br>&emsp;    provided, otherwise all templates will be returned.
+<br>
+<br>&emsp;    :param agency_ein: Agency EIN (String)
+<br>&emsp;    :param letter_type: One of "acknowledgment", "denial", "closing", "letter", "extension", "re-opening".
+<br>
+<br>&emsp;    :return: JSON Object (keys are template types, values are arrays of tuples (id, name))
+<br>&emsp;    """
+<br>def get_custom_request_form_options(agency_ein):
+<br>&emsp;    """
+<br>&emsp;    Retrieve the custom request forms for the specified agency.
+<br>
+<br>&emsp;    :param agency_ein: Agency EIN (String)
+<br>&emsp;    :return: JSON Object (keys are the id of the custom request form, values are the names of the forms)
+<br>&emsp;    """
+<br>def get_custom_request_form_fields():
+<br>&emsp;    """
+<br>&emsp;    Get the custom request form field definitions based on form id and agency ein
+<br>&emsp;    :return: JSON object containing the form field definitions
+<br>&emsp;    """
+<br>
                    </p>
                 </details>
 

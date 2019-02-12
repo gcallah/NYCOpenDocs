@@ -3034,9 +3034,23 @@
 
                     <p>
 <!-- Include the text material here! -->
-The files contains the class LatexCompiler, which is used to create PDF from a LaTeX layout. The _create_file of the class creates the .tex file in the output directory and writes the data inside the inputted document into the .tex file. 
+The files contains the class LatexCompiler, which is used to create PDF from a LaTeX layout.
+The _create_file of the class creates the .tex file in the output directory and writes the data inside the inputted document into the .tex file.
 
-<br>This file also contains functiosn that generates a flask response with a pdf file attached, a LaTeX template for an envelope, and a PDF envelope. In addition, the escape_latex_characters function replaces characters with the LaTeX version. 
+<br>This file also contains functions that generates a flask response with a pdf file attached, a LaTeX template for an envelope, and a PDF envelope.
+In addition, the escape_latex_characters function replaces characters with the LaTeX version.
+<br><br>
+The function 'compile(self, document)' compiles a LaTeX document to PDF.
+<br><br>
+Function 'generate_pdf(pdf_data)' generates a PDF from a string of data by returning a PDF File object.
+<br><br>
+Function 'generate_pdf_flask_response(pdf_data)' returns a Flask response object with a PDF as an attachment.
+<br><br>
+Function 'generate_envelope(template_name, data)' returns the LaTeX for an envelope with the provided data pre-filled.
+<br><br>
+Function 'generate_envelope_pdf(document)' returns a PDF envelope.
+<br><br>
+Function 'escape_latex_characters(line)' replaces a string with the escaped LaTeX version of reserved characters.
                     </p>
                 </details>
 

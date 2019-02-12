@@ -3034,8 +3034,33 @@
 
                     <p>
 <!-- Include the text material here! -->
-This file contains utils functions for the database. The objects added to the database are instances of sqlalchemy. 
-<br>The functions in the file pertain to adding an object to the database, updating an object, deleting an object, and getting an object. However, upon adding an object, if the object is a Requests object, an elasticsearch doc is created and returned. 
+This file contains utils functions for the database. The objects added to the database are instances of sqlalchemy.
+<br>The functions in the file pertain to adding an object to the database, updating an object, deleting an object, and getting an object.
+<br>However, upon adding an object, if the object is a Requests object, an elasticsearch doc is created and returned.
+<br><br>
+Few functions explanation:
+<br>
+'create_object(obj)'
+<br>It returns string representation of created object or None if creation failed.
+<br>
+<br>
+'update_object(data, obj_type, obj_id, es_update=True)'
+<br>
+It returns whether the record updated successfully or not.
+The parameters used are a dictionary of attribute-value pairs, sqlalchemy model,
+ id of record and an update of the elasticsearch index which is True.
+<br>
+<br>
+'delete_object(obj)'
+<br>
+It returns whether database record is deleted successfully or not with parameter as
+object (instance of sqlalchemy model) to delete.
+<br>
+<br>
+'bulk_delete(query)'
+<br>
+It deletes multiple database records via a bulk delete query.
+It returns the number of records deleted by passing Query object parameter.
                     </p>
                 </details>
 

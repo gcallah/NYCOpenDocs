@@ -3047,7 +3047,17 @@ On the manage account page, the function in this JS file creates restrictions on
 
                     <p>
 <!-- Include the documentation here! -->
-<p>We attempted to read from templates/app_static_js_auth_manage-account.js_ex.txt but failed.</p>
+
+/**
+<br> * Created by atan on 9/22/16.
+<br> */
+<br>$(document).ready(function () {
+<br>&emsp;    phone.keypress(function(key) {
+<br>&emsp;    fax.keypress(function(key) {
+<br>&emsp;    title.keyup(function() {
+<br>&emsp;    organization.keyup(function () {
+<br>&emsp;    $("#request-form").parsley().on("form:validate", function () {
+<br>
                    </p>
                 </details>
 

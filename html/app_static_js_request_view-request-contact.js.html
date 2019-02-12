@@ -3045,7 +3045,15 @@ The function in this file assigns the data-parsley-required and validation messa
 
                     <p>
 <!-- Include the documentation here! -->
-<p>We attempted to read from templates/app_static_js_request_view-request-contact.js_ex.txt but failed.</p>
+
+$(document).ready(function () {
+<br>&emsp;    $("#contact-form").parsley().on("form:validated", function () {
+<br>&emsp;&emsp;        $(".parsley-required").each(function () {
+<br>&emsp;&emsp;        $(".parsley-type").each(function () {
+<br>&emsp;    firstName.keyup(function() {
+<br>&emsp;    lastName.keyup(function() {
+<br>&emsp;    message.keyup(function() {
+<br>
                    </p>
                 </details>
 

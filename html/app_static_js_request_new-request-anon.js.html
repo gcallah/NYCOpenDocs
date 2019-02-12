@@ -3050,7 +3050,47 @@ Restrictions are made for the phone and fax fields. Upon a category change in th
 
                     <p>
 <!-- Include the documentation here! -->
-<p>We attempted to read from templates/app_static_js_request_new-request-anon.js_ex.txt but failed.</p>
+
+/**
+<br> * Created by atan on 9/14/16.
+<br> */
+<br>/* globals characterCounter: true */
+<br>/* globals getRequestAgencyInstructions: true */
+<br>/* globals getCustomRequestForms: true */
+<br>/* globals renderCustomRequestForm: true */
+<br>/* globals processCustomRequestForms: true */
+<br>/* globals requiredFields: true */
+<br>$(document).ready(function () {
+<br>&emsp;    $(window).load(function () {
+<br>&emsp;    $("#phone").keypress(function (key) {
+<br>&emsp;    $("#fax").keypress(function (key) {
+<br>&emsp;    $("#request-category").change(function () {
+<br>&emsp;&emsp;&emsp;            success: function (data) {
+<br>&emsp;    $("#request-agency").change(function () {
+<br>&emsp;    $(document).on("focus", ".request-type", function () {
+<br>&emsp;&emsp;        $(targetId).off().change(function () {
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    $("#change-category-button").off().click(function () {
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    $("#cancel-change-category-button").off().click(function () {
+<br>&emsp;    $(document).on("click", ".panel-dismiss", function () {
+<br>&emsp;    $("#custom-request-form-additional-content").click(function () {
+<br>&emsp;    $("#request-file").change(function () {
+<br>&emsp;    $("#clear-file").click(function () {
+<br>&emsp;    $("#choose-file span[role=button]").bind("keypress keyup", function (e) {
+<br>&emsp;    $("#request-form").parsley().on("form:validate", function () {
+<br>&emsp;    $("#request-form").parsley().on("form:error", function () {
+<br>&emsp;&emsp;        $(".parsley-required").each(function () {
+<br>&emsp;&emsp;        $(".parsley-length").each(function () {
+<br>&emsp;    $("#submit").click(function () {
+<br>&emsp;    $("#request-file").change(function () {
+<br>&emsp;    $("#request-form").on("submit", function (e) {
+<br>&emsp;&emsp;        $(this).submit(function () {
+<br>&emsp;    $("#request-title").keyup(function () {
+<br>&emsp;    $("#request-description").keyup(function () {
+<br>&emsp;    $("#first-name").keyup(function () {
+<br>&emsp;    $("#last-name").keyup(function () {
+<br>&emsp;    $("#user-title").keyup(function () {
+<br>&emsp;    $("#user-organization").keyup(function () {
+<br>
                    </p>
                 </details>
 

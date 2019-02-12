@@ -3045,7 +3045,50 @@
 
                     <p>
 <!-- Include the documentation here! -->
-<p>We attempted to read from templates/app_request_views.py_ex.txt but failed.</p>
+
+"""
+<br>.. module:: request.views.
+<br>
+<br>   :synopsis: Handles the request URL endpoints for the OpenRecords application
+<br>"""
+<br>def new():
+<br>&emsp;    """
+<br>&emsp;    Create a new FOIL request
+<br>&emsp;    sends a confirmation email after the Requests object is created.
+<br>
+<br>&emsp;    title: request title
+<br>&emsp;    description: request description
+<br>&emsp;    agency: agency selected for the request
+<br>&emsp;    submission: submission method for the request
+<br>
+<br>&emsp;    :return: redirect to homepage on successful form validation
+<br>&emsp;     if form fields are missing or has improper values, backend error messages (WTForms) will appear
+<br>&emsp;    """
+<br>def view_all():
+<br>def view(request_id):
+<br>&emsp;    """
+<br>&emsp;    This function is for testing purposes of the view a request back until backend functionality is implemented.
+<br>
+<br>&emsp;    :return: redirect to view request page
+<br>&emsp;    """
+<br>def non_portal_agency(agency_name):
+<br>&emsp;    """
+<br>&emsp;    This function handles messaging to the requester if they submitted a request to a non-portal agency.
+<br>
+<br>&emsp;    :return: redirect to non_portal_agency page.
+<br>&emsp;    """
+<br>def get_agencies_as_choices():
+<br>&emsp;    """
+<br>&emsp;    Get selected category value from the request body and generate a list of sorted agencies from the category.
+<br>
+<br>&emsp;    :return: list of agency choices
+<br>&emsp;    """
+<br>def contact_agency(request_id):
+<br>&emsp;    """
+<br>&emsp;    This function handles contacting the agency about a request as a requester. 
+<br>&emsp;    :return: 
+<br>&emsp;    """
+<br>
                    </p>
                 </details>
 

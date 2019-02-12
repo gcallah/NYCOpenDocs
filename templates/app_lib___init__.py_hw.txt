@@ -1,1 +1,25 @@
 This file contains the NYCHolidays class, extended from the HolidayBase class. When calling the _populate method, observed holidays are added to its list of holidays, such as Labor Day and Thanksgiving.
+<br><br>
+'holidays library' is used to determine whether a specific date is holiday or not in a particular country.<br>
+Each country has two class names - an abbreviation and a full name.
+Some holidays can be states specific as well.
+<br><br>
+'observed' param: (Default: True) <br>
+January 1st, 2012 fell on a Sunday so the statutory holiday was observed on the 2nd. <br>
+Therefore, January 2nd, 2012 gets included in the holiday list of that year.
+<br><br>
+>>> us_holidays.get(date(2012 ,1, 2))
+<br>
+"New Year's Eve (Observed)"
+<br>
+<br>
+'expand' param: (Default: True) <br>
+It is a boolean value specifying whether or not to append holidays in new years to the holidays object. <br>
+This is set to False in function '_populate' meaning the Holiday object will no longer add holidays from new years. <br>
+So, the function adds Dec 31st from the previous year without triggering the entire year to be added.
+<br>
+<br>
+The file also checks the year since when the respective holidays are celebrated.
+<br>
+Example:<br>
+New Year's Day since 1870, Columbus Day since 1970

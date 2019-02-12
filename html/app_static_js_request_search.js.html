@@ -3055,16 +3055,16 @@ The dateInvalid function handles and adds attributes in the case that the date e
 <!-- Include the documentation here! -->
 
 $(function() {
-<br>&emsp;    function dateInvalid(dateElem, msg, highlightDateRequirement) {
+<br>&emsp;    function dateInvalid(dateElem, msg, highlightDateRequirement, dateError) {
 <br>&emsp;    function dateValid(dateElem) {
-<br>&emsp;    function valiDate(checkDateElem, compDateElem, isLessThan) {
+<br>&emsp;    function valiDate(checkDateElem, compDateElem, isLessThan, dateError) {
 <br>&emsp;&emsp;        /*
 <br>&emsp;&emsp;        * Check that 'checkDateElem' holds an empty value or
 <br>&emsp;&emsp;        * that it is not a holiday or weekend and
 <br>&emsp;&emsp;        * that it 'isLessThan' (or greater than if 'isLessThan' == false)
 <br>&emsp;&emsp;        * compDateElem and style accordingly.
 <br>&emsp;&emsp;        * */
-<br>&emsp;    function valiDates(fromDateElem, toDateElem) {
+<br>&emsp;    function valiDates(fromDateElem, toDateElem, dateError) {
 <br>&emsp;&emsp;        /*
 <br>&emsp;&emsp;        * Check that 'fromDateElem' is less than 'toDateElem'
 <br>&emsp;&emsp;        * and that both dates are not holidays or weekends.
@@ -3077,20 +3077,26 @@ $(function() {
 <br>&emsp;    dateClosedToElem.on("input change", function () {
 <br>&emsp;    $("#search-section").keyup(function(e){
 <br>&emsp;    $("#search-form").on("keyup, keypress", function(e){
+<br>&emsp;    $(clearSearchBtn).on('click', function(event) {
+<br>&emsp;    function buildResultsTableHead (col, sort) {
+<br>&emsp;    function buildResultsTable (theResults, count, total) {
 <br>&emsp;    function search() {
 <br>&emsp;&emsp;&emsp;            success: function(data) {
 <br>&emsp;&emsp;&emsp;            error: function(e) {
+<br>&emsp;    $(document).ready(function(){
 <br>&emsp;    $("input[name='foil_id']").click(function() {
 <br>&emsp;    function setStart(val) {
+<br>&emsp;    function updateSorting(theHeadingId,sequence){
 <br>&emsp;    function cycleSort(elem) {
 <br>&emsp;&emsp;        /*
-<br>&emsp;&emsp;        * Cycle through sortSequence and 'style' elem with triangle
+<br>&emsp;&emsp;        * Cycle through sortSequence and 'style' elem with arrows
 <br>&emsp;&emsp;        * glyphicons representing sort direction.
 <br>&emsp;&emsp;        * */
 <br>&emsp;    function resetAndSearch() {
 <br>&emsp;    generateDocBtn.click(function () {
 <br>&emsp;    $(".status").click(function () {
 <br>&emsp;    searchBtn.click(function () {
+<br>&emsp;    searchBtnAdv.click(function () {
 <br>&emsp;    $("#size").change(function () {
 <br>&emsp;    agencySelect.change(function () {
 <br>&emsp;&emsp;&emsp;&emsp;&emsp;                    404: function () {
@@ -3098,10 +3104,10 @@ $(function() {
 <br>&emsp;&emsp;&emsp;&emsp;&emsp;                    $.each(data.active_users ,function() {
 <br>&emsp;&emsp;&emsp;&emsp;                complete: function () {
 <br>&emsp;    agencyUserSelect.change(function () {
-<br>&emsp;    next.click(function () {
-<br>&emsp;    prev.click(function () {
-<br>&emsp;    $(".sort-field").click(function () {
-<br>&emsp;    $("#advanced-options-toggle").click(function() {
+<br>&emsp;    next.click(function (event) {
+<br>&emsp;    prev.click(function (event) {
+<br>&emsp;    $('body').on('click', '.sort-field', function() {
+<br>&emsp;    function scrollToElement(theId){
 <br>
                    </p>
                 </details>

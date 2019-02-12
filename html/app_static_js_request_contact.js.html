@@ -3047,7 +3047,15 @@ The function in this file adds data-parsley-required attributes to required fiel
 
                     <p>
 <!-- Include the documentation here! -->
-<p>We attempted to read from templates/app_static_js_request_contact.js_ex.txt but failed.</p>
+
+$(document).ready(function () {
+<br>&emsp;    $("#contact-info").parsley().on("form:validated", function () {
+<br>&emsp;&emsp;        $(".parsley-required").each(function () {
+<br>&emsp;&emsp;        $(".parsley-type").each(function () {
+<br>&emsp;    name.keyup(function() {
+<br>&emsp;    subject.keyup(function() {
+<br>&emsp;    message.keyup(function() {
+<br>
                    </p>
                 </details>
 

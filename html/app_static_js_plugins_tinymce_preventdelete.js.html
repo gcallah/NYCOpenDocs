@@ -3045,7 +3045,37 @@
 
                     <p>
 <!-- Include the documentation here! -->
-<p>We attempted to read from templates/app_static_js_plugins_tinymce_preventdelete.js_ex.txt but failed.</p>
+
+(function() {
+<br>	Array.prototype.contains = function (e) {
+<br>	function PreventDelete() {
+<br>		function r(val, min, max) {
+<br>		function hasText(str, pos, left) {
+<br>		function hasStopText(str, pos, left) {
+<br>		this.nextElement = function(elem) {
+<br>		this.prevElement = function(elem) {
+<br>		this.keyWillDelete = function(evt) {
+<br>			/*
+<br>			In trying to figure out how to detect if a key was relevant, I appended all the keycodes for keys on my keyboard that would "delete" selected text, and sorted.  Generated the range blow:
+<br>			Deleting
+<br>			8, 9, 13, 46, 48-57, 65-90, 96-111, 186-192, 219-222
+<br>
+<br>			I did the same thign with keys that wouldn't and got these below
+<br>			Not harmful
+<br>			16-19, 27, 33-40, 45, 91-93, 112-123, 144
+<br>
+<br>			You should note, since it's onkeydown it doesn't change the code if you have alt or ctrl or something pressed.  It makes it fewer keycombos actually.
+<br>
+<br>			I'm pretty sure in these "deleting" keys will still "delete" if shift is held
+<br>			*/
+<br>		this.cancelKey = function(evt) {
+<br>		this.check = function(node) {
+<br>		this.checkChildren = function(node) {
+<br>		this.logElem = function(elem) {
+<br>				function(key) {
+<br>		tinymce.PluginManager.add('preventdelete', function(ed, link) {
+<br>			ed.on('keydown', function(evt) {
+<br>
                    </p>
                 </details>
 

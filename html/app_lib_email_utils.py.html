@@ -3034,7 +3034,22 @@
 
                     <p>
 <!-- Include the text material here! -->
-This file contains functions for sending emails to a contact and for sneding emails with attachments. The file also contains a function to return a list of emails of admins, users, and the agency default email. 
+This file contains functions for sending emails to a contact and for sending emails with attachments.
+The file also contains a function to return a list of emails of admins, users, and the agency default email.
+
+<br><br>
+Functions explanation:
+<br>
+'send_email(subject, to=list(), cc=list(), bcc=list(), template=None, email_content=None, **kwargs)'
+<br>
+This function sends asynchronous emails for the application by taking arguments from the frontend.
+<br>
+<br>
+'get_agency_emails(request_id, admins_only=False)'
+<br>
+It gets a list of the agency emails (assigned users and default email).
+It returns a list of agency emails or ['agency@email.com'] (for testing) using
+parameters FOIL request ID and the return list of agency admin emails.
                     </p>
                 </details>
 

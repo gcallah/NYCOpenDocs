@@ -3045,59 +3045,7 @@
 
                     <p>
 <!-- Include the documentation here! -->
-
-"""
-<br>
-<br>.. module:: auth.forms
-<br>
-<br>&emsp;    :synopsis: Defines the forms used to manage Authentication requests
-<br>"""
-<br>class StripFieldsForm(Form):
-<br>&emsp;    """
-<br>&emsp;    Any field data that can be stripped, will be stripped.
-<br>&emsp;    http://stackoverflow.com/questions/26232165/automatically-strip-all-values-in-wtforms
-<br>&emsp;    """
-<br>&emsp;    class Meta:
-<br>&emsp;&emsp;        def bind_field(self, form, unbound_field, options):
-<br>def strip_filter(value):
-<br>class ManageUserAccountForm(StripFieldsForm):
-<br>&emsp;    """
-<br>&emsp;    This form manages the OpenRecords specific account fields for a user account:
-<br>&emsp;&emsp;        Title: The job title for the user (e.g. Reporter); This is optional
-<br>&emsp;&emsp;        Organization: The company for the user (e.g. New York Times); This is optional
-<br>&emsp;&emsp;        Notification Email: The email to send OpenRecords notifications to
-<br>&emsp;&emsp;        Phone Number: The user's phone number; This is optional
-<br>&emsp;&emsp;        Fax Number: The user's fax number: This is optional
-<br>&emsp;&emsp;        Mailing Address: The user's mailing address; Optional;
-<br>&emsp;&emsp;&emsp;            Format: Address One, Address Two, City, State, Zip (5 Digits)
-<br>&emsp;    """
-<br>&emsp;    def __init__(self, user=None):
-<br>&emsp;&emsp;        """
-<br>&emsp;&emsp;        :type user: app.models.Users
-<br>&emsp;&emsp;        """
-<br>&emsp;    def autofill(self):
-<br>&emsp;    def validate(self):
-<br>&emsp;&emsp;        """ One mthod of contact must be provided. """
-<br>class ManageAgencyUserAccountForm(StripFieldsForm):
-<br>&emsp;    """
-<br>&emsp;    This form manages the OpenRecords specific account fields for a user account:
-<br>&emsp;&emsp;        Title: The job title for the user (e.g. Reporter); This is optional
-<br>&emsp;&emsp;        Organization: The company for the user (e.g. New York Times); This is optional
-<br>&emsp;&emsp;        Notification Email: The email to send OpenRecords notifications to
-<br>&emsp;&emsp;        Phone Number: The user's phone number; This is optional
-<br>&emsp;&emsp;        Fax Number: The user's fax number: This is optional
-<br>&emsp;&emsp;        Mailing Address: The user's mailing address; Optional;
-<br>&emsp;&emsp;&emsp;            Format: Address One, Address Two, City, State, Zip (5 Digits)
-<br>&emsp;    """
-<br>&emsp;    def __init__(self, user=None):
-<br>&emsp;&emsp;        """
-<br>&emsp;&emsp;        :type user: app.models.Users
-<br>&emsp;&emsp;        """
-<br>&emsp;    def autofill(self):
-<br>&emsp;    def validate(self):
-<br>&emsp;&emsp;        """ One mthod of contact must be provided. """
-<br>class LDAPLoginForm(Form):
-<br>
+<p>We attempted to read from templates/app_auth_forms.py_ex.txt but failed.</p>
                    </p>
                 </details>
 

@@ -294,8 +294,12 @@ figcaption {
     margin: .8em 1em .6em 1em;
 }
 
+span.done {
+    color: #42a;
+}
+
 span.hilight {
-    color: #fc2;
+    color: #a24;
 }
 
 span.input {

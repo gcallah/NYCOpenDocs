@@ -3045,63 +3045,7 @@
 
                     <p>
 <!-- Include the documentation here! -->
-
-"""
-<br>.. module:: auth.views.
-<br>
-<br>   :synopsis: Handles OAUTH and LDAP authentication endpoints for NYC OpenRecords
-<br>
-<br>"""
-<br>def login():
-<br>&emsp;    """
-<br>&emsp;    Based off of: https://flask-login.readthedocs.io/en/latest/#login-example
-<br>
-<br>&emsp;    If using LDAP, see ldap_login().
-<br>
-<br>&emsp;    If using SAML/OAuth, check for the presence of an access token
-<br>&emsp;    in the session, which is used to fetch user information for processing.
-<br>&emsp;    If no token exists, send the user to the authorization url
-<br>&emsp;    (first leg of the OAuth 2 workflow).
-<br>
-<br>&emsp;    * NOTE *
-<br>&emsp;    Since we are using OAuth Mobile Application Flow to fetch the information
-<br>&emsp;    normally retrieved in a SAML Assertion, the url resulting from authorization
-<br>&emsp;    is in the format 'redirect_uri#access_token=123guid=ABC...'. Notice the fragment
-<br>&emsp;    identifier ('#') in place of what would normally be the '?' separator.
-<br>&emsp;    Since Flask drops everything after the identifier, we must extract these values
-<br>&emsp;    client-side in order to forward them to the server. Therefore, the redirect uri
-<br>&emsp;    we are using is our home page (main.index, along with the 'next' url if present)
-<br>&emsp;    which contains a script that detects the presence of an access token
-<br>&emsp;    and redirects to the intended OAuth callback (auth.authorize).
-<br>
-<br>&emsp;    https://tools.ietf.org/html/rfc3986#section-3.5
-<br>
-<br>&emsp;    """
-<br>def authorize():
-<br>&emsp;    """
-<br>&emsp;    Store access token and a UTC timestamp for its
-<br>&emsp;    expiration date and time in the session, then
-<br>&emsp;    process SAML Assertion information.
-<br>
-<br>&emsp;    See: https://nyc4d.nycnet/nycidauthentication.shtml
-<br>&emsp;    """
-<br>def logout():
-<br>&emsp;    """
-<br>&emsp;    Provides a unified interface for logging out users.
-<br>
-<br>&emsp;    Accepts two request arguments:
-<br>&emsp;&emsp;        :param timeout: Logout being called due to a session timeout.
-<br>&emsp;&emsp;        :type timeout: Boolean; Default = False
-<br>&emsp;&emsp;        :param forced_logout: Logout being called to close any duplicate sessions.
-<br>&emsp;&emsp;        :param forced_logout: Boolean; Default = False
-<br>
-<br>&emsp;    :return:
-<br>&emsp;    """
-<br>def manage():
-<br>def ldap_login():
-<br>def ldap_logout(timed_out=False, forced_logout=False):
-<br>def oauth_logout():
-<br>
+<p>We attempted to read from templates/app_auth_views.py_ex.txt but failed.</p>
                    </p>
                 </details>
 

@@ -3034,7 +3034,22 @@
 
                     <p>
 <!-- Include the text material here! -->
-<p>We attempted to read from templates/app_upload_utils.py_hw.txt but failed.</p>
+This file contains few helper functions for uploads like
+for parsing content range, checking for an existing uploaded file,
+validating the mime type of a file and returning a formatted key for an upload.
+<br>
+<br>
+Class VirusDetectedException raises and exception when scanner detects
+an infected file.
+<br>
+Celery is an asynchronous task queue/job queue based on distributed
+message passing. It is focused on real-time operation,
+but supports scheduling as well.
+<br>Functions are defined for scanning an uploaded file and moving
+the clean file to the data directory.
+<br>Function scan_file() scans for viruses using McAfee Virus Scan.
+If an infected file is detected, removes the file and
+raises VirusDetectedException.
                     </p>
                 </details>
 

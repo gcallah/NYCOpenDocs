@@ -3,7 +3,7 @@
     <head>
 <!--include head.txt -->
         <title>
-            24e110b4489b_drop_the_users-agency_ein_column.py
+            idp_metadata_parser.py
         </title>
     </head>
 
@@ -19,7 +19,7 @@
                     </figcaption>
                 </figure>
                 <h1>
-                    24e110b4489b_drop_the_users-agency_ein_column.py
+                    idp_metadata_parser.py
                 </h1>
 
                 <details>
@@ -29,7 +29,7 @@
 
                     <p>
 <!-- Include the text material here! -->
-<!--include templates/migrations_versions_24e110b4489b_drop_the_users-agency_ein_column.py_hw.txt -->
+<!--include templates/app_lib_onelogin_saml2_idp_metadata_parser.py_hw.txt -->
                     </p>
                 </details>
 
@@ -40,13 +40,13 @@
 
                     <p>
 <!-- Include the documentation here! -->
-<!--include templates/migrations_versions_24e110b4489b_drop_the_users-agency_ein_column.py_ex.txt -->
+<!--include templates/app_lib_onelogin_saml2_idp_metadata_parser.py_ex.txt -->
                    </p>
                 </details>
 
 <!-- Include source code here! -->
                 <p>
-<a href="https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/24e110b4489b_drop_the_users-agency_ein_column.py">Source code</a>
+<a href="https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/lib/onelogin/saml2/idp_metadata_parser.py">Source code</a>
                 </p>
             </div>
         </div>

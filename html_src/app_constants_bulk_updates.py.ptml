@@ -3,7 +3,7 @@
     <head>
 <!--include head.txt -->
         <title>
-            attrs.html
+            bulk_updates.py
         </title>
     </head>
 
@@ -19,7 +19,7 @@
                     </figcaption>
                 </figure>
                 <h1>
-                    attrs.html
+                    bulk_updates.py
                 </h1>
 
                 <details>
@@ -29,7 +29,7 @@
 
                     <p>
 <!-- Include the text material here! -->
-<!--include templates/app_templates_auth_attrs.html_hw.txt -->
+<!--include templates/app_constants_bulk_updates.py_hw.txt -->
                     </p>
                 </details>
 
@@ -40,13 +40,13 @@
 
                     <p>
 <!-- Include the documentation here! -->
-<!--include templates/app_templates_auth_attrs.html_ex.txt -->
+<!--include templates/app_constants_bulk_updates.py_ex.txt -->
                    </p>
                 </details>
 
 <!-- Include source code here! -->
                 <p>
-<a href="https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/auth/attrs.html">Source code</a>
+<a href="https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/constants/bulk_updates.py">Source code</a>
                 </p>
             </div>
         </div>

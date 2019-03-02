@@ -3,7 +3,7 @@
     <head>
 <!--include head.txt -->
         <title>
-            session-monitor.js
+            settings.py
         </title>
     </head>
 
@@ -19,7 +19,7 @@
                     </figcaption>
                 </figure>
                 <h1>
-                    session-monitor.js
+                    settings.py
                 </h1>
 
                 <details>
@@ -29,7 +29,7 @@
 
                     <p>
 <!-- Include the text material here! -->
-<!--include templates/app_static_js_auth_session-monitor.js_hw.txt -->
+<!--include templates/app_lib_onelogin_saml2_settings.py_hw.txt -->
                     </p>
                 </details>
 
@@ -40,13 +40,13 @@
 
                     <p>
 <!-- Include the documentation here! -->
-<!--include templates/app_static_js_auth_session-monitor.js_ex.txt -->
+<!--include templates/app_lib_onelogin_saml2_settings.py_ex.txt -->
                    </p>
                 </details>
 
 <!-- Include source code here! -->
                 <p>
-<a href="https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/auth/session-monitor.js">Source code</a>
+<a href="https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/lib/onelogin/saml2/settings.py">Source code</a>
                 </p>
             </div>
         </div>

@@ -3168,7 +3168,13 @@
 
                     <p>
 <!-- Include the text material here! -->
-<p>We attempted to read from templates/app_jobs.py_hw.txt but failed.</p>
+The jobs scheduled using celery crontab are defined in this file.
+Functions are defined to update statuses for due requests or overdue requests;
+send notifications to agency.
+<br>
+The last piece of this application i.e function update_next_request_number()
+is the asynchronous celery task that gets the job of automatically updating
+the next request number done.
                     </p>
                 </details>
 

@@ -3230,7 +3230,7 @@ def add_user_request(request_id, user_guid, permissions, point_of_contact):
 <br>&emsp;    :param user_guid: string guid of user being removed
 <br>
 <br>&emsp;    """
-<br>def create_user_request_event(events_type, user_request, old_permissions=None, user=current_user):
+<br>def create_user_request_event(events_type, user_request, old_permissions=None, old_point_of_contact=None,
 <br>&emsp;    """
 <br>&emsp;    Create an Event for the addition, removal, or updating of a UserRequest and insert into the database.
 <br>
@@ -3244,7 +3244,7 @@ def add_user_request(request_id, user_guid, permissions, point_of_contact):
 <br>&emsp;&emsp;        Events: The event object representing the change made to the user.
 <br>
 <br>&emsp;    """
-<br>def create_user_request_event_object(events_type, user_request, old_permissions=None, user=current_user):
+<br>def create_user_request_event_object(events_type, user_request, old_permissions=None, old_point_of_contact=None,
 <br>&emsp;    """
 <br>&emsp;    Create an Event for the addition, removal, or updating of a UserRequest and insert into the database.
 <br>

@@ -3179,7 +3179,776 @@
 
                     <p>
 <!-- Include the documentation here! -->
-<p>We attempted to read from templates/app_lib_onelogin_saml2_response.py_ex.txt but failed.</p>
+
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;""" OneLogin_Saml2_Response class
+<br>&emsp;&emsp;&emsp;SAML Response class of OneLogin's Python Toolkit.
+<br>"""
+<br>
+<br>from copy import deepcopy
+<br>from app.lib.onelogin.saml2.constants import OneLogin_Saml2_Constants
+<br>from app.lib.onelogin.saml2.utils import OneLogin_Saml2_Utils, OneLogin_Saml2_Error, OneLogin_Saml2_ValidationError, return_false_on_exception
+<br>from app.lib.onelogin.saml2.xml_utils import OneLogin_Saml2_XML
+<br>
+<br>
+<br>class OneLogin_Saml2_Response(object):
+<br>class OneLogin_Saml2_Response(object):
+<br>&emsp;    """
+<br>&emsp;&emsp;    This class handles a SAML Response. It parses or validates
+<br>&emsp;    """
+<br>
+<br>&emsp;    def __init__(self, settings, response):
+<br>&emsp;    def __init__(self, settings, response):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        self.__settings = settings
+<br>&emsp;&emsp;        self.__error = None
+<br>&emsp;&emsp;        self.response = OneLogin_Saml2_Utils.b64decode(response)
+<br>&emsp;&emsp;        self.document = OneLogin_Saml2_XML.to_etree(self.response)
+<br>&emsp;&emsp;        self.decrypted_document = None
+<br>&emsp;&emsp;        self.encrypted = None
+<br>&emsp;&emsp;        self.valid_scd_not_on_or_after = None
+<br>
+<br>&emsp;&emsp;        # Quick check for the presence of EncryptedAssertion
+<br>&emsp;&emsp;        encrypted_assertion_nodes = self.__query('/samlp:Response/saml:EncryptedAssertion')
+<br>&emsp;&emsp;        if encrypted_assertion_nodes:
+<br>&emsp;&emsp;&emsp;            decrypted_document = deepcopy(self.document)
+<br>&emsp;&emsp;&emsp;            self.encrypted = True
+<br>&emsp;&emsp;&emsp;            self.decrypted_document = self.__decrypt_assertion(decrypted_document)
+<br>
+<br>&emsp;    def is_valid(self, request_data, request_id=None, raise_exceptions=False):
+<br>&emsp;    def is_valid(self, request_data, request_id=None, raise_exceptions=False):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        self.__error = None
+<br>&emsp;&emsp;        try:
+<br>&emsp;&emsp;&emsp;            # Checks SAML version
+<br>&emsp;&emsp;&emsp;            if self.document.get('Version', None) != '2.0':
+<br>&emsp;&emsp;&emsp;&emsp;                raise OneLogin_Saml2_ValidationError(
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    'Unsupported SAML version',
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    OneLogin_Saml2_ValidationError.UNSUPPORTED_SAML_VERSION
+<br>&emsp;&emsp;&emsp;&emsp;                )
+<br>
+<br>&emsp;&emsp;&emsp;            # Checks that ID exists
+<br>&emsp;&emsp;&emsp;            if self.document.get('ID', None) is None:
+<br>&emsp;&emsp;&emsp;&emsp;                raise OneLogin_Saml2_ValidationError(
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    'Missing ID attribute on SAML Response',
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    OneLogin_Saml2_ValidationError.MISSING_ID
+<br>&emsp;&emsp;&emsp;&emsp;                )
+<br>
+<br>&emsp;&emsp;&emsp;            # Checks that the response has the SUCCESS status
+<br>&emsp;&emsp;&emsp;            self.check_status()
+<br>
+<br>&emsp;&emsp;&emsp;            # Checks that the response only has one assertion
+<br>&emsp;&emsp;&emsp;            if not self.validate_num_assertions():
+<br>&emsp;&emsp;&emsp;&emsp;                raise OneLogin_Saml2_ValidationError(
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    'SAML Response must contain 1 assertion',
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    OneLogin_Saml2_ValidationError.WRONG_NUMBER_OF_ASSERTIONS
+<br>&emsp;&emsp;&emsp;&emsp;                )
+<br>
+<br>&emsp;&emsp;&emsp;            idp_data = self.__settings.get_idp_data()
+<br>&emsp;&emsp;&emsp;            idp_entity_id = idp_data['entityId']
+<br>&emsp;&emsp;&emsp;            sp_data = self.__settings.get_sp_data()
+<br>&emsp;&emsp;&emsp;            sp_entity_id = sp_data['entityId']
+<br>
+<br>&emsp;&emsp;&emsp;            signed_elements = self.process_signed_elements()
+<br>
+<br>&emsp;&emsp;&emsp;            has_signed_response = '{%s}Response' % OneLogin_Saml2_Constants.NS_SAMLP in signed_elements
+<br>&emsp;&emsp;&emsp;            has_signed_assertion = '{%s}Assertion' % OneLogin_Saml2_Constants.NS_SAML in signed_elements
+<br>
+<br>&emsp;&emsp;&emsp;            if self.__settings.is_strict():
+<br>&emsp;&emsp;&emsp;&emsp;                no_valid_xml_msg = 'Invalid SAML Response. Not match the saml-schema-protocol-2.0.xsd'
+<br>&emsp;&emsp;&emsp;&emsp;                res = OneLogin_Saml2_XML.validate_xml(self.document, 'saml-schema-protocol-2.0.xsd', self.__settings.is_debug_active())
+<br>&emsp;&emsp;&emsp;&emsp;                if isinstance(res, str):
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    raise OneLogin_Saml2_ValidationError(
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        no_valid_xml_msg,
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        OneLogin_Saml2_ValidationError.INVALID_XML_FORMAT
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    )
+<br>
+<br>&emsp;&emsp;&emsp;&emsp;                # If encrypted, check also the decrypted document
+<br>&emsp;&emsp;&emsp;&emsp;                if self.encrypted:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    res = OneLogin_Saml2_XML.validate_xml(self.decrypted_document, 'saml-schema-protocol-2.0.xsd', self.__settings.is_debug_active())
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    if isinstance(res, str):
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        raise OneLogin_Saml2_ValidationError(
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                            no_valid_xml_msg,
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                            OneLogin_Saml2_ValidationError.INVALID_XML_FORMAT
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        )
+<br>
+<br>&emsp;&emsp;&emsp;&emsp;                security = self.__settings.get_security_data()
+<br>&emsp;&emsp;&emsp;&emsp;                current_url = OneLogin_Saml2_Utils.get_self_url_no_query(request_data)
+<br>
+<br>&emsp;&emsp;&emsp;&emsp;                # Check if the InResponseTo of the Response matchs the ID of the AuthNRequest (requestId) if provided
+<br>&emsp;&emsp;&emsp;&emsp;                in_response_to = self.document.get('InResponseTo', None)
+<br>&emsp;&emsp;&emsp;&emsp;                if in_response_to is not None and request_id is not None:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    if in_response_to != request_id:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        raise OneLogin_Saml2_ValidationError(
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                            'The InResponseTo of the Response: %s, does not match the ID of the AuthNRequest sent by the SP: %s' % (in_response_to, request_id),
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                            OneLogin_Saml2_ValidationError.WRONG_INRESPONSETO
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        )
+<br>
+<br>&emsp;&emsp;&emsp;&emsp;                if not self.encrypted and security['wantAssertionsEncrypted']:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    raise OneLogin_Saml2_ValidationError(
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        'The assertion of the Response is not encrypted and the SP require it',
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        OneLogin_Saml2_ValidationError.NO_ENCRYPTED_ASSERTION
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    )
+<br>
+<br>&emsp;&emsp;&emsp;&emsp;                if security['wantNameIdEncrypted']:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    encrypted_nameid_nodes = self.__query_assertion('/saml:Subject/saml:EncryptedID/xenc:EncryptedData')
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    if len(encrypted_nameid_nodes) != 1:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        raise OneLogin_Saml2_ValidationError(
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                            'The NameID of the Response is not encrypted and the SP require it',
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                            OneLogin_Saml2_ValidationError.NO_ENCRYPTED_NAMEID
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        )
+<br>
+<br>&emsp;&emsp;&emsp;&emsp;                # Checks that a Conditions element exists
+<br>&emsp;&emsp;&emsp;&emsp;                if not self.check_one_condition():
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    raise OneLogin_Saml2_ValidationError(
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        'The Assertion must include a Conditions element',
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        OneLogin_Saml2_ValidationError.MISSING_CONDITIONS
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    )
+<br>
+<br>&emsp;&emsp;&emsp;&emsp;                # Validates Assertion timestamps
+<br>&emsp;&emsp;&emsp;&emsp;                self.validate_timestamps(raise_exceptions=True)
+<br>
+<br>&emsp;&emsp;&emsp;&emsp;                # Checks that an AuthnStatement element exists and is unique
+<br>&emsp;&emsp;&emsp;&emsp;                if not self.check_one_authnstatement():
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    raise OneLogin_Saml2_ValidationError(
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        'The Assertion must include an AuthnStatement element',
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        OneLogin_Saml2_ValidationError.WRONG_NUMBER_OF_AUTHSTATEMENTS
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    )
+<br>
+<br>&emsp;&emsp;&emsp;&emsp;                # Checks that the response has all of the AuthnContexts that we provided in the request.
+<br>&emsp;&emsp;&emsp;&emsp;                # Only check if failOnAuthnContextMismatch is true and requestedAuthnContext is set to a list.
+<br>&emsp;&emsp;&emsp;&emsp;                requested_authn_contexts = security['requestedAuthnContext']
+<br>&emsp;&emsp;&emsp;&emsp;                if security['failOnAuthnContextMismatch'] and requested_authn_contexts and requested_authn_contexts is not True:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    authn_contexts = self.get_authn_contexts()
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    unmatched_contexts = set(requested_authn_contexts).difference(authn_contexts)
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    if unmatched_contexts:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        raise OneLogin_Saml2_ValidationError(
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                            'The AuthnContext "%s" didn\'t include requested context "%s"' % (', '.join(authn_contexts), ', '.join(unmatched_contexts)),
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                            OneLogin_Saml2_ValidationError.AUTHN_CONTEXT_MISMATCH
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        )
+<br>
+<br>&emsp;&emsp;&emsp;&emsp;                # Checks that there is at least one AttributeStatement if required
+<br>&emsp;&emsp;&emsp;&emsp;                attribute_statement_nodes = self.__query_assertion('/saml:AttributeStatement')
+<br>&emsp;&emsp;&emsp;&emsp;                if security.get('wantAttributeStatement', True) and not attribute_statement_nodes:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    raise OneLogin_Saml2_ValidationError(
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        'There is no AttributeStatement on the Response',
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        OneLogin_Saml2_ValidationError.NO_ATTRIBUTESTATEMENT
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    )
+<br>
+<br>&emsp;&emsp;&emsp;&emsp;                encrypted_attributes_nodes = self.__query_assertion('/saml:AttributeStatement/saml:EncryptedAttribute')
+<br>&emsp;&emsp;&emsp;&emsp;                if encrypted_attributes_nodes:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    raise OneLogin_Saml2_ValidationError(
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        'There is an EncryptedAttribute in the Response and this SP not support them',
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        OneLogin_Saml2_ValidationError.ENCRYPTED_ATTRIBUTES
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    )
+<br>
+<br>&emsp;&emsp;&emsp;&emsp;                # Checks destination
+<br>&emsp;&emsp;&emsp;&emsp;                destination = self.document.get('Destination', None)
+<br>&emsp;&emsp;&emsp;&emsp;                if destination:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    if not destination.startswith(current_url):
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        # TODO: Review if following lines are required, since we can control the
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        # request_data
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        #  current_url_routed = OneLogin_Saml2_Utils.get_self_routed_url_no_query(request_data)
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        #  if not destination.startswith(current_url_routed):
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        raise OneLogin_Saml2_ValidationError(
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                            'The response was received at %s instead of %s' % (current_url, destination),
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                            OneLogin_Saml2_ValidationError.WRONG_DESTINATION
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        )
+<br>&emsp;&emsp;&emsp;&emsp;                elif destination == '':
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    raise OneLogin_Saml2_ValidationError(
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        'The response has an empty Destination value',
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        OneLogin_Saml2_ValidationError.EMPTY_DESTINATION
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    )
+<br>&emsp;&emsp;&emsp;&emsp;                # Checks audience
+<br>&emsp;&emsp;&emsp;&emsp;                valid_audiences = self.get_audiences()
+<br>&emsp;&emsp;&emsp;&emsp;                if valid_audiences and sp_entity_id not in valid_audiences:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    raise OneLogin_Saml2_ValidationError(
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        '%s is not a valid audience for this Response' % sp_entity_id,
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        OneLogin_Saml2_ValidationError.WRONG_AUDIENCE
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    )
+<br>
+<br>&emsp;&emsp;&emsp;&emsp;                # Checks the issuers
+<br>&emsp;&emsp;&emsp;&emsp;                issuers = self.get_issuers()
+<br>&emsp;&emsp;&emsp;&emsp;                for issuer in issuers:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    if issuer is None or issuer != idp_entity_id:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        raise OneLogin_Saml2_ValidationError(
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                            'Invalid issuer in the Assertion/Response (expected %(idpEntityId)s, got %(issuer)s)' %
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                            {
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                                'idpEntityId': idp_entity_id,
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                                'issuer': issuer
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                            },
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                            OneLogin_Saml2_ValidationError.WRONG_ISSUER
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        )
+<br>
+<br>&emsp;&emsp;&emsp;&emsp;                # Checks the session Expiration
+<br>&emsp;&emsp;&emsp;&emsp;                session_expiration = self.get_session_not_on_or_after()
+<br>&emsp;&emsp;&emsp;&emsp;                if session_expiration and session_expiration <= OneLogin_Saml2_Utils.now():
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    raise OneLogin_Saml2_ValidationError(
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        'The attributes have expired, based on the SessionNotOnOrAfter of the AttributeStatement of this Response',
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        OneLogin_Saml2_ValidationError.SESSION_EXPIRED
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    )
+<br>
+<br>&emsp;&emsp;&emsp;&emsp;                # Checks the SubjectConfirmation, at least one SubjectConfirmation must be valid
+<br>&emsp;&emsp;&emsp;&emsp;                any_subject_confirmation = False
+<br>&emsp;&emsp;&emsp;&emsp;                subject_confirmation_nodes = self.__query_assertion('/saml:Subject/saml:SubjectConfirmation')
+<br>
+<br>&emsp;&emsp;&emsp;&emsp;                for scn in subject_confirmation_nodes:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    method = scn.get('Method', None)
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    if method and method != OneLogin_Saml2_Constants.CM_BEARER:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        continue
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    sc_data = scn.find('saml:SubjectConfirmationData', namespaces=OneLogin_Saml2_Constants.NSMAP)
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    if sc_data is None:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        continue
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    else:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        irt = sc_data.get('InResponseTo', None)
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        if in_response_to and irt and irt != in_response_to:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                            continue
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        recipient = sc_data.get('Recipient', None)
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        if recipient and current_url not in recipient:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                            continue
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        nooa = sc_data.get('NotOnOrAfter', None)
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        if nooa:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                            parsed_nooa = OneLogin_Saml2_Utils.parse_SAML_to_time(nooa)
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                            if parsed_nooa <= OneLogin_Saml2_Utils.now():
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                                continue
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        nb = sc_data.get('NotBefore', None)
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        if nb:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                            parsed_nb = OneLogin_Saml2_Utils.parse_SAML_to_time(nb)
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                            if parsed_nb > OneLogin_Saml2_Utils.now():
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                                continue
+<br>
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        if nooa:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                            self.valid_scd_not_on_or_after = OneLogin_Saml2_Utils.parse_SAML_to_time(nooa)
+<br>
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        any_subject_confirmation = True
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        break
+<br>
+<br>&emsp;&emsp;&emsp;&emsp;                if not any_subject_confirmation:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    raise OneLogin_Saml2_ValidationError(
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        'A valid SubjectConfirmation was not found on this Response',
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        OneLogin_Saml2_ValidationError.WRONG_SUBJECTCONFIRMATION
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    )
+<br>
+<br>&emsp;&emsp;&emsp;&emsp;                if security['wantAssertionsSigned'] and not has_signed_assertion:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    raise OneLogin_Saml2_ValidationError(
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        'The Assertion of the Response is not signed and the SP require it',
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        OneLogin_Saml2_ValidationError.NO_SIGNED_ASSERTION
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    )
+<br>
+<br>&emsp;&emsp;&emsp;&emsp;                if security['wantMessagesSigned'] and not has_signed_response:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    raise OneLogin_Saml2_ValidationError(
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        'The Message of the Response is not signed and the SP require it',
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        OneLogin_Saml2_ValidationError.NO_SIGNED_MESSAGE
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    )
+<br>
+<br>&emsp;&emsp;&emsp;            if not signed_elements or (not has_signed_response and not has_signed_assertion):
+<br>&emsp;&emsp;&emsp;&emsp;                raise OneLogin_Saml2_ValidationError(
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    'No Signature found. SAML Response rejected',
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    OneLogin_Saml2_ValidationError.NO_SIGNATURE_FOUND
+<br>&emsp;&emsp;&emsp;&emsp;                )
+<br>&emsp;&emsp;&emsp;            else:
+<br>&emsp;&emsp;&emsp;&emsp;                cert = idp_data.get('x509cert', None)
+<br>&emsp;&emsp;&emsp;&emsp;                fingerprint = idp_data.get('certFingerprint', None)
+<br>&emsp;&emsp;&emsp;&emsp;                if fingerprint:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    fingerprint = OneLogin_Saml2_Utils.format_finger_print(fingerprint)
+<br>&emsp;&emsp;&emsp;&emsp;                fingerprintalg = idp_data.get('certFingerprintAlgorithm', None)
+<br>
+<br>&emsp;&emsp;&emsp;&emsp;                multicerts = None
+<br>&emsp;&emsp;&emsp;&emsp;                if 'x509certMulti' in idp_data and 'signing' in idp_data['x509certMulti'] and idp_data['x509certMulti']['signing']:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    multicerts = idp_data['x509certMulti']['signing']
+<br>
+<br>&emsp;&emsp;&emsp;&emsp;                # If find a Signature on the Response, validates it checking the original response
+<br>&emsp;&emsp;&emsp;&emsp;                if has_signed_response and not OneLogin_Saml2_Utils.validate_sign(self.document, cert, fingerprint, fingerprintalg, xpath=OneLogin_Saml2_Utils.RESPONSE_SIGNATURE_XPATH, multicerts=multicerts, raise_exceptions=False):
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    raise OneLogin_Saml2_ValidationError(
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        'Signature validation failed. SAML Response rejected',
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        OneLogin_Saml2_ValidationError.INVALID_SIGNATURE
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    )
+<br>
+<br>&emsp;&emsp;&emsp;&emsp;                document_check_assertion = self.decrypted_document if self.encrypted else self.document
+<br>&emsp;&emsp;&emsp;&emsp;                if has_signed_assertion and not OneLogin_Saml2_Utils.validate_sign(document_check_assertion, cert, fingerprint, fingerprintalg, xpath=OneLogin_Saml2_Utils.ASSERTION_SIGNATURE_XPATH, multicerts=multicerts, raise_exceptions=False):
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    raise OneLogin_Saml2_ValidationError(
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        'Signature validation failed. SAML Response rejected',
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        OneLogin_Saml2_ValidationError.INVALID_SIGNATURE
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    )
+<br>
+<br>&emsp;&emsp;&emsp;            return True
+<br>&emsp;&emsp;        except Exception as err:
+<br>&emsp;&emsp;&emsp;            self.__error = str(err)
+<br>&emsp;&emsp;&emsp;            debug = self.__settings.is_debug_active()
+<br>&emsp;&emsp;&emsp;            if debug:
+<br>&emsp;&emsp;&emsp;&emsp;                print(err)
+<br>&emsp;&emsp;&emsp;            if raise_exceptions:
+<br>&emsp;&emsp;&emsp;&emsp;                raise
+<br>&emsp;&emsp;&emsp;            return False
+<br>
+<br>&emsp;    def check_status(self):
+<br>&emsp;    def check_status(self):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        status = OneLogin_Saml2_Utils.get_status(self.document)
+<br>&emsp;&emsp;        code = status.get('code', None)
+<br>&emsp;&emsp;        if code and code != OneLogin_Saml2_Constants.STATUS_SUCCESS:
+<br>&emsp;&emsp;&emsp;            splited_code = code.split(':')
+<br>&emsp;&emsp;&emsp;            printable_code = splited_code.pop()
+<br>&emsp;&emsp;&emsp;            status_exception_msg = 'The status code of the Response was not Success, was %s' % printable_code
+<br>&emsp;&emsp;&emsp;            status_msg = status.get('msg', None)
+<br>&emsp;&emsp;&emsp;            if status_msg:
+<br>&emsp;&emsp;&emsp;&emsp;                status_exception_msg += ' -> ' + status_msg
+<br>&emsp;&emsp;&emsp;            raise OneLogin_Saml2_ValidationError(
+<br>&emsp;&emsp;&emsp;&emsp;                status_exception_msg,
+<br>&emsp;&emsp;&emsp;&emsp;                OneLogin_Saml2_ValidationError.STATUS_CODE_IS_NOT_SUCCESS
+<br>&emsp;&emsp;&emsp;            )
+<br>
+<br>&emsp;    def check_one_condition(self):
+<br>&emsp;    def check_one_condition(self):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        condition_nodes = self.__query_assertion('/saml:Conditions')
+<br>&emsp;&emsp;        if len(condition_nodes) == 1:
+<br>&emsp;&emsp;&emsp;            return True
+<br>&emsp;&emsp;        else:
+<br>&emsp;&emsp;&emsp;            return False
+<br>
+<br>&emsp;    def check_one_authnstatement(self):
+<br>&emsp;    def check_one_authnstatement(self):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        authnstatement_nodes = self.__query_assertion('/saml:AuthnStatement')
+<br>&emsp;&emsp;        if len(authnstatement_nodes) == 1:
+<br>&emsp;&emsp;&emsp;            return True
+<br>&emsp;&emsp;        else:
+<br>&emsp;&emsp;&emsp;            return False
+<br>
+<br>&emsp;    def get_audiences(self):
+<br>&emsp;    def get_audiences(self):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        audience_nodes = self.__query_assertion('/saml:Conditions/saml:AudienceRestriction/saml:Audience')
+<br>&emsp;&emsp;        return [OneLogin_Saml2_XML.element_text(node) for node in audience_nodes if OneLogin_Saml2_XML.element_text(node) is not None]
+<br>
+<br>&emsp;    def get_authn_contexts(self):
+<br>&emsp;    def get_authn_contexts(self):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;        :returns: The authentication classes for the SAML Response
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        authn_context_nodes = self.__query_assertion('/saml:AuthnStatement/saml:AuthnContext/saml:AuthnContextClassRef')
+<br>&emsp;&emsp;        return [OneLogin_Saml2_XML.element_text(node) for node in authn_context_nodes]
+<br>
+<br>&emsp;    def get_issuers(self):
+<br>&emsp;    def get_issuers(self):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        issuers = set()
+<br>
+<br>&emsp;&emsp;        message_issuer_nodes = OneLogin_Saml2_XML.query(self.document, '/samlp:Response/saml:Issuer')
+<br>&emsp;&emsp;        if len(message_issuer_nodes) > 0:
+<br>&emsp;&emsp;&emsp;            if len(message_issuer_nodes) == 1:
+<br>&emsp;&emsp;&emsp;&emsp;                issuer_value = OneLogin_Saml2_XML.element_text(message_issuer_nodes[0])
+<br>&emsp;&emsp;&emsp;&emsp;                if issuer_value:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    issuers.add(issuer_value)
+<br>&emsp;&emsp;&emsp;            else:
+<br>&emsp;&emsp;&emsp;&emsp;                raise OneLogin_Saml2_ValidationError(
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    'Issuer of the Response is multiple.',
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    OneLogin_Saml2_ValidationError.ISSUER_MULTIPLE_IN_RESPONSE
+<br>&emsp;&emsp;&emsp;&emsp;                )
+<br>
+<br>&emsp;&emsp;        assertion_issuer_nodes = self.__query_assertion('/saml:Issuer')
+<br>&emsp;&emsp;        if len(assertion_issuer_nodes) == 1:
+<br>&emsp;&emsp;&emsp;            issuer_value = OneLogin_Saml2_XML.element_text(assertion_issuer_nodes[0])
+<br>&emsp;&emsp;&emsp;            if issuer_value:
+<br>&emsp;&emsp;&emsp;&emsp;                issuers.add(issuer_value)
+<br>&emsp;&emsp;        else:
+<br>&emsp;&emsp;&emsp;            raise OneLogin_Saml2_ValidationError(
+<br>&emsp;&emsp;&emsp;&emsp;                'Issuer of the Assertion not found or multiple.',
+<br>&emsp;&emsp;&emsp;&emsp;                OneLogin_Saml2_ValidationError.ISSUER_NOT_FOUND_IN_ASSERTION
+<br>&emsp;&emsp;&emsp;            )
+<br>
+<br>&emsp;&emsp;        return list(set(issuers))
+<br>
+<br>&emsp;    def get_nameid_data(self):
+<br>&emsp;    def get_nameid_data(self):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        nameid = None
+<br>&emsp;&emsp;        nameid_data = {}
+<br>
+<br>&emsp;&emsp;        encrypted_id_data_nodes = self.__query_assertion('/saml:Subject/saml:EncryptedID/xenc:EncryptedData')
+<br>&emsp;&emsp;        if encrypted_id_data_nodes:
+<br>&emsp;&emsp;&emsp;            encrypted_data = encrypted_id_data_nodes[0]
+<br>&emsp;&emsp;&emsp;            key = self.__settings.get_sp_key()
+<br>&emsp;&emsp;&emsp;            nameid = OneLogin_Saml2_Utils.decrypt_element(encrypted_data, key)
+<br>&emsp;&emsp;        else:
+<br>&emsp;&emsp;&emsp;            nameid_nodes = self.__query_assertion('/saml:Subject/saml:NameID')
+<br>&emsp;&emsp;&emsp;            if nameid_nodes:
+<br>&emsp;&emsp;&emsp;&emsp;                nameid = nameid_nodes[0]
+<br>
+<br>&emsp;&emsp;        is_strict = self.__settings.is_strict()
+<br>&emsp;&emsp;        want_nameid = self.__settings.get_security_data().get('wantNameId', True)
+<br>&emsp;&emsp;        if nameid is None:
+<br>&emsp;&emsp;&emsp;            if is_strict and want_nameid:
+<br>&emsp;&emsp;&emsp;&emsp;                raise OneLogin_Saml2_ValidationError(
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    'NameID not found in the assertion of the Response',
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    OneLogin_Saml2_ValidationError.NO_NAMEID
+<br>&emsp;&emsp;&emsp;&emsp;                )
+<br>&emsp;&emsp;        else:
+<br>&emsp;&emsp;&emsp;            if is_strict and want_nameid and not OneLogin_Saml2_XML.element_text(nameid):
+<br>&emsp;&emsp;&emsp;&emsp;                raise OneLogin_Saml2_ValidationError(
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    'An empty NameID value found',
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    OneLogin_Saml2_ValidationError.EMPTY_NAMEID
+<br>&emsp;&emsp;&emsp;&emsp;                )
+<br>
+<br>&emsp;&emsp;&emsp;            nameid_data = {'Value': OneLogin_Saml2_XML.element_text(nameid)}
+<br>&emsp;&emsp;&emsp;            for attr in ['Format', 'SPNameQualifier', 'NameQualifier']:
+<br>&emsp;&emsp;&emsp;&emsp;                value = nameid.get(attr, None)
+<br>&emsp;&emsp;&emsp;&emsp;                if value:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    if is_strict and attr == 'SPNameQualifier':
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        sp_data = self.__settings.get_sp_data()
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        sp_entity_id = sp_data.get('entityId', '')
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        if sp_entity_id != value:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                            raise OneLogin_Saml2_ValidationError(
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                                'The SPNameQualifier value mistmatch the SP entityID value.',
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                                OneLogin_Saml2_ValidationError.SP_NAME_QUALIFIER_NAME_MISMATCH
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                            )
+<br>
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    nameid_data[attr] = value
+<br>&emsp;&emsp;        return nameid_data
+<br>
+<br>&emsp;    def get_nameid(self):
+<br>&emsp;    def get_nameid(self):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        nameid_value = None
+<br>&emsp;&emsp;        nameid_data = self.get_nameid_data()
+<br>&emsp;&emsp;        if nameid_data and 'Value' in nameid_data.keys():
+<br>&emsp;&emsp;&emsp;            nameid_value = nameid_data['Value']
+<br>&emsp;&emsp;        return nameid_value
+<br>
+<br>&emsp;    def get_nameid_format(self):
+<br>&emsp;    def get_nameid_format(self):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        nameid_format = None
+<br>&emsp;&emsp;        nameid_data = self.get_nameid_data()
+<br>&emsp;&emsp;        if nameid_data and 'Format' in nameid_data.keys():
+<br>&emsp;&emsp;&emsp;            nameid_format = nameid_data['Format']
+<br>&emsp;&emsp;        return nameid_format
+<br>
+<br>&emsp;    def get_session_not_on_or_after(self):
+<br>&emsp;    def get_session_not_on_or_after(self):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        not_on_or_after = None
+<br>&emsp;&emsp;        authn_statement_nodes = self.__query_assertion('/saml:AuthnStatement[@SessionNotOnOrAfter]')
+<br>&emsp;&emsp;        if authn_statement_nodes:
+<br>&emsp;&emsp;&emsp;            not_on_or_after = OneLogin_Saml2_Utils.parse_SAML_to_time(authn_statement_nodes[0].get('SessionNotOnOrAfter'))
+<br>&emsp;&emsp;        return not_on_or_after
+<br>
+<br>&emsp;    def get_assertion_not_on_or_after(self):
+<br>&emsp;    def get_assertion_not_on_or_after(self):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        return self.valid_scd_not_on_or_after
+<br>
+<br>&emsp;    def get_session_index(self):
+<br>&emsp;    def get_session_index(self):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        session_index = None
+<br>&emsp;&emsp;        authn_statement_nodes = self.__query_assertion('/saml:AuthnStatement[@SessionIndex]')
+<br>&emsp;&emsp;        if authn_statement_nodes:
+<br>&emsp;&emsp;&emsp;            session_index = authn_statement_nodes[0].get('SessionIndex')
+<br>&emsp;&emsp;        return session_index
+<br>
+<br>&emsp;    def get_attributes(self):
+<br>&emsp;    def get_attributes(self):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        attributes = {}
+<br>&emsp;&emsp;        attribute_nodes = self.__query_assertion('/saml:AttributeStatement/saml:Attribute')
+<br>&emsp;&emsp;        for attribute_node in attribute_nodes:
+<br>&emsp;&emsp;&emsp;            attr_name = attribute_node.get('Name')
+<br>&emsp;&emsp;&emsp;            if attr_name in attributes.keys():
+<br>&emsp;&emsp;&emsp;&emsp;                raise OneLogin_Saml2_ValidationError(
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    'Found an Attribute element with duplicated Name',
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    OneLogin_Saml2_ValidationError.DUPLICATED_ATTRIBUTE_NAME_FOUND
+<br>&emsp;&emsp;&emsp;&emsp;                )
+<br>
+<br>&emsp;&emsp;&emsp;            values = []
+<br>&emsp;&emsp;&emsp;            for attr in attribute_node.iterchildren('{%s}AttributeValue' % OneLogin_Saml2_Constants.NSMAP['saml']):
+<br>&emsp;&emsp;&emsp;&emsp;                attr_text = OneLogin_Saml2_XML.element_text(attr)
+<br>&emsp;&emsp;&emsp;&emsp;                if attr_text:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    attr_text = attr_text.strip()
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    if attr_text:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        values.append(attr_text)
+<br>
+<br>&emsp;&emsp;&emsp;&emsp;                # Parse any nested NameID children
+<br>&emsp;&emsp;&emsp;&emsp;                for nameid in attr.iterchildren('{%s}NameID' % OneLogin_Saml2_Constants.NSMAP['saml']):
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    values.append({
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        'NameID': {
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                            'Format': nameid.get('Format'),
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                            'NameQualifier': nameid.get('NameQualifier'),
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                            'value': nameid.text
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        }
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    })
+<br>&emsp;&emsp;&emsp;            attributes[attr_name] = values
+<br>&emsp;&emsp;        return attributes
+<br>
+<br>&emsp;    def validate_num_assertions(self):
+<br>&emsp;    def validate_num_assertions(self):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        encrypted_assertion_nodes = OneLogin_Saml2_XML.query(self.document, '//saml:EncryptedAssertion')
+<br>&emsp;&emsp;        assertion_nodes = OneLogin_Saml2_XML.query(self.document, '//saml:Assertion')
+<br>
+<br>&emsp;&emsp;        valid = len(encrypted_assertion_nodes) + len(assertion_nodes) == 1
+<br>
+<br>&emsp;&emsp;        if (self.encrypted):
+<br>&emsp;&emsp;&emsp;            assertion_nodes = OneLogin_Saml2_XML.query(self.decrypted_document, '//saml:Assertion')
+<br>&emsp;&emsp;&emsp;            valid = valid and len(assertion_nodes) == 1
+<br>
+<br>&emsp;&emsp;        return valid
+<br>
+<br>&emsp;    def process_signed_elements(self):
+<br>&emsp;    def process_signed_elements(self):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        sign_nodes = self.__query('//ds:Signature')
+<br>
+<br>&emsp;&emsp;        signed_elements = []
+<br>&emsp;&emsp;        verified_seis = []
+<br>&emsp;&emsp;        verified_ids = []
+<br>&emsp;&emsp;        response_tag = '{%s}Response' % OneLogin_Saml2_Constants.NS_SAMLP
+<br>&emsp;&emsp;        assertion_tag = '{%s}Assertion' % OneLogin_Saml2_Constants.NS_SAML
+<br>
+<br>&emsp;&emsp;        for sign_node in sign_nodes:
+<br>&emsp;&emsp;&emsp;            signed_element = sign_node.getparent().tag
+<br>&emsp;&emsp;&emsp;            if signed_element != response_tag and signed_element != assertion_tag:
+<br>&emsp;&emsp;&emsp;&emsp;                raise OneLogin_Saml2_ValidationError(
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    'Invalid Signature Element %s SAML Response rejected' % signed_element,
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    OneLogin_Saml2_ValidationError.WRONG_SIGNED_ELEMENT
+<br>&emsp;&emsp;&emsp;&emsp;                )
+<br>
+<br>&emsp;&emsp;&emsp;            if not sign_node.getparent().get('ID'):
+<br>&emsp;&emsp;&emsp;&emsp;                raise OneLogin_Saml2_ValidationError(
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    'Signed Element must contain an ID. SAML Response rejected',
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    OneLogin_Saml2_ValidationError.ID_NOT_FOUND_IN_SIGNED_ELEMENT
+<br>&emsp;&emsp;&emsp;&emsp;                )
+<br>
+<br>&emsp;&emsp;&emsp;            id_value = sign_node.getparent().get('ID')
+<br>&emsp;&emsp;&emsp;            if id_value in verified_ids:
+<br>&emsp;&emsp;&emsp;&emsp;                raise OneLogin_Saml2_ValidationError(
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    'Duplicated ID. SAML Response rejected',
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    OneLogin_Saml2_ValidationError.DUPLICATED_ID_IN_SIGNED_ELEMENTS
+<br>&emsp;&emsp;&emsp;&emsp;                )
+<br>&emsp;&emsp;&emsp;            verified_ids.append(id_value)
+<br>
+<br>&emsp;&emsp;&emsp;            # Check that reference URI matches the parent ID and no duplicate References or IDs
+<br>&emsp;&emsp;&emsp;            ref = OneLogin_Saml2_XML.query(sign_node, './/ds:Reference')
+<br>&emsp;&emsp;&emsp;            if ref:
+<br>&emsp;&emsp;&emsp;&emsp;                ref = ref[0]
+<br>&emsp;&emsp;&emsp;&emsp;                if ref.get('URI'):
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    sei = ref.get('URI')[1:]
+<br>
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    if sei != id_value:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        raise OneLogin_Saml2_ValidationError(
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                            'Found an invalid Signed Element. SAML Response rejected',
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                            OneLogin_Saml2_ValidationError.INVALID_SIGNED_ELEMENT
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        )
+<br>
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    if sei in verified_seis:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        raise OneLogin_Saml2_ValidationError(
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                            'Duplicated Reference URI. SAML Response rejected',
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                            OneLogin_Saml2_ValidationError.DUPLICATED_REFERENCE_IN_SIGNED_ELEMENTS
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        )
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    verified_seis.append(sei)
+<br>
+<br>&emsp;&emsp;&emsp;            signed_elements.append(signed_element)
+<br>
+<br>&emsp;&emsp;        if signed_elements:
+<br>&emsp;&emsp;&emsp;            if not self.validate_signed_elements(signed_elements, raise_exceptions=True):
+<br>&emsp;&emsp;&emsp;&emsp;                raise OneLogin_Saml2_ValidationError(
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    'Found an unexpected Signature Element. SAML Response rejected',
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    OneLogin_Saml2_ValidationError.UNEXPECTED_SIGNED_ELEMENTS
+<br>&emsp;&emsp;&emsp;&emsp;                )
+<br>&emsp;&emsp;        return signed_elements
+<br>
+<br>&emsp;    @return_false_on_exception
+<br>&emsp;    def validate_signed_elements(self, signed_elements):
+<br>&emsp;    def validate_signed_elements(self, signed_elements):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        if len(signed_elements) > 2:
+<br>&emsp;&emsp;&emsp;            return False
+<br>
+<br>&emsp;&emsp;        response_tag = '{%s}Response' % OneLogin_Saml2_Constants.NS_SAMLP
+<br>&emsp;&emsp;        assertion_tag = '{%s}Assertion' % OneLogin_Saml2_Constants.NS_SAML
+<br>
+<br>&emsp;&emsp;        if (response_tag in signed_elements and signed_elements.count(response_tag) > 1) or \
+<br>&emsp;&emsp;           (assertion_tag in signed_elements and signed_elements.count(assertion_tag) > 1) or \
+<br>&emsp;&emsp;           (response_tag not in signed_elements and assertion_tag not in signed_elements):
+<br>&emsp;&emsp;&emsp;            return False
+<br>
+<br>&emsp;&emsp;        # Check that the signed elements found here, are the ones that will be verified
+<br>&emsp;&emsp;        # by OneLogin_Saml2_Utils.validate_sign
+<br>&emsp;&emsp;        if response_tag in signed_elements:
+<br>&emsp;&emsp;&emsp;            expected_signature_nodes = OneLogin_Saml2_XML.query(self.document, OneLogin_Saml2_Utils.RESPONSE_SIGNATURE_XPATH)
+<br>&emsp;&emsp;&emsp;            if len(expected_signature_nodes) != 1:
+<br>&emsp;&emsp;&emsp;&emsp;                raise OneLogin_Saml2_ValidationError(
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    'Unexpected number of Response signatures found. SAML Response rejected.',
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    OneLogin_Saml2_ValidationError.WRONG_NUMBER_OF_SIGNATURES_IN_RESPONSE
+<br>&emsp;&emsp;&emsp;&emsp;                )
+<br>
+<br>&emsp;&emsp;        if assertion_tag in signed_elements:
+<br>&emsp;&emsp;&emsp;            expected_signature_nodes = self.__query(OneLogin_Saml2_Utils.ASSERTION_SIGNATURE_XPATH)
+<br>&emsp;&emsp;&emsp;            if len(expected_signature_nodes) != 1:
+<br>&emsp;&emsp;&emsp;&emsp;                raise OneLogin_Saml2_ValidationError(
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    'Unexpected number of Assertion signatures found. SAML Response rejected.',
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    OneLogin_Saml2_ValidationError.WRONG_NUMBER_OF_SIGNATURES_IN_ASSERTION
+<br>&emsp;&emsp;&emsp;&emsp;                )
+<br>
+<br>&emsp;&emsp;        return True
+<br>
+<br>&emsp;    @return_false_on_exception
+<br>&emsp;    def validate_timestamps(self):
+<br>&emsp;    def validate_timestamps(self):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        conditions_nodes = self.__query_assertion('/saml:Conditions')
+<br>
+<br>&emsp;&emsp;        for conditions_node in conditions_nodes:
+<br>&emsp;&emsp;&emsp;            nb_attr = conditions_node.get('NotBefore')
+<br>&emsp;&emsp;&emsp;            nooa_attr = conditions_node.get('NotOnOrAfter')
+<br>&emsp;&emsp;&emsp;            if nb_attr and OneLogin_Saml2_Utils.parse_SAML_to_time(nb_attr) > OneLogin_Saml2_Utils.now() + OneLogin_Saml2_Constants.ALLOWED_CLOCK_DRIFT:
+<br>&emsp;&emsp;&emsp;&emsp;                raise OneLogin_Saml2_ValidationError(
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    'Could not validate timestamp: not yet valid. Check system clock.',
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    OneLogin_Saml2_ValidationError.ASSERTION_TOO_EARLY
+<br>&emsp;&emsp;&emsp;&emsp;                )
+<br>&emsp;&emsp;&emsp;            if nooa_attr and OneLogin_Saml2_Utils.parse_SAML_to_time(nooa_attr) + OneLogin_Saml2_Constants.ALLOWED_CLOCK_DRIFT <= OneLogin_Saml2_Utils.now():
+<br>&emsp;&emsp;&emsp;&emsp;                raise OneLogin_Saml2_ValidationError(
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    'Could not validate timestamp: expired. Check system clock.',
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    OneLogin_Saml2_ValidationError.ASSERTION_EXPIRED
+<br>&emsp;&emsp;&emsp;&emsp;                )
+<br>&emsp;&emsp;        return True
+<br>
+<br>&emsp;    def __query_assertion(self, xpath_expr):
+<br>&emsp;    def __query_assertion(self, xpath_expr):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>
+<br>&emsp;&emsp;        assertion_expr = '/saml:Assertion'
+<br>&emsp;&emsp;        signature_expr = '/ds:Signature/ds:SignedInfo/ds:Reference'
+<br>&emsp;&emsp;        signed_assertion_query = '/samlp:Response' + assertion_expr + signature_expr
+<br>&emsp;&emsp;        assertion_reference_nodes = self.__query(signed_assertion_query)
+<br>
+<br>&emsp;&emsp;        if not assertion_reference_nodes:
+<br>&emsp;&emsp;&emsp;            # Check if the message is signed
+<br>&emsp;&emsp;&emsp;            signed_message_query = '/samlp:Response' + signature_expr
+<br>&emsp;&emsp;&emsp;            message_reference_nodes = self.__query(signed_message_query)
+<br>&emsp;&emsp;&emsp;            if message_reference_nodes:
+<br>&emsp;&emsp;&emsp;&emsp;                message_id = message_reference_nodes[0].get('URI')
+<br>&emsp;&emsp;&emsp;&emsp;                final_query = "/samlp:Response[@ID='%s']/" % message_id[1:]
+<br>&emsp;&emsp;&emsp;            else:
+<br>&emsp;&emsp;&emsp;&emsp;                final_query = "/samlp:Response"
+<br>&emsp;&emsp;&emsp;            final_query += assertion_expr
+<br>&emsp;&emsp;        else:
+<br>&emsp;&emsp;&emsp;            assertion_id = assertion_reference_nodes[0].get('URI')
+<br>&emsp;&emsp;&emsp;            final_query = '/samlp:Response' + assertion_expr + "[@ID='%s']" % assertion_id[1:]
+<br>&emsp;&emsp;        final_query += xpath_expr
+<br>&emsp;&emsp;        return self.__query(final_query)
+<br>
+<br>&emsp;    def __query(self, query):
+<br>&emsp;    def __query(self, query):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        if self.encrypted:
+<br>&emsp;&emsp;&emsp;            document = self.decrypted_document
+<br>&emsp;&emsp;        else:
+<br>&emsp;&emsp;&emsp;            document = self.document
+<br>&emsp;&emsp;        return OneLogin_Saml2_XML.query(document, query)
+<br>
+<br>&emsp;    def __decrypt_assertion(self, xml):
+<br>&emsp;    def __decrypt_assertion(self, xml):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        key = self.__settings.get_sp_key()
+<br>&emsp;&emsp;        debug = self.__settings.is_debug_active()
+<br>
+<br>&emsp;&emsp;        if not key:
+<br>&emsp;&emsp;&emsp;            raise OneLogin_Saml2_Error(
+<br>&emsp;&emsp;&emsp;&emsp;                'No private key available to decrypt the assertion, check settings',
+<br>&emsp;&emsp;&emsp;&emsp;                OneLogin_Saml2_Error.PRIVATE_KEY_NOT_FOUND
+<br>&emsp;&emsp;&emsp;            )
+<br>
+<br>&emsp;&emsp;        encrypted_assertion_nodes = OneLogin_Saml2_XML.query(xml, '/samlp:Response/saml:EncryptedAssertion')
+<br>&emsp;&emsp;        if encrypted_assertion_nodes:
+<br>&emsp;&emsp;&emsp;            encrypted_data_nodes = OneLogin_Saml2_XML.query(encrypted_assertion_nodes[0], '//saml:EncryptedAssertion/xenc:EncryptedData')
+<br>&emsp;&emsp;&emsp;            if encrypted_data_nodes:
+<br>&emsp;&emsp;&emsp;&emsp;                keyinfo = OneLogin_Saml2_XML.query(encrypted_assertion_nodes[0], '//saml:EncryptedAssertion/xenc:EncryptedData/ds:KeyInfo')
+<br>&emsp;&emsp;&emsp;&emsp;                if not keyinfo:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    raise OneLogin_Saml2_ValidationError(
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        'No KeyInfo present, invalid Assertion',
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        OneLogin_Saml2_ValidationError.KEYINFO_NOT_FOUND_IN_ENCRYPTED_DATA
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    )
+<br>&emsp;&emsp;&emsp;&emsp;                keyinfo = keyinfo[0]
+<br>&emsp;&emsp;&emsp;&emsp;                children = keyinfo.getchildren()
+<br>&emsp;&emsp;&emsp;&emsp;                if not children:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    raise OneLogin_Saml2_ValidationError(
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        'KeyInfo has no children nodes, invalid Assertion',
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        OneLogin_Saml2_ValidationError.CHILDREN_NODE_NOT_FOUND_IN_KEYINFO
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    )
+<br>&emsp;&emsp;&emsp;&emsp;                for child in children:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    if 'RetrievalMethod' in child.tag:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        if child.attrib['Type'] != 'http://www.w3.org/2001/04/xmlenc#EncryptedKey':
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                            raise OneLogin_Saml2_ValidationError(
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                                'Unsupported Retrieval Method found',
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                                OneLogin_Saml2_ValidationError.UNSUPPORTED_RETRIEVAL_METHOD
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                            )
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        uri = child.attrib['URI']
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        if not uri.startswith('#'):
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                            break
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        uri = uri.split('#')[1]
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        encrypted_key = OneLogin_Saml2_XML.query(encrypted_assertion_nodes[0], './xenc:EncryptedKey[@Id="' + uri + '"]')
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        if encrypted_key:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                            keyinfo.append(encrypted_key[0])
+<br>
+<br>&emsp;&emsp;&emsp;&emsp;                encrypted_data = encrypted_data_nodes[0]
+<br>&emsp;&emsp;&emsp;&emsp;                decrypted = OneLogin_Saml2_Utils.decrypt_element(encrypted_data, key, debug=debug, inplace=True)
+<br>&emsp;&emsp;&emsp;&emsp;                xml.replace(encrypted_assertion_nodes[0], decrypted)
+<br>&emsp;&emsp;        return xml
+<br>
+<br>&emsp;    def get_error(self):
+<br>&emsp;    def get_error(self):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        return self.__error
+<br>
+<br>&emsp;    def get_xml_document(self):
+<br>&emsp;    def get_xml_document(self):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        if self.encrypted:
+<br>&emsp;&emsp;&emsp;            return self.decrypted_document
+<br>&emsp;&emsp;        else:
+<br>&emsp;&emsp;&emsp;            return self.document
+<br>
+<br>&emsp;    def get_id(self):
+<br>&emsp;    def get_id(self):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        return self.document.get('ID', None)
+<br>
+<br>&emsp;    def get_assertion_id(self):
+<br>&emsp;    def get_assertion_id(self):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        if not self.validate_num_assertions():
+<br>&emsp;&emsp;&emsp;            raise OneLogin_Saml2_ValidationError(
+<br>&emsp;&emsp;&emsp;&emsp;                'SAML Response must contain 1 assertion',
+<br>&emsp;&emsp;&emsp;&emsp;                OneLogin_Saml2_ValidationError.WRONG_NUMBER_OF_ASSERTIONS
+<br>&emsp;&emsp;&emsp;            )
+<br>&emsp;&emsp;        return self.__query_assertion('')[0].get('ID', None)
+<br>
                    </p>
                 </details>
 

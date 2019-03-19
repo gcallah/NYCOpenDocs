@@ -1,3 +1,11 @@
+import re
+
+FUNC_RE = "(^[ ]*def[ ]+.*)"
+func_match = re.compile(FUNC_RE)
+
+CLASS_RE = "(^[ ]*class[ ]+.*)"
+class_match = re.compile(CLASS_RE)
+
 def read_file_names():
     names = open("templates/menu_input.txt", "r")
     # when echo is called, all the names were concatenated into
@@ -17,12 +25,12 @@ def read_doc_py(file_name):
     for line in program_file:
         spaces = 0
         # if found a function or class 
-        if "def" in line or "class" in line:
+        if re.match(func_match, line) or re.match(class_match, line):
             # if "class" in line:
             #     spaces = line.find("class")
             # else:
             #     spaces = line.find("def")
-            output += "<code>" + line.strip().strip("def").strip("class") + "</code><br/>"
+            output += "<hr><code>" + line.strip().strip("def ").strip("class ") + "</code><br/>"
             # output += (spaces // 4) * "&emsp;" + line + "<br>"
         # check for docstrings 
         elif "'''" in line or '"""' in line:
@@ -40,13 +48,11 @@ def read_doc_py(file_name):
             if quotes_occurrence == 2:
                 # output += (spaces // 4) * "&emsp;" + line + "<br>"
                 output += line.strip().strip('"""').strip("'''") + "</br>"
-                output += "<hr>"
             else:
                 if not docstring:
                     docstring = True
                 else:
                     # output += (spaces // 4) * "&emsp;" + line + "<br>"
-                    output += "<hr>"
                     docstring = False
         if docstring:
             with_space = len(line)

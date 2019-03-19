@@ -30,7 +30,7 @@ def read_doc_py(file_name):
             #     spaces = line.find("class")
             # else:
             #     spaces = line.find("def")
-            output += "<hr><code>" + line.strip().strip("def ").strip("class ") + "</code><br/>"
+            output += "<hr><code>" + line.strip().replace("def ", "").replace("class ", "") + "</code><br/>"
             # output += (spaces // 4) * "&emsp;" + line + "<br>"
         # check for docstrings 
         elif "'''" in line or '"""' in line:

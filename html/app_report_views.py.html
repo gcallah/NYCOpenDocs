@@ -3028,11 +3028,6 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/NYCOpenDocs/html/migrations_versions_aeb1852855b4_add_appealable_option_to_reasons.py.html">
-                        aeb1852855b4_add_appealable_option_to_reasons.py
-                    </a>
-                </li>
-                <li>
                     <a href="/NYCOpenDocs/html/migrations_versions_b3c0c76ac2e6_add_envelope_functionality.py.html">
                         b3c0c76ac2e6_add_envelope_functionality.py
                     </a>
@@ -3192,7 +3187,28 @@ Retrieval of report data to generate the chart on the frontend.
                     <p>
 <!-- Include the documentation here! -->
 
-</br>.. module:: report.views.</br></br>:synopsis: Handles the report URL endpoints for the OpenRecords application</br><hr><code> show_report():</code><br/></br>This function handles the rendering of the reports page</br></br>:return: redirect to reports page</br><hr><code> get():</code><br/></br>This function handles the retrieval of report data to generate the chart on the frontend.</br>Takes in agency_ein or user_guid from the frontend and filters for the number of requests closed and requests</br>opened.</br></br>:return: json object({"labels": ["Opened", "Closed"],</br>values": [150, 135],</br>active_users": [('', ''), ('o8pj0k', 'John Doe')]}), 200</br><hr>
+"""
+<br>.. module:: report.views.
+<br>
+<br>   :synopsis: Handles the report URL endpoints for the OpenRecords application
+<br>"""
+<br>def show_report():
+<br>&emsp;    """
+<br>&emsp;    This function handles the rendering of the reports page
+<br>
+<br>&emsp;    :return: redirect to reports page
+<br>&emsp;    """
+<br>def get():
+<br>&emsp;    """
+<br>&emsp;    This function handles the retrieval of report data to generate the chart on the frontend.
+<br>&emsp;    Takes in agency_ein or user_guid from the frontend and filters for the number of requests closed and requests
+<br>&emsp;    opened.
+<br>
+<br>&emsp;    :return: json object({"labels": ["Opened", "Closed"],
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                          "values": [150, 135],
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                          "active_users": [('', ''), ('o8pj0k', 'John Doe')]}), 200
+<br>&emsp;    """
+<br>
                    </p>
                 </details>
 

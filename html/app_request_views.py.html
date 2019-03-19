@@ -3028,11 +3028,6 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/NYCOpenDocs/html/migrations_versions_aeb1852855b4_add_appealable_option_to_reasons.py.html">
-                        aeb1852855b4_add_appealable_option_to_reasons.py
-                    </a>
-                </li>
-                <li>
                     <a href="/NYCOpenDocs/html/migrations_versions_b3c0c76ac2e6_add_envelope_functionality.py.html">
                         b3c0c76ac2e6_add_envelope_functionality.py
                     </a>
@@ -3173,24 +3168,87 @@
 
                     <p>
 <!-- Include the text material here! -->
-It handles the request URL endpoints for the OpenRecords application.
-<br>
-The routes are defined to:
-<br>
-<br>
+<p>
+This module handles the request URL endpoints for the OpenRecords application.
+</p>
+
+<p>
+There are routes defined for the following:
+</p>
+
+<ul>
+<li>
 Create a new FOIL request sends a confirmation email after the Requests object
-is created,
-<br>
+is created.
+</li>
+
+<li>
 Testing purposes of the view a request back until backend functionality is
-implemented,
-<br>
+implemented.
+</li>
+
+<li>
 Handle messaging to the requester if they submitted a request to a non-portal
-agency,
-<br>
+agency.
+</li>
+
+<li>
 Get selected category value from the request body and generate a list of
-sorted agencies from the category,
-<br>
+sorted agencies from the category.
+</li>
+
+<li>
 Handle contacting the agency about a request as a requester.
+</li>
+</ul>
+
+<h3>
+Code Issues
+</h3>
+
+	<ul class="review">
+		<li>
+			The request route decorator should be explained so that someone coming to this code
+			for the first time knows what it is doing. (One comment for first decorator is enough.)
+		</li>
+
+		<li>
+			Function <code>new()</code> is very long (over 100 lines). Should be broken up
+			into smaller units for readability and unit testing.
+		</li>
+
+		<li>
+			<code>view_all()</code> has no docstring. Also, why does it need a holiday list?
+			Not saying it doesn't, just saying it is not explained.
+		</li>
+
+		<li>
+			This <code>if</code> is hard to follow because huge:
+			<pre>
+			<code>
+		if current_user in current_request.agency_users \
+            or current_request.agency_request_summary \
+            and (current_request.requester == current_user
+                 and current_request.status == request_status.CLOSED
+                 and not current_request.privacy['agency_request_summary']
+                 or current_request.status == request_status.CLOSED
+                 and current_request.agency_request_summary_release_date
+                 and current_request.agency_request_summary_release_date
+                 &lt; datetime.utcnow()
+                 and not current_request.privacy['agency_request_summary']):
+			</code>
+			</pre>
+			Recommend writing a predicate like <code>show_agency_req()</code>
+			and placing all conditions in there.
+		</li>
+
+		<li>
+			Lines 308-329 should be replaced by an attempt to get the
+			value from the dictionary with a default of <code>False</code>.
+			(<a href="https://docs.quantifiedcode.com/python-anti-patterns/correctness/not_using_get_to_return_a_default_value_from_a_dictionary.html">See here</a>.) 
+		</li>
+
+	</ul>
                     </p>
                 </details>
 

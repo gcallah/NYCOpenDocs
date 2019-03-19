@@ -3028,11 +3028,6 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/NYCOpenDocs/html/migrations_versions_aeb1852855b4_add_appealable_option_to_reasons.py.html">
-                        aeb1852855b4_add_appealable_option_to_reasons.py
-                    </a>
-                </li>
-                <li>
                     <a href="/NYCOpenDocs/html/migrations_versions_b3c0c76ac2e6_add_envelope_functionality.py.html">
                         b3c0c76ac2e6_add_envelope_functionality.py
                     </a>
@@ -3187,7 +3182,41 @@ The last function 'get_permission(permission_type: str, response_type: Responses
                     <p>
 <!-- Include the documentation here! -->
 
-<code> has_permission(permission: int):</code><br/></br>Checks to see if the current_user has the appropriate permission for this endpoint.</br></br>:param f: View function that is being wrapped.</br>:param permissions: List of permission values.</br>:return:</br><hr><code> decorator(f):</code><br/><code> decorated_function(request_id, *args, **kwargs):</code><br/><code> has_super():</code><br/></br>Checks to see if the current_user is a super user.</br></br>:param f: Function that is being wrapped.</br>:return:</br><hr><code> decorator(f):</code><br/><code> decorated_function(*args, **kwargs):</code><br/><code> is_allowed(user: Users, request_id: str, permission: int):</code><br/></br></br>:param user:</br>:param request_id:</br>:param permissions:</br>:return:</br><hr><code> get_permission(permission_type: str, response_type: Responses):</code><br/></br></br>:param permission_type:</br>:param response_type:</br>:return:</br><hr>
+def has_permission(permission: int):
+<br>&emsp;    """
+<br>&emsp;    Checks to see if the current_user has the appropriate permission for this endpoint.
+<br>
+<br>&emsp;    :param f: View function that is being wrapped.
+<br>&emsp;    :param permissions: List of permission values.
+<br>&emsp;    :return:
+<br>&emsp;    """
+<br>&emsp;    def decorator(f):
+<br>&emsp;&emsp;        def decorated_function(request_id, *args, **kwargs):
+<br>def has_super():
+<br>&emsp;    """
+<br>&emsp;    Checks to see if the current_user is a super user.
+<br>
+<br>&emsp;    :param f: Function that is being wrapped.
+<br>&emsp;    :return:
+<br>&emsp;    """
+<br>&emsp;    def decorator(f):
+<br>&emsp;&emsp;        def decorated_function(*args, **kwargs):
+<br>def is_allowed(user: Users, request_id: str, permission: int):
+<br>&emsp;    """
+<br>
+<br>&emsp;    :param user:
+<br>&emsp;    :param request_id:
+<br>&emsp;    :param permissions:
+<br>&emsp;    :return:
+<br>&emsp;    """
+<br>def get_permission(permission_type: str, response_type: Responses):
+<br>&emsp;    """
+<br>
+<br>&emsp;    :param permission_type:
+<br>&emsp;    :param response_type:
+<br>&emsp;    :return:
+<br>&emsp;    """
+<br>
                    </p>
                 </details>
 

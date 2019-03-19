@@ -3028,11 +3028,6 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/NYCOpenDocs/html/migrations_versions_aeb1852855b4_add_appealable_option_to_reasons.py.html">
-                        aeb1852855b4_add_appealable_option_to_reasons.py
-                    </a>
-                </li>
-                <li>
                     <a href="/NYCOpenDocs/html/migrations_versions_b3c0c76ac2e6_add_envelope_functionality.py.html">
                         b3c0c76ac2e6_add_envelope_functionality.py
                     </a>
@@ -3186,7 +3181,52 @@ like title, number, address; and restrictions.
                     <p>
 <!-- Include the documentation here! -->
 
-<code> patch(user_id):</code><br/></br>Request Parameters:</br>- title</br>- organization</br>- email</br>- phone_number</br>- fax_number</br>- mailing_address</br>- is_super</br>- is_agency_active</br>- is_agency_admin</br>(Mailing Address)</br>- zip</br>- city</br>- state</br>- address_one</br>- address_two</br></br>Restrictions:</br>- Anonymous Users</br>- cannot access this endpoint</br>- Agency Administrators</br>- cannot change their agency status</br>- can only update the agency status of users within their agency</br>- cannot change any super user status</br>- Super Users</br>- cannot change their super user status</br>- Agency Users</br>- cannot change any user except for themselves or</br>*anonymous* requesters for requests they are assigned to</br>- cannot change super user or agency status</br>- Public Users</br>- can only update themselves</br>- cannot change super user or agency status</br></br><hr>
+def patch(user_id):
+<br>&emsp;    """
+<br>&emsp;    Request Parameters:
+<br>&emsp;    - title
+<br>&emsp;    - organization
+<br>&emsp;    - email
+<br>&emsp;    - phone_number
+<br>&emsp;    - fax_number
+<br>&emsp;    - mailing_address
+<br>&emsp;    - is_super
+<br>&emsp;    - is_agency_active
+<br>&emsp;    - is_agency_admin
+<br>&emsp;    (Mailing Address)
+<br>&emsp;    - zip
+<br>&emsp;    - city
+<br>&emsp;    - state
+<br>&emsp;    - address_one
+<br>&emsp;    - address_two
+<br>
+<br>&emsp;    Restrictions:
+<br>&emsp;    - Anonymous Users
+<br>&emsp;&emsp;        - cannot access this endpoint
+<br>&emsp;    - Agency Administrators
+<br>&emsp;&emsp;        - cannot change their agency status
+<br>&emsp;&emsp;        - can only update the agency status of users within their agency
+<br>&emsp;&emsp;        - cannot change any super user status
+<br>&emsp;    - Super Users
+<br>&emsp;&emsp;        - cannot change their super user status
+<br>&emsp;    - Agency Users
+<br>&emsp;&emsp;        - cannot change any user except for themselves or
+<br>&emsp;&emsp;          *anonymous* requesters for requests they are assigned to
+<br>&emsp;&emsp;        - cannot change super user or agency status
+<br>&emsp;    - Public Users
+<br>&emsp;&emsp;        - can only update themselves
+<br>&emsp;&emsp;        - cannot change super user or agency status
+<br>
+<br>&emsp;    """
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    def set_permissions_and_create_event(user_req, perms):
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        """
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        Set permissions for a user request and create a
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        'user_permissions_changed' Event.
+<br>
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        :param user_req: user request
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        :param perms: permissions to set for user request
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        """
+<br>
                    </p>
                 </details>
 

@@ -3028,11 +3028,6 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/NYCOpenDocs/html/migrations_versions_aeb1852855b4_add_appealable_option_to_reasons.py.html">
-                        aeb1852855b4_add_appealable_option_to_reasons.py
-                    </a>
-                </li>
-                <li>
                     <a href="/NYCOpenDocs/html/migrations_versions_b3c0c76ac2e6_add_envelope_functionality.py.html">
                         b3c0c76ac2e6_add_envelope_functionality.py
                     </a>
@@ -3194,7 +3189,30 @@ the specified agency by taking one parameter agency_ein.
                     <p>
 <!-- Include the documentation here! -->
 
-<code> update_agency_active_status(agency_ein, is_active):</code><br/></br>Update the active status of an agency.</br>:param agency_ein: String identifier for agency (4 characters)</br>:param is_active: Boolean value for agency active status (True = Active)</br>:return: Boolean value (True if successfully changed active status)</br><hr><code> get_agency_feature(agency_ein, feature):</code><br/></br>Retrieve the specified agency feature for the specified agency.</br></br>:param agency_ein:  String identifier for agency (4 characters)</br>:param feature: Feature specified. See app/lib/constants/agency_features.py for possible values (String)</br></br>:return: JSON Object</br><hr><code> get_agency_features(agency_ein):</code><br/></br>Retrieve the agency features JSON object for the specified agency.</br></br>:param agency_ein: String identifier for agency (4 characters)</br>:return: JSON Object</br><hr>
+def update_agency_active_status(agency_ein, is_active):
+<br>&emsp;    """
+<br>&emsp;    Update the active status of an agency.
+<br>&emsp;    :param agency_ein: String identifier for agency (4 characters)
+<br>&emsp;    :param is_active: Boolean value for agency active status (True = Active)
+<br>&emsp;    :return: Boolean value (True if successfully changed active status)
+<br>&emsp;    """
+<br>def get_agency_feature(agency_ein, feature):
+<br>&emsp;    """
+<br>&emsp;    Retrieve the specified agency feature for the specified agency.
+<br>
+<br>&emsp;    :param agency_ein:  String identifier for agency (4 characters)
+<br>&emsp;    :param feature: Feature specified. See app/lib/constants/agency_features.py for possible values (String)
+<br>
+<br>&emsp;    :return: JSON Object
+<br>&emsp;    """
+<br>def get_agency_features(agency_ein):
+<br>&emsp;    """
+<br>&emsp;    Retrieve the agency features JSON object for the specified agency.
+<br>
+<br>&emsp;    :param agency_ein: String identifier for agency (4 characters)
+<br>&emsp;    :return: JSON Object
+<br>&emsp;    """
+<br>
                    </p>
                 </details>
 

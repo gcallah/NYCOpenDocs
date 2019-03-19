@@ -3028,11 +3028,6 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/NYCOpenDocs/html/migrations_versions_aeb1852855b4_add_appealable_option_to_reasons.py.html">
-                        aeb1852855b4_add_appealable_option_to_reasons.py
-                    </a>
-                </li>
-                <li>
                     <a href="/NYCOpenDocs/html/migrations_versions_b3c0c76ac2e6_add_envelope_functionality.py.html">
                         b3c0c76ac2e6_add_envelope_functionality.py
                     </a>
@@ -3186,7 +3181,15 @@ into database.
                     <p>
 <!-- Include the documentation here! -->
 
-<code> create_request_info_event(request_id, type_, previous_value, new_value):</code><br/></br>Create and store events object for updating the request information into database.</br>:param request_id: request ID</br>:param type_: event type</br>:param previous_value: previous value</br>:param new_value: new value</br><hr>
+def create_request_info_event(request_id, type_, previous_value, new_value):
+<br>&emsp;    """
+<br>&emsp;    Create and store events object for updating the request information into database.
+<br>&emsp;    :param request_id: request ID
+<br>&emsp;    :param type_: event type
+<br>&emsp;    :param previous_value: previous value
+<br>&emsp;    :param new_value: new value
+<br>&emsp;    """
+<br>
                    </p>
                 </details>
 

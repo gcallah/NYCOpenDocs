@@ -3028,11 +3028,6 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/NYCOpenDocs/html/migrations_versions_aeb1852855b4_add_appealable_option_to_reasons.py.html">
-                        aeb1852855b4_add_appealable_option_to_reasons.py
-                    </a>
-                </li>
-                <li>
                     <a href="/NYCOpenDocs/html/migrations_versions_b3c0c76ac2e6_add_envelope_functionality.py.html">
                         b3c0c76ac2e6_add_envelope_functionality.py
                     </a>
@@ -3184,8 +3179,7 @@
 
                     <p>
 <!-- Include the documentation here! -->
-
-<code>""" OneLogin_Saml2_Error </code><br/><code>Error class of OneLogin's Python Toolkit.</code><br/></br></br></br><code> OneLogin_Saml2_Error(Exception):</code><br/>class OneLogin_Saml2_Error(Exception):</br><hr><code>This class implements a custom Exception handler.</code><br/></br></br># Errors</br>SETTINGS_FILE_NOT_FOUND = 0</br>SETTINGS_INVALID_SYNTAX = 1</br>SETTINGS_INVALID = 2</br>METADATA_SP_INVALID = 3</br># SP_CERTS_NOT_FOUND is deprecated, use CERT_NOT_FOUND instead</br>SP_CERTS_NOT_FOUND = 4</br>CERT_NOT_FOUND = 4</br>REDIRECT_INVALID_URL = 5</br>PUBLIC_CERT_FILE_NOT_FOUND = 6</br>PRIVATE_KEY_FILE_NOT_FOUND = 7</br>SAML_RESPONSE_NOT_FOUND = 8</br>SAML_LOGOUTMESSAGE_NOT_FOUND = 9</br>SAML_LOGOUTREQUEST_INVALID = 10</br>SAML_LOGOUTRESPONSE_INVALID = 11</br>SAML_SINGLE_LOGOUT_NOT_SUPPORTED = 12</br>PRIVATE_KEY_NOT_FOUND = 13</br>UNSUPPORTED_SETTINGS_OBJECT = 14</br></br><code> __init__(self, message, code=0, errors=None):</code><br/>def __init__(self, message, code=0, errors=None):</br><hr><code>* (int)   code.      The code error (defined in the error class).</code><br/></br>assert isinstance(code, int)</br></br>if errors is not None:</br>message = message % errors</br></br>Exception.__init__(self, message)</br>self.code = code</br></br></br><code> OneLogin_Saml2_ValidationError(Exception):</code><br/>class OneLogin_Saml2_ValidationError(Exception):</br><hr><code>This class implements another custom Exception handler, relat</code><br/></br></br># Validation Errors</br>UNSUPPORTED_SAML_VERSION = 0</br>MISSING_ID = 1</br>WRONG_NUMBER_OF_ASSERTIONS = 2</br>MISSING_STATUS = 3</br>MISSING_STATUS_CODE = 4</br>STATUS_CODE_IS_NOT_SUCCESS = 5</br>WRONG_SIGNED_ELEMENT = 6</br>ID_NOT_FOUND_IN_SIGNED_ELEMENT = 7</br>DUPLICATED_ID_IN_SIGNED_ELEMENTS = 8</br>INVALID_SIGNED_ELEMENT = 9</br>DUPLICATED_REFERENCE_IN_SIGNED_ELEMENTS = 10</br>UNEXPECTED_SIGNED_ELEMENTS = 11</br>WRONG_NUMBER_OF_SIGNATURES_IN_RESPONSE = 12</br>WRONG_NUMBER_OF_SIGNATURES_IN_ASSERTION = 13</br>INVALID_XML_FORMAT = 14</br>WRONG_INRESPONSETO = 15</br>NO_ENCRYPTED_ASSERTION = 16</br>NO_ENCRYPTED_NAMEID = 17</br>MISSING_CONDITIONS = 18</br>ASSERTION_TOO_EARLY = 19</br>ASSERTION_EXPIRED = 20</br>WRONG_NUMBER_OF_AUTHSTATEMENTS = 21</br>NO_ATTRIBUTESTATEMENT = 22</br>ENCRYPTED_ATTRIBUTES = 23</br>WRONG_DESTINATION = 24</br>EMPTY_DESTINATION = 25</br>WRONG_AUDIENCE = 26</br>ISSUER_MULTIPLE_IN_RESPONSE = 27</br>ISSUER_NOT_FOUND_IN_ASSERTION = 28</br>WRONG_ISSUER = 29</br>SESSION_EXPIRED = 30</br>WRONG_SUBJECTCONFIRMATION = 31</br>NO_SIGNED_MESSAGE = 32</br>NO_SIGNED_ASSERTION = 33</br>NO_SIGNATURE_FOUND = 34</br>KEYINFO_NOT_FOUND_IN_ENCRYPTED_DATA = 35</br>CHILDREN_NODE_NOT_FOUND_IN_KEYINFO = 36</br>UNSUPPORTED_RETRIEVAL_METHOD = 37</br>NO_NAMEID = 38</br>EMPTY_NAMEID = 39</br>SP_NAME_QUALIFIER_NAME_MISMATCH = 40</br>DUPLICATED_ATTRIBUTE_NAME_FOUND = 41</br>INVALID_SIGNATURE = 42</br>WRONG_NUMBER_OF_SIGNATURES = 43</br>RESPONSE_EXPIRED = 44</br>AUTHN_CONTEXT_MISMATCH = 45</br></br><code> __init__(self, message, code=0, errors=None):</code><br/>def __init__(self, message, code=0, errors=None):</br><hr><code>* (int)   code.      The code error (defined in the error class).</code><br/></br>assert isinstance(code, int)</br></br>if errors is not None:</br>message = message % errors</br></br>Exception.__init__(self, message)</br>self.code = code</br>
+<p>We attempted to read from templates/app_lib_onelogin_saml2_errors.py_ex.txt but failed.</p>
                    </p>
                 </details>
 

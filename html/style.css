@@ -98,8 +98,12 @@ ol.centered, ul.centered dl.centered {
     font-size: 1em;
 }
 
-ol.nested, ul.nested, dl.nested {
+ol.nested, ul.nested, dl.nested, ol.review, ul.review, dl.review {
     font-size: .86em;
+}
+
+ol.review, ul.review, dl.review {
+    color: #c88;
 }
 
 dt {
@@ -169,7 +173,7 @@ h2.subhead {
 h3 {
     font-size: 1.6em;
     margin: .8em 1.2em .8em 2em;
-    color: #857;
+    color: #da8;
 }
 
 h4 {
@@ -294,8 +298,12 @@ figcaption {
     margin: .8em 1em .6em 1em;
 }
 
+span.done {
+    color: #42a;
+}
+
 span.hilight {
-    color: #fc2;
+    color: #a24;
 }
 
 span.input {

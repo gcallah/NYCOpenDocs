@@ -3028,11 +3028,6 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/NYCOpenDocs/html/migrations_versions_aeb1852855b4_add_appealable_option_to_reasons.py.html">
-                        aeb1852855b4_add_appealable_option_to_reasons.py
-                    </a>
-                </li>
-                <li>
                     <a href="/NYCOpenDocs/html/migrations_versions_b3c0c76ac2e6_add_envelope_functionality.py.html">
                         b3c0c76ac2e6_add_envelope_functionality.py
                     </a>
@@ -3186,7 +3181,13 @@ remove those forms.
                     <p>
 <!-- Include the documentation here! -->
 
-<code> AddUserRequestForm(Form):</code><br/><code> __init__(self, assigned_users):</code><br/><code>elf.user.default = self.user.choices[0]</code><br/><code>elf.roles.default = Roles.query.filter_by(name=role_name.ANONYMOUS).one().i</code><br/><code> EditUserRequestForm(Form):</code><br/><code> __init__(self, assigned_users):</code><br/><code>elf.user.default = self.user.choices[0]</code><br/><code> RemoveUserRequestForm(Form):</code><br/><code> __init__(self, assigned_users):</code><br/>
+class AddUserRequestForm(Form):
+<br>&emsp;    def __init__(self, assigned_users):
+<br>class EditUserRequestForm(Form):
+<br>&emsp;    def __init__(self, assigned_users):
+<br>class RemoveUserRequestForm(Form):
+<br>&emsp;    def __init__(self, assigned_users):
+<br>
                    </p>
                 </details>
 

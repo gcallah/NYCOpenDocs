@@ -3028,11 +3028,6 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/NYCOpenDocs/html/migrations_versions_aeb1852855b4_add_appealable_option_to_reasons.py.html">
-                        aeb1852855b4_add_appealable_option_to_reasons.py
-                    </a>
-                </li>
-                <li>
                     <a href="/NYCOpenDocs/html/migrations_versions_b3c0c76ac2e6_add_envelope_functionality.py.html">
                         b3c0c76ac2e6_add_envelope_functionality.py
                     </a>
@@ -3184,8 +3179,7 @@
 
                     <p>
 <!-- Include the documentation here! -->
-
-<code>""" py3 compatibility </code><br/></br></br>from __future__ import absolute_import, print_function, with_statement</br></br>try:</br>basestring</br>except NameError:</br>basestring = str</br></br>try:</br>unicode</br>except NameError:</br>unicode = str</br></br></br>if isinstance(b'', type('')):  # py 2.x</br>text_types = (basestring,)  # noqa</br>str_type = basestring  # noqa</br></br><code> utf8(data):</code><br/>def utf8(data):</br>  return utf8-encoded string </br><hr>  return utf8-encoded string </br>if isinstance(data, basestring):</br>return data.decode("utf8")</br>return unicode(data)</br></br><code> to_string(data):</code><br/>def to_string(data):</br> return string </br><hr> return string </br>if isinstance(data, unicode):</br>return data.encode("utf8")</br>return str(data)</br></br><code> to_bytes(data):</code><br/>def to_bytes(data):</br> return bytes </br><hr> return bytes </br>return str(data)</br></br>else:  # py 3.x</br>text_types = (bytes, str)</br>str_type = str</br></br><code> utf8(data):</code><br/>def utf8(data):</br> return utf8-encoded string </br><hr> return utf8-encoded string </br>if isinstance(data, bytes):</br>return data.decode("utf8")</br>return str(data)</br></br><code> to_string(data):</code><br/>def to_string(data):</br>convert to string</br><hr>convert to string</br>if isinstance(data, bytes):</br>return data.decode("utf8")</br>return str(data)</br></br><code> to_bytes(data):</code><br/>def to_bytes(data):</br>return bytes</br><hr>return bytes</br>if isinstance(data, str):</br>return data.encode("utf8")</br>return bytes(data)</br>
+<p>We attempted to read from templates/app_lib_onelogin_saml2_compat.py_ex.txt but failed.</p>
                    </p>
                 </details>
 

@@ -3028,11 +3028,6 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/NYCOpenDocs/html/migrations_versions_aeb1852855b4_add_appealable_option_to_reasons.py.html">
-                        aeb1852855b4_add_appealable_option_to_reasons.py
-                    </a>
-                </li>
-                <li>
                     <a href="/NYCOpenDocs/html/migrations_versions_b3c0c76ac2e6_add_envelope_functionality.py.html">
                         b3c0c76ac2e6_add_envelope_functionality.py
                     </a>
@@ -3186,7 +3181,120 @@ The required fields are defined for their respective classes.
                     <p>
 <!-- Include the documentation here! -->
 
-</br>.. module:: request.forms.</br></br>:synopsis: Defines forms used to create FOIL requests.</br><hr><code> PublicUserRequestForm(Form):</code><br/></br>Form for public users to create a new FOIL request.</br>For a public user, the required fields are:</br></br># Request information</br>agency: agency selected for the request</br>title: name or title of the request</br>description: detailed description of the request</br></br><hr><code> __init__(self):</code><br/><code> AgencyUserRequestForm(Form):</code><br/></br>Form for agency users to create a new FOIL request.</br>For an agency user, the required fields are:</br></br># Request Information</br>agency: agency selected for the request</br>title: name or title of the request</br>description: detailed description of the request</br>request_date: date the request was made</br>method_received: format the request was received</br></br># Personal Information</br>first_name: first name of the requester</br>last_name: last name of the requester</br></br># Contact Information (at least one form on contact is required)</br>email: requester's email address</br>phone: requester's phone number</br>fax: requester's fax number</br>address, city, state, zip: requester's address</br><hr><code>request_date = DateTimeField("Date (required)", format="%m/%d/%Y", default=datetime.today)</code><br/><code># TODO: when refactoring these classes, include length and other validator</code><br/><code>tate = SelectField('State', choices=STATES, default='NY')</code><br/><code> __init__(self):</code><br/><code> AnonymousRequestForm(Form):</code><br/></br>Form for anonymous users to create a new FOIL request.</br>For a anonymous user, the required fields are:</br></br># Request Information</br>agency: agency selected for the request</br>title: name or title of the request</br>description: detailed description of the request</br></br># Personal Information</br>first_name: first name of the requester</br>last_name: last name of the requester</br></br># Contact Information (at least one form on contact is required)</br>email: requester's email address</br>phone: requester's phone number</br>fax: requester's fax number</br>address, city, state, zip: requester's address</br><hr><code>tate = SelectField('State', choices=STATES, default='NY')</code><br/><code> __init__(self):</code><br/><code> EditRequesterForm(Form):</code><br/><code># TODO: Add class docstring</code><br/><code> __init__(self, requester):</code><br/></br>:type requester: app.models.Users</br><hr><code> DeterminationForm(Form):</code><br/><code># TODO: Add class docstring</code><br/><code> __init__(self, agency_ein):</code><br/><code>ult_closings = [</code><br/><code>ult_denials = [</code><br/><code>ult_reopenings = [</code><br/><code>elf.reasons.choices = agency_closings + agency_denials + default_closings + default_deni</code><br/><code>elf.reasons.choices = agency_denials + default_deni</code><br/><code>elf.reasons.choices = agency_reopenings + default_reopening</code><br/><code> reasons(self):</code><br/> SelectMultipleField or SelectField </br><hr><code> ultimate_determination_type(self):</code><br/> Closing or Denial </br><hr><code> DenyRequestForm(DeterminationForm):</code><br/><code># TODO: Add class docstring</code><br/><code> CloseRequestForm(DeterminationForm):</code><br/><code># TODO: Add class docstring</code><br/><code> ReopenRequestForm(DeterminationForm):</code><br/><code># TODO: Add class docstring</code><br/><code> GenerateEnvelopeForm(Form):</code><br/><code># TODO: Add class docstring</code><br/><code> __init__(self, agency_ein, requester):</code><br/></br>:type requester: app.models.Users</br><hr><code> GenerateLetterForm(Form):</code><br/><code># TODO: Add class docstring</code><br/><code> __init__(self, agency_ein):</code><br/><code> letter_templates(self):</code><br/> SelectField </br><hr><code> letter_type(self):</code><br/> Acknowledgement, Extension, </br><hr><code> GenerateAcknowledgmentLetterForm(GenerateLetterForm):</code><br/><code># TODO: Add class docstring</code><br/><code> GenerateDenialLetterForm(GenerateLetterForm):</code><br/><code># TODO: Add class docstring</code><br/><code> GenerateClosingLetterForm(GenerateLetterForm):</code><br/><code># TODO: Add class docstring</code><br/><code> __init__(self, agency_ein):</code><br/><code>ult_closings = [</code><br/><code>ult_denials = [</code><br/><code>elf.letter_templates.choices = agency_closings + agency_denials + default_closings + default_deni</code><br/><code> GenerateExtensionLetterForm(GenerateLetterForm):</code><br/><code># TODO: Add class docstring</code><br/><code> GenerateReopeningLetterForm(GenerateLetterForm):</code><br/><code># TODO: Add class docstring</code><br/><code> GenerateResponseLetterForm(GenerateLetterForm):</code><br/><code># TODO: Add class docstring</code><br/><code> SearchRequestsForm(Form):</code><br/><code># TODO: Add class docstring</code><br/><code> __init__(self):</code><br/><code>elf.agency_ein.default = current_user.default_agency_ein</code><br/><code>if agencies.ein != current_user.default_agency_ein],</code><br/><code>ult_agency = current_user.default_agency</code><br/><code># set default value of agency select field to agency user's primary agency</code><br/><code>elf.agency_ein.default = default_agency.ein</code><br/><code>(default_agency.ein, default_agency.name))</code><br/><code>elf.agency_user.choices = get_active_users_as_choices(current_user.default_agency.ein)</code><br/><code>elf.agency_user.default = current_user.get_id()</code><br/><code># process form for default value</code><br/><code> ContactAgencyForm(Form):</code><br/><code># TODO: Add class docstring</code><br/><code> __init__(self, request):</code><br/>
+"""
+<br>.. module:: request.forms.
+<br>
+<br>&emsp;    :synopsis: Defines forms used to create FOIL requests.
+<br>"""
+<br>class PublicUserRequestForm(Form):
+<br>&emsp;    """
+<br>&emsp;    Form for public users to create a new FOIL request.
+<br>&emsp;    For a public user, the required fields are:
+<br>
+<br>&emsp;    # Request information
+<br>&emsp;    agency: agency selected for the request
+<br>&emsp;    title: name or title of the request
+<br>&emsp;    description: detailed description of the request
+<br>
+<br>&emsp;    """
+<br>&emsp;    def __init__(self):
+<br>class AgencyUserRequestForm(Form):
+<br>&emsp;    """
+<br>&emsp;    Form for agency users to create a new FOIL request.
+<br>&emsp;    For an agency user, the required fields are:
+<br>
+<br>&emsp;    # Request Information
+<br>&emsp;    agency: agency selected for the request
+<br>&emsp;    title: name or title of the request
+<br>&emsp;    description: detailed description of the request
+<br>&emsp;    request_date: date the request was made
+<br>&emsp;    method_received: format the request was received
+<br>
+<br>&emsp;    # Personal Information
+<br>&emsp;    first_name: first name of the requester
+<br>&emsp;    last_name: last name of the requester
+<br>
+<br>&emsp;    # Contact Information (at least one form on contact is required)
+<br>&emsp;    email: requester's email address
+<br>&emsp;    phone: requester's phone number
+<br>&emsp;    fax: requester's fax number
+<br>&emsp;    address, city, state, zip: requester's address
+<br>&emsp;    """
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;    # TODO: when refactoring these classes, include length and other validators
+<br>&emsp;    def __init__(self):
+<br>class AnonymousRequestForm(Form):
+<br>&emsp;    """
+<br>&emsp;    Form for anonymous users to create a new FOIL request.
+<br>&emsp;    For a anonymous user, the required fields are:
+<br>
+<br>&emsp;    # Request Information
+<br>&emsp;    agency: agency selected for the request
+<br>&emsp;    title: name or title of the request
+<br>&emsp;    description: detailed description of the request
+<br>
+<br>&emsp;    # Personal Information
+<br>&emsp;    first_name: first name of the requester
+<br>&emsp;    last_name: last name of the requester
+<br>
+<br>&emsp;    # Contact Information (at least one form on contact is required)
+<br>&emsp;    email: requester's email address
+<br>&emsp;    phone: requester's phone number
+<br>&emsp;    fax: requester's fax number
+<br>&emsp;    address, city, state, zip: requester's address
+<br>&emsp;    """
+<br>&emsp;    def __init__(self):
+<br>class EditRequesterForm(Form):
+<br>&emsp;&emsp;&emsp;&emsp;    # TODO: Add class docstring
+<br>&emsp;    def __init__(self, requester):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        :type requester: app.models.Users
+<br>&emsp;&emsp;        """
+<br>class DeterminationForm(Form):
+<br>&emsp;&emsp;&emsp;&emsp;    # TODO: Add class docstring
+<br>&emsp;    def __init__(self, agency_ein):
+<br>&emsp;    def reasons(self):
+<br>&emsp;&emsp;        """ SelectMultipleField or SelectField """
+<br>&emsp;    def ultimate_determination_type(self):
+<br>&emsp;&emsp;        """ Closing or Denial """
+<br>class DenyRequestForm(DeterminationForm):
+<br>&emsp;&emsp;&emsp;&emsp;    # TODO: Add class docstring
+<br>class CloseRequestForm(DeterminationForm):
+<br>&emsp;&emsp;&emsp;&emsp;    # TODO: Add class docstring
+<br>class ReopenRequestForm(DeterminationForm):
+<br>&emsp;&emsp;&emsp;&emsp;    # TODO: Add class docstring
+<br>class GenerateEnvelopeForm(Form):
+<br>&emsp;&emsp;&emsp;&emsp;    # TODO: Add class docstring
+<br>&emsp;    def __init__(self, agency_ein, requester):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        :type requester: app.models.Users
+<br>&emsp;&emsp;        """
+<br>class GenerateLetterForm(Form):
+<br>&emsp;&emsp;&emsp;&emsp;    # TODO: Add class docstring
+<br>&emsp;    def __init__(self, agency_ein):
+<br>&emsp;    def letter_templates(self):
+<br>&emsp;&emsp;        """ SelectField """
+<br>&emsp;    def letter_type(self):
+<br>&emsp;&emsp;        """ Acknowledgement, Extension, """
+<br>class GenerateAcknowledgmentLetterForm(GenerateLetterForm):
+<br>&emsp;&emsp;&emsp;&emsp;    # TODO: Add class docstring
+<br>class GenerateDenialLetterForm(GenerateLetterForm):
+<br>&emsp;&emsp;&emsp;&emsp;    # TODO: Add class docstring
+<br>class GenerateClosingLetterForm(GenerateLetterForm):
+<br>&emsp;&emsp;&emsp;&emsp;    # TODO: Add class docstring
+<br>&emsp;    def __init__(self, agency_ein):
+<br>class GenerateExtensionLetterForm(GenerateLetterForm):
+<br>&emsp;&emsp;&emsp;&emsp;    # TODO: Add class docstring
+<br>class GenerateReopeningLetterForm(GenerateLetterForm):
+<br>&emsp;&emsp;&emsp;&emsp;    # TODO: Add class docstring
+<br>class GenerateResponseLetterForm(GenerateLetterForm):
+<br>&emsp;&emsp;&emsp;&emsp;    # TODO: Add class docstring
+<br>class SearchRequestsForm(Form):
+<br>&emsp;&emsp;&emsp;&emsp;    # TODO: Add class docstring
+<br>&emsp;    def __init__(self):
+<br>class ContactAgencyForm(Form):
+<br>&emsp;&emsp;&emsp;&emsp;    # TODO: Add class docstring
+<br>&emsp;    def __init__(self, request):
+<br>
                    </p>
                 </details>
 

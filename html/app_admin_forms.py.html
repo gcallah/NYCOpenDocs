@@ -3028,11 +3028,6 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/NYCOpenDocs/html/migrations_versions_aeb1852855b4_add_appealable_option_to_reasons.py.html">
-                        aeb1852855b4_add_appealable_option_to_reasons.py
-                    </a>
-                </li>
-                <li>
                     <a href="/NYCOpenDocs/html/migrations_versions_b3c0c76ac2e6_add_envelope_functionality.py.html">
                         b3c0c76ac2e6_add_envelope_functionality.py
                     </a>
@@ -3190,7 +3185,11 @@ Users will only see the agencies that they administer in the dropdown.
                     <p>
 <!-- Include the documentation here! -->
 
-<code> ActivateAgencyUserForm(Form):</code><br/><code> __init__(self, agency_ein):</code><br/><code> SelectAgencyForm(Form):</code><br/><code> __init__(self, agency_ein=None):</code><br/>
+class ActivateAgencyUserForm(Form):
+<br>&emsp;    def __init__(self, agency_ein):
+<br>class SelectAgencyForm(Form):
+<br>&emsp;    def __init__(self, agency_ein=None):
+<br>
                    </p>
                 </details>
 

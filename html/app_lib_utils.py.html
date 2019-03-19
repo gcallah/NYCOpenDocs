@@ -3028,6 +3028,11 @@
                     </a>
                 </li>
                 <li>
+                    <a href="/NYCOpenDocs/html/migrations_versions_aeb1852855b4_add_appealable_option_to_reasons.py.html">
+                        aeb1852855b4_add_appealable_option_to_reasons.py
+                    </a>
+                </li>
+                <li>
                     <a href="/NYCOpenDocs/html/migrations_versions_b3c0c76ac2e6_add_envelope_functionality.py.html">
                         b3c0c76ac2e6_add_envelope_functionality.py
                     </a>
@@ -3184,67 +3189,7 @@ to determine the boolean of a request.
                     <p>
 <!-- Include the documentation here! -->
 
-"""
-<br> .. module: utils
-<br>
-<br>"""
-<br>class InvalidUserException(Exception):
-<br>&emsp;    def __init__(self, user):
-<br>&emsp;&emsp;        """
-<br>&emsp;&emsp;        Exception used when an invalid user is detected.
-<br>
-<br>&emsp;&emsp;        :param user: the current_user as defined in flask_login
-<br>&emsp;&emsp;        """
-<br>class InvalidDeterminationException(Exception):
-<br>&emsp;    def __init__(self, request_id, dtype, missing_field):
-<br>&emsp;&emsp;        """
-<br>&emsp;&emsp;        Exception used to handle missing information for a determination.
-<br>&emsp;&emsp;        :param request_id: Unique request identifier
-<br>&emsp;&emsp;        :param dtype: Type of determination (Acknowledgment, Extension, Closing, Denial, Re-Opening)
-<br>&emsp;&emsp;        :param missing_field: The field missing from the determination.
-<br>&emsp;&emsp;        """
-<br>class UserRequestException(Exception):
-<br>&emsp;    def __init__(self, action, request_id, reason):
-<br>&emsp;&emsp;        """
-<br>&emsp;&emsp;        Exception used to handle errors performing actions on a request.
-<br>
-<br>&emsp;&emsp;        :param action: Action attempted
-<br>&emsp;&emsp;        :param request_id: Unique request identifier
-<br>&emsp;&emsp;        :param reason: Description of failure reason
-<br>&emsp;&emsp;        """
-<br>class DuplicateFileException(Exception):
-<br>&emsp;    def __init__(self, file_name, request_id):
-<br>&emsp;&emsp;        """
-<br>&emsp;&emsp;        Exception used when a duplicate file is added to a request.
-<br>
-<br>&emsp;&emsp;        :param file_name: Name of file uploaded
-<br>&emsp;&emsp;        :param request_id: Unique request identifier
-<br>&emsp;&emsp;        """
-<br>class PDFCreationException(Exception):
-<br>&emsp;    def __init__(self, status_code, stdout=b'', stderr=b''):
-<br>&emsp;&emsp;        """
-<br>&emsp;&emsp;        Exception used when xhtml2pdf fails to create a PDF.
-<br>&emsp;&emsp;        :param status_code: Process exit status code
-<br>&emsp;&emsp;        :param stdout: STDOUT output
-<br>&emsp;&emsp;        :param stderr: STDERR output
-<br>&emsp;&emsp;        """
-<br>def b64decode_lenient(data):
-<br>&emsp;    """
-<br>&emsp;    Decodes base64 (bytes or str), padding being optional.
-<br>
-<br>&emsp;    :param data: a string or bytes-like object of base64 data
-<br>&emsp;    :return: a decoded string
-<br>&emsp;    """
-<br>def eval_request_bool(val, default=False):
-<br>&emsp;    """
-<br>&emsp;    Evaluates the boolean value of a request parameter.
-<br>
-<br>&emsp;    :param val: the value to check
-<br>&emsp;    :param default: bool to return by default
-<br>
-<br>&emsp;    :return: Boolean
-<br>&emsp;    """
-<br>
+</br>.. module: utils</br></br><hr><code> InvalidUserException(Exception):</code><br/><code> __init__(self, user):</code><br/></br>Exception used when an invalid user is detected.</br></br><code>:param user: the current_user as defined in flask_login</code><br/>:param user: the current_user as defined in flask_login</br><hr><code> InvalidDeterminationException(Exception):</code><br/><code> __init__(self, request_id, dtype, missing_field):</code><br/></br>Exception used to handle missing information for a determination.</br>:param request_id: Unique request identifier</br>:param dtype: Type of determination (Acknowledgment, Extension, Closing, Denial, Re-Opening)</br>:param missing_field: The field missing from the determination.</br><hr><code> UserRequestException(Exception):</code><br/><code> __init__(self, action, request_id, reason):</code><br/></br>Exception used to handle errors performing actions on a request.</br></br>:param action: Action attempted</br>:param request_id: Unique request identifier</br>:param reason: Description of failure reason</br><hr><code> DuplicateFileException(Exception):</code><br/><code> __init__(self, file_name, request_id):</code><br/></br>Exception used when a duplicate file is added to a request.</br></br>:param file_name: Name of file uploaded</br>:param request_id: Unique request identifier</br><hr><code> PDFCreationException(Exception):</code><br/><code> __init__(self, status_code, stdout=b'', stderr=b''):</code><br/></br>Exception used when xhtml2pdf fails to create a PDF.</br>:param status_code: Process exit status code</br>:param stdout: STDOUT output</br>:param stderr: STDERR output</br><hr><code> b64decode_lenient(data):</code><br/></br>Decodes base64 (bytes or str), padding being optional.</br></br>:param data: a string or bytes-like object of base64 data</br>:return: a decoded string</br><hr><code> eval_request_bool(val, default=False):</code><br/></br>Evaluates the boolean value of a request parameter.</br></br>:param val: the value to check</br><code>:param default: bool to return by default</code><br/>:param default: bool to return by default</br></br>:return: Boolean</br><hr><code>ert isinstance(default, bool)</code><br/><code>return default</code><br/>
                    </p>
                 </details>
 

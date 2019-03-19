@@ -3028,6 +3028,11 @@
                     </a>
                 </li>
                 <li>
+                    <a href="/NYCOpenDocs/html/migrations_versions_aeb1852855b4_add_appealable_option_to_reasons.py.html">
+                        aeb1852855b4_add_appealable_option_to_reasons.py
+                    </a>
+                </li>
+                <li>
                     <a href="/NYCOpenDocs/html/migrations_versions_b3c0c76ac2e6_add_envelope_functionality.py.html">
                         b3c0c76ac2e6_add_envelope_functionality.py
                     </a>
@@ -3180,126 +3185,7 @@
                     <p>
 <!-- Include the documentation here! -->
 
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;""" OneLogin_Saml2_Authn_Request class
-<br>&emsp;&emsp;&emsp;AuthNRequest class of OneLogin's Python Toolkit.
-<br>"""
-<br>
-<br>from app.lib.onelogin.saml2.constants import OneLogin_Saml2_Constants
-<br>from app.lib.onelogin.saml2.utils import OneLogin_Saml2_Utils
-<br>from app.lib.onelogin.saml2.xml_templates import OneLogin_Saml2_Templates
-<br>
-<br>
-<br>class OneLogin_Saml2_Authn_Request(object):
-<br>class OneLogin_Saml2_Authn_Request(object):
-<br>&emsp;    """
-<br>&emsp;&emsp;    This class handles an AuthNRequest. It builds an
-<br>&emsp;    """
-<br>
-<br>&emsp;    def __init__(self, settings, force_authn=False, is_passive=False, set_nameid_policy=True):
-<br>&emsp;    def __init__(self, settings, force_authn=False, is_passive=False, set_nameid_policy=True):
-<br>&emsp;&emsp;        """
-<br>&emsp;&emsp;        """
-<br>&emsp;&emsp;        self.__settings = settings
-<br>
-<br>&emsp;&emsp;        sp_data = self.__settings.get_sp_data()
-<br>&emsp;&emsp;        idp_data = self.__settings.get_idp_data()
-<br>&emsp;&emsp;        security = self.__settings.get_security_data()
-<br>
-<br>&emsp;&emsp;        uid = OneLogin_Saml2_Utils.generate_unique_id()
-<br>&emsp;&emsp;        self.__id = uid
-<br>&emsp;&emsp;        issue_instant = OneLogin_Saml2_Utils.parse_time_to_SAML(OneLogin_Saml2_Utils.now())
-<br>
-<br>&emsp;&emsp;        destination = idp_data['singleSignOnService']['url']
-<br>
-<br>&emsp;&emsp;        provider_name_str = ''
-<br>&emsp;&emsp;        organization_data = settings.get_organization()
-<br>&emsp;&emsp;        if isinstance(organization_data, dict) and organization_data:
-<br>&emsp;&emsp;&emsp;            langs = organization_data
-<br>&emsp;&emsp;&emsp;            if 'en-US' in langs:
-<br>&emsp;&emsp;&emsp;&emsp;                lang = 'en-US'
-<br>&emsp;&emsp;&emsp;            else:
-<br>&emsp;&emsp;&emsp;&emsp;                lang = sorted(langs)[0]
-<br>
-<br>&emsp;&emsp;&emsp;            display_name = 'displayname' in organization_data[lang] and organization_data[lang]['displayname']
-<br>&emsp;&emsp;&emsp;            if display_name:
-<br>&emsp;&emsp;&emsp;&emsp;                provider_name_str = "\n" + '    ProviderName="%s"' % organization_data[lang]['displayname']
-<br>
-<br>&emsp;&emsp;        force_authn_str = ''
-<br>&emsp;&emsp;        if force_authn is True:
-<br>&emsp;&emsp;&emsp;            force_authn_str = "\n" + '    ForceAuthn="true"'
-<br>
-<br>&emsp;&emsp;        is_passive_str = ''
-<br>&emsp;&emsp;        if is_passive is True:
-<br>&emsp;&emsp;&emsp;            is_passive_str = "\n" + '    IsPassive="true"'
-<br>
-<br>&emsp;&emsp;        nameid_policy_str = ''
-<br>&emsp;&emsp;        if set_nameid_policy:
-<br>&emsp;&emsp;&emsp;            name_id_policy_format = sp_data['NameIDFormat']
-<br>&emsp;&emsp;&emsp;            if security['wantNameIdEncrypted']:
-<br>&emsp;&emsp;&emsp;&emsp;                name_id_policy_format = OneLogin_Saml2_Constants.NAMEID_ENCRYPTED
-<br>
-<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;            nameid_policy_str = """
-<br>&emsp;&emsp;        AllowCreate="true" />""" % name_id_policy_format
-<br>
-<br>&emsp;&emsp;        requested_authn_context_str = ''
-<br>&emsp;&emsp;        if security['requestedAuthnContext'] is not False:
-<br>&emsp;&emsp;&emsp;            authn_comparison = 'exact'
-<br>&emsp;&emsp;&emsp;            if 'requestedAuthnContextComparison' in security.keys():
-<br>&emsp;&emsp;&emsp;&emsp;                authn_comparison = security['requestedAuthnContextComparison']
-<br>
-<br>&emsp;&emsp;&emsp;            if security['requestedAuthnContext'] is True:
-<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                requested_authn_context_str = """    <samlp:RequestedAuthnContext Comparison="%s">
-<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;        <saml:AuthnContextClassRef>urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport</saml:AuthnContextClassRef>
-<br>&emsp;    </samlp:RequestedAuthnContext>""" % authn_comparison
-<br>&emsp;&emsp;&emsp;            else:
-<br>&emsp;&emsp;&emsp;&emsp;                requested_authn_context_str = '     <samlp:RequestedAuthnContext Comparison="%s">' % authn_comparison
-<br>&emsp;&emsp;&emsp;&emsp;                for authn_context in security['requestedAuthnContext']:
-<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    requested_authn_context_str += '<saml:AuthnContextClassRef>%s</saml:AuthnContextClassRef>' % authn_context
-<br>&emsp;&emsp;&emsp;&emsp;                requested_authn_context_str += '    </samlp:RequestedAuthnContext>'
-<br>
-<br>&emsp;&emsp;        attr_consuming_service_str = ''
-<br>&emsp;&emsp;        if 'attributeConsumingService' in sp_data and sp_data['attributeConsumingService']:
-<br>&emsp;&emsp;&emsp;            attr_consuming_service_str = "\n    AttributeConsumingServiceIndex=\"1\""
-<br>
-<br>&emsp;&emsp;        request = OneLogin_Saml2_Templates.AUTHN_REQUEST % \
-<br>&emsp;&emsp;&emsp;            {
-<br>&emsp;&emsp;&emsp;&emsp;                'id': uid,
-<br>&emsp;&emsp;&emsp;&emsp;                'provider_name': provider_name_str,
-<br>&emsp;&emsp;&emsp;&emsp;                'force_authn_str': force_authn_str,
-<br>&emsp;&emsp;&emsp;&emsp;                'is_passive_str': is_passive_str,
-<br>&emsp;&emsp;&emsp;&emsp;                'issue_instant': issue_instant,
-<br>&emsp;&emsp;&emsp;&emsp;                'destination': destination,
-<br>&emsp;&emsp;&emsp;&emsp;                'assertion_url': sp_data['assertionConsumerService']['url'],
-<br>&emsp;&emsp;&emsp;&emsp;                'entity_id': sp_data['entityId'],
-<br>&emsp;&emsp;&emsp;&emsp;                'nameid_policy_str': nameid_policy_str,
-<br>&emsp;&emsp;&emsp;&emsp;                'requested_authn_context_str': requested_authn_context_str,
-<br>&emsp;&emsp;&emsp;&emsp;                'attr_consuming_service_str': attr_consuming_service_str,
-<br>&emsp;&emsp;&emsp;            }
-<br>
-<br>&emsp;&emsp;        self.__authn_request = request
-<br>
-<br>&emsp;    def get_request(self, deflate=True):
-<br>&emsp;    def get_request(self, deflate=True):
-<br>&emsp;&emsp;        """
-<br>&emsp;&emsp;        """
-<br>&emsp;&emsp;        if deflate:
-<br>&emsp;&emsp;&emsp;            request = OneLogin_Saml2_Utils.deflate_and_base64_encode(self.__authn_request)
-<br>&emsp;&emsp;        else:
-<br>&emsp;&emsp;&emsp;            request = OneLogin_Saml2_Utils.b64encode(self.__authn_request)
-<br>&emsp;&emsp;        return request
-<br>
-<br>&emsp;    def get_id(self):
-<br>&emsp;    def get_id(self):
-<br>&emsp;&emsp;        """
-<br>&emsp;&emsp;        """
-<br>&emsp;&emsp;        return self.__id
-<br>
-<br>&emsp;    def get_xml(self):
-<br>&emsp;    def get_xml(self):
-<br>&emsp;&emsp;        """
-<br>&emsp;&emsp;        """
-<br>&emsp;&emsp;        return self.__authn_request
-<br>
+<code>""" OneLogin_Saml2_Authn_Request </code><br/><code>AuthNRequest class of OneLogin's Python Toolkit.</code><br/></br></br>from app.lib.onelogin.saml2.constants import OneLogin_Saml2_Constants</br>from app.lib.onelogin.saml2.utils import OneLogin_Saml2_Utils</br>from app.lib.onelogin.saml2.xml_templates import OneLogin_Saml2_Templates</br></br></br><code> OneLogin_Saml2_Authn_Request(object):</code><br/>class OneLogin_Saml2_Authn_Request(object):</br><hr><code>This class handles an AuthNRequest. It builds an</code><br/></br></br><code> __init__(self, settings, force_authn=False, is_passive=False, set_nameid_policy=True):</code><br/>def __init__(self, settings, force_authn=False, is_passive=False, set_nameid_policy=True):</br><hr></br>self.__settings = settings</br></br>sp_data = self.__settings.get_sp_data()</br>idp_data = self.__settings.get_idp_data()</br>security = self.__settings.get_security_data()</br></br>uid = OneLogin_Saml2_Utils.generate_unique_id()</br>self.__id = uid</br>issue_instant = OneLogin_Saml2_Utils.parse_time_to_SAML(OneLogin_Saml2_Utils.now())</br></br>destination = idp_data['singleSignOnService']['url']</br></br>provider_name_str = </br>organization_data = settings.get_organization()</br>if isinstance(organization_data, dict) and organization_data:</br>langs = organization_data</br>if 'en-US' in langs:</br>lang = 'en-US</br>else:</br>lang = sorted(langs)[0]</br></br>display_name = 'displayname' in organization_data[lang] and organization_data[lang]['displayname']</br>if display_name:</br>provider_name_str = "\n" + '    ProviderName="%s"' % organization_data[lang]['displayname']</br></br>force_authn_str = </br>if force_authn is True:</br>force_authn_str = "\n" + '    ForceAuthn="true"</br></br>is_passive_str = </br>if is_passive is True:</br>is_passive_str = "\n" + '    IsPassive="true"</br></br>nameid_policy_str = </br>if set_nameid_policy:</br>name_id_policy_format = sp_data['NameIDFormat']</br>if security['wantNameIdEncrypted']:</br>name_id_policy_format = OneLogin_Saml2_Constants.NAMEID_ENCRYPTED</br></br><hr>AllowCreate="true" />""" % name_id_policy_format</br></br>requested_authn_context_str = </br>if security['requestedAuthnContext'] is not False:</br>authn_comparison = 'exact</br>if 'requestedAuthnContextComparison' in security.keys():</br>authn_comparison = security['requestedAuthnContextComparison']</br></br>if security['requestedAuthnContext'] is True:</br><hr><code><saml:AuthnContextClassRef>urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport</saml:AuthnContextClassRef></code><br/></samlp:RequestedAuthnContext>""" % authn_comparison</br>else:</br>requested_authn_context_str = '     <samlp:RequestedAuthnContext Comparison="%s">' % authn_comparison</br>for authn_context in security['requestedAuthnContext']:</br>requested_authn_context_str += '<saml:AuthnContextClassRef>%s</saml:AuthnContextClassRef>' % authn_context</br>requested_authn_context_str += '    </samlp:RequestedAuthnContext></br></br>attr_consuming_service_str = </br>if 'attributeConsumingService' in sp_data and sp_data['attributeConsumingService']:</br>attr_consuming_service_str = "\n    AttributeConsumingServiceIndex=\"1\</br></br>request = OneLogin_Saml2_Templates.AUTHN_REQUEST % \</br>{</br>id': uid,</br>provider_name': provider_name_str,</br>force_authn_str': force_authn_str,</br>is_passive_str': is_passive_str,</br>issue_instant': issue_instant,</br>destination': destination,</br>assertion_url': sp_data['assertionConsumerService']['url'],</br>entity_id': sp_data['entityId'],</br>nameid_policy_str': nameid_policy_str,</br>requested_authn_context_str': requested_authn_context_str,</br>attr_consuming_service_str': attr_consuming_service_str,</br>}</br></br>self.__authn_request = request</br></br><code> get_request(self, deflate=True):</code><br/>def get_request(self, deflate=True):</br><hr><code>:param deflate: It makes the deflate process option</code><br/><code>:return: AuthnRequest maybe deflated and base64 enco</code><br/></br><code>if deflate:</code><br/>if deflate:</br><code>request = OneLogin_Saml2_Utils.deflate_and_base64_encode(self.__authn_request)</code><br/>request = OneLogin_Saml2_Utils.deflate_and_base64_encode(self.__authn_request)</br>else:</br>request = OneLogin_Saml2_Utils.b64encode(self.__authn_request)</br>return request</br></br><code> get_id(self):</code><br/>def get_id(self):</br><hr></br>return self.__id</br></br><code> get_xml(self):</code><br/>def get_xml(self):</br><hr></br>return self.__authn_request</br>
                    </p>
                 </details>
 

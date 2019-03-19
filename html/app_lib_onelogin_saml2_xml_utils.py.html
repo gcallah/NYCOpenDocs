@@ -3028,6 +3028,11 @@
                     </a>
                 </li>
                 <li>
+                    <a href="/NYCOpenDocs/html/migrations_versions_aeb1852855b4_add_appealable_option_to_reasons.py.html">
+                        aeb1852855b4_add_appealable_option_to_reasons.py
+                    </a>
+                </li>
+                <li>
                     <a href="/NYCOpenDocs/html/migrations_versions_b3c0c76ac2e6_add_envelope_functionality.py.html">
                         b3c0c76ac2e6_add_envelope_functionality.py
                     </a>
@@ -3180,139 +3185,7 @@
                     <p>
 <!-- Include the documentation here! -->
 
-&emsp;&emsp;&emsp;&emsp;&emsp;""" OneLogin_Saml2_XML class
-<br>&emsp;&emsp;Auxiliary class of OneLogin's Python Toolkit.
-<br>"""
-<br>
-<br>from os.path import join, dirname
-<br>from lxml import etree
-<br>from defusedxml.lxml import tostring, fromstring
-<br>from app.lib.onelogin.saml2 import compat
-<br>from app.lib.onelogin.saml2.constants import OneLogin_Saml2_Constants
-<br>
-<br>
-<br>for prefix, url in OneLogin_Saml2_Constants.NSMAP.items():
-<br>&emsp;    etree.register_namespace(prefix, url)
-<br>
-<br>
-<br>class OneLogin_Saml2_XML(object):
-<br>class OneLogin_Saml2_XML(object):
-<br>&emsp;&emsp;&emsp;    _element_class = type(etree.Element('root'))
-<br>&emsp;    _element_class = type(etree.Element('root'))
-<br>&emsp;    _parse_etree = staticmethod(fromstring)
-<br>&emsp;&emsp;&emsp;    _schema_class = etree.XMLSchema
-<br>&emsp;    _schema_class = etree.XMLSchema
-<br>&emsp;&emsp;    _text_class = compat.text_types
-<br>&emsp;    _text_class = compat.text_types
-<br>&emsp;    _unparse_etree = staticmethod(tostring)
-<br>
-<br>&emsp;    dump = staticmethod(etree.dump)
-<br>&emsp;    make_root = staticmethod(etree.Element)
-<br>&emsp;    make_child = staticmethod(etree.SubElement)
-<br>
-<br>&emsp;    @staticmethod
-<br>&emsp;    def to_string(xml, **kwargs):
-<br>&emsp;    def to_string(xml, **kwargs):
-<br>&emsp;&emsp;        """
-<br>&emsp;&emsp;        """
-<br>
-<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;        if isinstance(xml, OneLogin_Saml2_XML._text_class):
-<br>&emsp;&emsp;        if isinstance(xml, OneLogin_Saml2_XML._text_class):
-<br>&emsp;&emsp;&emsp;            return xml
-<br>
-<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;        if isinstance(xml, OneLogin_Saml2_XML._element_class):
-<br>&emsp;&emsp;        if isinstance(xml, OneLogin_Saml2_XML._element_class):
-<br>&emsp;&emsp;&emsp;            OneLogin_Saml2_XML.cleanup_namespaces(xml)
-<br>&emsp;&emsp;&emsp;            return OneLogin_Saml2_XML._unparse_etree(xml, **kwargs)
-<br>
-<br>&emsp;&emsp;        raise ValueError("unsupported type %r" % type(xml))
-<br>
-<br>&emsp;    @staticmethod
-<br>&emsp;    def to_etree(xml):
-<br>&emsp;    def to_etree(xml):
-<br>&emsp;&emsp;        """
-<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;        :rtype: OneLogin_Saml2_XML._element_class
-<br>&emsp;&emsp;        """
-<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;        if isinstance(xml, OneLogin_Saml2_XML._element_class):
-<br>&emsp;&emsp;        if isinstance(xml, OneLogin_Saml2_XML._element_class):
-<br>&emsp;&emsp;&emsp;            return xml
-<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;        if isinstance(xml, OneLogin_Saml2_XML._text_class):
-<br>&emsp;&emsp;        if isinstance(xml, OneLogin_Saml2_XML._text_class):
-<br>&emsp;&emsp;&emsp;            return OneLogin_Saml2_XML._parse_etree(xml)
-<br>
-<br>&emsp;&emsp;        raise ValueError('unsupported type %r' % type(xml))
-<br>
-<br>&emsp;    @staticmethod
-<br>&emsp;    def validate_xml(xml, schema, debug=False):
-<br>&emsp;    def validate_xml(xml, schema, debug=False):
-<br>&emsp;&emsp;        """
-<br>&emsp;&emsp;        """
-<br>
-<br>&emsp;&emsp;        assert isinstance(schema, compat.str_type)
-<br>&emsp;&emsp;        try:
-<br>&emsp;&emsp;&emsp;            xml = OneLogin_Saml2_XML.to_etree(xml)
-<br>&emsp;&emsp;        except Exception as e:
-<br>&emsp;&emsp;&emsp;            if debug:
-<br>&emsp;&emsp;&emsp;&emsp;                print(e)
-<br>&emsp;&emsp;&emsp;            return 'unloaded_xml'
-<br>
-<br>&emsp;&emsp;        schema_file = join(dirname(__file__), 'schemas', schema)
-<br>&emsp;&emsp;        with open(schema_file, 'r') as f_schema:
-<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;            xmlschema = OneLogin_Saml2_XML._schema_class(etree.parse(f_schema))
-<br>&emsp;&emsp;&emsp;            xmlschema = OneLogin_Saml2_XML._schema_class(etree.parse(f_schema))
-<br>
-<br>&emsp;&emsp;        if not xmlschema.validate(xml):
-<br>&emsp;&emsp;&emsp;            if debug:
-<br>&emsp;&emsp;&emsp;&emsp;                print('Errors validating the metadata: ')
-<br>&emsp;&emsp;&emsp;&emsp;                for error in xmlschema.error_log:
-<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    print(error.message)
-<br>&emsp;&emsp;&emsp;            return 'invalid_xml'
-<br>&emsp;&emsp;        return xml
-<br>
-<br>&emsp;    @staticmethod
-<br>&emsp;    def query(dom, query, context=None):
-<br>&emsp;    def query(dom, query, context=None):
-<br>&emsp;&emsp;        """
-<br>&emsp;&emsp;        """
-<br>&emsp;&emsp;        if context is None:
-<br>&emsp;&emsp;&emsp;            return dom.xpath(query, namespaces=OneLogin_Saml2_Constants.NSMAP)
-<br>&emsp;&emsp;        else:
-<br>&emsp;&emsp;&emsp;            return context.xpath(query, namespaces=OneLogin_Saml2_Constants.NSMAP)
-<br>
-<br>&emsp;    @staticmethod
-<br>&emsp;    def cleanup_namespaces(tree_or_element, top_nsmap=None, keep_ns_prefixes=None):
-<br>&emsp;    def cleanup_namespaces(tree_or_element, top_nsmap=None, keep_ns_prefixes=None):
-<br>&emsp;&emsp;        """
-<br>&emsp;&emsp;        """
-<br>&emsp;&emsp;        all_prefixes_to_keep = [
-<br>&emsp;&emsp;&emsp;            OneLogin_Saml2_Constants.NS_PREFIX_XS
-<br>&emsp;&emsp;        ]
-<br>
-<br>&emsp;&emsp;        if keep_ns_prefixes:
-<br>&emsp;&emsp;&emsp;            all_prefixes_to_keep = list(set(all_prefixes_to_keep.extend(keep_ns_prefixes)))
-<br>
-<br>&emsp;&emsp;        return etree.cleanup_namespaces(tree_or_element, keep_ns_prefixes=all_prefixes_to_keep)
-<br>
-<br>&emsp;    @staticmethod
-<br>&emsp;    def extract_tag_text(xml, tagname):
-<br>&emsp;    def extract_tag_text(xml, tagname):
-<br>&emsp;&emsp;        open_tag = compat.to_bytes("<%s" % tagname)
-<br>&emsp;&emsp;        close_tag = compat.to_bytes("</%s>" % tagname)
-<br>
-<br>&emsp;&emsp;        xml = OneLogin_Saml2_XML.to_string(xml)
-<br>&emsp;&emsp;        start = xml.find(open_tag)
-<br>&emsp;&emsp;        assert start != -1
-<br>
-<br>&emsp;&emsp;        end = xml.find(close_tag, start) + len(close_tag)
-<br>&emsp;&emsp;        assert end != -1
-<br>&emsp;&emsp;        return compat.to_string(xml[start:end])
-<br>
-<br>&emsp;    @staticmethod
-<br>&emsp;    def element_text(node):
-<br>&emsp;    def element_text(node):
-<br>&emsp;&emsp;        etree.strip_tags(node, etree.Comment)
-<br>&emsp;&emsp;        return node.text
-<br>
+<code>""" OneLogin_Saml2_XML </code><br/><code>Auxiliary class of OneLogin's Python Toolkit.</code><br/></br></br>from os.path import join, dirname</br>from lxml import etree</br><code>rom defusedxml.lxml import tostring, fromstring</code><br/>from defusedxml.lxml import tostring, fromstring</br>from app.lib.onelogin.saml2 import compat</br>from app.lib.onelogin.saml2.constants import OneLogin_Saml2_Constants</br></br></br>for prefix, url in OneLogin_Saml2_Constants.NSMAP.items():</br>etree.register_namespace(prefix, url)</br></br></br><code> OneLogin_Saml2_XML(object):</code><br/>class OneLogin_Saml2_XML(object):</br><code>_element_class = type(etree.Element('root'))</code><br/>_element_class = type(etree.Element('root'))</br>_parse_etree = staticmethod(fromstring)</br><code>_schema_class = etree.XMLSchem</code><br/>_schema_class = etree.XMLSchema</br><code>_text_class = compat.text_type</code><br/>_text_class = compat.text_types</br>_unparse_etree = staticmethod(tostring)</br></br>dump = staticmethod(etree.dump)</br>make_root = staticmethod(etree.Element)</br>make_child = staticmethod(etree.SubElement)</br></br>@staticmethod</br><code> to_string(xml, **kwargs):</code><br/>def to_string(xml, **kwargs):</br><hr></br></br><code>if isinstance(xml, OneLogin_Saml2_XML._text_class):</code><br/>if isinstance(xml, OneLogin_Saml2_XML._text_class):</br>return xml</br></br><code>if isinstance(xml, OneLogin_Saml2_XML._element_class):</code><br/>if isinstance(xml, OneLogin_Saml2_XML._element_class):</br>OneLogin_Saml2_XML.cleanup_namespaces(xml)</br>return OneLogin_Saml2_XML._unparse_etree(xml, **kwargs)</br></br>raise ValueError("unsupported type %r" % type(xml))</br></br>@staticmethod</br><code> to_etree(xml):</code><br/>def to_etree(xml):</br><hr><code>:rtype: OneLogin_Saml2_XML._element_</code><br/></br><code>if isinstance(xml, OneLogin_Saml2_XML._element_class):</code><br/>if isinstance(xml, OneLogin_Saml2_XML._element_class):</br>return xml</br><code>if isinstance(xml, OneLogin_Saml2_XML._text_class):</code><br/>if isinstance(xml, OneLogin_Saml2_XML._text_class):</br>return OneLogin_Saml2_XML._parse_etree(xml)</br></br>raise ValueError('unsupported type %r' % type(xml))</br></br>@staticmethod</br><code> validate_xml(xml, schema, debug=False):</code><br/>def validate_xml(xml, schema, debug=False):</br><hr></br></br>assert isinstance(schema, compat.str_type)</br>try:</br>xml = OneLogin_Saml2_XML.to_etree(xml)</br>except Exception as e:</br>if debug:</br>print(e)</br>return 'unloaded_xml</br></br>schema_file = join(dirname(__file__), 'schemas', schema)</br>with open(schema_file, 'r') as f_schema:</br><code>xmlschema = OneLogin_Saml2_XML._schema_class(etree.parse(f_schema))</code><br/>xmlschema = OneLogin_Saml2_XML._schema_class(etree.parse(f_schema))</br></br>if not xmlschema.validate(xml):</br>if debug:</br>print('Errors validating the metadata: ')</br>for error in xmlschema.error_log:</br>print(error.message)</br>return 'invalid_xml</br>return xml</br></br>@staticmethod</br><code> query(dom, query, context=None):</code><br/>def query(dom, query, context=None):</br><hr></br>if context is None:</br>return dom.xpath(query, namespaces=OneLogin_Saml2_Constants.NSMAP)</br>else:</br>return context.xpath(query, namespaces=OneLogin_Saml2_Constants.NSMAP)</br></br>@staticmethod</br><code> cleanup_namespaces(tree_or_element, top_nsmap=None, keep_ns_prefixes=None):</code><br/>def cleanup_namespaces(tree_or_element, top_nsmap=None, keep_ns_prefixes=None):</br><hr></br>all_prefixes_to_keep = [</br>OneLogin_Saml2_Constants.NS_PREFIX_XS</br>]</br></br>if keep_ns_prefixes:</br>all_prefixes_to_keep = list(set(all_prefixes_to_keep.extend(keep_ns_prefixes)))</br></br>return etree.cleanup_namespaces(tree_or_element, keep_ns_prefixes=all_prefixes_to_keep)</br></br>@staticmethod</br><code> extract_tag_text(xml, tagname):</code><br/>def extract_tag_text(xml, tagname):</br>open_tag = compat.to_bytes("<%s" % tagname)</br>close_tag = compat.to_bytes("</%s>" % tagname)</br></br>xml = OneLogin_Saml2_XML.to_string(xml)</br>start = xml.find(open_tag)</br>assert start != -1</br></br>end = xml.find(close_tag, start) + len(close_tag)</br>assert end != -1</br>return compat.to_string(xml[start:end])</br></br>@staticmethod</br><code> element_text(node):</code><br/>def element_text(node):</br>etree.strip_tags(node, etree.Comment)</br>return node.text</br>
                    </p>
                 </details>
 

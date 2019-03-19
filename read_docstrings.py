@@ -17,12 +17,13 @@ def read_doc_py(file_name):
     for line in program_file:
         spaces = 0
         # if found a function or class 
-        if "def " in line or "class" in line:
-            if "class" in line:
-                spaces = line.find("class")
-            else:
-                spaces = line.find("def")
-            output += (spaces // 4) * "&emsp;" + line + "<br>"
+        if "def" in line or "class" in line:
+            # if "class" in line:
+            #     spaces = line.find("class")
+            # else:
+            #     spaces = line.find("def")
+            output += "<code>" + line.strip().strip("def").strip("class") + "</code><br/>"
+            # output += (spaces // 4) * "&emsp;" + line + "<br>"
         # check for docstrings 
         elif "'''" in line or '"""' in line:
             quotes_occurrence = 0
@@ -37,18 +38,22 @@ def read_doc_py(file_name):
             # otherwise have a boolean to determine which lines 
             # are part of the docstring
             if quotes_occurrence == 2:
-                output += (spaces // 4) * "&emsp;" + line + "<br>"
+                # output += (spaces // 4) * "&emsp;" + line + "<br>"
+                output += line.strip().strip('"""').strip("'''") + "</br>"
+                output += "<hr>"
             else:
                 if not docstring:
                     docstring = True
                 else:
-                    output += (spaces // 4) * "&emsp;" + line + "<br>"
+                    # output += (spaces // 4) * "&emsp;" + line + "<br>"
+                    output += "<hr>"
                     docstring = False
         if docstring:
             with_space = len(line)
             without_space = len(line.strip(" "))
             spaces = with_space - without_space
-            output += (spaces // 4) * "&emsp;" + line + "<br>"
+            # output += (spaces // 4) * "&emsp;" + line + "<br>"
+            output += line.strip().strip('"""').strip("'''") + "</br>"
     program_file.close()
     return output
 

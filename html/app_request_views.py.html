@@ -3028,6 +3028,11 @@
                     </a>
                 </li>
                 <li>
+                    <a href="/NYCOpenDocs/html/migrations_versions_aeb1852855b4_add_appealable_option_to_reasons.py.html">
+                        aeb1852855b4_add_appealable_option_to_reasons.py
+                    </a>
+                </li>
+                <li>
                     <a href="/NYCOpenDocs/html/migrations_versions_b3c0c76ac2e6_add_envelope_functionality.py.html">
                         b3c0c76ac2e6_add_envelope_functionality.py
                     </a>
@@ -3197,49 +3202,7 @@ Handle contacting the agency about a request as a requester.
                     <p>
 <!-- Include the documentation here! -->
 
-"""
-<br>.. module:: request.views.
-<br>
-<br>   :synopsis: Handles the request URL endpoints for the OpenRecords application
-<br>"""
-<br>def new():
-<br>&emsp;    """
-<br>&emsp;    Create a new FOIL request
-<br>&emsp;    sends a confirmation email after the Requests object is created.
-<br>
-<br>&emsp;    title: request title
-<br>&emsp;    description: request description
-<br>&emsp;    agency: agency selected for the request
-<br>&emsp;    submission: submission method for the request
-<br>
-<br>&emsp;    :return: redirect to homepage on successful form validation
-<br>&emsp;     if form fields are missing or has improper values, backend error messages (WTForms) will appear
-<br>&emsp;    """
-<br>def view_all():
-<br>def view(request_id):
-<br>&emsp;    """
-<br>&emsp;    This function is for testing purposes of the view a request back until backend functionality is implemented.
-<br>
-<br>&emsp;    :return: redirect to view request page
-<br>&emsp;    """
-<br>def non_portal_agency(agency_name):
-<br>&emsp;    """
-<br>&emsp;    This function handles messaging to the requester if they submitted a request to a non-portal agency.
-<br>
-<br>&emsp;    :return: redirect to non_portal_agency page.
-<br>&emsp;    """
-<br>def get_agencies_as_choices():
-<br>&emsp;    """
-<br>&emsp;    Get selected category value from the request body and generate a list of sorted agencies from the category.
-<br>
-<br>&emsp;    :return: list of agency choices
-<br>&emsp;    """
-<br>def contact_agency(request_id):
-<br>&emsp;    """
-<br>&emsp;    This function handles contacting the agency about a request as a requester. 
-<br>&emsp;    :return: 
-<br>&emsp;    """
-<br>
+</br>.. module:: request.views.</br></br>:synopsis: Handles the request URL endpoints for the OpenRecords application</br><hr><code> new():</code><br/></br>Create a new FOIL request</br>sends a confirmation email after the Requests object is created.</br></br>title: request title</br>description: request description</br>agency: agency selected for the request</br>submission: submission method for the request</br></br>:return: redirect to homepage on successful form validation</br>if form fields are missing or has improper values, backend error messages (WTForms) will appear</br><hr><code>e current_user.default_agency_ein),</code><br/><code> view_all():</code><br/><code> view(request_id):</code><br/></br>This function is for testing purposes of the view a request back until backend functionality is implemented.</br></br>:return: redirect to view request page</br><hr><code># Determine if custom request form panels should be expanded by default</code><br/><code>if 'expand_by_default' in current_request.agency.agency_features['custom_request_forms']:</code><br/><code>xpand_by_default = current_request.agency.agency_features['custom_request_forms']['expand_by_default']</code><br/><code>xpand_by_default = F</code><br/><code>if 'description_hidden_by_default' in current_request.agency.agency_features['custom_request_forms']:</code><br/><code>ription_hidden_by_default = current_request.agency.agency_features['custom_request_forms']['description_hidden_by_default']</code><br/><code>ription_hidden_by_default = F</code><br/><code>xpand_by_default=expand_by_default,</code><br/><code>ription_hidden_by_default=description_hidden_by_default</code><br/><code> non_portal_agency(agency_name):</code><br/></br>This function handles messaging to the requester if they submitted a request to a non-portal agency.</br></br>:return: redirect to non_portal_agency page.</br><hr><code> get_agencies_as_choices():</code><br/></br>Get selected category value from the request body and generate a list of sorted agencies from the category.</br></br>:return: list of agency choices</br><hr><code> contact_agency(request_id):</code><br/></br>This function handles contacting the agency about a request as a requester.</br>:return:</br><hr>
                    </p>
                 </details>
 

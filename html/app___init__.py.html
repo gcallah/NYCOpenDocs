@@ -3028,6 +3028,11 @@
                     </a>
                 </li>
                 <li>
+                    <a href="/NYCOpenDocs/html/migrations_versions_aeb1852855b4_add_appealable_option_to_reasons.py.html">
+                        aeb1852855b4_add_appealable_option_to_reasons.py
+                    </a>
+                </li>
+                <li>
                     <a href="/NYCOpenDocs/html/migrations_versions_b3c0c76ac2e6_add_envelope_functionality.py.html">
                         b3c0c76ac2e6_add_envelope_functionality.py
                     </a>
@@ -3185,46 +3190,7 @@ Blueprints are registered in this file.
                     <p>
 <!-- Include the documentation here! -->
 
-def create_app(config_name='default'):
-<br>&emsp;    """
-<br>&emsp;    Set up the Flask Application context.
-<br>
-<br>&emsp;    :param config_name: Configuration for specific application context.
-<br>
-<br>&emsp;    :return: Flask application
-<br>&emsp;    """
-<br>&emsp;    mail_handler.setFormatter(Formatter('''
-<br>&emsp;    Message Type:       %(levelname)s
-<br>&emsp;    Location:           %(pathname)s:%(lineno)d
-<br>&emsp;    Module:             %(module)s
-<br>&emsp;    Function:           %(funcName)s
-<br>&emsp;    Time:               %(asctime)s
-<br>&emsp;    
-<br>&emsp;    Message:
-<br>&emsp;    %(message)s
-<br>&emsp;    '''))
-<br>&emsp;    def bad_request(e):
-<br>&emsp;    def forbidden(e):
-<br>&emsp;    def page_not_found(e):
-<br>&emsp;    def internal_server_error(e):
-<br>&emsp;&emsp;        app.logger.error("""Request:   {method} {path}
-<br>&emsp;    IP:        {ip}
-<br>&emsp;    User:      {user}
-<br>&emsp;    Agent:     {agent_platform} | {agent_browser} {agent_browser_version}
-<br>&emsp;    Raw Agent: {agent}
-<br>&emsp;    Error ID:  {error_id}
-<br>&emsp;&emsp;&emsp;            """.format(
-<br>&emsp;    def maintenance(e):
-<br>&emsp;    def check_maintenance_mode():
-<br>&emsp;    def add_session_config():
-<br>&emsp;&emsp;        """Add current_app.permanent_session_lifetime converted to milliseconds
-<br>&emsp;&emsp;        to context. The config variable PERMANENT_SESSION_LIFETIME is not
-<br>&emsp;&emsp;        used because it could be either a timedelta object or an integer
-<br>&emsp;&emsp;        representing seconds.
-<br>&emsp;&emsp;        """
-<br>&emsp;    def add_debug():
-<br>&emsp;&emsp;        """Add current_app.debug to context."""
-<br>
+<code> create_app(config_name='default'):</code><br/></br>Set up the Flask Application context.</br></br>:param config_name: Configuration for specific application context.</br></br>:return: Flask application</br><hr>mail_handler.setFormatter(Formatter(</br>Message Type:       %(levelname)s</br>Location:           %(pathname)s:%(lineno)d</br>Module:             %(module)s</br>Function:           %(funcName)s</br>Time:               %(asctime)s</br></br>Message:</br>%(message)s</br><hr><code> bad_request(e):</code><br/><code> forbidden(e):</code><br/><code> page_not_found(e):</code><br/><code> internal_server_error(e):</code><br/>app.logger.error("""Request:   {method} {path}</br>IP:        {ip}</br>User:      {user}</br>Agent:     {agent_platform} | {agent_browser} {agent_browser_version}</br>Raw Agent: {agent}</br>Error ID:  {error_id}</br><hr><code> maintenance(e):</code><br/><code> check_maintenance_mode():</code><br/><code> add_session_config():</code><br/>Add current_app.permanent_session_lifetime converted to milliseconds</br>to context. The config variable PERMANENT_SESSION_LIFETIME is not</br>used because it could be either a timedelta object or an integer</br>representing seconds.</br><hr><code> add_debug():</code><br/>Add current_app.debug to context.</br><hr>
                    </p>
                 </details>
 

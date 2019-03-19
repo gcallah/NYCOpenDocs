@@ -46,6 +46,9 @@ menu: site_outline $(SITE_OUTLINE)
 ptml_files: site_outline $(PTML_TEMPL) $(SITE_OUTLINE)
 	python3 $(UTILS_DIR)/create_pages.py $(SITE_OUTLINE) $(PTML_TEMPL) $(PTML_DIR)
 
+extract_docs:
+	python3 read_docstrings.py
+
 site_struct: menu ptml_files
 	git add $(PTML_DIR)/*.ptml
 	make local

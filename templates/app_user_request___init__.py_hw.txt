@@ -1,0 +1,2 @@
+The file defines user_request blueprints and all the user_request view
+functions are imported in this file.

@@ -1,0 +1,23 @@
+The route definitions are in views.py. The routes defined here are custom api
+blueprints routes.
+<br> Example:
+<br>
+@login_required
+@agency_api_blueprint.route('/active_users/<string:agency_ein>', methods=['GET'])
+<br>
+A function is defined to retrieve the active users for the specified agency.
+<br>
+<br>
+Other routes are defined to:
+<br>
+Retrieve an agencies determination reasons for Denials, Closings and
+Re-Openings;
+<br>
+Retrieve letter templates for the specified agency.
+If letter type is provided, only those templates will be
+provided, otherwise all templates will be returned;
+<br>
+Retrieve the custom request forms for the specified agency;
+<br>
+Get the custom request form field definitions based on form id and agency ein
+in the form of JSON object containing the form field definitions.

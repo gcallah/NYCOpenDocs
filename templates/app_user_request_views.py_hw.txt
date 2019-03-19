@@ -1,0 +1,2 @@
+The user-request routes are to create a users permissions entry for a request,
+update the users permissions and remove a user from the request.

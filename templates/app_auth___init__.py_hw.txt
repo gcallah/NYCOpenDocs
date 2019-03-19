@@ -1,0 +1,2 @@
+The authentication blueprint will have views to register new users and to
+log in and log out.

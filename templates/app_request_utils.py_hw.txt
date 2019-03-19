@@ -1,0 +1,27 @@
+It handles the functions for requests to:
+<br>
+Create a new FOIL Request and associated Users, UserRequests, and Events,
+<br>
+Get mailing address from form data,
+<br>
+Try to store and scan an uploaded file when no request id has been generated,
+<br>
+Save an upload file to the quarantine directory, with this directory being the
+file's immediate parent,
+<br>
+Move an approved upload to the upload directory,
+<br>
+Generates an agency-specific FOIL request id,
+<br>
+Generate HTML for rich-text emails,
+<br>
+Generates a GUID for an anonymous user,
+<br>
+Sends out a confirmation email to requester and bcc the agency default email
+associated with the request,
+<br>
+Creates user_requests entries for agency administrators,
+<br>
+Creates Users, Emails, and Events entries for a contact submission for a
+request.
+Sends email with message to all agency users associated with the request.

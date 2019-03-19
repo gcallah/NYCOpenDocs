@@ -1,0 +1,2 @@
+The file defines response blueprints and all the response view functions are
+imported in this file.

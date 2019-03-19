@@ -1,0 +1,8 @@
+The file handles the report URL endpoints for the OpenRecords application.
+<br>
+The routes are defined to:
+<br>
+<br>
+Handles the rendering of the reports page,
+<br>
+Retrieval of report data to generate the chart on the frontend.

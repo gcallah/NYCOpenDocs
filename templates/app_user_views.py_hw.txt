@@ -1,0 +1,2 @@
+The user routes for a 'user_id' are handled using different request parameters
+like title, number, address; and restrictions.

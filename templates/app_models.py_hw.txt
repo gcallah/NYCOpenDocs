@@ -1,0 +1,8 @@
+This file is used to declare all the database models with SQLAlchemy for
+database access. It allows you to define tables and models in one go.
+<br>
+The different tables of the database defined are Roles, Agencies, Users,
+AgencyUsers, Requests, Events, Responses, Reasons, UserRequests,
+ResponseTokens, Notes, Files, Links, Instructions, Emails,
+Envelopes, EnvelopeTemplates, Letters, LetterTemplates, Determinations,
+CommunicationMethods and CustomRequestForms.

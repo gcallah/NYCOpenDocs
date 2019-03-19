@@ -1,0 +1,2 @@
+The file defines 'request_api_blueprint' and all the view functions are
+imported in this file.

@@ -1,0 +1,18 @@
+It handles the request URL endpoints for the OpenRecords application.
+<br>
+The routes are defined to:
+<br>
+<br>
+Create a new FOIL request sends a confirmation email after the Requests object
+is created,
+<br>
+Testing purposes of the view a request back until backend functionality is
+implemented,
+<br>
+Handle messaging to the requester if they submitted a request to a non-portal
+agency,
+<br>
+Get selected category value from the request body and generate a list of
+sorted agencies from the category,
+<br>
+Handle contacting the agency about a request as a requester.

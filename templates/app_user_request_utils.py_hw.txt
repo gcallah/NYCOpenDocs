@@ -1,0 +1,22 @@
+It handles the user-request utilities to:
+<br>
+<br>
+Add user-request,
+<br>
+Edit user-request,
+<br>
+Remove user-request,
+<br>
+Create user-request event,
+<br>
+Create user-request event object,
+<br>
+Get the current point of contact of a given request,
+<br>
+Toggles point of contact of a given request,
+<br>
+Check if a given request has a point of contact,
+<br>
+Remove the current point of contact from a given request,
+<br>
+Determine point of contact of change.

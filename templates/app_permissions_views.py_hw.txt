@@ -1,0 +1,2 @@
+This file defines a route when given a role, return the permissions
+that are in that role.

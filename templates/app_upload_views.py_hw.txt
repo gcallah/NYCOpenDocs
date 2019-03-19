@@ -1,0 +1,4 @@
+This file handles Upload endpoints for NYC OpenRecords with a function to
+create a new upload handling chunked files through the Content-Range header,
+a function to remove an uploaded file and another function to check the status
+of the file upload.

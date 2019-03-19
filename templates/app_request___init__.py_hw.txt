@@ -1,0 +1,2 @@
+The file defines request blueprints and all the request view functions are
+imported in this file.

@@ -1,0 +1,7 @@
+It handles the user utilities to:
+<br>
+Make the specified user an admin for the agency,
+<br>
+Remove the specified users permissions for the agency identified by agency_ein,
+<br>
+Update the ElasticSearch index assigned_users for the provided request IDs,

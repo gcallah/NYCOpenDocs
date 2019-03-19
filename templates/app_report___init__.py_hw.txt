@@ -1,0 +1,2 @@
+The file defines report blueprints and all the report view functions are
+imported in this file.

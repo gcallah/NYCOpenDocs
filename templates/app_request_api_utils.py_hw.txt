@@ -1,0 +1,2 @@
+The file creates and stores event object for updating the request information
+into database.

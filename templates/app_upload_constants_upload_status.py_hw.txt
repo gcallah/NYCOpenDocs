@@ -1,0 +1,2 @@
+This files initializes constants related to files upload statuses
+like processing, scanning, ready and error.

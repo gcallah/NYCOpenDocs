@@ -1,0 +1,4 @@
+The route definitions are in views.py. The routes defined here are:
+<br>
+@admin.route('/')
+@admin.route('/<agency_ein>')

@@ -1,0 +1,1 @@
+It defines constants messages related to errors and failures.

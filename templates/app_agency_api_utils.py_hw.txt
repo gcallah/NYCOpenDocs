@@ -1,0 +1,20 @@
+Few agency utilities functions are defined as follows:
+<br>
+Function get_active_users_as_choices() retrieves a list of tuples representing
+users that are active for a given agency. Each tuple contains the following
+elements:
+<br>
+(Users.guid, Users.name)
+<br>
+<br>
+Function get_reasons() retrieves the determination reasons
+(used in emails) for the specified agency as a JSON object.
+If reason_type is provided, only retrieve determination_reasons of that type.
+<br>
+<br>
+Function get_letter_templates() retrieves letter templates for the specified
+agency as a dictionary. If template type is provided, only get
+templates of that type.
+<br>
+<br>
+Function _group_items() groups a collection of items by a specified key.

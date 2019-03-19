@@ -1,0 +1,2 @@
+This file defines the forms used to add user-request form, edit the forms and
+remove those forms.

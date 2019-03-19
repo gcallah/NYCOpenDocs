@@ -1,0 +1,6 @@
+It defines two functions.
+<br>One for, given a permissions mask,
+check if the specified permission value is within those permissions.
+<br>
+Another one, given a permissions mask, return a list of
+app.constants.permission.PermissionPair.

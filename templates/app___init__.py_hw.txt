@@ -1,0 +1,6 @@
+The init.py file is used to initialize all python packages.
+It imports selected Classes, functions, etc into the package level. Functions
+are defined to set up the flask application context and error handlers.
+<br>
+Also, at the package level subpackages/modules are made available.
+Blueprints are registered in this file.

@@ -1,0 +1,3 @@
+The file handles all core URL endpoints for the timeclock application
+The routes are defined for 'index', 'status', 'contact', 'technical-support',
+'faq', 'about' and 'activate'.

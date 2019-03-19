@@ -1,0 +1,6 @@
+The search routes handled are for:
+<br>
+To Search requests by different filters like title, agency request summary, etc;
+<br>
+Convert and send the a search result-set as a
+file of the specified document type.

@@ -1,0 +1,2 @@
+Function get_agency_active_users() retrieves a list of active users for the
+specified agency when passed an Agency EIN.

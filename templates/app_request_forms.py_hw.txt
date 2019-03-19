@@ -1,0 +1,2 @@
+The file defines different forms used to create FOIL requests.
+The required fields are defined for their respective classes.

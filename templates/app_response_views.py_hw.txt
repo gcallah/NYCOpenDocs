@@ -1,0 +1,19 @@
+The file handles the response URL endpoints for the OpenRecords application.
+The routes defined are with respect to a 'request_id' for permissions to
+add file, add note, acknowledge, deny, close, reopen, extend, add link, add
+offline instructions, generate envelopes and return email.
+<br>
+Other routes defined are to:
+<br>
+<br>
+Retrieve a list of dates that are holidays in the specified year,
+<br>
+Supports File Responses,
+<br>
+Return letter template for the generate letter workflow step,
+<br>
+Return a PDF envelope as an attachment,
+<br>
+Generate a response letter,
+<br>
+Return a PDF letter as an attachment.

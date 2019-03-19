@@ -1,0 +1,189 @@
+It handles the functions for responses to:
+<br>
+<br>
+Create and store the file response object for the specified request.
+Gets the file mimetype and magic file check from a helper function in
+lib.file_utils. <br>
+File privacy options can be either Release and Public, Release and Private,
+or Private. <br>
+Provides parameters for the process_response function to create and store
+responses and events object.
+<br>
+<br>
+Create and store the note object for the specified request.<br>
+Store the note content into the Notes table.<br>
+Provides parameters for the process_response function to create and store
+responses and events object.
+<br>
+<br>
+Create and store an acknowledgement-determination response for the specified
+request and update the request accordingly.
+<br>
+<br>
+Create and store a denial-determination response for the specified request
+and update the request accordingly.
+<br>
+<br>
+Create and store a closing-determination response for the specified request
+and update the request accordingly.
+<br>
+<br>
+Create and store a re-opened-determination for the specified request and
+update the request accordingly.
+<br>
+<br>
+Create and store the extension object for the specified request.<br>
+Extension's privacy is always Release and Public.<br>
+Provides parameters for the process_response function to create and store
+responses and events object.<br>
+Calls email notification function to email both requester and agency users
+detailing the extension.
+<br>
+<br>
+Create and store the link object for the specified request.<br>
+Store the link content into the Links table.<br>
+Provides parameters for the process_response function to create and store
+responses and events object.<br>
+Calls email notification function to email both requester and agency users
+detailing the link.
+<br>
+<br>
+Creates and stores the instruction object for the specified request.<br>
+Stores the instruction content into the Instructions table.<br>
+Provides parameters for the process_response function to create and store
+responses and events object.
+<br>
+<br>
+Generate and email a PDF of the response letter.<br>
+Create and store the response_letters and communication_methods objects.
+<br>
+<br>
+Create and store the email object for the specified request.<br>
+Store the email metadata into the Emails table.<br>
+Provides parameters for the process_response function to create and store
+responses and events object.
+<br>
+<br>
+Create and store a letter object for the specified request.<br>
+Stores the letter metadata in the Letters table.<br>
+Provides parameters for the process_response function to create and store
+responses and events objects.
+<br>
+<br>
+Create and store an envelope object for the specified request.<br>
+Stores the envelope LaTeX in the Letters table.
+<br>
+<br>
+Add an SMS to the database for the specified request.
+<br>
+<br>
+Add a push to the database for the specified request.
+<br>
+<br>
+Get the new due date from either generating with extension length, or setting
+from an inputted custom due date.
+<br>
+<br>
+Define a helper function that processes the uploaded file form data.<br>
+A files dictionary is first created and then populated with keys and their
+respective values of the form data.
+<br>
+<br>
+Process the letter template for the request.
+<br>
+<br>
+Process the email template for responses. <br>
+Determine the type of response from
+passed in data and follows the appropriate execution path to render the email
+template.
+<br>
+<br>
+Assign a user to be the point of contact in emails/letters.
+<br>
+<br>
+Process email template for an acknowledgement.
+<br>
+<br>
+Process letter template for an acknowledgment.
+<br>
+<br>
+Process letter template for an extension.
+<br>
+<br>
+Process letter templates for a closing.
+<br>
+<br>
+Process letter templates for a denial.
+<br>
+<br>
+Process email template for reopening a request.
+<br>
+<br>
+Process letter templates for a re-opening.
+<br>
+<br>
+Process letter template for a response.
+<br>
+<br>
+Process email template for denying a request.
+<br>
+<br>
+Process email template for closing a request.
+<br>
+<br>
+Process email template for reopening a request. (add, edit, remove)
+<br>
+<br>
+Process email template for an extension.<br>
+Checks if dictionary of extension data exists. <br>
+If not, renders the default response email template.<br>
+If extension dictionary exists, renders the extension response template with
+provided arguments.
+<br>
+A similar function as that of an extension is defined for a file, a link
+instruction, a note and an offline instruction.
+<br>
+<br>
+Process email template for a editing a response.<br>
+Checks if confirmation is true. If not, renders the default edit response
+email template.<br>
+If confirmation is true, renders the edit response template with provided
+arguments.
+<br>
+<br>
+Get the email template(s) and header for confirmation page, for the edit
+response workflow, based on privacy options.
+<br>
+<br>
+Return a formatted key for an email.<br>
+Intended for storing the body of an email.
+<br>
+<br>
+Create file links for a file response based on privacy.<br>
+Append a file_link dictionary to either release_public_links,
+release_private_links, and private_links, based on privacy option.
+<br>
+<br>
+Send email with file links detailing a file response has been added to the
+request.
+<br>
+<br>
+Send email detailing a response has been edited.
+<br>
+<br>
+Sends email detailing a specific response has been added to a request.
+<br>
+<br>
+Send an email notification to all agency users regarding a deleted response.
+<br>
+<br>
+Send email based on given arguments and create and store email object into the
+Emails table.<br>
+Print error messages if there is Assertion or Exception error occurs.
+<br>
+<br>
+Create and store event and communication_method object for given response.
+<br>
+<br>
+There is also an Abstract base class for editing a response with various
+functions.

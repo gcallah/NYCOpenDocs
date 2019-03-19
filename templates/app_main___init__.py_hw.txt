@@ -1,0 +1,3 @@
+Blueprints are used in Flask to maintain a large and scalable application.
+Flask-Session extension is used to add support for Server-side Session to your
+application.

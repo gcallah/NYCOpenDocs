@@ -1,0 +1,2 @@
+The file defines search blueprints and all the search view functions are
+imported in this file.

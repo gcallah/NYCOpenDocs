@@ -1,0 +1,6 @@
+This file defines different form classes with their selection options/choices.
+<br>Class ActivateAgencyUserForm() helps in adding agency users with their name
+and email information.
+<br>Class SelectAgencyForm() helps in selecting agencies as choices.
+Super Users will always see every agency in the dropdown and Multi-Agency Admin
+Users will only see the agencies that they administer in the dropdown.

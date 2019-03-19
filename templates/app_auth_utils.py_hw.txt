@@ -1,0 +1,48 @@
+This file defines authentication utilities for NYC OpenRecords.
+
+<br>It also defines a functions for following purposes:
+<br>
+<br>
+Given a GUID return the associated User object,
+<br>
+Update OpenRecords-specific user attributes,
+<br>
+Determine if a URL is safe to redirect the user to,
+<br>
+Find a user by email address stored in the database,
+<br>
+Create or Update an OpenRecords User based on the data received from the SAML
+Assertion,
+<br>
+Update a users data with the updated values,
+<br>
+Create and store event object for given response,
+<br>
+Initialize a SAML SP from a dictionary representation of a Flask request,
+<br>
+Convert a Flask request object to a dictionary for use with OneLogin SAML,
+<br>
+Calls the login function in the OneLogin python3-saml library to generate an
+Assertion Request to the IdP,
+<br>
+Process a SAML LogoutResponse from the IdP,
+<br>
+Generate a SAML LogoutRequest for the user,
+<br>
+Process a SAML Assertion for the user,
+<br>
+Validate email,
+<br>
+Validate whether the user is a NYC Employee,
+<br>
+Log an error message if the specified response's status code is not 200,
+<br>
+Perform a request on an NYC.ID Web Services endpoint,
+<br>
+Generate a string that can be signed to produce an authentication signature,
+<br>
+Generate an NYC.ID Web Services authentication signature using HMAC-SHA1,
+<br>
+Authenticate the provided user with an LDAP Server,
+<br>
+Connect to an LDAP server.

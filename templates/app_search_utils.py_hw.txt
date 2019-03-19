@@ -1,0 +1,21 @@
+It handles the search utilities to:
+<br>
+<br>
+Recreate elasticsearch indices and request docs,
+<br>
+Return whether the elasticsearch index exists or not,
+<br>
+Delete all elasticsearch indices, ignoring errors,
+<br>
+Delete all elasticsearch request docs,
+<br>
+Create elasticsearch index with mappings for request docs,
+<br>
+Create elasticsearch request docs for every request db record,
+<br>
+To search requests matching the request parameters of the '/search/requests'
+endpoints,
+<br>
+To convert dates in a specified time format,
+<br>
+Remove highlights for private and non-requester fields.

@@ -1,0 +1,2 @@
+The file defines user blueprints and all the user view functions are
+imported in this file.

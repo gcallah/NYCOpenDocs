@@ -1,0 +1,10 @@
+Few functions are defined as follows:
+<br>
+Function update_agency_active_status() updates the active status of an agency.
+<br>
+Function get_agency_feature() retrieves the specified agency feature for the
+specified agency in the form of a JSON object. It takes two params agency_ein
+and specified feature.
+<br>
+Function get_agency_features() retrieves the agency features JSON object for
+the specified agency by taking one parameter agency_ein.

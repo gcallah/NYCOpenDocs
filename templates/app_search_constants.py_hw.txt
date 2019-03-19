@@ -1,0 +1,2 @@
+This file defines constants with respect to search used in the
+utils.py and views.py files.

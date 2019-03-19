@@ -1,0 +1,21 @@
+The file handles authentication endpoints for NYC OpenRecords.
+<br>The routes are defined to:
+<br>
+<br>
+Handle login redirects for users,
+<br>
+Unified logout endpoint for all authentication types,
+<br>
+Allow users to manage their OpenRecords specific attributes,
+<br>
+View function to handle SAML SSO Workflow,
+<br>
+Access the SAML SP metadata for this application,
+<br>
+Login a user using the LDAP protocol,
+<br>
+Log a user out from the LDAP server,
+<br>
+Authenticate a user against the database (ignore password),
+<br>
+Log a user out from the server.

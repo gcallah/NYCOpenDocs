@@ -1,0 +1,10 @@
+The route definitions are in views.py.
+<br>
+<br>
+The routes to manage agency features are defined to:
+<br>
+Retrieve the agency features JSON for the specified agency,
+<br>
+Retrieve the information for the specified agency_feature in the
+specified agency, if exists.
+<br>

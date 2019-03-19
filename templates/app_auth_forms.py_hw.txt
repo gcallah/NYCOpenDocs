@@ -1,0 +1,6 @@
+This file defines the forms used to manage Authentication requests.
+<br>
+It has classes to manage user/agent user account forms.
+<br>
+It has another class for basic login form with email, password and login button
+fields.

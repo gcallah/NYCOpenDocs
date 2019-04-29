@@ -3,7 +3,7 @@
     <head>
 <!--include head.txt -->
         <title>
-            manage.py
+            email_agency_report_generated.html
         </title>
     </head>
 
@@ -19,7 +19,7 @@
                     </figcaption>
                 </figure>
                 <h1>
-                    manage.py
+                    email_agency_report_generated.html
                 </h1>
 
                 <details>
@@ -29,6 +29,7 @@
 
                     <p>
 <!-- Include the text material here! -->
+<!--include templates/app_templates_email_templates_email_agency_report_generated.html_hw.txt -->
                     </p>
                 </details>
 
@@ -39,13 +40,13 @@
 
                     <p>
 <!-- Include the documentation here! -->
-<!--include templates/manage.py_hw.txt -->
+<!--include templates/app_templates_email_templates_email_agency_report_generated.html_ex.txt -->
                    </p>
                 </details>
 
 <!-- Include source code here! -->
                 <p>
-<a href="https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/manage.py">Source code</a>
+<a href="https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/email_templates/email_agency_report_generated.html">Source code</a>
                 </p>
             </div>
         </div>

@@ -644,6 +644,11 @@
                     </a>
                 </li>
                 <li>
+                    <a href="/NYCOpenDocs/html/app_report_utils.py.html">
+                        utils.py
+                    </a>
+                </li>
+                <li>
                     <a href="/NYCOpenDocs/html/app_report_views.py.html">
                         views.py
                     </a>
@@ -1566,6 +1571,11 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_edit_response_file_links.html.html">
                             edit_response_file_links.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_agency_report_generated.html.html">
+                            email_agency_report_generated.html
                         </a>
                     </li>
                     <li>
@@ -2869,11 +2879,6 @@
             </a>
         </li>
         <li>
-            <a href="/NYCOpenDocs/html/manage.py.html">
-                manage.py
-            </a>
-        </li>
-        <li>
             <a href="#Submenu79" data-toggle="collapse" aria-expanded="false">
                 migrations
             </a>
@@ -3028,6 +3033,16 @@
                     </a>
                 </li>
                 <li>
+                    <a href="/NYCOpenDocs/html/migrations_versions_aeb1852855b4_add_appealable_option_to_reasons.py.html">
+                        aeb1852855b4_add_appealable_option_to_reasons.py
+                    </a>
+                </li>
+                <li>
+                    <a href="/NYCOpenDocs/html/migrations_versions_b12d4ba1cfd4_add_primary_keys_to_users_user_requests_.py.html">
+                        b12d4ba1cfd4_add_primary_keys_to_users_user_requests_.py
+                    </a>
+                </li>
+                <li>
                     <a href="/NYCOpenDocs/html/migrations_versions_b3c0c76ac2e6_add_envelope_functionality.py.html">
                         b3c0c76ac2e6_add_envelope_functionality.py
                     </a>
@@ -3059,6 +3074,11 @@
                 </li>
             </ul>
         </ul>
+        <li>
+            <a href="/NYCOpenDocs/html/openrecords.py.html">
+                openrecords.py
+            </a>
+        </li>
         <li>
             <a href="/NYCOpenDocs/html/setup.sh.html">
                 setup.sh
@@ -3182,27 +3202,11 @@ This html file contains JavaScript scripts for the base page of NYC Open Records
 
 &emsp;&emsp;        /* Set profile link href value with 'target' parameter being the current page
 <br>&emsp;&emsp;         */
-<br>&emsp;    function idpLogout(afterTimeout) {
-<br>&emsp;&emsp;        /* Open NYC.ID Logout page in new tab and close it
-<br>&emsp;&emsp;         * after after a 500 milliseconds (the page must have been loaded by this time).
-<br>&emsp;&emsp;         * After closing, call afterTimeout if specified.
-<br>&emsp;&emsp;         */
-<br>&emsp;&emsp;        setTimeout(function() {
-<br>&emsp;&emsp;&emsp;            if (typeof afterTimeout === "function") {
-<br>&emsp;&emsp;        $("#logout").click(function(e) {
-<br>&emsp;&emsp;&emsp;            /* Before sending user to auth.logout page, open a new tab
-<br>&emsp;&emsp;&emsp;             * and logout of the NYC.ID IDP (and close the tab after completion).
-<br>&emsp;&emsp;&emsp;             */
-<br>&emsp;&emsp;&emsp;            idpLogout(function () {
 <br>&emsp;&emsp;        beforeSend: function (xhr, settings) {
 <br>&emsp;&emsp;&emsp;            /*
 <br>&emsp;&emsp;&emsp;             * Include the X-CSRFToken header for methods that are not considered "safe"
 <br>&emsp;&emsp;&emsp;             *
 <br>&emsp;&emsp;&emsp;             */
-<br>&emsp;&emsp;        onwarning: function () {
-<br>&emsp;&emsp;        logout: function() {
-<br>&emsp;&emsp;&emsp;            idpLogout(function() {
-<br>&emsp;    $(document).ready(function () {
 <br>
                    </p>
                 </details>

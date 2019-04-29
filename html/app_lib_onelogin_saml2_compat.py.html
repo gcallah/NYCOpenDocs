@@ -644,6 +644,11 @@
                     </a>
                 </li>
                 <li>
+                    <a href="/NYCOpenDocs/html/app_report_utils.py.html">
+                        utils.py
+                    </a>
+                </li>
+                <li>
                     <a href="/NYCOpenDocs/html/app_report_views.py.html">
                         views.py
                     </a>
@@ -1566,6 +1571,11 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_edit_response_file_links.html.html">
                             edit_response_file_links.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_agency_report_generated.html.html">
+                            email_agency_report_generated.html
                         </a>
                     </li>
                     <li>
@@ -2869,11 +2879,6 @@
             </a>
         </li>
         <li>
-            <a href="/NYCOpenDocs/html/manage.py.html">
-                manage.py
-            </a>
-        </li>
-        <li>
             <a href="#Submenu79" data-toggle="collapse" aria-expanded="false">
                 migrations
             </a>
@@ -3028,6 +3033,16 @@
                     </a>
                 </li>
                 <li>
+                    <a href="/NYCOpenDocs/html/migrations_versions_aeb1852855b4_add_appealable_option_to_reasons.py.html">
+                        aeb1852855b4_add_appealable_option_to_reasons.py
+                    </a>
+                </li>
+                <li>
+                    <a href="/NYCOpenDocs/html/migrations_versions_b12d4ba1cfd4_add_primary_keys_to_users_user_requests_.py.html">
+                        b12d4ba1cfd4_add_primary_keys_to_users_user_requests_.py
+                    </a>
+                </li>
+                <li>
                     <a href="/NYCOpenDocs/html/migrations_versions_b3c0c76ac2e6_add_envelope_functionality.py.html">
                         b3c0c76ac2e6_add_envelope_functionality.py
                     </a>
@@ -3059,6 +3074,11 @@
                 </li>
             </ul>
         </ul>
+        <li>
+            <a href="/NYCOpenDocs/html/openrecords.py.html">
+                openrecords.py
+            </a>
+        </li>
         <li>
             <a href="/NYCOpenDocs/html/setup.sh.html">
                 setup.sh
@@ -3179,7 +3199,77 @@
 
                     <p>
 <!-- Include the documentation here! -->
-<p>We attempted to read from templates/app_lib_onelogin_saml2_compat.py_ex.txt but failed.</p>
+
+&emsp;&emsp;&emsp;&emsp;&emsp;""" py3 compatibility class
+<br>"""
+<br>
+<br>from __future__ import absolute_import, print_function, with_statement
+<br>
+<br>try:
+<br>&emsp;    basestring
+<br>except NameError:
+<br>&emsp;    basestring = str
+<br>
+<br>try:
+<br>&emsp;    unicode
+<br>except NameError:
+<br>&emsp;    unicode = str
+<br>
+<br>
+<br>if isinstance(b'', type('')):  # py 2.x
+<br>&emsp;    text_types = (basestring,)  # noqa
+<br>&emsp;    str_type = basestring  # noqa
+<br>
+<br>&emsp;    def utf8(data):
+<br>&emsp;    def utf8(data):
+<br>&emsp;&emsp;        """  return utf8-encoded string """
+<br>&emsp;&emsp;        """  return utf8-encoded string """
+<br>&emsp;&emsp;        if isinstance(data, basestring):
+<br>&emsp;&emsp;&emsp;            return data.decode("utf8")
+<br>&emsp;&emsp;        return unicode(data)
+<br>
+<br>&emsp;    def to_string(data):
+<br>&emsp;    def to_string(data):
+<br>&emsp;&emsp;        """ return string """
+<br>&emsp;&emsp;        """ return string """
+<br>&emsp;&emsp;        if isinstance(data, unicode):
+<br>&emsp;&emsp;&emsp;            return data.encode("utf8")
+<br>&emsp;&emsp;        return str(data)
+<br>
+<br>&emsp;    def to_bytes(data):
+<br>&emsp;    def to_bytes(data):
+<br>&emsp;&emsp;        """ return bytes """
+<br>&emsp;&emsp;        """ return bytes """
+<br>&emsp;&emsp;        return str(data)
+<br>
+<br>else:  # py 3.x
+<br>&emsp;    text_types = (bytes, str)
+<br>&emsp;    str_type = str
+<br>
+<br>&emsp;    def utf8(data):
+<br>&emsp;    def utf8(data):
+<br>&emsp;&emsp;        """ return utf8-encoded string """
+<br>&emsp;&emsp;        """ return utf8-encoded string """
+<br>&emsp;&emsp;        if isinstance(data, bytes):
+<br>&emsp;&emsp;&emsp;            return data.decode("utf8")
+<br>&emsp;&emsp;        return str(data)
+<br>
+<br>&emsp;    def to_string(data):
+<br>&emsp;    def to_string(data):
+<br>&emsp;&emsp;        """convert to string"""
+<br>&emsp;&emsp;        """convert to string"""
+<br>&emsp;&emsp;        if isinstance(data, bytes):
+<br>&emsp;&emsp;&emsp;            return data.decode("utf8")
+<br>&emsp;&emsp;        return str(data)
+<br>
+<br>&emsp;    def to_bytes(data):
+<br>&emsp;    def to_bytes(data):
+<br>&emsp;&emsp;        """return bytes"""
+<br>&emsp;&emsp;        """return bytes"""
+<br>&emsp;&emsp;        if isinstance(data, str):
+<br>&emsp;&emsp;&emsp;            return data.encode("utf8")
+<br>&emsp;&emsp;        return bytes(data)
+<br>
                    </p>
                 </details>
 

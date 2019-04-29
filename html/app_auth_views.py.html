@@ -644,6 +644,11 @@
                     </a>
                 </li>
                 <li>
+                    <a href="/NYCOpenDocs/html/app_report_utils.py.html">
+                        utils.py
+                    </a>
+                </li>
+                <li>
                     <a href="/NYCOpenDocs/html/app_report_views.py.html">
                         views.py
                     </a>
@@ -1566,6 +1571,11 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_edit_response_file_links.html.html">
                             edit_response_file_links.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_agency_report_generated.html.html">
+                            email_agency_report_generated.html
                         </a>
                     </li>
                     <li>
@@ -2869,11 +2879,6 @@
             </a>
         </li>
         <li>
-            <a href="/NYCOpenDocs/html/manage.py.html">
-                manage.py
-            </a>
-        </li>
-        <li>
             <a href="#Submenu79" data-toggle="collapse" aria-expanded="false">
                 migrations
             </a>
@@ -3028,6 +3033,16 @@
                     </a>
                 </li>
                 <li>
+                    <a href="/NYCOpenDocs/html/migrations_versions_aeb1852855b4_add_appealable_option_to_reasons.py.html">
+                        aeb1852855b4_add_appealable_option_to_reasons.py
+                    </a>
+                </li>
+                <li>
+                    <a href="/NYCOpenDocs/html/migrations_versions_b12d4ba1cfd4_add_primary_keys_to_users_user_requests_.py.html">
+                        b12d4ba1cfd4_add_primary_keys_to_users_user_requests_.py
+                    </a>
+                </li>
+                <li>
                     <a href="/NYCOpenDocs/html/migrations_versions_b3c0c76ac2e6_add_envelope_functionality.py.html">
                         b3c0c76ac2e6_add_envelope_functionality.py
                     </a>
@@ -3059,6 +3074,11 @@
                 </li>
             </ul>
         </ul>
+        <li>
+            <a href="/NYCOpenDocs/html/openrecords.py.html">
+                openrecords.py
+            </a>
+        </li>
         <li>
             <a href="/NYCOpenDocs/html/setup.sh.html">
                 setup.sh
@@ -3203,58 +3223,120 @@ Log a user out from the server.
 """
 <br>.. module:: auth.views.
 <br>
-<br>   :synopsis: Handles OAUTH and LDAP authentication endpoints for NYC OpenRecords
+<br>   :synopsis: Handles authentication endpoints for NYC OpenRecords
 <br>
 <br>"""
 <br>def login():
-<br>&emsp;    """
+<br>&emsp;    """Handle login redirects for users.
+<br>
+<br>&emsp;    This application supports three methods for login: SAML 2.0, LDAP, and Local Authentication
+<br>
+<br>&emsp;    SAML 2.0 integrates with the City of New York Authentication System (NYC.ID). Users will be redirected to the SAML
+<br>&emsp;    authentication endpoint. Please see app.auth.saml for details.
+<br>
+<br>&emsp;    LDAP authentication will redirect the user to a Flask login form and authenticate them using the LDAP protocol.
+<br>&emsp;    Please see app.auth.ldap_login for details.
+<br>
+<br>&emsp;    Local Auth is used for development and testing purposes only. It allows a user to login using any password, as long
+<br>&emsp;    as the email is valid and in the database.
+<br>
+<br>&emsp;    The three methods are called in the preferred method for authentication: 1) SAML 2) LDAP 3) Local Auth
+<br>
 <br>&emsp;    Based off of: https://flask-login.readthedocs.io/en/latest/#login-example
 <br>
-<br>&emsp;    If using LDAP, see ldap_login().
+<br>&emsp;    Args:
+<br>&emsp;&emsp;        next (str): URL to send the user to after successful authentication.
 <br>
-<br>&emsp;    If using SAML/OAuth, check for the presence of an access token
-<br>&emsp;    in the session, which is used to fetch user information for processing.
-<br>&emsp;    If no token exists, send the user to the authorization url
-<br>&emsp;    (first leg of the OAuth 2 workflow).
-<br>
-<br>&emsp;    * NOTE *
-<br>&emsp;    Since we are using OAuth Mobile Application Flow to fetch the information
-<br>&emsp;    normally retrieved in a SAML Assertion, the url resulting from authorization
-<br>&emsp;    is in the format 'redirect_uri#access_token=123guid=ABC...'. Notice the fragment
-<br>&emsp;    identifier ('#') in place of what would normally be the '?' separator.
-<br>&emsp;    Since Flask drops everything after the identifier, we must extract these values
-<br>&emsp;    client-side in order to forward them to the server. Therefore, the redirect uri
-<br>&emsp;    we are using is our home page (main.index, along with the 'next' url if present)
-<br>&emsp;    which contains a script that detects the presence of an access token
-<br>&emsp;    and redirects to the intended OAuth callback (auth.authorize).
-<br>
-<br>&emsp;    https://tools.ietf.org/html/rfc3986#section-3.5
-<br>
-<br>&emsp;    """
-<br>def authorize():
-<br>&emsp;    """
-<br>&emsp;    Store access token and a UTC timestamp for its
-<br>&emsp;    expiration date and time in the session, then
-<br>&emsp;    process SAML Assertion information.
-<br>
-<br>&emsp;    See: https://nyc4d.nycnet/nycidauthentication.shtml
+<br>&emsp;    Returns:
+<br>&emsp;&emsp;        HTTP Response (werkzeug.wrappers.Response): Response redirecting the browser to the proper URL for login
 <br>&emsp;    """
 <br>def logout():
 <br>&emsp;    """
-<br>&emsp;    Provides a unified interface for logging out users.
+<br>&emsp;    Unified logout endpoint for all authentication types.
 <br>
-<br>&emsp;    Accepts two request arguments:
-<br>&emsp;&emsp;        :param timeout: Logout being called due to a session timeout.
-<br>&emsp;&emsp;        :type timeout: Boolean; Default = False
-<br>&emsp;&emsp;        :param forced_logout: Logout being called to close any duplicate sessions.
-<br>&emsp;&emsp;        :param forced_logout: Boolean; Default = False
+<br>&emsp;    GET Args:
+<br>&emsp;&emsp;        timeout (bool): If True, logout is being called due to a session timeout.
+<br>&emsp;&emsp;        forced_logout (bool): If True, logout is being called due to a duplicate session.
 <br>
-<br>&emsp;    :return:
+<br>&emsp;    Returns:
+<br>&emsp;&emsp;        HTTP Response (werkzeug.wrappers.Response): Redirect to the appropriate logout endpoint.
 <br>&emsp;    """
 <br>def manage():
+<br>&emsp;    """
+<br>&emsp;    Allow users to manage their OpenRecords specific attributes.
+<br>
+<br>&emsp;    For POST requests, updates the users data in the database.
+<br>&emsp;    For GET requests, pulls the current user data from the database and pre-populates the form.
+<br>
+<br>&emsp;    Requires users to have an active authentication session.
+<br>
+<br>&emsp;    Returns:
+<br>&emsp;&emsp;        Flask Response with Manage Page
+<br>
+<br>&emsp;    """
+<br>def saml():
+<br>&emsp;    """
+<br>&emsp;    View function to handle SAML SSO Workflow.
+<br>
+<br>&emsp;    GET Parameters:
+<br>&emsp;&emsp;        sso - Handle a regular login request (user clicks Login in the navbar)
+<br>&emsp;&emsp;        sso2 - Handle a login request from the application (user attempts to access a privileged resource)
+<br>&emsp;&emsp;        acs - Handle a login response from the IdP and return the user to the provided redirect URL (defaults to the home page)
+<br>&emsp;&emsp;        slo - Generate a Logout request for the IdP
+<br>&emsp;&emsp;        sls - Handle a Logout Response from the IdP and destroy the local session
+<br>
+<br>&emsp;    Returns:
+<br>&emsp;&emsp;        HTTP Response (werkzeug.wrappers.Response): Redirects the user to the proper location in the SAML Auth Workflow.
+<br>
+<br>&emsp;    """
+<br>def metadata():
+<br>&emsp;    """
+<br>&emsp;    Access the SAML SP metadata for this application
+<br>
+<br>&emsp;    Returns:
+<br>&emsp;&emsp;        HTTP Response (werkzeug.wrappers.Response): XML SP Metadata
+<br>&emsp;    """
 <br>def ldap_login():
-<br>def ldap_logout(timed_out=False, forced_logout=False):
-<br>def oauth_logout():
+<br>&emsp;    """
+<br>&emsp;    Login a user using the LDAP protocol
+<br>
+<br>&emsp;    Args:
+<br>&emsp;&emsp;        next (str): URL to redirect the user to if login is successful. (in request.args)
+<br>
+<br>&emsp;    Returns:
+<br>&emsp;&emsp;        HTTP Response (werkzeug.wrappers.Response): Redirects the user to the home page (if successful) or to the
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                                                    login page again (if unsuccessful)
+<br>
+<br>&emsp;    """
+<br>def ldap_logout():
+<br>&emsp;    """
+<br>&emsp;    Log a user out from the LDAP server.
+<br>&emsp;    Args:
+<br>&emsp;&emsp;        timed_out (bool): If True, the users client side session timed-out.
+<br>
+<br>&emsp;    Returns:
+<br>&emsp;&emsp;        HTTP Response (werkzeug.wrappers.Response): Redirects the user to the home page
+<br>
+<br>&emsp;    """
+<br>def local_login():
+<br>&emsp;    """
+<br>&emsp;    Authenticate a user against the database (ignore password).
+<br>
+<br>&emsp;    Allows developers to test functionality as valid users without needing to use a third party service.
+<br>
+<br>&emsp;    Returns:
+<br>&emsp;&emsp;        HTTP Response (werkzeug.wrappers.Response): Redirects the user to the home page (if successful) or to the
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                                                    login page again (if unsuccessful)
+<br>&emsp;    """
+<br>def local_logout(timed_out=False):
+<br>&emsp;    """
+<br>&emsp;    Log a user out from the server.
+<br>&emsp;    Args:
+<br>&emsp;&emsp;        timed_out (bool): If True, the users client side session timed-out.
+<br>
+<br>&emsp;    Returns:
+<br>&emsp;&emsp;        HTTP Response (werkzeug.wrappers.Response): Redirects the user to the home page
+<br>&emsp;    """
 <br>
                    </p>
                 </details>

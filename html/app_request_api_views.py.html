@@ -644,6 +644,11 @@
                     </a>
                 </li>
                 <li>
+                    <a href="/NYCOpenDocs/html/app_report_utils.py.html">
+                        utils.py
+                    </a>
+                </li>
+                <li>
                     <a href="/NYCOpenDocs/html/app_report_views.py.html">
                         views.py
                     </a>
@@ -1566,6 +1571,11 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_edit_response_file_links.html.html">
                             edit_response_file_links.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_agency_report_generated.html.html">
+                            email_agency_report_generated.html
                         </a>
                     </li>
                     <li>
@@ -2869,11 +2879,6 @@
             </a>
         </li>
         <li>
-            <a href="/NYCOpenDocs/html/manage.py.html">
-                manage.py
-            </a>
-        </li>
-        <li>
             <a href="#Submenu79" data-toggle="collapse" aria-expanded="false">
                 migrations
             </a>
@@ -3028,6 +3033,16 @@
                     </a>
                 </li>
                 <li>
+                    <a href="/NYCOpenDocs/html/migrations_versions_aeb1852855b4_add_appealable_option_to_reasons.py.html">
+                        aeb1852855b4_add_appealable_option_to_reasons.py
+                    </a>
+                </li>
+                <li>
+                    <a href="/NYCOpenDocs/html/migrations_versions_b12d4ba1cfd4_add_primary_keys_to_users_user_requests_.py.html">
+                        b12d4ba1cfd4_add_primary_keys_to_users_user_requests_.py
+                    </a>
+                </li>
+                <li>
                     <a href="/NYCOpenDocs/html/migrations_versions_b3c0c76ac2e6_add_envelope_functionality.py.html">
                         b3c0c76ac2e6_add_envelope_functionality.py
                     </a>
@@ -3059,6 +3074,11 @@
                 </li>
             </ul>
         </ul>
+        <li>
+            <a href="/NYCOpenDocs/html/openrecords.py.html">
+                openrecords.py
+            </a>
+        </li>
         <li>
             <a href="/NYCOpenDocs/html/setup.sh.html">
                 setup.sh
@@ -3196,7 +3216,45 @@ descending, and starting from a specified index.
                     <p>
 <!-- Include the documentation here! -->
 
-</br>.. module:: api.request.views.</br></br>:synopsis: Handles the API request URL endpoints for the OpenRecords application</br><hr><code>edit_privacy():</code><br/></br>Edits the privacy privacy options of a request's title and agency request summary.</br>Retrieves updated privacy options from AJAX call on view_request page and stores changes into database.</br></br>:return: JSON Response with updated title and agency request summary privacy options</br><hr><code>edit_request_info():</code><br/></br>Edits the title and agency request summary of a FOIL request through an API PUT method.</br>Retrieves updated edited content from AJAX call on view_request page and stores changes into database.</br></br>:return: JSON Response with updated content: either request title or agency request summary)</br><hr><code>get_request_events():</code><br/></br>Returns a set of events (id, type, and template),</br>ordered by date descending, and starting from a specific index.</br></br>Request parameters:</br>- start: (int) starting index</br>- request_id: FOIL request id</br>- with_template: (default: False) include html rows for each event</br><hr><code>get_request_responses():</code><br/></br>Returns a set of responses (id, type, and template),</br>ordered by date descending, and starting from a specified index.</br>Request parameters:</br>- start: (int) starting index</br>- request_id: FOIL request id</br>- with_template: (default: False) include html (rows and modals) for each response</br>
+"""
+<br>.. module:: api.request.views.
+<br>
+<br>   :synopsis: Handles the API request URL endpoints for the OpenRecords application
+<br>"""
+<br>def edit_privacy():
+<br>&emsp;    """
+<br>&emsp;    Edits the privacy privacy options of a request's title and agency request summary.
+<br>&emsp;    Retrieves updated privacy options from AJAX call on view_request page and stores changes into database.
+<br>
+<br>&emsp;    :return: JSON Response with updated title and agency request summary privacy options
+<br>&emsp;    """
+<br>def edit_request_info():
+<br>&emsp;    """
+<br>&emsp;    Edits the title and agency request summary of a FOIL request through an API PUT method.
+<br>&emsp;    Retrieves updated edited content from AJAX call on view_request page and stores changes into database.
+<br>
+<br>&emsp;    :return: JSON Response with updated content: either request title or agency request summary)
+<br>&emsp;    """
+<br>def get_request_events():
+<br>&emsp;    """
+<br>&emsp;    Returns a set of events (id, type, and template),
+<br>&emsp;    ordered by date descending, and starting from a specific index.
+<br>
+<br>&emsp;    Request parameters:
+<br>&emsp;    - start: (int) starting index
+<br>&emsp;    - request_id: FOIL request id
+<br>&emsp;    - with_template: (default: False) include html rows for each event
+<br>&emsp;    """
+<br>def get_request_responses():
+<br>&emsp;    """
+<br>&emsp;    Returns a set of responses (id, type, and template),
+<br>&emsp;    ordered by date descending, and starting from a specified index.
+<br>&emsp;    Request parameters:
+<br>&emsp;    - start: (int) starting index
+<br>&emsp;    - request_id: FOIL request id
+<br>&emsp;    - with_template: (default: False) include html (rows and modals) for each response
+<br>&emsp;    """
+<br>
                    </p>
                 </details>
 

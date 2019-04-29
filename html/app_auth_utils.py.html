@@ -644,6 +644,11 @@
                     </a>
                 </li>
                 <li>
+                    <a href="/NYCOpenDocs/html/app_report_utils.py.html">
+                        utils.py
+                    </a>
+                </li>
+                <li>
                     <a href="/NYCOpenDocs/html/app_report_views.py.html">
                         views.py
                     </a>
@@ -1566,6 +1571,11 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_edit_response_file_links.html.html">
                             edit_response_file_links.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_agency_report_generated.html.html">
+                            email_agency_report_generated.html
                         </a>
                     </li>
                     <li>
@@ -2869,11 +2879,6 @@
             </a>
         </li>
         <li>
-            <a href="/NYCOpenDocs/html/manage.py.html">
-                manage.py
-            </a>
-        </li>
-        <li>
             <a href="#Submenu79" data-toggle="collapse" aria-expanded="false">
                 migrations
             </a>
@@ -3028,6 +3033,16 @@
                     </a>
                 </li>
                 <li>
+                    <a href="/NYCOpenDocs/html/migrations_versions_aeb1852855b4_add_appealable_option_to_reasons.py.html">
+                        aeb1852855b4_add_appealable_option_to_reasons.py
+                    </a>
+                </li>
+                <li>
+                    <a href="/NYCOpenDocs/html/migrations_versions_b12d4ba1cfd4_add_primary_keys_to_users_user_requests_.py.html">
+                        b12d4ba1cfd4_add_primary_keys_to_users_user_requests_.py
+                    </a>
+                </li>
+                <li>
                     <a href="/NYCOpenDocs/html/migrations_versions_b3c0c76ac2e6_add_envelope_functionality.py.html">
                         b3c0c76ac2e6_add_envelope_functionality.py
                     </a>
@@ -3059,6 +3074,11 @@
                 </li>
             </ul>
         </ul>
+        <li>
+            <a href="/NYCOpenDocs/html/openrecords.py.html">
+                openrecords.py
+            </a>
+        </li>
         <li>
             <a href="/NYCOpenDocs/html/setup.sh.html">
                 setup.sh
@@ -3233,108 +3253,171 @@ Connect to an LDAP server.
 <br>   :synopsis: Authentication utilities for NYC OpenRecords
 <br>
 <br>"""
-<br>def user_loader(user_id):
-<br>&emsp;    """
-<br>&emsp;    Given a user_id (GUID + UserType), return the associated User object.
+<br>def user_loader(guid: str) -> Users:
+<br>&emsp;    """Given a GUID return the associated User object.
 <br>
-<br>&emsp;    :param unicode user_id: user_id (GUID + UserType) of user to retrieve
-<br>&emsp;    :return: User object
+<br>&emsp;    Args:
+<br>&emsp;&emsp;        guid (str): User ID (GUID) of the user to retrieve from the database.
+<br>
+<br>&emsp;    Returns:
+<br>&emsp;&emsp;        Users: User object from the database or None.
 <br>&emsp;    """
 <br>def update_openrecords_user(form):
 <br>&emsp;    """
 <br>&emsp;    Update OpenRecords-specific user attributes.
-<br>&emsp;    :param form: validated ManageUserAccountForm or ManageAgencyUserAccountForm
-<br>&emsp;    :type form: app.auth.forms.ManageUserAccountForm or app.auth.forms.ManageAgencyUserAccountForm
+<br>
+<br>&emsp;    Args:
+<br>&emsp;&emsp;        form (app.auth.forms.ManageAgencyUserAccountForm OR app.auth.forms.ManageUserAccountForm): validated form
 <br>&emsp;    """
 <br>def is_safe_url(target):
-<br>&emsp;    """ Taken from http://flask.pocoo.org/snippets/62/ with the help of Liam Neeson """
+<br>&emsp;    """Determine if a URL is safe to redirect the user to.
+<br>
+<br>&emsp;    Source: http://flask.pocoo.org/snippets/62/
+<br>
+<br>&emsp;    Args:
+<br>&emsp;&emsp;        target (str): URL to redirect the user to.
+<br>
+<br>&emsp;    Returns:
+<br>&emsp;&emsp;        bool: True if the URL is safe.
+<br>
+<br>&emsp;    """
 <br>def find_user_by_email(email):
-<br>&emsp;    """
-<br>&emsp;    Find a user by email address stored in the database.
-<br>&emsp;    If LDAP login is being used, non-agency users and users
-<br>&emsp;    without an LDAP auth type are ignored.
-<br>&emsp;    If OAUTH login is being used, anonymous users are ignored.
+<br>&emsp;    """Find a user by email address stored in the database.
 <br>
-<br>&emsp;    :param email: Email address
-<br>&emsp;    :return: User object or None if no user found.
-<br>&emsp;    """
-<br>def oauth_user_web_service_request(method="GET", user_session=session):
-<br>&emsp;    """
-<br>&emsp;    Invoke the OAuth User Web Service with specified method.
-<br>&emsp;    https://nyc4d.nycnet/nycid/mobile.shtml#get-oauth-user-web-service
+<br>&emsp;    If LDAP login is being used, non-agency users and users without an LDAP auth type are ignored.
+<br>&emsp;    If OAuth or SAML login is being used, anonymous users are ignored.
 <br>
-<br>&emsp;    * Assumes the access token is stored in the session. *
+<br>&emsp;    Args:
+<br>&emsp;&emsp;        email (str): Email address to search by.
 <br>
-<br>&emsp;    :returns: response for user web services request
-<br>&emsp;    """
-<br>def revoke_and_remove_access_token(user_session=None):
-<br>&emsp;    """
-<br>&emsp;    Invoke the Delete OAuth User Web Service
-<br>&emsp;    to revoke an access token and remove the
-<br>&emsp;    token from the session.
-<br>
-<br>&emsp;    * Assumes the access token is stored in the session. *
+<br>&emsp;    Returns:
+<br>&emsp;&emsp;        Users: User object or None if no user found.
 <br>
 <br>&emsp;    """
-<br>def fetch_user_json():
-<br>&emsp;    """
-<br>&emsp;    Invoke the Get OAuth User Web Service to fetch
-<br>&emsp;    a JSON-formatted user.
-<br>&emsp;    https://nyc4d.nycnet/nycid/search.shtml#json-formatted-users
-<br>
-<br>&emsp;    * Assumes the access token is stored in the session. *
-<br>
-<br>&emsp;    :return: response status code, user data json dict
-<br>&emsp;    """
-<br>def handle_user_data(guid,
-<br>&emsp;    """
-<br>&emsp;    Interpret the result of processing the specified
-<br>&emsp;    user data and act accordingly:
-<br>&emsp;    - If a redirect url is returned, redirect to that url.
-<br>&emsp;    - If a user is returned, login that user and return
-<br>&emsp;      a redirect to the specified next_url, the home page url,
-<br>&emsp;      or to the 404 page if next_url is provided and is unsafe.
-<br>&emsp;    """
-<br>def _session_regenerate_persist_token():
 <br>def _process_user_data(guid,
 <br>&emsp;    """
-<br>&emsp;    Kickoff email validation (if the user did not authenticate
-<br>&emsp;    with a federated identity) or terms-of-use acceptance if the
-<br>&emsp;    user has not validated their email or has not accepted the
-<br>&emsp;    latest terms of use version.
+<br>&emsp;    Create or Update an OpenRecords User based on the data received from the SAML Assertion.
 <br>
-<br>&emsp;    Otherwise, create or update a user with the specified fields.
+<br>&emsp;    If no first_name is provided, the mailbox portion of the email will be used
+<br>&emsp;&emsp;        e.g. jdoe@records.nyc.gov -> first_name: jdoe
 <br>
-<br>&emsp;    If no first_name is provided, the mailbox portion of the email
-<br>&emsp;    will be used (e.g. jdoe@records.nyc.gov -> first_name: jdoe).
+<br>&emsp;    If a user cannot be found using the specified guid and user_type, a second attempt is made with the specified email.
 <br>
-<br>&emsp;    If a user cannot be found using the specified guid and user_type,
-<br>&emsp;    a second attempt is made with the specified email.
+<br>&emsp;    NOTE: A user's agency is not determined here. After login, a user's agency supervisor must email us requesting that
+<br>&emsp;    user be added to the agency.
+<br>&emsp;    TODO (@joelbcastillo): Add endpoint to add user by email to the Agency on the Agency Administration Page
 <br>
-<br>&emsp;    NOTE: A user's agency is not determined here. After login, a user's
-<br>&emsp;    agency supervisor must email us requesting that user be added
-<br>&emsp;    to the agency.
+<br>&emsp;    Args:
+<br>&emsp;&emsp;        guid (str): The users unique identifier
+<br>&emsp;&emsp;        email (str): The users email address
+<br>&emsp;&emsp;        first_name (str): The users' first name. If None, then the mailbox part of the email address will be used
+<br>&emsp;&emsp;        middle_initial (str): The users' middle initial. Can be None
+<br>&emsp;&emsp;        last_name (str): The users' last name. Required.
+<br>&emsp;&emsp;        email_validated (bool): Determines whether the users' email has been validated.
+<br>&emsp;&emsp;        is_nyc_employee (bool): Determines
+<br>&emsp;&emsp;        has_nyc_account,
+<br>&emsp;&emsp;        active,
+<br>&emsp;&emsp;        terms_of_use_accepted,
+<br>&emsp;&emsp;        is_anonymous_requester
 <br>
-<br>&emsp;    :return: (redirect required?, user that has been found or created OR redirect url)
+<br>&emsp;    Returns:
+<br>&emsp;&emsp;        Users: The user that was pulled from the database (and updated) or the new user)
 <br>&emsp;    """
-<br>def _update_user_data(user, guid, user_type, email, first_name, middle_initial, last_name):
+<br>def _update_user_data(
 <br>&emsp;    """
-<br>&emsp;    Update specified user with the information provided, which is
-<br>&emsp;    assumed to have originated from an NYC Service Account, and set
-<br>&emsp;    `email_validated` and `terms_of_use_accepted` (this function
-<br>&emsp;    should be called AFTER email validation and terms-of-use acceptance
-<br>&emsp;    has been completed).
+<br>&emsp;    Update a users data with the updated values.
 <br>
-<br>&emsp;    Update any database objects this user is associated with.
-<br>&emsp;    - user_requests
-<br>&emsp;    - events
-<br>&emsp;    In order to prevent a possbile negative performance impact
-<br>&emsp;    (due to foreign keys CASCADE), guid and user_type are compared with
-<br>&emsp;    stored user attributes and are excluded from the update if both are identical.
+<br>&emsp;    Args:
+<br>&emsp;&emsp;        user (Users): User to be updated.
+<br>&emsp;&emsp;        guid (str): Updated GUID (Required)
+<br>&emsp;&emsp;        email (str): Updated email address
+<br>&emsp;&emsp;        first_name (str): Updated first name
+<br>&emsp;&emsp;        middle_initial (str): Updated middle initial
+<br>&emsp;&emsp;        last_name (str): Updated last name
+<br>&emsp;&emsp;        email_validated (bool): Updated email validation status
+<br>&emsp;&emsp;        is_nyc_employee (bool): Updated NYC Employee status
+<br>&emsp;&emsp;        has_nyc_account (bool): Updated NYC Account Status
+<br>&emsp;&emsp;        active (bool): Updated active status (is the user account active in the authentication provider)
+<br>&emsp;&emsp;        terms_of_use_accepted (bool): Terms of Use Accepted Status
+<br>&emsp;&emsp;        is_anonymous_requester (bool): Updated Anonymous Requester status
 <br>
-<br>&emsp;    Update search index for searching by assigned user.
 <br>&emsp;    """
-<br>def _validate_email(email_validation_flag, guid, email_address, user_type):
+<br>def create_auth_event(auth_event_type: str, user_guid: str, new_value: dict):
+<br>&emsp;    """
+<br>&emsp;    Create and store event object for given response.
+<br>
+<br>&emsp;    Args:
+<br>&emsp;&emsp;        auth_event_type (str): one of app.constants.event_type
+<br>&emsp;&emsp;        user_guid (Users): Users object performing the authentication event
+<br>&emsp;&emsp;        new_value (dict): Value to be stored in events table
+<br>
+<br>&emsp;    """
+<br>def init_saml_auth(onelogin_request):
+<br>&emsp;    """Initialize a SAML SP from a dictionary representation of a Flask request.
+<br>
+<br>&emsp;    Args:
+<br>&emsp;&emsp;        onelogin_request (dict): Dictionary representation of a Flask Request object.
+<br>
+<br>&emsp;    Returns:
+<br>&emsp;&emsp;        OneLogin_Saml2_Auth: SAML SP Instance.
+<br>
+<br>&emsp;    """
+<br>def prepare_onelogin_request(flask_request):
+<br>&emsp;    """Convert a Flask request object to a dictionary for use with OneLogin SAML.
+<br>
+<br>&emsp;    Args:
+<br>&emsp;&emsp;        flask_request (Flask.Request): Flask Request object.
+<br>
+<br>&emsp;    Returns:
+<br>&emsp;&emsp;        dict: Dictionary of Flask Request fields for OneLogin
+<br>
+<br>&emsp;    """
+<br>def saml_sso(saml_sp):
+<br>&emsp;    """ Handle Single Sign-On for SAML.
+<br>
+<br>&emsp;    Calls the login function in the OneLogin python3-saml library to generate an Assertion Request to the IdP.
+<br>
+<br>&emsp;    Args:
+<br>&emsp;&emsp;        saml_sp (OneLogin_Saml2_Auth): Saml SP Instance
+<br>
+<br>&emsp;    Returns:
+<br>&emsp;&emsp;        Response Object: Redirect the user to the IdP for SSO.
+<br>
+<br>&emsp;    """
+<br>def saml_sls(saml_sp, user_guid):
+<br>&emsp;    """Process a SAML LogoutResponse from the IdP
+<br>
+<br>&emsp;    Args:
+<br>&emsp;&emsp;        saml_sp (OneLogin_Saml2_Auth): SAML SP Instance
+<br>&emsp;&emsp;        user_guid (str): Unique identifier for user being logged out.
+<br>
+<br>&emsp;    Returns:
+<br>&emsp;&emsp;        Response Object: Redirect the user to the Home Page.
+<br>
+<br>&emsp;    """
+<br>def saml_slo(saml_sp):
+<br>&emsp;    """Generate a SAML LogoutRequest for the user.
+<br>
+<br>&emsp;    Args:
+<br>&emsp;&emsp;        saml_sp (OneLogin_Saml2_Auth): SAML SP Instance
+<br>
+<br>&emsp;    Returns:
+<br>&emsp;&emsp;        Response Object: Redirect the user to the IdP for SLO.
+<br>&emsp;    """
+<br>def saml_acs(saml_sp, onelogin_request):
+<br>&emsp;    """Process a SAML Assertion for the user
+<br>
+<br>&emsp;    Args:
+<br>&emsp;&emsp;        saml_sp (OneLogin_Saml2_Auth): SAML SP Instance
+<br>
+<br>&emsp;    Returns:
+<br>&emsp;&emsp;        Response Object: Redirect the user to the appropriate page for the next step.
+<br>&emsp;&emsp;&emsp;            If the user needs to validate their email, they are redirected to the IdP
+<br>&emsp;&emsp;&emsp;            Otherwise, the user is redirected to a valid RelayState.
+<br>&emsp;&emsp;&emsp;            If RelayState is invalid, the user is redirected to the home page.
+<br>
+<br>&emsp;    """
+<br>def _validate_email(email_validation_flag, guid, email_address):
 <br>&emsp;    """
 <br>&emsp;    If the user did not log in via NYC.ID
 <br>&emsp;    (i.e. user_type is not 'EDIRSSO'),
@@ -3357,30 +3440,16 @@ Connect to an LDAP server.
 <br>
 <br>&emsp;    :return: redirect url or None
 <br>&emsp;    """
-<br>def _accept_terms_of_use(terms_of_use, guid, user_type):
+<br>def get_nycid_user_data(guid):
 <br>&emsp;    """
-<br>&emsp;    If the user has logged in using the NYC Employees button
-<br>&emsp;    (i.e. the user_type is 'Saml2In: NYC Employees'),
-<br>&emsp;    no TOU acceptance is necessary.
-<br>
-<br>&emsp;    Otherwise, invoke the Terms of Use Web Service to determine
-<br>&emsp;    if the user has accepted the latest TOU version.
-<br>&emsp;    If not, return url to 'NYC. TOU' page where the user can
-<br>&emsp;    accept the latest terms of use.
+<br>&emsp;    Validate whether the user is a NYC Employee.
+<br>&emsp;    If the returned validation status equals false,
+<br>&emsp;    return url to the 'Email Confirmation Required' page
+<br>&emsp;    where the user can request a validation email.
 <br>
 <br>&emsp;    :return: redirect url or None
 <br>&emsp;    """
-<br>def _enroll(guid, user_type):
-<br>&emsp;    """
-<br>&emsp;    Create an enrollment record for a specified user
-<br>&emsp;    if the user has not yet been enrolled.
-<br>&emsp;    """
-<br>def _unenroll(guid, user_type):
-<br>&emsp;    """
-<br>&emsp;    Delete an enrollment.
-<br>&emsp;    *Included for possible future use.*
-<br>&emsp;    """
-<br>def _check_web_services_response(response, msg):
+<br>def _check_web_services_response(response, msg=''):
 <br>&emsp;    """
 <br>&emsp;    Log an error message if the specified response's
 <br>&emsp;    status code is not 200.

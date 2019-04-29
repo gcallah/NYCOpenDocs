@@ -644,6 +644,11 @@
                     </a>
                 </li>
                 <li>
+                    <a href="/NYCOpenDocs/html/app_report_utils.py.html">
+                        utils.py
+                    </a>
+                </li>
+                <li>
                     <a href="/NYCOpenDocs/html/app_report_views.py.html">
                         views.py
                     </a>
@@ -1566,6 +1571,11 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_edit_response_file_links.html.html">
                             edit_response_file_links.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_agency_report_generated.html.html">
+                            email_agency_report_generated.html
                         </a>
                     </li>
                     <li>
@@ -2869,11 +2879,6 @@
             </a>
         </li>
         <li>
-            <a href="/NYCOpenDocs/html/manage.py.html">
-                manage.py
-            </a>
-        </li>
-        <li>
             <a href="#Submenu79" data-toggle="collapse" aria-expanded="false">
                 migrations
             </a>
@@ -3028,6 +3033,16 @@
                     </a>
                 </li>
                 <li>
+                    <a href="/NYCOpenDocs/html/migrations_versions_aeb1852855b4_add_appealable_option_to_reasons.py.html">
+                        aeb1852855b4_add_appealable_option_to_reasons.py
+                    </a>
+                </li>
+                <li>
+                    <a href="/NYCOpenDocs/html/migrations_versions_b12d4ba1cfd4_add_primary_keys_to_users_user_requests_.py.html">
+                        b12d4ba1cfd4_add_primary_keys_to_users_user_requests_.py
+                    </a>
+                </li>
+                <li>
                     <a href="/NYCOpenDocs/html/migrations_versions_b3c0c76ac2e6_add_envelope_functionality.py.html">
                         b3c0c76ac2e6_add_envelope_functionality.py
                     </a>
@@ -3059,6 +3074,11 @@
                 </li>
             </ul>
         </ul>
+        <li>
+            <a href="/NYCOpenDocs/html/openrecords.py.html">
+                openrecords.py
+            </a>
+        </li>
         <li>
             <a href="/NYCOpenDocs/html/setup.sh.html">
                 setup.sh
@@ -3412,7 +3432,7 @@ functions.
 <br>&emsp;    :param date: date of request completion
 <br>&emsp;    :param tz_name: client's timezone name
 <br>&emsp;    :param content: body text associated with the acknowledgment
-<br>&emsp;    :param method: the communication method of the acknowledgement ('letter' or 'email')
+<br>&emsp;    :param method: the communication method of the acknowledgement (response_type.LETTER or response_type.EMAIL)
 <br>&emsp;    :param letter_template_id: id of the letter template
 <br>
 <br>&emsp;    """
@@ -3424,7 +3444,7 @@ functions.
 <br>&emsp;    :param request_id: FOIL request ID
 <br>&emsp;    :param reason_ids: reason for denial
 <br>&emsp;    :param content: body text associated with the denial
-<br>&emsp;    :param method: the communication method of the denial ('letter' or 'email')
+<br>&emsp;    :param method: the communication method of the denial (response_type.LETTER or response_type.EMAIL)
 <br>&emsp;    :param letter_template_id: id of the letter template
 <br>
 <br>&emsp;    """
@@ -3435,7 +3455,7 @@ functions.
 <br>&emsp;    :param request_id: FOIL request ID
 <br>&emsp;    :param reason_ids: reason(s) for closing
 <br>&emsp;    :param content: body text associated with the closing
-<br>&emsp;    :param method: the communication method of the closing ('letter' or 'email')
+<br>&emsp;    :param method: the communication method of the closing (response_type.LETTER or response_type.EMAIL)
 <br>&emsp;    :param letter_template_id: id of the letter template
 <br>
 <br>&emsp;    """
@@ -3465,7 +3485,7 @@ functions.
 <br>&emsp;    :param custom_due_date: if custom_due_date is inputted from the frontend, the new extended date of the request
 <br>&emsp;    :param tz_name: client's timezone name
 <br>&emsp;    :param content: body text associated with the extension
-<br>&emsp;    :param method: the communication method of the extension ('letter' or 'email')
+<br>&emsp;    :param method: the communication method of the extension (response_type.LETTER or response_type.EMAIL)
 <br>&emsp;    :param letter_template_id: id of the letter template
 <br>
 <br>&emsp;    """
@@ -3591,13 +3611,6 @@ functions.
 <br>&emsp;    :param request_id: FOIL request ID
 <br>
 <br>&emsp;    :return: the HTML of the rendered template
-<br>&emsp;    """
-<br>def assign_point_of_contact(point_of_contact):
-<br>&emsp;    """
-<br>&emsp;    Assign a user to be the point of contact in emails/letters
-<br>
-<br>&emsp;    :param point_of_contact: A string containing the user_guid if point of contact has been set for a request
-<br>&emsp;    :return: A User object to be designated as the point of contact for a request
 <br>&emsp;    """
 <br>def assign_point_of_contact(point_of_contact):
 <br>&emsp;    """
@@ -3940,7 +3953,7 @@ functions.
 <br>
 <br>&emsp;    :param response_id: response ID
 <br>&emsp;    :param method_id: response ID of the method
-<br>&emsp;    :param method_type: 'letters' or 'emails'
+<br>&emsp;    :param method_type: response_type.LETTER or response_type.EMAIL
 <br>&emsp;    """
 <br>class ResponseEditor(metaclass=ABCMeta):
 <br>&emsp;    """
@@ -3965,8 +3978,8 @@ functions.
 <br>&emsp;&emsp;        For the editable fields, populates the old and new data containers
 <br>&emsp;&emsp;        if the field values differ from their database counterparts.
 <br>&emsp;&emsp;        """
-<br>&emsp;    def _bool_check(self, value):
-<br>&emsp;    def validate_deleted(self):
+<br>&emsp;    def _bool_check(value):
+<br>&emsp;    def validate_deleted(self) -> object:
 <br>&emsp;&emsp;        """
 <br>&emsp;&emsp;        Removes the 'deleted' key-value pair from the data containers
 <br>&emsp;&emsp;        if the confirmation string (see response PATCH) is not valid.

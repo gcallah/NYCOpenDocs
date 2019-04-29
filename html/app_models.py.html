@@ -644,6 +644,11 @@
                     </a>
                 </li>
                 <li>
+                    <a href="/NYCOpenDocs/html/app_report_utils.py.html">
+                        utils.py
+                    </a>
+                </li>
+                <li>
                     <a href="/NYCOpenDocs/html/app_report_views.py.html">
                         views.py
                     </a>
@@ -1566,6 +1571,11 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_edit_response_file_links.html.html">
                             edit_response_file_links.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_agency_report_generated.html.html">
+                            email_agency_report_generated.html
                         </a>
                     </li>
                     <li>
@@ -2869,11 +2879,6 @@
             </a>
         </li>
         <li>
-            <a href="/NYCOpenDocs/html/manage.py.html">
-                manage.py
-            </a>
-        </li>
-        <li>
             <a href="#Submenu79" data-toggle="collapse" aria-expanded="false">
                 migrations
             </a>
@@ -3028,6 +3033,16 @@
                     </a>
                 </li>
                 <li>
+                    <a href="/NYCOpenDocs/html/migrations_versions_aeb1852855b4_add_appealable_option_to_reasons.py.html">
+                        aeb1852855b4_add_appealable_option_to_reasons.py
+                    </a>
+                </li>
+                <li>
+                    <a href="/NYCOpenDocs/html/migrations_versions_b12d4ba1cfd4_add_primary_keys_to_users_user_requests_.py.html">
+                        b12d4ba1cfd4_add_primary_keys_to_users_user_requests_.py
+                    </a>
+                </li>
+                <li>
                     <a href="/NYCOpenDocs/html/migrations_versions_b3c0c76ac2e6_add_envelope_functionality.py.html">
                         b3c0c76ac2e6_add_envelope_functionality.py
                     </a>
@@ -3059,6 +3074,11 @@
                 </li>
             </ul>
         </ul>
+        <li>
+            <a href="/NYCOpenDocs/html/openrecords.py.html">
+                openrecords.py
+            </a>
+        </li>
         <li>
             <a href="/NYCOpenDocs/html/setup.sh.html">
                 setup.sh
@@ -3237,10 +3257,9 @@ CommunicationMethods and CustomRequestForms.
 <br>&emsp;    """
 <br>&emsp;    def formatted_parent_ein(self):
 <br>&emsp;&emsp;        """
-<br>&emsp;&emsp;        Return the correctly formated EIN for a parent agency.
+<br>&emsp;&emsp;        Return the correctly formatted EIN for a parent agency.
 <br>
 <br>&emsp;&emsp;        Parent EINs are ALWAYS preceded by a 0, since City of New York EINs are always 3 characters.
-<br>&emsp;&emsp;        :param parent_ein: 3 character parent ein
 <br>&emsp;&emsp;        :return: String
 <br>&emsp;&emsp;        """
 <br>&emsp;    def parent(self):
@@ -3260,8 +3279,9 @@ CommunicationMethods and CustomRequestForms.
 <br>&emsp;    Define the Users class with the following columns and relationships:
 <br>
 <br>&emsp;    guid - a string that contains the unique guid of users
-<br>&emsp;    auth_user_type - a string that tells what type of a user they are (agency user, helper, etc.)
-<br>&emsp;    guid and auth_user_type are combined to create a composite primary key
+<br>&emsp;    is_nyc_employee - a boolean value that determines if the user is a NYC Employee
+<br>&emsp;    has_nyc_account - a boolean value that determines if the user has a NYC account
+<br>&emsp;    active - a boolean value that determines if the user can login to NYC.ID
 <br>&emsp;    agency_ein - a foreign key that links to the primary key of the agency table
 <br>&emsp;    email - a string containing the user's email
 <br>&emsp;    notification_email - a string containing the user's email for notifications
@@ -3285,21 +3305,11 @@ CommunicationMethods and CustomRequestForms.
 <br>&emsp;    def is_public(self):
 <br>&emsp;&emsp;        """
 <br>&emsp;&emsp;        Checks to see if the current user is a public user as defined below:
-<br>
-<br>&emsp;&emsp;        PUBLIC_USER_NYC_ID = 'EDIRSSO'
-<br>&emsp;&emsp;        PUBLIC_USER_FACEBOOK = 'FacebookSSO'
-<br>&emsp;&emsp;        PUBLIC_USER_LINKEDIN = 'LinkedInSSO'
-<br>&emsp;&emsp;        PUBLIC_USER_GOOGLE = 'GoogleSSO'
-<br>&emsp;&emsp;        PUBLIC_USER_YAHOO = 'YahooSSO'
-<br>&emsp;&emsp;        PUBLIC_USER_MICROSOFT = 'MSLiveSSO'
-<br>
 <br>&emsp;&emsp;        :return: Boolean
 <br>&emsp;&emsp;        """
 <br>&emsp;    def is_agency(self):
 <br>&emsp;&emsp;        """
 <br>&emsp;&emsp;        Check to see if the current user is an agency user.
-<br>
-<br>&emsp;&emsp;        AGENCY_USER = 'Saml2In:NYC Employees'
 <br>
 <br>&emsp;&emsp;        :return: Boolean
 <br>&emsp;&emsp;        """
@@ -3326,15 +3336,6 @@ CommunicationMethods and CustomRequestForms.
 <br>
 <br>&emsp;&emsp;        :return: Boolean
 <br>&emsp;&emsp;        """
-<br>&emsp;    def is_anonymous_requester(self):
-<br>&emsp;&emsp;        """
-<br>&emsp;&emsp;        Checks to see if the user is an anonymous requester
-<br>
-<br>&emsp;&emsp;        NOTE: This is not the same as an anonymous user! This returns
-<br>&emsp;&emsp;        true if this user has been created for a specific request.
-<br>
-<br>&emsp;&emsp;        :return: Boolean
-<br>&emsp;&emsp;        """
 <br>&emsp;    def anonymous_request(self):
 <br>&emsp;&emsp;        """
 <br>&emsp;&emsp;        Returns the request this user is associated with
@@ -3350,8 +3351,6 @@ CommunicationMethods and CustomRequestForms.
 <br>&emsp;&emsp;        Determine if a user is active for at least one agency.
 <br>&emsp;&emsp;        :return: Boolean
 <br>&emsp;&emsp;        """
-<br>&emsp;    def get_id(self):
-<br>&emsp;    def from_id(self, user_id):  # Might come in useful
 <br>&emsp;    def is_agency_admin(self, ein=None):
 <br>&emsp;&emsp;        """
 <br>&emsp;&emsp;        Determine if a user is an admin for the specified agency.
@@ -3369,6 +3368,7 @@ CommunicationMethods and CustomRequestForms.
 <br>&emsp;    def mailing_address(self):
 <br>&emsp;    def mailing_address(self, mailing_address):
 <br>&emsp;    def formatted_point_of_contact_number(self):
+<br>&emsp;    def get_id(self):
 <br>&emsp;    def es_update(self):
 <br>&emsp;&emsp;        """
 <br>&emsp;&emsp;        Call es_update for any request where this user is the requester
@@ -3411,9 +3411,8 @@ CommunicationMethods and CustomRequestForms.
 <br>&emsp;    Define the AgencyUsers class with the following columns and relationships:
 <br>
 <br>&emsp;    user_guid - a string that contains the unique guid of users
-<br>&emsp;    auth_user_type - a string that tells what type of a user they are (agency user, helper, etc.)
 <br>&emsp;    agency_ein - a foreign key that links that the primary key of the agency the request was assigned to
-<br>&emsp;    user_guid, auth_user_type, and agency_ein are combined to create a composite primary key
+<br>&emsp;    user_guid and agency_ein are combined to create a composite primary key
 <br>&emsp;    is_agency_active - a boolean value that allows the user to login as a user for the agency identified by agency_ein
 <br>&emsp;    is_agency_admin - a boolean value that allows the user to administer settings for the agency identified by
 <br>&emsp;&emsp;        agency_ein

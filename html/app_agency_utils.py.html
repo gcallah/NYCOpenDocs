@@ -1148,11 +1148,6 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/NYCOpenDocs/html/app_static_js_request_new-request-anon.js.html">
-                                new-request-anon.js
-                            </a>
-                        </li>
-                        <li>
                             <a href="/NYCOpenDocs/html/app_static_js_request_new-request-user.js.html">
                                 new-request-user.js
                             </a>
@@ -2074,6 +2069,11 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.html.html">
                             new_request_anon.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.js.html.html">
+                            new_request_anon.js.html
                         </a>
                     </li>
                     <li>
@@ -3203,36 +3203,26 @@ the specified agency by taking one parameter agency_ein.
 
                 <details>
                     <summary class="sum1">
+                    Code Check Report
+                    </summary>
+
+                    <p>
+                        <pre>
+<!-- Include the linting report here! -->
+<p>We attempted to read from templates/app_agency_utils.py_lint.txt but failed.</p>
+                        </pre>
+                   </p>
+                </details>
+
+                <details>
+                    <summary class="sum1">
                     Documentation drawn from source code 
                     </summary>
 
                     <p>
 <!-- Include the documentation here! -->
 
-def update_agency_active_status(agency_ein, is_active):
-<br>&emsp;    """
-<br>&emsp;    Update the active status of an agency.
-<br>&emsp;    :param agency_ein: String identifier for agency (4 characters)
-<br>&emsp;    :param is_active: Boolean value for agency active status (True = Active)
-<br>&emsp;    :return: Boolean value (True if successfully changed active status)
-<br>&emsp;    """
-<br>def get_agency_feature(agency_ein, feature):
-<br>&emsp;    """
-<br>&emsp;    Retrieve the specified agency feature for the specified agency.
-<br>
-<br>&emsp;    :param agency_ein:  String identifier for agency (4 characters)
-<br>&emsp;    :param feature: Feature specified. See app/lib/constants/agency_features.py for possible values (String)
-<br>
-<br>&emsp;    :return: JSON Object
-<br>&emsp;    """
-<br>def get_agency_features(agency_ein):
-<br>&emsp;    """
-<br>&emsp;    Retrieve the agency features JSON object for the specified agency.
-<br>
-<br>&emsp;    :param agency_ein: String identifier for agency (4 characters)
-<br>&emsp;    :return: JSON Object
-<br>&emsp;    """
-<br>
+<hr><code>update_agency_active_status(agency_ein, is_active):</code><br/></br>Update the active status of an agency.</br>:param agency_ein: String identifier for agency (4 characters)</br>:param is_active: Boolean value for agency active status (True = Active)</br>:return: Boolean value (True if successfully changed active status)</br><hr><code>get_agency_feature(agency_ein, feature):</code><br/></br>Retrieve the specified agency feature for the specified agency.</br></br>:param agency_ein:  String identifier for agency (4 characters)</br>:param feature: Feature specified. See app/lib/constants/agency_features.py for possible values (String)</br></br>:return: JSON Object</br><hr><code>get_agency_features(agency_ein):</code><br/></br>Retrieve the agency features JSON object for the specified agency.</br></br>:param agency_ein: String identifier for agency (4 characters)</br>:return: JSON Object</br>
                    </p>
                 </details>
 

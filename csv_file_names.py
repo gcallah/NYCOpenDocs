@@ -8,6 +8,7 @@ GLYPHICON = 4
 LINK_INSERT = 5
 DOC_TXT = 6
 HW_TXT = 7
+LINT_TXT = 8
 
 
 def read_file_names():
@@ -62,7 +63,7 @@ def create_csv(connector):
     # current types of files with docstrings extracted
     # loop through the file names
     for file in file_names:
-        output_lst = ["", "", "", "", "", "", "", ""]
+        output_lst = ["", "", "", "", "", "", "", "", ""]
         # if file is a string, it's not in a sub directory
         if isinstance(file, str):
             output_lst[LEVEL] = str(1)
@@ -72,6 +73,8 @@ def create_csv(connector):
             if ".py" in file or ".js" in file or ".css" in file or ".html" in file:
                 output_lst[DOC_TXT] = template_dir + file.strip(".") + "_ex.txt"
                 output_lst[DOC_TXT] = template_dir + file.strip(".") + "_hw.txt"
+            if ".py" in file[-1]:
+                output_lst[LINT_TXT] = template_dir + "_".join(file) + "_lint.txt"
             output.append(connector.join(output_lst))
             current_dir = []
         # otherwise, check the directory paths
@@ -92,6 +95,8 @@ def create_csv(connector):
                     if ".py" in file[-1] or ".js" in file[-1] or ".css" in file[-1] or ".html" in file[-1]:
                         output_lst[DOC_TXT] = template_dir + "_".join(file) + "_ex.txt"
                         output_lst[HW_TXT] = template_dir + "_".join(file) + "_hw.txt"
+                    if ".py" in file[-1]:
+                        output_lst[LINT_TXT] = template_dir + "_".join(file) + "_lint.txt"
                 else:
                     output_dir_lst[LEVEL] = str(index_dif + 2)
                     output_dir_lst[TITLE] = ("About the directory '" +
@@ -104,7 +109,7 @@ def create_csv(connector):
                 # strip off remaining connectors in case the last fields
                 # are not filled in
                 output.append(connector.join(output_lst).strip(connector))
-                output_lst = ["", "", "", "", "", "", "", ""]
+                output_lst = ["", "", "", "", "", "", "", "", ""]
                 # if we filled in for a directory
                 # append this after the output_lst
                 if out_dir:

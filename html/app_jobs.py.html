@@ -1148,11 +1148,6 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/NYCOpenDocs/html/app_static_js_request_new-request-anon.js.html">
-                                new-request-anon.js
-                            </a>
-                        </li>
-                        <li>
                             <a href="/NYCOpenDocs/html/app_static_js_request_new-request-user.js.html">
                                 new-request-user.js
                             </a>
@@ -2074,6 +2069,11 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.html.html">
                             new_request_anon.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.js.html.html">
+                            new_request_anon.js.html
                         </a>
                     </li>
                     <li>
@@ -3200,24 +3200,26 @@ the next request number done.
 
                 <details>
                     <summary class="sum1">
+                    Code Check Report
+                    </summary>
+
+                    <p>
+                        <pre>
+<!-- Include the linting report here! -->
+app/jobs.py:9:1: F401 'app.sentry' imported but unused
+                        </pre>
+                   </p>
+                </details>
+
+                <details>
+                    <summary class="sum1">
                     Documentation drawn from source code 
                     </summary>
 
                     <p>
 <!-- Include the documentation here! -->
 
-def update_request_statuses():
-<br>def _update_request_statuses():
-<br>&emsp;    """
-<br>&emsp;    Update statuses for all requests that are now Due Soon or Overdue
-<br>&emsp;    and send a notification email to agency admins listing the requests.
-<br>&emsp;    """
-<br>def update_next_request_number():
-<br>&emsp;    """
-<br>&emsp;    Celery task to automatically update the next request number of each agency to 1
-<br>&emsp;    :return:
-<br>&emsp;    """
-<br>
+<hr><code>update_request_statuses():</code><br/><hr><code>_update_request_statuses():</code><br/></br>Update statuses for all requests that are now Due Soon or Overdue</br>and send a notification email to agency admins listing the requests.</br><hr><code>update_next_request_number():</code><br/></br>Celery task to automatically update the next request number of each agency to 1</br>:return:</br>
                    </p>
                 </details>
 

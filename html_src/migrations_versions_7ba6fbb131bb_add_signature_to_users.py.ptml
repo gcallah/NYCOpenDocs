@@ -35,6 +35,19 @@
 
                 <details>
                     <summary class="sum1">
+                    Code Check Report
+                    </summary>
+
+                    <p>
+                        <pre>
+<!-- Include the linting report here! -->
+<!--include templates/migrations_versions_7ba6fbb131bb_add_signature_to_users.py_lint.txt -->
+                        </pre>
+                   </p>
+                </details>
+
+                <details>
+                    <summary class="sum1">
                     Documentation drawn from source code 
                     </summary>
 

@@ -1148,11 +1148,6 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/NYCOpenDocs/html/app_static_js_request_new-request-anon.js.html">
-                                new-request-anon.js
-                            </a>
-                        </li>
-                        <li>
                             <a href="/NYCOpenDocs/html/app_static_js_request_new-request-user.js.html">
                                 new-request-user.js
                             </a>
@@ -2074,6 +2069,11 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.html.html">
                             new_request_anon.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.js.html.html">
+                            new_request_anon.js.html
                         </a>
                     </li>
                     <li>
@@ -3194,22 +3194,31 @@
 
                 <details>
                     <summary class="sum1">
+                    Code Check Report
+                    </summary>
+
+                    <p>
+                        <pre>
+<!-- Include the linting report here! -->
+migrations/versions/7ba6fbb131bb_add_signature_to_users.py:13:1: E402 module level import not at top of file
+migrations/versions/7ba6fbb131bb_add_signature_to_users.py:14:1: E402 module level import not at top of file
+migrations/versions/7ba6fbb131bb_add_signature_to_users.py:18:5: E266 too many leading '#' for block comment
+migrations/versions/7ba6fbb131bb_add_signature_to_users.py:20:5: E266 too many leading '#' for block comment
+migrations/versions/7ba6fbb131bb_add_signature_to_users.py:24:5: E266 too many leading '#' for block comment
+migrations/versions/7ba6fbb131bb_add_signature_to_users.py:26:5: E266 too many leading '#' for block comment
+                        </pre>
+                   </p>
+                </details>
+
+                <details>
+                    <summary class="sum1">
                     Documentation drawn from source code 
                     </summary>
 
                     <p>
 <!-- Include the documentation here! -->
 
-"""Add Signature to Users
-<br>
-<br>Revision ID: 7ba6fbb131bb
-<br>Revises: c72d576b93f3
-<br>Create Date: 2018-03-29 18:35:45.474745
-<br>
-<br>"""
-<br>def upgrade():
-<br>def downgrade():
-<br>
+Add Signature to Users</br></br>Revision ID: 7ba6fbb131bb</br>Revises: c72d576b93f3</br>Create Date: 2018-03-29 18:35:45.474745</br></br><hr><code>upgrade():</code><br/><hr><code>downgrade():</code><br/>
                    </p>
                 </details>
 

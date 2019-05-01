@@ -1148,11 +1148,6 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/NYCOpenDocs/html/app_static_js_request_new-request-anon.js.html">
-                                new-request-anon.js
-                            </a>
-                        </li>
-                        <li>
                             <a href="/NYCOpenDocs/html/app_static_js_request_new-request-user.js.html">
                                 new-request-user.js
                             </a>
@@ -2074,6 +2069,11 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.html.html">
                             new_request_anon.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.js.html.html">
+                            new_request_anon.js.html
                         </a>
                     </li>
                     <li>
@@ -3213,69 +3213,36 @@ Function _group_items() groups a collection of items by a specified key.
 
                 <details>
                     <summary class="sum1">
+                    Code Check Report
+                    </summary>
+
+                    <p>
+                        <pre>
+<!-- Include the linting report here! -->
+app/agency/api/utils.py:50:17: E131 continuation line unaligned for hanging indent
+app/agency/api/utils.py:52:74: E711 comparison to None should be 'if cond is None:'
+app/agency/api/utils.py:54:17: E131 continuation line unaligned for hanging indent
+app/agency/api/utils.py:59:17: E131 continuation line unaligned for hanging indent
+app/agency/api/utils.py:59:82: E711 comparison to None should be 'if cond is None:'
+app/agency/api/utils.py:60:17: E131 continuation line unaligned for hanging indent
+app/agency/api/utils.py:98:17: E131 continuation line unaligned for hanging indent
+app/agency/api/utils.py:106:17: E131 continuation line unaligned for hanging indent
+app/agency/api/utils.py:128:1: W293 blank line contains whitespace
+app/agency/api/utils.py:132:1: W293 blank line contains whitespace
+app/agency/api/utils.py:139:14: W291 trailing whitespace
+                        </pre>
+                   </p>
+                </details>
+
+                <details>
+                    <summary class="sum1">
                     Documentation drawn from source code 
                     </summary>
 
                     <p>
 <!-- Include the documentation here! -->
 
-def get_active_users_as_choices(agency_ein: str) -> List[Tuple[str, str]]:
-<br>&emsp;    """Retrieve a list of tuples representing users that are active for a given agency. Each tuple contains the
-<br>&emsp;       following elements:
-<br>&emsp;&emsp;&emsp;            (Users.guid, Users.name)
-<br>
-<br>&emsp;    Params:
-<br>&emsp;&emsp;        agency_ein (str): Agency EIN (4 Character String)
-<br>
-<br>&emsp;    Returns:
-<br>&emsp;&emsp;        List(Tuple(str, str)): A list of tuples with the following elements:
-<br>&emsp;&emsp;&emsp;            (Users.guid, Users.name)
-<br>&emsp;    """
-<br>def get_reasons(agency_ein: str, reason_type: str = None) -> Dict:
-<br>&emsp;    """Retrieve the determination reasons (used in emails) for the specified agency as a JSON object. If reason_type is
-<br>&emsp;    provided, only retrieve determination_reasons of that type.
-<br>
-<br>&emsp;    Args:
-<br>&emsp;&emsp;        agency_ein (str): Agency EIN
-<br>&emsp;&emsp;        reason_type (str): One of ("denial", "closing", "re-opening")
-<br>
-<br>&emsp;    Returns:
-<br>&emsp;&emsp;        Dict:
-<br>&emsp;&emsp;&emsp;            {
-<br>&emsp;&emsp;&emsp;&emsp;                'type_', [(reason_id, reason_title),...]
-<br>&emsp;&emsp;&emsp;            }
-<br>&emsp;    """
-<br>def get_letter_templates(agency_ein: str, template_type: str = None) -> Dict:
-<br>&emsp;    """Retrieve letter templates for the specified agency as a dictionary. If template type is provided, only get
-<br>&emsp;    templates of that type
-<br>
-<br>&emsp;    Params:
-<br>&emsp;&emsp;&emsp;            Args:
-<br>&emsp;&emsp;        agency_ein (str): Agency EIN
-<br>&emsp;&emsp;        reason_type (str): One of "acknowledgment", "denial", "closing", "letter", "extension", "re-opening"
-<br>
-<br>&emsp;    Returns:
-<br>&emsp;&emsp;        Dict:
-<br>&emsp;&emsp;        {
-<br>&emsp;&emsp;&emsp;            'type_': [(template_id, template_name),...]
-<br>&emsp;&emsp;        }
-<br>&emsp;    """
-<br>def _group_items(items: Sequence[Sequence], sort_index: int) -> Tuple[Any, list]:
-<br>&emsp;    """Group a collection of items by a specified key
-<br>&emsp;    
-<br>&emsp;    Args:
-<br>&emsp;&emsp;        collections (Sequence): A collection of items to be grouped
-<br>&emsp;&emsp;        sort_index (int): Index of the item to use for grouping
-<br>&emsp;    
-<br>&emsp;    Yields:
-<br>&emsp;&emsp;        tuple:
-<br>&emsp;&emsp;&emsp;            (
-<br>&emsp;&emsp;&emsp;&emsp;                items[sort_index_1], (Sequence[i], Sequence[j], ...),
-<br>&emsp;&emsp;&emsp;&emsp;                items[sort_index_2], (Sequence[i], Sequence[j], ...),
-<br>&emsp;&emsp;&emsp;&emsp;                ...
-<br>&emsp;&emsp;&emsp;            )        
-<br>&emsp;    """
-<br>
+<hr><code>get_active_users_as_choices(agency_ein: str) -> List[Tuple[str, str]]:</code><br/>Retrieve a list of tuples representing users that are active for a given agency. Each tuple contains the</br>following elements:</br>(Users.guid, Users.name)</br></br>Params:</br>agency_ein (str): Agency EIN (4 Character String)</br></br>Returns:</br>List(Tuple(str, str)): A list of tuples with the following elements:</br>(Users.guid, Users.name)</br><hr><code>get_reasons(agency_ein: str, reason_type: str = None) -> Dict:</code><br/>Retrieve the determination reasons (used in emails) for the specified agency as a JSON object. If reason_type is</br>provided, only retrieve determination_reasons of that type.</br></br>Args:</br>agency_ein (str): Agency EIN</br>reason_type (str): One of ("denial", "closing", "re-opening")</br></br>Returns:</br>Dict:</br>{</br>type_', [(reason_id, reason_title),...]</br>}</br><hr><code>get_letter_templates(agency_ein: str, template_type: str = None) -> Dict:</code><br/>Retrieve letter templates for the specified agency as a dictionary. If template type is provided, only get</br>templates of that type</br></br>Params:</br>Args:</br>agency_ein (str): Agency EIN</br>reason_type (str): One of "acknowledgment", "denial", "closing", "letter", "extension", "re-opening</br></br>Returns:</br>Dict:</br>{</br>type_': [(template_id, template_name),...]</br>}</br><hr><code>_group_items(items: Sequence[Sequence], sort_index: int) -> Tuple[Any, list]:</code><br/>Group a collection of items by a specified key</br></br>Args:</br>collections (Sequence): A collection of items to be grouped</br>sort_index (int): Index of the item to use for grouping</br></br>Yields:</br>tuple:</br>(</br>items[sort_index_1], (Sequence[i], Sequence[j], ...),</br>items[sort_index_2], (Sequence[i], Sequence[j], ...),</br>...</br>)</br>
                    </p>
                 </details>
 

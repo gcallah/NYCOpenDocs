@@ -1148,11 +1148,6 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/NYCOpenDocs/html/app_static_js_request_new-request-anon.js.html">
-                                new-request-anon.js
-                            </a>
-                        </li>
-                        <li>
                             <a href="/NYCOpenDocs/html/app_static_js_request_new-request-user.js.html">
                                 new-request-user.js
                             </a>
@@ -2074,6 +2069,11 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.html.html">
                             new_request_anon.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.js.html.html">
+                            new_request_anon.js.html
                         </a>
                     </li>
                     <li>
@@ -3209,96 +3209,26 @@ raises VirusDetectedException.
 
                 <details>
                     <summary class="sum1">
+                    Code Check Report
+                    </summary>
+
+                    <p>
+                        <pre>
+<!-- Include the linting report here! -->
+app/upload/utils.py:63:27: E712 comparison to False should be 'if cond is False:' or 'if not cond:'
+                        </pre>
+                   </p>
+                </details>
+
+                <details>
+                    <summary class="sum1">
                     Documentation drawn from source code 
                     </summary>
 
                     <p>
 <!-- Include the documentation here! -->
 
-"""
-<br> .. module:: upload.utils
-<br>
-<br>&emsp;    :synopsis: Helper functions for uploads
-<br>"""
-<br>def parse_content_range(header):
-<br>&emsp;    """
-<br>&emsp;    Extracts the starting byte position and resource length.
-<br>
-<br>&emsp;    Content-Range = "Content-Range" ":" content-range-spec
-<br>
-<br>&emsp;    content-range-spec      = byte-content-range-spec
-<br>&emsp;    byte-content-range-spec = bytes-unit SP
-<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                              byte-range-resp-spec "/"
-<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                              ( instance-length | "*" )
-<br>&emsp;    byte-range-resp-spec    = (first-byte-pos "-" last-byte-pos)
-<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                                  | "*"
-<br>&emsp;    instance-length         = 1*DIGIT
-<br>
-<br>&emsp;    :param header: the rhs of the content-range header
-<br>&emsp;    :return: the first-byte-pos and instance-length
-<br>&emsp;    """
-<br>def upload_exists(request_id, filename, response_id=None):
-<br>&emsp;    """
-<br>&emsp;    Checks for an existing uploaded file. If a response id
-<br>&emsp;    is given, the file name associated with that response is ignored.
-<br>
-<br>&emsp;    :param request_id: id of request associated with the upload
-<br>&emsp;    :param filename: the name of the uploaded file
-<br>&emsp;    :param response_id: id of response associated with the upload
-<br>&emsp;    :return: whether the file exists or not
-<br>&emsp;    """
-<br>def is_valid_file_type(obj):
-<br>&emsp;    """
-<br>&emsp;    Validates the mime type of a file.
-<br>&emsp;    Content type header is ignored.
-<br>
-<br>&emsp;    :param obj: the file storage object to check
-<br>&emsp;    :type obj: werkzeug.datastructures.FileStorage
-<br>
-<br>&emsp;    :return: (whether the mime type is allowed or not,
-<br>&emsp;&emsp;        the mime type)
-<br>&emsp;    """
-<br>def get_upload_key(request_id, upload_filename, for_update=False):
-<br>&emsp;    """
-<br>&emsp;    Returns a formatted key for an upload.
-<br>&emsp;    Intended for tracking the status of an upload.
-<br>
-<br>&emsp;    :param request_id: id of the request associated with the upload
-<br>&emsp;    :param upload_filename: the name of the uploaded file
-<br>&emsp;    :param for_update: will the uploaded file replace an existing file?
-<br>&emsp;&emsp;        (this is required to make keys unique, as the uploaded file
-<br>&emsp;&emsp;        may share the same name as the existing file)
-<br>
-<br>&emsp;    :return: the formatted key
-<br>&emsp;&emsp;        Ex.
-<br>&emsp;&emsp;&emsp;            FOIL-ID_filename.ext_new
-<br>&emsp;&emsp;&emsp;            FOIL_ID_filename.ext_update
-<br>&emsp;    """
-<br>class VirusDetectedException(Exception):
-<br>&emsp;    """
-<br>&emsp;    Raise when scanner detects an infected file.
-<br>&emsp;    """
-<br>&emsp;    def __init__(self, filename):
-<br>def scan_and_complete_upload(request_id, filepath, is_update=False, response_id=None):
-<br>&emsp;    """
-<br>&emsp;    Scans an uploaded file (see scan_file) and moves
-<br>&emsp;    it to the data directory if it is clean. If is_update is set,
-<br>&emsp;    the file will also be placed under the 'updated' directory.
-<br>&emsp;    Updates redis accordingly.
-<br>
-<br>&emsp;    :param request_id: id of request associated with the upload
-<br>&emsp;    :param filepath: path to uploaded and quarantined file
-<br>&emsp;    :param is_update: will the file replace an existing one?
-<br>&emsp;    :param response_id: id of response associated with the upload
-<br>&emsp;    """
-<br>def scan_file(filepath):
-<br>&emsp;    """
-<br>&emsp;    Scans a file for viruses using McAfee Virus Scan. If an infected
-<br>&emsp;    file is detected, removes the file and raises VirusDetectedException.
-<br>
-<br>&emsp;    :param filepath: path of file to scan
-<br>&emsp;    """
-<br>
+</br>.. module:: upload.utils</br></br>:synopsis: Helper functions for uploads</br><hr><code>parse_content_range(header):</code><br/></br>Extracts the starting byte position and resource length.</br></br>Content-Range = "Content-Range" ":" content-range-spec</br></br>content-range-spec      = byte-content-range-spec</br>byte-content-range-spec = bytes-unit SP</br>byte-range-resp-spec "/</br>( instance-length | "*" )</br>byte-range-resp-spec    = (first-byte-pos "-" last-byte-pos)</br>| "*</br>instance-length         = 1*DIGIT</br></br>:param header: the rhs of the content-range header</br>:return: the first-byte-pos and instance-length</br><hr><code>upload_exists(request_id, filename, response_id=None):</code><br/></br>Checks for an existing uploaded file. If a response id</br>is given, the file name associated with that response is ignored.</br></br>:param request_id: id of request associated with the upload</br>:param filename: the name of the uploaded file</br>:param response_id: id of response associated with the upload</br>:return: whether the file exists or not</br><hr><code>is_valid_file_type(obj):</code><br/></br>Validates the mime type of a file.</br>Content type header is ignored.</br></br>:param obj: the file storage object to check</br>:type obj: werkzeug.datastructures.FileStorage</br></br>:return: (whether the mime type is allowed or not,</br>the mime type)</br><hr><code>get_upload_key(request_id, upload_filename, for_update=False):</code><br/></br>Returns a formatted key for an upload.</br>Intended for tracking the status of an upload.</br></br>:param request_id: id of the request associated with the upload</br>:param upload_filename: the name of the uploaded file</br>:param for_update: will the uploaded file replace an existing file?</br>(this is required to make keys unique, as the uploaded file</br>may share the same name as the existing file)</br></br>:return: the formatted key</br>Ex.</br>FOIL-ID_filename.ext_new</br>FOIL_ID_filename.ext_update</br><hr><code>VirusDetectedException(Exception):</code><br/></br>Raise when scanner detects an infected file.</br><hr><code>__init__(self, filename):</code><br/><hr><code>scan_and_complete_upload(request_id, filepath, is_update=False, response_id=None):</code><br/></br>Scans an uploaded file (see scan_file) and moves</br>it to the data directory if it is clean. If is_update is set,</br>the file will also be placed under the 'updated' directory.</br>Updates redis accordingly.</br></br>:param request_id: id of request associated with the upload</br>:param filepath: path to uploaded and quarantined file</br>:param is_update: will the file replace an existing one?</br>:param response_id: id of response associated with the upload</br><hr><code>scan_file(filepath):</code><br/></br>Scans a file for viruses using McAfee Virus Scan. If an infected</br>file is detected, removes the file and raises VirusDetectedException.</br></br>:param filepath: path of file to scan</br>
                    </p>
                 </details>
 

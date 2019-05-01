@@ -1148,11 +1148,6 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/NYCOpenDocs/html/app_static_js_request_new-request-anon.js.html">
-                                new-request-anon.js
-                            </a>
-                        </li>
-                        <li>
                             <a href="/NYCOpenDocs/html/app_static_js_request_new-request-user.js.html">
                                 new-request-user.js
                             </a>
@@ -2074,6 +2069,11 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.html.html">
                             new_request_anon.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.js.html.html">
+                            new_request_anon.js.html
                         </a>
                     </li>
                     <li>
@@ -3216,56 +3216,26 @@ in the form of JSON object containing the form field definitions.
 
                 <details>
                     <summary class="sum1">
+                    Code Check Report
+                    </summary>
+
+                    <p>
+                        <pre>
+<!-- Include the linting report here! -->
+<p>We attempted to read from templates/app_agency_api_views.py_lint.txt but failed.</p>
+                        </pre>
+                   </p>
+                </details>
+
+                <details>
+                    <summary class="sum1">
                     Documentation drawn from source code 
                     </summary>
 
                     <p>
 <!-- Include the documentation here! -->
 
-def get_active_users(agency_ein):
-<br>&emsp;    """
-<br>&emsp;    Retrieve the active users for the specified agency.
-<br>
-<br>&emsp;    :param agency_ein: Agency EIN (String)
-<br>
-<br>&emsp;    :return: JSON Object({"active_users": [('', 'All'), ('o8pj0k', 'John Doe')],
-<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                          "is_admin": True}), 200
-<br>&emsp;    """
-<br>def get_agency_reasons(agency_ein, reason_type=None):
-<br>&emsp;    """Retrieve an agencies determination reasons for Denials, Closings, and Re-Openings
-<br>
-<br>&emsp;    Args:
-<br>&emsp;&emsp;        agency_ein (str): Agency EIN
-<br>&emsp;&emsp;        reason_type (str): One of ("denial", "closing", "re-opening")
-<br>&emsp;&emsp;&emsp;            All other determination types do not have reasons.
-<br>
-<br>&emsp;    Returns:
-<br>&emsp;&emsp;        JSON Object (dict): Keys are the reason type, values are an array of tuples (id, title)
-<br>
-<br>&emsp;    """
-<br>def get_agency_letter_templates(agency_ein, letter_type=None):
-<br>&emsp;    """
-<br>&emsp;    Retrieve letter templates for the specified agency. If letter type is provided, only those templates will be
-<br>&emsp;    provided, otherwise all templates will be returned.
-<br>
-<br>&emsp;    :param agency_ein: Agency EIN (String)
-<br>&emsp;    :param letter_type: One of "acknowledgment", "denial", "closing", "letter", "extension", "re-opening".
-<br>
-<br>&emsp;    :return: JSON Object (keys are template types, values are arrays of tuples (id, name))
-<br>&emsp;    """
-<br>def get_custom_request_form_options(agency_ein):
-<br>&emsp;    """
-<br>&emsp;    Retrieve the custom request forms for the specified agency.
-<br>
-<br>&emsp;    :param agency_ein: Agency EIN (String)
-<br>&emsp;    :return: JSON Object (keys are the id of the custom request form, values are the names of the forms)
-<br>&emsp;    """
-<br>def get_custom_request_form_fields():
-<br>&emsp;    """
-<br>&emsp;    Get the custom request form field definitions based on form id and agency ein
-<br>&emsp;    :return: JSON object containing the form field definitions
-<br>&emsp;    """
-<br>
+<hr><code>get_active_users(agency_ein):</code><br/></br>Retrieve the active users for the specified agency.</br></br>:param agency_ein: Agency EIN (String)</br></br>:return: JSON Object({"active_users": [('', 'All'), ('o8pj0k', 'John Doe')],</br>is_admin": True}), 200</br><hr><code>get_agency_reasons(agency_ein, reason_type=None):</code><br/>Retrieve an agencies determination reasons for Denials, Closings, and Re-Openings</br></br>Args:</br>agency_ein (str): Agency EIN</br>reason_type (str): One of ("denial", "closing", "re-opening")</br>All other determination types do not have reasons.</br></br>Returns:</br>JSON Object (dict): Keys are the reason type, values are an array of tuples (id, title)</br></br><hr><code>get_agency_letter_templates(agency_ein, letter_type=None):</code><br/></br>Retrieve letter templates for the specified agency. If letter type is provided, only those templates will be</br>provided, otherwise all templates will be returned.</br></br>:param agency_ein: Agency EIN (String)</br>:param letter_type: One of "acknowledgment", "denial", "closing", "letter", "extension", "re-opening".</br></br>:return: JSON Object (keys are template types, values are arrays of tuples (id, name))</br><hr><code>get_custom_request_form_options(agency_ein):</code><br/></br>Retrieve the custom request forms for the specified agency.</br></br>:param agency_ein: Agency EIN (String)</br>:return: JSON Object (keys are the id of the custom request form, values are the names of the forms)</br><hr><code>get_custom_request_form_fields():</code><br/></br>Get the custom request form field definitions based on form id and agency ein</br>:return: JSON object containing the form field definitions</br>
                    </p>
                 </details>
 

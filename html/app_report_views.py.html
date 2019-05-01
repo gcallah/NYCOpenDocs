@@ -1148,11 +1148,6 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/NYCOpenDocs/html/app_static_js_request_new-request-anon.js.html">
-                                new-request-anon.js
-                            </a>
-                        </li>
-                        <li>
                             <a href="/NYCOpenDocs/html/app_static_js_request_new-request-user.js.html">
                                 new-request-user.js
                             </a>
@@ -2074,6 +2069,11 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.html.html">
                             new_request_anon.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.js.html.html">
+                            new_request_anon.js.html
                         </a>
                     </li>
                     <li>
@@ -3269,34 +3269,26 @@ Code Issues
 
                 <details>
                     <summary class="sum1">
+                    Code Check Report
+                    </summary>
+
+                    <p>
+                        <pre>
+<!-- Include the linting report here! -->
+<p>We attempted to read from templates/app_report_views.py_lint.txt but failed.</p>
+                        </pre>
+                   </p>
+                </details>
+
+                <details>
+                    <summary class="sum1">
                     Documentation drawn from source code 
                     </summary>
 
                     <p>
 <!-- Include the documentation here! -->
 
-"""
-<br>.. module:: report.views.
-<br>
-<br>   :synopsis: Handles the report URL endpoints for the OpenRecords application
-<br>"""
-<br>def show_report():
-<br>&emsp;    """
-<br>&emsp;    This function handles the rendering of the reports page
-<br>
-<br>&emsp;    :return: redirect to reports page
-<br>&emsp;    """
-<br>def get():
-<br>&emsp;    """
-<br>&emsp;    This function handles the retrieval of report data to generate the chart on the frontend.
-<br>&emsp;    Takes in agency_ein or user_guid from the frontend and filters for the number of requests closed and requests
-<br>&emsp;    opened.
-<br>
-<br>&emsp;    :return: json object({"labels": ["Opened", "Closed"],
-<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                          "values": [150, 135],
-<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                          "active_users": [('', ''), ('o8pj0k', 'John Doe')]}), 200
-<br>&emsp;    """
-<br>
+</br>.. module:: report.views.</br></br>:synopsis: Handles the report URL endpoints for the OpenRecords application</br><hr><code>show_report():</code><br/></br>This function handles the rendering of the reports page</br></br>:return: redirect to reports page</br><hr><code>get():</code><br/></br>This function handles the retrieval of report data to generate the chart on the frontend.</br>Takes in agency_ein or user_guid from the frontend and filters for the number of requests closed and requests</br>opened.</br></br>:return: json object({"labels": ["Opened", "Closed"],</br>values": [150, 135],</br>active_users": [('', ''), ('o8pj0k', 'John Doe')]}), 200</br><hr><code>acknowledgment():</code><br/>Generates the acknowledgment report.</br></br>Returns:</br>Template with context.</br></br>
                    </p>
                 </details>
 

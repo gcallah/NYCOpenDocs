@@ -1148,11 +1148,6 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/NYCOpenDocs/html/app_static_js_request_new-request-anon.js.html">
-                                new-request-anon.js
-                            </a>
-                        </li>
-                        <li>
                             <a href="/NYCOpenDocs/html/app_static_js_request_new-request-user.js.html">
                                 new-request-user.js
                             </a>
@@ -2074,6 +2069,11 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.html.html">
                             new_request_anon.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.js.html.html">
+                            new_request_anon.js.html
                         </a>
                     </li>
                     <li>
@@ -3218,16 +3218,26 @@ New Year's Day since 1870, Columbus Day since 1970
 
                 <details>
                     <summary class="sum1">
+                    Code Check Report
+                    </summary>
+
+                    <p>
+                        <pre>
+<!-- Include the linting report here! -->
+<p>We attempted to read from templates/app_lib___init__.py_lint.txt but failed.</p>
+                        </pre>
+                   </p>
+                </details>
+
+                <details>
+                    <summary class="sum1">
                     Documentation drawn from source code 
                     </summary>
 
                     <p>
 <!-- Include the documentation here! -->
 
-class NYCHolidays(HolidayBase):
-<br>&emsp;    def __init__(self, **kwargs):
-<br>&emsp;    def _populate(self, year):
-<br>
+<hr><code>NYCHolidays(HolidayBase):</code><br/><hr><code>__init__(self, **kwargs):</code><br/><hr><code>_populate(self, year):</code><br/>
                    </p>
                 </details>
 

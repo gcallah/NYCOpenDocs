@@ -1148,11 +1148,6 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/NYCOpenDocs/html/app_static_js_request_new-request-anon.js.html">
-                                new-request-anon.js
-                            </a>
-                        </li>
-                        <li>
                             <a href="/NYCOpenDocs/html/app_static_js_request_new-request-user.js.html">
                                 new-request-user.js
                             </a>
@@ -2074,6 +2069,11 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.html.html">
                             new_request_anon.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.js.html.html">
+                            new_request_anon.js.html
                         </a>
                     </li>
                     <li>
@@ -3200,43 +3200,26 @@ Update the ElasticSearch index assigned_users for the provided request IDs,
 
                 <details>
                     <summary class="sum1">
+                    Code Check Report
+                    </summary>
+
+                    <p>
+                        <pre>
+<!-- Include the linting report here! -->
+<p>We attempted to read from templates/app_user_utils.py_lint.txt but failed.</p>
+                        </pre>
+                   </p>
+                </details>
+
+                <details>
+                    <summary class="sum1">
                     Documentation drawn from source code 
                     </summary>
 
                     <p>
 <!-- Include the documentation here! -->
 
-def make_user_admin(self, modified_user_guid: str, current_user_guid: str, agency_ein: str):
-<br>&emsp;    """
-<br>&emsp;    Make the specified user an admin for the agency.
-<br>
-<br>&emsp;    Args:
-<br>&emsp;&emsp;        modified_user_guid (str): GUID of the user to be modified
-<br>&emsp;&emsp;        current_user_guid (str): GUID of the current user
-<br>&emsp;&emsp;        agency_ein (str): Agency the user is being added to
-<br>
-<br>&emsp;    Returns:
-<br>
-<br>&emsp;    """
-<br>def remove_user_permissions(self, modified_user_guid: str, current_user_guid: str, agency_ein: str, action: str = None):
-<br>&emsp;    """
-<br>&emsp;    Remove the specified users permissions for the agency identified by agency_ein
-<br>
-<br>&emsp;    Args:
-<br>&emsp;&emsp;        modified_user_guid (str): GUID of the user to be modified
-<br>&emsp;&emsp;        current_user_guid (str): GUID of the current user
-<br>&emsp;&emsp;        agency_ein (str): Agency the user is being removed from
-<br>
-<br>&emsp;    Returns:
-<br>
-<br>&emsp;    """
-<br>def es_update_assigned_users(self, request_ids: list):
-<br>&emsp;    """
-<br>&emsp;    Update the ElasticSearch index assigned_users for the provided request IDs
-<br>&emsp;    Args:
-<br>&emsp;&emsp;        request_ids (list): List of Request IDs
-<br>&emsp;    """
-<br>
+<hr><code>make_user_admin(self, modified_user_guid: str, current_user_guid: str, agency_ein: str):</code><br/></br>Make the specified user an admin for the agency.</br></br>Args:</br>modified_user_guid (str): GUID of the user to be modified</br>current_user_guid (str): GUID of the current user</br>agency_ein (str): Agency the user is being added to</br></br>Returns:</br></br><hr><code>remove_user_permissions(self, modified_user_guid: str, current_user_guid: str, agency_ein: str, action: str = None):</code><br/></br>Remove the specified users permissions for the agency identified by agency_ein</br></br>Args:</br>modified_user_guid (str): GUID of the user to be modified</br>current_user_guid (str): GUID of the current user</br>agency_ein (str): Agency the user is being removed from</br></br>Returns:</br></br><hr><code>es_update_assigned_users(self, request_ids: list):</code><br/></br>Update the ElasticSearch index assigned_users for the provided request IDs</br>Args:</br>request_ids (list): List of Request IDs</br>
                    </p>
                 </details>
 

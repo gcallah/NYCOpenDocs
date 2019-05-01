@@ -1148,11 +1148,6 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/NYCOpenDocs/html/app_static_js_request_new-request-anon.js.html">
-                                new-request-anon.js
-                            </a>
-                        </li>
-                        <li>
                             <a href="/NYCOpenDocs/html/app_static_js_request_new-request-user.js.html">
                                 new-request-user.js
                             </a>
@@ -2074,6 +2069,11 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.html.html">
                             new_request_anon.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.js.html.html">
+                            new_request_anon.js.html
                         </a>
                     </li>
                     <li>
@@ -3194,22 +3194,32 @@
 
                 <details>
                     <summary class="sum1">
+                    Code Check Report
+                    </summary>
+
+                    <p>
+                        <pre>
+<!-- Include the linting report here! -->
+migrations/versions/971f341c0204_adding_agency_features_json_column_to_.py:13:1: E402 module level import not at top of file
+migrations/versions/971f341c0204_adding_agency_features_json_column_to_.py:14:1: E402 module level import not at top of file
+migrations/versions/971f341c0204_adding_agency_features_json_column_to_.py:15:1: E402 module level import not at top of file
+migrations/versions/971f341c0204_adding_agency_features_json_column_to_.py:19:5: E266 too many leading '#' for block comment
+migrations/versions/971f341c0204_adding_agency_features_json_column_to_.py:26:5: E266 too many leading '#' for block comment
+migrations/versions/971f341c0204_adding_agency_features_json_column_to_.py:30:5: E266 too many leading '#' for block comment
+migrations/versions/971f341c0204_adding_agency_features_json_column_to_.py:32:5: E266 too many leading '#' for block comment
+                        </pre>
+                   </p>
+                </details>
+
+                <details>
+                    <summary class="sum1">
                     Documentation drawn from source code 
                     </summary>
 
                     <p>
 <!-- Include the documentation here! -->
 
-"""Adding agency_features JSON column to Agencies
-<br>
-<br>Revision ID: 971f341c0204
-<br>Revises: 6ab8af7a1347
-<br>Create Date: 2017-05-25 15:19:51.722564
-<br>
-<br>"""
-<br>def upgrade():
-<br>def downgrade():
-<br>
+Adding agency_features JSON column to Agencies</br></br>Revision ID: 971f341c0204</br>Revises: 6ab8af7a1347</br>Create Date: 2017-05-25 15:19:51.722564</br></br><hr><code>upgrade():</code><br/><hr><code>downgrade():</code><br/>
                    </p>
                 </details>
 

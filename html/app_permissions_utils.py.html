@@ -1148,11 +1148,6 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/NYCOpenDocs/html/app_static_js_request_new-request-anon.js.html">
-                                new-request-anon.js
-                            </a>
-                        </li>
-                        <li>
                             <a href="/NYCOpenDocs/html/app_static_js_request_new-request-user.js.html">
                                 new-request-user.js
                             </a>
@@ -2074,6 +2069,11 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.html.html">
                             new_request_anon.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.js.html.html">
+                            new_request_anon.js.html
                         </a>
                     </li>
                     <li>
@@ -3199,29 +3199,26 @@ app.constants.permission.PermissionPair.
 
                 <details>
                     <summary class="sum1">
+                    Code Check Report
+                    </summary>
+
+                    <p>
+                        <pre>
+<!-- Include the linting report here! -->
+<p>We attempted to read from templates/app_permissions_utils.py_lint.txt but failed.</p>
+                        </pre>
+                   </p>
+                </details>
+
+                <details>
+                    <summary class="sum1">
                     Documentation drawn from source code 
                     </summary>
 
                     <p>
 <!-- Include the documentation here! -->
 
-def in_permissions(permissions, value):
-<br>&emsp;    """
-<br>&emsp;    Given a permissions mask, check if the specified permission value is within those permissions.
-<br>
-<br>&emsp;    :param permissions: permissions set as integer mask
-<br>&emsp;    :param value: permission value to look for
-<br>
-<br>&emsp;    :type permissions: int
-<br>&emsp;    :type value: int
-<br>
-<br>&emsp;    :return: is value in permissions?
-<br>&emsp;    """
-<br>def get_permissions_as_list(permissions):
-<br>&emsp;    """
-<br>&emsp;    Given a permissions mask, return a list of app.constants.permission.PermissionPair
-<br>&emsp;    """
-<br>
+<hr><code>in_permissions(permissions, value):</code><br/></br>Given a permissions mask, check if the specified permission value is within those permissions.</br></br>:param permissions: permissions set as integer mask</br>:param value: permission value to look for</br></br>:type permissions: int</br>:type value: int</br></br>:return: is value in permissions?</br><hr><code>get_permissions_as_list(permissions):</code><br/></br>Given a permissions mask, return a list of app.constants.permission.PermissionPair</br>
                    </p>
                 </details>
 

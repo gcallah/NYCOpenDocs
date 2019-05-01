@@ -1148,11 +1148,6 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/NYCOpenDocs/html/app_static_js_request_new-request-anon.js.html">
-                                new-request-anon.js
-                            </a>
-                        </li>
-                        <li>
                             <a href="/NYCOpenDocs/html/app_static_js_request_new-request-user.js.html">
                                 new-request-user.js
                             </a>
@@ -2074,6 +2069,11 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.html.html">
                             new_request_anon.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.js.html.html">
+                            new_request_anon.js.html
                         </a>
                     </li>
                     <li>
@@ -3210,51 +3210,28 @@ descending, and starting from a specified index.
 
                 <details>
                     <summary class="sum1">
+                    Code Check Report
+                    </summary>
+
+                    <p>
+                        <pre>
+<!-- Include the linting report here! -->
+app/request/api/views.py:221:31: E712 comparison to False should be 'if cond is False:' or 'if not cond:'
+app/request/api/views.py:232:31: E712 comparison to False should be 'if cond is False:' or 'if not cond:'
+app/request/api/views.py:245:31: E712 comparison to False should be 'if cond is False:' or 'if not cond:'
+                        </pre>
+                   </p>
+                </details>
+
+                <details>
+                    <summary class="sum1">
                     Documentation drawn from source code 
                     </summary>
 
                     <p>
 <!-- Include the documentation here! -->
 
-"""
-<br>.. module:: api.request.views.
-<br>
-<br>   :synopsis: Handles the API request URL endpoints for the OpenRecords application
-<br>"""
-<br>def edit_privacy():
-<br>&emsp;    """
-<br>&emsp;    Edits the privacy privacy options of a request's title and agency request summary.
-<br>&emsp;    Retrieves updated privacy options from AJAX call on view_request page and stores changes into database.
-<br>
-<br>&emsp;    :return: JSON Response with updated title and agency request summary privacy options
-<br>&emsp;    """
-<br>def edit_request_info():
-<br>&emsp;    """
-<br>&emsp;    Edits the title and agency request summary of a FOIL request through an API PUT method.
-<br>&emsp;    Retrieves updated edited content from AJAX call on view_request page and stores changes into database.
-<br>
-<br>&emsp;    :return: JSON Response with updated content: either request title or agency request summary)
-<br>&emsp;    """
-<br>def get_request_events():
-<br>&emsp;    """
-<br>&emsp;    Returns a set of events (id, type, and template),
-<br>&emsp;    ordered by date descending, and starting from a specific index.
-<br>
-<br>&emsp;    Request parameters:
-<br>&emsp;    - start: (int) starting index
-<br>&emsp;    - request_id: FOIL request id
-<br>&emsp;    - with_template: (default: False) include html rows for each event
-<br>&emsp;    """
-<br>def get_request_responses():
-<br>&emsp;    """
-<br>&emsp;    Returns a set of responses (id, type, and template),
-<br>&emsp;    ordered by date descending, and starting from a specified index.
-<br>&emsp;    Request parameters:
-<br>&emsp;    - start: (int) starting index
-<br>&emsp;    - request_id: FOIL request id
-<br>&emsp;    - with_template: (default: False) include html (rows and modals) for each response
-<br>&emsp;    """
-<br>
+</br>.. module:: api.request.views.</br></br>:synopsis: Handles the API request URL endpoints for the OpenRecords application</br><hr><code>edit_privacy():</code><br/></br>Edits the privacy privacy options of a request's title and agency request summary.</br>Retrieves updated privacy options from AJAX call on view_request page and stores changes into database.</br></br>:return: JSON Response with updated title and agency request summary privacy options</br><hr><code>edit_request_info():</code><br/></br>Edits the title and agency request summary of a FOIL request through an API PUT method.</br>Retrieves updated edited content from AJAX call on view_request page and stores changes into database.</br></br>:return: JSON Response with updated content: either request title or agency request summary)</br><hr><code>get_request_events():</code><br/></br>Returns a set of events (id, type, and template),</br>ordered by date descending, and starting from a specific index.</br></br>Request parameters:</br>- start: (int) starting index</br>- request_id: FOIL request id</br>- with_template: (default: False) include html rows for each event</br><hr><code>get_request_responses():</code><br/></br>Returns a set of responses (id, type, and template),</br>ordered by date descending, and starting from a specified index.</br>Request parameters:</br>- start: (int) starting index</br>- request_id: FOIL request id</br>- with_template: (default: False) include html (rows and modals) for each response</br>
                    </p>
                 </details>
 

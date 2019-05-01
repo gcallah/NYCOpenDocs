@@ -1148,11 +1148,6 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/NYCOpenDocs/html/app_static_js_request_new-request-anon.js.html">
-                                new-request-anon.js
-                            </a>
-                        </li>
-                        <li>
                             <a href="/NYCOpenDocs/html/app_static_js_request_new-request-user.js.html">
                                 new-request-user.js
                             </a>
@@ -2074,6 +2069,11 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.html.html">
                             new_request_anon.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.js.html.html">
+                            new_request_anon.js.html
                         </a>
                     </li>
                     <li>
@@ -3194,12 +3194,27 @@
 
                 <details>
                     <summary class="sum1">
+                    Code Check Report
+                    </summary>
+
+                    <p>
+                        <pre>
+<!-- Include the linting report here! -->
+app/report/utils.py:69:43: E127 continuation line over-indented for visual indent
+app/report/utils.py:69:121: E501 line too long (121 > 120 characters)
+                        </pre>
+                   </p>
+                </details>
+
+                <details>
+                    <summary class="sum1">
                     Documentation drawn from source code 
                     </summary>
 
                     <p>
 <!-- Include the documentation here! -->
-<p>We attempted to read from templates/app_report_utils.py_ex.txt but failed.</p>
+
+<hr><code>generate_acknowledgment_report(self, current_user_guid: str, date_from: datetime, date_to: datetime):</code><br/>Celery task that generates the acknowledgment report for the user's agency with the specified date range.</br></br>Args:</br>current_user_guid: GUID of the current user</br>date_from: Date to filter report from</br>date_to: Date to filter report to</br>
                    </p>
                 </details>
 

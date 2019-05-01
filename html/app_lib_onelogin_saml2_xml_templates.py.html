@@ -1148,11 +1148,6 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/NYCOpenDocs/html/app_static_js_request_new-request-anon.js.html">
-                                new-request-anon.js
-                            </a>
-                        </li>
-                        <li>
                             <a href="/NYCOpenDocs/html/app_static_js_request_new-request-user.js.html">
                                 new-request-user.js
                             </a>
@@ -2074,6 +2069,11 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.html.html">
                             new_request_anon.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.js.html.html">
+                            new_request_anon.js.html
                         </a>
                     </li>
                     <li>
@@ -3194,53 +3194,27 @@
 
                 <details>
                     <summary class="sum1">
+                    Code Check Report
+                    </summary>
+
+                    <p>
+                        <pre>
+<!-- Include the linting report here! -->
+app/lib/onelogin/saml2/xml_templates.py:75:121: E501 line too long (136 > 120 characters)
+app/lib/onelogin/saml2/xml_templates.py:89:121: E501 line too long (159 > 120 characters)
+                        </pre>
+                   </p>
+                </details>
+
+                <details>
+                    <summary class="sum1">
                     Documentation drawn from source code 
                     </summary>
 
                     <p>
 <!-- Include the documentation here! -->
 
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;""" OneLogin_Saml2_Auth class
-<br>&emsp;Main class of OneLogin's Python Toolkit.
-<br>"""
-<br>
-<br>
-<br>class OneLogin_Saml2_Templates(object):
-<br>class OneLogin_Saml2_Templates(object):
-<br>
-<br>&emsp;&emsp;&emsp;&emsp;    ATTRIBUTE = """
-<br>&emsp;&emsp;        </saml:Attribute>"""
-<br>
-<br>&emsp;&emsp;&emsp;&emsp;&emsp;    AUTHN_REQUEST = """\
-<br></samlp:AuthnRequest>"""
-<br>
-<br>&emsp;&emsp;&emsp;&emsp;&emsp;    LOGOUT_REQUEST = """\
-<br></samlp:LogoutRequest>"""
-<br>
-<br>&emsp;&emsp;&emsp;&emsp;&emsp;    LOGOUT_RESPONSE = """\
-<br></samlp:LogoutResponse>"""
-<br>
-<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;    MD_CONTACT_PERSON = """\
-<br>&emsp;    </md:ContactPerson>"""
-<br>
-<br>&emsp;&emsp;&emsp;    MD_SLS = """\
-<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                                Location="%(location)s" />\n"""
-<br>
-<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;    MD_REQUESTED_ATTRIBUTE = """\
-<br>&emsp;&emsp;&emsp;            <md:RequestedAttribute Name="%(req_attr_name)s"%(req_attr_nameformat_str)s%(req_attr_isrequired_str)s%(req_attr_aux_str)s"""
-<br>
-<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;    MD_ATTR_CONSUMER_SERVICE = """\
-<br>&emsp;&emsp;        </md:AttributeConsumingService>\n"""
-<br>
-<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;    MD_ENTITY_DESCRIPTOR = """\
-<br></md:EntityDescriptor>"""
-<br>
-<br>&emsp;&emsp;&emsp;&emsp;&emsp;    MD_ORGANISATION = """\
-<br>&emsp;    </md:Organization>"""
-<br>
-<br>&emsp;&emsp;&emsp;    RESPONSE = """\
-<br></samlp:Response>"""
-<br>
+ OneLogin_Saml2_Auth class</br></br>Copyright (c) 2010-2018 OneLogin, Inc.</br>MIT License</br></br>Main class of OneLogin's Python Toolkit.</br></br>Initializes the SP SAML instance</br></br><hr><code>OneLogin_Saml2_Templates(object):</code><br/>ATTRIBUTE = </br><saml:Attribute Name="%s" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"></br><saml:AttributeValue xsi:type="xs:string">%s</saml:AttributeValue></br>AUTHN_REQUEST = """\</br><samlp:AuthnRequest</br>xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol</br>xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion</br>ID="%(id)s</br>Version="2.0"%(provider_name)s%(force_authn_str)s%(is_passive_str)s</br>IssueInstant="%(issue_instant)s</br>Destination="%(destination)s</br>ProtocolBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST</br>AssertionConsumerServiceURL="%(assertion_url)s"%(attr_consuming_service_str)s></br><saml:Issuer>%(entity_id)s</saml:Issuer>%(nameid_policy_str)s</br>%(requested_authn_context_str)s</br>LOGOUT_REQUEST = """\</br><samlp:LogoutRequest</br>xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol</br>xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion</br>ID="%(id)s</br>Version="2.0</br>IssueInstant="%(issue_instant)s</br>Destination="%(single_logout_url)s"></br><saml:Issuer>%(entity_id)s</saml:Issuer></br>%(name_id)s</br>%(session_index)s</br>LOGOUT_RESPONSE = """\</br><samlp:LogoutResponse</br>xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol</br>xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion</br>ID="%(id)s</br>Version="2.0</br>IssueInstant="%(issue_instant)s</br>Destination="%(destination)s</br>InResponseTo="%(in_response_to)s"></br><saml:Issuer>%(entity_id)s</saml:Issuer></br><samlp:Status></br><samlp:StatusCode Value="%(status)s" /></br></samlp:Status></br>MD_CONTACT_PERSON = """\</br><md:ContactPerson contactType="%(type)s"></br><md:GivenName>%(name)s</md:GivenName></br><md:EmailAddress>%(email)s</md:EmailAddress></br>MD_SLS = """\</br><md:SingleLogoutService Binding="%(binding)s</br>MD_REQUESTED_ATTRIBUTE = """\</br>MD_ATTR_CONSUMER_SERVICE = """\</br><md:AttributeConsumingService index="1"></br><md:ServiceName xml:lang="en">%(service_name)s</md:ServiceName></br>%(attr_cs_desc)s%(requested_attribute_str)s</br>MD_ENTITY_DESCRIPTOR = """\</br><?xml version="1.0"?></br><md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata</br>%(valid)s</br>%(cache)s</br>entityID="%(entity_id)s"></br><md:SPSSODescriptor AuthnRequestsSigned="%(authnsign)s" WantAssertionsSigned="%(wsign)s" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol"></br>%(sls)s        <md:NameIDFormat>%(name_id_format)s</md:NameIDFormat></br><md:AssertionConsumerService Binding="%(binding)s</br>Location="%(location)s</br>index="1" /></br>%(attribute_consuming_service)s    </md:SPSSODescriptor></br>%(organization)s</br>%(contacts)s</br>MD_ORGANISATION = """\</br><md:Organization></br><md:OrganizationName xml:lang="%(lang)s">%(name)s</md:OrganizationName></br><md:OrganizationDisplayName xml:lang="%(lang)s">%(display_name)s</md:OrganizationDisplayName></br><md:OrganizationURL xml:lang="%(lang)s">%(url)s</md:OrganizationURL></br>RESPONSE = """\</br><samlp:Response</br>xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol</br>xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion</br>ID="%(id)s</br>InResponseTo="%(in_response_to)s</br>Version="2.0</br>IssueInstant="%(issue_instant)s</br>Destination="%(destination)s"></br><saml:Issuer>%(entity_id)s</saml:Issuer></br><samlp:Status xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol"></br><samlp:StatusCode</br>xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol</br>Value="%(status)s"></br></samlp:StatusCode></br></samlp:Status></br><saml:Assertion</br>xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance</br>xmlns:xs="http://www.w3.org/2001/XMLSchema</br>Version="2.0</br>ID="%(assertion_id)s</br>IssueInstant="%(issue_instant)s"></br><saml:Issuer>%(entity_id)s</saml:Issuer></br><saml:Subject></br><saml:NameID</br>NameQualifier="%(entity_id)s</br>SPNameQualifier="%(requester)s</br>Format="%(name_id_policy)s">%(name_id)s</saml:NameID></br><saml:SubjectConfirmation Method="%(cm)s"></br><saml:SubjectConfirmationData</br>NotOnOrAfter="%(not_after)s</br>InResponseTo="%(in_response_to)s</br>Recipient="%(destination)s"></br></saml:SubjectConfirmationData></br></saml:SubjectConfirmation></br></saml:Subject></br><saml:Conditions NotBefore="%(not_before)s" NotOnOrAfter="%(not_after)s"></br><saml:AudienceRestriction></br><saml:Audience>%(requester)s</saml:Audience></br></saml:AudienceRestriction></br></saml:Conditions></br><saml:AuthnStatement</br>AuthnInstant="%(issue_instant)s</br>SessionIndex="%(session_index)s</br>SessionNotOnOrAfter="%(not_after)s"></br>%(authn_context)s</br></saml:AuthnStatement></br><saml:AttributeStatement></br>%(attributes)s</br></saml:AttributeStatement></br></saml:Assertion></br>
                    </p>
                 </details>
 

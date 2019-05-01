@@ -1148,11 +1148,6 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/NYCOpenDocs/html/app_static_js_request_new-request-anon.js.html">
-                                new-request-anon.js
-                            </a>
-                        </li>
-                        <li>
                             <a href="/NYCOpenDocs/html/app_static_js_request_new-request-user.js.html">
                                 new-request-user.js
                             </a>
@@ -2074,6 +2069,11 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.html.html">
                             new_request_anon.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.js.html.html">
+                            new_request_anon.js.html
                         </a>
                     </li>
                     <li>
@@ -3334,55 +3334,32 @@ views.py:419:80: E501 line too long (95 &gt;  79 characters)
 
                 <details>
                     <summary class="sum1">
+                    Code Check Report
+                    </summary>
+
+                    <p>
+                        <pre>
+<!-- Include the linting report here! -->
+app/request/views.py:197:121: E501 line too long (128 > 120 characters)
+app/request/views.py:244:16: E713 test for membership should be 'not in'
+app/request/views.py:341:121: E501 line too long (135 > 120 characters)
+app/request/views.py:375:37: E251 unexpected spaces around keyword / parameter equals
+app/request/views.py:375:39: E251 unexpected spaces around keyword / parameter equals
+app/request/views.py:418:80: W291 trailing whitespace
+app/request/views.py:419:13: W291 trailing whitespace
+                        </pre>
+                   </p>
+                </details>
+
+                <details>
+                    <summary class="sum1">
                     Documentation drawn from source code 
                     </summary>
 
                     <p>
 <!-- Include the documentation here! -->
 
-"""
-<br>.. module:: request.views.
-<br>
-<br>   :synopsis: Handles the request URL endpoints for the OpenRecords application
-<br>"""
-<br>def new():
-<br>&emsp;    """
-<br>&emsp;    Create a new FOIL request
-<br>&emsp;    sends a confirmation email after the Requests object is created.
-<br>
-<br>&emsp;    title: request title
-<br>&emsp;    description: request description
-<br>&emsp;    agency: agency selected for the request
-<br>&emsp;    submission: submission method for the request
-<br>
-<br>&emsp;    :return: redirect to homepage on successful form validation
-<br>&emsp;     if form fields are missing or has improper values, backend error messages (WTForms) will appear
-<br>&emsp;    """
-<br>def view_all():
-<br>def view(request_id):
-<br>&emsp;    """
-<br>&emsp;    This function is for testing purposes of the view a request back until backend functionality is implemented.
-<br>
-<br>&emsp;    :return: redirect to view request page
-<br>&emsp;    """
-<br>def non_portal_agency(agency_name):
-<br>&emsp;    """
-<br>&emsp;    This function handles messaging to the requester if they submitted a request to a non-portal agency.
-<br>
-<br>&emsp;    :return: redirect to non_portal_agency page.
-<br>&emsp;    """
-<br>def get_agencies_as_choices():
-<br>&emsp;    """
-<br>&emsp;    Get selected category value from the request body and generate a list of sorted agencies from the category.
-<br>
-<br>&emsp;    :return: list of agency choices
-<br>&emsp;    """
-<br>def contact_agency(request_id):
-<br>&emsp;    """
-<br>&emsp;    This function handles contacting the agency about a request as a requester. 
-<br>&emsp;    :return: 
-<br>&emsp;    """
-<br>
+</br>.. module:: request.views.</br></br>:synopsis: Handles the request URL endpoints for the OpenRecords application</br><hr><code>new():</code><br/></br>Create a new FOIL request</br>sends a confirmation email after the Requests object is created.</br></br>title: request title</br>description: request description</br>agency: agency selected for the request</br>submission: submission method for the request</br></br>:return: redirect to homepage on successful form validation</br>if form fields are missing or has improper values, backend error messages (WTForms) will appear</br><hr><code>view_all():</code><br/><hr><code>view(request_id):</code><br/></br>This function is for testing purposes of the view a request back until backend functionality is implemented.</br></br>:return: redirect to view request page</br><hr><code>non_portal_agency(agency_name):</code><br/></br>This function handles messaging to the requester if they submitted a request to a non-portal agency.</br></br>:return: redirect to non_portal_agency page.</br><hr><code>get_agencies_as_choices():</code><br/></br>Get selected category value from the request body and generate a list of sorted agencies from the category.</br></br>:return: list of agency choices</br><hr><code>contact_agency(request_id):</code><br/></br>This function handles contacting the agency about a request as a requester.</br>:return:</br>
                    </p>
                 </details>
 

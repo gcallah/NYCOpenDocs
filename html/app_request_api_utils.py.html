@@ -1148,11 +1148,6 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/NYCOpenDocs/html/app_static_js_request_new-request-anon.js.html">
-                                new-request-anon.js
-                            </a>
-                        </li>
-                        <li>
                             <a href="/NYCOpenDocs/html/app_static_js_request_new-request-user.js.html">
                                 new-request-user.js
                             </a>
@@ -2074,6 +2069,11 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.html.html">
                             new_request_anon.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.js.html.html">
+                            new_request_anon.js.html
                         </a>
                     </li>
                     <li>
@@ -3195,21 +3195,26 @@ into database.
 
                 <details>
                     <summary class="sum1">
+                    Code Check Report
+                    </summary>
+
+                    <p>
+                        <pre>
+<!-- Include the linting report here! -->
+app/request/api/utils.py:20:25: W292 no newline at end of file
+                        </pre>
+                   </p>
+                </details>
+
+                <details>
+                    <summary class="sum1">
                     Documentation drawn from source code 
                     </summary>
 
                     <p>
 <!-- Include the documentation here! -->
 
-def create_request_info_event(request_id, type_, previous_value, new_value):
-<br>&emsp;    """
-<br>&emsp;    Create and store events object for updating the request information into database.
-<br>&emsp;    :param request_id: request ID
-<br>&emsp;    :param type_: event type
-<br>&emsp;    :param previous_value: previous value
-<br>&emsp;    :param new_value: new value
-<br>&emsp;    """
-<br>
+<hr><code>create_request_info_event(request_id, type_, previous_value, new_value):</code><br/></br>Create and store events object for updating the request information into database.</br>:param request_id: request ID</br>:param type_: event type</br>:param previous_value: previous value</br>:param new_value: new value</br>
                    </p>
                 </details>
 

@@ -1,6 +1,7 @@
 # Need to export as ENV var
 export TEMPLATE_DIR = templates
 CODE_FILES = $(shell find ../NYCOpenRecords \( -name '*.py' -or -name '*.js' -or -name '*.yml' -or -name '*.sh' -or -name '*.html' -or -name '*.css' \))
+PYTHON_LINT := $(shell find ../NYCOpenRecords -name '*.py' -exec flake8 --max-line-length 120 "{}" \;)
 PTML_DIR = html_src
 UTILS_DIR = utils
 HTML_DIR = html
@@ -28,6 +29,9 @@ prod: $(INCS) $(HTMLFILES)
 	-git commit -a 
 	git pull origin master
 	git push origin master
+
+lint: 
+	./lint_report.sh
 
 local: $(HTMLFILES) $(INCS)
 

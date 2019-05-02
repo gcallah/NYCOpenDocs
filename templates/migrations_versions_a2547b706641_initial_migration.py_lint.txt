@@ -1,0 +1,7 @@
+migrations/versions/a2547b706641_initial_migration.py:13:1: E402 module level import not at top of file
+migrations/versions/a2547b706641_initial_migration.py:14:1: E402 module level import not at top of file
+migrations/versions/a2547b706641_initial_migration.py:15:1: E402 module level import not at top of file
+migrations/versions/a2547b706641_initial_migration.py:19:5: E266 too many leading '#' for block comment
+migrations/versions/a2547b706641_initial_migration.py:296:5: E266 too many leading '#' for block comment
+migrations/versions/a2547b706641_initial_migration.py:300:5: E266 too many leading '#' for block comment
+migrations/versions/a2547b706641_initial_migration.py:316:5: E266 too many leading '#' for block comment

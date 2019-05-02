@@ -1,0 +1,1 @@
+app/auth/constants/error_msg.py:8:66: W292 no newline at end of file

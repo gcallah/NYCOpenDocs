@@ -1,0 +1,1 @@
+app/constants/response_type.py:30:3: W292 no newline at end of file

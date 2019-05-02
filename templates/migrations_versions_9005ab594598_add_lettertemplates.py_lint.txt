@@ -1,0 +1,6 @@
+migrations/versions/9005ab594598_add_lettertemplates.py:13:1: E402 module level import not at top of file
+migrations/versions/9005ab594598_add_lettertemplates.py:14:1: E402 module level import not at top of file
+migrations/versions/9005ab594598_add_lettertemplates.py:18:5: E266 too many leading '#' for block comment
+migrations/versions/9005ab594598_add_lettertemplates.py:41:5: E266 too many leading '#' for block comment
+migrations/versions/9005ab594598_add_lettertemplates.py:45:5: E266 too many leading '#' for block comment
+migrations/versions/9005ab594598_add_lettertemplates.py:47:5: E266 too many leading '#' for block comment

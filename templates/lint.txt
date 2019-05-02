@@ -1,0 +1,409 @@
+../NYCOpenRecords/migrations/env.py:20:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/env.py:85:1: E305 expected 2 blank lines after class or function definition, found 1
+../NYCOpenRecords/migrations/versions/445e50628f6b_add_communication_methods.py:13:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/445e50628f6b_add_communication_methods.py:14:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/445e50628f6b_add_communication_methods.py:18:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/445e50628f6b_add_communication_methods.py:32:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/445e50628f6b_add_communication_methods.py:36:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/445e50628f6b_add_communication_methods.py:38:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/b3c0c76ac2e6_add_envelope_functionality.py:13:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/b3c0c76ac2e6_add_envelope_functionality.py:14:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/b3c0c76ac2e6_add_envelope_functionality.py:18:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/b3c0c76ac2e6_add_envelope_functionality.py:35:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/b3c0c76ac2e6_add_envelope_functionality.py:39:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/b3c0c76ac2e6_add_envelope_functionality.py:42:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/aeb1852855b4_add_appealable_option_to_reasons.py:13:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/aeb1852855b4_add_appealable_option_to_reasons.py:14:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/aeb1852855b4_add_appealable_option_to_reasons.py:15:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/aeb1852855b4_add_appealable_option_to_reasons.py:16:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/aeb1852855b4_add_appealable_option_to_reasons.py:17:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/aeb1852855b4_add_appealable_option_to_reasons.py:32:1: E302 expected 2 blank lines, found 1
+../NYCOpenRecords/migrations/versions/aeb1852855b4_add_appealable_option_to_reasons.py:41:1: E303 too many blank lines (3)
+../NYCOpenRecords/migrations/versions/52a4062502bb_adding_agencyusers.py:13:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/52a4062502bb_adding_agencyusers.py:14:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/52a4062502bb_adding_agencyusers.py:18:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/52a4062502bb_adding_agencyusers.py:50:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/52a4062502bb_adding_agencyusers.py:54:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/52a4062502bb_adding_agencyusers.py:56:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/c7f05adcf7d9_added_point_of_contact.py:13:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/c7f05adcf7d9_added_point_of_contact.py:14:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/c7f05adcf7d9_added_point_of_contact.py:18:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/c7f05adcf7d9_added_point_of_contact.py:22:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/c7f05adcf7d9_added_point_of_contact.py:26:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/c7f05adcf7d9_added_point_of_contact.py:28:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/ebeb3491636e_add_re-opening_to_reasons_enum.py:13:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/ebeb3491636e_add_re-opening_to_reasons_enum.py:14:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/b722969f38a6_added_minimum_required_to_custom_.py:13:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/b722969f38a6_added_minimum_required_to_custom_.py:14:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/b722969f38a6_added_minimum_required_to_custom_.py:18:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/b722969f38a6_added_minimum_required_to_custom_.py:23:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/b722969f38a6_added_minimum_required_to_custom_.py:27:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/b722969f38a6_added_minimum_required_to_custom_.py:29:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/24e110b4489b_drop_users_agency_ein_column.py:11:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/24e110b4489b_drop_users_agency_ein_column.py:12:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/9908a9bf1dbd_json_to_jsonb.py:13:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/9908a9bf1dbd_json_to_jsonb.py:14:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/9908a9bf1dbd_json_to_jsonb.py:15:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/cf62ec87d973_agency_description_to_agency_request_.py:13:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/cf62ec87d973_agency_description_to_agency_request_.py:14:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/cf62ec87d973_agency_description_to_agency_request_.py:15:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/cf62ec87d973_agency_description_to_agency_request_.py:19:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/cf62ec87d973_agency_description_to_agency_request_.py:30:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/cf62ec87d973_agency_description_to_agency_request_.py:34:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/cf62ec87d973_agency_description_to_agency_request_.py:55:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/32dec7b290bb_added_is_editable_to_responses_table.py:13:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/32dec7b290bb_added_is_editable_to_responses_table.py:14:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/32dec7b290bb_added_is_editable_to_responses_table.py:18:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/32dec7b290bb_added_is_editable_to_responses_table.py:20:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/32dec7b290bb_added_is_editable_to_responses_table.py:24:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/32dec7b290bb_added_is_editable_to_responses_table.py:26:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/949aebe9e480_letters_table.py:13:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/949aebe9e480_letters_table.py:14:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/949aebe9e480_letters_table.py:18:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/949aebe9e480_letters_table.py:27:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/949aebe9e480_letters_table.py:31:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/949aebe9e480_letters_table.py:33:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/b12d4ba1cfd4_add_primary_keys_to_users_user_requests_.py:13:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/b12d4ba1cfd4_add_primary_keys_to_users_user_requests_.py:14:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/b12d4ba1cfd4_add_primary_keys_to_users_user_requests_.py:15:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/b12d4ba1cfd4_add_primary_keys_to_users_user_requests_.py:54:105: W291 trailing whitespace
+../NYCOpenRecords/migrations/versions/b12d4ba1cfd4_add_primary_keys_to_users_user_requests_.py:55:107: W291 trailing whitespace
+../NYCOpenRecords/migrations/versions/b12d4ba1cfd4_add_primary_keys_to_users_user_requests_.py:56:112: W291 trailing whitespace
+../NYCOpenRecords/migrations/versions/b12d4ba1cfd4_add_primary_keys_to_users_user_requests_.py:58:1: W293 blank line contains whitespace
+../NYCOpenRecords/migrations/versions/b12d4ba1cfd4_add_primary_keys_to_users_user_requests_.py:122:101: W291 trailing whitespace
+../NYCOpenRecords/migrations/versions/b12d4ba1cfd4_add_primary_keys_to_users_user_requests_.py:123:111: W291 trailing whitespace
+../NYCOpenRecords/migrations/versions/b12d4ba1cfd4_add_primary_keys_to_users_user_requests_.py:124:116: W291 trailing whitespace
+../NYCOpenRecords/migrations/versions/b12d4ba1cfd4_add_primary_keys_to_users_user_requests_.py:173:70: W291 trailing whitespace
+../NYCOpenRecords/migrations/versions/b12d4ba1cfd4_add_primary_keys_to_users_user_requests_.py:190:66: W291 trailing whitespace
+../NYCOpenRecords/migrations/versions/b12d4ba1cfd4_add_primary_keys_to_users_user_requests_.py:192:97: W291 trailing whitespace
+../NYCOpenRecords/migrations/versions/b12d4ba1cfd4_add_primary_keys_to_users_user_requests_.py:210:74: W291 trailing whitespace
+../NYCOpenRecords/migrations/versions/b12d4ba1cfd4_add_primary_keys_to_users_user_requests_.py:233:70: W291 trailing whitespace
+../NYCOpenRecords/migrations/versions/b12d4ba1cfd4_add_primary_keys_to_users_user_requests_.py:277:111: W291 trailing whitespace
+../NYCOpenRecords/migrations/versions/b12d4ba1cfd4_add_primary_keys_to_users_user_requests_.py:278:116: W291 trailing whitespace
+../NYCOpenRecords/migrations/versions/b12d4ba1cfd4_add_primary_keys_to_users_user_requests_.py:280:1: W293 blank line contains whitespace
+../NYCOpenRecords/migrations/versions/b12d4ba1cfd4_add_primary_keys_to_users_user_requests_.py:340:101: W291 trailing whitespace
+../NYCOpenRecords/migrations/versions/b12d4ba1cfd4_add_primary_keys_to_users_user_requests_.py:341:115: W291 trailing whitespace
+../NYCOpenRecords/migrations/versions/b12d4ba1cfd4_add_primary_keys_to_users_user_requests_.py:342:120: W291 trailing whitespace
+../NYCOpenRecords/migrations/versions/b12d4ba1cfd4_add_primary_keys_to_users_user_requests_.py:389:70: W291 trailing whitespace
+../NYCOpenRecords/migrations/versions/b12d4ba1cfd4_add_primary_keys_to_users_user_requests_.py:391:121: E501 line too long (123 > 120 characters)
+../NYCOpenRecords/migrations/versions/b12d4ba1cfd4_add_primary_keys_to_users_user_requests_.py:405:66: W291 trailing whitespace
+../NYCOpenRecords/migrations/versions/b12d4ba1cfd4_add_primary_keys_to_users_user_requests_.py:407:101: W291 trailing whitespace
+../NYCOpenRecords/migrations/versions/b12d4ba1cfd4_add_primary_keys_to_users_user_requests_.py:423:74: W291 trailing whitespace
+../NYCOpenRecords/migrations/versions/b12d4ba1cfd4_add_primary_keys_to_users_user_requests_.py:445:70: W291 trailing whitespace
+../NYCOpenRecords/migrations/versions/60116f094400_increase_length_of_file_title_to_250_.py:13:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/60116f094400_increase_length_of_file_title_to_250_.py:14:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/60116f094400_increase_length_of_file_title_to_250_.py:18:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/60116f094400_increase_length_of_file_title_to_250_.py:26:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/60116f094400_increase_length_of_file_title_to_250_.py:30:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/60116f094400_increase_length_of_file_title_to_250_.py:38:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/22b97712d5db_add_letters_and_envelopes_to_type_enum.py:13:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/22b97712d5db_add_letters_and_envelopes_to_type_enum.py:14:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/22b97712d5db_add_letters_and_envelopes_to_type_enum.py:43:59: W605 invalid escape sequence '\('
+../NYCOpenRecords/migrations/versions/22b97712d5db_add_letters_and_envelopes_to_type_enum.py:43:83: W605 invalid escape sequence '\)'
+../NYCOpenRecords/migrations/versions/13de5f42768b_add_session_id_to_users_table.py:13:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/13de5f42768b_add_session_id_to_users_table.py:14:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/13de5f42768b_add_session_id_to_users_table.py:18:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/13de5f42768b_add_session_id_to_users_table.py:22:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/13de5f42768b_add_session_id_to_users_table.py:26:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/13de5f42768b_add_session_id_to_users_table.py:28:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/1920035b3a1f_140_character_limit_file_title.py:13:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/1920035b3a1f_140_character_limit_file_title.py:14:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/1920035b3a1f_140_character_limit_file_title.py:18:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/1920035b3a1f_140_character_limit_file_title.py:26:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/1920035b3a1f_140_character_limit_file_title.py:30:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/1920035b3a1f_140_character_limit_file_title.py:38:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/85068c55138a_added_notification_email.py:13:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/85068c55138a_added_notification_email.py:14:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/85068c55138a_added_notification_email.py:18:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/85068c55138a_added_notification_email.py:22:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/85068c55138a_added_notification_email.py:26:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/85068c55138a_added_notification_email.py:28:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/a3d80d04b0f1_add_date_closed_to_requests_table.py:13:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/a3d80d04b0f1_add_date_closed_to_requests_table.py:14:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/a3d80d04b0f1_add_date_closed_to_requests_table.py:18:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/a3d80d04b0f1_add_date_closed_to_requests_table.py:20:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/a3d80d04b0f1_add_date_closed_to_requests_table.py:24:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/a3d80d04b0f1_add_date_closed_to_requests_table.py:26:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/89d3f2e347f1_use_nyc_id_v2_0.py:13:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/89d3f2e347f1_use_nyc_id_v2_0.py:14:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/89d3f2e347f1_use_nyc_id_v2_0.py:15:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/89d3f2e347f1_use_nyc_id_v2_0.py:19:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/89d3f2e347f1_use_nyc_id_v2_0.py:43:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/89d3f2e347f1_use_nyc_id_v2_0.py:47:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/89d3f2e347f1_use_nyc_id_v2_0.py:160:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/6ab8af7a1347_removing_response_token_expiration_date.py:13:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/6ab8af7a1347_removing_response_token_expiration_date.py:14:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/6ab8af7a1347_removing_response_token_expiration_date.py:15:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/6ab8af7a1347_removing_response_token_expiration_date.py:19:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/6ab8af7a1347_removing_response_token_expiration_date.py:21:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/6ab8af7a1347_removing_response_token_expiration_date.py:25:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/6ab8af7a1347_removing_response_token_expiration_date.py:35:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/58a5abdd94ac_added_agency_acronym_to_db.py:13:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/58a5abdd94ac_added_agency_acronym_to_db.py:14:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/58a5abdd94ac_added_agency_acronym_to_db.py:18:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/58a5abdd94ac_added_agency_acronym_to_db.py:20:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/58a5abdd94ac_added_agency_acronym_to_db.py:24:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/58a5abdd94ac_added_agency_acronym_to_db.py:26:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/838a6ad16cf4_remove_auth_user_type_from_users.py:13:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/838a6ad16cf4_remove_auth_user_type_from_users.py:14:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/838a6ad16cf4_remove_auth_user_type_from_users.py:15:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/8797e9a71f62_user_requests_events_on_update_cascade.py:13:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/8797e9a71f62_user_requests_events_on_update_cascade.py:14:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/8797e9a71f62_user_requests_events_on_update_cascade.py:14:1: F401 'sqlalchemy as sa' imported but unused
+../NYCOpenRecords/migrations/versions/8797e9a71f62_user_requests_events_on_update_cascade.py:18:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/8797e9a71f62_user_requests_events_on_update_cascade.py:39:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/8797e9a71f62_user_requests_events_on_update_cascade.py:43:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/8797e9a71f62_user_requests_events_on_update_cascade.py:60:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/dc926c74551d_added_category_to_custom_request_forms.py:13:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/dc926c74551d_added_category_to_custom_request_forms.py:14:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/dc926c74551d_added_category_to_custom_request_forms.py:18:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/dc926c74551d_added_category_to_custom_request_forms.py:22:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/dc926c74551d_added_category_to_custom_request_forms.py:26:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/dc926c74551d_added_category_to_custom_request_forms.py:28:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/7e0434686370_added_custom_request_forms_table.py:13:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/7e0434686370_added_custom_request_forms_table.py:14:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/7e0434686370_added_custom_request_forms_table.py:15:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/7e0434686370_added_custom_request_forms_table.py:19:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/7e0434686370_added_custom_request_forms_table.py:39:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/7e0434686370_added_custom_request_forms_table.py:43:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/7e0434686370_added_custom_request_forms_table.py:46:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/971f341c0204_adding_agency_features_json_column_to_.py:13:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/971f341c0204_adding_agency_features_json_column_to_.py:14:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/971f341c0204_adding_agency_features_json_column_to_.py:15:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/971f341c0204_adding_agency_features_json_column_to_.py:19:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/971f341c0204_adding_agency_features_json_column_to_.py:26:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/971f341c0204_adding_agency_features_json_column_to_.py:30:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/971f341c0204_adding_agency_features_json_column_to_.py:32:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/a2547b706641_initial_migration.py:13:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/a2547b706641_initial_migration.py:14:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/a2547b706641_initial_migration.py:15:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/a2547b706641_initial_migration.py:19:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/a2547b706641_initial_migration.py:296:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/a2547b706641_initial_migration.py:300:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/a2547b706641_initial_migration.py:316:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/7ba6fbb131bb_add_signature_to_users.py:13:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/7ba6fbb131bb_add_signature_to_users.py:14:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/7ba6fbb131bb_add_signature_to_users.py:18:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/7ba6fbb131bb_add_signature_to_users.py:20:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/7ba6fbb131bb_add_signature_to_users.py:24:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/7ba6fbb131bb_add_signature_to_users.py:26:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/9005ab594598_add_lettertemplates.py:13:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/9005ab594598_add_lettertemplates.py:14:1: E402 module level import not at top of file
+../NYCOpenRecords/migrations/versions/9005ab594598_add_lettertemplates.py:18:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/9005ab594598_add_lettertemplates.py:41:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/9005ab594598_add_lettertemplates.py:45:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/versions/9005ab594598_add_lettertemplates.py:47:5: E266 too many leading '#' for block comment
+../NYCOpenRecords/migrations/custom/openrecords_v1.py:996:72: E202 whitespace before '}'
+../NYCOpenRecords/config.py:13:1: E302 expected 2 blank lines, found 1
+../NYCOpenRecords/config.py:33:20: E128 continuation line under-indented for visual indent
+../NYCOpenRecords/config.py:41:19: E128 continuation line under-indented for visual indent
+../NYCOpenRecords/openrecords.py:48:1: E402 module level import not at top of file
+../NYCOpenRecords/openrecords.py:49:1: E402 module level import not at top of file
+../NYCOpenRecords/openrecords.py:50:1: E402 module level import not at top of file
+../NYCOpenRecords/openrecords.py:52:1: E402 module level import not at top of file
+../NYCOpenRecords/openrecords.py:54:1: E402 module level import not at top of file
+../NYCOpenRecords/openrecords.py:55:1: E402 module level import not at top of file
+../NYCOpenRecords/openrecords.py:56:1: E402 module level import not at top of file
+../NYCOpenRecords/openrecords.py:57:1: E402 module level import not at top of file
+../NYCOpenRecords/openrecords.py:59:1: E402 module level import not at top of file
+../NYCOpenRecords/openrecords.py:60:1: E402 module level import not at top of file
+../NYCOpenRecords/openrecords.py:78:1: E402 module level import not at top of file
+../NYCOpenRecords/openrecords.py:79:1: E402 module level import not at top of file
+../NYCOpenRecords/openrecords.py:80:1: E402 module level import not at top of file
+../NYCOpenRecords/app/response/__init__.py:5:1: E402 module level import not at top of file
+../NYCOpenRecords/app/response/__init__.py:5:1: F401 '.views' imported but unused
+../NYCOpenRecords/app/response/utils.py:46:1: F401 'app.constants.TINYMCE_EDITABLE_P_TAG' imported but unused
+../NYCOpenRecords/app/response/utils.py:1955:121: E501 line too long (121 > 120 characters)
+../NYCOpenRecords/app/response/views.py:718:25: F811 redefinition of unused 'remove' from line 699
+../NYCOpenRecords/app/response/views.py:787:33: E251 unexpected spaces around keyword / parameter equals
+../NYCOpenRecords/app/models.py:355:121: E501 line too long (122 > 120 characters)
+../NYCOpenRecords/app/models.py:421:85: E712 comparison to True should be 'if cond is True:' or 'if cond:'
+../NYCOpenRecords/app/models.py:704:121: E501 line too long (123 > 120 characters)
+../NYCOpenRecords/app/models.py:867:16: E127 continuation line over-indented for visual indent
+../NYCOpenRecords/app/models.py:868:16: E127 continuation line over-indented for visual indent
+../NYCOpenRecords/app/models.py:916:121: E501 line too long (121 > 120 characters)
+../NYCOpenRecords/app/auth/constants/error_msg.py:8:66: W292 no newline at end of file
+../NYCOpenRecords/app/auth/__init__.py:5:1: E402 module level import not at top of file
+../NYCOpenRecords/app/auth/__init__.py:5:1: F401 '.views' imported but unused
+../NYCOpenRecords/app/auth/forms.py:23:1: F401 'app.models.Agencies' imported but unused
+../NYCOpenRecords/app/auth/utils.py:133:42: E712 comparison to False should be 'if cond is False:' or 'if not cond:'
+../NYCOpenRecords/app/auth/utils.py:139:35: E712 comparison to True should be 'if cond is True:' or 'if cond:'
+../NYCOpenRecords/app/auth/utils.py:314:121: E501 line too long (127 > 120 characters)
+../NYCOpenRecords/app/auth/views.py:172:121: E501 line too long (127 > 120 characters)
+../NYCOpenRecords/app/auth/views.py:380:121: E501 line too long (131 > 120 characters)
+../NYCOpenRecords/app/constants/communication_methods.py:12:2: W292 no newline at end of file
+../NYCOpenRecords/app/constants/response_type.py:30:3: W292 no newline at end of file
+../NYCOpenRecords/app/constants/__init__.py:121:2: W292 no newline at end of file
+../NYCOpenRecords/app/constants/pdf.py:2:28: W605 invalid escape sequence '\B'
+../NYCOpenRecords/app/constants/pdf.py:4:31: W605 invalid escape sequence '\V'
+../NYCOpenRecords/app/constants/pdf.py:6:30: W605 invalid escape sequence '\#'
+../NYCOpenRecords/app/constants/user_attrs.py:129:21: W292 no newline at end of file
+../NYCOpenRecords/app/constants/agency_features.py:9:2: W292 no newline at end of file
+../NYCOpenRecords/app/agency/__init__.py:5:1: E402 module level import not at top of file
+../NYCOpenRecords/app/agency/__init__.py:5:1: F401 '.views' imported but unused
+../NYCOpenRecords/app/agency/api/__init__.py:5:1: E402 module level import not at top of file
+../NYCOpenRecords/app/agency/api/__init__.py:5:1: F401 '.views' imported but unused
+../NYCOpenRecords/app/agency/api/utils.py:50:17: E131 continuation line unaligned for hanging indent
+../NYCOpenRecords/app/agency/api/utils.py:52:74: E711 comparison to None should be 'if cond is None:'
+../NYCOpenRecords/app/agency/api/utils.py:54:17: E131 continuation line unaligned for hanging indent
+../NYCOpenRecords/app/agency/api/utils.py:59:17: E131 continuation line unaligned for hanging indent
+../NYCOpenRecords/app/agency/api/utils.py:59:82: E711 comparison to None should be 'if cond is None:'
+../NYCOpenRecords/app/agency/api/utils.py:60:17: E131 continuation line unaligned for hanging indent
+../NYCOpenRecords/app/agency/api/utils.py:98:17: E131 continuation line unaligned for hanging indent
+../NYCOpenRecords/app/agency/api/utils.py:106:17: E131 continuation line unaligned for hanging indent
+../NYCOpenRecords/app/agency/api/utils.py:128:1: W293 blank line contains whitespace
+../NYCOpenRecords/app/agency/api/utils.py:132:1: W293 blank line contains whitespace
+../NYCOpenRecords/app/agency/api/utils.py:139:14: W291 trailing whitespace
+../NYCOpenRecords/app/admin/__init__.py:5:1: E402 module level import not at top of file
+../NYCOpenRecords/app/admin/__init__.py:5:1: F401 '.views' imported but unused
+../NYCOpenRecords/app/admin/views.py:7:1: F401 'app.models.Users' imported but unused
+../NYCOpenRecords/app/admin/views.py:7:1: F401 'app.models.AgencyUsers' imported but unused
+../NYCOpenRecords/app/__init__.py:27:1: F401 'app.constants.OPENRECORDS_DL_EMAIL' imported but unused
+../NYCOpenRecords/app/__init__.py:82:1: W293 blank line contains whitespace
+../NYCOpenRecords/app/user/__init__.py:5:1: E402 module level import not at top of file
+../NYCOpenRecords/app/user/__init__.py:5:1: F401 '.views' imported but unused
+../NYCOpenRecords/app/user/views.py:106:121: E501 line too long (142 > 120 characters)
+../NYCOpenRecords/app/user/views.py:136:121: E501 line too long (121 > 120 characters)
+../NYCOpenRecords/app/user/views.py:274:121: E501 line too long (124 > 120 characters)
+../NYCOpenRecords/app/user/views.py:309:121: E501 line too long (122 > 120 characters)
+../NYCOpenRecords/app/celery_config.py:15:10: E131 continuation line unaligned for hanging indent
+../NYCOpenRecords/app/celery_config.py:15:10: E265 block comment should start with '# '
+../NYCOpenRecords/app/permissions/__init__.py:5:1: E402 module level import not at top of file
+../NYCOpenRecords/app/permissions/__init__.py:5:1: F401 '.views' imported but unused
+../NYCOpenRecords/app/search/constants.py:15:21: W292 no newline at end of file
+../NYCOpenRecords/app/search/__init__.py:5:1: E402 module level import not at top of file
+../NYCOpenRecords/app/search/__init__.py:5:1: F401 '.views' imported but unused
+../NYCOpenRecords/app/search/views.py:20:1: F401 'app.search.constants.ALL_RESULTS_CHUNKSIZE' imported but unused
+../NYCOpenRecords/app/jobs.py:9:1: F401 'app.sentry' imported but unused
+../NYCOpenRecords/app/lib/pdf.py:38:121: E501 line too long (121 > 120 characters)
+../NYCOpenRecords/app/lib/pdf.py:116:31: W605 invalid escape sequence '\&'
+../NYCOpenRecords/app/lib/pdf.py:117:31: W605 invalid escape sequence '\%'
+../NYCOpenRecords/app/lib/pdf.py:118:31: W605 invalid escape sequence '\$'
+../NYCOpenRecords/app/lib/pdf.py:119:31: W605 invalid escape sequence '\#'
+../NYCOpenRecords/app/lib/pdf.py:120:31: W605 invalid escape sequence '\_'
+../NYCOpenRecords/app/lib/pdf.py:121:31: W605 invalid escape sequence '\{'
+../NYCOpenRecords/app/lib/pdf.py:122:31: W605 invalid escape sequence '\}'
+../NYCOpenRecords/app/lib/onelogin/saml2/auth.py:526:121: E501 line too long (123 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/metadata.py:38:121: E501 line too long (123 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/metadata.py:103:121: E501 line too long (139 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/metadata.py:104:121: E501 line too long (167 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/metadata.py:105:121: E501 line too long (135 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/metadata.py:106:121: E501 line too long (136 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/metadata.py:147:121: E501 line too long (135 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/metadata.py:154:121: E501 line too long (210 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/metadata.py:195:121: E501 line too long (141 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/metadata.py:227:121: E501 line too long (122 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/logout_request.py:175:121: E501 line too long (125 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/logout_request.py:286:121: E501 line too long (126 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/idp_metadata_parser.py:35:121: E501 line too long (132 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/idp_metadata_parser.py:58:13: E722 do not use bare 'except'
+../NYCOpenRecords/app/lib/onelogin/saml2/idp_metadata_parser.py:73:121: E501 line too long (132 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/idp_metadata_parser.py:165:121: E501 line too long (176 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/idp_metadata_parser.py:166:121: E501 line too long (176 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/response.py:14:121: E501 line too long (142 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/response.py:105:121: E501 line too long (135 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/response.py:114:121: E501 line too long (149 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/response.py:129:121: E501 line too long (160 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/response.py:167:121: E501 line too long (128 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/response.py:172:121: E501 line too long (152 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/response.py:233:121: E501 line too long (131 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/response.py:303:121: E501 line too long (131 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/response.py:307:121: E501 line too long (232 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/response.py:314:121: E501 line too long (245 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/response.py:378:121: E501 line too long (134 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/response.py:512:121: E501 line too long (122 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/response.py:683:121: E501 line too long (125 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/response.py:713:121: E501 line too long (152 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/response.py:718:121: E501 line too long (157 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/response.py:794:121: E501 line too long (137 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/response.py:796:121: E501 line too long (139 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/response.py:820:121: E501 line too long (136 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/xml_templates.py:75:121: E501 line too long (136 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/xml_templates.py:89:121: E501 line too long (159 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/authn_request.py:98:121: E501 line too long (126 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/utils.py:150:121: E501 line too long (126 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/utils.py:177:121: E501 line too long (134 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/utils.py:183:121: E501 line too long (142 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/utils.py:396:29: W605 invalid escape sequence '\.'
+../NYCOpenRecords/app/lib/onelogin/saml2/utils.py:410:68: W605 invalid escape sequence '\.'
+../NYCOpenRecords/app/lib/onelogin/saml2/utils.py:621:121: E501 line too long (122 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/utils.py:655:121: E501 line too long (122 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/utils.py:657:121: E501 line too long (140 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/utils.py:701:121: E501 line too long (144 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/utils.py:793:121: E501 line too long (141 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/utils.py:843:121: E501 line too long (163 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/utils.py:850:121: E501 line too long (165 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/utils.py:864:121: E501 line too long (121 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/utils.py:902:121: E501 line too long (121 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/utils.py:903:121: E501 line too long (122 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/utils.py:908:121: E501 line too long (156 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/utils.py:915:121: E501 line too long (134 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/utils.py:944:121: E501 line too long (137 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/utils.py:949:121: E501 line too long (131 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/utils.py:1013:121: E501 line too long (123 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/settings.py:442:121: E501 line too long (125 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/settings.py:444:121: E501 line too long (121 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/settings.py:446:121: E501 line too long (153 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/settings.py:681:121: E501 line too long (138 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/settings.py:737:121: E501 line too long (143 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/settings.py:741:121: E501 line too long (149 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/logout_response.py:41:121: E501 line too long (128 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/logout_response.py:88:121: E501 line too long (135 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/logout_response.py:97:121: E501 line too long (127 > 120 characters)
+../NYCOpenRecords/app/lib/onelogin/saml2/logout_response.py:101:121: E501 line too long (165 > 120 characters)
+../NYCOpenRecords/app/lib/json_schema.py:13:43: W291 trailing whitespace
+../NYCOpenRecords/app/request/__init__.py:5:1: E402 module level import not at top of file
+../NYCOpenRecords/app/request/__init__.py:5:1: F401 '.views' imported but unused
+../NYCOpenRecords/app/request/forms.py:252:36: E711 comparison to None should be 'if cond is None:'
+../NYCOpenRecords/app/request/forms.py:258:36: E711 comparison to None should be 'if cond is None:'
+../NYCOpenRecords/app/request/forms.py:264:36: E711 comparison to None should be 'if cond is None:'
+../NYCOpenRecords/app/request/forms.py:346:48: E711 comparison to None should be 'if cond is None:'
+../NYCOpenRecords/app/request/forms.py:397:44: E711 comparison to None should be 'if cond is None:'
+../NYCOpenRecords/app/request/forms.py:403:44: E711 comparison to None should be 'if cond is None:'
+../NYCOpenRecords/app/request/utils.py:41:1: F401 'app.lib.date_utils.get_following_date' imported but unused
+../NYCOpenRecords/app/request/utils.py:41:1: F401 'app.lib.date_utils.is_business_day' imported but unused
+../NYCOpenRecords/app/request/utils.py:387:121: E501 line too long (135 > 120 characters)
+../NYCOpenRecords/app/request/api/__init__.py:5:1: E402 module level import not at top of file
+../NYCOpenRecords/app/request/api/__init__.py:5:1: F401 '.views' imported but unused
+../NYCOpenRecords/app/request/api/utils.py:20:25: W292 no newline at end of file
+../NYCOpenRecords/app/request/api/views.py:221:31: E712 comparison to False should be 'if cond is False:' or 'if not cond:'
+../NYCOpenRecords/app/request/api/views.py:232:31: E712 comparison to False should be 'if cond is False:' or 'if not cond:'
+../NYCOpenRecords/app/request/api/views.py:245:31: E712 comparison to False should be 'if cond is False:' or 'if not cond:'
+../NYCOpenRecords/app/request/views.py:230:16: E713 test for membership should be 'not in'
+../NYCOpenRecords/app/request/views.py:327:121: E501 line too long (135 > 120 characters)
+../NYCOpenRecords/app/request/views.py:361:37: E251 unexpected spaces around keyword / parameter equals
+../NYCOpenRecords/app/request/views.py:361:39: E251 unexpected spaces around keyword / parameter equals
+../NYCOpenRecords/app/request/views.py:404:80: W291 trailing whitespace
+../NYCOpenRecords/app/request/views.py:405:13: W291 trailing whitespace
+../NYCOpenRecords/app/report/__init__.py:5:1: E402 module level import not at top of file
+../NYCOpenRecords/app/report/__init__.py:5:1: F401 '.views' imported but unused
+../NYCOpenRecords/app/report/utils.py:69:43: E127 continuation line over-indented for visual indent
+../NYCOpenRecords/app/report/utils.py:69:121: E501 line too long (121 > 120 characters)
+../NYCOpenRecords/app/user_request/__init__.py:5:1: E402 module level import not at top of file
+../NYCOpenRecords/app/user_request/__init__.py:5:1: F401 '.views' imported but unused
+../NYCOpenRecords/app/user_request/utils.py:24:121: E501 line too long (121 > 120 characters)
+../NYCOpenRecords/app/user_request/utils.py:138:5: F841 local variable 'tmp' is assigned to but never used
+../NYCOpenRecords/app/user_request/utils.py:194:5: F841 local variable 'tmp' is assigned to but never used
+../NYCOpenRecords/app/user_request/utils.py:327:121: E501 line too long (175 > 120 characters)
+../NYCOpenRecords/app/user_request/views.py:43:25: E131 continuation line unaligned for hanging indent
+../NYCOpenRecords/app/user_request/views.py:90:25: E131 continuation line unaligned for hanging indent
+../NYCOpenRecords/app/user_request/views.py:137:9: E125 continuation line with same indent as next logical line
+../NYCOpenRecords/app/main/__init__.py:5:1: E402 module level import not at top of file
+../NYCOpenRecords/app/main/__init__.py:5:1: F401 '.views' imported but unused
+../NYCOpenRecords/app/main/views.py:6:1: F811 redefinition of unused 'render_template' from line 6
+../NYCOpenRecords/app/upload/__init__.py:5:1: E402 module level import not at top of file
+../NYCOpenRecords/app/upload/__init__.py:5:1: F401 '.views' imported but unused
+../NYCOpenRecords/app/upload/utils.py:63:27: E712 comparison to False should be 'if cond is False:' or 'if not cond:'
+../NYCOpenRecords/celery_worker.py:8:1: F401 'app.celery' imported but unused
+../NYCOpenRecords/tests/helpers/utils.py:7:1: F401 'pytest' imported but unused
+../NYCOpenRecords/tests/helpers/utils.py:10:1: F401 'app.models.Requests' imported but unused
+../NYCOpenRecords/tests/helpers/utils.py:12:1: E302 expected 2 blank lines, found 1
+../NYCOpenRecords/tests/helpers/utils.py:33:9: W292 no newline at end of file
+../NYCOpenRecords/tests/functional/test_requests.py:7:1: F401 'pytest' imported but unused
+../NYCOpenRecords/tests/functional/test_requests.py:8:1: F401 'app.models.Requests' imported but unused
+../NYCOpenRecords/tests/functional/test_requests.py:8:32: W292 no newline at end of file
+../NYCOpenRecords/build_scripts/sentry_setup/sentry.conf.py:3:1: F403 'from sentry.conf.server import *' used; unable to detect undefined names
+../NYCOpenRecords/build_scripts/sentry_setup/sentry.conf.py:3:1: F401 'sentry.conf.server.*' imported but unused
+../NYCOpenRecords/build_scripts/db_setup/backup.py:77:1: E722 do not use bare 'except'
+../NYCOpenRecords/gunicorn_config.py:5:121: E501 line too long (157 > 120 characters)
+../NYCOpenRecords/gunicorn_config.py:60:13: F821 undefined name 'gunicorn_logging'

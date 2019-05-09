@@ -1148,6 +1148,11 @@
                             </a>
                         </li>
                         <li>
+                            <a href="/NYCOpenDocs/html/app_static_js_request_new-request-anon.js.html">
+                                new-request-anon.js
+                            </a>
+                        </li>
+                        <li>
                             <a href="/NYCOpenDocs/html/app_static_js_request_new-request-user.js.html">
                                 new-request-user.js
                             </a>
@@ -2069,11 +2074,6 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.html.html">
                             new_request_anon.html
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.js.html.html">
-                            new_request_anon.js.html
                         </a>
                     </li>
                     <li>
@@ -3188,7 +3188,26 @@
 
                     <p>
 <!-- Include the text material here! -->
-<p>We attempted to read from templates/app_report_utils.py_hw.txt but failed.</p>
+This file has one function generate_acknowledgment_report() which is a Celery
+task that generates the acknowledgment report for the user's agency with the
+specified date range.
+
+
+<h3>
+Code Issues
+</h3>
+
+<ul class="review">
+  <li>
+  A general docstring is missing explaining the use of the file.<br>
+  The append function used in the <code>for</code> loop for
+  <code>data_from_dates.append()</code> and <code>all_data.append()</code> is
+  appending the same list of variables. The list is long and is adding more lines
+  to the code. It can be defined once and that variable can be called in both the
+  append functions. This will also help in reducing a chance of missing on any
+  variable in the list.
+  </li>
+</ul>
                     </p>
                 </details>
 
@@ -3213,8 +3232,7 @@ app/report/utils.py:69:121: E501 line too long (121 > 120 characters)
 
                     <p>
 <!-- Include the documentation here! -->
-
-<hr><code>generate_acknowledgment_report(self, current_user_guid: str, date_from: datetime, date_to: datetime):</code><br/>Celery task that generates the acknowledgment report for the user's agency with the specified date range.</br></br>Args:</br>current_user_guid: GUID of the current user</br>date_from: Date to filter report from</br>date_to: Date to filter report to</br>
+<p>We attempted to read from templates/app_report_utils.py_ex.txt but failed.</p>
                    </p>
                 </details>
 

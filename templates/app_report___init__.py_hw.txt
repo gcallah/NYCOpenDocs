@@ -1,2 +1,13 @@
 The file defines report blueprints and all the report view functions are
 imported in this file.
+
+<h3>
+Code Issues
+</h3>
+
+<ul class="review">
+  <li>
+  There is no docstring explaining the need or synopsis of the file.
+
+  </li>
+</ul>

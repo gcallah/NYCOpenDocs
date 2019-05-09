@@ -1148,6 +1148,11 @@
                             </a>
                         </li>
                         <li>
+                            <a href="/NYCOpenDocs/html/app_static_js_request_new-request-anon.js.html">
+                                new-request-anon.js
+                            </a>
+                        </li>
+                        <li>
                             <a href="/NYCOpenDocs/html/app_static_js_request_new-request-user.js.html">
                                 new-request-user.js
                             </a>
@@ -2069,11 +2074,6 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.html.html">
                             new_request_anon.html
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.js.html.html">
-                            new_request_anon.js.html
                         </a>
                     </li>
                     <li>
@@ -3213,7 +3213,28 @@ app/constants/user_attrs.py:129:21: W292 no newline at end of file
                     <p>
 <!-- Include the documentation here! -->
 
-<hr><code>UserEditableFieldsDict(dict):</code><br/></br></br><hr><code>__init__(self,</code><br/><hr><code>__setitem__(self, key, value):</code><br/><hr><code>is_valid(self):</code><br/><hr><code>UserAddressDict(dict):</code><br/></br></br><hr><code>__init__(self, **kwargs):</code><br/><hr><code>__setitem__(self, key, value):</code><br/><hr><code>is_valid(self):</code><br/><hr><code>UserStatusDict(dict):</code><br/></br></br><hr><code>__init__(self, **kwargs):</code><br/><hr><code>__setitem__(self, key, value):</code><br/><hr><code>is_valid(self):</code><br/>
+class UserEditableFieldsDict(dict):
+<br>&emsp;    """
+<br>
+<br>&emsp;    """
+<br>&emsp;    def __init__(self,
+<br>&emsp;    def __setitem__(self, key, value):
+<br>&emsp;    def is_valid(self):
+<br>class UserAddressDict(dict):
+<br>&emsp;    """
+<br>
+<br>&emsp;    """
+<br>&emsp;    def __init__(self, **kwargs):
+<br>&emsp;    def __setitem__(self, key, value):
+<br>&emsp;    def is_valid(self):
+<br>class UserStatusDict(dict):
+<br>&emsp;    """
+<br>
+<br>&emsp;    """
+<br>&emsp;    def __init__(self, **kwargs):
+<br>&emsp;    def __setitem__(self, key, value):
+<br>&emsp;    def is_valid(self):
+<br>
                    </p>
                 </details>
 

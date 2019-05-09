@@ -1148,6 +1148,11 @@
                             </a>
                         </li>
                         <li>
+                            <a href="/NYCOpenDocs/html/app_static_js_request_new-request-anon.js.html">
+                                new-request-anon.js
+                            </a>
+                        </li>
+                        <li>
                             <a href="/NYCOpenDocs/html/app_static_js_request_new-request-user.js.html">
                                 new-request-user.js
                             </a>
@@ -2069,11 +2074,6 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.html.html">
                             new_request_anon.html
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.js.html.html">
-                            new_request_anon.js.html
                         </a>
                     </li>
                     <li>
@@ -3217,7 +3217,214 @@ app/lib/onelogin/saml2/idp_metadata_parser.py:166:121: E501 line too long (176 >
                     <p>
 <!-- Include the documentation here! -->
 
- OneLogin_Saml2_IdPMetadataParser class</br>Copyright (c) 2010-2018 OneLogin, Inc.</br>MIT License</br>Metadata class of OneLogin's Python Toolkit.</br><hr><code>OneLogin_Saml2_IdPMetadataParser(object):</code><br/></br>A class that contain methods related to obtaining and parsing metadata from IdP</br><hr><code>get_metadata(url, validate_cert=True):</code><br/></br>Gets the metadata XML from the provided URL</br>:param url: Url where the XML of the Identity Provider Metadata is published.</br>:type url: string</br></br>:param validate_cert: If the url uses https schema, that flag enables or not the verification of the associated certificate.</br>:type validate_cert: bool</br></br>:returns: metadata XML</br>:rtype: string</br><hr><code>parse_remote(url, validate_cert=True, entity_id=None, **kwargs):</code><br/></br>Gets the metadata XML from the provided URL and parse it, returning a dict with extracted data</br>:param url: Url where the XML of the Identity Provider Metadata is published.</br>:type url: string</br></br>:param validate_cert: If the url uses https schema, that flag enables or not the verification of the associated certificate.</br>:type validate_cert: bool</br></br>:param entity_id: Specify the entity_id of the EntityDescriptor that you want to parse a XML</br>that contains multiple EntityDescriptor.</br>:type entity_id: string</br></br>:returns: settings dict with extracted data</br>:rtype: dict</br><hr><code>parse(</code><br/></br>Parses the Identity Provider metadata and return a dict with extracted data.</br></br>If there are multiple <IDPSSODescriptor> tags, parse only the first.</br></br>Parses only those SSO endpoints with the same binding as given by</br>the `required_sso_binding` parameter.</br></br>Parses only those SLO endpoints with the same binding as given by</br>the `required_slo_binding` parameter.</br></br>If the metadata specifies multiple SSO endpoints with the required</br>binding, extract only the first (the same holds true for SLO</br>endpoints).</br></br>:param idp_metadata: XML of the Identity Provider Metadata.</br>:type idp_metadata: string</br></br>:param required_sso_binding: Parse only POST or REDIRECT SSO endpoints.</br>:type required_sso_binding: one of OneLogin_Saml2_Constants.BINDING_HTTP_REDIRECT</br>or OneLogin_Saml2_Constants.BINDING_HTTP_POST</br></br>:param required_slo_binding: Parse only POST or REDIRECT SLO endpoints.</br>:type required_slo_binding: one of OneLogin_Saml2_Constants.BINDING_HTTP_REDIRECT</br>or OneLogin_Saml2_Constants.BINDING_HTTP_POST</br></br>:param entity_id: Specify the entity_id of the EntityDescriptor that you want to parse a XML</br>that contains multiple EntityDescriptor.</br>:type entity_id: string</br></br>:returns: settings dict with extracted data</br>:rtype: dict</br><hr><code>merge_settings(settings, new_metadata_settings):</code><br/></br>Will update the settings with the provided new settings data extracted from the IdP metadata</br>:param settings: Current settings dict data</br>:type settings: string</br>:param new_metadata_settings: Settings to be merged (extracted from IdP metadata after parsing)</br>:type new_metadata_settings: string</br>:returns: merged settings</br>:rtype: dict</br><hr><code>dict_deep_merge(a, b, path=None):</code><br/>Deep-merge dictionary `b` into dictionary `a`.</br></br>Kudos to http://stackoverflow.com/a/7205107/145400</br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;""" OneLogin_Saml2_IdPMetadataParser class
+<br>&emsp;&emsp;Metadata class of OneLogin's Python Toolkit.
+<br>"""
+<br>
+<br>
+<br>from copy import deepcopy
+<br>
+<br>try:
+<br>&emsp;    import urllib.request as urllib2
+<br>except ImportError:
+<br>&emsp;    import urllib2
+<br>
+<br>import ssl
+<br>
+<br>from app.lib.onelogin.saml2.constants import OneLogin_Saml2_Constants
+<br>from app.lib.onelogin.saml2.xml_utils import OneLogin_Saml2_XML
+<br>
+<br>
+<br>class OneLogin_Saml2_IdPMetadataParser(object):
+<br>class OneLogin_Saml2_IdPMetadataParser(object):
+<br>&emsp;    """
+<br>&emsp;    A class that contain methods related to obtaining and parsing metadata from IdP
+<br>&emsp;    """
+<br>
+<br>&emsp;    @staticmethod
+<br>&emsp;    def get_metadata(url, validate_cert=True):
+<br>&emsp;    def get_metadata(url, validate_cert=True):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        valid = False
+<br>
+<br>&emsp;&emsp;        if validate_cert:
+<br>&emsp;&emsp;&emsp;            response = urllib2.urlopen(url)
+<br>&emsp;&emsp;        else:
+<br>&emsp;&emsp;&emsp;            ctx = ssl.create_default_context()
+<br>&emsp;&emsp;&emsp;            ctx.check_hostname = False
+<br>&emsp;&emsp;&emsp;            ctx.verify_mode = ssl.CERT_NONE
+<br>&emsp;&emsp;&emsp;            response = urllib2.urlopen(url, context=ctx)
+<br>&emsp;&emsp;        xml = response.read()
+<br>
+<br>&emsp;&emsp;        if xml:
+<br>&emsp;&emsp;&emsp;            try:
+<br>&emsp;&emsp;&emsp;&emsp;                dom = OneLogin_Saml2_XML.to_etree(xml)
+<br>&emsp;&emsp;&emsp;&emsp;                idp_descriptor_nodes = OneLogin_Saml2_XML.query(dom, '//md:IDPSSODescriptor')
+<br>&emsp;&emsp;&emsp;&emsp;                if idp_descriptor_nodes:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    valid = True
+<br>&emsp;&emsp;&emsp;            except:
+<br>&emsp;&emsp;&emsp;&emsp;                pass
+<br>
+<br>&emsp;&emsp;        if not valid:
+<br>&emsp;&emsp;&emsp;            raise Exception('Not valid IdP XML found from URL: %s' % (url))
+<br>
+<br>&emsp;&emsp;        return xml
+<br>
+<br>&emsp;    @staticmethod
+<br>&emsp;    def parse_remote(url, validate_cert=True, entity_id=None, **kwargs):
+<br>&emsp;    def parse_remote(url, validate_cert=True, entity_id=None, **kwargs):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        idp_metadata = OneLogin_Saml2_IdPMetadataParser.get_metadata(url, validate_cert)
+<br>&emsp;&emsp;        return OneLogin_Saml2_IdPMetadataParser.parse(idp_metadata, entity_id=entity_id, **kwargs)
+<br>
+<br>&emsp;    @staticmethod
+<br>&emsp;    def parse(
+<br>&emsp;    def parse(
+<br>&emsp;&emsp;&emsp;            idp_metadata,
+<br>&emsp;&emsp;&emsp;            required_sso_binding=OneLogin_Saml2_Constants.BINDING_HTTP_REDIRECT,
+<br>&emsp;&emsp;&emsp;            required_slo_binding=OneLogin_Saml2_Constants.BINDING_HTTP_REDIRECT,
+<br>&emsp;&emsp;&emsp;            entity_id=None):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        data = {}
+<br>
+<br>&emsp;&emsp;        dom = OneLogin_Saml2_XML.to_etree(idp_metadata)
+<br>&emsp;&emsp;        idp_entity_id = want_authn_requests_signed = idp_name_id_format = idp_sso_url = idp_slo_url = certs = None
+<br>
+<br>&emsp;&emsp;        entity_desc_path = '//md:EntityDescriptor'
+<br>&emsp;&emsp;        if entity_id:
+<br>&emsp;&emsp;&emsp;            entity_desc_path += "[@entityID='%s']" % entity_id
+<br>&emsp;&emsp;        entity_descriptor_nodes = OneLogin_Saml2_XML.query(dom, entity_desc_path)
+<br>
+<br>&emsp;&emsp;        if len(entity_descriptor_nodes) > 0:
+<br>&emsp;&emsp;&emsp;            entity_descriptor_node = entity_descriptor_nodes[0]
+<br>&emsp;&emsp;&emsp;            idp_descriptor_nodes = OneLogin_Saml2_XML.query(entity_descriptor_node, './md:IDPSSODescriptor')
+<br>&emsp;&emsp;&emsp;            if len(idp_descriptor_nodes) > 0:
+<br>&emsp;&emsp;&emsp;&emsp;                idp_descriptor_node = idp_descriptor_nodes[0]
+<br>
+<br>&emsp;&emsp;&emsp;&emsp;                idp_entity_id = entity_descriptor_node.get('entityID', None)
+<br>
+<br>&emsp;&emsp;&emsp;&emsp;                want_authn_requests_signed = entity_descriptor_node.get('WantAuthnRequestsSigned', None)
+<br>
+<br>&emsp;&emsp;&emsp;&emsp;                name_id_format_nodes = OneLogin_Saml2_XML.query(idp_descriptor_node, './md:NameIDFormat')
+<br>&emsp;&emsp;&emsp;&emsp;                if len(name_id_format_nodes) > 0:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    idp_name_id_format = OneLogin_Saml2_XML.element_text(name_id_format_nodes[0])
+<br>
+<br>&emsp;&emsp;&emsp;&emsp;                sso_nodes = OneLogin_Saml2_XML.query(
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    idp_descriptor_node,
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    "./md:SingleSignOnService[@Binding='%s']" % required_sso_binding
+<br>&emsp;&emsp;&emsp;&emsp;                )
+<br>
+<br>&emsp;&emsp;&emsp;&emsp;                if len(sso_nodes) > 0:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    idp_sso_url = sso_nodes[0].get('Location', None)
+<br>
+<br>&emsp;&emsp;&emsp;&emsp;                slo_nodes = OneLogin_Saml2_XML.query(
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    idp_descriptor_node,
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    "./md:SingleLogoutService[@Binding='%s']" % required_slo_binding
+<br>&emsp;&emsp;&emsp;&emsp;                )
+<br>
+<br>&emsp;&emsp;&emsp;&emsp;                if len(slo_nodes) > 0:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    idp_slo_url = slo_nodes[0].get('Location', None)
+<br>
+<br>&emsp;&emsp;&emsp;&emsp;                signing_nodes = OneLogin_Saml2_XML.query(idp_descriptor_node, "./md:KeyDescriptor[not(contains(@use, 'encryption'))]/ds:KeyInfo/ds:X509Data/ds:X509Certificate")
+<br>&emsp;&emsp;&emsp;&emsp;                encryption_nodes = OneLogin_Saml2_XML.query(idp_descriptor_node, "./md:KeyDescriptor[not(contains(@use, 'signing'))]/ds:KeyInfo/ds:X509Data/ds:X509Certificate")
+<br>
+<br>&emsp;&emsp;&emsp;&emsp;                if len(signing_nodes) > 0 or len(encryption_nodes) > 0:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    certs = {}
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    if len(signing_nodes) > 0:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        certs['signing'] = []
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        for cert_node in signing_nodes:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                            certs['signing'].append(''.join(OneLogin_Saml2_XML.element_text(cert_node).split()))
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    if len(encryption_nodes) > 0:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        certs['encryption'] = []
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        for cert_node in encryption_nodes:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                            certs['encryption'].append(''.join(OneLogin_Saml2_XML.element_text(cert_node).split()))
+<br>
+<br>&emsp;&emsp;&emsp;&emsp;                data['idp'] = {}
+<br>
+<br>&emsp;&emsp;&emsp;&emsp;                if idp_entity_id is not None:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    data['idp']['entityId'] = idp_entity_id
+<br>
+<br>&emsp;&emsp;&emsp;&emsp;                if idp_sso_url is not None:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    data['idp']['singleSignOnService'] = {}
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    data['idp']['singleSignOnService']['url'] = idp_sso_url
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    data['idp']['singleSignOnService']['binding'] = required_sso_binding
+<br>
+<br>&emsp;&emsp;&emsp;&emsp;                if idp_slo_url is not None:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    data['idp']['singleLogoutService'] = {}
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    data['idp']['singleLogoutService']['url'] = idp_slo_url
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    data['idp']['singleLogoutService']['binding'] = required_slo_binding
+<br>
+<br>&emsp;&emsp;&emsp;&emsp;                if want_authn_requests_signed is not None:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    data['security'] = {}
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    data['security']['authnRequestsSigned'] = want_authn_requests_signed
+<br>
+<br>&emsp;&emsp;&emsp;&emsp;                if idp_name_id_format:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    data['sp'] = {}
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    data['sp']['NameIDFormat'] = idp_name_id_format
+<br>
+<br>&emsp;&emsp;&emsp;&emsp;                if certs is not None:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    if (len(certs) == 1 and
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        (('signing' in certs and len(certs['signing']) == 1) or
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                         ('encryption' in certs and len(certs['encryption']) == 1))) or \
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        (('signing' in certs and len(certs['signing']) == 1) and
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                         ('encryption' in certs and len(certs['encryption']) == 1 and
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                         certs['signing'][0] == certs['encryption'][0])):
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        if 'signing' in certs:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                            data['idp']['x509cert'] = certs['signing'][0]
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        else:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                            data['idp']['x509cert'] = certs['encryption'][0]
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    else:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        data['idp']['x509certMulti'] = certs
+<br>&emsp;&emsp;        return data
+<br>
+<br>&emsp;    @staticmethod
+<br>&emsp;    def merge_settings(settings, new_metadata_settings):
+<br>&emsp;    def merge_settings(settings, new_metadata_settings):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        for d in (settings, new_metadata_settings):
+<br>&emsp;&emsp;&emsp;            if not isinstance(d, dict):
+<br>&emsp;&emsp;&emsp;&emsp;                raise TypeError('Both arguments must be dictionaries.')
+<br>
+<br>&emsp;&emsp;        # Guarantee to not modify original data (`settings.copy()` would not
+<br>&emsp;&emsp;        # be sufficient, as it's just a shallow copy).
+<br>&emsp;&emsp;        result_settings = deepcopy(settings)
+<br>
+<br>&emsp;&emsp;        # previously I will take care of cert stuff
+<br>&emsp;&emsp;        if 'idp' in new_metadata_settings and 'idp' in result_settings:
+<br>&emsp;&emsp;&emsp;            if new_metadata_settings['idp'].get('x509cert', None) and result_settings['idp'].get('x509certMulti', None):
+<br>&emsp;&emsp;&emsp;&emsp;                del result_settings['idp']['x509certMulti']
+<br>&emsp;&emsp;&emsp;            if new_metadata_settings['idp'].get('x509certMulti', None) and result_settings['idp'].get('x509cert', None):
+<br>&emsp;&emsp;&emsp;&emsp;                del result_settings['idp']['x509cert']
+<br>
+<br>&emsp;&emsp;        # Merge `new_metadata_settings` into `result_settings`.
+<br>&emsp;&emsp;        dict_deep_merge(result_settings, new_metadata_settings)
+<br>&emsp;&emsp;        return result_settings
+<br>
+<br>
+<br>def dict_deep_merge(a, b, path=None):
+<br>def dict_deep_merge(a, b, path=None):
+<br>&emsp;    """Deep-merge dictionary `b` into dictionary `a`.
+<br>&emsp;    """
+<br>&emsp;    if path is None:
+<br>&emsp;&emsp;        path = []
+<br>&emsp;    for key in b:
+<br>&emsp;&emsp;        if key in a:
+<br>&emsp;&emsp;&emsp;            if isinstance(a[key], dict) and isinstance(b[key], dict):
+<br>&emsp;&emsp;&emsp;&emsp;                dict_deep_merge(a[key], b[key], path + [str(key)])
+<br>&emsp;&emsp;&emsp;            elif a[key] == b[key]:
+<br>&emsp;&emsp;&emsp;&emsp;                # Key conflict, but equal value.
+<br>&emsp;&emsp;&emsp;&emsp;                pass
+<br>&emsp;&emsp;&emsp;            else:
+<br>&emsp;&emsp;&emsp;&emsp;                # Key/value conflict. Prioritize b over a.
+<br>&emsp;&emsp;&emsp;&emsp;                a[key] = b[key]
+<br>&emsp;&emsp;        else:
+<br>&emsp;&emsp;&emsp;            a[key] = b[key]
+<br>&emsp;    return a
+<br>
                    </p>
                 </details>
 

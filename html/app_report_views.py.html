@@ -1148,6 +1148,11 @@
                             </a>
                         </li>
                         <li>
+                            <a href="/NYCOpenDocs/html/app_static_js_request_new-request-anon.js.html">
+                                new-request-anon.js
+                            </a>
+                        </li>
+                        <li>
                             <a href="/NYCOpenDocs/html/app_static_js_request_new-request-user.js.html">
                                 new-request-user.js
                             </a>
@@ -2069,11 +2074,6 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.html.html">
                             new_request_anon.html
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.js.html.html">
-                            new_request_anon.js.html
                         </a>
                     </li>
                     <li>
@@ -3259,7 +3259,7 @@ Code Issues
   <li>
   Also the queries should be explained at least in one line about what exactly
   is filtered and why is <code>key=lambda x: x[1]</code> used to sort
-  <code>active_users</code>.<br>
+  <code>active_users</code>. There should be a comment about this.<br>
   (It's usage information can be found <a href=" https://medium.com/@johngrant/python-list-sorting-keys-lambdas-1903b2a4c949">here</a>.)
 
   </li>
@@ -3288,7 +3288,28 @@ No problems to report
                     <p>
 <!-- Include the documentation here! -->
 
-</br>.. module:: report.views.</br></br>:synopsis: Handles the report URL endpoints for the OpenRecords application</br><hr><code>show_report():</code><br/></br>This function handles the rendering of the reports page</br></br>:return: redirect to reports page</br><hr><code>get():</code><br/></br>This function handles the retrieval of report data to generate the chart on the frontend.</br>Takes in agency_ein or user_guid from the frontend and filters for the number of requests closed and requests</br>opened.</br></br>:return: json object({"labels": ["Opened", "Closed"],</br>values": [150, 135],</br>active_users": [('', ''), ('o8pj0k', 'John Doe')]}), 200</br><hr><code>acknowledgment():</code><br/>Generates the acknowledgment report.</br></br>Returns:</br>Template with context.</br></br>
+"""
+<br>.. module:: report.views.
+<br>
+<br>   :synopsis: Handles the report URL endpoints for the OpenRecords application
+<br>"""
+<br>def show_report():
+<br>&emsp;    """
+<br>&emsp;    This function handles the rendering of the reports page
+<br>
+<br>&emsp;    :return: redirect to reports page
+<br>&emsp;    """
+<br>def get():
+<br>&emsp;    """
+<br>&emsp;    This function handles the retrieval of report data to generate the chart on the frontend.
+<br>&emsp;    Takes in agency_ein or user_guid from the frontend and filters for the number of requests closed and requests
+<br>&emsp;    opened.
+<br>
+<br>&emsp;    :return: json object({"labels": ["Opened", "Closed"],
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                          "values": [150, 135],
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                          "active_users": [('', ''), ('o8pj0k', 'John Doe')]}), 200
+<br>&emsp;    """
+<br>
                    </p>
                 </details>
 

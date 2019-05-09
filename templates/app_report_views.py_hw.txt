@@ -69,7 +69,7 @@ Code Issues
   <li>
   Also the queries should be explained at least in one line about what exactly
   is filtered and why is <code>key=lambda x: x[1]</code> used to sort
-  <code>active_users</code>.<br>
+  <code>active_users</code>. There should be a comment about this.<br>
   (It's usage information can be found <a href=" https://medium.com/@johngrant/python-list-sorting-keys-lambdas-1903b2a4c949">here</a>.)
 
   </li>

@@ -1148,6 +1148,11 @@
                             </a>
                         </li>
                         <li>
+                            <a href="/NYCOpenDocs/html/app_static_js_request_new-request-anon.js.html">
+                                new-request-anon.js
+                            </a>
+                        </li>
+                        <li>
                             <a href="/NYCOpenDocs/html/app_static_js_request_new-request-user.js.html">
                                 new-request-user.js
                             </a>
@@ -2069,11 +2074,6 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.html.html">
                             new_request_anon.html
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.js.html.html">
-                            new_request_anon.js.html
                         </a>
                     </li>
                     <li>
@@ -3228,7 +3228,44 @@ No problems to report
                     <p>
 <!-- Include the documentation here! -->
 
-</br>app.lib.email_utils</br>~~~~~~~~~~~~~~~~</br></br>Implements e-mail notifications for OpenRecords. Flask-mail is a dependency, and the following environment variables</br>need to be set in order for this to work: (Currently using Fake SMTP for testing)</br>MAIL_SERVER: 'localhost</br>MAIL_PORT: 2500</br>MAIL_USE_TLS: FALSE</br>MAIL_USERNAME: os.environ.get('MAIL_USERNAME')</br>MAIL_PASSWORD: os.environ.get('MAIL_PASSWORD')</br>DEFAULT_MAIL_SENDER: 'Records Admin <openrecords@records.nyc.gov></br></br><hr><code>send_async_email(msg):</code><br/><hr><code>send_contact_email(subject, recipients, body, sender):</code><br/><hr><code>send_email(subject, to=list(), cc=list(), bcc=list(), template=None, email_content=None, **kwargs):</code><br/></br>Function that sends asynchronous emails for the application.</br>Takes in arguments from the frontend.</br></br>:param to: Person(s) email is being sent to</br>:param cc: Person(s) being CC'ed on the email</br>:param bcc: Person(s) being BCC'ed on the email</br>:param subject: Subject of the email</br>:param template: HTML and TXT template of the email content</br>:param email_content: string of HTML email content that can be used as a message template</br>:param kwargs: Additional arguments the function may take in (ie: Message content)</br><hr><code>get_agency_emails(request_id, admins_only=False):</code><br/></br>Gets a list of the agency emails (assigned users and default email)</br></br>:param request_id: FOIL request ID to query UserRequests</br>:param admins_only: return list of agency admin emails only</br>:return: list of agency emails or ['agency@email.com'] (for testing)</br>
+"""
+<br>&emsp;    app.lib.email_utils
+<br>&emsp;    ~~~~~~~~~~~~~~~~
+<br>
+<br>&emsp;    Implements e-mail notifications for OpenRecords. Flask-mail is a dependency, and the following environment variables
+<br>&emsp;    need to be set in order for this to work: (Currently using Fake SMTP for testing)
+<br>&emsp;&emsp;        MAIL_SERVER: 'localhost'
+<br>&emsp;&emsp;        MAIL_PORT: 2500
+<br>&emsp;&emsp;        MAIL_USE_TLS: FALSE
+<br>&emsp;&emsp;        MAIL_USERNAME: os.environ.get('MAIL_USERNAME')
+<br>&emsp;&emsp;        MAIL_PASSWORD: os.environ.get('MAIL_PASSWORD')
+<br>&emsp;&emsp;        DEFAULT_MAIL_SENDER: 'Records Admin <openrecords@records.nyc.gov>'
+<br>
+<br>"""
+<br>def send_async_email(msg):
+<br>def send_contact_email(subject, recipients, body, sender):
+<br>def send_email(subject, to=list(), cc=list(), bcc=list(), template=None, email_content=None, **kwargs):
+<br>&emsp;    """
+<br>&emsp;    Function that sends asynchronous emails for the application.
+<br>&emsp;    Takes in arguments from the frontend.
+<br>
+<br>&emsp;    :param to: Person(s) email is being sent to
+<br>&emsp;    :param cc: Person(s) being CC'ed on the email
+<br>&emsp;    :param bcc: Person(s) being BCC'ed on the email
+<br>&emsp;    :param subject: Subject of the email
+<br>&emsp;    :param template: HTML and TXT template of the email content
+<br>&emsp;    :param email_content: string of HTML email content that can be used as a message template
+<br>&emsp;    :param kwargs: Additional arguments the function may take in (ie: Message content)
+<br>&emsp;    """
+<br>def get_agency_emails(request_id, admins_only=False):
+<br>&emsp;    """
+<br>&emsp;    Gets a list of the agency emails (assigned users and default email)
+<br>
+<br>&emsp;    :param request_id: FOIL request ID to query UserRequests
+<br>&emsp;    :param admins_only: return list of agency admin emails only
+<br>&emsp;    :return: list of agency emails or ['agency@email.com'] (for testing)
+<br>&emsp;    """
+<br>
                    </p>
                 </details>
 

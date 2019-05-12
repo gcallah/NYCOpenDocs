@@ -1148,11 +1148,6 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/NYCOpenDocs/html/app_static_js_request_new-request-anon.js.html">
-                                new-request-anon.js
-                            </a>
-                        </li>
-                        <li>
                             <a href="/NYCOpenDocs/html/app_static_js_request_new-request-user.js.html">
                                 new-request-user.js
                             </a>
@@ -2074,6 +2069,11 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.html.html">
                             new_request_anon.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.js.html.html">
+                            new_request_anon.js.html
                         </a>
                     </li>
                     <li>
@@ -3188,6 +3188,7 @@
 
                     <p>
 <!-- Include the text material here! -->
+<p>We attempted to read from templates/gunicorn_config.py_hw.txt but failed.</p>
                     </p>
                 </details>
 
@@ -3199,6 +3200,8 @@
                     <p>
                         <pre>
 <!-- Include the linting report here! -->
+gunicorn_config.py:5:121: E501 line too long (157 > 120 characters)
+gunicorn_config.py:60:13: F821 undefined name 'gunicorn_logging'
                         </pre>
                    </p>
                 </details>
@@ -3210,7 +3213,7 @@
 
                     <p>
 <!-- Include the documentation here! -->
-<p>We attempted to read from templates/gunicorn_config.py_hw.txt but failed.</p>
+
                    </p>
                 </details>
 

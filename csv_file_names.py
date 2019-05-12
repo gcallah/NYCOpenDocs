@@ -72,9 +72,9 @@ def create_csv(connector):
             output_lst[LINK_INSERT] = source_code + file
             if ".py" in file or ".js" in file or ".css" in file or ".html" in file:
                 output_lst[DOC_TXT] = template_dir + file.strip(".") + "_ex.txt"
-                output_lst[DOC_TXT] = template_dir + file.strip(".") + "_hw.txt"
-            if ".py" in file[-1]:
-                output_lst[LINT_TXT] = template_dir + "_".join(file) + "_lint.txt"
+                output_lst[HW_TXT] = template_dir + file.strip(".") + "_hw.txt"
+            if ".py" in file:
+                output_lst[LINT_TXT] = template_dir + file.strip(".") + "_lint.txt"
             output.append(connector.join(output_lst))
             current_dir = []
         # otherwise, check the directory paths

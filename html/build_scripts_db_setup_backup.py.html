@@ -1148,11 +1148,6 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/NYCOpenDocs/html/app_static_js_request_new-request-anon.js.html">
-                                new-request-anon.js
-                            </a>
-                        </li>
-                        <li>
                             <a href="/NYCOpenDocs/html/app_static_js_request_new-request-user.js.html">
                                 new-request-user.js
                             </a>
@@ -2074,6 +2069,11 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.html.html">
                             new_request_anon.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.js.html.html">
+                            new_request_anon.js.html
                         </a>
                     </li>
                     <li>
@@ -3213,14 +3213,7 @@ build_scripts/db_setup/backup.py:77:1: E722 do not use bare 'except'
                     <p>
 <!-- Include the documentation here! -->
 
-&emsp;&emsp;dumper = """/opt/rh/rh-postgresql95/root/usr/bin/pg_dump -U %s -h 127.0.0.1 -Z 9 -f %s -F c %s  """
-<br>email = """From: OpenRecords Backup Report <backup@records.nyc.go>
-<br>To: OpenRecords Support Staff <openrecords@records.nyc.gov>
-<br>Subject: OpenRecords Backup Report %s
-<br>
-<br>""" % strftime("%Y-%m-%d %H-%M-%S", localtime())
-<br>def log(string):
-<br>
+dumper = """/opt/rh/rh-postgresql95/root/usr/bin/pg_dump -U %s -h 127.0.0.1 -Z 9 -f %s -F c %s  </br>email = """From: OpenRecords Backup Report <backup@records.nyc.go></br>To: OpenRecords Support Staff <openrecords@records.nyc.gov></br>Subject: OpenRecords Backup Report %s</br></br><hr><code>log(string):</code><br/>
                    </p>
                 </details>
 

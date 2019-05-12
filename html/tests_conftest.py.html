@@ -1148,11 +1148,6 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/NYCOpenDocs/html/app_static_js_request_new-request-anon.js.html">
-                                new-request-anon.js
-                            </a>
-                        </li>
-                        <li>
                             <a href="/NYCOpenDocs/html/app_static_js_request_new-request-user.js.html">
                                 new-request-user.js
                             </a>
@@ -2074,6 +2069,11 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.html.html">
                             new_request_anon.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.js.html.html">
+                            new_request_anon.js.html
                         </a>
                     </li>
                     <li>
@@ -3213,52 +3213,7 @@ No problems to report
                     <p>
 <!-- Include the documentation here! -->
 
-"""ConfigTest Module
-<br>
-<br>This module handles the setup for running tests agains the OpenRecords application.
-<br>
-<br>.. _Flask Tutorial:
-<br>   http://flask.pocoo.org/docs/1.0/tutorial/
-<br>"""
-<br>def app():
-<br>&emsp;    """
-<br>&emsp;    Create a session
-<br>&emsp;    Yields:
-<br>&emsp;&emsp;        app (Flask): Instance of a Flask application
-<br>
-<br>&emsp;    """
-<br>def client(app: Flask):
-<br>&emsp;    """Retrieve an instance of the Flask test_client.
-<br>
-<br>&emsp;    .. _Flask Test Client:
-<br>&emsp;&emsp;        http://flask.pocoo.org/docs/1.0/api/#flask.Flask.test_client
-<br>
-<br>&emsp;    Args:
-<br>&emsp;&emsp;        app (Flask): Instance of the Flask application
-<br>
-<br>&emsp;    Returns:
-<br>&emsp;&emsp;        app.test_client (Flask.test_client): Returns a client used to test the Flask application
-<br>&emsp;    """
-<br>def db(app: Flask):
-<br>&emsp;    """
-<br>&emsp;    Create all of the database tables and yield an instance of the database.
-<br>&emsp;    Args:
-<br>&emsp;&emsp;        app (Flask): Instance of the flask application.
-<br>
-<br>&emsp;    Yields:
-<br>&emsp;&emsp;        db (SQLAlchemy): Instance of the SQLAlchemy DB connector
-<br>&emsp;    """
-<br>def session(db: SQLAlchemy):
-<br>&emsp;    """Create a database session to be used for the function.
-<br>
-<br>&emsp;    Args:
-<br>&emsp;&emsp;        db (SQLAlchemy): Instance of the SQLAlchemy DB connector
-<br>
-<br>&emsp;    Yields:
-<br>&emsp;&emsp;        session_ (SQLAlchemy.session): Session object to be used by the function
-<br>
-<br>&emsp;    """
-<br>
+ConfigTest Module</br></br>This module handles the setup for running tests agains the OpenRecords application.</br></br>.. _Flask Tutorial:</br>http://flask.pocoo.org/docs/1.0/tutorial/</br><hr><code>app():</code><br/></br>Create a session</br>Yields:</br>app (Flask): Instance of a Flask application</br></br><hr><code>client(app: Flask):</code><br/>Retrieve an instance of the Flask test_client.</br></br>.. _Flask Test Client:</br>http://flask.pocoo.org/docs/1.0/api/#flask.Flask.test_client</br></br>Args:</br>app (Flask): Instance of the Flask application</br></br>Returns:</br>app.test_client (Flask.test_client): Returns a client used to test the Flask application</br><hr><code>db(app: Flask):</code><br/></br>Create all of the database tables and yield an instance of the database.</br>Args:</br>app (Flask): Instance of the flask application.</br></br>Yields:</br>db (SQLAlchemy): Instance of the SQLAlchemy DB connector</br><hr><code>session(db: SQLAlchemy):</code><br/>Create a database session to be used for the function.</br></br>Args:</br>db (SQLAlchemy): Instance of the SQLAlchemy DB connector</br></br>Yields:</br>session_ (SQLAlchemy.session): Session object to be used by the function</br></br>
                    </p>
                 </details>
 

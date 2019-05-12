@@ -1148,11 +1148,6 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/NYCOpenDocs/html/app_static_js_request_new-request-anon.js.html">
-                                new-request-anon.js
-                            </a>
-                        </li>
-                        <li>
                             <a href="/NYCOpenDocs/html/app_static_js_request_new-request-user.js.html">
                                 new-request-user.js
                             </a>
@@ -2074,6 +2069,11 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.html.html">
                             new_request_anon.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.js.html.html">
+                            new_request_anon.js.html
                         </a>
                     </li>
                     <li>
@@ -3188,6 +3188,7 @@
 
                     <p>
 <!-- Include the text material here! -->
+<p>We attempted to read from templates/celery_worker.py_hw.txt but failed.</p>
                     </p>
                 </details>
 
@@ -3199,6 +3200,7 @@
                     <p>
                         <pre>
 <!-- Include the linting report here! -->
+celery_worker.py:8:1: F401 'app.celery' imported but unused
                         </pre>
                    </p>
                 </details>
@@ -3210,7 +3212,8 @@
 
                     <p>
 <!-- Include the documentation here! -->
-<p>We attempted to read from templates/celery_worker.py_hw.txt but failed.</p>
+
+</br>.. module:: celery_worker</br></br>:synopsis: Process that runs celery tasks in the application</br>
                    </p>
                 </details>
 

@@ -1148,11 +1148,6 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/NYCOpenDocs/html/app_static_js_request_new-request-anon.js.html">
-                                new-request-anon.js
-                            </a>
-                        </li>
-                        <li>
                             <a href="/NYCOpenDocs/html/app_static_js_request_new-request-user.js.html">
                                 new-request-user.js
                             </a>
@@ -2074,6 +2069,11 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.html.html">
                             new_request_anon.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.js.html.html">
+                            new_request_anon.js.html
                         </a>
                     </li>
                     <li>
@@ -3216,71 +3216,7 @@ No problems to report
                     <p>
 <!-- Include the documentation here! -->
 
-"""
-<br>...module:: upload.views.
-<br>
-<br>&emsp;    :synopsis: Handles Upload endpoints for NYC OpenRecords
-<br>"""
-<br>def post(request_id):
-<br>&emsp;    """
-<br>&emsp;    Create a new upload.
-<br>
-<br>&emsp;    Handles chunked files through the Content-Range header.
-<br>&emsp;    For filesize validation and more upload logic, see:
-<br>&emsp;&emsp;        /static/js/upload/fileupload.js
-<br>
-<br>&emsp;    Optional request body parameters:
-<br>&emsp;    - update (bool)
-<br>&emsp;&emsp;        save the uploaded file to the 'updated' directory
-<br>&emsp;&emsp;        (this indicates the file is meant to replace
-<br>&emsp;&emsp;        a previously uploaded file)
-<br>&emsp;    - response_id (int)
-<br>&emsp;&emsp;        the id of a response associated with the file
-<br>&emsp;&emsp;        this upload is replacing
-<br>&emsp;&emsp;        - REQUIRED if 'update' is 'true'
-<br>&emsp;&emsp;        - ignored if 'update' is 'false'
-<br>
-<br>&emsp;    :returns: {
-<br>&emsp;&emsp;        "name": file name,
-<br>&emsp;&emsp;        "size": file size
-<br>&emsp;    }
-<br>&emsp;    """
-<br>def delete(r_id_type, r_id, filecode):
-<br>&emsp;    """
-<br>&emsp;    Removes an uploaded file.
-<br>
-<br>&emsp;    :param r_id_type: "response" or "request"
-<br>&emsp;    :param r_id: the Response or Request identifier
-<br>&emsp;    :param filecode: the encoded name of the uploaded file
-<br>&emsp;&emsp;        (base64 without padding)
-<br>
-<br>&emsp;    Optional request body parameters:
-<br>&emsp;    - quarantined_only (bool)
-<br>&emsp;&emsp;        only delete the file if it is quarantined
-<br>&emsp;&emsp;        (beware: takes precedence over 'updated_only')
-<br>&emsp;    - updated_only (bool)
-<br>&emsp;&emsp;        only delete the file if it is in the 'updated' directory
-<br>
-<br>&emsp;    :returns:
-<br>&emsp;&emsp;        On success:
-<br>&emsp;&emsp;&emsp;            { "deleted": filename }
-<br>&emsp;&emsp;        On failure:
-<br>&emsp;&emsp;&emsp;            { "error": error message }
-<br>&emsp;    """
-<br>def status():
-<br>&emsp;    """
-<br>&emsp;    Check the status of an upload.
-<br>
-<br>&emsp;    Request Parameters:
-<br>&emsp;&emsp;        - request_id
-<br>&emsp;&emsp;        - filename
-<br>&emsp;&emsp;        - for_update (bool, optional)
-<br>
-<br>&emsp;    :returns: {
-<br>&emsp;&emsp;        "status": upload status
-<br>&emsp;    }
-<br>&emsp;    """
-<br>
+</br>...module:: upload.views.</br></br>:synopsis: Handles Upload endpoints for NYC OpenRecords</br><hr><code>post(request_id):</code><br/></br>Create a new upload.</br></br>Handles chunked files through the Content-Range header.</br>For filesize validation and more upload logic, see:</br>/static/js/upload/fileupload.js</br></br>Optional request body parameters:</br>- update (bool)</br>save the uploaded file to the 'updated' directory</br>(this indicates the file is meant to replace</br>a previously uploaded file)</br>- response_id (int)</br>the id of a response associated with the file</br>this upload is replacing</br>- REQUIRED if 'update' is 'true</br>- ignored if 'update' is 'false</br></br>:returns: {</br>name": file name,</br>size": file size</br>}</br><hr><code>delete(r_id_type, r_id, filecode):</code><br/></br>Removes an uploaded file.</br></br>:param r_id_type: "response" or "request</br>:param r_id: the Response or Request identifier</br>:param filecode: the encoded name of the uploaded file</br>(base64 without padding)</br></br>Optional request body parameters:</br>- quarantined_only (bool)</br>only delete the file if it is quarantined</br>(beware: takes precedence over 'updated_only')</br>- updated_only (bool)</br>only delete the file if it is in the 'updated' directory</br></br>:returns:</br>On success:</br>{ "deleted": filename }</br>On failure:</br>{ "error": error message }</br><hr><code>status():</code><br/></br>Check the status of an upload.</br></br>Request Parameters:</br>- request_id</br>- filename</br>- for_update (bool, optional)</br></br>:returns: {</br>status": upload status</br>}</br>
                    </p>
                 </details>
 

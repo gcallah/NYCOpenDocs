@@ -1148,11 +1148,6 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/NYCOpenDocs/html/app_static_js_request_new-request-anon.js.html">
-                                new-request-anon.js
-                            </a>
-                        </li>
-                        <li>
                             <a href="/NYCOpenDocs/html/app_static_js_request_new-request-user.js.html">
                                 new-request-user.js
                             </a>
@@ -2074,6 +2069,11 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.html.html">
                             new_request_anon.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.js.html.html">
+                            new_request_anon.js.html
                         </a>
                     </li>
                     <li>
@@ -3216,25 +3216,7 @@ app/constants/pdf.py:6:30: W605 invalid escape sequence '\#'
                     <p>
 <!-- Include the documentation here! -->
 
-class EnvelopeDict(dict):
-<br>&emsp;    """
-<br>&emsp;    Dict with pre-set keys used for filling in a default envelope template.
-<br>
-<br>&emsp;    Sample Dictionary:
-<br>
-<br>&emsp;    {
-<br>&emsp;&emsp;        'request_id': 'REQUEST ID',
-<br>&emsp;&emsp;        'recipient_name': 'NAME',
-<br>&emsp;&emsp;        'organization': 'ORGANIZATION',
-<br>&emsp;&emsp;        'street_address': 'STREET ADDRESS',
-<br>&emsp;&emsp;        'city': 'CITY',
-<br>&emsp;&emsp;        'state': 'STATE',
-<br>&emsp;&emsp;        'zipcode: 'ZIPCODE'
-<br>&emsp;    }
-<br>&emsp;    """
-<br>&emsp;    def __init__(self,
-<br>&emsp;    def __setitem__(self, key, value):
-<br>
+<hr><code>EnvelopeDict(dict):</code><br/></br>Dict with pre-set keys used for filling in a default envelope template.</br></br>Sample Dictionary:</br></br>{</br>request_id': 'REQUEST ID',</br>recipient_name': 'NAME',</br>organization': 'ORGANIZATION',</br>street_address': 'STREET ADDRESS',</br>city': 'CITY',</br>state': 'STATE',</br>zipcode: 'ZIPCODE</br>}</br><hr><code>__init__(self,</code><br/><hr><code>__setitem__(self, key, value):</code><br/>
                    </p>
                 </details>
 

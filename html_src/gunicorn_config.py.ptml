@@ -29,6 +29,7 @@
 
                     <p>
 <!-- Include the text material here! -->
+<!--include templates/gunicorn_config.py_hw.txt -->
                     </p>
                 </details>
 
@@ -40,6 +41,7 @@
                     <p>
                         <pre>
 <!-- Include the linting report here! -->
+<!--include templates/gunicorn_config.py_lint.txt -->
                         </pre>
                    </p>
                 </details>
@@ -51,7 +53,7 @@
 
                     <p>
 <!-- Include the documentation here! -->
-<!--include templates/gunicorn_config.py_hw.txt -->
+<!--include templates/gunicorn_config.py_ex.txt -->
                    </p>
                 </details>
 

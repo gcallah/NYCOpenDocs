@@ -1148,6 +1148,11 @@
                             </a>
                         </li>
                         <li>
+                            <a href="/NYCOpenDocs/html/app_static_js_request_new-request-anon.js.html">
+                                new-request-anon.js
+                            </a>
+                        </li>
+                        <li>
                             <a href="/NYCOpenDocs/html/app_static_js_request_new-request-user.js.html">
                                 new-request-user.js
                             </a>
@@ -2069,11 +2074,6 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.html.html">
                             new_request_anon.html
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.js.html.html">
-                            new_request_anon.js.html
                         </a>
                     </li>
                     <li>
@@ -3220,7 +3220,28 @@ No problems to report
                     <p>
 <!-- Include the documentation here! -->
 
-<hr><code>redis_set_file_metadata(request_or_response_id, filepath, is_update=False):</code><br/></br>Stores a file's size, mime type, and hash.</br><hr><code>redis_get_file_metadata(request_or_response_id, filepath, is_update=False):</code><br/></br>Returns a tuple containing a file's</br>( size (int), mime type (str), and hash (str) ).</br><hr><code>redis_delete_file_metadata(request_or_response_id, filepath, is_update=False):</code><br/><hr><code>_get_file_metadata_key(request_or_response_id, filepath, is_update):</code><br/></br>See upload.utils.get_upload_key</br></br>Since this key is being stored in upload_redis, a pipe</br>is used instead of an underscore to avoid any key conflicts.</br><hr><code>redis_get_user_session(session_id):</code><br/><hr><code>redis_delete_user_session(session_id):</code><br/>
+def redis_set_file_metadata(request_or_response_id, filepath, is_update=False):
+<br>&emsp;    """
+<br>&emsp;    Stores a file's size, mime type, and hash.
+<br>&emsp;    """
+<br>def redis_get_file_metadata(request_or_response_id, filepath, is_update=False):
+<br>&emsp;    """
+<br>&emsp;    Returns a tuple containing a file's
+<br>&emsp;&emsp;        ( size (int), mime type (str), and hash (str) ).
+<br>&emsp;    """
+<br>def redis_delete_file_metadata(request_or_response_id, filepath, is_update=False):
+<br>def _get_file_metadata_key(request_or_response_id, filepath, is_update):
+<br>&emsp;    """
+<br>&emsp;    See upload.utils.get_upload_key
+<br>
+<br>&emsp;    Since this key is being stored in upload_redis, a pipe
+<br>&emsp;    is used instead of an underscore to avoid any key conflicts.
+<br>&emsp;    """
+<br>def redis_get_user_session(session_id):
+<br>&emsp;&emsp;&emsp;    session_class = KVSession
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;        s = session_class(serialization_method.loads(
+<br>def redis_delete_user_session(session_id):
+<br>
                    </p>
                 </details>
 

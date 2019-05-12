@@ -9,8 +9,15 @@ Code Issues
 		<li>
     It is unclear what is the difference between the <code>previous_value</code>
     and <code>new_value</code> in function
-    <code>create_request_info_event()</code>. It is not explained in the
-    docstring for the function.
+    <code>create_request_info_event()</code>.
+		We know that the function updates events object request information.
+		It is difficult to understand in this file what part of information of the
+		events these values represent and what is the need of both the values.
+		Though it becomes more clear in the <code>views.py</code> file that it is
+		trying to update the agency title and agency request summary privacy
+		options, a short summary can be given in this file itself maybe in the
+		docstring.
+
 		</li>
 
   </ul>

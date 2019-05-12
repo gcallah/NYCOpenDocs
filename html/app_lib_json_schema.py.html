@@ -1148,6 +1148,11 @@
                             </a>
                         </li>
                         <li>
+                            <a href="/NYCOpenDocs/html/app_static_js_request_new-request-anon.js.html">
+                                new-request-anon.js
+                            </a>
+                        </li>
+                        <li>
                             <a href="/NYCOpenDocs/html/app_static_js_request_new-request-user.js.html">
                                 new-request-user.js
                             </a>
@@ -2069,11 +2074,6 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.html.html">
                             new_request_anon.html
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.js.html.html">
-                            new_request_anon.js.html
                         </a>
                     </li>
                     <li>
@@ -3217,7 +3217,15 @@ app/lib/json_schema.py:13:43: W291 trailing whitespace
                     <p>
 <!-- Include the documentation here! -->
 
-<hr><code>validate_schema(data, schema_name):</code><br/></br>Validate the provided data against the provided JSON schema.</br></br>:param data: JSON data to be validated</br>:param schema_name: Name of the schema</br>:return: Boolean</br>
+def validate_schema(data, schema_name):
+<br>&emsp;    """
+<br>&emsp;    Validate the provided data against the provided JSON schema.
+<br>
+<br>&emsp;    :param data: JSON data to be validated
+<br>&emsp;    :param schema_name: Name of the schema 
+<br>&emsp;    :return: Boolean
+<br>&emsp;    """
+<br>
                    </p>
                 </details>
 

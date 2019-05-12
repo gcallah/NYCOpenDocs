@@ -1148,6 +1148,11 @@
                             </a>
                         </li>
                         <li>
+                            <a href="/NYCOpenDocs/html/app_static_js_request_new-request-anon.js.html">
+                                new-request-anon.js
+                            </a>
+                        </li>
+                        <li>
                             <a href="/NYCOpenDocs/html/app_static_js_request_new-request-user.js.html">
                                 new-request-user.js
                             </a>
@@ -2069,11 +2074,6 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.html.html">
                             new_request_anon.html
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.js.html.html">
-                            new_request_anon.js.html
                         </a>
                     </li>
                     <li>
@@ -3232,7 +3232,754 @@ app/lib/onelogin/saml2/utils.py:1013:121: E501 line too long (123 > 120 characte
                     <p>
 <!-- Include the documentation here! -->
 
- OneLogin_Saml2_Utils class</br></br>Copyright (c) 2010-2018 OneLogin, Inc.</br>MIT License</br></br>Auxiliary class of OneLogin's Python Toolkit.</br></br><hr><code>return_false_on_exception(func):</code><br/></br>Decorator. When applied to a function, it will, by default, suppress any exceptions</br>raised by that function and return False. It may be overridden by passing a</br>raise_exceptions" keyword argument when calling the wrapped function.</br><hr><code>exceptfalse(*args, **kwargs):</code><br/><hr><code>OneLogin_Saml2_Utils(object):</code><br/></br></br>Auxiliary class that contains several utility methods to parse time,</br>urls, add sign, encrypt, decrypt, sign validation, handle xml ...</br></br><hr><code>escape_url(url, lowercase_urlencoding=False):</code><br/></br>escape the non-safe symbols in url</br>The encoding used by ADFS 3.0 is not compatible with</br>python's quote_plus (ADFS produces lower case hex numbers and quote_plus produces</br>upper case hex numbers)</br>:param url: the url to escape</br>:type url: str</br></br>:param lowercase_urlencoding: lowercase or no</br>:type lowercase_urlencoding: boolean</br></br>:return: the escaped url</br>:rtype str</br><hr><code>b64encode(data):</code><br/>base64 encode</br><hr><code>b64decode(data):</code><br/>base64 decode</br><hr><code>decode_base64_and_inflate(value, ignore_zip=False):</code><br/></br>base64 decodes and then inflates according to RFC1951</br>:param value: a deflated and encoded string</br>:type value: string</br>:param ignore_zip: ignore zip errors</br>:returns: the string after decoding and inflating</br>:rtype: string</br><hr><code>deflate_and_base64_encode(value):</code><br/></br>Deflates and then base64 encodes a string</br>:param value: The string to deflate and encode</br>:type value: string</br>:returns: The deflated and encoded string</br>:rtype: string</br><hr><code>format_cert(cert, heads=True):</code><br/></br>Returns a x509 cert (adding header & footer if required).</br></br>:param cert: A x509 unformatted cert</br>:type: string</br></br>:param heads: True if we want to include head and footer</br>:type: boolean</br></br>:returns: Formatted cert</br>:rtype: string</br><hr><code>format_private_key(key, heads=True):</code><br/></br>Returns a private key (adding header & footer if required).</br></br>:param key A private key</br>:type: string</br></br>:param heads: True if we want to include head and footer</br>:type: boolean</br></br>:returns: Formated private key</br>:rtype: string</br><hr><code>redirect(url, parameters={}, request_data={}):</code><br/></br>Executes a redirection to the provided url (or return the target url).</br></br>:param url: The target url</br>:type: string</br></br>:param parameters: Extra parameters to be passed as part of the url</br>:type: dict</br></br>:param request_data: The request as a dict</br>:type: dict</br></br>:returns: Url</br>:rtype: string</br><hr><code>get_self_url_host(request_data):</code><br/></br>Returns the protocol + the current host + the port (if different than</br>common ports).</br></br>:param request_data: The request as a dict</br>:type: dict</br></br>:return: Url</br>:rtype: string</br><hr><code>get_self_host(request_data):</code><br/></br>Returns the current host.</br></br>:param request_data: The request as a dict</br>:type: dict</br></br>:return: The current host</br>:rtype: string</br><hr><code>is_https(request_data):</code><br/></br>Checks if https or http.</br></br>:param request_data: The request as a dict</br>:type: dict</br></br>:return: False if https is not active</br>:rtype: boolean</br><hr><code>get_self_url_no_query(request_data):</code><br/></br>Returns the URL of the current host + current view.</br></br>:param request_data: The request as a dict</br>:type: dict</br></br>:return: The url of current host + current view</br>:rtype: string</br><hr><code>get_self_routed_url_no_query(request_data):</code><br/></br>Returns the routed URL of the current host + current view.</br></br>:param request_data: The request as a dict</br>:type: dict</br></br>:return: The url of current host + current view</br>:rtype: string</br><hr><code>get_self_url(request_data):</code><br/></br>Returns the URL of the current host + current view + query.</br></br>:param request_data: The request as a dict</br>:type: dict</br></br>:return: The url of current host + current view + query</br>:rtype: string</br><hr><code>generate_unique_id():</code><br/></br>Generates an unique string (used for example as ID for assertions).</br></br>:return: A unique string</br>:rtype: string</br><hr><code>parse_time_to_SAML(time):</code><br/></br>Converts a UNIX timestamp to SAML2 timestamp on the form</br>yyyy-mm-ddThh:mm:ss(\.s+)?Z.</br></br>:param time: The time we should convert (DateTime).</br>:type: string</br></br>:return: SAML2 timestamp.</br>:rtype: string</br><hr><code>parse_SAML_to_time(timestr):</code><br/></br>Converts a SAML2 timestamp on the form yyyy-mm-ddThh:mm:ss(\.s+)?Z</br>to a UNIX timestamp. The sub-second part is ignored.</br></br>:param timestr: The time we should convert (SAML Timestamp).</br>:type: string</br></br>:return: Converted to a unix timestamp.</br>:rtype: int</br><hr><code>now():</code><br/></br>:return: unix timestamp of actual time.</br>:rtype: int</br><hr><code>parse_duration(duration, timestamp=None):</code><br/></br>Interprets a ISO8601 duration value relative to a given timestamp.</br></br>:param duration: The duration, as a string.</br>:type: string</br></br>:param timestamp: The unix timestamp we should apply the duration to.</br>Optional, default to the current time.</br>:type: string</br></br>:return: The new timestamp, after the duration is applied.</br>:rtype: int</br><hr><code>get_expire_time(cache_duration=None, valid_until=None):</code><br/></br>Compares 2 dates and returns the earliest.</br></br>:param cache_duration: The duration, as a string.</br>:type: string</br></br>:param valid_until: The valid until date, as a string or as a timestamp</br>:type: string</br></br>:return: The expiration time.</br>:rtype: int</br><hr><code>delete_local_session(callback=None):</code><br/></br>Deletes the local session.</br><hr><code>calculate_x509_fingerprint(x509_cert, alg='sha1'):</code><br/></br>Calculates the fingerprint of a formatted x509cert.</br></br>:param x509_cert: x509 cert formatted</br>:type: string</br></br>:param alg: The algorithm to build the fingerprint</br>:type: string</br></br>:returns: fingerprint</br>:rtype: string</br><hr><code>format_finger_print(fingerprint):</code><br/></br>Formats a fingerprint.</br></br>:param fingerprint: fingerprint</br>:type: string</br></br>:returns: Formatted fingerprint</br>:rtype: string</br><hr><code>generate_name_id(value, sp_nq, sp_format=None, cert=None, debug=False, nq=None):</code><br/></br>Generates a nameID.</br></br>:param value: fingerprint</br>:type: string</br></br>:param sp_nq: SP Name Qualifier</br>:type: string</br></br>:param sp_format: SP Format</br>:type: string</br></br>:param cert: IdP Public Cert to encrypt the nameID</br>:type: string</br></br>:param debug: Activate the xmlsec debug</br>:type: bool</br></br>:returns: DOMElement | XMLSec nameID</br>:rtype: string</br></br>:param nq: IDP Name Qualifier</br>:type: string</br><hr><code>get_status(dom):</code><br/></br>Gets Status from a Response.</br></br>:param dom: The Response as XML</br>:type: Document</br></br>:returns: The Status, an array with the code and a message.</br>:rtype: dict</br><hr><code>decrypt_element(encrypted_data, key, debug=False, inplace=False):</code><br/></br>Decrypts an encrypted element.</br></br>:param encrypted_data: The encrypted data.</br>:type: lxml.etree.Element | DOMElement | basestring</br></br>:param key: The key.</br>:type: string</br></br>:param debug: Activate the xmlsec debug</br>:type: bool</br></br>:param inplace: update passed data with decrypted result</br>:type: bool</br></br>:returns: The decrypted element.</br>:rtype: lxml.etree.Element</br><hr><code>add_sign(xml, key, cert, debug=False, sign_algorithm=OneLogin_Saml2_Constants.RSA_SHA1, digest_algorithm=OneLogin_Saml2_Constants.SHA1):</code><br/></br>Adds signature key and senders certificate to an element (Message or</br>Assertion).</br></br>:param xml: The element we should sign</br>:type: string | Document</br></br>:param key: The private key</br>:type: string</br></br>:param cert: The public</br>:type: string</br></br>:param debug: Activate the xmlsec debug</br>:type: bool</br></br>:param sign_algorithm: Signature algorithm method</br>:type sign_algorithm: string</br></br>:param digest_algorithm: Digest algorithm method</br>:type digest_algorithm: string</br></br>:returns: Signed XML</br>:rtype: string</br><hr><code>validate_sign(xml, cert=None, fingerprint=None, fingerprintalg='sha1', validatecert=False, debug=False, xpath=None, multicerts=None):</code><br/></br>Validates a signature (Message or Assertion).</br></br>:param xml: The element we should validate</br>:type: string | Document</br></br>:param cert: The public cert</br>:type: string</br></br>:param fingerprint: The fingerprint of the public cert</br>:type: string</br></br>:param fingerprintalg: The algorithm used to build the fingerprint</br>:type: string</br></br>:param validatecert: If true, will verify the signature and if the cert is valid.</br>:type: bool</br></br>:param debug: Activate the xmlsec debug</br>:type: bool</br></br>:param xpath: The xpath of the signed element</br>:type: string</br></br>:param multicerts: Multiple public certs</br>:type: list</br></br>:param raise_exceptions: Whether to return false on failure or raise an exception</br>:type raise_exceptions: Boolean</br><hr><code>validate_metadata_sign(xml, cert=None, fingerprint=None, fingerprintalg='sha1', validatecert=False, debug=False):</code><br/></br>Validates a signature of a EntityDescriptor.</br></br>:param xml: The element we should validate</br>:type: string | Document</br></br>:param cert: The public cert</br>:type: string</br></br>:param fingerprint: The fingerprint of the public cert</br>:type: string</br></br>:param fingerprintalg: The algorithm used to build the fingerprint</br>:type: string</br></br>:param validatecert: If true, will verify the signature and if the cert is valid.</br>:type: bool</br></br>:param debug: Activate the xmlsec debug</br>:type: bool</br></br>:param raise_exceptions: Whether to return false on failure or raise an exception</br>:type raise_exceptions: Boolean</br><hr><code>validate_node_sign(signature_node, elem, cert=None, fingerprint=None, fingerprintalg='sha1', validatecert=False, debug=False):</code><br/></br>Validates a signature node.</br></br>:param signature_node: The signature node</br>:type: Node</br></br>:param xml: The element we should validate</br>:type: Document</br></br>:param cert: The public cert</br>:type: string</br></br>:param fingerprint: The fingerprint of the public cert</br>:type: string</br></br>:param fingerprintalg: The algorithm used to build the fingerprint</br>:type: string</br></br>:param validatecert: If true, will verify the signature and if the cert is valid.</br>:type: bool</br></br>:param debug: Activate the xmlsec debug</br>:type: bool</br></br>:param raise_exceptions: Whether to return false on failure or raise an exception</br>:type raise_exceptions: Boolean</br><hr><code>sign_binary(msg, key, algorithm=xmlsec.Transform.RSA_SHA1, debug=False):</code><br/></br>Sign binary message</br></br>:param msg: The element we should validate</br>:type: bytes</br></br>:param key: The private key</br>:type: string</br></br>:param debug: Activate the xmlsec debug</br>:type: bool</br></br>:return signed message</br>:rtype str</br><hr><code>validate_binary_sign(signed_query, signature, cert=None, algorithm=OneLogin_Saml2_Constants.RSA_SHA1, debug=False):</code><br/></br>Validates signed binary data (Used to validate GET Signature).</br></br>:param signed_query: The element we should validate</br>:type: string</br></br></br>:param signature: The signature that will be validate</br>:type: string</br></br>:param cert: The public cert</br>:type: string</br></br>:param algorithm: Signature algorithm</br>:type: string</br></br>:param debug: Activate the xmlsec debug</br>:type: bool</br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;""" OneLogin_Saml2_Utils class
+<br>&emsp;&emsp;Auxiliary class of OneLogin's Python Toolkit.
+<br>"""
+<br>
+<br>import base64
+<br>from copy import deepcopy
+<br>import calendar
+<br>from datetime import datetime
+<br>from defusedxml.lxml import fromstring
+<br>from hashlib import sha1, sha256, sha384, sha512
+<br>from isodate import parse_duration as duration_parser
+<br>import re
+<br>from textwrap import wrap
+<br>from functools import wraps
+<br>from uuid import uuid4
+<br>from xml.dom.minidom import Element
+<br>
+<br>import zlib
+<br>import xmlsec
+<br>
+<br>from app.lib.onelogin.saml2 import compat
+<br>from app.lib.onelogin.saml2.constants import OneLogin_Saml2_Constants
+<br>from app.lib.onelogin.saml2.errors import OneLogin_Saml2_Error, OneLogin_Saml2_ValidationError
+<br>from app.lib.onelogin.saml2.xml_utils import OneLogin_Saml2_XML
+<br>
+<br>
+<br>try:
+<br>&emsp;    from urllib.parse import quote_plus  # py3
+<br>except ImportError:
+<br>&emsp;    from urllib import quote_plus  # py2
+<br>
+<br>
+<br>def return_false_on_exception(func):
+<br>def return_false_on_exception(func):
+<br>&emsp;    """
+<br>&emsp;    """
+<br>&emsp;    @wraps(func)
+<br>&emsp;    def exceptfalse(*args, **kwargs):
+<br>&emsp;    def exceptfalse(*args, **kwargs):
+<br>&emsp;&emsp;        if not kwargs.pop('raise_exceptions', False):
+<br>&emsp;&emsp;&emsp;            try:
+<br>&emsp;&emsp;&emsp;&emsp;                return func(*args, **kwargs)
+<br>&emsp;&emsp;&emsp;            except Exception:
+<br>&emsp;&emsp;&emsp;&emsp;                return False
+<br>&emsp;&emsp;        else:
+<br>&emsp;&emsp;&emsp;            return func(*args, **kwargs)
+<br>&emsp;    return exceptfalse
+<br>
+<br>
+<br>class OneLogin_Saml2_Utils(object):
+<br>class OneLogin_Saml2_Utils(object):
+<br>&emsp;    """
+<br>&emsp;&emsp;&emsp;    Auxiliary class that contains several utility methods to parse time,
+<br>&emsp;    """
+<br>
+<br>&emsp;    RESPONSE_SIGNATURE_XPATH = '/samlp:Response/ds:Signature'
+<br>&emsp;    ASSERTION_SIGNATURE_XPATH = '/samlp:Response/saml:Assertion/ds:Signature'
+<br>
+<br>&emsp;    @staticmethod
+<br>&emsp;    def escape_url(url, lowercase_urlencoding=False):
+<br>&emsp;    def escape_url(url, lowercase_urlencoding=False):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        encoded = quote_plus(url)
+<br>&emsp;&emsp;        return re.sub(r"%[A-F0-9]{2}", lambda m: m.group(0).lower(), encoded) if lowercase_urlencoding else encoded
+<br>
+<br>&emsp;    @staticmethod
+<br>&emsp;    def b64encode(data):
+<br>&emsp;    def b64encode(data):
+<br>&emsp;&emsp;        """base64 encode"""
+<br>&emsp;&emsp;        """base64 encode"""
+<br>&emsp;&emsp;        return compat.to_string(base64.b64encode(compat.to_bytes(data)))
+<br>
+<br>&emsp;    @staticmethod
+<br>&emsp;    def b64decode(data):
+<br>&emsp;    def b64decode(data):
+<br>&emsp;&emsp;        """base64 decode"""
+<br>&emsp;&emsp;        """base64 decode"""
+<br>&emsp;&emsp;        return base64.b64decode(data)
+<br>
+<br>&emsp;    @staticmethod
+<br>&emsp;    def decode_base64_and_inflate(value, ignore_zip=False):
+<br>&emsp;    def decode_base64_and_inflate(value, ignore_zip=False):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        encoded = OneLogin_Saml2_Utils.b64decode(value)
+<br>&emsp;&emsp;        try:
+<br>&emsp;&emsp;&emsp;            return zlib.decompress(encoded, -15)
+<br>&emsp;&emsp;        except zlib.error:
+<br>&emsp;&emsp;&emsp;            if not ignore_zip:
+<br>&emsp;&emsp;&emsp;&emsp;                raise
+<br>&emsp;&emsp;        return encoded
+<br>
+<br>&emsp;    @staticmethod
+<br>&emsp;    def deflate_and_base64_encode(value):
+<br>&emsp;    def deflate_and_base64_encode(value):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        return OneLogin_Saml2_Utils.b64encode(zlib.compress(compat.to_bytes(value))[2:-4])
+<br>
+<br>&emsp;    @staticmethod
+<br>&emsp;    def format_cert(cert, heads=True):
+<br>&emsp;    def format_cert(cert, heads=True):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        x509_cert = cert.replace('\x0D', '')
+<br>&emsp;&emsp;        x509_cert = x509_cert.replace('\r', '')
+<br>&emsp;&emsp;        x509_cert = x509_cert.replace('\n', '')
+<br>&emsp;&emsp;        if len(x509_cert) > 0:
+<br>&emsp;&emsp;&emsp;            x509_cert = x509_cert.replace('-----BEGIN CERTIFICATE-----', '')
+<br>&emsp;&emsp;&emsp;            x509_cert = x509_cert.replace('-----END CERTIFICATE-----', '')
+<br>&emsp;&emsp;&emsp;            x509_cert = x509_cert.replace(' ', '')
+<br>
+<br>&emsp;&emsp;&emsp;            if heads:
+<br>&emsp;&emsp;&emsp;&emsp;                x509_cert = "-----BEGIN CERTIFICATE-----\n" + "\n".join(wrap(x509_cert, 64)) + "\n-----END CERTIFICATE-----\n"
+<br>
+<br>&emsp;&emsp;        return x509_cert
+<br>
+<br>&emsp;    @staticmethod
+<br>&emsp;    def format_private_key(key, heads=True):
+<br>&emsp;    def format_private_key(key, heads=True):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        private_key = key.replace('\x0D', '')
+<br>&emsp;&emsp;        private_key = private_key.replace('\r', '')
+<br>&emsp;&emsp;        private_key = private_key.replace('\n', '')
+<br>&emsp;&emsp;        if len(private_key) > 0:
+<br>&emsp;&emsp;&emsp;            if private_key.find('-----BEGIN PRIVATE KEY-----') != -1:
+<br>&emsp;&emsp;&emsp;&emsp;                private_key = private_key.replace('-----BEGIN PRIVATE KEY-----', '')
+<br>&emsp;&emsp;&emsp;&emsp;                private_key = private_key.replace('-----END PRIVATE KEY-----', '')
+<br>&emsp;&emsp;&emsp;&emsp;                private_key = private_key.replace(' ', '')
+<br>&emsp;&emsp;&emsp;&emsp;                if heads:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    private_key = "-----BEGIN PRIVATE KEY-----\n" + "\n".join(wrap(private_key, 64)) + "\n-----END PRIVATE KEY-----\n"
+<br>&emsp;&emsp;&emsp;            else:
+<br>&emsp;&emsp;&emsp;&emsp;                private_key = private_key.replace('-----BEGIN RSA PRIVATE KEY-----', '')
+<br>&emsp;&emsp;&emsp;&emsp;                private_key = private_key.replace('-----END RSA PRIVATE KEY-----', '')
+<br>&emsp;&emsp;&emsp;&emsp;                private_key = private_key.replace(' ', '')
+<br>&emsp;&emsp;&emsp;&emsp;                if heads:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    private_key = "-----BEGIN RSA PRIVATE KEY-----\n" + "\n".join(wrap(private_key, 64)) + "\n-----END RSA PRIVATE KEY-----\n"
+<br>&emsp;&emsp;        return private_key
+<br>
+<br>&emsp;    @staticmethod
+<br>&emsp;    def redirect(url, parameters={}, request_data={}):
+<br>&emsp;    def redirect(url, parameters={}, request_data={}):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        assert isinstance(url, compat.str_type)
+<br>&emsp;&emsp;        assert isinstance(parameters, dict)
+<br>
+<br>&emsp;&emsp;        if url.startswith('/'):
+<br>&emsp;&emsp;&emsp;            url = '%s%s' % (OneLogin_Saml2_Utils.get_self_url_host(request_data), url)
+<br>
+<br>&emsp;&emsp;        # Verify that the URL is to a http or https site.
+<br>&emsp;&emsp;        if re.search('^https?://', url) is None:
+<br>&emsp;&emsp;&emsp;            raise OneLogin_Saml2_Error(
+<br>&emsp;&emsp;&emsp;&emsp;                'Redirect to invalid URL: ' + url,
+<br>&emsp;&emsp;&emsp;&emsp;                OneLogin_Saml2_Error.REDIRECT_INVALID_URL
+<br>&emsp;&emsp;&emsp;            )
+<br>
+<br>&emsp;&emsp;        # Add encoded parameters
+<br>&emsp;&emsp;        if url.find('?') < 0:
+<br>&emsp;&emsp;&emsp;            param_prefix = '?'
+<br>&emsp;&emsp;        else:
+<br>&emsp;&emsp;&emsp;            param_prefix = '&'
+<br>
+<br>&emsp;&emsp;        for name, value in parameters.items():
+<br>
+<br>&emsp;&emsp;&emsp;            if value is None:
+<br>&emsp;&emsp;&emsp;&emsp;                param = OneLogin_Saml2_Utils.escape_url(name)
+<br>&emsp;&emsp;&emsp;            elif isinstance(value, list):
+<br>&emsp;&emsp;&emsp;&emsp;                param = ''
+<br>&emsp;&emsp;&emsp;&emsp;                for val in value:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    param += OneLogin_Saml2_Utils.escape_url(name) + '[]=' + OneLogin_Saml2_Utils.escape_url(val) + '&'
+<br>&emsp;&emsp;&emsp;&emsp;                if len(param) > 0:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    param = param[0:-1]
+<br>&emsp;&emsp;&emsp;            else:
+<br>&emsp;&emsp;&emsp;&emsp;                param = OneLogin_Saml2_Utils.escape_url(name) + '=' + OneLogin_Saml2_Utils.escape_url(value)
+<br>
+<br>&emsp;&emsp;&emsp;            if param:
+<br>&emsp;&emsp;&emsp;&emsp;                url += param_prefix + param
+<br>&emsp;&emsp;&emsp;&emsp;                param_prefix = '&'
+<br>
+<br>&emsp;&emsp;        return url
+<br>
+<br>&emsp;    @staticmethod
+<br>&emsp;    def get_self_url_host(request_data):
+<br>&emsp;    def get_self_url_host(request_data):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        current_host = OneLogin_Saml2_Utils.get_self_host(request_data)
+<br>&emsp;&emsp;        port = ''
+<br>&emsp;&emsp;        if OneLogin_Saml2_Utils.is_https(request_data):
+<br>&emsp;&emsp;&emsp;            protocol = 'https'
+<br>&emsp;&emsp;        else:
+<br>&emsp;&emsp;&emsp;            protocol = 'http'
+<br>
+<br>&emsp;&emsp;        if 'server_port' in request_data and request_data['server_port'] is not None:
+<br>&emsp;&emsp;&emsp;            port_number = str(request_data['server_port'])
+<br>&emsp;&emsp;&emsp;            port = ':' + port_number
+<br>
+<br>&emsp;&emsp;&emsp;            if protocol == 'http' and port_number == '80':
+<br>&emsp;&emsp;&emsp;&emsp;                port = ''
+<br>&emsp;&emsp;&emsp;            elif protocol == 'https' and port_number == '443':
+<br>&emsp;&emsp;&emsp;&emsp;                port = ''
+<br>
+<br>&emsp;&emsp;        return '%s://%s%s' % (protocol, current_host, port)
+<br>
+<br>&emsp;    @staticmethod
+<br>&emsp;    def get_self_host(request_data):
+<br>&emsp;    def get_self_host(request_data):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        if 'http_host' in request_data:
+<br>&emsp;&emsp;&emsp;            current_host = request_data['http_host']
+<br>&emsp;&emsp;        elif 'server_name' in request_data:
+<br>&emsp;&emsp;&emsp;            current_host = request_data['server_name']
+<br>&emsp;&emsp;        else:
+<br>&emsp;&emsp;&emsp;            raise Exception('No hostname defined')
+<br>
+<br>&emsp;&emsp;        if ':' in current_host:
+<br>&emsp;&emsp;&emsp;            current_host_data = current_host.split(':')
+<br>&emsp;&emsp;&emsp;            possible_port = current_host_data[-1]
+<br>&emsp;&emsp;&emsp;            try:
+<br>&emsp;&emsp;&emsp;&emsp;                int(possible_port)
+<br>&emsp;&emsp;&emsp;&emsp;                current_host = current_host_data[0]
+<br>&emsp;&emsp;&emsp;            except ValueError:
+<br>&emsp;&emsp;&emsp;&emsp;                current_host = ':'.join(current_host_data)
+<br>
+<br>&emsp;&emsp;        return current_host
+<br>
+<br>&emsp;    @staticmethod
+<br>&emsp;    def is_https(request_data):
+<br>&emsp;    def is_https(request_data):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        is_https = 'https' in request_data and request_data['https'] != 'off'
+<br>&emsp;&emsp;        is_https = is_https or ('server_port' in request_data and str(request_data['server_port']) == '443')
+<br>&emsp;&emsp;        return is_https
+<br>
+<br>&emsp;    @staticmethod
+<br>&emsp;    def get_self_url_no_query(request_data):
+<br>&emsp;    def get_self_url_no_query(request_data):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        self_url_host = OneLogin_Saml2_Utils.get_self_url_host(request_data)
+<br>&emsp;&emsp;        script_name = request_data['script_name']
+<br>&emsp;&emsp;        if script_name:
+<br>&emsp;&emsp;&emsp;            if script_name[0] != '/':
+<br>&emsp;&emsp;&emsp;&emsp;                script_name = '/' + script_name
+<br>&emsp;&emsp;        else:
+<br>&emsp;&emsp;&emsp;            script_name = ''
+<br>&emsp;&emsp;        self_url_no_query = self_url_host + script_name
+<br>&emsp;&emsp;        if 'path_info' in request_data:
+<br>&emsp;&emsp;&emsp;            self_url_no_query += request_data['path_info']
+<br>
+<br>&emsp;&emsp;        return self_url_no_query
+<br>
+<br>&emsp;    @staticmethod
+<br>&emsp;    def get_self_routed_url_no_query(request_data):
+<br>&emsp;    def get_self_routed_url_no_query(request_data):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        self_url_host = OneLogin_Saml2_Utils.get_self_url_host(request_data)
+<br>&emsp;&emsp;        route = ''
+<br>&emsp;&emsp;        if 'request_uri' in request_data and request_data['request_uri']:
+<br>&emsp;&emsp;&emsp;            route = request_data['request_uri']
+<br>&emsp;&emsp;&emsp;            if 'query_string' in request_data and request_data['query_string']:
+<br>&emsp;&emsp;&emsp;&emsp;                route = route.replace(request_data['query_string'], '')
+<br>
+<br>&emsp;&emsp;        return self_url_host + route
+<br>
+<br>&emsp;    @staticmethod
+<br>&emsp;    def get_self_url(request_data):
+<br>&emsp;    def get_self_url(request_data):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        self_url_host = OneLogin_Saml2_Utils.get_self_url_host(request_data)
+<br>
+<br>&emsp;&emsp;        request_uri = ''
+<br>&emsp;&emsp;        if 'request_uri' in request_data:
+<br>&emsp;&emsp;&emsp;            request_uri = request_data['request_uri']
+<br>&emsp;&emsp;&emsp;            if not request_uri.startswith('/'):
+<br>&emsp;&emsp;&emsp;&emsp;                match = re.search('^https?://[^/]*(/.*)', request_uri)
+<br>&emsp;&emsp;&emsp;&emsp;                if match is not None:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    request_uri = match.groups()[0]
+<br>
+<br>&emsp;&emsp;        return self_url_host + request_uri
+<br>
+<br>&emsp;    @staticmethod
+<br>&emsp;    def generate_unique_id():
+<br>&emsp;    def generate_unique_id():
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        return 'ONELOGIN_%s' % sha1(compat.to_bytes(uuid4().hex)).hexdigest()
+<br>
+<br>&emsp;    @staticmethod
+<br>&emsp;    def parse_time_to_SAML(time):
+<br>&emsp;    def parse_time_to_SAML(time):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        data = datetime.utcfromtimestamp(float(time))
+<br>&emsp;&emsp;        return data.strftime('%Y-%m-%dT%H:%M:%SZ')
+<br>
+<br>&emsp;    @staticmethod
+<br>&emsp;    def parse_SAML_to_time(timestr):
+<br>&emsp;    def parse_SAML_to_time(timestr):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        try:
+<br>&emsp;&emsp;&emsp;            data = datetime.strptime(timestr, '%Y-%m-%dT%H:%M:%SZ')
+<br>&emsp;&emsp;        except ValueError:
+<br>&emsp;&emsp;&emsp;            data = datetime.strptime(timestr, '%Y-%m-%dT%H:%M:%S.%fZ')
+<br>&emsp;&emsp;        return calendar.timegm(data.utctimetuple())
+<br>
+<br>&emsp;    @staticmethod
+<br>&emsp;    def now():
+<br>&emsp;    def now():
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        return calendar.timegm(datetime.utcnow().utctimetuple())
+<br>
+<br>&emsp;    @staticmethod
+<br>&emsp;    def parse_duration(duration, timestamp=None):
+<br>&emsp;    def parse_duration(duration, timestamp=None):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        assert isinstance(duration, compat.str_type)
+<br>&emsp;&emsp;        assert timestamp is None or isinstance(timestamp, int)
+<br>
+<br>&emsp;&emsp;        timedelta = duration_parser(duration)
+<br>&emsp;&emsp;        if timestamp is None:
+<br>&emsp;&emsp;&emsp;            data = datetime.utcnow() + timedelta
+<br>&emsp;&emsp;        else:
+<br>&emsp;&emsp;&emsp;            data = datetime.utcfromtimestamp(timestamp) + timedelta
+<br>&emsp;&emsp;        return calendar.timegm(data.utctimetuple())
+<br>
+<br>&emsp;    @staticmethod
+<br>&emsp;    def get_expire_time(cache_duration=None, valid_until=None):
+<br>&emsp;    def get_expire_time(cache_duration=None, valid_until=None):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        expire_time = None
+<br>
+<br>&emsp;&emsp;        if cache_duration is not None:
+<br>&emsp;&emsp;&emsp;            expire_time = OneLogin_Saml2_Utils.parse_duration(cache_duration)
+<br>
+<br>&emsp;&emsp;        if valid_until is not None:
+<br>&emsp;&emsp;&emsp;            if isinstance(valid_until, int):
+<br>&emsp;&emsp;&emsp;&emsp;                valid_until_time = valid_until
+<br>&emsp;&emsp;&emsp;            else:
+<br>&emsp;&emsp;&emsp;&emsp;                valid_until_time = OneLogin_Saml2_Utils.parse_SAML_to_time(valid_until)
+<br>&emsp;&emsp;&emsp;            if expire_time is None or expire_time > valid_until_time:
+<br>&emsp;&emsp;&emsp;&emsp;                expire_time = valid_until_time
+<br>
+<br>&emsp;&emsp;        if expire_time is not None:
+<br>&emsp;&emsp;&emsp;            return '%d' % expire_time
+<br>&emsp;&emsp;        return None
+<br>
+<br>&emsp;    @staticmethod
+<br>&emsp;    def delete_local_session(callback=None):
+<br>&emsp;    def delete_local_session(callback=None):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>
+<br>&emsp;&emsp;        if callback is not None:
+<br>&emsp;&emsp;&emsp;            callback()
+<br>
+<br>&emsp;    @staticmethod
+<br>&emsp;    def calculate_x509_fingerprint(x509_cert, alg='sha1'):
+<br>&emsp;    def calculate_x509_fingerprint(x509_cert, alg='sha1'):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        assert isinstance(x509_cert, compat.str_type)
+<br>
+<br>&emsp;&emsp;        lines = x509_cert.split('\n')
+<br>&emsp;&emsp;        data = ''
+<br>&emsp;&emsp;        inData = False
+<br>
+<br>&emsp;&emsp;        for line in lines:
+<br>&emsp;&emsp;&emsp;            # Remove '\r' from end of line if present.
+<br>&emsp;&emsp;&emsp;            line = line.rstrip()
+<br>&emsp;&emsp;&emsp;            if not inData:
+<br>&emsp;&emsp;&emsp;&emsp;                if line == '-----BEGIN CERTIFICATE-----':
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    inData = True
+<br>&emsp;&emsp;&emsp;&emsp;                elif line == '-----BEGIN PUBLIC KEY-----' or line == '-----BEGIN RSA PRIVATE KEY-----':
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    # This isn't an X509 certificate.
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    return None
+<br>&emsp;&emsp;&emsp;            else:
+<br>&emsp;&emsp;&emsp;&emsp;                if line == '-----END CERTIFICATE-----':
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    break
+<br>
+<br>&emsp;&emsp;&emsp;&emsp;                # Append the current line to the certificate data.
+<br>&emsp;&emsp;&emsp;&emsp;                data += line
+<br>
+<br>&emsp;&emsp;        if not data:
+<br>&emsp;&emsp;&emsp;            return None
+<br>
+<br>&emsp;&emsp;        decoded_data = base64.b64decode(compat.to_bytes(data))
+<br>
+<br>&emsp;&emsp;        if alg == 'sha512':
+<br>&emsp;&emsp;&emsp;            fingerprint = sha512(decoded_data)
+<br>&emsp;&emsp;        elif alg == 'sha384':
+<br>&emsp;&emsp;&emsp;            fingerprint = sha384(decoded_data)
+<br>&emsp;&emsp;        elif alg == 'sha256':
+<br>&emsp;&emsp;&emsp;            fingerprint = sha256(decoded_data)
+<br>&emsp;&emsp;        else:
+<br>&emsp;&emsp;&emsp;            fingerprint = sha1(decoded_data)
+<br>
+<br>&emsp;&emsp;        return fingerprint.hexdigest().lower()
+<br>
+<br>&emsp;    @staticmethod
+<br>&emsp;    def format_finger_print(fingerprint):
+<br>&emsp;    def format_finger_print(fingerprint):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        formatted_fingerprint = fingerprint.replace(':', '')
+<br>&emsp;&emsp;        return formatted_fingerprint.lower()
+<br>
+<br>&emsp;    @staticmethod
+<br>&emsp;    def generate_name_id(value, sp_nq, sp_format=None, cert=None, debug=False, nq=None):
+<br>&emsp;    def generate_name_id(value, sp_nq, sp_format=None, cert=None, debug=False, nq=None):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>
+<br>&emsp;&emsp;        root = OneLogin_Saml2_XML.make_root("{%s}container" % OneLogin_Saml2_Constants.NS_SAML)
+<br>&emsp;&emsp;        name_id = OneLogin_Saml2_XML.make_child(root, '{%s}NameID' % OneLogin_Saml2_Constants.NS_SAML)
+<br>&emsp;&emsp;        if sp_nq is not None:
+<br>&emsp;&emsp;&emsp;            name_id.set('SPNameQualifier', sp_nq)
+<br>&emsp;&emsp;        if sp_format is not None:
+<br>&emsp;&emsp;&emsp;            name_id.set('Format', sp_format)
+<br>&emsp;&emsp;        if nq is not None:
+<br>&emsp;&emsp;&emsp;            name_id.set('NameQualifier', nq)
+<br>&emsp;&emsp;        name_id.text = value
+<br>
+<br>&emsp;&emsp;        if cert is not None:
+<br>&emsp;&emsp;&emsp;            xmlsec.enable_debug_trace(debug)
+<br>
+<br>&emsp;&emsp;&emsp;            # Load the public cert
+<br>&emsp;&emsp;&emsp;            manager = xmlsec.KeysManager()
+<br>&emsp;&emsp;&emsp;            manager.add_key(xmlsec.Key.from_memory(cert, xmlsec.KeyFormat.CERT_PEM, None))
+<br>
+<br>&emsp;&emsp;&emsp;            # Prepare for encryption
+<br>&emsp;&emsp;&emsp;            enc_data = xmlsec.template.encrypted_data_create(
+<br>&emsp;&emsp;&emsp;&emsp;                root, xmlsec.Transform.AES128, type=xmlsec.EncryptionType.ELEMENT, ns="xenc")
+<br>
+<br>&emsp;&emsp;&emsp;            xmlsec.template.encrypted_data_ensure_cipher_value(enc_data)
+<br>&emsp;&emsp;&emsp;            key_info = xmlsec.template.encrypted_data_ensure_key_info(enc_data, ns="dsig")
+<br>&emsp;&emsp;&emsp;            enc_key = xmlsec.template.add_encrypted_key(key_info, xmlsec.Transform.RSA_OAEP)
+<br>&emsp;&emsp;&emsp;            xmlsec.template.encrypted_data_ensure_cipher_value(enc_key)
+<br>
+<br>&emsp;&emsp;&emsp;            # Encrypt!
+<br>&emsp;&emsp;&emsp;            enc_ctx = xmlsec.EncryptionContext(manager)
+<br>&emsp;&emsp;&emsp;            enc_ctx.key = xmlsec.Key.generate(xmlsec.KeyData.AES, 128, xmlsec.KeyDataType.SESSION)
+<br>&emsp;&emsp;&emsp;            enc_data = enc_ctx.encrypt_xml(enc_data, name_id)
+<br>&emsp;&emsp;&emsp;            return '<saml:EncryptedID>' + compat.to_string(OneLogin_Saml2_XML.to_string(enc_data)) + '</saml:EncryptedID>'
+<br>&emsp;&emsp;        else:
+<br>&emsp;&emsp;&emsp;            return OneLogin_Saml2_XML.extract_tag_text(root, "saml:NameID")
+<br>
+<br>&emsp;    @staticmethod
+<br>&emsp;    def get_status(dom):
+<br>&emsp;    def get_status(dom):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        status = {}
+<br>
+<br>&emsp;&emsp;        status_entry = OneLogin_Saml2_XML.query(dom, '/samlp:Response/samlp:Status')
+<br>&emsp;&emsp;        if len(status_entry) != 1:
+<br>&emsp;&emsp;&emsp;            raise OneLogin_Saml2_ValidationError(
+<br>&emsp;&emsp;&emsp;&emsp;                'Missing Status on response',
+<br>&emsp;&emsp;&emsp;&emsp;                OneLogin_Saml2_ValidationError.MISSING_STATUS
+<br>&emsp;&emsp;&emsp;            )
+<br>
+<br>&emsp;&emsp;        code_entry = OneLogin_Saml2_XML.query(dom, '/samlp:Response/samlp:Status/samlp:StatusCode', status_entry[0])
+<br>&emsp;&emsp;        if len(code_entry) != 1:
+<br>&emsp;&emsp;&emsp;            raise OneLogin_Saml2_ValidationError(
+<br>&emsp;&emsp;&emsp;&emsp;                'Missing Status Code on response',
+<br>&emsp;&emsp;&emsp;&emsp;                OneLogin_Saml2_ValidationError.MISSING_STATUS_CODE
+<br>&emsp;&emsp;&emsp;            )
+<br>&emsp;&emsp;        code = code_entry[0].values()[0]
+<br>&emsp;&emsp;        status['code'] = code
+<br>
+<br>&emsp;&emsp;        status['msg'] = ''
+<br>&emsp;&emsp;        message_entry = OneLogin_Saml2_XML.query(dom, '/samlp:Response/samlp:Status/samlp:StatusMessage', status_entry[0])
+<br>&emsp;&emsp;        if len(message_entry) == 0:
+<br>&emsp;&emsp;&emsp;            subcode_entry = OneLogin_Saml2_XML.query(dom, '/samlp:Response/samlp:Status/samlp:StatusCode/samlp:StatusCode', status_entry[0])
+<br>&emsp;&emsp;&emsp;            if len(subcode_entry) == 1:
+<br>&emsp;&emsp;&emsp;&emsp;                status['msg'] = subcode_entry[0].values()[0]
+<br>&emsp;&emsp;        elif len(message_entry) == 1:
+<br>&emsp;&emsp;&emsp;            status['msg'] = OneLogin_Saml2_XML.element_text(message_entry[0])
+<br>
+<br>&emsp;&emsp;        return status
+<br>
+<br>&emsp;    @staticmethod
+<br>&emsp;    def decrypt_element(encrypted_data, key, debug=False, inplace=False):
+<br>&emsp;    def decrypt_element(encrypted_data, key, debug=False, inplace=False):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>
+<br>&emsp;&emsp;        if isinstance(encrypted_data, Element):
+<br>&emsp;&emsp;&emsp;            encrypted_data = fromstring(str(encrypted_data.toxml()))
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;        if not inplace and isinstance(encrypted_data, OneLogin_Saml2_XML._element_class):
+<br>&emsp;&emsp;        if not inplace and isinstance(encrypted_data, OneLogin_Saml2_XML._element_class):
+<br>&emsp;&emsp;&emsp;            encrypted_data = deepcopy(encrypted_data)
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;        elif isinstance(encrypted_data, OneLogin_Saml2_XML._text_class):
+<br>&emsp;&emsp;        elif isinstance(encrypted_data, OneLogin_Saml2_XML._text_class):
+<br>&emsp;&emsp;&emsp;            encrypted_data = OneLogin_Saml2_XML._parse_etree(encrypted_data)
+<br>
+<br>&emsp;&emsp;        xmlsec.enable_debug_trace(debug)
+<br>&emsp;&emsp;        manager = xmlsec.KeysManager()
+<br>
+<br>&emsp;&emsp;        manager.add_key(xmlsec.Key.from_memory(key, xmlsec.KeyFormat.PEM, None))
+<br>&emsp;&emsp;        enc_ctx = xmlsec.EncryptionContext(manager)
+<br>&emsp;&emsp;        return enc_ctx.decrypt(encrypted_data)
+<br>
+<br>&emsp;    @staticmethod
+<br>&emsp;    def add_sign(xml, key, cert, debug=False, sign_algorithm=OneLogin_Saml2_Constants.RSA_SHA1, digest_algorithm=OneLogin_Saml2_Constants.SHA1):
+<br>&emsp;    def add_sign(xml, key, cert, debug=False, sign_algorithm=OneLogin_Saml2_Constants.RSA_SHA1, digest_algorithm=OneLogin_Saml2_Constants.SHA1):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        if xml is None or xml == '':
+<br>&emsp;&emsp;&emsp;            raise Exception('Empty string supplied as input')
+<br>
+<br>&emsp;&emsp;        elem = OneLogin_Saml2_XML.to_etree(xml)
+<br>
+<br>&emsp;&emsp;        sign_algorithm_transform_map = {
+<br>&emsp;&emsp;&emsp;            OneLogin_Saml2_Constants.DSA_SHA1: xmlsec.Transform.DSA_SHA1,
+<br>&emsp;&emsp;&emsp;            OneLogin_Saml2_Constants.RSA_SHA1: xmlsec.Transform.RSA_SHA1,
+<br>&emsp;&emsp;&emsp;            OneLogin_Saml2_Constants.RSA_SHA256: xmlsec.Transform.RSA_SHA256,
+<br>&emsp;&emsp;&emsp;            OneLogin_Saml2_Constants.RSA_SHA384: xmlsec.Transform.RSA_SHA384,
+<br>&emsp;&emsp;&emsp;            OneLogin_Saml2_Constants.RSA_SHA512: xmlsec.Transform.RSA_SHA512
+<br>&emsp;&emsp;        }
+<br>&emsp;&emsp;        sign_algorithm_transform = sign_algorithm_transform_map.get(sign_algorithm, xmlsec.Transform.RSA_SHA1)
+<br>
+<br>&emsp;&emsp;        signature = xmlsec.template.create(elem, xmlsec.Transform.EXCL_C14N, sign_algorithm_transform, ns='ds')
+<br>
+<br>&emsp;&emsp;        issuer = OneLogin_Saml2_XML.query(elem, '//saml:Issuer')
+<br>&emsp;&emsp;        if len(issuer) > 0:
+<br>&emsp;&emsp;&emsp;            issuer = issuer[0]
+<br>&emsp;&emsp;&emsp;            issuer.addnext(signature)
+<br>&emsp;&emsp;&emsp;            elem_to_sign = issuer.getparent()
+<br>&emsp;&emsp;        else:
+<br>&emsp;&emsp;&emsp;            entity_descriptor = OneLogin_Saml2_XML.query(elem, '//md:EntityDescriptor')
+<br>&emsp;&emsp;&emsp;            if len(entity_descriptor) > 0:
+<br>&emsp;&emsp;&emsp;&emsp;                elem.insert(0, signature)
+<br>&emsp;&emsp;&emsp;            else:
+<br>&emsp;&emsp;&emsp;&emsp;                elem[0].insert(0, signature)
+<br>&emsp;&emsp;&emsp;            elem_to_sign = elem
+<br>
+<br>&emsp;&emsp;        elem_id = elem_to_sign.get('ID', None)
+<br>&emsp;&emsp;        if elem_id is not None:
+<br>&emsp;&emsp;&emsp;            if elem_id:
+<br>&emsp;&emsp;&emsp;&emsp;                elem_id = '#' + elem_id
+<br>&emsp;&emsp;        else:
+<br>&emsp;&emsp;&emsp;            generated_id = generated_id = OneLogin_Saml2_Utils.generate_unique_id()
+<br>&emsp;&emsp;&emsp;            elem_id = '#' + generated_id
+<br>&emsp;&emsp;&emsp;            elem_to_sign.attrib['ID'] = generated_id
+<br>
+<br>&emsp;&emsp;        xmlsec.enable_debug_trace(debug)
+<br>&emsp;&emsp;        xmlsec.tree.add_ids(elem_to_sign, ["ID"])
+<br>
+<br>&emsp;&emsp;        digest_algorithm_transform_map = {
+<br>&emsp;&emsp;&emsp;            OneLogin_Saml2_Constants.SHA1: xmlsec.Transform.SHA1,
+<br>&emsp;&emsp;&emsp;            OneLogin_Saml2_Constants.SHA256: xmlsec.Transform.SHA256,
+<br>&emsp;&emsp;&emsp;            OneLogin_Saml2_Constants.SHA384: xmlsec.Transform.SHA384,
+<br>&emsp;&emsp;&emsp;            OneLogin_Saml2_Constants.SHA512: xmlsec.Transform.SHA512
+<br>&emsp;&emsp;        }
+<br>&emsp;&emsp;        digest_algorithm_transform = digest_algorithm_transform_map.get(digest_algorithm, xmlsec.Transform.SHA1)
+<br>
+<br>&emsp;&emsp;        ref = xmlsec.template.add_reference(signature, digest_algorithm_transform, uri=elem_id)
+<br>&emsp;&emsp;        xmlsec.template.add_transform(ref, xmlsec.Transform.ENVELOPED)
+<br>&emsp;&emsp;        xmlsec.template.add_transform(ref, xmlsec.Transform.EXCL_C14N)
+<br>&emsp;&emsp;        key_info = xmlsec.template.ensure_key_info(signature)
+<br>&emsp;&emsp;        xmlsec.template.add_x509_data(key_info)
+<br>
+<br>&emsp;&emsp;        dsig_ctx = xmlsec.SignatureContext()
+<br>&emsp;&emsp;        sign_key = xmlsec.Key.from_memory(key, xmlsec.KeyFormat.PEM, None)
+<br>&emsp;&emsp;        sign_key.load_cert_from_memory(cert, xmlsec.KeyFormat.PEM)
+<br>
+<br>&emsp;&emsp;        dsig_ctx.key = sign_key
+<br>&emsp;&emsp;        dsig_ctx.sign(signature)
+<br>
+<br>&emsp;&emsp;        return OneLogin_Saml2_XML.to_string(elem)
+<br>
+<br>&emsp;    @staticmethod
+<br>&emsp;    @return_false_on_exception
+<br>&emsp;    def validate_sign(xml, cert=None, fingerprint=None, fingerprintalg='sha1', validatecert=False, debug=False, xpath=None, multicerts=None):
+<br>&emsp;    def validate_sign(xml, cert=None, fingerprint=None, fingerprintalg='sha1', validatecert=False, debug=False, xpath=None, multicerts=None):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        if xml is None or xml == '':
+<br>&emsp;&emsp;&emsp;            raise Exception('Empty string supplied as input')
+<br>
+<br>&emsp;&emsp;        elem = OneLogin_Saml2_XML.to_etree(xml)
+<br>&emsp;&emsp;        xmlsec.enable_debug_trace(debug)
+<br>&emsp;&emsp;        xmlsec.tree.add_ids(elem, ["ID"])
+<br>
+<br>&emsp;&emsp;        if xpath:
+<br>&emsp;&emsp;&emsp;            signature_nodes = OneLogin_Saml2_XML.query(elem, xpath)
+<br>&emsp;&emsp;        else:
+<br>&emsp;&emsp;&emsp;            signature_nodes = OneLogin_Saml2_XML.query(elem, OneLogin_Saml2_Utils.RESPONSE_SIGNATURE_XPATH)
+<br>
+<br>&emsp;&emsp;&emsp;            if len(signature_nodes) == 0:
+<br>&emsp;&emsp;&emsp;&emsp;                signature_nodes = OneLogin_Saml2_XML.query(elem, OneLogin_Saml2_Utils.ASSERTION_SIGNATURE_XPATH)
+<br>
+<br>&emsp;&emsp;        if len(signature_nodes) == 1:
+<br>&emsp;&emsp;&emsp;            signature_node = signature_nodes[0]
+<br>
+<br>&emsp;&emsp;&emsp;            if not multicerts:
+<br>&emsp;&emsp;&emsp;&emsp;                return OneLogin_Saml2_Utils.validate_node_sign(signature_node, elem, cert, fingerprint, fingerprintalg, validatecert, debug, raise_exceptions=True)
+<br>&emsp;&emsp;&emsp;            else:
+<br>&emsp;&emsp;&emsp;&emsp;                # If multiple certs are provided, I may ignore cert and
+<br>&emsp;&emsp;&emsp;&emsp;                # fingerprint provided by the method and just check the
+<br>&emsp;&emsp;&emsp;&emsp;                # certs multicerts
+<br>&emsp;&emsp;&emsp;&emsp;                fingerprint = fingerprintalg = None
+<br>&emsp;&emsp;&emsp;&emsp;                for cert in multicerts:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    if OneLogin_Saml2_Utils.validate_node_sign(signature_node, elem, cert, fingerprint, fingerprintalg, validatecert, False, raise_exceptions=False):
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        return True
+<br>&emsp;&emsp;&emsp;&emsp;                raise OneLogin_Saml2_ValidationError(
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    'Signature validation failed. SAML Response rejected.',
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    OneLogin_Saml2_ValidationError.INVALID_SIGNATURE
+<br>&emsp;&emsp;&emsp;&emsp;                )
+<br>&emsp;&emsp;        else:
+<br>&emsp;&emsp;&emsp;            raise OneLogin_Saml2_ValidationError(
+<br>&emsp;&emsp;&emsp;&emsp;                'Expected exactly one signature node; got {}.'.format(len(signature_nodes)),
+<br>&emsp;&emsp;&emsp;&emsp;                OneLogin_Saml2_ValidationError.WRONG_NUMBER_OF_SIGNATURES
+<br>&emsp;&emsp;&emsp;            )
+<br>
+<br>&emsp;    @staticmethod
+<br>&emsp;    @return_false_on_exception
+<br>&emsp;    def validate_metadata_sign(xml, cert=None, fingerprint=None, fingerprintalg='sha1', validatecert=False, debug=False):
+<br>&emsp;    def validate_metadata_sign(xml, cert=None, fingerprint=None, fingerprintalg='sha1', validatecert=False, debug=False):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        if xml is None or xml == '':
+<br>&emsp;&emsp;&emsp;            raise Exception('Empty string supplied as input')
+<br>
+<br>&emsp;&emsp;        elem = OneLogin_Saml2_XML.to_etree(xml)
+<br>&emsp;&emsp;        xmlsec.enable_debug_trace(debug)
+<br>&emsp;&emsp;        xmlsec.tree.add_ids(elem, ["ID"])
+<br>
+<br>&emsp;&emsp;        signature_nodes = OneLogin_Saml2_XML.query(elem, '/md:EntitiesDescriptor/ds:Signature')
+<br>
+<br>&emsp;&emsp;        if len(signature_nodes) == 0:
+<br>&emsp;&emsp;&emsp;            signature_nodes += OneLogin_Saml2_XML.query(elem, '/md:EntityDescriptor/ds:Signature')
+<br>
+<br>&emsp;&emsp;&emsp;            if len(signature_nodes) == 0:
+<br>&emsp;&emsp;&emsp;&emsp;                signature_nodes += OneLogin_Saml2_XML.query(elem, '/md:EntityDescriptor/md:SPSSODescriptor/ds:Signature')
+<br>&emsp;&emsp;&emsp;&emsp;                signature_nodes += OneLogin_Saml2_XML.query(elem, '/md:EntityDescriptor/md:IDPSSODescriptor/ds:Signature')
+<br>
+<br>&emsp;&emsp;        if len(signature_nodes) > 0:
+<br>&emsp;&emsp;&emsp;            for signature_node in signature_nodes:
+<br>&emsp;&emsp;&emsp;&emsp;                # Raises expection if invalid
+<br>&emsp;&emsp;&emsp;&emsp;                OneLogin_Saml2_Utils.validate_node_sign(signature_node, elem, cert, fingerprint, fingerprintalg, validatecert, debug, raise_exceptions=True)
+<br>&emsp;&emsp;&emsp;            return True
+<br>&emsp;&emsp;        else:
+<br>&emsp;&emsp;&emsp;            raise Exception('Could not validate metadata signature: No signature nodes found.')
+<br>
+<br>&emsp;    @staticmethod
+<br>&emsp;    @return_false_on_exception
+<br>&emsp;    def validate_node_sign(signature_node, elem, cert=None, fingerprint=None, fingerprintalg='sha1', validatecert=False, debug=False):
+<br>&emsp;    def validate_node_sign(signature_node, elem, cert=None, fingerprint=None, fingerprintalg='sha1', validatecert=False, debug=False):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        if (cert is None or cert == '') and fingerprint:
+<br>&emsp;&emsp;&emsp;            x509_certificate_nodes = OneLogin_Saml2_XML.query(signature_node, '//ds:Signature/ds:KeyInfo/ds:X509Data/ds:X509Certificate')
+<br>&emsp;&emsp;&emsp;            if len(x509_certificate_nodes) > 0:
+<br>&emsp;&emsp;&emsp;&emsp;                x509_certificate_node = x509_certificate_nodes[0]
+<br>&emsp;&emsp;&emsp;&emsp;                x509_cert_value = OneLogin_Saml2_XML.element_text(x509_certificate_node)
+<br>&emsp;&emsp;&emsp;&emsp;                x509_cert_value_formatted = OneLogin_Saml2_Utils.format_cert(x509_cert_value)
+<br>&emsp;&emsp;&emsp;&emsp;                x509_fingerprint_value = OneLogin_Saml2_Utils.calculate_x509_fingerprint(x509_cert_value_formatted, fingerprintalg)
+<br>&emsp;&emsp;&emsp;&emsp;                if fingerprint == x509_fingerprint_value:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    cert = x509_cert_value_formatted
+<br>
+<br>&emsp;&emsp;        if cert is None or cert == '':
+<br>&emsp;&emsp;&emsp;            raise OneLogin_Saml2_Error(
+<br>&emsp;&emsp;&emsp;&emsp;                'Could not validate node signature: No certificate provided.',
+<br>&emsp;&emsp;&emsp;&emsp;                OneLogin_Saml2_Error.CERT_NOT_FOUND
+<br>&emsp;&emsp;&emsp;            )
+<br>
+<br>&emsp;&emsp;        # Check if Reference URI is empty
+<br>&emsp;&emsp;        reference_elem = OneLogin_Saml2_XML.query(signature_node, '//ds:Reference')
+<br>&emsp;&emsp;        if len(reference_elem) > 0:
+<br>&emsp;&emsp;&emsp;            if reference_elem[0].get('URI') == '':
+<br>&emsp;&emsp;&emsp;&emsp;                reference_elem[0].set('URI', '#%s' % signature_node.getparent().get('ID'))
+<br>
+<br>&emsp;&emsp;        if validatecert:
+<br>&emsp;&emsp;&emsp;            manager = xmlsec.KeysManager()
+<br>&emsp;&emsp;&emsp;            manager.load_cert_from_memory(cert, xmlsec.KeyFormat.CERT_PEM, xmlsec.KeyDataType.TRUSTED)
+<br>&emsp;&emsp;&emsp;            dsig_ctx = xmlsec.SignatureContext(manager)
+<br>&emsp;&emsp;        else:
+<br>&emsp;&emsp;&emsp;            dsig_ctx = xmlsec.SignatureContext()
+<br>&emsp;&emsp;&emsp;            dsig_ctx.key = xmlsec.Key.from_memory(cert, xmlsec.KeyFormat.CERT_PEM, None)
+<br>
+<br>&emsp;&emsp;        dsig_ctx.set_enabled_key_data([xmlsec.KeyData.X509])
+<br>
+<br>&emsp;&emsp;        try:
+<br>&emsp;&emsp;&emsp;            dsig_ctx.verify(signature_node)
+<br>&emsp;&emsp;        except Exception as err:
+<br>&emsp;&emsp;&emsp;            raise OneLogin_Saml2_ValidationError(
+<br>&emsp;&emsp;&emsp;&emsp;                'Signature validation failed. SAML Response rejected. %s',
+<br>&emsp;&emsp;&emsp;&emsp;                OneLogin_Saml2_ValidationError.INVALID_SIGNATURE,
+<br>&emsp;&emsp;&emsp;&emsp;                str(err)
+<br>&emsp;&emsp;&emsp;            )
+<br>
+<br>&emsp;&emsp;        return True
+<br>
+<br>&emsp;    @staticmethod
+<br>&emsp;    def sign_binary(msg, key, algorithm=xmlsec.Transform.RSA_SHA1, debug=False):
+<br>&emsp;    def sign_binary(msg, key, algorithm=xmlsec.Transform.RSA_SHA1, debug=False):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>
+<br>&emsp;&emsp;        if isinstance(msg, str):
+<br>&emsp;&emsp;&emsp;            msg = msg.encode('utf8')
+<br>
+<br>&emsp;&emsp;        xmlsec.enable_debug_trace(debug)
+<br>&emsp;&emsp;        dsig_ctx = xmlsec.SignatureContext()
+<br>&emsp;&emsp;        dsig_ctx.key = xmlsec.Key.from_memory(key, xmlsec.KeyFormat.PEM, None)
+<br>&emsp;&emsp;        return dsig_ctx.sign_binary(compat.to_bytes(msg), algorithm)
+<br>
+<br>&emsp;    @staticmethod
+<br>&emsp;    def validate_binary_sign(signed_query, signature, cert=None, algorithm=OneLogin_Saml2_Constants.RSA_SHA1, debug=False):
+<br>&emsp;    def validate_binary_sign(signed_query, signature, cert=None, algorithm=OneLogin_Saml2_Constants.RSA_SHA1, debug=False):
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        """
+<br>&emsp;&emsp;        try:
+<br>&emsp;&emsp;&emsp;            xmlsec.enable_debug_trace(debug)
+<br>&emsp;&emsp;&emsp;            dsig_ctx = xmlsec.SignatureContext()
+<br>&emsp;&emsp;&emsp;            dsig_ctx.key = xmlsec.Key.from_memory(cert, xmlsec.KeyFormat.CERT_PEM, None)
+<br>
+<br>&emsp;&emsp;&emsp;            sign_algorithm_transform_map = {
+<br>&emsp;&emsp;&emsp;&emsp;                OneLogin_Saml2_Constants.DSA_SHA1: xmlsec.Transform.DSA_SHA1,
+<br>&emsp;&emsp;&emsp;&emsp;                OneLogin_Saml2_Constants.RSA_SHA1: xmlsec.Transform.RSA_SHA1,
+<br>&emsp;&emsp;&emsp;&emsp;                OneLogin_Saml2_Constants.RSA_SHA256: xmlsec.Transform.RSA_SHA256,
+<br>&emsp;&emsp;&emsp;&emsp;                OneLogin_Saml2_Constants.RSA_SHA384: xmlsec.Transform.RSA_SHA384,
+<br>&emsp;&emsp;&emsp;&emsp;                OneLogin_Saml2_Constants.RSA_SHA512: xmlsec.Transform.RSA_SHA512
+<br>&emsp;&emsp;&emsp;            }
+<br>&emsp;&emsp;&emsp;            sign_algorithm_transform = sign_algorithm_transform_map.get(algorithm, xmlsec.Transform.RSA_SHA1)
+<br>
+<br>&emsp;&emsp;&emsp;            dsig_ctx.verify_binary(compat.to_bytes(signed_query),
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                                   sign_algorithm_transform,
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                                   compat.to_bytes(signature))
+<br>&emsp;&emsp;&emsp;            return True
+<br>&emsp;&emsp;        except xmlsec.Error as e:
+<br>&emsp;&emsp;&emsp;            if debug:
+<br>&emsp;&emsp;&emsp;&emsp;                print(e)
+<br>&emsp;&emsp;&emsp;            return False
+<br>
                    </p>
                 </details>
 

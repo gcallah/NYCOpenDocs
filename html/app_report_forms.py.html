@@ -1148,6 +1148,11 @@
                             </a>
                         </li>
                         <li>
+                            <a href="/NYCOpenDocs/html/app_static_js_request_new-request-anon.js.html">
+                                new-request-anon.js
+                            </a>
+                        </li>
+                        <li>
                             <a href="/NYCOpenDocs/html/app_static_js_request_new-request-user.js.html">
                                 new-request-user.js
                             </a>
@@ -2069,11 +2074,6 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.html.html">
                             new_request_anon.html
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.js.html.html">
-                            new_request_anon.js.html
                         </a>
                     </li>
                     <li>
@@ -3230,7 +3230,20 @@ No problems to report
                     <p>
 <!-- Include the documentation here! -->
 
-</br>.. module:: report.forms.</br></br>:synopsis: Defines forms used for report statistics.</br><hr><code>ReportFilterForm(Form):</code><br/></br>Form for users to filter different report statistics.</br></br>agency: agency selected to filter by</br>user: active agency user selected to filter by</br><hr><code>__init__(self):</code><br/><hr><code>AcknowledgmentForm(Form):</code><br/>Form to generate a report with acknowledgment data.</br><hr><code>validate(self):</code><br/>
+"""
+<br>.. module:: report.forms.
+<br>
+<br>&emsp;    :synopsis: Defines forms used for report statistics.
+<br>"""
+<br>class ReportFilterForm(Form):
+<br>&emsp;    """
+<br>&emsp;    Form for users to filter different report statistics.
+<br>
+<br>&emsp;    agency: agency selected to filter by
+<br>&emsp;    user: active agency user selected to filter by
+<br>&emsp;    """
+<br>&emsp;    def __init__(self):
+<br>
                    </p>
                 </details>
 

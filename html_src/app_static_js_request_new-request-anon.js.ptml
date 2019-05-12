@@ -3,7 +3,7 @@
     <head>
 <!--include head.txt -->
         <title>
-            new_request_anon.js.html
+            new-request-anon.js
         </title>
     </head>
 
@@ -19,7 +19,7 @@
                     </figcaption>
                 </figure>
                 <h1>
-                    new_request_anon.js.html
+                    new-request-anon.js
                 </h1>
 
                 <details>
@@ -29,7 +29,7 @@
 
                     <p>
 <!-- Include the text material here! -->
-<!--include templates/app_templates_request_new_request_anon.js.html_hw.txt -->
+<!--include templates/app_static_js_request_new-request-anon.js_hw.txt -->
                     </p>
                 </details>
 
@@ -52,13 +52,13 @@
 
                     <p>
 <!-- Include the documentation here! -->
-<!--include templates/app_templates_request_new_request_anon.js.html_ex.txt -->
+<!--include templates/app_static_js_request_new-request-anon.js_ex.txt -->
                    </p>
                 </details>
 
 <!-- Include source code here! -->
                 <p>
-<a href="https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/request/new_request_anon.js.html">Source code</a>
+<a href="https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/new-request-anon.js">Source code</a>
                 </p>
             </div>
         </div>

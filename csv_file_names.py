@@ -70,7 +70,7 @@ def create_csv(connector):
             output_lst[TITLE] = file
             output_lst[URL] = html_url + file.strip(".") + ".html"
             output_lst[LINK_INSERT] = source_code + file
-            if ".py" in file or ".js" in file or ".css" in file or ".html" in file:
+            if ".py" in file or ".js" in file or ".css" in file or ".html" in file or ".sh" in file or ".yml" in file:
                 output_lst[DOC_TXT] = template_dir + file.strip(".") + "_ex.txt"
                 output_lst[HW_TXT] = template_dir + file.strip(".") + "_hw.txt"
             if ".py" in file:
@@ -92,7 +92,7 @@ def create_csv(connector):
                 if index_dif == len(file) - 1:
                     output_lst[URL] = html_url + "_".join(file) + ".html"
                     output_lst[LINK_INSERT] = source_code + "/".join(file)
-                    if ".py" in file[-1] or ".js" in file[-1] or ".css" in file[-1] or ".html" in file[-1]:
+                    if ".py" in file[-1] or ".js" in file[-1] or ".css" in file[-1] or ".html" in file[-1] or ".sh" in file[-1] or ".yml" in file[-1]:
                         output_lst[DOC_TXT] = template_dir + "_".join(file) + "_ex.txt"
                         output_lst[HW_TXT] = template_dir + "_".join(file) + "_hw.txt"
                     if ".py" in file[-1]:

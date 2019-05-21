@@ -56,3 +56,5 @@ extract_docs:
 site_struct: menu ptml_files
 	git add $(PTML_DIR)/*.ptml
 	make local
+
+all: menu_inp site_outline menu ptml_files extract_docs local

@@ -1148,11 +1148,6 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/NYCOpenDocs/html/app_static_js_request_new-request-anon.js.html">
-                                new-request-anon.js
-                            </a>
-                        </li>
-                        <li>
                             <a href="/NYCOpenDocs/html/app_static_js_request_new-request-user.js.html">
                                 new-request-user.js
                             </a>
@@ -1227,21 +1222,6 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_static_styles_about.css.html">
                             about.css
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_acknowledgment.css.html">
-                            add_acknowledgment.css
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_closing.css.html">
-                            add_closing.css
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_denial.css.html">
-                            add_denial.css
                         </a>
                     </li>
                     <li>
@@ -1639,11 +1619,6 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_footer.html.html">
-                            email_footer.html
-                        </a>
-                    </li>
-                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_not_onboarded.html.html">
                             email_not_onboarded.html
                         </a>
@@ -1651,6 +1626,11 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_private_file_upload.html.html">
                             email_private_file_upload.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_request_info.html.html">
+                            email_request_info.html
                         </a>
                     </li>
                     <li>
@@ -2074,6 +2054,11 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.html.html">
                             new_request_anon.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.js.html.html">
+                            new_request_anon.js.html
                         </a>
                     </li>
                     <li>
@@ -3213,76 +3198,7 @@ No problems to report
                     <p>
 <!-- Include the documentation here! -->
 
-&emsp;&emsp;&emsp;&emsp;&emsp;""" py3 compatibility class
-<br>"""
-<br>
-<br>from __future__ import absolute_import, print_function, with_statement
-<br>
-<br>try:
-<br>&emsp;    basestring
-<br>except NameError:
-<br>&emsp;    basestring = str
-<br>
-<br>try:
-<br>&emsp;    unicode
-<br>except NameError:
-<br>&emsp;    unicode = str
-<br>
-<br>
-<br>if isinstance(b'', type('')):  # py 2.x
-<br>&emsp;    text_types = (basestring,)  # noqa
-<br>&emsp;    str_type = basestring  # noqa
-<br>
-<br>&emsp;    def utf8(data):
-<br>&emsp;    def utf8(data):
-<br>&emsp;&emsp;        """  return utf8-encoded string """
-<br>&emsp;&emsp;        """  return utf8-encoded string """
-<br>&emsp;&emsp;        if isinstance(data, basestring):
-<br>&emsp;&emsp;&emsp;            return data.decode("utf8")
-<br>&emsp;&emsp;        return unicode(data)
-<br>
-<br>&emsp;    def to_string(data):
-<br>&emsp;    def to_string(data):
-<br>&emsp;&emsp;        """ return string """
-<br>&emsp;&emsp;        """ return string """
-<br>&emsp;&emsp;        if isinstance(data, unicode):
-<br>&emsp;&emsp;&emsp;            return data.encode("utf8")
-<br>&emsp;&emsp;        return str(data)
-<br>
-<br>&emsp;    def to_bytes(data):
-<br>&emsp;    def to_bytes(data):
-<br>&emsp;&emsp;        """ return bytes """
-<br>&emsp;&emsp;        """ return bytes """
-<br>&emsp;&emsp;        return str(data)
-<br>
-<br>else:  # py 3.x
-<br>&emsp;    text_types = (bytes, str)
-<br>&emsp;    str_type = str
-<br>
-<br>&emsp;    def utf8(data):
-<br>&emsp;    def utf8(data):
-<br>&emsp;&emsp;        """ return utf8-encoded string """
-<br>&emsp;&emsp;        """ return utf8-encoded string """
-<br>&emsp;&emsp;        if isinstance(data, bytes):
-<br>&emsp;&emsp;&emsp;            return data.decode("utf8")
-<br>&emsp;&emsp;        return str(data)
-<br>
-<br>&emsp;    def to_string(data):
-<br>&emsp;    def to_string(data):
-<br>&emsp;&emsp;        """convert to string"""
-<br>&emsp;&emsp;        """convert to string"""
-<br>&emsp;&emsp;        if isinstance(data, bytes):
-<br>&emsp;&emsp;&emsp;            return data.decode("utf8")
-<br>&emsp;&emsp;        return str(data)
-<br>
-<br>&emsp;    def to_bytes(data):
-<br>&emsp;    def to_bytes(data):
-<br>&emsp;&emsp;        """return bytes"""
-<br>&emsp;&emsp;        """return bytes"""
-<br>&emsp;&emsp;        if isinstance(data, str):
-<br>&emsp;&emsp;&emsp;            return data.encode("utf8")
-<br>&emsp;&emsp;        return bytes(data)
-<br>
+ py3 compatibility class</br></br>Copyright (c) 2010-2018 OneLogin, Inc.</br>MIT License</br></br><hr><code>utf8(data):</code><br/>  return utf8-encoded string </br><hr><code>to_string(data):</code><br/> return string </br><hr><code>to_bytes(data):</code><br/> return bytes </br><hr><code>utf8(data):</code><br/> return utf8-encoded string </br><hr><code>to_string(data):</code><br/>convert to string</br><hr><code>to_bytes(data):</code><br/>return bytes</br>
                    </p>
                 </details>
 

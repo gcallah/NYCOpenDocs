@@ -1,0 +1,2 @@
+A shell script to set up a virtual environment and install the
+necessary requirements files. 

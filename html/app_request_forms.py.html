@@ -1148,11 +1148,6 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/NYCOpenDocs/html/app_static_js_request_new-request-anon.js.html">
-                                new-request-anon.js
-                            </a>
-                        </li>
-                        <li>
                             <a href="/NYCOpenDocs/html/app_static_js_request_new-request-user.js.html">
                                 new-request-user.js
                             </a>
@@ -1227,21 +1222,6 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_static_styles_about.css.html">
                             about.css
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_acknowledgment.css.html">
-                            add_acknowledgment.css
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_closing.css.html">
-                            add_closing.css
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_denial.css.html">
-                            add_denial.css
                         </a>
                     </li>
                     <li>
@@ -1639,11 +1619,6 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_footer.html.html">
-                            email_footer.html
-                        </a>
-                    </li>
-                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_not_onboarded.html.html">
                             email_not_onboarded.html
                         </a>
@@ -1651,6 +1626,11 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_private_file_upload.html.html">
                             email_private_file_upload.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_request_info.html.html">
+                            email_request_info.html
                         </a>
                     </li>
                     <li>
@@ -2074,6 +2054,11 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.html.html">
                             new_request_anon.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.js.html.html">
+                            new_request_anon.js.html
                         </a>
                     </li>
                     <li>
@@ -3275,120 +3260,7 @@ app/request/forms.py:403:44: E711 comparison to None should be 'if cond is None:
                     <p>
 <!-- Include the documentation here! -->
 
-"""
-<br>.. module:: request.forms.
-<br>
-<br>&emsp;    :synopsis: Defines forms used to create FOIL requests.
-<br>"""
-<br>class PublicUserRequestForm(Form):
-<br>&emsp;    """
-<br>&emsp;    Form for public users to create a new FOIL request.
-<br>&emsp;    For a public user, the required fields are:
-<br>
-<br>&emsp;    # Request information
-<br>&emsp;    agency: agency selected for the request
-<br>&emsp;    title: name or title of the request
-<br>&emsp;    description: detailed description of the request
-<br>
-<br>&emsp;    """
-<br>&emsp;    def __init__(self):
-<br>class AgencyUserRequestForm(Form):
-<br>&emsp;    """
-<br>&emsp;    Form for agency users to create a new FOIL request.
-<br>&emsp;    For an agency user, the required fields are:
-<br>
-<br>&emsp;    # Request Information
-<br>&emsp;    agency: agency selected for the request
-<br>&emsp;    title: name or title of the request
-<br>&emsp;    description: detailed description of the request
-<br>&emsp;    request_date: date the request was made
-<br>&emsp;    method_received: format the request was received
-<br>
-<br>&emsp;    # Personal Information
-<br>&emsp;    first_name: first name of the requester
-<br>&emsp;    last_name: last name of the requester
-<br>
-<br>&emsp;    # Contact Information (at least one form on contact is required)
-<br>&emsp;    email: requester's email address
-<br>&emsp;    phone: requester's phone number
-<br>&emsp;    fax: requester's fax number
-<br>&emsp;    address, city, state, zip: requester's address
-<br>&emsp;    """
-<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;    # TODO: when refactoring these classes, include length and other validators
-<br>&emsp;    def __init__(self):
-<br>class AnonymousRequestForm(Form):
-<br>&emsp;    """
-<br>&emsp;    Form for anonymous users to create a new FOIL request.
-<br>&emsp;    For a anonymous user, the required fields are:
-<br>
-<br>&emsp;    # Request Information
-<br>&emsp;    agency: agency selected for the request
-<br>&emsp;    title: name or title of the request
-<br>&emsp;    description: detailed description of the request
-<br>
-<br>&emsp;    # Personal Information
-<br>&emsp;    first_name: first name of the requester
-<br>&emsp;    last_name: last name of the requester
-<br>
-<br>&emsp;    # Contact Information (at least one form on contact is required)
-<br>&emsp;    email: requester's email address
-<br>&emsp;    phone: requester's phone number
-<br>&emsp;    fax: requester's fax number
-<br>&emsp;    address, city, state, zip: requester's address
-<br>&emsp;    """
-<br>&emsp;    def __init__(self):
-<br>class EditRequesterForm(Form):
-<br>&emsp;&emsp;&emsp;&emsp;    # TODO: Add class docstring
-<br>&emsp;    def __init__(self, requester):
-<br>&emsp;&emsp;        """
-<br>&emsp;&emsp;        :type requester: app.models.Users
-<br>&emsp;&emsp;        """
-<br>class DeterminationForm(Form):
-<br>&emsp;&emsp;&emsp;&emsp;    # TODO: Add class docstring
-<br>&emsp;    def __init__(self, agency_ein):
-<br>&emsp;    def reasons(self):
-<br>&emsp;&emsp;        """ SelectMultipleField or SelectField """
-<br>&emsp;    def ultimate_determination_type(self):
-<br>&emsp;&emsp;        """ Closing or Denial """
-<br>class DenyRequestForm(DeterminationForm):
-<br>&emsp;&emsp;&emsp;&emsp;    # TODO: Add class docstring
-<br>class CloseRequestForm(DeterminationForm):
-<br>&emsp;&emsp;&emsp;&emsp;    # TODO: Add class docstring
-<br>class ReopenRequestForm(DeterminationForm):
-<br>&emsp;&emsp;&emsp;&emsp;    # TODO: Add class docstring
-<br>class GenerateEnvelopeForm(Form):
-<br>&emsp;&emsp;&emsp;&emsp;    # TODO: Add class docstring
-<br>&emsp;    def __init__(self, agency_ein, requester):
-<br>&emsp;&emsp;        """
-<br>&emsp;&emsp;        :type requester: app.models.Users
-<br>&emsp;&emsp;        """
-<br>class GenerateLetterForm(Form):
-<br>&emsp;&emsp;&emsp;&emsp;    # TODO: Add class docstring
-<br>&emsp;    def __init__(self, agency_ein):
-<br>&emsp;    def letter_templates(self):
-<br>&emsp;&emsp;        """ SelectField """
-<br>&emsp;    def letter_type(self):
-<br>&emsp;&emsp;        """ Acknowledgement, Extension, """
-<br>class GenerateAcknowledgmentLetterForm(GenerateLetterForm):
-<br>&emsp;&emsp;&emsp;&emsp;    # TODO: Add class docstring
-<br>class GenerateDenialLetterForm(GenerateLetterForm):
-<br>&emsp;&emsp;&emsp;&emsp;    # TODO: Add class docstring
-<br>class GenerateClosingLetterForm(GenerateLetterForm):
-<br>&emsp;&emsp;&emsp;&emsp;    # TODO: Add class docstring
-<br>&emsp;    def __init__(self, agency_ein):
-<br>class GenerateExtensionLetterForm(GenerateLetterForm):
-<br>&emsp;&emsp;&emsp;&emsp;    # TODO: Add class docstring
-<br>class GenerateReopeningLetterForm(GenerateLetterForm):
-<br>&emsp;&emsp;&emsp;&emsp;    # TODO: Add class docstring
-<br>class GenerateResponseLetterForm(GenerateLetterForm):
-<br>&emsp;&emsp;&emsp;&emsp;    # TODO: Add class docstring
-<br>class SearchRequestsForm(Form):
-<br>&emsp;&emsp;&emsp;&emsp;    # TODO: Add class docstring
-<br>&emsp;    def __init__(self):
-<br>class ContactAgencyForm(Form):
-<br>&emsp;&emsp;&emsp;&emsp;    # TODO: Add class docstring
-<br>&emsp;    def __init__(self, request):
-<br>
+</br>.. module:: request.forms.</br></br>:synopsis: Defines forms used to create FOIL requests.</br><hr><code>PublicUserRequestForm(Form):</code><br/></br>Form for public users to create a new FOIL request.</br>For a public user, the required fields are:</br></br># Request information</br>agency: agency selected for the request</br>title: name or title of the request</br>description: detailed description of the request</br></br><hr><code>__init__(self):</code><br/><hr><code>AgencyUserRequestForm(Form):</code><br/></br>Form for agency users to create a new FOIL request.</br>For an agency user, the required fields are:</br></br># Request Information</br>agency: agency selected for the request</br>title: name or title of the request</br>description: detailed description of the request</br>request_date: date the request was made</br>method_received: format the request was received</br></br># Personal Information</br>first_name: first name of the requester</br>last_name: last name of the requester</br></br># Contact Information (at least one form on contact is required)</br>email: requester's email address</br>phone: requester's phone number</br>fax: requester's fax number</br>address, city, state, zip: requester's address</br><hr><code>__init__(self):</code><br/><hr><code>AnonymousRequestForm(Form):</code><br/></br>Form for anonymous users to create a new FOIL request.</br>For a anonymous user, the required fields are:</br></br># Request Information</br>agency: agency selected for the request</br>title: name or title of the request</br>description: detailed description of the request</br></br># Personal Information</br>first_name: first name of the requester</br>last_name: last name of the requester</br></br># Contact Information (at least one form on contact is required)</br>email: requester's email address</br>phone: requester's phone number</br>fax: requester's fax number</br>address, city, state, zip: requester's address</br><hr><code>__init__(self):</code><br/><hr><code>EditRequesterForm(Form):</code><br/><hr><code>__init__(self, requester):</code><br/></br>:type requester: app.models.Users</br><hr><code>DeterminationForm(Form):</code><br/><hr><code>__init__(self, agency_ein):</code><br/><hr><code>reasons(self):</code><br/> SelectMultipleField or SelectField </br><hr><code>ultimate_determination_type(self):</code><br/> Closing or Denial </br><hr><code>DenyRequestForm(DeterminationForm):</code><br/><hr><code>CloseRequestForm(DeterminationForm):</code><br/><hr><code>ReopenRequestForm(DeterminationForm):</code><br/><hr><code>GenerateEnvelopeForm(Form):</code><br/><hr><code>__init__(self, agency_ein, requester):</code><br/></br>:type requester: app.models.Users</br><hr><code>GenerateLetterForm(Form):</code><br/><hr><code>__init__(self, agency_ein):</code><br/><hr><code>letter_templates(self):</code><br/> SelectField </br><hr><code>letter_type(self):</code><br/> Acknowledgement, Extension, </br><hr><code>GenerateAcknowledgmentLetterForm(GenerateLetterForm):</code><br/><hr><code>GenerateDenialLetterForm(GenerateLetterForm):</code><br/><hr><code>GenerateClosingLetterForm(GenerateLetterForm):</code><br/><hr><code>__init__(self, agency_ein):</code><br/><hr><code>GenerateExtensionLetterForm(GenerateLetterForm):</code><br/><hr><code>GenerateReopeningLetterForm(GenerateLetterForm):</code><br/><hr><code>GenerateResponseLetterForm(GenerateLetterForm):</code><br/><hr><code>SearchRequestsForm(Form):</code><br/><hr><code>__init__(self):</code><br/><hr><code>ContactAgencyForm(Form):</code><br/><hr><code>__init__(self, request):</code><br/>
                    </p>
                 </details>
 

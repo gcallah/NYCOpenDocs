@@ -1148,11 +1148,6 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/NYCOpenDocs/html/app_static_js_request_new-request-anon.js.html">
-                                new-request-anon.js
-                            </a>
-                        </li>
-                        <li>
                             <a href="/NYCOpenDocs/html/app_static_js_request_new-request-user.js.html">
                                 new-request-user.js
                             </a>
@@ -1227,21 +1222,6 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_static_styles_about.css.html">
                             about.css
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_acknowledgment.css.html">
-                            add_acknowledgment.css
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_closing.css.html">
-                            add_closing.css
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_denial.css.html">
-                            add_denial.css
                         </a>
                     </li>
                     <li>
@@ -1639,11 +1619,6 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_footer.html.html">
-                            email_footer.html
-                        </a>
-                    </li>
-                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_not_onboarded.html.html">
                             email_not_onboarded.html
                         </a>
@@ -1651,6 +1626,11 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_private_file_upload.html.html">
                             email_private_file_upload.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_request_info.html.html">
+                            email_request_info.html
                         </a>
                     </li>
                     <li>
@@ -2074,6 +2054,11 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.html.html">
                             new_request_anon.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.js.html.html">
+                            new_request_anon.js.html
                         </a>
                     </li>
                     <li>
@@ -3213,119 +3198,7 @@ No problems to report
                     <p>
 <!-- Include the documentation here! -->
 
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;""" OneLogin_Saml2_Constants class
-<br>&emsp;&emsp;Constants class of OneLogin's Python Toolkit.
-<br>"""
-<br>
-<br>
-<br>class OneLogin_Saml2_Constants(object):
-<br>class OneLogin_Saml2_Constants(object):
-<br>&emsp;    """
-<br>&emsp;&emsp;    This class defines all the constants that will be used
-<br>&emsp;    """
-<br>
-<br>&emsp;    # Value added to the current time in time condition validations
-<br>&emsp;    ALLOWED_CLOCK_DRIFT = 300
-<br>
-<br>&emsp;    # NameID Formats
-<br>&emsp;    NAMEID_EMAIL_ADDRESS = 'urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress'
-<br>&emsp;    NAMEID_X509_SUBJECT_NAME = 'urn:oasis:names:tc:SAML:1.1:nameid-format:X509SubjectName'
-<br>&emsp;    NAMEID_WINDOWS_DOMAIN_QUALIFIED_NAME = 'urn:oasis:names:tc:SAML:1.1:nameid-format:WindowsDomainQualifiedName'
-<br>&emsp;    NAMEID_UNSPECIFIED = 'urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified'
-<br>&emsp;    NAMEID_KERBEROS = 'urn:oasis:names:tc:SAML:2.0:nameid-format:kerberos'
-<br>&emsp;    NAMEID_ENTITY = 'urn:oasis:names:tc:SAML:2.0:nameid-format:entity'
-<br>&emsp;    NAMEID_TRANSIENT = 'urn:oasis:names:tc:SAML:2.0:nameid-format:transient'
-<br>&emsp;    NAMEID_PERSISTENT = 'urn:oasis:names:tc:SAML:2.0:nameid-format:persistent'
-<br>&emsp;    NAMEID_ENCRYPTED = 'urn:oasis:names:tc:SAML:2.0:nameid-format:encrypted'
-<br>
-<br>&emsp;    # Attribute Name Formats
-<br>&emsp;    ATTRNAME_FORMAT_UNSPECIFIED = 'urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified'
-<br>&emsp;    ATTRNAME_FORMAT_URI = 'urn:oasis:names:tc:SAML:2.0:attrname-format:uri'
-<br>&emsp;    ATTRNAME_FORMAT_BASIC = 'urn:oasis:names:tc:SAML:2.0:attrname-format:basic'
-<br>
-<br>&emsp;    # Namespaces
-<br>&emsp;    NS_SAML = 'urn:oasis:names:tc:SAML:2.0:assertion'
-<br>&emsp;    NS_SAMLP = 'urn:oasis:names:tc:SAML:2.0:protocol'
-<br>&emsp;    NS_SOAP = 'http://schemas.xmlsoap.org/soap/envelope/'
-<br>&emsp;    NS_MD = 'urn:oasis:names:tc:SAML:2.0:metadata'
-<br>&emsp;    NS_XS = 'http://www.w3.org/2001/XMLSchema'
-<br>&emsp;    NS_XSI = 'http://www.w3.org/2001/XMLSchema-instance'
-<br>&emsp;    NS_XENC = 'http://www.w3.org/2001/04/xmlenc#'
-<br>&emsp;    NS_DS = 'http://www.w3.org/2000/09/xmldsig#'
-<br>
-<br>&emsp;    # Namespace Prefixes
-<br>&emsp;    NS_PREFIX_SAML = 'saml'
-<br>&emsp;    NS_PREFIX_SAMLP = 'samlp'
-<br>&emsp;    NS_PREFIX_MD = 'md'
-<br>&emsp;    NS_PREFIX_XS = 'xs'
-<br>&emsp;    NS_PREFIX_XSI = 'xsi'
-<br>&emsp;    NS_PREFIX_XENC = 'xenc'
-<br>&emsp;    NS_PREFIX_DS = 'ds'
-<br>
-<br>&emsp;    # Prefix:Namespace Mappings
-<br>&emsp;    NSMAP = {
-<br>&emsp;&emsp;        NS_PREFIX_SAMLP: NS_SAMLP,
-<br>&emsp;&emsp;        NS_PREFIX_SAML: NS_SAML,
-<br>&emsp;&emsp;        NS_PREFIX_DS: NS_DS,
-<br>&emsp;&emsp;        NS_PREFIX_XENC: NS_XENC,
-<br>&emsp;&emsp;        NS_PREFIX_MD: NS_MD
-<br>&emsp;    }
-<br>
-<br>&emsp;    # Bindings
-<br>&emsp;    BINDING_HTTP_POST = 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST'
-<br>&emsp;    BINDING_HTTP_REDIRECT = 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect'
-<br>&emsp;    BINDING_HTTP_ARTIFACT = 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact'
-<br>&emsp;    BINDING_SOAP = 'urn:oasis:names:tc:SAML:2.0:bindings:SOAP'
-<br>&emsp;    BINDING_DEFLATE = 'urn:oasis:names:tc:SAML:2.0:bindings:URL-Encoding:DEFLATE'
-<br>
-<br>&emsp;    # Auth Context Class
-<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;    AC_UNSPECIFIED = 'urn:oasis:names:tc:SAML:2.0:ac:classes:unspecified'
-<br>&emsp;    AC_UNSPECIFIED = 'urn:oasis:names:tc:SAML:2.0:ac:classes:unspecified'
-<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;    AC_PASSWORD = 'urn:oasis:names:tc:SAML:2.0:ac:classes:Password'
-<br>&emsp;    AC_PASSWORD = 'urn:oasis:names:tc:SAML:2.0:ac:classes:Password'
-<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;    AC_PASSWORD_PROTECTED = 'urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport'
-<br>&emsp;    AC_PASSWORD_PROTECTED = 'urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport'
-<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;    AC_X509 = 'urn:oasis:names:tc:SAML:2.0:ac:classes:X509'
-<br>&emsp;    AC_X509 = 'urn:oasis:names:tc:SAML:2.0:ac:classes:X509'
-<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;    AC_SMARTCARD = 'urn:oasis:names:tc:SAML:2.0:ac:classes:Smartcard'
-<br>&emsp;    AC_SMARTCARD = 'urn:oasis:names:tc:SAML:2.0:ac:classes:Smartcard'
-<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;    AC_KERBEROS = 'urn:oasis:names:tc:SAML:2.0:ac:classes:Kerberos'
-<br>&emsp;    AC_KERBEROS = 'urn:oasis:names:tc:SAML:2.0:ac:classes:Kerberos'
-<br>
-<br>&emsp;    # Subject Confirmation
-<br>&emsp;    CM_BEARER = 'urn:oasis:names:tc:SAML:2.0:cm:bearer'
-<br>&emsp;    CM_HOLDER_KEY = 'urn:oasis:names:tc:SAML:2.0:cm:holder-of-key'
-<br>&emsp;    CM_SENDER_VOUCHES = 'urn:oasis:names:tc:SAML:2.0:cm:sender-vouches'
-<br>
-<br>&emsp;    # Status Codes
-<br>&emsp;    STATUS_SUCCESS = 'urn:oasis:names:tc:SAML:2.0:status:Success'
-<br>&emsp;    STATUS_REQUESTER = 'urn:oasis:names:tc:SAML:2.0:status:Requester'
-<br>&emsp;    STATUS_RESPONDER = 'urn:oasis:names:tc:SAML:2.0:status:Responder'
-<br>&emsp;    STATUS_VERSION_MISMATCH = 'urn:oasis:names:tc:SAML:2.0:status:VersionMismatch'
-<br>&emsp;    STATUS_NO_PASSIVE = 'urn:oasis:names:tc:SAML:2.0:status:NoPassive'
-<br>&emsp;    STATUS_PARTIAL_LOGOUT = 'urn:oasis:names:tc:SAML:2.0:status:PartialLogout'
-<br>&emsp;    STATUS_PROXY_COUNT_EXCEEDED = 'urn:oasis:names:tc:SAML:2.0:status:ProxyCountExceeded'
-<br>
-<br>&emsp;    # Sign & Crypto
-<br>&emsp;    SHA1 = 'http://www.w3.org/2000/09/xmldsig#sha1'
-<br>&emsp;    SHA256 = 'http://www.w3.org/2001/04/xmlenc#sha256'
-<br>&emsp;    SHA384 = 'http://www.w3.org/2001/04/xmldsig-more#sha384'
-<br>&emsp;    SHA512 = 'http://www.w3.org/2001/04/xmlenc#sha512'
-<br>
-<br>&emsp;    DSA_SHA1 = 'http://www.w3.org/2000/09/xmldsig#dsa-sha1'
-<br>&emsp;    RSA_SHA1 = 'http://www.w3.org/2000/09/xmldsig#rsa-sha1'
-<br>&emsp;    RSA_SHA256 = 'http://www.w3.org/2001/04/xmldsig-more#rsa-sha256'
-<br>&emsp;    RSA_SHA384 = 'http://www.w3.org/2001/04/xmldsig-more#rsa-sha384'
-<br>&emsp;    RSA_SHA512 = 'http://www.w3.org/2001/04/xmldsig-more#rsa-sha512'
-<br>
-<br>&emsp;    # Enc
-<br>&emsp;    TRIPLEDES_CBC = 'http://www.w3.org/2001/04/xmlenc#tripledes-cbc'
-<br>&emsp;    AES128_CBC = 'http://www.w3.org/2001/04/xmlenc#aes128-cbc'
-<br>&emsp;    AES192_CBC = 'http://www.w3.org/2001/04/xmlenc#aes192-cbc'
-<br>&emsp;    AES256_CBC = 'http://www.w3.org/2001/04/xmlenc#aes256-cbc'
-<br>&emsp;    RSA_1_5 = 'http://www.w3.org/2001/04/xmlenc#rsa-1_5'
-<br>&emsp;    RSA_OAEP_MGF1P = 'http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p'
-<br>
+ OneLogin_Saml2_Constants class</br></br>Copyright (c) 2010-2018 OneLogin, Inc.</br>MIT License</br></br>Constants class of OneLogin's Python Toolkit.</br></br><hr><code>OneLogin_Saml2_Constants(object):</code><br/></br></br>This class defines all the constants that will be used</br>in the OneLogin's Python Toolkit.</br></br>
                    </p>
                 </details>
 

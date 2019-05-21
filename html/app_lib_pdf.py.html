@@ -1148,11 +1148,6 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/NYCOpenDocs/html/app_static_js_request_new-request-anon.js.html">
-                                new-request-anon.js
-                            </a>
-                        </li>
-                        <li>
                             <a href="/NYCOpenDocs/html/app_static_js_request_new-request-user.js.html">
                                 new-request-user.js
                             </a>
@@ -1227,21 +1222,6 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_static_styles_about.css.html">
                             about.css
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_acknowledgment.css.html">
-                            add_acknowledgment.css
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_closing.css.html">
-                            add_closing.css
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_denial.css.html">
-                            add_denial.css
                         </a>
                     </li>
                     <li>
@@ -1639,11 +1619,6 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_footer.html.html">
-                            email_footer.html
-                        </a>
-                    </li>
-                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_not_onboarded.html.html">
                             email_not_onboarded.html
                         </a>
@@ -1651,6 +1626,11 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_private_file_upload.html.html">
                             email_private_file_upload.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_request_info.html.html">
+                            email_request_info.html
                         </a>
                     </li>
                     <li>
@@ -2074,6 +2054,11 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.html.html">
                             new_request_anon.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_request_new_request_anon.js.html.html">
+                            new_request_anon.js.html
                         </a>
                     </li>
                     <li>
@@ -3236,53 +3221,7 @@ app/lib/pdf.py:122:31: W605 invalid escape sequence '\}'
                     <p>
 <!-- Include the documentation here! -->
 
-class LatexCompiler:
-<br>&emsp;    """
-<br>&emsp;    Generates a PDF from a LaTeX file.
-<br>
-<br>&emsp;    Slightly modified from: https://github.com/AKuederle/flask-template-master/
-<br>&emsp;    """
-<br>&emsp;    def __init__(self, latex_command=None):
-<br>&emsp;    def _create_file(self, document):
-<br>&emsp;    def compile(self, document):
-<br>&emsp;&emsp;        """
-<br>&emsp;&emsp;        Compile a LaTeX document to PDF.
-<br>&emsp;&emsp;        :param document: LaTeX formatted document (UTF-8 Formatted String)
-<br>&emsp;&emsp;        :return: PDF File Object
-<br>&emsp;&emsp;        """
-<br>def generate_pdf(pdf_data):
-<br>&emsp;    """
-<br>&emsp;    Generate a PDF from a string of data.
-<br>&emsp;    :param pdf_data: String of data to input into PDF.
-<br>&emsp;    :return: PDF File object
-<br>&emsp;    """
-<br>def generate_pdf_flask_response(pdf_data):
-<br>&emsp;    """
-<br>&emsp;    Return a Flask response object with a PDF as an attachment.
-<br>&emsp;    :param pdf_data: String of data to input into PDF.
-<br>&emsp;    :return: Flask Response
-<br>&emsp;    """
-<br>def generate_envelope(template_name, data):
-<br>&emsp;    """
-<br>&emsp;    Generate the LaTeX for an envelope with the provided data pre-filled.
-<br>
-<br>&emsp;    :param template_name: The LaTeX template to be used.
-<br>&emsp;    :param data: Data to be filled in to the LaTeX template (Dict())
-<br>&emsp;    :return: LaTeX document
-<br>&emsp;    """
-<br>def generate_envelope_pdf(document):
-<br>&emsp;    """
-<br>&emsp;    Generate a PDF envelope.
-<br>&emsp;    :param document: LaTeX document.
-<br>&emsp;    :return: PDF File Object
-<br>&emsp;    """
-<br>def escape_latex_characters(line):
-<br>&emsp;    """
-<br>&emsp;    Replace a string with the escaped LaTeX version of reserved characters
-<br>&emsp;    :param line: a string to be used in a LaTeX template
-<br>&emsp;    :return: a string with the escaped LaTeX version of reserved characters
-<br>&emsp;    """
-<br>
+<hr><code>LatexCompiler:</code><br/></br>Generates a PDF from a LaTeX file.</br></br>Slightly modified from: https://github.com/AKuederle/flask-template-master/</br><hr><code>__init__(self, latex_command=None):</code><br/><hr><code>_create_file(self, document):</code><br/><hr><code>compile(self, document):</code><br/></br>Compile a LaTeX document to PDF.</br>:param document: LaTeX formatted document (UTF-8 Formatted String)</br>:return: PDF File Object</br><hr><code>generate_pdf(pdf_data):</code><br/></br>Generate a PDF from a string of data.</br>:param pdf_data: String of data to input into PDF.</br>:return: PDF File object</br><hr><code>generate_pdf_flask_response(pdf_data):</code><br/></br>Return a Flask response object with a PDF as an attachment.</br>:param pdf_data: String of data to input into PDF.</br>:return: Flask Response</br><hr><code>generate_envelope(template_name, data):</code><br/></br>Generate the LaTeX for an envelope with the provided data pre-filled.</br></br>:param template_name: The LaTeX template to be used.</br>:param data: Data to be filled in to the LaTeX template (Dict())</br>:return: LaTeX document</br><hr><code>generate_envelope_pdf(document):</code><br/></br>Generate a PDF envelope.</br>:param document: LaTeX document.</br>:return: PDF File Object</br><hr><code>escape_latex_characters(line):</code><br/></br>Replace a string with the escaped LaTeX version of reserved characters</br>:param line: a string to be used in a LaTeX template</br>:return: a string with the escaped LaTeX version of reserved characters</br>
                    </p>
                 </details>
 

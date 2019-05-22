@@ -29,6 +29,7 @@
 
                     <p>
 <!-- Include the text material here! -->
+<!--include templates/build_scripts_elk_setup_logstash_setup.sh_hw.txt -->
                     </p>
                 </details>
 
@@ -51,6 +52,7 @@
 
                     <p>
 <!-- Include the documentation here! -->
+<!--include templates/build_scripts_elk_setup_logstash_setup.sh_ex.txt -->
                    </p>
                 </details>
 

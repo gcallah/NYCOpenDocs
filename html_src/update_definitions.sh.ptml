@@ -29,6 +29,7 @@
 
                     <p>
 <!-- Include the text material here! -->
+<!--include templates/update_definitions.sh_hw.txt -->
                     </p>
                 </details>
 
@@ -51,6 +52,7 @@
 
                     <p>
 <!-- Include the documentation here! -->
+<!--include templates/update_definitions.sh_ex.txt -->
                    </p>
                 </details>
 

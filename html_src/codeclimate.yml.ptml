@@ -29,6 +29,7 @@
 
                     <p>
 <!-- Include the text material here! -->
+<!--include templates/codeclimate.yml_hw.txt -->
                     </p>
                 </details>
 
@@ -51,6 +52,7 @@
 
                     <p>
 <!-- Include the documentation here! -->
+<!--include templates/codeclimate.yml_ex.txt -->
                    </p>
                 </details>
 

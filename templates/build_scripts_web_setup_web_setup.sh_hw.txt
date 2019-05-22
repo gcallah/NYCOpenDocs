@@ -1,0 +1,1 @@
+This shell script file contains the configuration details for starting up nginx for the web.

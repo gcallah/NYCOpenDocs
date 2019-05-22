@@ -1,0 +1,1 @@
+This shell script creates a back up log for the database.

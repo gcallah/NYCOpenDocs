@@ -1,0 +1,1 @@
+This Python configuration file contains the configuration settings for Sentry, such as buffer and cache settings.

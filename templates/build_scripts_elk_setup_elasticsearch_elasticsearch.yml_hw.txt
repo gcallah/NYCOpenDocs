@@ -1,0 +1,1 @@
+This yml file configures Elasticsearch.

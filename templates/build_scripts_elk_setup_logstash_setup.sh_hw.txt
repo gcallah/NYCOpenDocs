@@ -1,1 +1,1 @@
-This shell script contains the set up and configuration details for installing Logstash
+This shell script contains the set up and configuration details for installing Logstash.

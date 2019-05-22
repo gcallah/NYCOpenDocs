@@ -1,0 +1,1 @@
+This shell script handles the installation of Python and required Python libraries to configure and work with Sentry.

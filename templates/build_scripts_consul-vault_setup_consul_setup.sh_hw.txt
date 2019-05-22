@@ -1,0 +1,1 @@
+This shell script contains the configuration steps to install and set up Consul and Consul libraries.

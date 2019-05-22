@@ -1,0 +1,1 @@
+This shell script creates a new Sentry user and a new Postgres database for Sentry entries.

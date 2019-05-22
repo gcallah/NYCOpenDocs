@@ -1,0 +1,1 @@
+This shell script enables Red Hat Developer users to be able to vagrant into the application, and the script also disables the firewall permanently.

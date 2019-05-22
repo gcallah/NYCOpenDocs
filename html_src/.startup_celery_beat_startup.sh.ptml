@@ -3,7 +3,7 @@
     <head>
 <!--include head.txt -->
         <title>
-            .codeclimate.yml
+            celery_beat_startup.sh
         </title>
     </head>
 
@@ -19,7 +19,7 @@
                     </figcaption>
                 </figure>
                 <h1>
-                    .codeclimate.yml
+                    celery_beat_startup.sh
                 </h1>
 
                 <details>
@@ -56,7 +56,7 @@
 
 <!-- Include source code here! -->
                 <p>
-<a href="https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/.codeclimate.yml">Source code</a>
+<a href="https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/.startup/celery_beat_startup.sh">Source code</a>
                 </p>
             </div>
         </div>

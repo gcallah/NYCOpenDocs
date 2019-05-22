@@ -13,6 +13,7 @@ PTML_TEMPL = $(TEMPLATE_DIR)/template.ptml
 INCS = $(NAV_BAR) $(TEMPLATE_DIR)/head.txt
 
 HTMLFILES = $(shell ls $(PTML_DIR)/*.ptml | sed -e 's/.ptml/.html/' | sed -e 's/html_src\//html\//')
+HTMLFILES += $(shell ls -a $(PTML_DIR)/.*.ptml | sed -e 's/.ptml/.html/' | sed -e 's/html_src\//html\//')
 
 $(HTML_DIR)/%.html: $(PTML_DIR)/%.ptml $(INCS)
 	python3 $(UTILS_DIR)/html_checker.py $< 
@@ -34,6 +35,7 @@ lint:
 	./lint_report.sh
 
 local: $(HTMLFILES) $(INCS)
+	cp $(HTML_DIR)/index.html index.html
 
 clean:
 	touch $(PTML_DIR)/*.ptml; make local

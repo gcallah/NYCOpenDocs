@@ -3,7 +3,7 @@
     <head>
 <!--include head.txt -->
         <title>
-            email_request_info.html
+            flask_startup.sh
         </title>
     </head>
 
@@ -19,7 +19,7 @@
                     </figcaption>
                 </figure>
                 <h1>
-                    email_request_info.html
+                    flask_startup.sh
                 </h1>
 
                 <details>
@@ -29,7 +29,6 @@
 
                     <p>
 <!-- Include the text material here! -->
-<!--include templates/app_templates_email_templates_email_request_info.html_hw.txt -->
                     </p>
                 </details>
 
@@ -52,13 +51,12 @@
 
                     <p>
 <!-- Include the documentation here! -->
-<!--include templates/app_templates_email_templates_email_request_info.html_ex.txt -->
                    </p>
                 </details>
 
 <!-- Include source code here! -->
                 <p>
-<a href="https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/email_templates/email_request_info.html">Source code</a>
+<a href="https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/.startup/flask_startup.sh">Source code</a>
                 </p>
             </div>
         </div>

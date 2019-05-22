@@ -10,6 +10,13 @@ DOC_TXT = 6
 HW_TXT = 7
 LINT_TXT = 8
 
+EXTENSIONS = ["py", "css", "html", "js", "sh", "yml"]
+CONNECTOR = "\t"
+
+BASE_URL = "/NYCOpenDocs/"
+HTML_URL = BASE_URL + "html/"
+SOURCE_URL = "https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/"
+TEMPLATE_DIR = "templates/"
 
 def read_file_names():
     names = open("templates/menu_input.txt", "r")
@@ -19,11 +26,12 @@ def read_file_names():
     file_names = file_names.split("../NYCOpenRecords/")
     file_names.sort()
     # for each name, split on the /
-    # if no slash, keep it as a string
     for i in range(len(file_names)):
         file_names[i] = file_names[i].strip().strip("\n")
         if "/" in file_names[i]:
             file_names[i] = file_names[i].split("/")
+        else:
+            file_names[i] = [file_names[i]]
     names.close()
     # getting rid of the first one which is an empty string
     file_names.pop(0)
@@ -31,12 +39,13 @@ def read_file_names():
 
 
 def check_directories(lst1, lst2):
-    # check if the two directories are the same
+    # check if the two directories of a file path are the same
     # return the index where the file paths are different
+    # which is where the path leads to a different directory
     # if empty list, return 0
     if lst1 == []:
         return 0
-    # otherwise, loop up until the last index, which is a py name
+    # otherwise, loop up until the last index, which is a file name
     for i in range(min(len(lst1), len(lst2)) - 1):
         if lst1[i] != lst2[i]:
             return i
@@ -44,87 +53,107 @@ def check_directories(lst1, lst2):
     return min(len(lst1), len(lst2)) - 1
 
 
-def create_csv(connector):
+def get_extension(file_nm):
+    '''
+    Returns the extension given the file name
+    Example: 
+        file_nm = "read_docstrings.py"
+        Returns "py"
+    '''
+    return file_nm.split(".")[-1]
+
+
+def csv_row_file(file_nm, level_num, title=None, url_txt_nm=None):
+    '''
+    Returns a list of the entries for the CSV pertaining to a file name
+    '''
+    if (title == None):
+        title = file_nm
+        url_txt_nm = file_nm
+    output_lst = ["", "", "", "", "", "", "", "", ""]
+    output_lst[LEVEL] = str(level_num)
+    output_lst[TITLE] = title
+    output_lst[URL] = HTML_URL + url_txt_nm + ".html"
+    output_lst[LINK_INSERT] = SOURCE_URL + file_nm
+    if get_extension(file_nm) in EXTENSIONS:
+        output_lst[DOC_TXT] = TEMPLATE_DIR + url_txt_nm + "_ex.txt"
+        output_lst[HW_TXT] = TEMPLATE_DIR + url_txt_nm + "_hw.txt"
+    if get_extension(file_nm) == "py":
+        output_lst[LINT_TXT] = TEMPLATE_DIR + url_txt_nm + "_lint.txt"
+    return CONNECTOR.join(output_lst).strip(CONNECTOR)
+
+
+def csv_row_dir(level_num, title, url):
+    '''
+    Returns a list of the entries for the CSV pertaining to a
+    directory name
+    '''
+    output_lst = ["", "", ""]
+    output_lst[LEVEL] = str(level_num)
+    output_lst[TITLE] = title
+    output_lst[URL] = HTML_URL + url + ".html"
+    return CONNECTOR.join(output_lst).strip(CONNECTOR)
+
+
+def navbar_entry(level, title):
+    '''
+    If a directory is encountered in creating the CSV,
+    create an entry in the CSV for the navbar
+    '''
+    output_lst = [str(level), title]
+    return CONNECTOR.join(output_lst).strip(CONNECTOR)
+
+
+def create_header_row():
+    '''
+    Creates the header and the home rows (first two rows) for the CSV file
+    '''
+    header = CONNECTOR.join(["0", "NYCOpenDocs", "", "NYCDocs"])
+    home = ["1", "Home", BASE_URL + "index.html", "", "glyphicon-home"]
+    home = CONNECTOR.join(home)
+    return [header, home]
+
+
+def create_csv():
     file_names = read_file_names()
     # make a list of strings for the output 
     # each string has fields filled in
-    output = []
-    header = ["0", "NYCOpenDocs", "", "NYCDocs"]
-    header = connector.join(header)
-    base_url = "/NYCOpenDocs/"
-    html_url = base_url + "html/"
-    home = ["1", "Home", base_url + "index.html", "", "glyphicon-home"]
-    home = connector.join(home)
-    output.append(header)
-    output.append(home)
+    output = create_header_row()
     current_dir = []
-    source_code = "https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/"
-    template_dir = "templates/"
     # current types of files with docstrings extracted
     # loop through the file names
     for file in file_names:
-        output_lst = ["", "", "", "", "", "", "", "", ""]
-        # if file is a string, it's not in a sub directory
-        if isinstance(file, str):
-            output_lst[LEVEL] = str(1)
-            output_lst[TITLE] = file
-            output_lst[URL] = html_url + file.strip(".") + ".html"
-            output_lst[LINK_INSERT] = source_code + file
-            if ".py" in file or ".js" in file or ".css" in file or ".html" in file or ".sh" in file or ".yml" in file:
-                output_lst[DOC_TXT] = template_dir + file.strip(".") + "_ex.txt"
-                output_lst[HW_TXT] = template_dir + file.strip(".") + "_hw.txt"
-            if ".py" in file:
-                output_lst[LINT_TXT] = template_dir + file.strip(".") + "_lint.txt"
-            output.append(connector.join(output_lst))
-            current_dir = []
-        # otherwise, check the directory paths
-        # number of tabs = the index we start at that was
+        # check the directory paths
         # returned from check directories
-        else:
-            output_dir_lst = ["", "", ""]
-            # have a boolean in case we are dealing with a directory
-            # not a file
-            out_dir = False
-            index_dif = check_directories(current_dir, file)
-            while index_dif < len(file):
-                output_lst[LEVEL] = str(index_dif + 1)
-                output_lst[TITLE] = file[index_dif]
-                if index_dif == len(file) - 1:
-                    output_lst[URL] = html_url + "_".join(file) + ".html"
-                    output_lst[LINK_INSERT] = source_code + "/".join(file)
-                    if ".py" in file[-1] or ".js" in file[-1] or ".css" in file[-1] or ".html" in file[-1] or ".sh" in file[-1] or ".yml" in file[-1]:
-                        output_lst[DOC_TXT] = template_dir + "_".join(file) + "_ex.txt"
-                        output_lst[HW_TXT] = template_dir + "_".join(file) + "_hw.txt"
-                    if ".py" in file[-1]:
-                        output_lst[LINT_TXT] = template_dir + "_".join(file) + "_lint.txt"
-                else:
-                    output_dir_lst[LEVEL] = str(index_dif + 2)
-                    output_dir_lst[TITLE] = ("About the directory '" +
-                                             file[index_dif] + "'")
-                    output_dir_lst[URL] = html_url
-                    output_dir_lst[URL] += ("_".join(file[:index_dif + 1]) +
-                                            "_" + file[index_dif] + ".html")
-                    out_dir = True
-                # append the output_lst, joined by the connector
-                # strip off remaining connectors in case the last fields
-                # are not filled in
-                output.append(connector.join(output_lst).strip(connector))
-                output_lst = ["", "", "", "", "", "", "", "", ""]
-                # if we filled in for a directory
-                # append this after the output_lst
-                if out_dir:
-                    output.append(connector.join(output_dir_lst))
-                    out_dir = False
-                    output_dir_lst = ["", "", ""]
-                index_dif += 1
-            current_dir = file
+        index_dif = check_directories(current_dir, file)
+        while index_dif < len(file):
+            # if list entry is a file name
+            if index_dif == len(file) - 1:
+                level = index_dif + 1
+                title = file[index_dif]
+                file_nm = "/".join(file)
+                url_txt_nm = "_".join(file)
+                output.append(csv_row_file(file_nm, level, title, url_txt_nm))
+            # if list entry is a directory name
+            else:
+                # create the navbar entry
+                nav_level = index_dif + 1
+                nav_title = file[index_dif]
+                output.append(navbar_entry(nav_level, nav_title))
+
+                level = index_dif + 2
+                title = "About the directory '" + file[index_dif] + "'"
+                url = "_".join(file[:index_dif + 1]) + "_" + file[index_dif]
+                output.append(csv_row_dir(level, title, url))
+            index_dif += 1
+        current_dir = file
     # construct the output string by joining on new lines
     output = "\n".join(output)
     sys.stdout.write(output)
 
 
 def main():
-    create_csv("\t")
+    create_csv()
 
 
 main()

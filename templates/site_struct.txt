@@ -1,7 +1,7 @@
 0	NYCOpenDocs		NYCDocs
 1	Home	/NYCOpenDocs/index.html		glyphicon-home
-1	.codeclimate.yml	/NYCOpenDocs/html/codeclimate.yml.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/.codeclimate.yml	templates/codeclimate.yml_ex.txt	templates/codeclimate.yml_hw.txt	
-1	.eslintrc.yml	/NYCOpenDocs/html/eslintrc.yml.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/.eslintrc.yml	templates/eslintrc.yml_ex.txt	templates/eslintrc.yml_hw.txt	
+1	.codeclimate.yml	/NYCOpenDocs/html/.codeclimate.yml.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/.codeclimate.yml	templates/.codeclimate.yml_ex.txt	templates/.codeclimate.yml_hw.txt
+1	.eslintrc.yml	/NYCOpenDocs/html/.eslintrc.yml.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/.eslintrc.yml	templates/.eslintrc.yml_ex.txt	templates/.eslintrc.yml_hw.txt
 1	.startup
 2	About the directory '.startup'	/NYCOpenDocs/html/.startup_.startup.html
 2	celery_beat_startup.sh	/NYCOpenDocs/html/.startup_celery_beat_startup.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/.startup/celery_beat_startup.sh	templates/.startup_celery_beat_startup.sh_ex.txt	templates/.startup_celery_beat_startup.sh_hw.txt
@@ -9,7 +9,7 @@
 2	fakesmtp_startup.sh	/NYCOpenDocs/html/.startup_fakesmtp_startup.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/.startup/fakesmtp_startup.sh	templates/.startup_fakesmtp_startup.sh_ex.txt	templates/.startup_fakesmtp_startup.sh_hw.txt
 2	flask_startup.sh	/NYCOpenDocs/html/.startup_flask_startup.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/.startup/flask_startup.sh	templates/.startup_flask_startup.sh_ex.txt	templates/.startup_flask_startup.sh_hw.txt
 2	tmux_setup.sh	/NYCOpenDocs/html/.startup_tmux_setup.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/.startup/tmux_setup.sh	templates/.startup_tmux_setup.sh_ex.txt	templates/.startup_tmux_setup.sh_hw.txt
-1	.travis.yml	/NYCOpenDocs/html/travis.yml.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/.travis.yml	templates/travis.yml_ex.txt	templates/travis.yml_hw.txt	
+1	.travis.yml	/NYCOpenDocs/html/.travis.yml.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/.travis.yml	templates/.travis.yml_ex.txt	templates/.travis.yml_hw.txt
 1	app
 2	About the directory 'app'	/NYCOpenDocs/html/app_app.html
 2	__init__.py	/NYCOpenDocs/html/app___init__.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/__init__.py	templates/app___init__.py_ex.txt	templates/app___init__.py_hw.txt	templates/app___init__.py_lint.txt
@@ -533,7 +533,7 @@
 1	celery_worker.py	/NYCOpenDocs/html/celery_worker.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/celery_worker.py	templates/celery_worker.py_ex.txt	templates/celery_worker.py_hw.txt	templates/celery_worker.py_lint.txt
 1	config.py	/NYCOpenDocs/html/config.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/config.py	templates/config.py_ex.txt	templates/config.py_hw.txt	templates/config.py_lint.txt
 1	gunicorn_config.py	/NYCOpenDocs/html/gunicorn_config.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/gunicorn_config.py	templates/gunicorn_config.py_ex.txt	templates/gunicorn_config.py_hw.txt	templates/gunicorn_config.py_lint.txt
-1	lgtm.yml	/NYCOpenDocs/html/lgtm.yml.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/lgtm.yml	templates/lgtm.yml_ex.txt	templates/lgtm.yml_hw.txt	
+1	lgtm.yml	/NYCOpenDocs/html/lgtm.yml.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/lgtm.yml	templates/lgtm.yml_ex.txt	templates/lgtm.yml_hw.txt
 1	migrations
 2	About the directory 'migrations'	/NYCOpenDocs/html/migrations_migrations.html
 2	custom
@@ -573,7 +573,7 @@
 3	dc926c74551d_added_category_to_custom_request_forms.py	/NYCOpenDocs/html/migrations_versions_dc926c74551d_added_category_to_custom_request_forms.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/dc926c74551d_added_category_to_custom_request_forms.py	templates/migrations_versions_dc926c74551d_added_category_to_custom_request_forms.py_ex.txt	templates/migrations_versions_dc926c74551d_added_category_to_custom_request_forms.py_hw.txt	templates/migrations_versions_dc926c74551d_added_category_to_custom_request_forms.py_lint.txt
 3	ebeb3491636e_add_re-opening_to_reasons_enum.py	/NYCOpenDocs/html/migrations_versions_ebeb3491636e_add_re-opening_to_reasons_enum.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/migrations/versions/ebeb3491636e_add_re-opening_to_reasons_enum.py	templates/migrations_versions_ebeb3491636e_add_re-opening_to_reasons_enum.py_ex.txt	templates/migrations_versions_ebeb3491636e_add_re-opening_to_reasons_enum.py_hw.txt	templates/migrations_versions_ebeb3491636e_add_re-opening_to_reasons_enum.py_lint.txt
 1	openrecords.py	/NYCOpenDocs/html/openrecords.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/openrecords.py	templates/openrecords.py_ex.txt	templates/openrecords.py_hw.txt	templates/openrecords.py_lint.txt
-1	setup.sh	/NYCOpenDocs/html/setup.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/setup.sh	templates/setup.sh_ex.txt	templates/setup.sh_hw.txt	
+1	setup.sh	/NYCOpenDocs/html/setup.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/setup.sh	templates/setup.sh_ex.txt	templates/setup.sh_hw.txt
 1	tests
 2	About the directory 'tests'	/NYCOpenDocs/html/tests_tests.html
 2	__init__.py	/NYCOpenDocs/html/tests___init__.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/tests/__init__.py	templates/tests___init__.py_ex.txt	templates/tests___init__.py_hw.txt	templates/tests___init__.py_lint.txt
@@ -588,4 +588,4 @@
 2	unit
 3	About the directory 'unit'	/NYCOpenDocs/html/tests_unit_unit.html
 3	test_factory.py	/NYCOpenDocs/html/tests_unit_test_factory.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/tests/unit/test_factory.py	templates/tests_unit_test_factory.py_ex.txt	templates/tests_unit_test_factory.py_hw.txt	templates/tests_unit_test_factory.py_lint.txt
-1	update_definitions.sh	/NYCOpenDocs/html/update_definitions.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/update_definitions.sh	templates/update_definitions.sh_ex.txt	templates/update_definitions.sh_hw.txt	
+1	update_definitions.sh	/NYCOpenDocs/html/update_definitions.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/update_definitions.sh	templates/update_definitions.sh_ex.txt	templates/update_definitions.sh_hw.txt

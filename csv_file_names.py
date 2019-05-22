@@ -18,6 +18,7 @@ HTML_URL = BASE_URL + "html/"
 SOURCE_URL = "https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/"
 TEMPLATE_DIR = "templates/"
 
+
 def read_file_names():
     names = open("templates/menu_input.txt", "r")
     file_names = names.read()
@@ -56,20 +57,17 @@ def check_directories(lst1, lst2):
 def get_extension(file_nm):
     '''
     Returns the extension given the file name
-    Example: 
+    Example:
         file_nm = "read_docstrings.py"
         Returns "py"
     '''
     return file_nm.split(".")[-1]
 
 
-def csv_row_file(file_nm, level_num, title=None, url_txt_nm=None):
+def csv_row_file(file_nm, level_num, title, url_txt_nm):
     '''
     Returns a list of the entries for the CSV pertaining to a file name
     '''
-    if (title == None):
-        title = file_nm
-        url_txt_nm = file_nm
     output_lst = ["", "", "", "", "", "", "", "", ""]
     output_lst[LEVEL] = str(level_num)
     output_lst[TITLE] = title
@@ -116,7 +114,7 @@ def create_header_row():
 
 def create_csv():
     file_names = read_file_names()
-    # make a list of strings for the output 
+    # make a list of strings for the output
     # each string has fields filled in
     output = create_header_row()
     current_dir = []

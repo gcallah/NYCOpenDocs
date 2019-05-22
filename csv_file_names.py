@@ -53,7 +53,7 @@ def create_csv(connector):
     header = connector.join(header)
     base_url = "/NYCOpenDocs/"
     # html_url = base_url + "html/"
-    html_url = "html/"
+    html_url = "./html/"
     home = ["1", "Home", base_url + "index.html", "", "glyphicon-home"]
     home = connector.join(home)
     output.append(header)

@@ -1,14 +1,17 @@
 # Need to export as ENV var
 export TEMPLATE_DIR = templates
-CODE_FILES = $(shell find ../NYCOpenRecords \( -name '*.py' -or -name '*.js' -or -name '*.yml' -or -name '*.sh' -or -name '*.html' -or -name '*.css' \))
-PYTHON_LINT := $(shell find ../NYCOpenRecords -name '*.py' -exec flake8 --max-line-length 120 "{}" \;)
+
+RECORDS_DIR = ../NYCOpenRecords
+PYTHON_LINT := $(shell find $(RECORDS_DIR) -name '*.py' -exec flake8 --max-line-length 120 "{}" \;)
 PTML_DIR = html_src
 UTILS_DIR = utils
 HTML_DIR = html
 MENU_INP = $(TEMPLATE_DIR)/menu_input.txt
+MENU_INPUT = menu_input.txt
 SITE_OUTLINE = $(TEMPLATE_DIR)/site_struct.txt
 NAV_BAR = $(TEMPLATE_DIR)/navbar.txt
 PTML_TEMPL = $(TEMPLATE_DIR)/template.ptml
+EXT_FILE = extensions.txt
 
 INCS = $(NAV_BAR) $(TEMPLATE_DIR)/head.txt
 
@@ -21,6 +24,8 @@ $(HTML_DIR)/%.html: $(PTML_DIR)/%.ptml $(INCS)
 	# https://gcallah.github.io/NYCOpenDocs
 	$(UTILS_DIR)/html_include.awk <$< >$@
 	git add $@
+
+FORCE:
 
 # update our submodules:
 submods:
@@ -40,11 +45,11 @@ local: $(HTMLFILES) $(INCS)
 clean:
 	touch $(PTML_DIR)/*.ptml; make local
 
-menu_inp: $(CODE_FILES)
-	echo $(CODE_FILES) > $(MENU_INP)
+menu_inp: FORCE
+	./code_files.sh $(RECORDS_DIR) $(EXT_FILE) > $(MENU_INP)
 
 site_outline: menu_inp
-	python3 csv_file_names.py > $(SITE_OUTLINE)
+	python3 csv_file_names.py $(EXT_FILE) > $(SITE_OUTLINE)
 
 menu: site_outline $(SITE_OUTLINE)
 	python3 $(UTILS_DIR)/create_menu.py $(SITE_OUTLINE) > $(NAV_BAR)

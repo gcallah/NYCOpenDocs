@@ -10,7 +10,10 @@ DOC_TXT = 6
 HW_TXT = 7
 LINT_TXT = 8
 
-EXTENSIONS = ["py", "css", "html", "js", "sh", "yml"]
+EXTENSIONS = []
+ext_file = open(sys.argv[1], "r")
+for ext_line in ext_file:
+    EXTENSIONS.append(ext_line.strip("\n"))
 CONNECTOR = "\t"
 
 BASE_URL = "/NYCOpenDocs/"
@@ -22,13 +25,11 @@ TEMPLATE_DIR = "templates/"
 def read_file_names():
     names = open("templates/menu_input.txt", "r")
     file_names = names.read()
-    # when echo is called, all the names were concatenated into
-    # a single string
     file_names = file_names.split("../NYCOpenRecords/")
     file_names.sort()
     # for each name, split on the /
     for i in range(len(file_names)):
-        file_names[i] = file_names[i].strip().strip("\n")
+        file_names[i] = file_names[i].strip("\n")
         if "/" in file_names[i]:
             file_names[i] = file_names[i].split("/")
         else:

@@ -34,6 +34,7 @@
 ../NYCOpenRecords/migrations/versions/9005ab594598_add_lettertemplates.py
 ../NYCOpenRecords/migrations/custom/openrecords_v1.py
 ../NYCOpenRecords/.eslintrc.yml
+../NYCOpenRecords/maintenance.json
 ../NYCOpenRecords/config.py
 ../NYCOpenRecords/openrecords.py
 ../NYCOpenRecords/app/response/__init__.py
@@ -392,7 +393,9 @@
 ../NYCOpenRecords/build_scripts/es_setup/es_setup.sh
 ../NYCOpenRecords/build_scripts/consul-vault_setup/consul_setup.sh
 ../NYCOpenRecords/build_scripts/consul-vault_setup/vault_setup.sh
+../NYCOpenRecords/build_scripts/consul-vault_setup/consul/config.json
 ../NYCOpenRecords/build_scripts/consul-vault_setup/nginx/nginx_setup.sh
+../NYCOpenRecords/build_scripts/consul-vault_setup/vault/init.json
 ../NYCOpenRecords/build_scripts/web_setup/web_setup.sh
 ../NYCOpenRecords/build_scripts/web_setup/nginx_conf/sites/maintenance.html
 ../NYCOpenRecords/build_scripts/web_setup/nginx_conf/sites/error.html
@@ -409,6 +412,9 @@
 ../NYCOpenRecords/build_scripts/db_setup/backup.sh
 ../NYCOpenRecords/gunicorn_config.py
 ../NYCOpenRecords/lgtm.yml
+../NYCOpenRecords/data/agencies.json
+../NYCOpenRecords/data/agencies_test.json
+../NYCOpenRecords/data/custom_request_forms.json
 ../NYCOpenRecords/.travis.yml
 ../NYCOpenRecords/.codeclimate.yml
 ../NYCOpenRecords/.startup/fakesmtp_startup.sh

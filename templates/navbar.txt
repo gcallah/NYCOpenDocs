@@ -16,12 +16,12 @@
             </a>
         </li>
         <li>
-            <a href="/NYCOpenDocs/html/.codeclimate.yml.html">
+            <a href="/NYCOpenDocs/html/codeclimate.yml.html">
                 .codeclimate.yml
             </a>
         </li>
         <li>
-            <a href="/NYCOpenDocs/html/.eslintrc.yml.html">
+            <a href="/NYCOpenDocs/html/eslintrc.yml.html">
                 .eslintrc.yml
             </a>
         </li>
@@ -32,38 +32,38 @@
         </li>
         <ul class="collapse list-unstyled" id="Submenu0">
             <li>
-                <a href="/NYCOpenDocs/html/.startup_.startup.html">
+                <a href="/NYCOpenDocs/html/startup_.startup.html">
                     About the directory '.startup'
                 </a>
             </li>
             <li>
-                <a href="/NYCOpenDocs/html/.startup_celery_beat_startup.sh.html">
+                <a href="/NYCOpenDocs/html/startup_celery_beat_startup.sh.html">
                     celery_beat_startup.sh
                 </a>
             </li>
             <li>
-                <a href="/NYCOpenDocs/html/.startup_celery_startup.sh.html">
+                <a href="/NYCOpenDocs/html/startup_celery_startup.sh.html">
                     celery_startup.sh
                 </a>
             </li>
             <li>
-                <a href="/NYCOpenDocs/html/.startup_fakesmtp_startup.sh.html">
+                <a href="/NYCOpenDocs/html/startup_fakesmtp_startup.sh.html">
                     fakesmtp_startup.sh
                 </a>
             </li>
             <li>
-                <a href="/NYCOpenDocs/html/.startup_flask_startup.sh.html">
+                <a href="/NYCOpenDocs/html/startup_flask_startup.sh.html">
                     flask_startup.sh
                 </a>
             </li>
             <li>
-                <a href="/NYCOpenDocs/html/.startup_tmux_setup.sh.html">
+                <a href="/NYCOpenDocs/html/startup_tmux_setup.sh.html">
                     tmux_setup.sh
                 </a>
             </li>
         </ul>
         <li>
-            <a href="/NYCOpenDocs/html/.travis.yml.html">
+            <a href="/NYCOpenDocs/html/travis.yml.html">
                 .travis.yml
             </a>
         </li>

@@ -72,7 +72,7 @@ def csv_row_file(file_nm, level_num, title, url_txt_nm):
     output_lst = ["", "", "", "", "", "", "", "", ""]
     output_lst[LEVEL] = str(level_num)
     output_lst[TITLE] = title
-    output_lst[URL] = HTML_URL + url_txt_nm + ".html"
+    output_lst[URL] = HTML_URL + url_txt_nm.strip(".") + ".html"
     output_lst[LINK_INSERT] = SOURCE_URL + file_nm
     if get_extension(file_nm) in EXTENSIONS:
         output_lst[DOC_TXT] = TEMPLATE_DIR + url_txt_nm + "_ex.txt"
@@ -90,7 +90,7 @@ def csv_row_dir(level_num, title, url):
     output_lst = ["", "", ""]
     output_lst[LEVEL] = str(level_num)
     output_lst[TITLE] = title
-    output_lst[URL] = HTML_URL + url + ".html"
+    output_lst[URL] = HTML_URL + url.strip(".") + ".html"
     return CONNECTOR.join(output_lst).strip(CONNECTOR)
 
 

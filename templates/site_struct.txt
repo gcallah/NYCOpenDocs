@@ -1,15 +1,15 @@
 0	NYCOpenDocs		NYCDocs
 1	Home	/NYCOpenDocs/index.html		glyphicon-home
-1	.codeclimate.yml	/NYCOpenDocs/html/.codeclimate.yml.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/.codeclimate.yml	templates/.codeclimate.yml_ex.txt	templates/.codeclimate.yml_hw.txt
-1	.eslintrc.yml	/NYCOpenDocs/html/.eslintrc.yml.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/.eslintrc.yml	templates/.eslintrc.yml_ex.txt	templates/.eslintrc.yml_hw.txt
+1	.codeclimate.yml	/NYCOpenDocs/html/codeclimate.yml.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/.codeclimate.yml	templates/.codeclimate.yml_ex.txt	templates/.codeclimate.yml_hw.txt
+1	.eslintrc.yml	/NYCOpenDocs/html/eslintrc.yml.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/.eslintrc.yml	templates/.eslintrc.yml_ex.txt	templates/.eslintrc.yml_hw.txt
 1	.startup
-2	About the directory '.startup'	/NYCOpenDocs/html/.startup_.startup.html
-2	celery_beat_startup.sh	/NYCOpenDocs/html/.startup_celery_beat_startup.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/.startup/celery_beat_startup.sh	templates/.startup_celery_beat_startup.sh_ex.txt	templates/.startup_celery_beat_startup.sh_hw.txt
-2	celery_startup.sh	/NYCOpenDocs/html/.startup_celery_startup.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/.startup/celery_startup.sh	templates/.startup_celery_startup.sh_ex.txt	templates/.startup_celery_startup.sh_hw.txt
-2	fakesmtp_startup.sh	/NYCOpenDocs/html/.startup_fakesmtp_startup.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/.startup/fakesmtp_startup.sh	templates/.startup_fakesmtp_startup.sh_ex.txt	templates/.startup_fakesmtp_startup.sh_hw.txt
-2	flask_startup.sh	/NYCOpenDocs/html/.startup_flask_startup.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/.startup/flask_startup.sh	templates/.startup_flask_startup.sh_ex.txt	templates/.startup_flask_startup.sh_hw.txt
-2	tmux_setup.sh	/NYCOpenDocs/html/.startup_tmux_setup.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/.startup/tmux_setup.sh	templates/.startup_tmux_setup.sh_ex.txt	templates/.startup_tmux_setup.sh_hw.txt
-1	.travis.yml	/NYCOpenDocs/html/.travis.yml.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/.travis.yml	templates/.travis.yml_ex.txt	templates/.travis.yml_hw.txt
+2	About the directory '.startup'	/NYCOpenDocs/html/startup_.startup.html
+2	celery_beat_startup.sh	/NYCOpenDocs/html/startup_celery_beat_startup.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/.startup/celery_beat_startup.sh	templates/.startup_celery_beat_startup.sh_ex.txt	templates/.startup_celery_beat_startup.sh_hw.txt
+2	celery_startup.sh	/NYCOpenDocs/html/startup_celery_startup.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/.startup/celery_startup.sh	templates/.startup_celery_startup.sh_ex.txt	templates/.startup_celery_startup.sh_hw.txt
+2	fakesmtp_startup.sh	/NYCOpenDocs/html/startup_fakesmtp_startup.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/.startup/fakesmtp_startup.sh	templates/.startup_fakesmtp_startup.sh_ex.txt	templates/.startup_fakesmtp_startup.sh_hw.txt
+2	flask_startup.sh	/NYCOpenDocs/html/startup_flask_startup.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/.startup/flask_startup.sh	templates/.startup_flask_startup.sh_ex.txt	templates/.startup_flask_startup.sh_hw.txt
+2	tmux_setup.sh	/NYCOpenDocs/html/startup_tmux_setup.sh.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/.startup/tmux_setup.sh	templates/.startup_tmux_setup.sh_ex.txt	templates/.startup_tmux_setup.sh_hw.txt
+1	.travis.yml	/NYCOpenDocs/html/travis.yml.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/.travis.yml	templates/.travis.yml_ex.txt	templates/.travis.yml_hw.txt
 1	app
 2	About the directory 'app'	/NYCOpenDocs/html/app_app.html
 2	__init__.py	/NYCOpenDocs/html/app___init__.py.html			https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/__init__.py	templates/app___init__.py_ex.txt	templates/app___init__.py_hw.txt	templates/app___init__.py_lint.txt

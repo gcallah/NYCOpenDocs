@@ -77,7 +77,7 @@ def csv_row_file(file_nm, level_num, title, url_txt_nm):
     if get_extension(file_nm) in EXTENSIONS:
         output_lst[DOC_TXT] = TEMPLATE_DIR + url_txt_nm + "_ex.txt"
         output_lst[HW_TXT] = TEMPLATE_DIR + url_txt_nm + "_hw.txt"
-    if get_extension(file_nm) == "py":
+    if get_extension(file_nm) == "py" or get_extension(file_nm) == "js":
         output_lst[LINT_TXT] = TEMPLATE_DIR + url_txt_nm + "_lint.txt"
     return CONNECTOR.join(output_lst).strip(CONNECTOR)
 

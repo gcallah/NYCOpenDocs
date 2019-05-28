@@ -1,6 +1,7 @@
 #!/bin/bash
 
 PYTHON_FILES=$(find ../NYCOpenRecords -name '*.py');
+JS_FILES=$(find ../NYCOpenRecords -name '*.js' ! -name '*.min.js')
 
 for filename in $PYTHON_FILES; do
     LINT_FILE_NAME=templates/$(echo ${filename##'../NYCOpenRecords/'} | sed -e 's,/,_,g' | sed -e 's/.py/.py_lint.txt/')
@@ -10,5 +11,13 @@ for filename in $PYTHON_FILES; do
     else
         $(echo "$REPORT" > $LINT_FILE_NAME)
     fi
-    # $(cat $LINT_FILE_NAME)
+done
+
+for filename in $JS_FILES; do
+    LINT_FILE_NAME=templates/$(echo ${filename##'../NYCOpenRecords/'} | sed -e 's,/,_,g' | sed -e 's/.js$/.js_lint.txt/')
+    echo $LINT_FILE_NAME
+    length=${#PWD}
+    fullPath=${PWD:0:$length-11}NYCOpenRecords/${filename##'../NYCOpenRecords/'} 
+    REPORT=$(npx eslint ${filename} | sed -e "s,$fullPath,,g")
+    $(echo "$REPORT" > $LINT_FILE_NAME)
 done

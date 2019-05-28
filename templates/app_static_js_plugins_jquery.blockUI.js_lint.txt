@@ -1,0 +1,21 @@
+
+
+   15:1   error    Unnecessary semicolon                                          no-extra-semi
+   15:2   error    Move the invocation into the parens that contain the function  wrap-iife
+   90:32  error    Expected '===' and instead saw '=='                            eqeqeq
+  176:60  error    Script URL is a form of eval                                   no-script-url
+  250:3   warning  Function 'install' has a complexity of 73                      complexity
+  252:19  error    Expected '===' and instead saw '=='                            eqeqeq
+  274:26  error    Expected '!==' and instead saw '!='                            eqeqeq
+  375:20  warning  Function has a complexity of 12                                complexity
+  457:3   warning  Function 'remove' has a complexity of 10                       complexity
+  459:19  error    Expected '===' and instead saw '=='                            eqeqeq
+  504:3   warning  Function 'reset' has a complexity of 7                         complexity
+  528:30  error    Expected '===' and instead saw '=='                            eqeqeq
+  538:3   warning  Function 'bind' has a complexity of 11                         complexity
+  539:18  error    Expected '===' and instead saw '=='                            eqeqeq
+  564:3   warning  Function 'handler' has a complexity of 13                      complexity
+  566:55  error    Expected '===' and instead saw '=='                            eqeqeq
+
+✖ 16 problems (10 errors, 6 warnings)
+  4 errors and 0 warnings potentially fixable with the `--fix` option.

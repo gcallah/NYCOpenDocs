@@ -1,0 +1,9 @@
+
+
+  14:1   error    Unnecessary semicolon           no-extra-semi
+  21:17  error    Unexpected require()            global-require
+  47:64  error    Script URL is a form of eval    no-script-url
+  75:36  warning  Function has a complexity of 9  complexity
+
+✖ 4 problems (3 errors, 1 warning)
+  1 error and 0 warnings potentially fixable with the `--fix` option.

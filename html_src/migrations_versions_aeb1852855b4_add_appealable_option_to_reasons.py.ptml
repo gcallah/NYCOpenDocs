@@ -41,7 +41,6 @@
                     <p>
                         <pre>
 <!-- Include the linting report here! -->
-<!--include templates/migrations_versions_aeb1852855b4_add_appealable_option_to_reasons.py_lint.txt -->
                         </pre>
                    </p>
                 </details>

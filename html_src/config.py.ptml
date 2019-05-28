@@ -41,7 +41,6 @@
                     <p>
                         <pre>
 <!-- Include the linting report here! -->
-<!--include templates/config.py_lint.txt -->
                         </pre>
                    </p>
                 </details>

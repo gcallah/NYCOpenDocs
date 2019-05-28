@@ -41,7 +41,6 @@
                     <p>
                         <pre>
 <!-- Include the linting report here! -->
-<!--include templates/migrations_versions_b3c0c76ac2e6_add_envelope_functionality.py_lint.txt -->
                         </pre>
                    </p>
                 </details>

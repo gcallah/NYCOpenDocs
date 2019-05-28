@@ -41,7 +41,6 @@
                     <p>
                         <pre>
 <!-- Include the linting report here! -->
-<!--include templates/migrations_versions_dc926c74551d_added_category_to_custom_request_forms.py_lint.txt -->
                         </pre>
                    </p>
                 </details>

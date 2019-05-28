@@ -41,7 +41,6 @@
                     <p>
                         <pre>
 <!-- Include the linting report here! -->
-<!--include templates/migrations_versions_22b97712d5db_add_letters_and_envelopes_to_type_enum.py_lint.txt -->
                         </pre>
                    </p>
                 </details>

@@ -41,7 +41,6 @@
                     <p>
                         <pre>
 <!-- Include the linting report here! -->
-<!--include templates/app_auth_constants_error_msg.py_lint.txt -->
                         </pre>
                    </p>
                 </details>

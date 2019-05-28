@@ -41,7 +41,6 @@
                     <p>
                         <pre>
 <!-- Include the linting report here! -->
-<!--include templates/migrations_versions_838a6ad16cf4_remove_auth_user_type_from_users.py_lint.txt -->
                         </pre>
                    </p>
                 </details>

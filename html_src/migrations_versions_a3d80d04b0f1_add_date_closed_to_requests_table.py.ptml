@@ -41,7 +41,6 @@
                     <p>
                         <pre>
 <!-- Include the linting report here! -->
-<!--include templates/migrations_versions_a3d80d04b0f1_add_date_closed_to_requests_table.py_lint.txt -->
                         </pre>
                    </p>
                 </details>

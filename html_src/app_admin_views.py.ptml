@@ -41,7 +41,6 @@
                     <p>
                         <pre>
 <!-- Include the linting report here! -->
-<!--include templates/app_admin_views.py_lint.txt -->
                         </pre>
                    </p>
                 </details>

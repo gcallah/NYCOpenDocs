@@ -41,7 +41,6 @@
                     <p>
                         <pre>
 <!-- Include the linting report here! -->
-<!--include templates/app_upload_constants___init__.py_lint.txt -->
                         </pre>
                    </p>
                 </details>

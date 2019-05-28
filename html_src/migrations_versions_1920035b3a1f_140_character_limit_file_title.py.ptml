@@ -41,7 +41,6 @@
                     <p>
                         <pre>
 <!-- Include the linting report here! -->
-<!--include templates/migrations_versions_1920035b3a1f_140_character_limit_file_title.py_lint.txt -->
                         </pre>
                    </p>
                 </details>

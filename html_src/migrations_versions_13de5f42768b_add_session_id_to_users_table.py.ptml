@@ -41,7 +41,6 @@
                     <p>
                         <pre>
 <!-- Include the linting report here! -->
-<!--include templates/migrations_versions_13de5f42768b_add_session_id_to_users_table.py_lint.txt -->
                         </pre>
                    </p>
                 </details>

@@ -10,7 +10,10 @@ DOC_TXT = 6
 HW_TXT = 7
 LINT_TXT = 8
 
-EXTENSIONS = ["py", "css", "html", "js", "sh", "yml"]
+EXTENSIONS = []
+ext_file = open(sys.argv[1], "r")
+for ext_line in ext_file:
+    EXTENSIONS.append(ext_line.strip("\n"))
 CONNECTOR = "\t"
 
 BASE_URL = "/NYCOpenDocs/"
@@ -22,13 +25,11 @@ TEMPLATE_DIR = "templates/"
 def read_file_names():
     names = open("templates/menu_input.txt", "r")
     file_names = names.read()
-    # when echo is called, all the names were concatenated into
-    # a single string
     file_names = file_names.split("../NYCOpenRecords/")
     file_names.sort()
     # for each name, split on the /
     for i in range(len(file_names)):
-        file_names[i] = file_names[i].strip().strip("\n")
+        file_names[i] = file_names[i].strip("\n")
         if "/" in file_names[i]:
             file_names[i] = file_names[i].split("/")
         else:
@@ -71,12 +72,12 @@ def csv_row_file(file_nm, level_num, title, url_txt_nm):
     output_lst = ["", "", "", "", "", "", "", "", ""]
     output_lst[LEVEL] = str(level_num)
     output_lst[TITLE] = title
-    output_lst[URL] = HTML_URL + url_txt_nm + ".html"
+    output_lst[URL] = HTML_URL + url_txt_nm.strip(".") + ".html"
     output_lst[LINK_INSERT] = SOURCE_URL + file_nm
     if get_extension(file_nm) in EXTENSIONS:
         output_lst[DOC_TXT] = TEMPLATE_DIR + url_txt_nm + "_ex.txt"
         output_lst[HW_TXT] = TEMPLATE_DIR + url_txt_nm + "_hw.txt"
-    if get_extension(file_nm) == "py":
+    if get_extension(file_nm) == "py" or get_extension(file_nm) == "js":
         output_lst[LINT_TXT] = TEMPLATE_DIR + url_txt_nm + "_lint.txt"
     return CONNECTOR.join(output_lst).strip(CONNECTOR)
 
@@ -89,7 +90,7 @@ def csv_row_dir(level_num, title, url):
     output_lst = ["", "", ""]
     output_lst[LEVEL] = str(level_num)
     output_lst[TITLE] = title
-    output_lst[URL] = HTML_URL + url + ".html"
+    output_lst[URL] = HTML_URL + url.strip(".") + ".html"
     return CONNECTOR.join(output_lst).strip(CONNECTOR)
 
 

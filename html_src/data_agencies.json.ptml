@@ -3,7 +3,7 @@
     <head>
 <!--include head.txt -->
         <title>
-            manage.py
+            agencies.json
         </title>
     </head>
 
@@ -19,7 +19,7 @@
                     </figcaption>
                 </figure>
                 <h1>
-                    manage.py
+                    agencies.json
                 </h1>
 
                 <details>
@@ -29,7 +29,7 @@
 
                     <p>
 <!-- Include the text material here! -->
-<!--include templates/manage.py_hw.txt -->
+<!--include templates/data_agencies.json_hw.txt -->
                     </p>
                 </details>
 
@@ -52,13 +52,13 @@
 
                     <p>
 <!-- Include the documentation here! -->
-<!--include templates/manage.py_ex.txt -->
+<!--include templates/data_agencies.json_ex.txt -->
                    </p>
                 </details>
 
 <!-- Include source code here! -->
                 <p>
-<a href="https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/manage.py">Source code</a>
+<a href="https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/data/agencies.json">Source code</a>
                 </p>
             </div>
         </div>

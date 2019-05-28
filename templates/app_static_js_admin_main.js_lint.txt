@@ -1,0 +1,7 @@
+
+
+   68:22  error  Unexpected alert  no-alert
+   97:22  error  Unexpected alert  no-alert
+  118:26  error  Unexpected alert  no-alert
+
+✖ 3 problems (3 errors, 0 warnings)

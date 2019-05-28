@@ -10,7 +10,7 @@ def read_file_names():
     names = open("templates/menu_input.txt", "r")
     # when echo is called, all the names were concatenated into
     # a single string
-    file_names = names.read().split(" ")
+    file_names = names.read().split()
     file_names.sort()
     for i in range(len(file_names)):
         file_names[i] = file_names[i].strip()

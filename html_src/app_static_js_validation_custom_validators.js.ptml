@@ -41,6 +41,7 @@
                     <p>
                         <pre>
 <!-- Include the linting report here! -->
+<!--include templates/app_static_js_validation_custom_validators.js_lint.txt -->
                         </pre>
                    </p>
                 </details>

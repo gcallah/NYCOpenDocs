@@ -41,6 +41,7 @@
                     <p>
                         <pre>
 <!-- Include the linting report here! -->
+<!--include templates/migrations_env.py_lint.txt -->
                         </pre>
                    </p>
                 </details>

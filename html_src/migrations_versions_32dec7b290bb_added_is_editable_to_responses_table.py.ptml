@@ -41,6 +41,7 @@
                     <p>
                         <pre>
 <!-- Include the linting report here! -->
+<!--include templates/migrations_versions_32dec7b290bb_added_is_editable_to_responses_table.py_lint.txt -->
                         </pre>
                    </p>
                 </details>

@@ -41,6 +41,7 @@
                     <p>
                         <pre>
 <!-- Include the linting report here! -->
+<!--include templates/build_scripts_sentry_setup_sentry.conf.py_lint.txt -->
                         </pre>
                    </p>
                 </details>

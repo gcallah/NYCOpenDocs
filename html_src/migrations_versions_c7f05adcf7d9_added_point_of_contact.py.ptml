@@ -41,6 +41,7 @@
                     <p>
                         <pre>
 <!-- Include the linting report here! -->
+<!--include templates/migrations_versions_c7f05adcf7d9_added_point_of_contact.py_lint.txt -->
                         </pre>
                    </p>
                 </details>

@@ -41,6 +41,7 @@
                     <p>
                         <pre>
 <!-- Include the linting report here! -->
+<!--include templates/migrations_versions_7ba6fbb131bb_add_signature_to_users.py_lint.txt -->
                         </pre>
                    </p>
                 </details>

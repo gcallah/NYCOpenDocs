@@ -41,6 +41,7 @@
                     <p>
                         <pre>
 <!-- Include the linting report here! -->
+<!--include templates/migrations_versions_b722969f38a6_added_minimum_required_to_custom_.py_lint.txt -->
                         </pre>
                    </p>
                 </details>

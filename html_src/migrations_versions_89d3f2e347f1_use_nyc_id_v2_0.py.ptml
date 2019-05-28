@@ -41,6 +41,7 @@
                     <p>
                         <pre>
 <!-- Include the linting report here! -->
+<!--include templates/migrations_versions_89d3f2e347f1_use_nyc_id_v2_0.py_lint.txt -->
                         </pre>
                    </p>
                 </details>

@@ -41,6 +41,7 @@
                     <p>
                         <pre>
 <!-- Include the linting report here! -->
+<!--include templates/migrations_versions_445e50628f6b_add_communication_methods.py_lint.txt -->
                         </pre>
                    </p>
                 </details>

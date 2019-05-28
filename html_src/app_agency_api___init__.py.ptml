@@ -41,6 +41,7 @@
                     <p>
                         <pre>
 <!-- Include the linting report here! -->
+<!--include templates/app_agency_api___init__.py_lint.txt -->
                         </pre>
                    </p>
                 </details>

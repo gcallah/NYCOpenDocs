@@ -41,6 +41,7 @@
                     <p>
                         <pre>
 <!-- Include the linting report here! -->
+<!--include templates/celery_worker.py_lint.txt -->
                         </pre>
                    </p>
                 </details>

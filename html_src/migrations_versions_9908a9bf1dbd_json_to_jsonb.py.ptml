@@ -41,6 +41,7 @@
                     <p>
                         <pre>
 <!-- Include the linting report here! -->
+<!--include templates/migrations_versions_9908a9bf1dbd_json_to_jsonb.py_lint.txt -->
                         </pre>
                    </p>
                 </details>

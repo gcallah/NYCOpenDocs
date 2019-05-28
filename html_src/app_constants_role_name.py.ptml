@@ -41,6 +41,7 @@
                     <p>
                         <pre>
 <!-- Include the linting report here! -->
+<!--include templates/app_constants_role_name.py_lint.txt -->
                         </pre>
                    </p>
                 </details>

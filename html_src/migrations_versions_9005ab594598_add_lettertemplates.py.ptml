@@ -41,6 +41,7 @@
                     <p>
                         <pre>
 <!-- Include the linting report here! -->
+<!--include templates/migrations_versions_9005ab594598_add_lettertemplates.py_lint.txt -->
                         </pre>
                    </p>
                 </details>

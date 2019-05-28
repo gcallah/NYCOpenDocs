@@ -41,6 +41,7 @@
                     <p>
                         <pre>
 <!-- Include the linting report here! -->
+<!--include templates/app_lib_onelogin_saml2_auth.py_lint.txt -->
                         </pre>
                    </p>
                 </details>

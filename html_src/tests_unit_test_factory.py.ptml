@@ -41,6 +41,7 @@
                     <p>
                         <pre>
 <!-- Include the linting report here! -->
+<!--include templates/tests_unit_test_factory.py_lint.txt -->
                         </pre>
                    </p>
                 </details>

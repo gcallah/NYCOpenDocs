@@ -3256,6 +3256,17 @@
 <!-- Include the text material here! -->
 This file defines the forms used to add user-request form, edit the forms and
 remove those forms.
+
+<h3>
+Code Issues
+</h3>
+
+<ul class="review">
+  <li>
+  The <code>AddUserRequestForm</code> and the <code>EditUserRequestForm</code> classes share same attributes. 
+  Recommend coding a parent class that inherits from <code>Form</code> to reduce code repeition.
+  </li>
+</ul>
                     </p>
                 </details>
 

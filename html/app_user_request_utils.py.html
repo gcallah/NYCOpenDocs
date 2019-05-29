@@ -3276,6 +3276,18 @@ Check if a given request has a point of contact,
 Remove the current point of contact from a given request,
 <br>
 Determine point of contact of change.
+
+<h3>
+Code Issues
+</h3>
+
+<ul class="review">
+  <li>
+  For the functions <code>edit_user_request</code> and <code>remove_user_request</code>, a temporary variable <code>tmp</code>
+  on lines 130, 145, 191, and 204, is being used to store the return value of sending an email. However, that variable is not being used elsewhere after storing
+  the return value. Recommend removing that temporary variable if that return value of sending an email will not be used.
+  </li>
+</ul>
                     </p>
                 </details>
 

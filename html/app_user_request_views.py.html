@@ -3263,7 +3263,7 @@ Code Issues
 
 <ul class="review">
   <li>
-  Docstrings for <code>create(request_id)<code> and <code>edit(request_id)<code> vaguely touches upon 
+  Docstrings for <code>create(request_id)</code> and <code>edit(request_id)</code> vaguely touches upon 
   what the request body should have. However, it lacks a description regarding the example. What does 1 and 5 mean below?
     <pre>
         <code>
@@ -3278,7 +3278,7 @@ Code Issues
     </pre>
   </li>
   <li>
-  <code>create(request_id)<code>, <code>edit(request_id)<code>, and <code>delete(request_id)</code> 
+  <code>create(request_id)</code>, <code>edit(request_id)</code>, and <code>delete(request_id)</code> 
   functions have lines of code that can be extracted into separate functions
     <ul>
         <li>
@@ -3299,7 +3299,7 @@ Code Issues
             permission types, both can refer to another function that takes in a permission type as a parameter and returns true or false.
         </li>
         <li>
-            Code for the <code>for</code< loop below can also be extracted into a separate function to reduce code repetition.
+            Code for the <code>for</code> loop below can also be extracted into a separate function to reduce code repetition.
             <pre>
             <code>
             for field in required_fields:

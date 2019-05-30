@@ -14,3 +14,16 @@ This function sends asynchronous emails for the application by taking arguments 
 It gets a list of the agency emails (assigned users and default email).
 It returns a list of agency emails or ['agency@email.com'] (for testing) using
 parameters FOIL request ID and the return list of agency admin emails.
+
+<h3>
+Code Issues
+</h3>
+
+<ul class="review">
+  <li>
+  Missing docstring for <code>send_async_email(msg)</code>
+  </li>
+  <li>
+  Missing docstring for <code>send_contact_email(subject, recipients, body, sender)</code>
+  </li>
+</ul>

@@ -23,3 +23,27 @@ The file also checks the year since when the respective holidays are celebrated.
 <br>
 Example:<br>
 New Year's Day since 1870, Columbus Day since 1970
+
+<h3>
+Code Issues
+</h3>
+
+<ul class="review">
+  <li>
+  Needs a comment specifying how the class is used for the application
+  </li>
+  <li>
+  Lines 22-25 looks confusing since <code>expand</code> is used to replace <code>self.expand</code>'s value of False, 
+  which doesn't appear to be used.
+  <br>
+  <pre>
+    <code>
+    expand = self.expand
+    self.expand = False
+    self[date(year, 1, 1) + rd(days=-1)] = name + " (Observed)"
+    self.expand = expand
+    </code>
+  </pre>
+  Needs comments explaining what self.expand does - what does True and False mean for this attribute?
+  </li>
+</ul>

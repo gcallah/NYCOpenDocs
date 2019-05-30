@@ -1,3 +1,13 @@
 This file contains formatting functions. Each function has an associated dictionary and returned the value of the key inputted.
 For example, format_response_privacy takes in a privacy key, and the value of that key is returned. format_response_type and format_event_type follow a similar concept.
 <br>'format_ultimate_determination_reason' returns an HTML format for displaying a determination reason.
+
+<h3>
+Code Issues
+</h3>
+
+<ul class="review">
+  <li>
+  Recommend adding docstrings for the functions in this file describing the functions and how they are used.
+  </li>
+</ul>

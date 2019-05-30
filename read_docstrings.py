@@ -116,9 +116,9 @@ def read_docs():
         output = "\n"
         if ".py" in filenm:
             output += read_doc_py(filenm)
-        elif ".js" in filenm:
+        elif ".js" in filenm and ".min.js" not in filenm:
             output += read_doc_js(filenm)
-        elif ".css" in filenm:
+        elif ".css" in filenm and ".min.css" not in filenm:
             output += read_doc_css(filenm)
         # write the output to templates/name of file 
         write_filenm = filenm.split("NYCOpenRecords/")[-1]

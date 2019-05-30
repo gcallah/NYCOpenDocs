@@ -1,2 +1,12 @@
 The file defines user_request blueprints and all the user_request view
 functions are imported in this file.
+
+<h3>
+Code Issues
+</h3>
+
+<ul class="review">
+  <li>
+  Needs a short description regarding the purpose of this file.
+  </li>
+</ul>

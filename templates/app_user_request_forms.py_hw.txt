@@ -7,6 +7,9 @@ Code Issues
 
 <ul class="review">
   <li>
+  Recommend adding class descriptions describing the purpose of each class.
+  </li>
+  <li>
   The <code>AddUserRequestForm</code> and the <code>EditUserRequestForm</code> classes share same attributes. 
   Recommend coding a parent class that inherits from <code>Form</code> to reduce code repeition.
   </li>

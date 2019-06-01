@@ -3257,6 +3257,42 @@
 The function in this file adds data-parsley-required attributes to required fields of the note and adds validation messages as well. Character limits are set for the fields name, email, subject, and message. 
 <br>Upon validating the form, if field requirements are not met, the window is scrolled to the location of the field. 
 <br>Character counters are displayed for name, subject, and message.
+
+<h3>
+Code Issues
+</h3>
+
+<ul class="review">
+  <li>
+  The required data-parsley message for each DOM element have a repeated <code>span</code> HTML element. Recommend extracting
+  the <code>span</code> HTML element into a variable. This can make it easier to read what the required message is 
+  for name, email, subject, and message.
+  <pre>
+    <code>
+    name.attr("data-parsley-required-message",
+        "<span class=\"glyphicon glyphicon-exclamation-sign\"></span>&nbsp;" +
+        "<strong>Error, a name is required.</strong> Please type in your name.");
+    email.attr("data-parsley-required-message",
+        "<span class=\"glyphicon glyphicon-exclamation-sign\"></span>&nbsp;" +
+        "<strong>Error, an email is required.</strong> Please type in your email.");
+    email.attr("data-parsley-type-message",
+        "<span class=\"glyphicon glyphicon-exclamation-sign\"></span>&nbsp;" +
+        "<strong>Error, this value should be an email.</strong> Please type in a valid email.");
+    subject.attr("data-parsley-required-message",
+        "<span class=\"glyphicon glyphicon-exclamation-sign\"></span>&nbsp;" +
+        "<strong>Error, a subject is required.</strong> Please type in a subject name.");
+    message.attr("data-parsley-required-message",
+        "<span class=\"glyphicon glyphicon-exclamation-sign\"></span>&nbsp;" +
+        "<strong>Error, a message is required.</strong> Please type in a message.");
+    </code>
+  </pre>
+  </li>
+  <li>
+  Name, email, subject, and message have their attributes set three times. Recommend coding a function that takes in
+  two parameters: the DOM element, such as name, and an object of attributes that pairs the attribute name with its 
+  associated value. 
+  </li>
+</ul>
                     </p>
                 </details>
 

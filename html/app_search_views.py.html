@@ -1225,21 +1225,6 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_acknowledgment.css.html">
-                            add_acknowledgment.css
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_closing.css.html">
-                            add_closing.css
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_denial.css.html">
-                            add_denial.css
-                        </a>
-                    </li>
-                    <li>
                         <a href="/NYCOpenDocs/html/app_static_styles_add_extension.css.html">
                             add_extension.css
                         </a>
@@ -1634,11 +1619,6 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_footer.html.html">
-                            email_footer.html
-                        </a>
-                    </li>
-                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_not_onboarded.html.html">
                             email_not_onboarded.html
                         </a>
@@ -1646,6 +1626,11 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_private_file_upload.html.html">
                             email_private_file_upload.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_request_info.html.html">
+                            email_request_info.html
                         </a>
                     </li>
                     <li>
@@ -3283,8 +3268,7 @@ app/search/views.py:20:1: F401 'app.search.constants.ALL_RESULTS_CHUNKSIZE' impo
 
                     <p>
 <!-- Include the documentation here! -->
-
-<hr><code>requests():</code><br/></br>For request parameters, see app.search.utils.search_requests</br></br>All Users can search by:</br>- FOIL ID</br></br>Anonymous Users can search by:</br>- Title (public only)</br>- Agency Request Summary (public only)</br></br>Public Users can search by:</br>- Title (public only OR public and private if user is requester)</br>- Agency Request Summary (public only)</br>- Description (if user is requester)</br></br>Agency Users can search by:</br>- Title</br>- Agency Request Summary</br>- Description</br>- Requester Name</br></br>All Users can filter by:</br>- Status, Open (anything not Closed if not agency user)</br>- Status, Closed</br>- Date Submitted</br>- Agency</br></br>Only Agency Users can filter by:</br>- Status, In Progress</br>- Status, Due Soon</br>- Status, Overdue</br>- Date Due</br></br><hr><code>requests_doc(doc_type):</code><br/></br>Converts and sends the a search result-set as a</br>file of the specified document type.</br>- Filtering on set size is ignored; all results are returned.</br>- Currently only supports CSVs.</br>- CSV only includes requests belonging to that user's agency</br></br>Document name format: "FOIL_requests_results_<timestamp:MM_DD_YYYY_at_HH_mm_pp></br></br>Request parameters are identical to those of /search/requests.</br></br>:param doc_type: document type ('csv' only)</br>
+<p>We attempted to read from templates/app_search_views.py_ex.txt but failed.</p>
                    </p>
                 </details>
 

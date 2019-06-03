@@ -144,7 +144,6 @@
 ../NYCOpenRecords/app/static/styles/add_instruction.css
 ../NYCOpenRecords/app/static/styles/add_link.css
 ../NYCOpenRecords/app/static/styles/styles.css
-../NYCOpenRecords/app/static/styles/add_denial.css
 ../NYCOpenRecords/app/static/styles/plugins/bootstrap.min.css
 ../NYCOpenRecords/app/static/styles/plugins/parsley.css
 ../NYCOpenRecords/app/static/styles/plugins/bootstrap-editable.css
@@ -162,9 +161,7 @@
 ../NYCOpenRecords/app/static/styles/view_request.css
 ../NYCOpenRecords/app/static/styles/faq.css
 ../NYCOpenRecords/app/static/styles/admin.css
-../NYCOpenRecords/app/static/styles/add_closing.css
 ../NYCOpenRecords/app/static/styles/about.css
-../NYCOpenRecords/app/static/styles/add_acknowledgment.css
 ../NYCOpenRecords/app/static/styles/new_request/new-request.css
 ../NYCOpenRecords/app/static/styles/status.css
 ../NYCOpenRecords/app/static/styles/view_all.css
@@ -263,7 +260,6 @@
 ../NYCOpenRecords/app/templates/email_templates/email_user_made_agency_admin.html
 ../NYCOpenRecords/app/templates/email_templates/email_event_acknowledgment_letter_created.html
 ../NYCOpenRecords/app/templates/email_templates/response_file_links.html
-../NYCOpenRecords/app/templates/email_templates/email_footer.html
 ../NYCOpenRecords/app/templates/email_templates/email_request_status_changed.html
 ../NYCOpenRecords/app/templates/email_templates/email_response_deleted.html
 ../NYCOpenRecords/app/templates/email_templates/email_event_closing_letter_created.html
@@ -272,6 +268,7 @@
 ../NYCOpenRecords/app/templates/email_templates/email_edit_response.html
 ../NYCOpenRecords/app/templates/email_templates/email_response_denial.html
 ../NYCOpenRecords/app/templates/email_templates/email_agency_user_deactivated.html
+../NYCOpenRecords/app/templates/email_templates/email_request_info.html
 ../NYCOpenRecords/app/templates/email_templates/email_private_file_upload.html
 ../NYCOpenRecords/app/templates/email_templates/email_response.html
 ../NYCOpenRecords/app/templates/email_templates/email_response_link.html

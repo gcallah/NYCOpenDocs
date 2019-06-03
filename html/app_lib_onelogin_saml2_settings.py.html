@@ -1225,21 +1225,6 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_acknowledgment.css.html">
-                            add_acknowledgment.css
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_closing.css.html">
-                            add_closing.css
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_denial.css.html">
-                            add_denial.css
-                        </a>
-                    </li>
-                    <li>
                         <a href="/NYCOpenDocs/html/app_static_styles_add_extension.css.html">
                             add_extension.css
                         </a>
@@ -1634,11 +1619,6 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_footer.html.html">
-                            email_footer.html
-                        </a>
-                    </li>
-                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_not_onboarded.html.html">
                             email_not_onboarded.html
                         </a>
@@ -1646,6 +1626,11 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_private_file_upload.html.html">
                             email_private_file_upload.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_request_info.html.html">
+                            email_request_info.html
                         </a>
                     </li>
                     <li>
@@ -3283,8 +3268,7 @@ app/lib/onelogin/saml2/settings.py:741:121: E501 line too long (149 > 120 charac
 
                     <p>
 <!-- Include the documentation here! -->
-
- OneLogin_Saml2_Settings class</br></br>Copyright (c) 2010-2018 OneLogin, Inc.</br>MIT License</br></br>Setting class of OneLogin's Python Toolkit.</br></br><hr><code>validate_url(url):</code><br/></br>Auxiliary method to validate an urllib</br>:param url: An url to be validated</br>:type url: string</br>:returns: True if the url is valid</br>:rtype: bool</br><hr><code>OneLogin_Saml2_Settings(object):</code><br/></br></br>Handles the settings of the Python toolkits.</br></br><hr><code>__init__(self, settings=None, custom_base_path=None, sp_validation_only=False):</code><br/></br>Initializes the settings:</br>- Sets the paths of the different folders</br>- Loads settings info from settings file or array/object provided</br></br>:param settings: SAML Toolkit Settings</br>:type settings: dict</br></br>:param custom_base_path: Path where are stored the settings file and the cert folder</br>:type custom_base_path: string</br></br>:param sp_validation_only: Avoid the IdP validation</br>:type sp_validation_only: boolean</br><hr><code>__load_paths(self, base_path=None):</code><br/></br>Set the paths of the different folders</br><hr><code>__update_paths(self, settings):</code><br/></br>Set custom paths if necessary</br><hr><code>get_base_path(self):</code><br/></br>Returns base path</br></br>:return: The base toolkit folder path</br>:rtype: string</br><hr><code>get_cert_path(self):</code><br/></br>Returns cert path</br></br>:return: The cert folder path</br>:rtype: string</br><hr><code>get_lib_path(self):</code><br/></br>Returns lib path</br></br>:return: The library folder path</br>:rtype: string</br><hr><code>get_ext_lib_path(self):</code><br/></br>Returns external lib path</br></br>:return: The external library folder path</br>:rtype: string</br><hr><code>get_schemas_path(self):</code><br/></br>Returns schema path</br></br>:return: The schema folder path</br>:rtype: string</br><hr><code>__load_settings_from_dict(self, settings):</code><br/></br>Loads settings info from a settings Dict</br></br>:param settings: SAML Toolkit Settings</br>:type settings: dict</br></br>:returns: True if the settings info is valid</br>:rtype: boolean</br><hr><code>__load_settings_from_file(self):</code><br/></br>Loads settings info from the settings json file</br></br>:returns: True if the settings info is valid</br>:rtype: boolean</br><hr><code>__add_default_values(self):</code><br/></br>Add default values if the settings info is not complete</br><hr><code>check_settings(self, settings):</code><br/></br>Checks the settings info.</br></br>:param settings: Dict with settings data</br>:type settings: dict</br></br>:returns: Errors found on the settings data</br>:rtype: list</br><hr><code>check_idp_settings(self, settings):</code><br/></br>Checks the IdP settings info.</br>:param settings: Dict with settings data</br>:type settings: dict</br>:returns: Errors found on the IdP settings data</br>:rtype: list</br><hr><code>check_sp_settings(self, settings):</code><br/></br>Checks the SP settings info.</br>:param settings: Dict with settings data</br>:type settings: dict</br>:returns: Errors found on the SP settings data</br>:rtype: list</br><hr><code>check_sp_certs(self):</code><br/></br>Checks if the x509 certs of the SP exists and are valid.</br>:returns: If the x509 certs of the SP exists and are valid</br>:rtype: boolean</br><hr><code>get_sp_key(self):</code><br/></br>Returns the x509 private key of the SP.</br>:returns: SP private key</br>:rtype: string or None</br><hr><code>get_sp_cert(self):</code><br/></br>Returns the x509 public cert of the SP.</br>:returns: SP public cert</br>:rtype: string or None</br><hr><code>get_sp_cert_new(self):</code><br/></br>Returns the x509 public of the SP planned</br>to be used soon instead the other public cert</br>:returns: SP public cert new</br>:rtype: string or None</br><hr><code>get_idp_cert(self):</code><br/></br>Returns the x509 public cert of the IdP.</br>:returns: IdP public cert</br>:rtype: string</br><hr><code>get_idp_data(self):</code><br/></br>Gets the IdP data.</br></br>:returns: IdP info</br>:rtype: dict</br><hr><code>get_sp_data(self):</code><br/></br>Gets the SP data.</br></br>:returns: SP info</br>:rtype: dict</br><hr><code>get_security_data(self):</code><br/></br>Gets security data.</br></br>:returns: Security info</br>:rtype: dict</br><hr><code>get_contacts(self):</code><br/></br>Gets contact data.</br></br>:returns: Contacts info</br>:rtype: dict</br><hr><code>get_organization(self):</code><br/></br>Gets organization data.</br></br>:returns: Organization info</br>:rtype: dict</br><hr><code>get_sp_metadata(self):</code><br/></br>Gets the SP metadata. The XML representation.</br>:returns: SP metadata (xml)</br>:rtype: string</br><hr><code>validate_metadata(self, xml):</code><br/></br>Validates an XML SP Metadata.</br></br>:param xml: Metadata's XML that will be validate</br>:type xml: string</br></br>:returns: The list of found errors</br>:rtype: list</br><hr><code>format_idp_cert(self):</code><br/></br>Formats the IdP cert.</br><hr><code>format_idp_cert_multi(self):</code><br/></br>Formats the Multple IdP certs.</br><hr><code>format_sp_cert(self):</code><br/></br>Formats the SP cert.</br><hr><code>format_sp_cert_new(self):</code><br/></br>Formats the SP cert.</br><hr><code>format_sp_key(self):</code><br/></br>Formats the private key.</br><hr><code>get_errors(self):</code><br/></br>Returns an array with the errors, the array is empty when the settings is ok.</br></br>:returns: Errors</br>:rtype: list</br><hr><code>set_strict(self, value):</code><br/></br>Activates or deactivates the strict mode.</br></br>:param value: Strict parameter</br>:type value: boolean</br><hr><code>is_strict(self):</code><br/></br>Returns if the 'strict' mode is active.</br></br>:returns: Strict parameter</br>:rtype: boolean</br><hr><code>is_debug_active(self):</code><br/></br>Returns if the debug is active.</br></br>:returns: Debug parameter</br>:rtype: boolean</br>
+<p>We attempted to read from templates/app_lib_onelogin_saml2_settings.py_ex.txt but failed.</p>
                    </p>
                 </details>
 

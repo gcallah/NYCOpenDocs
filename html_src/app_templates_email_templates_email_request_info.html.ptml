@@ -3,7 +3,7 @@
     <head>
 <!--include head.txt -->
         <title>
-            add_acknowledgment.css
+            email_request_info.html
         </title>
     </head>
 
@@ -19,7 +19,7 @@
                     </figcaption>
                 </figure>
                 <h1>
-                    add_acknowledgment.css
+                    email_request_info.html
                 </h1>
 
                 <details>
@@ -29,7 +29,7 @@
 
                     <p>
 <!-- Include the text material here! -->
-<!--include templates/app_static_styles_add_acknowledgment.css_hw.txt -->
+<!--include templates/app_templates_email_templates_email_request_info.html_hw.txt -->
                     </p>
                 </details>
 
@@ -52,13 +52,13 @@
 
                     <p>
 <!-- Include the documentation here! -->
-<!--include templates/app_static_styles_add_acknowledgment.css_ex.txt -->
+<!--include templates/app_templates_email_templates_email_request_info.html_ex.txt -->
                    </p>
                 </details>
 
 <!-- Include source code here! -->
                 <p>
-<a href="https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/add_acknowledgment.css">Source code</a>
+<a href="https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/email_templates/email_request_info.html">Source code</a>
                 </p>
             </div>
         </div>

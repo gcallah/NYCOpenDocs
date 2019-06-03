@@ -1,0 +1,14 @@
+The 'app' folder is basically a base folder where the application sits.
+Using a single module of an application is good for quick projects but with
+more complex projects use of Blueprints helps in defining routes and
+configurations.
+This folder will have several packages for defining classes for models and
+forms.
+<p>
+Blueprints are essential components in app which help in organizing projects
+with several distinct components.
+There can be different Blueprints for the admin panel, the front-end and for
+the user dashboard.
+This helps in sharing the modules, forms and other aspects to group views,
+static files and templates.
+</p>

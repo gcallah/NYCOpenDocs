@@ -3255,6 +3255,21 @@
                     <p>
 <!-- Include the text material here! -->
 The function in this file assigns the data-parsley-required and validation message to required fields. Character limits are also assigned to fields: first name, last name, email, and message. Character counts are displayed for the fields, except for email. The contact form is checked for valid responses in the form. 
+
+<h3>
+Code Issues
+</h3>
+
+<ul class="review">
+  <li>
+  The format of this file looks very similar to <a href="https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/contact.js">
+  app/static/js/request/contact.js</a>. Both use the same <code>span</code> HTML element
+  and have attributes being set multiple times for DOM elements. Recommend creating a separating JS file that this file and 
+  <a href="https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/js/request/contact.js">
+  app/static/js/request/contact.js</a> can use, such as having a function that takes in a DOM element and an object of attributes 
+  that are paired with their values.
+  </li>
+</ul>
                     </p>
                 </details>
 

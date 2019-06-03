@@ -87,10 +87,11 @@ def csv_row_dir(level_num, title, url):
     Returns a list of the entries for the CSV pertaining to a
     directory name
     '''
-    output_lst = ["", "", ""]
+    output_lst = ["", "", "", "", "", "", "", "", ""]
     output_lst[LEVEL] = str(level_num)
     output_lst[TITLE] = title
     output_lst[URL] = HTML_URL + url.strip(".") + ".html"
+    output_lst[HW_TXT] = TEMPLATE_DIR + url.strip(".") + ".html_hw.txt"
     return CONNECTOR.join(output_lst).strip(CONNECTOR)
 
 

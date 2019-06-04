@@ -1225,6 +1225,21 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_acknowledgment.css.html">
+                            add_acknowledgment.css
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_closing.css.html">
+                            add_closing.css
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_denial.css.html">
+                            add_denial.css
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_static_styles_add_extension.css.html">
                             add_extension.css
                         </a>
@@ -1619,6 +1634,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_footer.html.html">
+                            email_footer.html
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_not_onboarded.html.html">
                             email_not_onboarded.html
                         </a>
@@ -1626,11 +1646,6 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_private_file_upload.html.html">
                             email_private_file_upload.html
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_request_info.html.html">
-                            email_request_info.html
                         </a>
                     </li>
                     <li>
@@ -3577,7 +3592,1592 @@ Refer to jQuery UI's documentation.
 
                     <p>
 <!-- Include the documentation here! -->
-<p>We attempted to read from templates/app_static_js_plugins_jquery-ui.js_ex.txt but failed.</p>
+
+/*! jQuery UI - v1.12.1 - 2016-09-15
+<br>* Includes: widget.js, position.js, data.js, disable-selection.js, focusable.js, form-reset-mixin.js, jquery-1-7.js, keycode.js, labels.js, scroll-parent.js, tabbable.js, unique-id.js, widgets/draggable.js, widgets/droppable.js, widgets/resizable.js, widgets/selectable.js, widgets/sortable.js, widgets/accordion.js, widgets/autocomplete.js, widgets/button.js, widgets/checkboxradio.js, widgets/controlgroup.js, widgets/datepicker.js, widgets/dialog.js, widgets/menu.js, widgets/mouse.js, widgets/progressbar.js, widgets/selectmenu.js, widgets/slider.js, widgets/spinner.js, widgets/tabs.js, widgets/tooltip.js, effect.js, effects/effect-blind.js, effects/effect-bounce.js, effects/effect-clip.js, effects/effect-drop.js, effects/effect-explode.js, effects/effect-fade.js, effects/effect-fold.js, effects/effect-highlight.js, effects/effect-puff.js, effects/effect-pulsate.js, effects/effect-scale.js, effects/effect-shake.js, effects/effect-size.js, effects/effect-slide.js, effects/effect-transfer.js
+<br>* Copyright jQuery Foundation and other contributors; Licensed MIT */
+<br>(function( factory ) {
+<br>	if ( typeof define === "function" && define.amd ) {
+<br>}(function( $ ) {
+<br>/*!
+<br> * jQuery UI Widget 1.12.1
+<br> *
+<br> * Copyright jQuery Foundation and other contributors
+<br> * Released under the MIT license.
+<br> */
+<br>$.cleanData = ( function( orig ) {
+<br>	return function( elems ) {
+<br>$.widget = function( name, base, prototype ) {
+<br>	$.expr[ ":" ][ fullName.toLowerCase() ] = function( elem ) {
+<br>	constructor = $[ namespace ][ name ] = function( options, element ) {
+<br>	$.each( prototype, function( prop, value ) {
+<br>		proxiedPrototype[ prop ] = ( function() {
+<br>			function _super() {
+<br>			function _superApply( args ) {
+<br>			return function() {
+<br>		$.each( existingConstructor._childConstructors, function( i, child ) {
+<br>$.widget.extend = function( target ) {
+<br>$.widget.bridge = function( name, object ) {
+<br>	$.fn[ name ] = function( options ) {
+<br>				this.each( function() {
+<br>			this.each( function() {
+<br>$.Widget = function( /* options, element */ ) {};
+<br>	_createWidget: function( options, element ) {
+<br>				remove: function( event ) {
+<br>	_getCreateOptions: function() {
+<br>	destroy: function() {
+<br>		$.each( this.classesElementLookup, function( key, value ) {
+<br>	widget: function() {
+<br>	option: function( key, value ) {
+<br>	_setOptions: function( options ) {
+<br>	_setOption: function( key, value ) {
+<br>	_setOptionClasses: function( value ) {
+<br>	_setOptionDisabled: function( value ) {
+<br>	enable: function() {
+<br>	disable: function() {
+<br>	_classes: function( options ) {
+<br>		function processClassString( classes, checkOption ) {
+<br>	_untrackClassesElement: function( event ) {
+<br>		$.each( that.classesElementLookup, function( key, value ) {
+<br>	_removeClass: function( element, keys, extra ) {
+<br>	_addClass: function( element, keys, extra ) {
+<br>	_toggleClass: function( element, keys, extra, add ) {
+<br>	_on: function( suppressDisabledCheck, element, handlers ) {
+<br>		$.each( handlers, function( event, handler ) {
+<br>			function handlerProxy() {
+<br>	_off: function( element, eventName ) {
+<br>	_delay: function( handler, delay ) {
+<br>		function handlerProxy() {
+<br>	_hoverable: function( element ) {
+<br>			mouseenter: function( event ) {
+<br>			mouseleave: function( event ) {
+<br>	_focusable: function( element ) {
+<br>			focusin: function( event ) {
+<br>			focusout: function( event ) {
+<br>	_trigger: function( type, event, data ) {
+<br>$.each( { show: "fadeIn", hide: "fadeOut" }, function( method, defaultEffect ) {
+<br>	$.Widget.prototype[ "_" + method ] = function( element, options, callback ) {
+<br>			element.queue( function( next ) {
+<br>/*!
+<br> * jQuery UI Position 1.12.1
+<br> *
+<br> * Copyright jQuery Foundation and other contributors
+<br> * Released under the MIT license.
+<br> *
+<br> */
+<br>( function() {
+<br>function getOffsets( offsets, width, height ) {
+<br>function parseCss( element, property ) {
+<br>function getDimensions( elem ) {
+<br>	scrollbarWidth: function() {
+<br>	getScrollInfo: function( within ) {
+<br>	getWithinInfo: function( element ) {
+<br>$.fn.position = function( options ) {
+<br>	$.each( [ "my", "at" ], function() {
+<br>	return this.each( function() {
+<br>		$.each( [ "left", "top" ], function( i, dir ) {
+<br>			using = function( props ) {
+<br>		left: function( position, data ) {
+<br>		top: function( position, data ) {
+<br>		left: function( position, data ) {
+<br>		top: function( position, data ) {
+<br>		left: function() {
+<br>		top: function() {
+<br>/*!
+<br> * jQuery UI :data 1.12.1
+<br> *
+<br> * Copyright jQuery Foundation and other contributors
+<br> * Released under the MIT license.
+<br> */
+<br>		$.expr.createPseudo( function( dataName ) {
+<br>			return function( elem ) {
+<br>		function( elem, i, match ) {
+<br>/*!
+<br> * jQuery UI Disable Selection 1.12.1
+<br> *
+<br> * Copyright jQuery Foundation and other contributors
+<br> * Released under the MIT license.
+<br> */
+<br>	disableSelection: ( function() {
+<br>		return function() {
+<br>			return this.on( eventType + ".ui-disableSelection", function( event ) {
+<br>	enableSelection: function() {
+<br>/*!
+<br> * jQuery UI Focusable 1.12.1
+<br> *
+<br> * Copyright jQuery Foundation and other contributors
+<br> * Released under the MIT license.
+<br> */
+<br>$.ui.focusable = function( element, hasTabindex ) {
+<br>function visible( element ) {
+<br>	focusable: function( element ) {
+<br>var form = $.fn.form = function() {
+<br>/*!
+<br> * jQuery UI Form Reset Mixin 1.12.1
+<br> *
+<br> * Copyright jQuery Foundation and other contributors
+<br> * Released under the MIT license.
+<br> */
+<br>	_formResetHandler: function() {
+<br>		setTimeout( function() {
+<br>			$.each( instances, function() {
+<br>	_bindFormResetHandler: function() {
+<br>	_unbindFormResetHandler: function() {
+<br>/*!
+<br> * jQuery UI Support for jQuery core 1.7.x 1.12.1
+<br> *
+<br> * Copyright jQuery Foundation and other contributors
+<br> * Released under the MIT license.
+<br> *
+<br> */
+<br>	$.each( [ "Width", "Height" ], function( i, name ) {
+<br>		function reduce( elem, size, border, margin ) {
+<br>			$.each( side, function() {
+<br>		$.fn[ "inner" + name ] = function( size ) {
+<br>			return this.each( function() {
+<br>		$.fn[ "outer" + name ] = function( size, margin ) {
+<br>			return this.each( function() {
+<br>	$.fn.addBack = function( selector ) {
+<br>/*!
+<br> * jQuery UI Keycode 1.12.1
+<br> *
+<br> * Copyright jQuery Foundation and other contributors
+<br> * Released under the MIT license.
+<br> */
+<br>var escapeSelector = $.ui.escapeSelector = ( function() {
+<br>	return function( selector ) {
+<br>/*!
+<br> * jQuery UI Labels 1.12.1
+<br> *
+<br> * Copyright jQuery Foundation and other contributors
+<br> * Released under the MIT license.
+<br> */
+<br>var labels = $.fn.labels = function() {
+<br>/*!
+<br> * jQuery UI Scroll Parent 1.12.1
+<br> *
+<br> * Copyright jQuery Foundation and other contributors
+<br> * Released under the MIT license.
+<br> */
+<br>var scrollParent = $.fn.scrollParent = function( includeHidden ) {
+<br>		scrollParent = this.parents().filter( function() {
+<br>/*!
+<br> * jQuery UI Tabbable 1.12.1
+<br> *
+<br> * Copyright jQuery Foundation and other contributors
+<br> * Released under the MIT license.
+<br> */
+<br>	tabbable: function( element ) {
+<br>/*!
+<br> * jQuery UI Unique ID 1.12.1
+<br> *
+<br> * Copyright jQuery Foundation and other contributors
+<br> * Released under the MIT license.
+<br> */
+<br>	uniqueId: ( function() {
+<br>		return function() {
+<br>			return this.each( function() {
+<br>	removeUniqueId: function() {
+<br>		return this.each( function() {
+<br>/*!
+<br> * jQuery UI Mouse 1.12.1
+<br> *
+<br> * Copyright jQuery Foundation and other contributors
+<br> * Released under the MIT license.
+<br> */
+<br>$( document ).on( "mouseup", function() {
+<br>	_mouseInit: function() {
+<br>			.on( "mousedown." + this.widgetName, function( event ) {
+<br>			.on( "click." + this.widgetName, function( event ) {
+<br>	_mouseDestroy: function() {
+<br>	_mouseDown: function( event ) {
+<br>			this._mouseDelayTimer = setTimeout( function() {
+<br>		this._mouseMoveDelegate = function( event ) {
+<br>		this._mouseUpDelegate = function( event ) {
+<br>	_mouseMove: function( event ) {
+<br>	_mouseUp: function( event ) {
+<br>	_mouseDistanceMet: function( event ) {
+<br>	_mouseDelayMet: function( /* event */ ) {
+<br>	_mouseStart: function( /* event */ ) {},
+<br>	_mouseDrag: function( /* event */ ) {},
+<br>	_mouseStop: function( /* event */ ) {},
+<br>	_mouseCapture: function( /* event */ ) { return true; }
+<br>	add: function( module, option, set ) {
+<br>	call: function( instance, name, args, allowDisconnected ) {
+<br>var safeActiveElement = $.ui.safeActiveElement = function( document ) {
+<br>var safeBlur = $.ui.safeBlur = function( element ) {
+<br>/*!
+<br> * jQuery UI Draggable 1.12.1
+<br> *
+<br> * Copyright jQuery Foundation and other contributors
+<br> * Released under the MIT license.
+<br> */
+<br>	_create: function() {
+<br>	_setOption: function( key, value ) {
+<br>	_destroy: function() {
+<br>	_mouseCapture: function( event ) {
+<br>	_blockFrames: function( selector ) {
+<br>		this.iframeBlocks = this.document.find( selector ).map( function() {
+<br>	_unblockFrames: function() {
+<br>	_blurActiveElement: function( event ) {
+<br>	_mouseStart: function( event ) {
+<br>		/*
+<br>		 * - Position generation -
+<br>		 * This block generates everything position related - it's the core of draggables.
+<br>		 */
+<br>		this.hasFixedAncestor = this.helper.parents().filter( function() {
+<br>	_refreshOffsets: function( event ) {
+<br>	_mouseDrag: function( event, noPropagation ) {
+<br>	_mouseStop: function( event ) {
+<br>				function() {
+<br>	_mouseUp: function( event ) {
+<br>	cancel: function() {
+<br>	_getHandle: function( event ) {
+<br>	_setHandleClassName: function() {
+<br>	_removeHandleClassName: function() {
+<br>	_createHelper: function( event ) {
+<br>	_setPositionRelative: function() {
+<br>	_adjustOffsetFromHelper: function( obj ) {
+<br>	_isRootNode: function( element ) {
+<br>	_getParentOffset: function() {
+<br>	_getRelativeOffset: function() {
+<br>	_cacheMargins: function() {
+<br>	_cacheHelperProportions: function() {
+<br>	_setContainment: function() {
+<br>	_convertPositionTo: function( d, pos ) {
+<br>	_generatePosition: function( event, constrainPosition ) {
+<br>		/*
+<br>		 * - Position constraining -
+<br>		 * Constrain the position to a mix of grid, containment.
+<br>		 */
+<br>	_clear: function() {
+<br>	_trigger: function( type, event, ui ) {
+<br>	_uiHash: function() {
+<br>	start: function( event, ui, draggable ) {
+<br>		$( draggable.options.connectToSortable ).each( function() {
+<br>	stop: function( event, ui, draggable ) {
+<br>		$.each( draggable.sortables, function() {
+<br>	drag: function( event, ui, draggable ) {
+<br>		$.each( draggable.sortables, function() {
+<br>				$.each( draggable.sortables, function() {
+<br>					sortable.options.helper = function() {
+<br>					$.each( draggable.sortables, function() {
+<br>					$.each( draggable.sortables, function() {
+<br>	start: function( event, ui, instance ) {
+<br>	stop: function( event, ui, instance ) {
+<br>	start: function( event, ui, instance ) {
+<br>	stop: function( event, ui, instance ) {
+<br>	start: function( event, ui, i ) {
+<br>	drag: function( event, ui, i  ) {
+<br>	start: function( event, ui, i ) {
+<br>			.each( function() {
+<br>	drag: function( event, ui, inst ) {
+<br>	start: function( event, ui, instance ) {
+<br>			group = $.makeArray( $( o.stack ) ).sort( function( a, b ) {
+<br>		$( group ).each( function( i ) {
+<br>	start: function( event, ui, instance ) {
+<br>	stop: function( event, ui, instance ) {
+<br>/*!
+<br> * jQuery UI Droppable 1.12.1
+<br> *
+<br> * Copyright jQuery Foundation and other contributors
+<br> * Released under the MIT license.
+<br> */
+<br>	_create: function() {
+<br>		this.accept = $.isFunction( accept ) ? accept : function( d ) {
+<br>		this.proportions = function( /* valueToWrite */ ) {
+<br>	_addToManager: function( scope ) {
+<br>	_splice: function( drop ) {
+<br>	_destroy: function() {
+<br>	_setOption: function( key, value ) {
+<br>			this.accept = $.isFunction( value ) ? value : function( d ) {
+<br>	_activate: function( event ) {
+<br>	_deactivate: function( event ) {
+<br>	_over: function( event ) {
+<br>	_out: function( event ) {
+<br>	_drop: function( event, custom ) {
+<br>			.each( function() {
+<br>	ui: function( c ) {
+<br>	_addHoverClass: function() {
+<br>	_removeHoverClass: function() {
+<br>	_addActiveClass: function() {
+<br>	_removeActiveClass: function() {
+<br>var intersect = $.ui.intersect = ( function() {
+<br>	function isOverAxis( x, reference, size ) {
+<br>	return function( draggable, droppable, toleranceMode, event ) {
+<br>/*
+<br>	This manager tracks offsets of draggables and droppables
+<br>*/
+<br>	prepareOffsets: function( t, event ) {
+<br>	drop: function( draggable, event ) {
+<br>		$.each( ( $.ui.ddmanager.droppables[ draggable.options.scope ] || [] ).slice(), function() {
+<br>	dragStart: function( draggable, event ) {
+<br>		draggable.element.parentsUntil( "body" ).on( "scroll.droppable", function() {
+<br>	drag: function( draggable, event ) {
+<br>		$.each( $.ui.ddmanager.droppables[ draggable.options.scope ] || [], function() {
+<br>				parent = this.element.parents( ":data(ui-droppable)" ).filter( function() {
+<br>	dragStop: function( draggable, event ) {
+<br>		_addActiveClass: function() {
+<br>		_removeActiveClass: function() {
+<br>		_addHoverClass: function() {
+<br>		_removeHoverClass: function() {
+<br>/*!
+<br> * jQuery UI Resizable 1.12.1
+<br> *
+<br> * Copyright jQuery Foundation and other contributors
+<br> * Released under the MIT license.
+<br> */
+<br>	_num: function( value ) {
+<br>	_isNumber: function( value ) {
+<br>	_hasScroll: function( el, a ) {
+<br>	_create: function() {
+<br>				.on( "mouseenter", function() {
+<br>				.on( "mouseleave", function() {
+<br>	_destroy: function() {
+<br>			_destroy = function( exp ) {
+<br>	_setOption: function( key, value ) {
+<br>	_setupHandles: function() {
+<br>		this._renderAxis = function( target ) {
+<br>		this._handles.on( "mouseover", function() {
+<br>	_removeHandles: function() {
+<br>	_mouseCapture: function( event ) {
+<br>	_mouseStart: function( event ) {
+<br>	_mouseDrag: function( event ) {
+<br>	_mouseStop: function( event ) {
+<br>	_updatePrevProperties: function() {
+<br>	_applyChanges: function() {
+<br>	_updateVirtualBoundaries: function( forceAspectRatio ) {
+<br>	_updateCache: function( data ) {
+<br>	_updateRatio: function( data ) {
+<br>	_respectSize: function( data ) {
+<br>	_getPaddingPlusBorderDimensions: function( element ) {
+<br>	_proportionallyResize: function() {
+<br>	_renderProxy: function() {
+<br>		e: function( event, dx ) {
+<br>		w: function( event, dx ) {
+<br>		n: function( event, dx, dy ) {
+<br>		s: function( event, dx, dy ) {
+<br>		se: function( event, dx, dy ) {
+<br>		sw: function( event, dx, dy ) {
+<br>		ne: function( event, dx, dy ) {
+<br>		nw: function( event, dx, dy ) {
+<br>	_propagate: function( n, event ) {
+<br>	ui: function() {
+<br>/*
+<br> * Resizable Extensions
+<br> */
+<br>	stop: function( event ) {
+<br>				step: function() {
+<br>	start: function() {
+<br>			$( [ "Top", "Right", "Left", "Bottom" ] ).each( function( i, name ) {
+<br>	resize: function( event ) {
+<br>	stop: function() {
+<br>	start: function() {
+<br>		$( o.alsoResize ).each( function() {
+<br>	resize: function( event, ui ) {
+<br>			$( o.alsoResize ).each( function() {
+<br>				$.each( css, function( i, prop ) {
+<br>	stop: function() {
+<br>	start: function() {
+<br>	resize: function() {
+<br>	stop: function() {
+<br>	resize: function() {
+<br>/*!
+<br> * jQuery UI Selectable 1.12.1
+<br> *
+<br> * Copyright jQuery Foundation and other contributors
+<br> * Released under the MIT license.
+<br> */
+<br>	_create: function() {
+<br>		this.refresh = function() {
+<br>			that.selectees.each( function() {
+<br>	_destroy: function() {
+<br>	_mouseStart: function( event ) {
+<br>		this.selectees.filter( ".ui-selected" ).each( function() {
+<br>		$( event.target ).parents().addBack().each( function() {
+<br>	_mouseDrag: function( event ) {
+<br>		this.selectees.each( function() {
+<br>	_mouseStop: function( event ) {
+<br>		$( ".ui-unselecting", this.element[ 0 ] ).each( function() {
+<br>		$( ".ui-selecting", this.element[ 0 ] ).each( function() {
+<br>/*!
+<br> * jQuery UI Sortable 1.12.1
+<br> *
+<br> * Copyright jQuery Foundation and other contributors
+<br> * Released under the MIT license.
+<br> */
+<br>	_isOverAxis: function( x, reference, size ) {
+<br>	_isFloating: function( item ) {
+<br>	_create: function() {
+<br>	_setOption: function( key, value ) {
+<br>	_setHandleClassName: function() {
+<br>		$.each( this.items, function() {
+<br>	_destroy: function() {
+<br>	_mouseCapture: function( event, overrideHandle ) {
+<br>		$( event.target ).parents().each( function() {
+<br>			$( this.options.handle, currentItem ).find( "*" ).addBack().each( function() {
+<br>	_mouseStart: function( event, overrideHandle, noActivation ) {
+<br>		/*
+<br>		 * - Position generation -
+<br>		 * This block generates everything position related - it's the core of draggables.
+<br>		 */
+<br>	_mouseDrag: function( event ) {
+<br>	_mouseStop: function( event, noPropagation ) {
+<br>				function() {
+<br>	cancel: function() {
+<br>	serialize: function( o ) {
+<br>		$( items ).each( function() {
+<br>	toArray: function( o ) {
+<br>		items.each( function() {
+<br>	/* Be careful with the following core functions */
+<br>	_intersectsWith: function( item ) {
+<br>	_intersectsWithPointer: function( item ) {
+<br>	_intersectsWithSides: function( item ) {
+<br>	_getDragVerticalDirection: function() {
+<br>	_getDragHorizontalDirection: function() {
+<br>	refresh: function( event ) {
+<br>	_connectWith: function() {
+<br>	_getItemsAsjQuery: function( connected ) {
+<br>		function addItems() {
+<br>	_removeCurrentsFromItems: function() {
+<br>		this.items = $.grep( this.items, function( item ) {
+<br>	_refreshItems: function( event ) {
+<br>	refreshPositions: function( fast ) {
+<br>	_createPlaceholder: function( that ) {
+<br>				element: function() {
+<br>				update: function( container, p ) {
+<br>	_createTrPlaceholder: function( sourceTr, targetTr ) {
+<br>		sourceTr.children().each( function() {
+<br>	_contactContainers: function( event ) {
+<br>	_createHelper: function( event ) {
+<br>	_adjustOffsetFromHelper: function( obj ) {
+<br>	_getParentOffset: function() {
+<br>	_getRelativeOffset: function() {
+<br>	_cacheMargins: function() {
+<br>	_cacheHelperProportions: function() {
+<br>	_setContainment: function() {
+<br>	_convertPositionTo: function( d, pos ) {
+<br>	_generatePosition: function( event ) {
+<br>		/*
+<br>		 * - Position constraining -
+<br>		 * Constrain the position to a mix of grid, containment.
+<br>		 */
+<br>	_rearrange: function( event, i, a, hardRefresh ) {
+<br>		this._delay( function() {
+<br>	_clear: function( event, noPropagation ) {
+<br>			delayedTriggers.push( function( event ) {
+<br>			delayedTriggers.push( function( event ) {
+<br>				delayedTriggers.push( function( event ) {
+<br>				delayedTriggers.push( ( function( c ) {
+<br>					return function( event ) {
+<br>				delayedTriggers.push( ( function( c ) {
+<br>					return function( event ) {
+<br>		function delayEvent( type, instance, container ) {
+<br>			return function( event ) {
+<br>	_trigger: function() {
+<br>	_uiHash: function( _inst ) {
+<br>/*!
+<br> * jQuery UI Accordion 1.12.1
+<br> *
+<br> * Copyright jQuery Foundation and other contributors
+<br> * Released under the MIT license.
+<br> */
+<br>	_create: function() {
+<br>	_getCreateEventData: function() {
+<br>	_createIcons: function() {
+<br>	_destroyIcons: function() {
+<br>	_destroy: function() {
+<br>	_setOption: function( key, value ) {
+<br>	_setOptionDisabled: function( value ) {
+<br>	_keydown: function( event ) {
+<br>	_panelKeyDown: function( event ) {
+<br>	refresh: function() {
+<br>	_processPanels: function() {
+<br>	_refresh: function() {
+<br>			.each( function() {
+<br>			this.element.siblings( ":visible" ).each( function() {
+<br>			this.headers.each( function() {
+<br>				.each( function() {
+<br>				.each( function() {
+<br>	_activate: function( index ) {
+<br>	_findActive: function( selector ) {
+<br>	_setupEvents: function( event ) {
+<br>			$.each( event.split( " " ), function( index, eventName ) {
+<br>	_eventHandler: function( event ) {
+<br>	_toggle: function( data ) {
+<br>			this.headers.filter( function() {
+<br>	_animate: function( toShow, toHide, data ) {
+<br>			complete = function() {
+<br>			step: function( now, fx ) {
+<br>				step: function( now, fx ) {
+<br>	_toggleComplete: function( data ) {
+<br>/*!
+<br> * jQuery UI Menu 1.12.1
+<br> *
+<br> * Copyright jQuery Foundation and other contributors
+<br> * Released under the MIT license.
+<br> */
+<br>	_create: function() {
+<br>			"mousedown .ui-menu-item": function( event ) {
+<br>			"click .ui-menu-item": function( event ) {
+<br>			"mouseenter .ui-menu-item": function( event ) {
+<br>			focus: function( event, keepActiveItem ) {
+<br>			blur: function( event ) {
+<br>				this._delay( function() {
+<br>			click: function( event ) {
+<br>	_destroy: function() {
+<br>		submenus.children().each( function() {
+<br>	_keydown: function( event ) {
+<br>				this.filterTimer = this._delay( function() {
+<br>	_activate: function( event ) {
+<br>	refresh: function() {
+<br>			.each( function() {
+<br>		items.not( ".ui-menu-item" ).each( function() {
+<br>	_itemRole: function() {
+<br>	_setOption: function( key, value ) {
+<br>	_setOptionDisabled: function( value ) {
+<br>	focus: function( event, item ) {
+<br>			this.timer = this._delay( function() {
+<br>	_scrollIntoView: function( item ) {
+<br>	blur: function( event, fromFocus ) {
+<br>	_startOpening: function( submenu ) {
+<br>		this.timer = this._delay( function() {
+<br>	_open: function( submenu ) {
+<br>	collapseAll: function( event, all ) {
+<br>		this.timer = this._delay( function() {
+<br>	_close: function( startMenu ) {
+<br>	_closeOnDocumentClick: function( event ) {
+<br>	_isDivider: function( item ) {
+<br>	collapse: function( event ) {
+<br>	expand: function( event ) {
+<br>			this._delay( function() {
+<br>	next: function( event ) {
+<br>	previous: function( event ) {
+<br>	isFirstItem: function() {
+<br>	isLastItem: function() {
+<br>	_move: function( direction, filter, event ) {
+<br>	nextPage: function( event ) {
+<br>			this.active.nextAll( ".ui-menu-item" ).each( function() {
+<br>	previousPage: function( event ) {
+<br>			this.active.prevAll( ".ui-menu-item" ).each( function() {
+<br>	_hasScroll: function() {
+<br>	select: function( event ) {
+<br>	_filterMenuItems: function( character ) {
+<br>					.filter( function() {
+<br>/*!
+<br> * jQuery UI Autocomplete 1.12.1
+<br> *
+<br> * Copyright jQuery Foundation and other contributors
+<br> * Released under the MIT license.
+<br> */
+<br>	_create: function() {
+<br>			keydown: function( event ) {
+<br>			keypress: function( event ) {
+<br>			input: function( event ) {
+<br>			focus: function() {
+<br>			blur: function( event ) {
+<br>			mousedown: function( event ) {
+<br>				this._delay( function() {
+<br>			menufocus: function( event, ui ) {
+<br>						this.document.one( "mousemove", function() {
+<br>			menuselect: function( event, ui ) {
+<br>					this._delay( function() {
+<br>			beforeunload: function() {
+<br>	_destroy: function() {
+<br>	_setOption: function( key, value ) {
+<br>	_isEventTargetInWidget: function( event ) {
+<br>	_closeOnClickOutside: function( event ) {
+<br>	_appendTo: function() {
+<br>	_initSource: function() {
+<br>			this.source = function( request, response ) {
+<br>			this.source = function( request, response ) {
+<br>					success: function( data ) {
+<br>					error: function() {
+<br>	_searchTimeout: function( event ) {
+<br>		this.searching = this._delay( function() {
+<br>	search: function( value, event ) {
+<br>	_search: function( value ) {
+<br>	_response: function() {
+<br>		return $.proxy( function( content ) {
+<br>	__response: function( content ) {
+<br>	close: function( event ) {
+<br>	_close: function( event ) {
+<br>	_change: function( event ) {
+<br>	_normalize: function( items ) {
+<br>		return $.map( items, function( item ) {
+<br>	_suggest: function( items ) {
+<br>	_resizeMenu: function() {
+<br>	_renderMenu: function( ul, items ) {
+<br>		$.each( items, function( index, item ) {
+<br>	_renderItemData: function( ul, item ) {
+<br>	_renderItem: function( ul, item ) {
+<br>	_move: function( direction, event ) {
+<br>	widget: function() {
+<br>	_value: function() {
+<br>	_keyEvent: function( keyEvent, event ) {
+<br>	_isContentEditable: function( element ) {
+<br>	escapeRegex: function( value ) {
+<br>	filter: function( array, term ) {
+<br>		return $.grep( array, function( value ) {
+<br>			results: function( amount ) {
+<br>	__response: function( content ) {
+<br>/*!
+<br> * jQuery UI Controlgroup 1.12.1
+<br> *
+<br> * Copyright jQuery Foundation and other contributors
+<br> * Released under the MIT license.
+<br> */
+<br>	_create: function() {
+<br>	_enhance: function() {
+<br>	_destroy: function() {
+<br>	_initWidgets: function() {
+<br>		$.each( this.options.items, function( widget, selector ) {
+<br>				labels.each( function() {
+<br>				.each( function() {
+<br>	_callChildMethod: function( method ) {
+<br>		this.childWidgets.each( function() {
+<br>	_updateCornerClass: function( element, position ) {
+<br>	_buildSimpleOptions: function( position, key ) {
+<br>	_spinnerOptions: function( position ) {
+<br>	_buttonOptions: function( position ) {
+<br>	_checkboxradioOptions: function( position ) {
+<br>	_selectmenuOptions: function( position ) {
+<br>	_resolveClassesValues: function( classes, instance ) {
+<br>		$.each( classes, function( key ) {
+<br>	_setOption: function( key, value ) {
+<br>	refresh: function() {
+<br>			$.each( [ "first", "last" ], function( index, value ) {
+<br>/*!
+<br> * jQuery UI Checkboxradio 1.12.1
+<br> *
+<br> * Copyright jQuery Foundation and other contributors
+<br> * Released under the MIT license.
+<br> */
+<br>	_getCreateOptions: function() {
+<br>		this.label.contents().not( this.element[ 0 ] ).each( function() {
+<br>	_create: function() {
+<br>			focus: function() {
+<br>			blur: function() {
+<br>	_readType: function() {
+<br>	_enhance: function() {
+<br>	widget: function() {
+<br>	_getRadioGroup: function() {
+<br>			group = $( nameSelector ).filter( function() {
+<br>	_toggleClasses: function() {
+<br>				.each( function() {
+<br>	_destroy: function() {
+<br>	_setOption: function( key, value ) {
+<br>	_updateIcon: function( checked ) {
+<br>	_updateLabel: function() {
+<br>	refresh: function() {
+<br>/*!
+<br> * jQuery UI Button 1.12.1
+<br> *
+<br> * Copyright jQuery Foundation and other contributors
+<br> * Released under the MIT license.
+<br> */
+<br>	_getCreateOptions: function() {
+<br>	_create: function() {
+<br>				"keyup": function( event ) {
+<br>	_enhance: function() {
+<br>	_updateTooltip: function() {
+<br>	_updateIcon: function( option, value ) {
+<br>	_destroy: function() {
+<br>	_attachIconSpace: function( iconPosition ) {
+<br>	_attachIcon: function( iconPosition ) {
+<br>	_setOptions: function( options ) {
+<br>	_setOption: function( key, value ) {
+<br>	refresh: function() {
+<br>		_create: function() {
+<br>		_setOption: function( key, value ) {
+<br>	$.fn.button = ( function( orig ) {
+<br>		return function() {
+<br>	$.fn.buttonset = function() {
+<br>/* jscs:disable requireCamelCaseOrUpperCaseIdentifiers */
+<br>/*!
+<br> * jQuery UI Datepicker 1.12.1
+<br> *
+<br> * Copyright jQuery Foundation and other contributors
+<br> * Released under the MIT license.
+<br> */
+<br>function datepicker_getZindex( elem ) {
+<br>/* Date picker manager.
+<br>   Use the singleton instance of this class, $.datepicker, to interact with the date picker.
+<br>   Settings for (groups of) date pickers are maintained in an instance object,
+<br>   allowing multiple different settings on the same page. */
+<br>function Datepicker() {
+<br>	/* Class name added to elements to indicate already configured with a date picker. */
+<br>	_widgetDatepicker: function() {
+<br>	/* Override the default settings for all instances of the date picker.
+<br>	 * @param  settings  object - the new settings to use as defaults (anonymous object)
+<br>	 * @return the manager object
+<br>	 */
+<br>	setDefaults: function( settings ) {
+<br>	/* Attach the date picker to a jQuery selection.
+<br>	 * @param  target	element - the target input field or division or span
+<br>	 * @param  settings  object - the new settings to use for this date picker instance (anonymous)
+<br>	 */
+<br>	_attachDatepicker: function( target, settings ) {
+<br>	/* Create a new instance object. */
+<br>	_newInst: function( target, inline ) {
+<br>	/* Attach the date picker to an input field. */
+<br>	_connectDatepicker: function( target, inst ) {
+<br>	/* Make attachments based on settings. */
+<br>	_attachments: function( input, inst ) {
+<br>			inst.trigger.on( "click", function() {
+<br>	/* Apply the maximum length for the date format. */
+<br>	_autoSize: function( inst ) {
+<br>				findMax = function( names ) {
+<br>	/* Attach an inline date picker to a div. */
+<br>	_inlineDatepicker: function( target, inst ) {
+<br>	/* Pop-up the date picker in a "dialog" box.
+<br>	 * @param  input element - ignored
+<br>	 * @param  date	string or Date - the initial date to display
+<br>	 * @param  onSelect  function - the function to call when a date is selected
+<br>	 * @param  settings  object - update the dialog date picker instance's settings (anonymous object)
+<br>	 * @param  pos int[2] - coordinates for the dialog's position within the screen or
+<br>	 *					event - with x/y coordinates or
+<br>	 *					leave empty for default (screen centre)
+<br>	 * @return the manager object
+<br>	 */
+<br>	_dialogDatepicker: function( input, date, onSelect, settings, pos ) {
+<br>	/* Detach a datepicker from its control.
+<br>	 * @param  target	element - the target input field or division or span
+<br>	 */
+<br>	_destroyDatepicker: function( target ) {
+<br>	/* Enable the date picker to a jQuery selection.
+<br>	 * @param  target	element - the target input field or division or span
+<br>	 */
+<br>	_enableDatepicker: function( target ) {
+<br>				each( function() { this.disabled = false; } ).end().
+<br>	/* Disable the date picker to a jQuery selection.
+<br>	 * @param  target	element - the target input field or division or span
+<br>	 */
+<br>	_disableDatepicker: function( target ) {
+<br>				each( function() { this.disabled = true; } ).end().
+<br>	/* Is the first field in a jQuery collection disabled as a datepicker?
+<br>	 * @param  target	element - the target input field or division or span
+<br>	 * @return boolean - true if disabled, false if enabled
+<br>	 */
+<br>	_isDisabledDatepicker: function( target ) {
+<br>	/* Retrieve the instance data for the target control.
+<br>	 * @param  target  element - the target input field or division or span
+<br>	 * @return  object - the associated instance data
+<br>	 * @throws  error if a jQuery problem getting data
+<br>	 */
+<br>	_getInst: function( target ) {
+<br>	/* Update or retrieve the settings for a date picker attached to an input field or division.
+<br>	 * @param  target  element - the target input field or division or span
+<br>	 * @param  name	object - the new settings to update or
+<br>	 *				string - the name of the setting to change or retrieve,
+<br>	 *				when retrieving also "all" for all instance settings or
+<br>	 *				"defaults" for all global defaults
+<br>	 * @param  value   any - the new value for the setting
+<br>	 *				(omit if above is an object or to retrieve a value)
+<br>	 */
+<br>	_optionDatepicker: function( target, name, value ) {
+<br>	_changeDatepicker: function( target, name, value ) {
+<br>	/* Redraw the date picker attached to an input field or division.
+<br>	 * @param  target  element - the target input field or division or span
+<br>	 */
+<br>	_refreshDatepicker: function( target ) {
+<br>	/* Set the dates for a jQuery selection.
+<br>	 * @param  target element - the target input field or division or span
+<br>	 * @param  date	Date - the new date
+<br>	 */
+<br>	_setDateDatepicker: function( target, date ) {
+<br>	/* Get the date(s) for the first entry in a jQuery selection.
+<br>	 * @param  target element - the target input field or division or span
+<br>	 * @param  noDefault boolean - true if no default date is to be used
+<br>	 * @return Date - the current date
+<br>	 */
+<br>	_getDateDatepicker: function( target, noDefault ) {
+<br>	/* Handle keystrokes. */
+<br>	_doKeyDown: function( event ) {
+<br>	/* Filter entered characters - based on date format. */
+<br>	_doKeyPress: function( event ) {
+<br>	/* Synchronise manual entry and field/alternate field. */
+<br>	_doKeyUp: function( event ) {
+<br>	/* Pop-up the date picker for a given input field.
+<br>	 * If false returned from beforeShow event handler do not show.
+<br>	 * @param  input  element - the input field attached to the date picker or
+<br>	 *					event - if triggered by focus
+<br>	 */
+<br>	_showDatepicker: function( input ) {
+<br>		$( input ).parents().each( function() {
+<br>	/* Generate the date picker content. */
+<br>	_updateDatepicker: function( inst ) {
+<br>			setTimeout( function() {
+<br>	_shouldFocusInput: function( inst ) {
+<br>	/* Check positioning to remain on screen. */
+<br>	_checkOffset: function( inst, offset, isFixed ) {
+<br>	/* Find an object's position on the screen. */
+<br>	_findPos: function( obj ) {
+<br>	/* Hide the date picker from view.
+<br>	 * @param  input  element - the input field attached to the date picker
+<br>	 */
+<br>	_hideDatepicker: function( input ) {
+<br>			postProcess = function() {
+<br>	/* Tidy up after a dialog display. */
+<br>	_tidyDialog: function( inst ) {
+<br>	/* Close date picker if clicked elsewhere. */
+<br>	_checkExternalClick: function( event ) {
+<br>	/* Adjust one of the date sub-fields. */
+<br>	_adjustDate: function( id, offset, period ) {
+<br>	/* Action for current link. */
+<br>	_gotoToday: function( id ) {
+<br>	/* Action for selecting a new month/year. */
+<br>	_selectMonthYear: function( id, select, period ) {
+<br>	/* Action for selecting a day. */
+<br>	_selectDay: function( id, month, year, td ) {
+<br>	/* Erase the input field and hide the date picker. */
+<br>	_clearDate: function( id ) {
+<br>	/* Update the input field with the selected date. */
+<br>	_selectDate: function( id, dateStr ) {
+<br>	/* Update any alternate field to synchronise with the main field. */
+<br>	_updateAlternate: function( inst ) {
+<br>	/* Set as beforeShowDay function to prevent selection of weekends.
+<br>	 * @param  date  Date - the date to customise
+<br>	 * @return [boolean, string] - is this date selectable?, what is its CSS class?
+<br>	 */
+<br>	noWeekends: function( date ) {
+<br>	/* Set as calculateWeek to determine the week of the year based on the ISO 8601 definition.
+<br>	 * @param  date  Date - the date to get the week for
+<br>	 * @return  number - the number of the week within the year that contains this date
+<br>	 */
+<br>	iso8601Week: function( date ) {
+<br>	/* Parse a string value into a date object.
+<br>	 * See formatDate below for the possible formats.
+<br>	 *
+<br>	 * @param  format string - the expected format of the date
+<br>	 * @param  value string - the date in the above format
+<br>	 * @param  settings Object - attributes include:
+<br>	 *					shortYearCutoff  number - the cutoff year for determining the century (optional)
+<br>	 *					dayNamesShort	string[7] - abbreviated names of the days from Sunday (optional)
+<br>	 *					dayNames		string[7] - names of the days from Sunday (optional)
+<br>	 *					monthNamesShort string[12] - abbreviated names of the months (optional)
+<br>	 *					monthNames		string[12] - names of the months (optional)
+<br>	 * @return  Date - the extracted date value or null if value is blank
+<br>	 */
+<br>	parseDate: function( format, value, settings ) {
+<br>			lookAhead = function( match ) {
+<br>			getNumber = function( match ) {
+<br>			getName = function( match, shortNames, longNames ) {
+<br>					names = $.map( lookAhead( match ) ? longNames : shortNames, function( v, k ) {
+<br>					} ).sort( function( a, b ) {
+<br>				$.each( names, function( i, pair ) {
+<br>			checkLiteral = function() {
+<br>	/* Standard date formats. */
+<br>	/* Format a date object into a string value.
+<br>	 * The format can be combinations of the following:
+<br>	 * d  - day of month (no leading zero)
+<br>	 * dd - day of month (two digit)
+<br>	 * o  - day of year (no leading zeros)
+<br>	 * oo - day of year (three digit)
+<br>	 * D  - day name short
+<br>	 * DD - day name long
+<br>	 * m  - month of year (no leading zero)
+<br>	 * mm - month of year (two digit)
+<br>	 * M  - month name short
+<br>	 * MM - month name long
+<br>	 * y  - year (two digit)
+<br>	 * yy - year (four digit)
+<br>	 * @ - Unix timestamp (ms since 01/01/1970)
+<br>	 * ! - Windows ticks (100ns since 01/01/0001)
+<br>	 * "..." - literal text
+<br>	 * '' - single quote
+<br>	 *
+<br>	 * @param  format string - the desired format of the date
+<br>	 * @param  date Date - the date value to format
+<br>	 * @param  settings Object - attributes include:
+<br>	 *					dayNamesShort	string[7] - abbreviated names of the days from Sunday (optional)
+<br>	 *					dayNames		string[7] - names of the days from Sunday (optional)
+<br>	 *					monthNamesShort string[12] - abbreviated names of the months (optional)
+<br>	 *					monthNames		string[12] - names of the months (optional)
+<br>	 * @return  string - the date in the above format
+<br>	 */
+<br>	formatDate: function( format, date, settings ) {
+<br>			lookAhead = function( match ) {
+<br>			formatNumber = function( match, value, len ) {
+<br>			formatName = function( match, value, shortNames, longNames ) {
+<br>	/* Extract all possible characters from the date format. */
+<br>	_possibleChars: function( format ) {
+<br>			lookAhead = function( match ) {
+<br>	/* Get a setting value, defaulting if necessary. */
+<br>	_get: function( inst, name ) {
+<br>	/* Parse existing date and initialise date picker. */
+<br>	_setDateFromField: function( inst, noDefault ) {
+<br>	/* Retrieve the default date shown on opening. */
+<br>	_getDefaultDate: function( inst ) {
+<br>	/* A date may be specified as an exact value or a relative one. */
+<br>	_determineDate: function( inst, date, defaultDate ) {
+<br>		var offsetNumeric = function( offset ) {
+<br>			offsetString = function( offset ) {
+<br>	/* Handle switch to/from daylight saving.
+<br>	 * Hours may be non-zero on daylight saving cut-over:
+<br>	 * > 12 when midnight changeover, but then cannot generate
+<br>	 * midnight datetime, so jump to 1AM, otherwise reset.
+<br>	 * @param  date  (Date) the date to check
+<br>	 * @return  (Date) the corrected date
+<br>	 */
+<br>	_daylightSavingAdjust: function( date ) {
+<br>	/* Set the date(s) directly. */
+<br>	_setDate: function( inst, date, noChange ) {
+<br>	/* Retrieve the date(s) directly. */
+<br>	_getDate: function( inst ) {
+<br>	/* Attach the onxxx handlers.  These are declared statically so
+<br>	 * they work with static code transformers like Caja.
+<br>	 */
+<br>	_attachHandlers: function( inst ) {
+<br>		inst.dpDiv.find( "[data-handler]" ).map( function() {
+<br>				prev: function() {
+<br>				next: function() {
+<br>				hide: function() {
+<br>				today: function() {
+<br>				selectDay: function() {
+<br>				selectMonth: function() {
+<br>				selectYear: function() {
+<br>	/* Generate the HTML for the current state of the date picker. */
+<br>	_generateHTML: function( inst ) {
+<br>	/* Generate the month and year header. */
+<br>	_generateMonthYearHeader: function( inst, drawMonth, drawYear, minDate, maxDate,
+<br>				determineYear = function( value ) {
+<br>	/* Adjust one of the date sub-fields. */
+<br>	_adjustInstDate: function( inst, offset, period ) {
+<br>	/* Ensure a date is within any min/max bounds. */
+<br>	_restrictMinMax: function( inst, date ) {
+<br>	/* Notify change of month/year. */
+<br>	_notifyChange: function( inst ) {
+<br>	/* Determine the number of months to show. */
+<br>	_getNumberOfMonths: function( inst ) {
+<br>	/* Determine the current maximum date - ensure no time components are set. */
+<br>	_getMinMaxDate: function( inst, minMax ) {
+<br>	/* Find the number of days in a given month. */
+<br>	_getDaysInMonth: function( year, month ) {
+<br>	/* Find the day of the week of the first of a month. */
+<br>	_getFirstDayOfMonth: function( year, month ) {
+<br>	/* Determines if we should allow a "next/prev" month display change. */
+<br>	_canAdjustMonth: function( inst, offset, curYear, curMonth ) {
+<br>	/* Is the given date in the accepted range? */
+<br>	_isInRange: function( inst, date ) {
+<br>	/* Provide the configuration settings for formatting/parsing. */
+<br>	_getFormatConfig: function( inst ) {
+<br>	/* Format the given date for display. */
+<br>	_formatDate: function( inst, day, month, year ) {
+<br>/*
+<br> * Bind hover events for datepicker elements.
+<br> * Done via delegate so the binding only occurs once in the lifetime of the parent div.
+<br> * Global datepicker_instActive, set by _updateDatepicker allows the handlers to find their way back to the active picker.
+<br> */
+<br>function datepicker_bindHover( dpDiv ) {
+<br>	return dpDiv.on( "mouseout", selector, function() {
+<br>function datepicker_handleMouseover() {
+<br>/* jQuery extend now ignores nulls! */
+<br>function datepicker_extendRemove( target, props ) {
+<br>/* Invoke the datepicker functionality.
+<br>   @param  options  string - a command, optionally followed by additional parameters or
+<br>					Object - settings for attaching new datepicker functionality
+<br>   @return  jQuery object */
+<br>$.fn.datepicker = function( options ) {
+<br>	/* Verify an empty collection wasn't passed - Fixes #6976 */
+<br>	/* Initialise the date picker. */
+<br>	/* Append datepicker main container to body if not exist. */
+<br>	return this.each( function() {
+<br>/*!
+<br> * jQuery UI Dialog 1.12.1
+<br> *
+<br> * Copyright jQuery Foundation and other contributors
+<br> * Released under the MIT license.
+<br> */
+<br>			using: function( pos ) {
+<br>	_create: function() {
+<br>	_init: function() {
+<br>	_appendTo: function() {
+<br>	_destroy: function() {
+<br>	widget: function() {
+<br>	close: function( event ) {
+<br>		this._hide( this.uiDialog, this.options.hide, function() {
+<br>	isOpen: function() {
+<br>	moveToTop: function() {
+<br>	_moveToTop: function( event, silent ) {
+<br>			zIndices = this.uiDialog.siblings( ".ui-front:visible" ).map( function() {
+<br>	open: function() {
+<br>		this._show( this.uiDialog, this.options.show, function() {
+<br>	_focusTabbable: function() {
+<br>	_keepFocus: function( event ) {
+<br>		function checkFocus() {
+<br>	_createWrapper: function() {
+<br>			keydown: function( event ) {
+<br>					this._delay( function() {
+<br>					this._delay( function() {
+<br>			mousedown: function( event ) {
+<br>	_createTitlebar: function() {
+<br>			mousedown: function( event ) {
+<br>			click: function( event ) {
+<br>	_title: function( title ) {
+<br>	_createButtonPane: function() {
+<br>	_createButtons: function() {
+<br>		$.each( buttons, function( name, props ) {
+<br>				.on( "click", function() {
+<br>	_makeDraggable: function() {
+<br>		function filteredUi( ui ) {
+<br>			start: function( event, ui ) {
+<br>			drag: function( event, ui ) {
+<br>			stop: function( event, ui ) {
+<br>	_makeResizable: function() {
+<br>		function filteredUi( ui ) {
+<br>			start: function( event, ui ) {
+<br>			resize: function( event, ui ) {
+<br>			stop: function( event, ui ) {
+<br>	_trackFocus: function() {
+<br>			focusin: function( event ) {
+<br>	_makeFocusTarget: function() {
+<br>	_untrackInstance: function() {
+<br>	_trackingInstances: function() {
+<br>	_minHeight: function() {
+<br>	_position: function() {
+<br>	_setOptions: function( options ) {
+<br>		$.each( options, function( key, value ) {
+<br>	_setOption: function( key, value ) {
+<br>	_size: function() {
+<br>	_blockFrames: function() {
+<br>		this.iframeBlocks = this.document.find( "iframe" ).map( function() {
+<br>	_unblockFrames: function() {
+<br>	_allowInteraction: function( event ) {
+<br>	_createOverlay: function() {
+<br>		this._delay( function() {
+<br>				focusin: function( event ) {
+<br>	_destroyOverlay: function() {
+<br>		_createWrapper: function() {
+<br>		_setOption: function( key, value ) {
+<br>/*!
+<br> * jQuery UI Progressbar 1.12.1
+<br> *
+<br> * Copyright jQuery Foundation and other contributors
+<br> * Released under the MIT license.
+<br> */
+<br>	_create: function() {
+<br>	_destroy: function() {
+<br>	value: function( newValue ) {
+<br>	_constrainedValue: function( newValue ) {
+<br>	_setOptions: function( options ) {
+<br>	_setOption: function( key, value ) {
+<br>	_setOptionDisabled: function( value ) {
+<br>	_percentage: function() {
+<br>	_refreshValue: function() {
+<br>/*!
+<br> * jQuery UI Selectmenu 1.12.1
+<br> *
+<br> * Copyright jQuery Foundation and other contributors
+<br> * Released under the MIT license.
+<br> */
+<br>	_create: function() {
+<br>	_drawButton: function() {
+<br>			click: function( event ) {
+<br>		this.button.one( "focusin", function() {
+<br>	_drawMenu: function() {
+<br>				select: function( event, ui ) {
+<br>				focus: function( event, ui ) {
+<br>		this.menuInstance._closeOnDocumentClick = function() {
+<br>		this.menuInstance._isDivider = function() {
+<br>	refresh: function() {
+<br>	_refreshMenu: function() {
+<br>	open: function( event ) {
+<br>	_position: function() {
+<br>	close: function( event ) {
+<br>	widget: function() {
+<br>	menuWidget: function() {
+<br>	_renderButtonItem: function( item ) {
+<br>	_renderMenu: function( ul, items ) {
+<br>		$.each( items, function( index, item ) {
+<br>	_renderItemData: function( ul, item ) {
+<br>	_renderItem: function( ul, item ) {
+<br>	_setText: function( element, value ) {
+<br>	_move: function( direction, event ) {
+<br>	_getSelectedItem: function() {
+<br>	_toggle: function( event ) {
+<br>	_setSelection: function() {
+<br>		mousedown: function( event ) {
+<br>		mousedown: function() {
+<br>		click: function( event ) {
+<br>		keydown: function( event ) {
+<br>	_selectFocusedItem: function( event ) {
+<br>	_select: function( item, event ) {
+<br>	_setAria: function( item ) {
+<br>	_setOption: function( key, value ) {
+<br>	_setOptionDisabled: function( value ) {
+<br>	_appendTo: function() {
+<br>	_toggleAttr: function() {
+<br>	_resizeButton: function() {
+<br>	_resizeMenu: function() {
+<br>	_getCreateOptions: function() {
+<br>	_parseOptions: function( options ) {
+<br>		options.each( function( index, item ) {
+<br>	_parseOption: function( option, index ) {
+<br>	_destroy: function() {
+<br>/*!
+<br> * jQuery UI Slider 1.12.1
+<br> *
+<br> * Copyright jQuery Foundation and other contributors
+<br> * Released under the MIT license.
+<br> */
+<br>	_create: function() {
+<br>	_refresh: function() {
+<br>	_createHandles: function() {
+<br>		this.handles.each( function( i ) {
+<br>	_createRange: function() {
+<br>	_setupEvents: function() {
+<br>	_destroy: function() {
+<br>	_mouseCapture: function( event ) {
+<br>		this.handles.each( function( i ) {
+<br>	_mouseStart: function() {
+<br>	_mouseDrag: function( event ) {
+<br>	_mouseStop: function( event ) {
+<br>	_detectOrientation: function() {
+<br>	_normValueFromMouse: function( position ) {
+<br>	_uiHash: function( index, value, values ) {
+<br>	_hasMultipleValues: function() {
+<br>	_start: function( event, index ) {
+<br>	_slide: function( event, index, newVal ) {
+<br>	_stop: function( event, index ) {
+<br>	_change: function( event, index ) {
+<br>	value: function( newValue ) {
+<br>	values: function( index, newValue ) {
+<br>	_setOption: function( key, value ) {
+<br>	_setOptionDisabled: function( value ) {
+<br>	_value: function() {
+<br>	_values: function( index ) {
+<br>	_trimAlignValue: function( val ) {
+<br>	_calculateNewMax: function() {
+<br>	_precision: function() {
+<br>	_precisionOf: function( num ) {
+<br>	_valueMin: function() {
+<br>	_valueMax: function() {
+<br>	_refreshRange: function( orientation ) {
+<br>	_refreshValue: function() {
+<br>			this.handles.each( function( i ) {
+<br>		keydown: function( event ) {
+<br>		keyup: function( event ) {
+<br>/*!
+<br> * jQuery UI Spinner 1.12.1
+<br> *
+<br> * Copyright jQuery Foundation and other contributors
+<br> * Released under the MIT license.
+<br> */
+<br>function spinnerModifer( fn ) {
+<br>	return function() {
+<br>	_create: function() {
+<br>			beforeunload: function() {
+<br>	_getCreateOptions: function() {
+<br>		$.each( [ "min", "max", "step" ], function( i, option ) {
+<br>		keydown: function( event ) {
+<br>		focus: function() {
+<br>		blur: function( event ) {
+<br>		mousewheel: function( event, delta ) {
+<br>			this.mousewheelTimer = this._delay( function() {
+<br>		"mousedown .ui-spinner-button": function( event ) {
+<br>			function checkFocus() {
+<br>					this._delay( function() {
+<br>			this._delay( function() {
+<br>		"mouseenter .ui-spinner-button": function( event ) {
+<br>	_enhance: function() {
+<br>	_draw: function() {
+<br>	_keydown: function( event ) {
+<br>	_start: function( event ) {
+<br>	_repeat: function( i, steps, event ) {
+<br>		this.timer = this._delay( function() {
+<br>	_spin: function( step, event ) {
+<br>	_increment: function( i ) {
+<br>	_precision: function() {
+<br>	_precisionOf: function( num ) {
+<br>	_adjustValue: function( value ) {
+<br>	_stop: function( event ) {
+<br>	_setOption: function( key, value ) {
+<br>	_setOptionDisabled: function( value ) {
+<br>	_setOptions: spinnerModifer( function( options ) {
+<br>	_parse: function( val ) {
+<br>	_format: function( value ) {
+<br>	_refresh: function() {
+<br>	isValid: function() {
+<br>	_value: function( value, allowAny ) {
+<br>	_destroy: function() {
+<br>	stepUp: spinnerModifer( function( steps ) {
+<br>	_stepUp: function( steps ) {
+<br>	stepDown: spinnerModifer( function( steps ) {
+<br>	_stepDown: function( steps ) {
+<br>	pageUp: spinnerModifer( function( pages ) {
+<br>	pageDown: spinnerModifer( function( pages ) {
+<br>	value: function( newVal ) {
+<br>	widget: function() {
+<br>		_enhance: function() {
+<br>		_uiSpinnerHtml: function() {
+<br>		_buttonHtml: function() {
+<br>/*!
+<br> * jQuery UI Tabs 1.12.1
+<br> *
+<br> * Copyright jQuery Foundation and other contributors
+<br> * Released under the MIT license.
+<br> */
+<br>	_isLocal: ( function() {
+<br>		return function( anchor ) {
+<br>	_create: function() {
+<br>				$.map( this.tabs.filter( ".ui-state-disabled" ), function( li ) {
+<br>	_initialActive: function() {
+<br>				this.tabs.each( function( i, tab ) {
+<br>	_getCreateEventData: function() {
+<br>	_tabKeydown: function( event ) {
+<br>			this.activating = this._delay( function() {
+<br>	_panelKeydown: function( event ) {
+<br>	_handlePageNav: function( event ) {
+<br>	_findNextTab: function( index, goingForward ) {
+<br>		function constrain() {
+<br>	_focusNextTab: function( index, goingForward ) {
+<br>	_setOption: function( key, value ) {
+<br>	_sanitizeSelector: function( hash ) {
+<br>	refresh: function() {
+<br>		options.disabled = $.map( lis.filter( ".ui-state-disabled" ), function( tab ) {
+<br>	_refresh: function() {
+<br>	_processTabs: function() {
+<br>			.on( "mousedown" + this.eventNamespace, "> li", function( event ) {
+<br>			.on( "focus" + this.eventNamespace, ".ui-tabs-anchor", function() {
+<br>		this.anchors = this.tabs.map( function() {
+<br>		this.anchors.each( function( i, anchor ) {
+<br>	_getList: function() {
+<br>	_createPanel: function( id ) {
+<br>	_setOptionDisabled: function( disabled ) {
+<br>	_setupEvents: function( event ) {
+<br>			$.each( event.split( " " ), function( index, eventName ) {
+<br>			click: function( event ) {
+<br>	_setupHeightStyle: function( heightStyle ) {
+<br>			this.element.siblings( ":visible" ).each( function() {
+<br>			this.element.children().not( this.panels ).each( function() {
+<br>			this.panels.each( function() {
+<br>			this.panels.each( function() {
+<br>	_eventHandler: function( event ) {
+<br>	_toggle: function( event, eventData ) {
+<br>		function complete() {
+<br>		function show() {
+<br>			this._hide( toHide, this.options.hide, function() {
+<br>			this.tabs.filter( function() {
+<br>	_activate: function( index ) {
+<br>	_findActive: function( index ) {
+<br>	_getIndex: function( index ) {
+<br>	_destroy: function() {
+<br>		this.tabs.add( this.panels ).each( function() {
+<br>		this.tabs.each( function() {
+<br>	enable: function( index ) {
+<br>				disabled = $.map( disabled, function( num ) {
+<br>				disabled = $.map( this.tabs, function( li, num ) {
+<br>	disable: function( index ) {
+<br>	load: function( index, event ) {
+<br>			complete = function( jqXHR, status ) {
+<br>				.done( function( response, status, jqXHR ) {
+<br>					setTimeout( function() {
+<br>				.fail( function( jqXHR, status ) {
+<br>					setTimeout( function() {
+<br>	_ajaxSettings: function( anchor, event, eventData ) {
+<br>			beforeSend: function( jqXHR, settings ) {
+<br>	_getPanelForTab: function( tab ) {
+<br>		_processTabs: function() {
+<br>/*!
+<br> * jQuery UI Tooltip 1.12.1
+<br> *
+<br> * Copyright jQuery Foundation and other contributors
+<br> * Released under the MIT license.
+<br> */
+<br>		content: function() {
+<br>	_addDescribedBy: function( elem, id ) {
+<br>	_removeDescribedBy: function( elem ) {
+<br>	_create: function() {
+<br>	_setOption: function( key, value ) {
+<br>			$.each( this.tooltips, function( id, tooltipData ) {
+<br>	_setOptionDisabled: function( value ) {
+<br>	_disable: function() {
+<br>		$.each( this.tooltips, function( id, tooltipData ) {
+<br>				.filter( function() {
+<br>	_enable: function() {
+<br>		this.disabledTitles.each( function() {
+<br>	open: function( event ) {
+<br>			target.parents().each( function() {
+<br>	_updateContent: function( target, event ) {
+<br>		content = contentOption.call( target[ 0 ], function( response ) {
+<br>			that._delay( function() {
+<br>	_open: function( event, target, content ) {
+<br>		function position( event ) {
+<br>			delayedShow = this.delayedShow = setInterval( function() {
+<br>	_registerCloseHandlers: function( event, target ) {
+<br>			keyup: function( event ) {
+<br>			events.remove = function() {
+<br>	close: function( event ) {
+<br>		this._hide( tooltip, this.options.hide, function() {
+<br>			$.each( this.parents, function( id, parent ) {
+<br>	_tooltip: function( element ) {
+<br>	_find: function( target ) {
+<br>	_removeTooltip: function( tooltip ) {
+<br>	_appendTo: function( target ) {
+<br>	_destroy: function() {
+<br>		$.each( this.tooltips, function( id, tooltipData ) {
+<br>		_tooltip: function() {
+<br>/*!
+<br> * jQuery UI Effects 1.12.1
+<br> *
+<br> * Copyright jQuery Foundation and other contributors
+<br> * Released under the MIT license.
+<br> */
+<br>/*!
+<br> * jQuery Color Animations v2.1.2
+<br> *
+<br> * Copyright 2014 jQuery Foundation and other contributors
+<br> * Released under the MIT license.
+<br> *
+<br> * Date: Wed Jan 16 08:47:09 2013 -0600
+<br> */
+<br>( function( jQuery, undefined ) {
+<br>			parse: function( execResult ) {
+<br>			parse: function( execResult ) {
+<br>			parse: function( execResult ) {
+<br>			parse: function( execResult ) {
+<br>			parse: function( execResult ) {
+<br>	color = jQuery.Color = function( color, green, blue, alpha ) {
+<br>each( spaces, function( spaceName, space ) {
+<br>function clamp( value, prop, allowEmpty ) {
+<br>function stringParse( string ) {
+<br>	each( stringParsers, function( i, parser ) {
+<br>	parse: function( red, green, blue, alpha ) {
+<br>			each( spaces.rgba.props, function( key, prop ) {
+<br>				each( spaces, function( spaceName, space ) {
+<br>				each( spaces, function( spaceName, space ) {
+<br>					each( space.props, function( key, prop ) {
+<br>	is: function( compare ) {
+<br>		each( spaces, function( _, space ) {
+<br>				each( space.props, function( _, prop ) {
+<br>	_space: function() {
+<br>		each( spaces, function( spaceName, space ) {
+<br>	transition: function( other, distance ) {
+<br>		each( space.props, function( key, prop ) {
+<br>	blend: function( opaque ) {
+<br>		return color( jQuery.map( rgb, function( v, i ) {
+<br>	toRgbaString: function() {
+<br>			rgba = jQuery.map( this._rgba, function( v, i ) {
+<br>	toHslaString: function() {
+<br>			hsla = jQuery.map( this.hsla(), function( v, i ) {
+<br>	toHexString: function( includeAlpha ) {
+<br>		return "#" + jQuery.map( rgba, function( v ) {
+<br>	toString: function() {
+<br>function hue2rgb( p, q, h ) {
+<br>spaces.hsla.to = function( rgba ) {
+<br>spaces.hsla.from = function( hsla ) {
+<br>each( spaces, function( spaceName, space ) {
+<br>	color.fn[ spaceName ] = function( value ) {
+<br>		each( props, function( key, prop ) {
+<br>	each( props, function( key, prop ) {
+<br>		color.fn[ key ] = function( value ) {
+<br>			if ( vtype === "function" ) {
+<br>color.hook = function( hook ) {
+<br>	each( hooks, function( i, hook ) {
+<br>			set: function( elem, value ) {
+<br>		jQuery.fx.step[ hook ] = function( fx ) {
+<br>	expand: function( value ) {
+<br>		each( [ "Top", "Right", "Bottom", "Left" ], function( i, part ) {
+<br>/******************************************************************************/
+<br>/****************************** CLASS ANIMATIONS ******************************/
+<br>/******************************************************************************/
+<br>( function() {
+<br>	function( _, prop ) {
+<br>		$.fx.step[ prop ] = function( fx ) {
+<br>function getElementStyles( elem ) {
+<br>function styleDifference( oldStyle, newStyle ) {
+<br>	$.fn.addBack = function( selector ) {
+<br>$.effects.animateClass = function( value, duration, easing, callback ) {
+<br>	return this.queue( function() {
+<br>		allAnimations = allAnimations.map( function() {
+<br>		applyClassChange = function() {
+<br>			$.each( classAnimationActions, function( i, action ) {
+<br>		allAnimations = allAnimations.map( function() {
+<br>		allAnimations = allAnimations.map( function() {
+<br>					complete: function() {
+<br>		$.when.apply( $, allAnimations.get() ).done( function() {
+<br>			$.each( arguments, function() {
+<br>				$.each( this.diff, function( key ) {
+<br>	addClass: ( function( orig ) {
+<br>		return function( classNames, speed, easing, callback ) {
+<br>	removeClass: ( function( orig ) {
+<br>		return function( classNames, speed, easing, callback ) {
+<br>	toggleClass: ( function( orig ) {
+<br>		return function( classNames, force, speed, easing, callback ) {
+<br>	switchClass: function( remove, add, speed, easing, callback ) {
+<br>/******************************************************************************/
+<br>/*********************************** EFFECTS **********************************/
+<br>/******************************************************************************/
+<br>( function() {
+<br>	$.expr.filters.animated = ( function( orig ) {
+<br>		return function( elem ) {
+<br>		save: function( element, set ) {
+<br>		restore: function( element, set ) {
+<br>		setMode: function( el, mode ) {
+<br>		createWrapper: function( element ) {
+<br>				$.each( [ "top", "left", "bottom", "right" ], function( i, pos ) {
+<br>		removeWrapper: function( element ) {
+<br>	define: function( name, mode, effect ) {
+<br>	scaledDimensions: function( element, percent, direction ) {
+<br>	clipToBox: function( animation ) {
+<br>	unshift: function( element, queueLength, count ) {
+<br>	saveStyle: function( element ) {
+<br>	restoreStyle: function( element ) {
+<br>	mode: function( element, mode ) {
+<br>	getBaseline: function( origin, original ) {
+<br>	createPlaceholder: function( element ) {
+<br>	removePlaceholder: function( element ) {
+<br>	cleanUp: function( element ) {
+<br>	setTransition: function( element, list, factor, value ) {
+<br>		$.each( list, function( i, x ) {
+<br>function _normalizeArguments( effect, options, speed, callback ) {
+<br>function standardAnimationOption( option ) {
+<br>	effect: function( /* effect, options, speed, callback */ ) {
+<br>			prefilter = function( next ) {
+<br>				return this.each( function() {
+<br>		function run( next ) {
+<br>			function cleanup() {
+<br>			function done() {
+<br>	show: ( function( orig ) {
+<br>		return function( option ) {
+<br>	hide: ( function( orig ) {
+<br>		return function( option ) {
+<br>	toggle: ( function( orig ) {
+<br>		return function( option ) {
+<br>	cssUnit: function( key ) {
+<br>		$.each( [ "em", "px", "%", "pt" ], function( i, unit ) {
+<br>	cssClip: function( clipObj ) {
+<br>	transfer: function( options, done ) {
+<br>				.animate( animation, options.duration, options.easing, function() {
+<br>function parseClip( str, element ) {
+<br>$.fx.step.clip = function( fx ) {
+<br>/******************************************************************************/
+<br>/*********************************** EASING ***********************************/
+<br>/******************************************************************************/
+<br>( function() {
+<br>$.each( [ "Quad", "Cubic", "Quart", "Quint", "Expo" ], function( i, name ) {
+<br>	baseEasings[ name ] = function( p ) {
+<br>	Sine: function( p ) {
+<br>	Circ: function( p ) {
+<br>	Elastic: function( p ) {
+<br>	Back: function( p ) {
+<br>	Bounce: function( p ) {
+<br>$.each( baseEasings, function( name, easeIn ) {
+<br>	$.easing[ "easeOut" + name ] = function( p ) {
+<br>	$.easing[ "easeInOut" + name ] = function( p ) {
+<br>/*!
+<br> * jQuery UI Effects Blind 1.12.1
+<br> *
+<br> * Copyright jQuery Foundation and other contributors
+<br> * Released under the MIT license.
+<br> */
+<br>var effectsEffectBlind = $.effects.define( "blind", "hide", function( options, done ) {
+<br>/*!
+<br> * jQuery UI Effects Bounce 1.12.1
+<br> *
+<br> * Copyright jQuery Foundation and other contributors
+<br> * Released under the MIT license.
+<br> */
+<br>var effectsEffectBounce = $.effects.define( "bounce", function( options, done ) {
+<br>/*!
+<br> * jQuery UI Effects Clip 1.12.1
+<br> *
+<br> * Copyright jQuery Foundation and other contributors
+<br> * Released under the MIT license.
+<br> */
+<br>var effectsEffectClip = $.effects.define( "clip", "hide", function( options, done ) {
+<br>/*!
+<br> * jQuery UI Effects Drop 1.12.1
+<br> *
+<br> * Copyright jQuery Foundation and other contributors
+<br> * Released under the MIT license.
+<br> */
+<br>var effectsEffectDrop = $.effects.define( "drop", "hide", function( options, done ) {
+<br>/*!
+<br> * jQuery UI Effects Explode 1.12.1
+<br> *
+<br> * Copyright jQuery Foundation and other contributors
+<br> * Released under the MIT license.
+<br> */
+<br>var effectsEffectExplode = $.effects.define( "explode", "hide", function( options, done ) {
+<br>	function childComplete() {
+<br>	function animComplete() {
+<br>/*!
+<br> * jQuery UI Effects Fade 1.12.1
+<br> *
+<br> * Copyright jQuery Foundation and other contributors
+<br> * Released under the MIT license.
+<br> */
+<br>var effectsEffectFade = $.effects.define( "fade", "toggle", function( options, done ) {
+<br>/*!
+<br> * jQuery UI Effects Fold 1.12.1
+<br> *
+<br> * Copyright jQuery Foundation and other contributors
+<br> * Released under the MIT license.
+<br> */
+<br>var effectsEffectFold = $.effects.define( "fold", "hide", function( options, done ) {
+<br>		.queue( function( next ) {
+<br>/*!
+<br> * jQuery UI Effects Highlight 1.12.1
+<br> *
+<br> * Copyright jQuery Foundation and other contributors
+<br> * Released under the MIT license.
+<br> */
+<br>var effectsEffectHighlight = $.effects.define( "highlight", "show", function( options, done ) {
+<br>/*!
+<br> * jQuery UI Effects Size 1.12.1
+<br> *
+<br> * Copyright jQuery Foundation and other contributors
+<br> * Released under the MIT license.
+<br> */
+<br>var effectsEffectSize = $.effects.define( "size", function( options, done ) {
+<br>		element.find( "*[width]" ).each( function() {
+<br>			child.animate( childTo, options.duration, options.easing, function() {
+<br>		complete: function() {
+<br>/*!
+<br> * jQuery UI Effects Scale 1.12.1
+<br> *
+<br> * Copyright jQuery Foundation and other contributors
+<br> * Released under the MIT license.
+<br> */
+<br>var effectsEffectScale = $.effects.define( "scale", function( options, done ) {
+<br>/*!
+<br> * jQuery UI Effects Puff 1.12.1
+<br> *
+<br> * Copyright jQuery Foundation and other contributors
+<br> * Released under the MIT license.
+<br> */
+<br>var effectsEffectPuff = $.effects.define( "puff", "hide", function( options, done ) {
+<br>/*!
+<br> * jQuery UI Effects Pulsate 1.12.1
+<br> *
+<br> * Copyright jQuery Foundation and other contributors
+<br> * Released under the MIT license.
+<br> */
+<br>var effectsEffectPulsate = $.effects.define( "pulsate", "show", function( options, done ) {
+<br>/*!
+<br> * jQuery UI Effects Shake 1.12.1
+<br> *
+<br> * Copyright jQuery Foundation and other contributors
+<br> * Released under the MIT license.
+<br> */
+<br>var effectsEffectShake = $.effects.define( "shake", function( options, done ) {
+<br>/*!
+<br> * jQuery UI Effects Slide 1.12.1
+<br> *
+<br> * Copyright jQuery Foundation and other contributors
+<br> * Released under the MIT license.
+<br> */
+<br>var effectsEffectSlide = $.effects.define( "slide", "show", function( options, done ) {
+<br>/*!
+<br> * jQuery UI Effects Transfer 1.12.1
+<br> *
+<br> * Copyright jQuery Foundation and other contributors
+<br> * Released under the MIT license.
+<br> */
+<br>	effect = $.effects.define( "transfer", function( options, done ) {
+<br>
                    </p>
                 </details>
 

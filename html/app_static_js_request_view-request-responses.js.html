@@ -1225,6 +1225,21 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_acknowledgment.css.html">
+                            add_acknowledgment.css
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_closing.css.html">
+                            add_closing.css
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_denial.css.html">
+                            add_denial.css
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_static_styles_add_extension.css.html">
                             add_extension.css
                         </a>
@@ -1619,6 +1634,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_footer.html.html">
+                            email_footer.html
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_not_onboarded.html.html">
                             email_not_onboarded.html
                         </a>
@@ -1626,11 +1646,6 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_private_file_upload.html.html">
                             email_private_file_upload.html
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_request_info.html.html">
-                            email_request_info.html
                         </a>
                     </li>
                     <li>
@@ -3281,7 +3296,66 @@ Upon showing the request responses, the previous button is disabled.
 
                     <p>
 <!-- Include the documentation here! -->
-<p>We attempted to read from templates/app_static_js_request_view-request-responses.js_ex.txt but failed.</p>
+
+$(function () {
+<br>&emsp;&emsp;        success: function (data) {
+<br>&emsp;&emsp;        error: function (error) {
+<br>&emsp;    function showResponses() {
+<br>&emsp;    function loadMoreResponses() {
+<br>&emsp;&emsp;&emsp;            success: function (data) {
+<br>&emsp;&emsp;&emsp;            error: function (error) {
+<br>&emsp;    function getRandomString(length, chars) {
+<br>&emsp;    prevButton.click(function () {
+<br>&emsp;    nextButton.click(function () {
+<br>&emsp;    function setEditResponseWorkflow(response_id, response_type) {
+<br>&emsp;&emsp;&emsp;&emsp;                next1.click(function (e) {
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                            success: function (data) {
+<br>&emsp;&emsp;&emsp;&emsp;                next2.click(function () {
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        success: function (data) {
+<br>&emsp;&emsp;&emsp;&emsp;                prev2.click(function () {
+<br>&emsp;&emsp;&emsp;&emsp;                prev3.click(function () {
+<br>&emsp;&emsp;&emsp;&emsp;                submitBtn.click(function () {
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        success: function () {
+<br>&emsp;&emsp;&emsp;&emsp;                next1.click(function () {
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                            success: function (data) {
+<br>&emsp;&emsp;&emsp;&emsp;                next2.click(function () {
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        success: function (data) {
+<br>&emsp;&emsp;&emsp;&emsp;                prev2.click(function () {
+<br>&emsp;&emsp;&emsp;&emsp;                prev3.click(function () {
+<br>&emsp;&emsp;&emsp;&emsp;                submitBtn.click(function () {
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        success: function (response) {
+<br>&emsp;&emsp;&emsp;&emsp;                $(first.find(".note-content")).keyup(function () {
+<br>&emsp;&emsp;&emsp;&emsp;                next1.click(function () {
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                            success: function (data) {
+<br>&emsp;&emsp;&emsp;&emsp;                next2.click(function () {
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        success: function (data) {
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        error: function (error) {
+<br>&emsp;&emsp;&emsp;&emsp;                prev2.click(function () {
+<br>&emsp;&emsp;&emsp;&emsp;                prev3.click(function () {
+<br>&emsp;&emsp;&emsp;&emsp;                submitBtn.click(function () {
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        success: function (response) {
+<br>&emsp;&emsp;&emsp;&emsp;                $(first.find(".instruction-content")).keyup(function () {
+<br>&emsp;&emsp;&emsp;&emsp;                first.find("input[name='url']").on('input', function () {
+<br>&emsp;&emsp;&emsp;&emsp;                next1.click(function () {
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                            success: function (data) {
+<br>&emsp;&emsp;&emsp;&emsp;                next2.click(function () {
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        success: function (data) {
+<br>&emsp;&emsp;&emsp;&emsp;                prev2.click(function () {
+<br>&emsp;&emsp;&emsp;&emsp;                prev3.click(function () {
+<br>&emsp;&emsp;&emsp;&emsp;                submitBtn.click(function () {
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        success: function (response) {
+<br>&emsp;&emsp;&emsp;&emsp;                first.find('.title').keyup(function () {
+<br>&emsp;&emsp;&emsp;&emsp;                first.find('.url').keyup(function () {
+<br>&emsp;&emsp;        $(editFileTitle).keyup(function () {
+<br>&emsp;    function setDeleteResponseWorkflow(response_id) {
+<br>&emsp;&emsp;        deleteConfirmCheck.on('paste', function (e) {
+<br>&emsp;&emsp;        deleteConfirmCheck.on("input", function () {
+<br>&emsp;&emsp;        responseModal.find(".delete-select").click(function () {
+<br>&emsp;&emsp;        responseModal.find(".delete-cancel").click(function () {
+<br>&emsp;&emsp;        responseModal.find(".delete-confirm").click(function () {
+<br>&emsp;&emsp;&emsp;&emsp;                success: function () {
+<br>&emsp;&emsp;&emsp;&emsp;                error: function (error) {
+<br>
                    </p>
                 </details>
 

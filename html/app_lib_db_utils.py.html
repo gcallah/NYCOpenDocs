@@ -1225,6 +1225,21 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_acknowledgment.css.html">
+                            add_acknowledgment.css
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_closing.css.html">
+                            add_closing.css
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_denial.css.html">
+                            add_denial.css
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_static_styles_add_extension.css.html">
                             add_extension.css
                         </a>
@@ -1619,6 +1634,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_footer.html.html">
+                            email_footer.html
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_not_onboarded.html.html">
                             email_not_onboarded.html
                         </a>
@@ -1626,11 +1646,6 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_private_file_upload.html.html">
                             email_private_file_upload.html
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_request_info.html.html">
-                            email_request_info.html
                         </a>
                     </li>
                     <li>
@@ -3289,7 +3304,8 @@ No problems to report
 
                     <p>
 <!-- Include the documentation here! -->
-<p>We attempted to read from templates/app_lib_db_utils.py_ex.txt but failed.</p>
+
+</br>app.lib.db_utils</br>~~~~~~~~~~~~~~~~</br>synopsis: Handles the functions for database control</br><hr><code>create_object(obj):</code><br/></br>Add a database record and its elasticsearch counterpart.</br></br>If 'obj' is a Requests object, nothing will be added to</br>the es index since a UserRequests record is created after</br>its associated request and the es doc requires a</br>requester id. 'es_create' is called explicitly for a</br>Requests object in app.request.utils.</br></br>:param obj: object (instance of sqlalchemy model) to create</br></br>:return: string representation of created object</br>or None if creation failed</br><hr><code>update_object(data, obj_type, obj_id, es_update=True):</code><br/></br>Update a database record and its elasticsearch counterpart.</br></br>:param data: a dictionary of attribute-value pairs</br>:param obj_type: sqlalchemy model</br>:param obj_id: id of record</br>:param es_update: update the elasticsearch index</br></br>:return: was the record updated successfully?</br><hr><code>delete_object(obj):</code><br/></br>Delete a database record.</br></br>:param obj: object (instance of sqlalchemy model) to delete</br>:return: was the record deleted successfully?</br><hr><code>bulk_delete(query):</code><br/></br>Delete multiple database records via a bulk delete query.</br></br>http://docs.sqlalchemy.org/en/latest/orm/query.html#sqlalchemy.orm.query.Query.delete</br></br>:param query: Query object</br>:return: the number of records deleted</br><hr><code>get_object(obj_type, obj_id):</code><br/></br>Safely retrieve a database record by its id</br>and its sqlalchemy object type.</br><hr><code>get_agency_choices():</code><br/>
                    </p>
                 </details>
 

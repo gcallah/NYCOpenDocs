@@ -1225,6 +1225,21 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_acknowledgment.css.html">
+                            add_acknowledgment.css
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_closing.css.html">
+                            add_closing.css
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_denial.css.html">
+                            add_denial.css
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_static_styles_add_extension.css.html">
                             add_extension.css
                         </a>
@@ -1619,6 +1634,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_footer.html.html">
+                            email_footer.html
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_not_onboarded.html.html">
                             email_not_onboarded.html
                         </a>
@@ -1626,11 +1646,6 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_private_file_upload.html.html">
                             email_private_file_upload.html
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_request_info.html.html">
-                            email_request_info.html
                         </a>
                     </li>
                     <li>
@@ -3270,7 +3285,8 @@ No problems to report
 
                     <p>
 <!-- Include the documentation here! -->
-<p>We attempted to read from templates/app_lib_redis_utils.py_ex.txt but failed.</p>
+
+<hr><code>redis_set_file_metadata(request_or_response_id, filepath, is_update=False):</code><br/></br>Stores a file's size, mime type, and hash.</br><hr><code>redis_get_file_metadata(request_or_response_id, filepath, is_update=False):</code><br/></br>Returns a tuple containing a file's</br>( size (int), mime type (str), and hash (str) ).</br><hr><code>redis_delete_file_metadata(request_or_response_id, filepath, is_update=False):</code><br/><hr><code>_get_file_metadata_key(request_or_response_id, filepath, is_update):</code><br/></br>See upload.utils.get_upload_key</br></br>Since this key is being stored in upload_redis, a pipe</br>is used instead of an underscore to avoid any key conflicts.</br><hr><code>redis_get_user_session(session_id):</code><br/><hr><code>redis_delete_user_session(session_id):</code><br/>
                    </p>
                 </details>
 

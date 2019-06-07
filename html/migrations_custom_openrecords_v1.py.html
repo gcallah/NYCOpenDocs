@@ -1225,21 +1225,6 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_acknowledgment.css.html">
-                            add_acknowledgment.css
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_closing.css.html">
-                            add_closing.css
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_denial.css.html">
-                            add_denial.css
-                        </a>
-                    </li>
-                    <li>
                         <a href="/NYCOpenDocs/html/app_static_styles_add_extension.css.html">
                             add_extension.css
                         </a>
@@ -1634,11 +1619,6 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_footer.html.html">
-                            email_footer.html
-                        </a>
-                    </li>
-                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_not_onboarded.html.html">
                             email_not_onboarded.html
                         </a>
@@ -1646,6 +1626,11 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_private_file_upload.html.html">
                             email_private_file_upload.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_request_info.html.html">
+                            email_request_info.html
                         </a>
                     </li>
                     <li>
@@ -3278,8 +3263,7 @@ migrations/custom/openrecords_v1.py:996:72: E202 whitespace before '}'
 
                     <p>
 <!-- Include the documentation here! -->
-
-</br>Migrate data and files from OpenRecords V1 database and file server.</br></br>Dependencies (not listed in requirements.txt)</br>nameparser</br>progressbar2 (optional)</br></br>Usage:</br>PYTHONPATH=/.../openrecords_v2_0 python migrations/custom/openrecords_v1.py</br></br><hr><code>MockProgressBar(object):</code><br/></br>Mock progressbar.ProgressBar</br>(Used if progressbar2 is not installed.)</br><hr><code>__init__(self, max_value):</code><br/><hr><code>update(self, num):</code><br/><hr><code>finish(self):</code><br/><hr><code>transfer(tablename, query):</code><br/><hr><code>decorator(transfer_func):</code><br/></br>Run args.transfer_func for every row fetched by args.query,</br>committing every 500 rows.</br><hr><code>wrapped(*args):</code><br/><hr><code>_get_due_date(date_submitted, days_until_due):</code><br/></br>Script-compatible app.lib.date_utils.get_due_date</br></br>:param date_submitted: local time expected (to match v1 db)</br><hr><code>_process_due_date(due_date):</code><br/></br>Script-compatible app.lib.date_utils.process_due_date</br></br>:param due_date: local time expected (to match v1 db)</br><hr><code>_get_compatible_status(request):</code><br/></br>Get compatible v1 request status for v2.</br></br>Any v1 status that is not 'Closed' or 'Open' is</br>determined by the request's due date.</br></br><hr><code>transfer_requests(agency_next_request_number, request):</code><br/></br>Since categories were not stored per request in v1, transferred</br>requests are given a category of "All" (the default for v2 requests).</br></br>Since agency description privacy was not stored in v1, the privacy for</br>transferred requests is set if no description due date is present.</br><hr><code>_create_response(obj, type_, release_date, privacy=None, date_created=None):</code><br/></br>Create openrecords_v2.public.responses row.</br></br>:param obj: database record containing request id (via `id` or `request_id`)</br>and privacy (if not provided as kwarg)</br>:returns: response id</br><hr><code>_get_release_date(start_date):</code><br/><hr><code>_get_note_release_date(note):</code><br/><hr><code>transfer_notes(note):</code><br/><hr><code>transfer_denials(note):</code><br/></br>Any note corresponding to a request that was NOT determined to have an</br>acknowledgment through transfer_acknowledgments_from_email and</br>transfer_acknowledgments_from_request, is considered a note representing</br>a denial.</br><hr><code>transfer_closings(note):</code><br/></br>Any note corresponding to a request that was determined to have an</br>acknowledgment through transfer_acknowledgments_from_email and</br>transfer_acknowledgments_from_request and containing a text in the</br>format "{...}" (indicating a list of reasons), is considered a not</br>representing a closing.</br><hr><code>transfer_acknowledgments_from_email(email):</code><br/></br>An acknowledgment is created for every email with a subject</br>containing the string 'Acknowledged'.</br></br>For requests associated with submission notification emails,</br>their original due date (pre-acknowledgment) is calculated</br>via the email's content ('due date').</br>Otherwise, the date is set to the request's reception date</br>plus 5 days (acknowledgment days until due).</br></br>The due date at the time of acknowledgment is then calculated</br>via the corresponding email's content ('acknowledgment status').</br><hr><code>transfer_acknowledgments_from_request(request):</code><br/></br>Any request (excluding those for which an acknowledgment can been</br>found via email notification) without an 'Open' status and</br>without a previous status of 'Open' if its current status is 'Closed',</br>is considered to have been, at some point, acknowledged.</br></br>For a request that...</br>responses.date_modified     acknowledgments.date</br>...has NOT been extended:   request.date_received       request.due_date</br>...has been extended:       request.date_received       date_received + 5 + 20</br></br><hr><code>transfer_reopenings(email):</code><br/></br>Since v1 Re-openings do not require a new request due date, the `date` field of</br>transferred re-openings is set to the current due date of the associated request.</br></br><hr><code>transfer_extensions_from_email(email):</code><br/><hr><code>transfer_extensions_from_note(note):</code><br/><hr><code>_get_record_release_date(record):</code><br/><hr><code>_sftp_get_mime_type(sftp, path):</code><br/></br>Script-compatible app.lib.file_utils._sftp_get_mime_type.</br></br>The only difference between this and its file_utils counterpart</br>is the substitution of current_app.config['MAGIC_FILE'] with</br>CONFIG.MAGIC_FILE.</br></br><hr><code>transfer_files(sftp, record):</code><br/></br>It is assumed all v1 uploads have been copied to the v2 file server.</br>This function will FAIL otherwise!</br><hr><code>transfer_links(record):</code><br/><hr><code>transfer_instructions(record):</code><br/></br>For records with non-null description fields, the description and access</br>content are joined and stored in instructions.content.</br><hr><code>transfer_emails(email):</code><br/><hr><code>transfer_users(user_ids_to_guids, user):</code><br/></br>Agency users are determined by the presence of a department_id, otherwise</br>a user is stored as anonymous.</br>A user's first and last name and middle initial are parsed from `alias`.</br></br>:param user_ids_to_guids: empty dictionary that will be populated</br></br><hr><code>transfer_user_requests_assigned_users(user_ids_to_guids, owner):</code><br/></br>:param user_ids_to_guids: the presence of owner.user_id within this dictionary indicates</br>a transferable user request.</br>:return: -1 if user_id not found (used to shift max_value of progress bar)</br><hr><code>transfer_user_requests_requesters(user_ids_to_guids, request):</code><br/></br>User ids are fetched from v1 subscriber table.</br>:param user_ids_to_guids: used to fetch generated requester guid</br><hr><code>get_ssh_credentials():</code><br/></br>Prompt user for and return credentials necessary</br>for remote access to the server holding v1 request files.</br><hr><code>sftp_openrecords_v2_ctx():</code><br/></br>Script-compatible app.lib.file_utils.sftp_ctx</br><hr><code>copy_files(jcastillo_use_password, jcastillo_password_or_key_file, openfoil_password):</code><br/></br>Copy v1 files to v2 data directory.</br><hr><code>_copy_files():</code><br/><hr><code>update_agencies_next_request_numbers(agency_next_request_number):</code><br/><hr><code>transfer_all():</code><br/></br>Migrate all data from v1 to v2 db (call all transfer functions).</br><hr><code>assign_admins():</code><br/></br>Assign every agency admin to their agency's requests if</br>they have not been assigned already.</br></br>Why would there be agencies with unassigned admins?</br>In V1, special users that represented agencies as a whole</br>would be automatically assigned. V2 no longer handles assigning</br>these types of users so they are never transferred.</br>
+<p>We attempted to read from templates/migrations_custom_openrecords_v1.py_ex.txt but failed.</p>
                    </p>
                 </details>
 

@@ -1225,21 +1225,6 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_acknowledgment.css.html">
-                            add_acknowledgment.css
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_closing.css.html">
-                            add_closing.css
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_denial.css.html">
-                            add_denial.css
-                        </a>
-                    </li>
-                    <li>
                         <a href="/NYCOpenDocs/html/app_static_styles_add_extension.css.html">
                             add_extension.css
                         </a>
@@ -1634,11 +1619,6 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_footer.html.html">
-                            email_footer.html
-                        </a>
-                    </li>
-                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_not_onboarded.html.html">
                             email_not_onboarded.html
                         </a>
@@ -1646,6 +1626,11 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_private_file_upload.html.html">
                             email_private_file_upload.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_request_info.html.html">
+                            email_request_info.html
                         </a>
                     </li>
                     <li>
@@ -3314,8 +3299,7 @@ app/user_request/utils.py:327:121: E501 line too long (175 > 120 characters)
 
                     <p>
 <!-- Include the documentation here! -->
-
-<hr><code>add_user_request(request_id, user_guid, permissions, point_of_contact):</code><br/></br>Create a users permissions entry for a request and notify all agency administrators and the user that the permissions</br>have changed.</br></br>:param request_id: FOIL request ID</br>:param user_guid: string guid of the user being edited</br>:param permissions: Updated permissions values {'permission': true}</br>:param point_of_contact: boolean value to set user as point of contact or not</br><hr><code>edit_user_request(request_id, user_guid, permissions, point_of_contact):</code><br/></br>Edit a users permissions on a request and notify all agency administrators and the user that the permissions</br>have changed.</br></br>:param request_id: FOIL request ID</br>:param user_guid: string guid of the user being edited</br>:param permissions: Updated permissions values {'permission': true}</br>:param point_of_contact: boolean value to set user as point of contact or not</br><hr><code>remove_user_request(request_id, user_guid):</code><br/></br>Remove user from request and sends email to all agency administrators and to user being removed.</br>Delete row from UserRequests table and stores event object into Events.</br></br>:param request_id: FOIL request ID</br>:param user_guid: string guid of user being removed</br></br><hr><code>create_user_request_event(events_type, user_request, old_permissions=None, old_point_of_contact=None,</code><br/></br>Create an Event for the addition, removal, or updating of a UserRequest and insert into the database.</br></br>Args:</br>events_type (str): event type from the constants defined in constants.event_type.</br>user_request (UserRequests): UserRequests object.</br>old_permissions (int): Value of permissions for the request.</br>user (Users): Users object that represents the user being modified.</br></br>Returns:</br>Events: The event object representing the change made to the user.</br></br><hr><code>create_user_request_event_object(events_type, user_request, old_permissions=None, old_point_of_contact=None,</code><br/></br>Create an Event for the addition, removal, or updating of a UserRequest and insert into the database.</br></br>Args:</br>events_type (str): event type from the constants defined in constants.event_type.</br>user_request (UserRequests): UserRequests object.</br>old_permissions (int): Value of permissions for the request.</br>user (Users): Users object that represents the user performing the user_request modification</br></br>Returns:</br>Events: The event object representing the change made to the user.</br></br><hr><code>get_current_point_of_contact(request_id):</code><br/></br>Get the current point of contact of a given request</br>:param request_id: FOIL request ID</br>:return: UserRequest object of the current point of contact</br><hr><code>set_point_of_contact(request_id, user_request, point_of_contact):</code><br/></br>Toggles point of contact of a given request</br>:param request_id: FOIL request ID</br>:param user_request: UserRequest row to be changed</br>:param point_of_contact: boolean flag for point of contact</br><hr><code>has_point_of_contact(request_id):</code><br/></br>Check if a given request has a point of contact</br>:param request_id: FOIL request ID</br>:return: True if there is a current point of contact, False otherwise</br><hr><code>remove_point_of_contact(request_id):</code><br/></br>Remove the current point of contact from a given request</br>:param request_id: FOIL request ID</br><hr><code>determine_point_of_contact_change(request_id, user_request, point_of_contact):</code><br/></br>Determines what action needs to be done to the point of contact</br>:param request_id: FOIL request ID</br>:param user_request: UserRequest row to be changed</br>:param point_of_contact: boolean flag for point of contact</br>
+<p>We attempted to read from templates/app_user_request_utils.py_ex.txt but failed.</p>
                    </p>
                 </details>
 

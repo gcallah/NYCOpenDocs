@@ -1225,21 +1225,6 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_acknowledgment.css.html">
-                            add_acknowledgment.css
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_closing.css.html">
-                            add_closing.css
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_denial.css.html">
-                            add_denial.css
-                        </a>
-                    </li>
-                    <li>
                         <a href="/NYCOpenDocs/html/app_static_styles_add_extension.css.html">
                             add_extension.css
                         </a>
@@ -1634,11 +1619,6 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_footer.html.html">
-                            email_footer.html
-                        </a>
-                    </li>
-                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_not_onboarded.html.html">
                             email_not_onboarded.html
                         </a>
@@ -1646,6 +1626,11 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_private_file_upload.html.html">
                             email_private_file_upload.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_request_info.html.html">
+                            email_request_info.html
                         </a>
                     </li>
                     <li>
@@ -3282,8 +3267,7 @@ No problems to report
 
                     <p>
 <!-- Include the documentation here! -->
-
-</br>.. module: utils</br></br><hr><code>InvalidUserException(Exception):</code><br/><hr><code>__init__(self, user):</code><br/></br>Exception used when an invalid user is detected.</br></br>:param user: the current_user as defined in flask_login</br><hr><code>InvalidDeterminationException(Exception):</code><br/><hr><code>__init__(self, request_id, dtype, missing_field):</code><br/></br>Exception used to handle missing information for a determination.</br>:param request_id: Unique request identifier</br>:param dtype: Type of determination (Acknowledgment, Extension, Closing, Denial, Re-Opening)</br>:param missing_field: The field missing from the determination.</br><hr><code>UserRequestException(Exception):</code><br/><hr><code>__init__(self, action, request_id, reason):</code><br/></br>Exception used to handle errors performing actions on a request.</br></br>:param action: Action attempted</br>:param request_id: Unique request identifier</br>:param reason: Description of failure reason</br><hr><code>DuplicateFileException(Exception):</code><br/><hr><code>__init__(self, file_name, request_id):</code><br/></br>Exception used when a duplicate file is added to a request.</br></br>:param file_name: Name of file uploaded</br>:param request_id: Unique request identifier</br><hr><code>PDFCreationException(Exception):</code><br/><hr><code>__init__(self, status_code, stdout=b'', stderr=b''):</code><br/></br>Exception used when xhtml2pdf fails to create a PDF.</br>:param status_code: Process exit status code</br>:param stdout: STDOUT output</br>:param stderr: STDERR output</br><hr><code>b64decode_lenient(data):</code><br/></br>Decodes base64 (bytes or str), padding being optional.</br></br>:param data: a string or bytes-like object of base64 data</br>:return: a decoded string</br><hr><code>eval_request_bool(val, default=False):</code><br/></br>Evaluates the boolean value of a request parameter.</br></br>:param val: the value to check</br>:param default: bool to return by default</br></br>:return: Boolean</br>
+<p>We attempted to read from templates/app_lib_utils.py_ex.txt but failed.</p>
                    </p>
                 </details>
 

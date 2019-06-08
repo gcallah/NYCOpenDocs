@@ -28,7 +28,7 @@
                     </summary>
 
                     <p>
-<!-- Include the text material here! -->
+<!-- Include the code review here! -->
 <!--include templates/migrations_custom_custom.html_hw.txt -->
                     </p>
                 </details>
@@ -51,7 +51,7 @@
                     </summary>
 
                     <p>
-<!-- Include the documentation here! -->
+<!-- Include the extracted documentation here! -->
                    </p>
                 </details>
 

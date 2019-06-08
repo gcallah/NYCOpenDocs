@@ -3238,7 +3238,7 @@
                     </summary>
 
                     <p>
-<!-- Include the text material here! -->
+<!-- Include the code review here! -->
 The file contains functions pertaining to file information, such as getting the size and checking if the file exists.
 Other file functions including renaming, moving, and removing the file, as well as getting the hash and mime type.
 The send_file function sends the file from the specified directory.
@@ -3278,7 +3278,7 @@ No problems to report
                     </summary>
 
                     <p>
-<!-- Include the documentation here! -->
+<!-- Include the extracted documentation here! -->
 
 </br>app.file.utils</br>~~~~~~~~~~~~~~~~</br></br>synopsis: Helpers for manipulating files.</br>Switches file-handling interface between sftp and os depending on configuration.</br></br><hr><code>MaxTransferSizeExceededException(Exception):</code><br/><hr><code>SFTPCredentialsException(Exception):</code><br/><hr><code>sftp_ctx():</code><br/></br>Context manager that provides an SFTP client object</br>(an SFTP session across an open SSH Transport)</br><hr><code>_sftp_switch(sftp_func):</code><br/></br>Check if app is using SFTP and, if so, connect to SFTP server</br>and call passed function (sftp_func) with connected client,</br>otherwise call decorated function (which should be using</br>the os library to accomplish the same file-related action).</br><hr><code>decorator(os_func):</code><br/><hr><code>wrapper(*args, **kwargs):</code><br/><hr><code>_raise_if_too_big(bytes_transferred, _):</code><br/><hr><code>_sftp_get_size(sftp, path):</code><br/><hr><code>_sftp_exists(sftp, path):</code><br/><hr><code>_sftp_mkdir(sftp, path):</code><br/><hr><code>_sftp_makedirs(sftp, path):</code><br/> os.makedirs(path, exists_ok=True) </br><hr><code>_sftp_remove(sftp, path):</code><br/><hr><code>_sftp_rename(sftp, oldpath, newpath):</code><br/><hr><code>_sftp_move(sftp, localpath, remotepath):</code><br/><hr><code>_sftp_get_mime_type(sftp, path):</code><br/><hr><code>_sftp_get_hash(sftp, path):</code><br/><hr><code>_sftp_send_file(sftp, directory, filename, **kwargs):</code><br/><hr><code>_get_file_serving_path(directory, filename):</code><br/></br>Returns the upload serving directory path for a file determined by supplied directory and filename.</br><hr><code>getsize(path):</code><br/><hr><code>exists(path):</code><br/><hr><code>mkdir(path):</code><br/><hr><code>makedirs(path, **kwargs):</code><br/><hr><code>remove(path):</code><br/><hr><code>rename(oldpath, newpath):</code><br/><hr><code>move(oldpath, newpath):</code><br/></br>Use this instead of 'rename' if, when using sftp, 'oldpath</br>represents a local file path and 'newpath' a remote path.</br><hr><code>get_mime_type(path):</code><br/><hr><code>os_get_mime_type(path):</code><br/><hr><code>get_hash(path):</code><br/></br>Returns the sha1 hash of a file a string of</br>hexadecimal digits.</br><hr><code>os_get_hash(path):</code><br/><hr><code>send_file(directory, filename, **kwargs):</code><br/>
                    </p>

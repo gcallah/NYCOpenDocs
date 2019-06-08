@@ -28,7 +28,7 @@
                     </summary>
 
                     <p>
-<!-- Include the text material here! -->
+<!-- Include the code review here! -->
 <!--include templates/migrations_versions_cf62ec87d973_agency_description_to_agency_request_.py_hw.txt -->
                     </p>
                 </details>
@@ -52,7 +52,7 @@
                     </summary>
 
                     <p>
-<!-- Include the documentation here! -->
+<!-- Include the extracted documentation here! -->
 <!--include templates/migrations_versions_cf62ec87d973_agency_description_to_agency_request_.py_ex.txt -->
                    </p>
                 </details>

@@ -28,7 +28,7 @@
                     </summary>
 
                     <p>
-<!-- Include the text material here! -->
+<!-- Include the code review here! -->
 <!--include templates/migrations_versions_838a6ad16cf4_remove_auth_user_type_from_users.py_hw.txt -->
                     </p>
                 </details>
@@ -52,7 +52,7 @@
                     </summary>
 
                     <p>
-<!-- Include the documentation here! -->
+<!-- Include the extracted documentation here! -->
 <!--include templates/migrations_versions_838a6ad16cf4_remove_auth_user_type_from_users.py_ex.txt -->
                    </p>
                 </details>

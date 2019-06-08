@@ -3238,7 +3238,7 @@
                     </summary>
 
                     <p>
-<!-- Include the text material here! -->
+<!-- Include the code review here! -->
 This file contains the exception classes that are raised for invalid users,
 invalid determination with missing information, errors raised upon invalid
 actions for a request, duplicate file uploads, and PDF creation failure.
@@ -3266,7 +3266,7 @@ No problems to report
                     </summary>
 
                     <p>
-<!-- Include the documentation here! -->
+<!-- Include the extracted documentation here! -->
 
 </br>.. module: utils</br></br><hr><code>InvalidUserException(Exception):</code><br/><hr><code>__init__(self, user):</code><br/></br>Exception used when an invalid user is detected.</br></br>:param user: the current_user as defined in flask_login</br><hr><code>InvalidDeterminationException(Exception):</code><br/><hr><code>__init__(self, request_id, dtype, missing_field):</code><br/></br>Exception used to handle missing information for a determination.</br>:param request_id: Unique request identifier</br>:param dtype: Type of determination (Acknowledgment, Extension, Closing, Denial, Re-Opening)</br>:param missing_field: The field missing from the determination.</br><hr><code>UserRequestException(Exception):</code><br/><hr><code>__init__(self, action, request_id, reason):</code><br/></br>Exception used to handle errors performing actions on a request.</br></br>:param action: Action attempted</br>:param request_id: Unique request identifier</br>:param reason: Description of failure reason</br><hr><code>DuplicateFileException(Exception):</code><br/><hr><code>__init__(self, file_name, request_id):</code><br/></br>Exception used when a duplicate file is added to a request.</br></br>:param file_name: Name of file uploaded</br>:param request_id: Unique request identifier</br><hr><code>PDFCreationException(Exception):</code><br/><hr><code>__init__(self, status_code, stdout=b'', stderr=b''):</code><br/></br>Exception used when xhtml2pdf fails to create a PDF.</br>:param status_code: Process exit status code</br>:param stdout: STDOUT output</br>:param stderr: STDERR output</br><hr><code>b64decode_lenient(data):</code><br/></br>Decodes base64 (bytes or str), padding being optional.</br></br>:param data: a string or bytes-like object of base64 data</br>:return: a decoded string</br><hr><code>eval_request_bool(val, default=False):</code><br/></br>Evaluates the boolean value of a request parameter.</br></br>:param val: the value to check</br>:param default: bool to return by default</br></br>:return: Boolean</br>
                    </p>

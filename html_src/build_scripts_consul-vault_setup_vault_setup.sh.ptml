@@ -28,7 +28,7 @@
                     </summary>
 
                     <p>
-<!-- Include the text material here! -->
+<!-- Include the code review here! -->
 <!--include templates/build_scripts_consul-vault_setup_vault_setup.sh_hw.txt -->
                     </p>
                 </details>
@@ -51,7 +51,7 @@
                     </summary>
 
                     <p>
-<!-- Include the documentation here! -->
+<!-- Include the extracted documentation here! -->
 <!--include templates/build_scripts_consul-vault_setup_vault_setup.sh_ex.txt -->
                    </p>
                 </details>

@@ -3238,7 +3238,7 @@
                     </summary>
 
                     <p>
-<!-- Include the text material here! -->
+<!-- Include the code review here! -->
 Few agency utilities functions are defined as follows:
 <br>
 Function get_active_users_as_choices() retrieves a list of tuples representing
@@ -3291,7 +3291,7 @@ app/agency/api/utils.py:139:14: W291 trailing whitespace
                     </summary>
 
                     <p>
-<!-- Include the documentation here! -->
+<!-- Include the extracted documentation here! -->
 
 <hr><code>get_active_users_as_choices(agency_ein: str) -> List[Tuple[str, str]]:</code><br/>Retrieve a list of tuples representing users that are active for a given agency. Each tuple contains the</br>following elements:</br>(Users.guid, Users.name)</br></br>Params:</br>agency_ein (str): Agency EIN (4 Character String)</br></br>Returns:</br>List(Tuple(str, str)): A list of tuples with the following elements:</br>(Users.guid, Users.name)</br><hr><code>get_reasons(agency_ein: str, reason_type: str = None) -> Dict:</code><br/>Retrieve the determination reasons (used in emails) for the specified agency as a JSON object. If reason_type is</br>provided, only retrieve determination_reasons of that type.</br></br>Args:</br>agency_ein (str): Agency EIN</br>reason_type (str): One of ("denial", "closing", "re-opening")</br></br>Returns:</br>Dict:</br>{</br>type_', [(reason_id, reason_title),...]</br>}</br><hr><code>get_letter_templates(agency_ein: str, template_type: str = None) -> Dict:</code><br/>Retrieve letter templates for the specified agency as a dictionary. If template type is provided, only get</br>templates of that type</br></br>Params:</br>Args:</br>agency_ein (str): Agency EIN</br>reason_type (str): One of "acknowledgment", "denial", "closing", "letter", "extension", "re-opening</br></br>Returns:</br>Dict:</br>{</br>type_': [(template_id, template_name),...]</br>}</br><hr><code>_group_items(items: Sequence[Sequence], sort_index: int) -> Tuple[Any, list]:</code><br/>Group a collection of items by a specified key</br></br>Args:</br>collections (Sequence): A collection of items to be grouped</br>sort_index (int): Index of the item to use for grouping</br></br>Yields:</br>tuple:</br>(</br>items[sort_index_1], (Sequence[i], Sequence[j], ...),</br>items[sort_index_2], (Sequence[i], Sequence[j], ...),</br>...</br>)</br>
                    </p>

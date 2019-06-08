@@ -3260,6 +3260,34 @@ Restrictions are made to prevent the user from typing non-numeric values into th
 <br>Required fields are given the data-parsley-required attribute and error messages are displayed if requirements are not met. Upon validating the form, if validation fails, the window is then scrolled to the invalid input location. 
 <br>Upon clicking submit, the processing bar is displayed and the submit button is hidden to prevent the user from submitting/clicking multiple times.
 <br>Character counts are displayed for the fields of the new request form.
+
+<h3>
+Code Issues
+</h3>
+
+<ul class="review">
+  <li>
+  <code>"<span class=\"glyphicon glyphicon-exclamation-sign\"></span>&nbsp;"</code> is repeated several times for lines 142-168.
+  Recommend putting the span string into a variable. 
+  </li>
+  <li>
+  The <code>if</code> statement below uses a mix of <code>&&</code> and <code>||</code>. Recommend creating a function to check for 
+  address validation.
+  <pre>
+  <code>
+        if ($("#email").parsley().isValid() ||
+            $("#phone").parsley().isValid() ||
+            $("#fax").parsley().isValid() ||
+            ($("#address-line-1").parsley().isValid() && $("#state").parsley().isValid() && $("#zipcode").parsley().isValid() && $("#city").parsley().isValid())
+        ) {
+  </code>
+  </pre<
+  </li>
+  <li>
+  The function for validating the request form runs from line 230 to line 290. Recommend refactoring the function code 
+  by creating functions for separate parts of the function, such as scrolling to input when validation fails. 
+  </li>
+</ul>
                     </p>
                 </details>
 

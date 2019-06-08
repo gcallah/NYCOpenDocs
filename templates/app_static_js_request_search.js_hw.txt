@@ -7,3 +7,71 @@ The dateInvalid function handles and adds attributes in the case that the date e
 <br>Upon searching, if results are found, they are rendered onto the html page and the generate document button can be clicked. Otherwise it is reported on the html page that no results were found and the generate document button is disabled
 <br>Filtering is handled through a function. If filtering by FOIL ID, filtering by title, descripting, agency request summary, and requester names are disabled.
 <br>The cycleSort function handles sorting data in ascending, descending, or no orderr and with the corresponding glyphicon.
+
+<h3>
+Code Issues
+</h3>
+
+<ul class="review">
+  <li>
+  For setting the table head values, the <code>if</code> and <code>else</code> conditions, shown below, result in two different column arrays, 
+  but the arrays share common elements. Recommend setting the column array with the same elements prior to coding the conditions.
+  <pre>
+  <code>
+    if (isAgencyUser) {
+        resultcol = [
+            ["Status",""],
+            ["ID",""],
+            ["Date Submitted", "sort_date_submitted","desc"],
+            ["Title", "sort_title","none"],
+            ["Assigned Agency", ""],
+            ["Date Due","sort_date_due","none"],
+            ["Date Closed", ""],
+            ["Requester Name", ""]
+        ];
+  </code>
+  </pre>
+  <pre>
+  <code>
+    if (isAgencyUser) {
+        resultcol = [
+            ["Status", ""],
+            ["ID", ""],
+            ["Date Submitted", "sort_date_submitted", "desc"],
+            ["Title", "sort_title", "none"],
+            ["Assigned Agency", ""],
+            ["Date Due", "sort_date_due", "none"]
+        ];
+  </code>
+  </pre>
+  </li>
+  <li>
+  For the code snippet shown below, there are repeated function elements. Recommend creating functions with function names so the 
+  event handler can call on the function name. 
+  <pre>
+  <code>
+    dateRecFromElem.on("input change", function () {
+        valiDates(dateRecFromElem, dateRecToElem, dateSubmittedReq);
+    });
+    dateRecToElem.on("input change", function () {
+        valiDates(dateRecFromElem, dateRecToElem, dateSubmittedReq);
+    });
+    dateDueFromElem.on("input change", function () {
+        valiDates(dateDueFromElem, dateDueToElem, dateDueReq);
+    });
+    dateDueToElem.on("input change", function () {
+        valiDates(dateDueFromElem, dateDueToElem, dateDueReq);
+    });
+    dateClosedFromElem.on("input change", function () {
+        valiDates(dateClosedFromElem, dateClosedToElem, dateClosedReq);
+    });
+    dateClosedToElem.on("input change", function () {
+        valiDates(dateClosedFromElem, dateClosedToElem, dateClosedReq);
+    });
+  </code>
+  </pre>
+  </li>
+  <li>
+  Recommend adding comments for what happens when the next and previous buttons are clicked.
+  </li>
+</ul>

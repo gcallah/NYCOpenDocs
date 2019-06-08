@@ -1,0 +1,1 @@
+This JS file handles adding click handlers to each FAQ link, and the click handlers result in scrolling to where the FAQ answer is.

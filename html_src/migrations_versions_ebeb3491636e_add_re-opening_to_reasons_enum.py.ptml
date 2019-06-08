@@ -28,7 +28,7 @@
                     </summary>
 
                     <p>
-<!-- Include the text material here! -->
+<!-- Include the code review here! -->
 <!--include templates/migrations_versions_ebeb3491636e_add_re-opening_to_reasons_enum.py_hw.txt -->
                     </p>
                 </details>
@@ -52,7 +52,7 @@
                     </summary>
 
                     <p>
-<!-- Include the documentation here! -->
+<!-- Include the extracted documentation here! -->
 <!--include templates/migrations_versions_ebeb3491636e_add_re-opening_to_reasons_enum.py_ex.txt -->
                    </p>
                 </details>

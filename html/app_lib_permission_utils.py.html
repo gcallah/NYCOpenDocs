@@ -3238,7 +3238,7 @@
                     </summary>
 
                     <p>
-<!-- Include the text material here! -->
+<!-- Include the code review here! -->
 This file contains util functions pertaining to validating permissions.
 The functions in this file check for user authentication, super user status, and allowed permissions.
 The last function 'get_permission(permission_type: str, response_type: Responses)' returns a dictionary of associated permissions for files, notes, instructions, and links.
@@ -3264,7 +3264,7 @@ No problems to report
                     </summary>
 
                     <p>
-<!-- Include the documentation here! -->
+<!-- Include the extracted documentation here! -->
 
 <hr><code>has_permission(permission: int):</code><br/></br>Checks to see if the current_user has the appropriate permission for this endpoint.</br></br>:param f: View function that is being wrapped.</br>:param permissions: List of permission values.</br>:return:</br><hr><code>decorator(f):</code><br/><hr><code>decorated_function(request_id, *args, **kwargs):</code><br/><hr><code>has_super():</code><br/></br>Checks to see if the current_user is a super user.</br></br>:param f: Function that is being wrapped.</br>:return:</br><hr><code>decorator(f):</code><br/><hr><code>decorated_function(*args, **kwargs):</code><br/><hr><code>is_allowed(user: Users, request_id: str, permission: int):</code><br/></br></br>:param user:</br>:param request_id:</br>:param permissions:</br>:return:</br><hr><code>get_permission(permission_type: str, response_type: Responses):</code><br/></br></br>:param permission_type:</br>:param response_type:</br>:return:</br>
                    </p>

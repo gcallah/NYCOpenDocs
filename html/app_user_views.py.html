@@ -3238,7 +3238,7 @@
                     </summary>
 
                     <p>
-<!-- Include the text material here! -->
+<!-- Include the code review here! -->
 The user routes for a 'user_id' are handled using different request parameters
 like title, number, address; and restrictions.
                     </p>
@@ -3266,7 +3266,7 @@ app/user/views.py:311:121: E501 line too long (122 > 120 characters)
                     </summary>
 
                     <p>
-<!-- Include the documentation here! -->
+<!-- Include the extracted documentation here! -->
 
 <hr><code>patch(user_id):</code><br/></br>Request Parameters:</br>- title</br>- organization</br>- email</br>- phone_number</br>- fax_number</br>- mailing_address</br>- is_super</br>- is_agency_active</br>- is_agency_admin</br>(Mailing Address)</br>- zip</br>- city</br>- state</br>- address_one</br>- address_two</br></br>Restrictions:</br>- Anonymous Users</br>- cannot access this endpoint</br>- Agency Administrators</br>- cannot change their agency status</br>- can only update the agency status of users within their agency</br>- cannot change any super user status</br>- Super Users</br>- cannot change their super user status</br>- Agency Users</br>- cannot change any user except for themselves or</br>*anonymous* requesters for requests they are assigned to</br>- cannot change super user or agency status</br>- Public Users</br>- can only update themselves</br>- cannot change super user or agency status</br></br>
                    </p>

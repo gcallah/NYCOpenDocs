@@ -3238,7 +3238,7 @@
                     </summary>
 
                     <p>
-<!-- Include the text material here! -->
+<!-- Include the code review here! -->
 The file handles the report URL endpoints for the OpenRecords application.
 <br>
 The routes are defined to:
@@ -3337,7 +3337,7 @@ app/report/views.py:30:1: F401 'app.report.utils.generate_request_closing_user_r
                     </summary>
 
                     <p>
-<!-- Include the documentation here! -->
+<!-- Include the extracted documentation here! -->
 
 </br>.. module:: report.views.</br></br>:synopsis: Handles the report URL endpoints for the OpenRecords application</br><hr><code>show_report():</code><br/></br>This function handles the rendering of the reports page</br></br>:return: redirect to reports page</br><hr><code>get():</code><br/></br>This function handles the retrieval of report data to generate the chart on the frontend.</br>Takes in agency_ein or user_guid from the frontend and filters for the number of requests closed and requests</br>opened.</br></br>:return: json object({"labels": ["Opened", "Closed"],</br>values": [150, 135],</br>active_users": [('', ''), ('o8pj0k', 'John Doe')]}), 200</br><hr><code>acknowledgment():</code><br/>Generates the acknowledgment report.</br></br>Returns:</br>Template with context.</br></br>
                    </p>

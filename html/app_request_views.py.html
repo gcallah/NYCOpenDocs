@@ -3238,7 +3238,7 @@
                     </summary>
 
                     <p>
-<!-- Include the text material here! -->
+<!-- Include the code review here! -->
 <p>
 This module handles the request URL endpoints for the OpenRecords application.
 </p>
@@ -3350,7 +3350,7 @@ app/request/views.py:419:13: W291 trailing whitespace
                     </summary>
 
                     <p>
-<!-- Include the documentation here! -->
+<!-- Include the extracted documentation here! -->
 
 </br>.. module:: request.views.</br></br>:synopsis: Handles the request URL endpoints for the OpenRecords application</br><hr><code>new():</code><br/></br>Create a new FOIL request</br>sends a confirmation email after the Requests object is created.</br></br>title: request title</br>description: request description</br>agency: agency selected for the request</br>submission: submission method for the request</br></br>:return: redirect to homepage on successful form validation</br>if form fields are missing or has improper values, backend error messages (WTForms) will appear</br><hr><code>view_all():</code><br/><hr><code>view(request_id):</code><br/></br>This function is for testing purposes of the view a request back until backend functionality is implemented.</br></br>:return: redirect to view request page</br><hr><code>non_portal_agency(agency_name):</code><br/></br>This function handles messaging to the requester if they submitted a request to a non-portal agency.</br></br>:return: redirect to non_portal_agency page.</br><hr><code>get_agencies_as_choices():</code><br/></br>Get selected category value from the request body and generate a list of sorted agencies from the category.</br></br>:return: list of agency choices</br><hr><code>contact_agency(request_id):</code><br/></br>This function handles contacting the agency about a request as a requester.</br>:return:</br>
                    </p>

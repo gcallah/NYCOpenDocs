@@ -3238,7 +3238,7 @@
                     </summary>
 
                     <p>
-<!-- Include the text material here! -->
+<!-- Include the code review here! -->
 The init.py file is used to initialize all python packages.
 It imports selected Classes, functions, etc into the package level. Functions
 are defined to set up the flask application context and error handlers.
@@ -3268,7 +3268,7 @@ app/__init__.py:82:1: W293 blank line contains whitespace
                     </summary>
 
                     <p>
-<!-- Include the documentation here! -->
+<!-- Include the extracted documentation here! -->
 
 <hr><code>create_app(config_name='default'):</code><br/></br>Set up the Flask Application context.</br></br>:param config_name: Configuration for specific application context.</br></br>:return: Flask application</br>mail_handler.setFormatter(Formatter(</br>Message Type:       %(levelname)s</br>Location:           %(pathname)s:%(lineno)d</br>Module:             %(module)s</br>Function:           %(funcName)s</br>Time:               %(asctime)s</br></br>Message:</br>%(message)s</br><hr><code>bad_request(e):</code><br/><hr><code>forbidden(e):</code><br/><hr><code>page_not_found(e):</code><br/><hr><code>internal_server_error(e):</code><br/>app.logger.error("""Request:   {method} {path}</br>IP:        {ip}</br>User:      {user}</br>Agent:     {agent_platform} | {agent_browser} {agent_browser_version}</br>Raw Agent: {agent}</br>Error ID:  {error_id}</br><hr><code>maintenance(e):</code><br/><hr><code>check_maintenance_mode():</code><br/><hr><code>add_session_config():</code><br/>Add current_app.permanent_session_lifetime converted to milliseconds</br>to context. The config variable PERMANENT_SESSION_LIFETIME is not</br>used because it could be either a timedelta object or an integer</br>representing seconds.</br><hr><code>add_debug():</code><br/>Add current_app.debug to context.</br>
                    </p>

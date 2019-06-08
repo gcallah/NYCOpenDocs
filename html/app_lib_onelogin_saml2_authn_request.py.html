@@ -3238,7 +3238,7 @@
                     </summary>
 
                     <p>
-<!-- Include the text material here! -->
+<!-- Include the code review here! -->
 <p>We attempted to read from templates/app_lib_onelogin_saml2_authn_request.py_hw.txt but failed.</p>
                     </p>
                 </details>
@@ -3262,7 +3262,7 @@ app/lib/onelogin/saml2/authn_request.py:98:121: E501 line too long (126 > 120 ch
                     </summary>
 
                     <p>
-<!-- Include the documentation here! -->
+<!-- Include the extracted documentation here! -->
 
  OneLogin_Saml2_Authn_Request class</br></br>Copyright (c) 2010-2018 OneLogin, Inc.</br>MIT License</br></br>AuthNRequest class of OneLogin's Python Toolkit.</br></br><hr><code>OneLogin_Saml2_Authn_Request(object):</code><br/></br></br>This class handles an AuthNRequest. It builds an</br>AuthNRequest object.</br></br><hr><code>__init__(self, settings, force_authn=False, is_passive=False, set_nameid_policy=True):</code><br/></br>Constructs the AuthnRequest object.</br></br>:param settings: OSetting data</br>:type settings: OneLogin_Saml2_Settings</br></br>:param force_authn: Optional argument. When true the AuthNRequest will set the ForceAuthn='true'.</br>:type force_authn: bool</br></br>:param is_passive: Optional argument. When true the AuthNRequest will set the Ispassive='true'.</br>:type is_passive: bool</br></br>:param set_nameid_policy: Optional argument. When true the AuthNRequest will set a nameIdPolicy element.</br>:type set_nameid_policy: bool</br>nameid_policy_str = </br><samlp:NameIDPolicy</br>Format="%s</br>requested_authn_context_str = """    <samlp:RequestedAuthnContext Comparison="%s"></br><saml:AuthnContextClassRef>urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport</saml:AuthnContextClassRef></br><hr><code>get_request(self, deflate=True):</code><br/></br>Returns unsigned AuthnRequest.</br>:param deflate: It makes the deflate process optional</br>:type: bool</br>:return: AuthnRequest maybe deflated and base64 encoded</br>:rtype: str object</br><hr><code>get_id(self):</code><br/></br>Returns the AuthNRequest ID.</br>:return: AuthNRequest ID</br>:rtype: string</br><hr><code>get_xml(self):</code><br/></br>Returns the XML that will be sent as part of the request</br>:return: XML request body</br>:rtype: string</br>
                    </p>

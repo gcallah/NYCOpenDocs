@@ -3238,7 +3238,7 @@
                     </summary>
 
                     <p>
-<!-- Include the text material here! -->
+<!-- Include the code review here! -->
 The user-request routes are to create a users permissions entry for a request,
 update the users permissions and remove a user from the request.
 
@@ -3333,7 +3333,7 @@ app/user_request/views.py:137:9: E125 continuation line with same indent as next
                     </summary>
 
                     <p>
-<!-- Include the documentation here! -->
+<!-- Include the extracted documentation here! -->
 
 </br>...module:: user_request.views.</br></br>:synopsis: Endpoints for User Requests</br><hr><code>create(request_id):</code><br/></br>Creates a users permissions entry for a request and sends notification emails.</br></br>Expects a request body containing the user's guid and new permissions.</br>Ex:</br>{</br>user': '7khz9y',</br>1: true,</br>5: false</br>}</br>:return:</br><hr><code>edit(request_id):</code><br/></br>Updates a users permissions on a request and sends notification emails.</br></br>Expects a request body containing the user's guid and updated permissions.</br>Ex:</br>{</br>user': '7khz9y',</br>1: true,</br>5: false</br>}</br>:return:</br><hr><code>delete(request_id):</code><br/></br>Removes a user from a request and send notification emails.</br></br>Expects a request body containing user's guid and confirmation string.</br>Ex:</br>{</br>user': '7khz9y',</br>remove-confirmation-string': 'remove</br>}</br>:return:</br>
                    </p>

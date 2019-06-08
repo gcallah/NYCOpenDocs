@@ -28,7 +28,7 @@
                     </summary>
 
                     <p>
-<!-- Include the text material here! -->
+<!-- Include the code review here! -->
 <!--include templates/migrations_versions_13de5f42768b_add_session_id_to_users_table.py_hw.txt -->
                     </p>
                 </details>
@@ -52,7 +52,7 @@
                     </summary>
 
                     <p>
-<!-- Include the documentation here! -->
+<!-- Include the extracted documentation here! -->
 <!--include templates/migrations_versions_13de5f42768b_add_session_id_to_users_table.py_ex.txt -->
                    </p>
                 </details>

@@ -3267,7 +3267,7 @@ Code Issues
 
 <ul class="review">
   <li>
-  <code>"<span class=\"glyphicon glyphicon-exclamation-sign\"></span>&nbsp;"</code> is repeated several times for lines 142-168.
+  The span code for displaying error message is repeated several times for lines 142-168.
   Recommend putting the span string into a variable. 
   </li>
   <li>
@@ -3281,7 +3281,7 @@ Code Issues
             ($("#address-line-1").parsley().isValid() && $("#state").parsley().isValid() && $("#zipcode").parsley().isValid() && $("#city").parsley().isValid())
         ) {
   </code>
-  </pre<
+  </pre>
   </li>
   <li>
   The function for validating the request form runs from line 230 to line 290. Recommend refactoring the function code 

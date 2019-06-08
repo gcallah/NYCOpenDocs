@@ -3260,6 +3260,27 @@ Upon a category change in the request, the data template is filled out with the 
 <br>A dropdown is displayed when the additional content button is clicked. 
 <br>Examples of title and description are displayed (using tooltip popovers)
 <br>Required fields are given the data-parsley-required attribute and are given a character limit. They are also assigned an error message. If a file is uploaded, the file name takes the place of the values for the file attributes. Clearing files also clear the values of those attributes. When the form is checked for valid values, if there is an invalid value, the window is scrolled to that location. Character counts are displayed for the title and description fields.
+
+<h3>
+Code Issues
+</h3>
+
+<ul class="review">
+  <li>
+  For the for loop below, the option HTML element has its innerHTML and value set from the returned data from the AJAX call. 
+  Needs a comment specifying in what format is the data returned in. What are the meanings behind index 0 and 1?
+  <pre>
+  <code>
+    for (var i = 0; i < data.length; i++) {
+        var opt = document.createElement("option");
+        opt.innerHTML = data[i][1];
+        opt.value = data[i][0];
+        sel.append(opt);
+    }
+  </code>
+  </pre>
+  </li>
+</ul>
                     </p>
                 </details>
 

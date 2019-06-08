@@ -69,6 +69,7 @@ $(HTML_DIR)/%.html: $(PTML_DIR)/%.ptml $(INCS)
 
 # this is the target to build all of the html files from ptml:
 html_from_ptml: $(HTMLFILES) $(INCS) extract_docs ptml_files
+	echo "Building html from ptml."
 	cp $(HTML_DIR)/index.html index.html
 
 # this should re-build everything needed:

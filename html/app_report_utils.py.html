@@ -1225,21 +1225,6 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_acknowledgment.css.html">
-                            add_acknowledgment.css
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_closing.css.html">
-                            add_closing.css
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_denial.css.html">
-                            add_denial.css
-                        </a>
-                    </li>
-                    <li>
                         <a href="/NYCOpenDocs/html/app_static_styles_add_extension.css.html">
                             add_extension.css
                         </a>
@@ -1634,11 +1619,6 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_footer.html.html">
-                            email_footer.html
-                        </a>
-                    </li>
-                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_not_onboarded.html.html">
                             email_not_onboarded.html
                         </a>
@@ -1646,6 +1626,11 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_private_file_upload.html.html">
                             email_private_file_upload.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_request_info.html.html">
+                            email_request_info.html
                         </a>
                     </li>
                     <li>
@@ -3299,7 +3284,7 @@ app/report/utils.py:69:121: E501 line too long (121 > 120 characters)
                     <p>
 <!-- Include the documentation here! -->
 
-<hr><code>generate_acknowledgment_report(self, current_user_guid: str, date_from: datetime, date_to: datetime):</code><br/>Celery task that generates the acknowledgment report for the user's agency with the specified date range.</br></br>Args:</br>current_user_guid: GUID of the current user</br>date_from: Date to filter report from</br>date_to: Date to filter report to</br>
+<hr><code>generate_acknowledgment_report(self, current_user_guid: str, date_from: datetime, date_to: datetime):</code><br/>Celery task that generates the acknowledgment report for the user's agency with the specified date range.</br></br>Args:</br>current_user_guid: GUID of the current user</br>date_from: Date to filter report from</br>date_to: Date to filter report to</br><hr><code>generate_request_closing_user_report(agency_ein: str, date_from: str, date_to: str, email_to: list):</code><br/>Generates a report of requests that were closed in a time frame.</br></br>Generates a report of requests in a time frame with the following tabs:</br>1) Total number of opened and closed requests.</br>2) Total number of closed requests and percentage closed by user.</br>3) Total number of requests closed by user per day.</br>4) All of the requests created.</br>5) All of the requests closed.</br>6) All of the requests closed and the user who closed it.</br></br>Args:</br>agency_ein: Agency EIN</br>date_from: Date to filter from</br>date_to: Date to filter to</br>email_to: List of recipient emails</br>
                    </p>
                 </details>
 

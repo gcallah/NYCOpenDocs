@@ -26,6 +26,7 @@ requirements: FORCE
 	pip install flake8
 	# we need node also, but that's best installed from:
 	# https://nodejs.org/en/download/
+	npm install
 
 # update our submodules (utils and node_modules right now):
 submods: FORCE

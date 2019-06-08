@@ -1,6 +1,1 @@
-migrations/versions/85068c55138a_added_notification_email.py:13:1: E402 module level import not at top of file
-migrations/versions/85068c55138a_added_notification_email.py:14:1: E402 module level import not at top of file
-migrations/versions/85068c55138a_added_notification_email.py:18:5: E266 too many leading '#' for block comment
-migrations/versions/85068c55138a_added_notification_email.py:22:5: E266 too many leading '#' for block comment
-migrations/versions/85068c55138a_added_notification_email.py:26:5: E266 too many leading '#' for block comment
-migrations/versions/85068c55138a_added_notification_email.py:28:5: E266 too many leading '#' for block comment
+No problems to report

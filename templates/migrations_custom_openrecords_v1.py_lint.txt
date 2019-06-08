@@ -1,1 +1,2 @@
+migrations/custom/openrecords_v1.py:184:36: E999 SyntaxError: invalid syntax
 migrations/custom/openrecords_v1.py:996:72: E202 whitespace before '}'

@@ -1,4 +1,1 @@
-migrations/versions/22b97712d5db_add_letters_and_envelopes_to_type_enum.py:13:1: E402 module level import not at top of file
-migrations/versions/22b97712d5db_add_letters_and_envelopes_to_type_enum.py:14:1: E402 module level import not at top of file
-migrations/versions/22b97712d5db_add_letters_and_envelopes_to_type_enum.py:43:48: W605 invalid escape sequence '\('
-migrations/versions/22b97712d5db_add_letters_and_envelopes_to_type_enum.py:43:72: W605 invalid escape sequence '\)'
+No problems to report

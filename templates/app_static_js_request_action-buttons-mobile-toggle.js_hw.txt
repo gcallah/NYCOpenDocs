@@ -14,7 +14,7 @@ Code Issues
   </li>
   <li>
   Why is the <code>resize</code> function called twice? <code>resize</code> is first called with a 
-  function as a parameter on line 3, and then <code>resize is called again with no parameter</code> on line 11.
+  function as a parameter on line 3, and then <code>resize</code> is called again with no parameter on line 11.
   Needs a comment explaining the reason behind calling <code>resize</code> twice.
   </li>
 </ul>

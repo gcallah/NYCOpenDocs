@@ -15,44 +15,8 @@ Code Issues
 	<ul class="review">
 
 		<li>
-			Many classes are missing their docstrings.
+			Many classes are missing docstrings.
 		</li>
 
 	</ul>
 
-<h3>
-Code Check Report
-</h3>
-
-<p>
-	This was created by running <code>flake8</code> against the code in this file.
-</p>
-
-<pre>
-forms.py:104:80: E501 line too long (94 &gt;  79 characters)
-forms.py:217:80: E501 line too long (86 &gt;  79 characters)
-forms.py:218:80: E501 line too long (86 &gt;  79 characters)
-forms.py:252:36: E711 comparison to None should be 'if cond is None:'
-forms.py:258:36: E711 comparison to None should be 'if cond is None:'
-forms.py:264:36: E711 comparison to None should be 'if cond is None:'
-forms.py:269:80: E501 line too long (104 &gt;  79 characters)
-forms.py:295:80: E501 line too long (89 &gt;  79 characters)
-forms.py:329:80: E501 line too long (86 &gt;  79 characters)
-forms.py:330:80: E501 line too long (86 &gt;  79 characters)
-forms.py:346:48: E711 comparison to None should be 'if cond is None:'
-forms.py:397:44: E711 comparison to None should be 'if cond is None:'
-forms.py:403:44: E711 comparison to None should be 'if cond is None:'
-forms.py:405:80: E501 line too long (109 &gt;  79 characters)
-forms.py:440:80: E501 line too long (103 &gt;  79 characters)
-forms.py:441:80: E501 line too long (88 &gt;  79 characters)
-forms.py:445:80: E501 line too long (86 &gt;  79 characters)
-forms.py:447:80: E501 line too long (104 &gt;  79 characters)
-forms.py:453:80: E501 line too long (117 &gt;  79 characters)
-forms.py:457:80: E501 line too long (103 &gt;  79 characters)
-forms.py:459:80: E501 line too long (86 &gt;  79 characters)
-forms.py:472:80: E501 line too long (89 &gt;  79 characters)
-forms.py:473:80: E501 line too long (87 &gt;  79 characters)
-forms.py:474:80: E501 line too long (89 &gt;  79 characters)
-forms.py:476:80: E501 line too long (87 &gt;  79 characters)
-forms.py:484:80: E501 line too long (93 &gt;  79 characters)
-</pre>

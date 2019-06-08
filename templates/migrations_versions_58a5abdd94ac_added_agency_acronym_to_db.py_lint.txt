@@ -1,1 +1,6 @@
-No problems to report
+migrations/versions/58a5abdd94ac_added_agency_acronym_to_db.py:13:1: E402 module level import not at top of file
+migrations/versions/58a5abdd94ac_added_agency_acronym_to_db.py:14:1: E402 module level import not at top of file
+migrations/versions/58a5abdd94ac_added_agency_acronym_to_db.py:18:5: E266 too many leading '#' for block comment
+migrations/versions/58a5abdd94ac_added_agency_acronym_to_db.py:20:5: E266 too many leading '#' for block comment
+migrations/versions/58a5abdd94ac_added_agency_acronym_to_db.py:24:5: E266 too many leading '#' for block comment
+migrations/versions/58a5abdd94ac_added_agency_acronym_to_db.py:26:5: E266 too many leading '#' for block comment

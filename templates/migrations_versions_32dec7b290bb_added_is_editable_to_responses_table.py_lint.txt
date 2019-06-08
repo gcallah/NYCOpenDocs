@@ -1,1 +1,6 @@
-No problems to report
+migrations/versions/32dec7b290bb_added_is_editable_to_responses_table.py:13:1: E402 module level import not at top of file
+migrations/versions/32dec7b290bb_added_is_editable_to_responses_table.py:14:1: E402 module level import not at top of file
+migrations/versions/32dec7b290bb_added_is_editable_to_responses_table.py:18:5: E266 too many leading '#' for block comment
+migrations/versions/32dec7b290bb_added_is_editable_to_responses_table.py:20:5: E266 too many leading '#' for block comment
+migrations/versions/32dec7b290bb_added_is_editable_to_responses_table.py:24:5: E266 too many leading '#' for block comment
+migrations/versions/32dec7b290bb_added_is_editable_to_responses_table.py:26:5: E266 too many leading '#' for block comment

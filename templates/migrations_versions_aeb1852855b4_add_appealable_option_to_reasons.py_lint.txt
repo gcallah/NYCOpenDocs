@@ -1,1 +1,7 @@
-No problems to report
+migrations/versions/aeb1852855b4_add_appealable_option_to_reasons.py:13:1: E402 module level import not at top of file
+migrations/versions/aeb1852855b4_add_appealable_option_to_reasons.py:14:1: E402 module level import not at top of file
+migrations/versions/aeb1852855b4_add_appealable_option_to_reasons.py:15:1: E402 module level import not at top of file
+migrations/versions/aeb1852855b4_add_appealable_option_to_reasons.py:16:1: E402 module level import not at top of file
+migrations/versions/aeb1852855b4_add_appealable_option_to_reasons.py:17:1: E402 module level import not at top of file
+migrations/versions/aeb1852855b4_add_appealable_option_to_reasons.py:32:1: E302 expected 2 blank lines, found 1
+migrations/versions/aeb1852855b4_add_appealable_option_to_reasons.py:41:1: E303 too many blank lines (3)

@@ -1,2 +1,3 @@
-app/response/utils.py:46:1: F401 'app.constants.TINYMCE_EDITABLE_P_TAG' imported but unused
-app/response/utils.py:1955:121: E501 line too long (121 > 120 characters)
+app/response/utils.py:47:1: F401 'app.constants.TINYMCE_EDITABLE_P_TAG' imported but unused
+app/response/utils.py:2061:121: E501 line too long (121 > 120 characters)
+app/response/utils.py:2258:121: E501 line too long (121 > 120 characters)

@@ -10,3 +10,32 @@ Upon showing the request responses, the previous button is disabled.
 <br>The form is validated upon clicking the next button. If valid, the data template is filled out with the fields for the note. If not, then an error messag is displayed. If the next button of the second modal is clicked on, a save is triggered, values are stored inside the data template. A confirmation header and email summary are rendered. Upon clicking the submit button, the form is transformed into an array and is stored inside the data template. The page is reloaded.
 <br>Required fields are given the data-parsley-required field; fields are also given character limits. Character counters are displayed.
 <br>The setDeleteResponseWorkflow function handles deleting a response and disables the delete button upon deletion; it sends to the backend that the response is deleted (making deleted = true), and then reloads the page.
+
+<h3>
+Code Issues
+</h3>
+
+<ul class="review">
+  <li>
+  The <code>switch</code> conditions run on lines 173-628. Recommend separating the code inside the cases into different functions. 
+  </li>
+
+  <li>
+  There are some snippets of code that sets attributes of an element several times. An example is shown below.
+  <pre>
+  <code>
+    first.find('.note-content').attr("data-parsley-required", "");
+
+    // Apply parsley max length validation to note content
+    first.find('.note-content').attr("data-parsley-maxlength", "5000");
+
+    // Apply custom validation messages
+    first.find('.note-content').attr("data-parsley-required-message",
+        "Note content must be provided");
+    first.find('.note-content').attr("data-parsley-maxlength-message",
+        "Note content must be less than 5000 characters");
+  </code>
+  </pre>
+  Recommend creating a function that takes in a query selector and an object containing the mappings of the attributes to values. 
+  </li>
+</ul>

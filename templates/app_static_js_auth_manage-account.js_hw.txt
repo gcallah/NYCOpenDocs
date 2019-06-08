@@ -1,3 +1,29 @@
 On the manage account page, the function in this JS file creates restrictions on the input values and validates the keys using parsley. Users are restricted from entering non-numerical values into phone and fax fields. Character counts are added to fields.
 
 <br><br>data-parsley-required attributes are added to fields that are required, which are later validated. If required fields are missing values, the html is altered to include strong tags around the required fields.
+
+<h3>
+Code Issues
+</h3>
+
+<ul class="review">
+  <li>
+  The <code>if</code> statement below contains a mix of <code>&&</code> and <code>||</code>. Recommend
+  creating a function that returns a boolean for the mailing address validation to simplify the if statement.
+  <pre>
+  <code>
+        if (email.parsley().isValid() ||
+            phone.parsley().isValid() ||
+            fax.parsley().isValid() ||
+            (
+                // mailing address
+                address1.parsley().isValid() &&
+                state.parsley().isValid() &&
+                zip.parsley().isValid() &&
+                city.parsley().isValid()
+            )
+        ) {
+  </code>
+  </pre>
+  </li>
+</ul>

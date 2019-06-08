@@ -1,1 +1,20 @@
 Depending on the size of the window, the JavaScript function adds or removes the attribute "tabs-left" to the action button column, as seen in view_request.html.
+
+<h3>
+Code Issues
+</h3>
+
+<ul class="review">
+  <li>
+  Needs a comment specifying why is 768 specifically used for <code>if (width >= 768)</code> on line 5.
+  </li>
+  <li>
+  If the value 768 may change in the future, recommend putting 768 in a variable with a meaningful variable name of what
+  the value represents to make the code easier to understand and modify.
+  </li>
+  <li>
+  Why is the <code>resize</code> function called twice? <code>resize</code> is first called with a 
+  function as a parameter on line 3, and then <code>resize is called again with no parameter</code> on line 11.
+  Needs a comment explaining the reason behind calling <code>resize</code> twice.
+  </li>
+</ul>

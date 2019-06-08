@@ -1225,6 +1225,21 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_acknowledgment.css.html">
+                            add_acknowledgment.css
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_closing.css.html">
+                            add_closing.css
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_denial.css.html">
+                            add_denial.css
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_static_styles_add_extension.css.html">
                             add_extension.css
                         </a>
@@ -1619,6 +1634,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_footer.html.html">
+                            email_footer.html
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_not_onboarded.html.html">
                             email_not_onboarded.html
                         </a>
@@ -1626,11 +1646,6 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_private_file_upload.html.html">
                             email_private_file_upload.html
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_request_info.html.html">
-                            email_request_info.html
                         </a>
                     </li>
                     <li>
@@ -3262,7 +3277,203 @@ Please refer to the documentation provided here for X-editable Bootstrap: <a hre
 
                     <p>
 <!-- Include the documentation here! -->
-<p>We attempted to read from templates/app_static_styles_plugins_bootstrap-editable.css_ex.txt but failed.</p>
+
+/*! X-editable - v1.5.1 
+<br>.editableform {
+<br>&emsp;    margin-bottom: 0; /* overwrites bootstrap margin */
+<br>}
+<br><br>.editableform .control-group {
+<br>&emsp;    margin-bottom: 0; /* overwrites bootstrap margin */
+<br>&emsp;    white-space: nowrap; /* prevent wrapping buttons on new line */
+<br>&emsp;    line-height: 20px; /* overwriting bootstrap line-height. See #133 */
+<br>}
+<br><br>/* 
+<br>.editableform .form-control {
+<br>}
+<br><br>.editable-buttons {
+<br>   display: inline-block; /* should be inline to take effect of parent's white-space: nowrap */
+<br>   /* inline-block emulation for IE7*/
+<br>}
+<br><br>.editable-buttons.editable-buttons-bottom {
+<br>}
+<br><br>.editable-input {
+<br>&emsp;    display: inline-block; /* should be inline to take effect of parent's white-space: nowrap */
+<br>&emsp;    width: auto; /* bootstrap-responsive has width: 100% that breakes layout */
+<br>&emsp;    white-space: normal; /* reset white-space decalred in parent*/
+<br>   /* display-inline emulation for IE7*/
+<br>}
+<br><br>.editable-buttons .editable-cancel {
+<br>}
+<br><br>/*for jquery-ui buttons need set height to look more pretty*/
+<br>.editable-buttons button.ui-button-icon-only {
+<br>}
+<br><br>.editableform-loading {
+<br>}
+<br><br>.editable-inline .editableform-loading {
+<br>}
+<br><br> .editable-error-block {
+<br>}
+<br><br>/*add padding for jquery ui*/
+<br>.editable-error-block.ui-state-error {
+<br>}  
+<br><br>.editable-error {
+<br>}
+<br><br>/* ---- For specific types ---- */
+<br>.editableform .editable-date {
+<br>}
+<br><br>/* move datepicker icon to center of add-on button. See https://github.com/vitalets/x-editable/issues/183 */
+<br>.editable-inline .add-on .icon-th {
+<br>}
+<br><br>/* checklist vertical alignment */
+<br>.editable-checklist label span {
+<br>}
+<br><br>.editable-checklist label {
+<br>}
+<br><br>/* set exact width of textarea to fit buttons toolbar */
+<br>.editable-wysihtml5 {
+<br>}
+<br><br>/* clear button shown as link in date inputs */
+<br>.editable-clear {
+<br>}
+<br><br>/* IOS-style clear button for text inputs */
+<br>.editable-clear-x {
+<br>}
+<br><br>.editable-clear-x:hover {
+<br>}
+<br><br>.editable-pre-wrapped {
+<br>}
+<br><br>.editable-container.editable-popup {
+<br>&emsp;    max-width: none !important; /* without this rule poshytip/tooltip does not stretch */
+<br>}  
+<br><br>.editable-container.popover {
+<br>&emsp;    width: auto; /* without this rule popover does not stretch */
+<br>}
+<br><br>.editable-container.editable-inline {
+<br>&emsp;    /* inline-block emulation for IE7*/
+<br>}
+<br><br>.editable-container.ui-widget {
+<br>   font-size: inherit;  /* jqueryui widget font 1.1em too big, overwrite it */
+<br>   z-index: 9990; /* should be less than select2 dropdown z-index to close dropdown first when click */
+<br>}
+<br><br>a.editable-click:hover {
+<br>}
+<br><br>a.editable-click.editable-disabled:hover {
+<br>}
+<br><br>.editable-empty, .editable-empty:hover, .editable-empty:focus{
+<br>  /* border-bottom: none; */
+<br>}
+<br><br>.editable-unsaved {
+<br>}
+<br><br>.editable-unsaved:after {
+<br>/*    content: '*'*/
+<br>}
+<br><br>.editable-bg-transition {
+<br>}
+<br><br>/*see https://github.com/vitalets/x-editable/issues/139 */
+<br>{ 
+<br>}
+<br><br>/*!
+<br>.datepicker {
+<br>  /*.dow {
+<br>	}*/
+<br><br>}
+<br><br>.datepicker-inline {
+<br>}
+<br><br>.datepicker.datepicker-rtl {
+<br>}
+<br><br>.datepicker.datepicker-rtl table tr td span {
+<br>}
+<br><br>.datepicker-dropdown {
+<br>}
+<br><br>.datepicker-dropdown:before {
+<br>}
+<br><br>.datepicker-dropdown:after {
+<br>}
+<br><br>.datepicker > div {
+<br>}
+<br><br>.datepicker.days div.datepicker-days {
+<br>}
+<br><br>.datepicker.months div.datepicker-months {
+<br>}
+<br><br>.datepicker.years div.datepicker-years {
+<br>}
+<br><br>.datepicker table {
+<br>}
+<br><br>.datepicker th {
+<br>}
+<br><br>.table-striped .datepicker table tr th {
+<br>}
+<br><br>.datepicker table tr td.day:hover {
+<br>}
+<br><br>.datepicker table tr td.new {
+<br>}
+<br><br>.datepicker table tr td.disabled:hover {
+<br>}
+<br><br>.datepicker table tr td.today.disabled:hover {
+<br>}
+<br><br>.datepicker table tr td.today.disabled:hover[disabled] {
+<br>}
+<br><br>.datepicker table tr td.today.disabled:hover.active {
+<br>}
+<br><br>.datepicker table tr td.today:hover:hover {
+<br>}
+<br><br>.datepicker table tr td.today.active:hover {
+<br>}
+<br><br>.datepicker table tr td.range.disabled:hover {
+<br>}
+<br><br>.datepicker table tr td.range.today.disabled:hover {
+<br>}
+<br><br>.datepicker table tr td.range.today.disabled:hover[disabled] {
+<br>}
+<br><br>.datepicker table tr td.range.today.disabled:hover.active {
+<br>}
+<br><br>.datepicker table tr td.selected.disabled:hover {
+<br>}
+<br><br>.datepicker table tr td.selected.disabled:hover[disabled] {
+<br>}
+<br><br>.datepicker table tr td.selected.disabled:hover.active {
+<br>}
+<br><br>.datepicker table tr td.active.disabled:hover {
+<br>}
+<br><br>.datepicker table tr td.active.disabled:hover[disabled] {
+<br>}
+<br><br>.datepicker table tr td.active.disabled:hover.active {
+<br>}
+<br><br>.datepicker table tr td span {
+<br>}
+<br><br>.datepicker table tr td span:hover {
+<br>}
+<br><br>.datepicker table tr td span.disabled:hover {
+<br>}
+<br><br>.datepicker table tr td span.active.disabled:hover {
+<br>}
+<br><br>.datepicker table tr td span.active.disabled:hover[disabled] {
+<br>}
+<br><br>.datepicker table tr td span.active.disabled:hover.active {
+<br>}
+<br><br>.datepicker table tr td span.new {
+<br>}
+<br><br>.datepicker th.datepicker-switch {
+<br>}
+<br><br>.datepicker tfoot tr th {
+<br>}
+<br><br>.datepicker tfoot tr th:hover {
+<br>}
+<br><br>.datepicker .cw {
+<br>}
+<br><br>.datepicker thead tr:first-child th.cw {
+<br>}
+<br><br>.input-prepend.date .add-on i {
+<br>}
+<br><br>.input-daterange input {
+<br>}
+<br><br>.input-daterange input:first-child {
+<br>}
+<br><br>.input-daterange input:last-child {
+<br>}
+<br><br>.input-daterange .add-on {
+<br>}
+<br><br>
                    </p>
                 </details>
 

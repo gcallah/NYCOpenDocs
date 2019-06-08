@@ -1225,6 +1225,21 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_acknowledgment.css.html">
+                            add_acknowledgment.css
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_closing.css.html">
+                            add_closing.css
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_denial.css.html">
+                            add_denial.css
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_static_styles_add_extension.css.html">
                             add_extension.css
                         </a>
@@ -1619,6 +1634,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_footer.html.html">
+                            email_footer.html
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_not_onboarded.html.html">
                             email_not_onboarded.html
                         </a>
@@ -1626,11 +1646,6 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_private_file_upload.html.html">
                             email_private_file_upload.html
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_request_info.html.html">
-                            email_request_info.html
                         </a>
                     </li>
                     <li>
@@ -3266,7 +3281,8 @@ No problems to report
 
                     <p>
 <!-- Include the documentation here! -->
-<p>We attempted to read from templates/app_upload_views.py_ex.txt but failed.</p>
+
+</br>...module:: upload.views.</br></br>:synopsis: Handles Upload endpoints for NYC OpenRecords</br><hr><code>post(request_id):</code><br/></br>Create a new upload.</br></br>Handles chunked files through the Content-Range header.</br>For filesize validation and more upload logic, see:</br>/static/js/upload/fileupload.js</br></br>Optional request body parameters:</br>- update (bool)</br>save the uploaded file to the 'updated' directory</br>(this indicates the file is meant to replace</br>a previously uploaded file)</br>- response_id (int)</br>the id of a response associated with the file</br>this upload is replacing</br>- REQUIRED if 'update' is 'true</br>- ignored if 'update' is 'false</br></br>:returns: {</br>name": file name,</br>size": file size</br>}</br><hr><code>delete(r_id_type, r_id, filecode):</code><br/></br>Removes an uploaded file.</br></br>:param r_id_type: "response" or "request</br>:param r_id: the Response or Request identifier</br>:param filecode: the encoded name of the uploaded file</br>(base64 without padding)</br></br>Optional request body parameters:</br>- quarantined_only (bool)</br>only delete the file if it is quarantined</br>(beware: takes precedence over 'updated_only')</br>- updated_only (bool)</br>only delete the file if it is in the 'updated' directory</br></br>:returns:</br>On success:</br>{ "deleted": filename }</br>On failure:</br>{ "error": error message }</br><hr><code>status():</code><br/></br>Check the status of an upload.</br></br>Request Parameters:</br>- request_id</br>- filename</br>- for_update (bool, optional)</br></br>:returns: {</br>status": upload status</br>}</br>
                    </p>
                 </details>
 

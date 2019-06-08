@@ -1225,6 +1225,21 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_acknowledgment.css.html">
+                            add_acknowledgment.css
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_closing.css.html">
+                            add_closing.css
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_denial.css.html">
+                            add_denial.css
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_static_styles_add_extension.css.html">
                             add_extension.css
                         </a>
@@ -1619,6 +1634,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_footer.html.html">
+                            email_footer.html
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_not_onboarded.html.html">
                             email_not_onboarded.html
                         </a>
@@ -1626,11 +1646,6 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_private_file_upload.html.html">
                             email_private_file_upload.html
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_request_info.html.html">
-                            email_request_info.html
                         </a>
                     </li>
                     <li>
@@ -3298,7 +3313,8 @@ No problems to report
 
                     <p>
 <!-- Include the documentation here! -->
-<p>We attempted to read from templates/app_lib_date_utils.py_ex.txt but failed.</p>
+
+<hr><code>get_following_date(date_created):</code><br/></br>Generates the date submitted for a request.</br></br>:param date_created: date (local) the request was made</br>:return: date submitted (local) which is the date_created rounded off to the next business day</br><hr><code>get_next_business_day():</code><br/></br>Generates the next business day based on the current date</br>:return: datetime object with the next business day set to 13:00 PM UTC (09:00 AM EST)</br><hr><code>get_due_date(date_submitted, days_until_due, tz_name):</code><br/></br>Generates the due date for a request.</br></br>:param date_submitted: date submitted (local) which is the date_created rounded off to the next business day</br>:param days_until_due: number of business days until a request is due</br>:param tz_name: time zone name (e.g. "America/New_York")</br></br>:return: due date (utc) with time set to 22:00 PM (5:00 PM EST)</br><hr><code>process_due_date(due_date):</code><br/></br>Returns the given datetime object with a utc time equivalent to 5:00 PM local time (app).</br></br>:param due_date: unprocessed request due date (local)</br>:return: naive datetime object</br><hr><code>local_to_utc(date, tz_name):</code><br/><hr><code>utc_to_local(date, tz_name):</code><br/><hr><code>get_timezone_offset(date, tz_name):</code><br/><hr><code>get_holidays_date_list(year_start, year_end=None):</code><br/></br>Generate a list of holiday dates in the range of specified years (including year_end)</br></br>:param year_start: 4 digit year e.g. 2016</br>:param year_end: 4 digit year e.g. 2022</br></br>:return: List of dates formatted as strings ['MM/DD/YYYY']</br><hr><code>get_release_date(initial_date, days_until_release, tz_name):</code><br/><hr><code>is_business_day(date):</code><br/></br>Determine if the provided date is a business day.</br>Args:</br>date: local date.</br></br>Returns:</br>bool: True if date is a business day.</br></br>
                    </p>
                 </details>
 

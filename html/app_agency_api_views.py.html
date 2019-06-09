@@ -3239,29 +3239,6 @@
 
                     <p>
 <!-- Include the code review here! -->
-The route definitions are in views.py. The routes defined here are custom api
-blueprints routes.
-<br> Example:
-<br>
-@login_required
-@agency_api_blueprint.route('/active_users/<string:agency_ein>', methods=['GET'])
-<br>
-A function is defined to retrieve the active users for the specified agency.
-<br>
-<br>
-Other routes are defined to:
-<br>
-Retrieve an agencies determination reasons for Denials, Closings and
-Re-Openings;
-<br>
-Retrieve letter templates for the specified agency.
-If letter type is provided, only those templates will be
-provided, otherwise all templates will be returned;
-<br>
-Retrieve the custom request forms for the specified agency;
-<br>
-Get the custom request form field definitions based on form id and agency ein
-in the form of JSON object containing the form field definitions.
                     </p>
                 </details>
 
@@ -3285,8 +3262,6 @@ No problems to report
 
                     <p>
 <!-- Include the extracted documentation here! -->
-
-<hr><code>get_active_users(agency_ein):</code><br/></br>Retrieve the active users for the specified agency.</br></br>:param agency_ein: Agency EIN (String)</br></br>:return: JSON Object({"active_users": [('', 'All'), ('o8pj0k', 'John Doe')],</br>is_admin": True}), 200</br><hr><code>get_agency_reasons(agency_ein, reason_type=None):</code><br/>Retrieve an agencies determination reasons for Denials, Closings, and Re-Openings</br></br>Args:</br>agency_ein (str): Agency EIN</br>reason_type (str): One of ("denial", "closing", "re-opening")</br>All other determination types do not have reasons.</br></br>Returns:</br>JSON Object (dict): Keys are the reason type, values are an array of tuples (id, title)</br></br><hr><code>get_agency_letter_templates(agency_ein, letter_type=None):</code><br/></br>Retrieve letter templates for the specified agency. If letter type is provided, only those templates will be</br>provided, otherwise all templates will be returned.</br></br>:param agency_ein: Agency EIN (String)</br>:param letter_type: One of "acknowledgment", "denial", "closing", "letter", "extension", "re-opening".</br></br>:return: JSON Object (keys are template types, values are arrays of tuples (id, name))</br><hr><code>get_custom_request_form_options(agency_ein):</code><br/></br>Retrieve the custom request forms for the specified agency.</br></br>:param agency_ein: Agency EIN (String)</br>:return: JSON Object (keys are the id of the custom request form, values are the names of the forms)</br><hr><code>get_custom_request_form_fields():</code><br/></br>Get the custom request form field definitions based on form id and agency ein</br>:return: JSON object containing the form field definitions</br>
                    </p>
                 </details>
 

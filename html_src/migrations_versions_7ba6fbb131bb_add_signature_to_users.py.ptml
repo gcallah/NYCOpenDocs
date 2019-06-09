@@ -29,7 +29,6 @@
 
                     <p>
 <!-- Include the code review here! -->
-<!--include templates/migrations_versions_7ba6fbb131bb_add_signature_to_users.py_hw.txt -->
                     </p>
                 </details>
 
@@ -53,7 +52,6 @@
 
                     <p>
 <!-- Include the extracted documentation here! -->
-<!--include templates/migrations_versions_7ba6fbb131bb_add_signature_to_users.py_ex.txt -->
                    </p>
                 </details>
 

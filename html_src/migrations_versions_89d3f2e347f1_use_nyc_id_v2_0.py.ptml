@@ -29,7 +29,6 @@
 
                     <p>
 <!-- Include the code review here! -->
-<!--include templates/migrations_versions_89d3f2e347f1_use_nyc_id_v2_0.py_hw.txt -->
                     </p>
                 </details>
 
@@ -53,7 +52,6 @@
 
                     <p>
 <!-- Include the extracted documentation here! -->
-<!--include templates/migrations_versions_89d3f2e347f1_use_nyc_id_v2_0.py_ex.txt -->
                    </p>
                 </details>
 

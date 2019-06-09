@@ -29,7 +29,6 @@
 
                     <p>
 <!-- Include the code review here! -->
-<!--include templates/migrations_versions_a3d80d04b0f1_add_date_closed_to_requests_table.py_hw.txt -->
                     </p>
                 </details>
 
@@ -53,7 +52,6 @@
 
                     <p>
 <!-- Include the extracted documentation here! -->
-<!--include templates/migrations_versions_a3d80d04b0f1_add_date_closed_to_requests_table.py_ex.txt -->
                    </p>
                 </details>
 

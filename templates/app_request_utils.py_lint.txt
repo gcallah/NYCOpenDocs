@@ -1,4 +1,1 @@
-app/request/utils.py:41:1: F401 'app.lib.date_utils.is_business_day' imported but unused
-app/request/utils.py:41:1: F401 'app.lib.date_utils.get_following_date' imported but unused
-app/request/utils.py:387:121: E501 line too long (135 > 120 characters)
-app/request/utils.py:579:66: F812 list comprehension redefines 'email' from line 538
+No problems to report

@@ -29,7 +29,6 @@
 
                     <p>
 <!-- Include the code review here! -->
-<!--include templates/build_scripts_db_setup_backup.py_hw.txt -->
                     </p>
                 </details>
 
@@ -53,7 +52,6 @@
 
                     <p>
 <!-- Include the extracted documentation here! -->
-<!--include templates/build_scripts_db_setup_backup.py_ex.txt -->
                    </p>
                 </details>
 

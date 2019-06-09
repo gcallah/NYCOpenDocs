@@ -29,7 +29,6 @@
 
                     <p>
 <!-- Include the code review here! -->
-<!--include templates/migrations_versions_22b97712d5db_add_letters_and_envelopes_to_type_enum.py_hw.txt -->
                     </p>
                 </details>
 
@@ -53,7 +52,6 @@
 
                     <p>
 <!-- Include the extracted documentation here! -->
-<!--include templates/migrations_versions_22b97712d5db_add_letters_and_envelopes_to_type_enum.py_ex.txt -->
                    </p>
                 </details>
 

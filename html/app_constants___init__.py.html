@@ -3239,62 +3239,6 @@
 
                     <p>
 <!-- Include the code review here! -->
-Constants are set in advance so that if some variable value which is being
-used at various locations has to be changed, it can be changed at just
-one place.
-<br>It is better to define them at one place to avoid problems during such
-incidents of value change.
-<br>
-This file contains constants for acknowledgments, categories, states,
-default expirations, email templates, OpenRecords email, and confirmation headers.
-<br>
-This file imports values from response_type, determination_type and event_type.
-<br>Email templates have constants for the types of events, for request
-responses, and the creation of determination letters.
-
-<h3>
-Code Issues
-</h3>
-
-	<ul class="review">
-		<li>
-    The good thing about constants files is that whenever there is a need to
-    change a constant value which is being used in many files, it can be just
-    changed at one place and it gets reflected everywhere.
-    Most of the constants are self explanatory as defined by the file names
-    itself.
-    <br>
-    Example:<br>
-    <code>communication_methods.py</code> has constants EMAIL and
-    LETTER defined as means of communication.
-    <br>
-    But, it is always better to have an overview of what kind of constants
-    are defined in a particular file specifically when there are more than
-    10 files defined just for constants.
-    It becomes easier to navigate through the files and find the
-    constant needed.
-    </li>
-
-    <li>
-    There are a lot of docstrings missing even though there are
-    ”triple double quotes” in files like <code>bulk_updates.py</code> and
-    <code>user_attrs.py</code> .
-    <br>
-    It would be better if there is a summary in the docstrings because
-    these files have various classes defined without any explanation.
-    Also, these classes have pretty much similar functioning.
-    <br>
-    Example:<br>
-    In file <code>bulk_updates.py</code> the 3 classes are
-    <code>class UserRequestsDict()</code>,
-    <code>class UserRequestsEventDict()</code> and
-    <code>class EventsDict()</code>.
-    <br>
-    The classes are very similar with few differences in the parameters.
-
-		</li>
-
-  </ul>
                     </p>
                 </details>
 
@@ -3318,7 +3262,6 @@ No problems to report
 
                     <p>
 <!-- Include the extracted documentation here! -->
-
                    </p>
                 </details>
 

@@ -3239,27 +3239,6 @@
 
                     <p>
 <!-- Include the code review here! -->
-It handles the search utilities to:
-<br>
-<br>
-Recreate elasticsearch indices and request docs,
-<br>
-Return whether the elasticsearch index exists or not,
-<br>
-Delete all elasticsearch indices, ignoring errors,
-<br>
-Delete all elasticsearch request docs,
-<br>
-Create elasticsearch index with mappings for request docs,
-<br>
-Create elasticsearch request docs for every request db record,
-<br>
-To search requests matching the request parameters of the '/search/requests'
-endpoints,
-<br>
-To convert dates in a specified time format,
-<br>
-Remove highlights for private and non-requester fields.
                     </p>
                 </details>
 
@@ -3283,8 +3262,6 @@ No problems to report
 
                     <p>
 <!-- Include the extracted documentation here! -->
-
-<hr><code>recreate():</code><br/></br>Recreate elasticsearch indices and request docs.</br><hr><code>index_exists():</code><br/></br>Return whether the elasticsearch index exists or not.</br><hr><code>delete_index():</code><br/></br>Delete all elasticsearch indices, ignoring errors.</br><hr><code>delete_docs():</code><br/></br>Delete all elasticsearch request docs.</br><hr><code>create_index():</code><br/></br>Create elasticsearch index with mappings for request docs.</br><hr><code>create_docs():</code><br/></br>Create elasticsearch request docs for every request db record.</br><hr><code>search_requests(query,</code><br/></br>The arguments of this function match the request parameters</br>of the '/search/requests' endpoints.</br></br>All date related params expect strings in the format "mm/dd/yyyy</br>All sort related params expect "desc" or "asc"; other strings ignored</br></br>:param query: string to query for</br>:param foil_id: search by request id?</br>:param title: search by title?</br>:param agency_request_summary: search by agency request summary?</br>:param description: search by description?</br>:param requester_name: search by requester name?</br>:param date_rec_from: date created/submitted from</br>:param date_rec_to: date created/submitted to</br>:param date_due_from: date due from</br>:param date_due_to: date due to</br>:param date_closed_from: date closed from</br>:param date_closed_to: date closed to</br>:param agency_ein: agency ein to filter by</br>:param agency_user_guid: user (agency) guid to filter by</br>:param open_: filter by opened requests?</br>:param closed: filter by closed requests?</br>:param in_progress: filter by in-progress requests?</br>:param due_soon: filter by due-soon requests?</br>:param overdue: filter by overdue requests?</br>:param size: number of requests per page</br>:param start: starting index of request result set</br>:param sort_date_received: date created/submitted sort direction</br>:param sort_date_due: date due sort direction</br>:param sort_title: title sort direction</br>:param tz_name: timezone name (e.g. "America/New_York")</br>:param by_phrase: use phrase matching instead of full-text?</br>:param highlight: return highlights?</br>if True, will come at a slight performance cost (in order to</br>restrict highlights to public fields, iterating over elasticsearch</br>query results is required)</br>:param for_csv: search for a csv export</br>if True, will not check the maximum value of size against MAX_RESULT_SIZE</br>:return: elasticsearch json response with result information</br></br><hr><code>datestr_local_to_utc(datestr):</code><br/><hr><code>RequestsDSLGenerator(object):</code><br/> Class for generating dicts representing query dsl bodies for searching request docs. </br><hr><code>__init__(self, query, query_fields, statuses, date_ranges, agency_ein, agency_user_guid, match_type):</code><br/><hr><code>foil_id(self):</code><br/><hr><code>agency_user(self):</code><br/><hr><code>anonymous_user(self):</code><br/><hr><code>public_user(self):</code><br/><hr><code>queryless(self):</code><br/><hr><code>__must_query(self):</code><br/><hr><code>__must(self):</code><br/><hr><code>__should(self):</code><br/><hr><code>__get_filters(self):</code><br/><hr><code>convert_dates(results, dt_format=None, tz_name=None):</code><br/></br>Replace datetime values of requests search results with a</br>datetime object or a datetime string in the specified format.</br>Dates can also be offset according to the given time zone name.</br></br>:results: elasticsearch json results</br>:dt_format: datetime string format</br>:tz_name: time zone name</br><hr><code>_process_highlights(results, requester_id=None):</code><br/></br>Remove highlights for private and non-requester fields.</br>Used for non-agency users.</br></br>Why this is necessary:</br>https://github.com/elastic/elasticsearch/issues/6787</br></br>:param results: elasticsearch json search results</br>:param requester_id: id of requester as it is exists in results</br>
                    </p>
                 </details>
 

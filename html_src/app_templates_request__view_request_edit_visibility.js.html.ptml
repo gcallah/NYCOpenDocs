@@ -29,7 +29,6 @@
 
                     <p>
 <!-- Include the code review here! -->
-<!--include templates/app_templates_request__view_request_edit_visibility.js.html_hw.txt -->
                     </p>
                 </details>
 
@@ -52,7 +51,6 @@
 
                     <p>
 <!-- Include the extracted documentation here! -->
-<!--include templates/app_templates_request__view_request_edit_visibility.js.html_ex.txt -->
                    </p>
                 </details>
 

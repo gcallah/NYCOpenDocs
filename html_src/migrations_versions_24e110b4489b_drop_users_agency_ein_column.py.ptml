@@ -29,7 +29,6 @@
 
                     <p>
 <!-- Include the code review here! -->
-<!--include templates/migrations_versions_24e110b4489b_drop_users_agency_ein_column.py_hw.txt -->
                     </p>
                 </details>
 
@@ -53,7 +52,6 @@
 
                     <p>
 <!-- Include the extracted documentation here! -->
-<!--include templates/migrations_versions_24e110b4489b_drop_users_agency_ein_column.py_ex.txt -->
                    </p>
                 </details>
 

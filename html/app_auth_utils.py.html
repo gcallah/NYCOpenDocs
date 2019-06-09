@@ -3239,54 +3239,6 @@
 
                     <p>
 <!-- Include the code review here! -->
-This file defines authentication utilities for NYC OpenRecords.
-
-<br>It also defines a functions for following purposes:
-<br>
-<br>
-Given a GUID return the associated User object,
-<br>
-Update OpenRecords-specific user attributes,
-<br>
-Determine if a URL is safe to redirect the user to,
-<br>
-Find a user by email address stored in the database,
-<br>
-Create or Update an OpenRecords User based on the data received from the SAML
-Assertion,
-<br>
-Update a users data with the updated values,
-<br>
-Create and store event object for given response,
-<br>
-Initialize a SAML SP from a dictionary representation of a Flask request,
-<br>
-Convert a Flask request object to a dictionary for use with OneLogin SAML,
-<br>
-Calls the login function in the OneLogin python3-saml library to generate an
-Assertion Request to the IdP,
-<br>
-Process a SAML LogoutResponse from the IdP,
-<br>
-Generate a SAML LogoutRequest for the user,
-<br>
-Process a SAML Assertion for the user,
-<br>
-Validate email,
-<br>
-Validate whether the user is a NYC Employee,
-<br>
-Log an error message if the specified response's status code is not 200,
-<br>
-Perform a request on an NYC.ID Web Services endpoint,
-<br>
-Generate a string that can be signed to produce an authentication signature,
-<br>
-Generate an NYC.ID Web Services authentication signature using HMAC-SHA1,
-<br>
-Authenticate the provided user with an LDAP Server,
-<br>
-Connect to an LDAP server.
                     </p>
                 </details>
 
@@ -3310,8 +3262,6 @@ No problems to report
 
                     <p>
 <!-- Include the extracted documentation here! -->
-
-</br>.. module:: auth.views.</br></br>:synopsis: Authentication utilities for NYC OpenRecords</br></br><hr><code>user_loader(guid: str) -> Users:</code><br/>Given a GUID return the associated User object.</br></br>Args:</br>guid (str): User ID (GUID) of the user to retrieve from the database.</br></br>Returns:</br>Users: User object from the database or None.</br><hr><code>update_openrecords_user(form):</code><br/></br>Update OpenRecords-specific user attributes.</br></br>Args:</br>form (app.auth.forms.ManageAgencyUserAccountForm OR app.auth.forms.ManageUserAccountForm): validated form</br><hr><code>is_safe_url(target):</code><br/>Determine if a URL is safe to redirect the user to.</br></br>Source: http://flask.pocoo.org/snippets/62/</br></br>Args:</br>target (str): URL to redirect the user to.</br></br>Returns:</br>bool: True if the URL is safe.</br></br><hr><code>find_user_by_email(email):</code><br/>Find a user by email address stored in the database.</br></br>If LDAP login is being used, non-agency users and users without an LDAP auth type are ignored.</br>If OAuth or SAML login is being used, anonymous users are ignored.</br></br>Args:</br>email (str): Email address to search by.</br></br>Returns:</br>Users: User object or None if no user found.</br></br><hr><code>_process_user_data(guid,</code><br/></br>Create or Update an OpenRecords User based on the data received from the SAML Assertion.</br></br>If no first_name is provided, the mailbox portion of the email will be used</br>e.g. jdoe@records.nyc.gov -> first_name: jdoe</br></br>If a user cannot be found using the specified guid and user_type, a second attempt is made with the specified email.</br></br>NOTE: A user's agency is not determined here. After login, a user's agency supervisor must email us requesting that</br>user be added to the agency.</br>TODO (@joelbcastillo): Add endpoint to add user by email to the Agency on the Agency Administration Page</br></br>Args:</br>guid (str): The users unique identifier</br>email (str): The users email address</br>first_name (str): The users' first name. If None, then the mailbox part of the email address will be used</br>middle_initial (str): The users' middle initial. Can be None</br>last_name (str): The users' last name. Required.</br>email_validated (bool): Determines whether the users' email has been validated.</br>is_nyc_employee (bool): Determines</br>has_nyc_account,</br>active,</br>terms_of_use_accepted,</br>is_anonymous_requester</br></br>Returns:</br>Users: The user that was pulled from the database (and updated) or the new user)</br><hr><code>_update_user_data(</code><br/></br>Update a users data with the updated values.</br></br>Args:</br>user (Users): User to be updated.</br>guid (str): Updated GUID (Required)</br>email (str): Updated email address</br>first_name (str): Updated first name</br>middle_initial (str): Updated middle initial</br>last_name (str): Updated last name</br>email_validated (bool): Updated email validation status</br>is_nyc_employee (bool): Updated NYC Employee status</br>has_nyc_account (bool): Updated NYC Account Status</br>active (bool): Updated active status (is the user account active in the authentication provider)</br>terms_of_use_accepted (bool): Terms of Use Accepted Status</br>is_anonymous_requester (bool): Updated Anonymous Requester status</br></br><hr><code>create_auth_event(auth_event_type: str, user_guid: str, new_value: dict):</code><br/></br>Create and store event object for given response.</br></br>Args:</br>auth_event_type (str): one of app.constants.event_type</br>user_guid (Users): Users object performing the authentication event</br>new_value (dict): Value to be stored in events table</br></br><hr><code>init_saml_auth(onelogin_request):</code><br/>Initialize a SAML SP from a dictionary representation of a Flask request.</br></br>Args:</br>onelogin_request (dict): Dictionary representation of a Flask Request object.</br></br>Returns:</br>OneLogin_Saml2_Auth: SAML SP Instance.</br></br><hr><code>prepare_onelogin_request(flask_request):</code><br/>Convert a Flask request object to a dictionary for use with OneLogin SAML.</br></br>Args:</br>flask_request (Flask.Request): Flask Request object.</br></br>Returns:</br>dict: Dictionary of Flask Request fields for OneLogin</br></br><hr><code>saml_sso(saml_sp):</code><br/> Handle Single Sign-On for SAML.</br></br>Calls the login function in the OneLogin python3-saml library to generate an Assertion Request to the IdP.</br></br>Args:</br>saml_sp (OneLogin_Saml2_Auth): Saml SP Instance</br></br>Returns:</br>Response Object: Redirect the user to the IdP for SSO.</br></br><hr><code>saml_sls(saml_sp, user_guid):</code><br/>Process a SAML LogoutResponse from the IdP</br></br>Args:</br>saml_sp (OneLogin_Saml2_Auth): SAML SP Instance</br>user_guid (str): Unique identifier for user being logged out.</br></br>Returns:</br>Response Object: Redirect the user to the Home Page.</br></br><hr><code>saml_slo(saml_sp):</code><br/>Generate a SAML LogoutRequest for the user.</br></br>Args:</br>saml_sp (OneLogin_Saml2_Auth): SAML SP Instance</br></br>Returns:</br>Response Object: Redirect the user to the IdP for SLO.</br><hr><code>saml_acs(saml_sp, onelogin_request):</code><br/>Process a SAML Assertion for the user</br></br>Args:</br>saml_sp (OneLogin_Saml2_Auth): SAML SP Instance</br></br>Returns:</br>Response Object: Redirect the user to the appropriate page for the next step.</br>If the user needs to validate their email, they are redirected to the IdP</br>Otherwise, the user is redirected to a valid RelayState.</br>If RelayState is invalid, the user is redirected to the home page.</br></br><hr><code>_validate_email(email_validation_flag, guid, email_address):</code><br/></br>If the user did not log in via NYC.ID</br>(i.e. user_type is not 'EDIRSSO'),</br>no email validation is necessary.</br></br>A email is considered to have been validated if the</br>email validation flag is</br>- not provided</br>- 'TRUE</br>- 'true</br>- 'Unavailable</br>- True</br></br>If the email validation flag is not one of the above (i.e. FALSE),</br>the Email Validation Web Service is invoked.</br></br>If the returned validation status equals false,</br>return url to the 'Email Confirmation Required' page</br>where the user can request a validation email.</br></br>:return: redirect url or None</br><hr><code>get_nycid_user_data(guid):</code><br/></br>Validate whether the user is a NYC Employee.</br>If the returned validation status equals false,</br>return url to the 'Email Confirmation Required' page</br>where the user can request a validation email.</br></br>:return: redirect url or None</br><hr><code>_check_web_services_response(response, msg=''):</code><br/></br>Log an error message if the specified response's</br>status code is not 200.</br><hr><code>_web_services_request(endpoint, params, method='GET'):</code><br/></br>Perform a request on an NYC.ID Web Services endpoint.</br>userName' and 'signature' are added to the specified params.</br></br>:param endpoint: web services endpoint (e.g. "/account/validateEmail.htm")</br>:param params: request parameters excluding 'userName' and 'signature</br>:param method: HTTP method</br>:return: request response</br><hr><code>_generate_string_to_sign(method, path, params):</code><br/></br>Generate a string that can be signed to produce an</br>authentication signature.</br></br>:param method: HTTP method</br>:param path: path part of HTTP request URI</br>:param params: querystring parameters</br>:return: string to sign</br><hr><code>_generate_signature(password, string):</code><br/></br>Generate an NYC.ID Web Services authentication signature using HMAC-SHA1</br></br>https://nyc4d.nycnet/nycid/web-services.shtml#signature</br></br>:param password: NYC.ID Service Account password</br>:param string: string to sign</br>:return: the authentication signature or None on failure</br><hr><code>ldap_authentication(email, password):</code><br/></br>Authenticate the provided user with an LDAP Server.</br>:param email: Users username</br>:param password: Users password</br>:return: Boolean</br><hr><code>_ldap_server_connect():</code><br/></br>Connect to an LDAP server</br>:return: LDAP Context</br>
                    </p>
                 </details>
 

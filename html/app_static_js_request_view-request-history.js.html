@@ -3239,20 +3239,6 @@
 
                     <p>
 <!-- Include the code review here! -->
-Upon showing the request history, the previous button is disabled. 
-<br>showHistory() clears out the history html and renders the history list template
-<br>loadMore() retrieves the history log of requests and enables the next button to display more events.
-<br>When the previous button is clicked on, this indicates that the current set of requests being shown is not the starting set. The next button is then disabled. After clicking the previous button, if the starting set of history is loaded, the previous button is then disabled. Similarly, when then the next button is clicked on, if the last set of the request history is loaded, the next button is then disabled. 
-
-<h3>
-Code Issues
-</h3>
-
-<ul class="review">
-  <li>
-  Recommend adding a comment for <code>loadMore()</code> defining what the function does.
-  </li>
-</ul>
                     </p>
                 </details>
 
@@ -3280,17 +3266,6 @@ Code Issues
 
                     <p>
 <!-- Include the extracted documentation here! -->
-
-$(function() {
-<br>&emsp;&emsp;        success: function (data) {
-<br>&emsp;&emsp;        error: function(error) {
-<br>&emsp;    function showHistory() {
-<br>&emsp;    function loadMore() {
-<br>&emsp;&emsp;&emsp;            success: function(data) {
-<br>&emsp;&emsp;&emsp;            error: function(error) {
-<br>&emsp;    prevButton.click(function () {
-<br>&emsp;    nextButton.click(function () {
-<br>
                    </p>
                 </details>
 

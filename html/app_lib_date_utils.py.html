@@ -3239,42 +3239,6 @@
 
                     <p>
 <!-- Include the code review here! -->
-This file contains the utils functions pertaining to dates. <br>
-The functions creates the date submission for a request, returns the next business date, returns the due date, converts data to utc, returns timezone difference, and returns a list of holidays.
-<br>
-
-<br>
-Few functions explanation:
-<br>
-'get_following_date(date_created)'
-<br>
-This generates the date submitted for a request. It returns the date_created rounded off to the next business day.
-<br>
-<br>
-'get_next_business_day()'
-<br>
-This generates the next business day based on the current date. And it returns
-the datetime object with the next business day set to 13:00 PM UTC (09:00 AM EST).
-
-<br>
-<br>
-'get_due_date(date_submitted, days_until_due, tz_name)'
-<br>
-This generates the due date for a request.
-It returns the due date (utc) with time set to 22:00 PM (5:00 PM EST).
-
-<br>
-<br>
-'process_due_date(due_date)'
-<br>
-This returns the given datetime object with a utc time equivalent to 5:00 PM local time (app).
-
-<br>
-<br>
-'get_holidays_date_list(year_start, year_end=None)'
-<br>
-This generates a list of holiday dates in the range of specified years (including year_end).
-It returns a list of dates formatted as strings ['MM/DD/YYYY']
                     </p>
                 </details>
 
@@ -3298,8 +3262,6 @@ No problems to report
 
                     <p>
 <!-- Include the extracted documentation here! -->
-
-<hr><code>get_following_date(date_created):</code><br/></br>Generates the date submitted for a request.</br></br>:param date_created: date (local) the request was made</br>:return: date submitted (local) which is the date_created rounded off to the next business day</br><hr><code>get_next_business_day():</code><br/></br>Generates the next business day based on the current date</br>:return: datetime object with the next business day set to 13:00 PM UTC (09:00 AM EST)</br><hr><code>get_due_date(date_submitted, days_until_due, tz_name):</code><br/></br>Generates the due date for a request.</br></br>:param date_submitted: date submitted (local) which is the date_created rounded off to the next business day</br>:param days_until_due: number of business days until a request is due</br>:param tz_name: time zone name (e.g. "America/New_York")</br></br>:return: due date (utc) with time set to 22:00 PM (5:00 PM EST)</br><hr><code>process_due_date(due_date):</code><br/></br>Returns the given datetime object with a utc time equivalent to 5:00 PM local time (app).</br></br>:param due_date: unprocessed request due date (local)</br>:return: naive datetime object</br><hr><code>local_to_utc(date, tz_name):</code><br/><hr><code>utc_to_local(date, tz_name):</code><br/><hr><code>get_timezone_offset(date, tz_name):</code><br/><hr><code>get_holidays_date_list(year_start, year_end=None):</code><br/></br>Generate a list of holiday dates in the range of specified years (including year_end)</br></br>:param year_start: 4 digit year e.g. 2016</br>:param year_end: 4 digit year e.g. 2022</br></br>:return: List of dates formatted as strings ['MM/DD/YYYY']</br><hr><code>get_release_date(initial_date, days_until_release, tz_name):</code><br/><hr><code>is_business_day(date):</code><br/></br>Determine if the provided date is a business day.</br>Args:</br>date: local date.</br></br>Returns:</br>bool: True if date is a business day.</br></br>
                    </p>
                 </details>
 

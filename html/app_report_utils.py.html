@@ -3239,26 +3239,6 @@
 
                     <p>
 <!-- Include the code review here! -->
-This file has one function generate_acknowledgment_report() which is a Celery
-task that generates the acknowledgment report for the user's agency with the
-specified date range.
-
-
-<h3>
-Code Issues
-</h3>
-
-<ul class="review">
-  <li>
-  A general docstring is missing explaining the use of the file.<br>
-  The append function used in the <code>for</code> loop for
-  <code>data_from_dates.append()</code> and <code>all_data.append()</code> is
-  appending the same list of variables. The list is long and is adding more lines
-  to the code. It can be defined once and that variable can be called in both the
-  append functions. This will also help in reducing a chance of missing on any
-  variable in the list.
-  </li>
-</ul>
                     </p>
                 </details>
 
@@ -3282,8 +3262,6 @@ No problems to report
 
                     <p>
 <!-- Include the extracted documentation here! -->
-
-<hr><code>generate_acknowledgment_report(self, current_user_guid: str, date_from: datetime, date_to: datetime):</code><br/>Celery task that generates the acknowledgment report for the user's agency with the specified date range.</br></br>Args:</br>current_user_guid: GUID of the current user</br>date_from: Date to filter report from</br>date_to: Date to filter report to</br>
                    </p>
                 </details>
 

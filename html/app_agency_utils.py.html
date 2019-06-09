@@ -3239,16 +3239,6 @@
 
                     <p>
 <!-- Include the code review here! -->
-Few functions are defined as follows:
-<br>
-Function update_agency_active_status() updates the active status of an agency.
-<br>
-Function get_agency_feature() retrieves the specified agency feature for the
-specified agency in the form of a JSON object. It takes two params agency_ein
-and specified feature.
-<br>
-Function get_agency_features() retrieves the agency features JSON object for
-the specified agency by taking one parameter agency_ein.
                     </p>
                 </details>
 
@@ -3272,8 +3262,6 @@ No problems to report
 
                     <p>
 <!-- Include the extracted documentation here! -->
-
-<hr><code>update_agency_active_status(agency_ein, is_active):</code><br/></br>Update the active status of an agency.</br>:param agency_ein: String identifier for agency (4 characters)</br>:param is_active: Boolean value for agency active status (True = Active)</br>:return: Boolean value (True if successfully changed active status)</br><hr><code>get_agency_feature(agency_ein, feature):</code><br/></br>Retrieve the specified agency feature for the specified agency.</br></br>:param agency_ein:  String identifier for agency (4 characters)</br>:param feature: Feature specified. See app/lib/constants/agency_features.py for possible values (String)</br></br>:return: JSON Object</br><hr><code>get_agency_features(agency_ein):</code><br/></br>Retrieve the agency features JSON object for the specified agency.</br></br>:param agency_ein: String identifier for agency (4 characters)</br>:return: JSON Object</br>
                    </p>
                 </details>
 

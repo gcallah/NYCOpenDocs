@@ -3239,20 +3239,6 @@
 
                     <p>
 <!-- Include the code review here! -->
-The function in this JS file allows the user to handle certain actions on the admin page. The current user can view agencies, which then changes the URL. Upon clicking the activate or deactivate buttons, an agency can activate or deactivate an agency. 
-<br> The user can also check off another user to change the status, such as becoming a superuser in the agency or removing the user.
-
-<h3>
-Code Issues
-</h3>
-
-<ul class="review">
-  <li>
-  The click event listener function for activating and deactivating an agency looks very similar. Recommend creating a separate
-  click event function that takes in a data object. For example, after refactoring, the call to activate
-  an agency can look like <code>$("#activate").click(actOrDeact({is_active:true}))</code>.
-  </li>
-</ul>
                     </p>
                 </details>
 
@@ -3282,22 +3268,6 @@ Code Issues
 
                     <p>
 <!-- Include the extracted documentation here! -->
-
-$(function () {
-<br>&emsp;    $("#agencies").change(function () {
-<br>&emsp;    $("#activate").click(function () {
-<br>&emsp;&emsp;&emsp;            success: function () {
-<br>&emsp;    $("#deactivate").click(function () {
-<br>&emsp;&emsp;&emsp;            success: function () {
-<br>&emsp;    $("input[name^='user-super']").click(function () {
-<br>&emsp;    $("#add-button").click(function () {
-<br>&emsp;&emsp;&emsp;            success: function () {
-<br>&emsp;    $("input[name^='user-status']").click(function () {
-<br>&emsp;&emsp;&emsp;            success: function (data) {
-<br>&emsp;    $("#remove").click(function () {
-<br>&emsp;&emsp;        idsToRemove.each(function () {
-<br>&emsp;&emsp;&emsp;&emsp;                success: function () {
-<br>
                    </p>
                 </details>
 

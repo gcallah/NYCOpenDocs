@@ -3239,33 +3239,6 @@
 
                     <p>
 <!-- Include the code review here! -->
-This file contains utils functions for the database. The objects added to the database are instances of sqlalchemy.
-<br>The functions in the file pertain to adding an object to the database, updating an object, deleting an object, and getting an object.
-<br>However, upon adding an object, if the object is a Requests object, an elasticsearch doc is created and returned.
-<br><br>
-Few functions explanation:
-<br>
-'create_object(obj)'
-<br>It returns string representation of created object or None if creation failed.
-<br>
-<br>
-'update_object(data, obj_type, obj_id, es_update=True)'
-<br>
-It returns whether the record updated successfully or not.
-The parameters used are a dictionary of attribute-value pairs, sqlalchemy model,
- id of record and an update of the elasticsearch index which is True.
-<br>
-<br>
-'delete_object(obj)'
-<br>
-It returns whether database record is deleted successfully or not with parameter as
-object (instance of sqlalchemy model) to delete.
-<br>
-<br>
-'bulk_delete(query)'
-<br>
-It deletes multiple database records via a bulk delete query.
-It returns the number of records deleted by passing Query object parameter.
                     </p>
                 </details>
 
@@ -3289,8 +3262,6 @@ No problems to report
 
                     <p>
 <!-- Include the extracted documentation here! -->
-
-</br>app.lib.db_utils</br>~~~~~~~~~~~~~~~~</br>synopsis: Handles the functions for database control</br><hr><code>create_object(obj):</code><br/></br>Add a database record and its elasticsearch counterpart.</br></br>If 'obj' is a Requests object, nothing will be added to</br>the es index since a UserRequests record is created after</br>its associated request and the es doc requires a</br>requester id. 'es_create' is called explicitly for a</br>Requests object in app.request.utils.</br></br>:param obj: object (instance of sqlalchemy model) to create</br></br>:return: string representation of created object</br>or None if creation failed</br><hr><code>update_object(data, obj_type, obj_id, es_update=True):</code><br/></br>Update a database record and its elasticsearch counterpart.</br></br>:param data: a dictionary of attribute-value pairs</br>:param obj_type: sqlalchemy model</br>:param obj_id: id of record</br>:param es_update: update the elasticsearch index</br></br>:return: was the record updated successfully?</br><hr><code>delete_object(obj):</code><br/></br>Delete a database record.</br></br>:param obj: object (instance of sqlalchemy model) to delete</br>:return: was the record deleted successfully?</br><hr><code>bulk_delete(query):</code><br/></br>Delete multiple database records via a bulk delete query.</br></br>http://docs.sqlalchemy.org/en/latest/orm/query.html#sqlalchemy.orm.query.Query.delete</br></br>:param query: Query object</br>:return: the number of records deleted</br><hr><code>get_object(obj_type, obj_id):</code><br/></br>Safely retrieve a database record by its id</br>and its sqlalchemy object type.</br><hr><code>get_agency_choices():</code><br/>
                    </p>
                 </details>
 

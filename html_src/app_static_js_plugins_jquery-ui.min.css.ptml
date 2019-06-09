@@ -29,7 +29,6 @@
 
                     <p>
 <!-- Include the code review here! -->
-<!--include templates/app_static_js_plugins_jquery-ui.min.css_hw.txt -->
                     </p>
                 </details>
 
@@ -52,7 +51,6 @@
 
                     <p>
 <!-- Include the extracted documentation here! -->
-<!--include templates/app_static_js_plugins_jquery-ui.min.css_ex.txt -->
                    </p>
                 </details>
 

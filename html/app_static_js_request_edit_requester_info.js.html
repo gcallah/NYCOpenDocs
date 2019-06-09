@@ -3239,51 +3239,6 @@
 
                     <p>
 <!-- Include the code review here! -->
-Fields for editing the requester information are given the data-parsley-required attribute and a validation message. Fields are also given a character limit.
-<br>Restrictions are made for the telephone and fax fields so that non-numerical characters are not allowed.
-<br>As long as one of the required fields is filled out, the form is valid. Otherwise, an error message is displayed in html indicating that one of the required fields (in strong tags) needs to be filled out.
-
-<h3>
-Code Issues
-</h3>
-
-<ul class="review">
-  <li>
-  Lines 28-34 (shown below) has an event listener for key press. Needs a comment stating what characters correspond
-  to charCodes 48 and 57.
-  <pre>
-  <code>
-    telephone.keypress(function (key) {
-        if (key.charCode !== 0) {
-            if (key.charCode < 48 || key.charCode > 57) {
-                key.preventDefault();
-            }
-        }
-    });
-  </code>
-  </pre>
-  </li>
-  <li>
-  There is a long conditional statement on lines 96-106 with a mix of && and ||.
-  <pre>
-  <code>
-    if (email.parsley().isValid() ||
-        telephone.parsley().isValid() ||
-        fax.parsley().isValid() ||
-        (
-            // mailing address
-            addressOne.parsley().isValid() &&
-            state.parsley().isValid() &&
-            zipCode.parsley().isValid() &&
-            city.parsley().isValid()
-        )
-    )
-  </code>
-  </pre>
-  Recommend creating a function that returns true if mailing address is valid. The function can then be called in
-  the conditional statement.
-  </li>
-</ul>
                     </p>
                 </details>
 
@@ -3297,7 +3252,7 @@ Code Issues
 <!-- Include the linting report here! -->
 
 
-  93:51  warning  Function has a complexity of 9  complexity
+  94:51  warning  Function has a complexity of 9  complexity
 
 ✖ 1 problem (0 errors, 1 warning)
                         </pre>
@@ -3311,18 +3266,6 @@ Code Issues
 
                     <p>
 <!-- Include the extracted documentation here! -->
-
-$(function () {
-<br>&emsp;    requesterModal.on("shown.bs.modal", function () {
-<br>&emsp;    $("#agencyModal").on("shown.bs.modal", function () {
-<br>&emsp;    telephone.keypress(function (key) {
-<br>&emsp;    fax.keypress(function (key) {
-<br>&emsp;    requesterModal.on("show.bs.modal", function () {
-<br>&emsp;    $("#user-info").parsley().on("form:validate", function () {
-<br>&emsp;    requesterModal.on("hidden.bs.modal", function () {
-<br>&emsp;    title.keyup(function() {
-<br>&emsp;    organization.keyup(function() {
-<br>
                    </p>
                 </details>
 

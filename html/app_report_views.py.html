@@ -3239,82 +3239,6 @@
 
                     <p>
 <!-- Include the code review here! -->
-The file handles the report URL endpoints for the OpenRecords application.
-<br>
-The routes are defined to:
-<br>
-<br>
-Handles the rendering of the reports page,
-<br>
-Retrieval of report data to generate the chart on the frontend.
-
-<h3>
-Code Issues
-</h3>
-
-<ul class="review">
-  <li>
-  Function <code>get()</code> has a long <code>if</code> ladder with
-  complicated conditions combined with <code>and</code> and <code>or</code>
-  which is difficult to follow. This can be simplified with more functions.
-  </li>
-
-  <pre>
-  <code>
-
-  if agency_ein and user_guid == '':
-      if agency_ein == 'all':
-          active_requests = Requests.query.with_entities(Requests.status).join(
-              Agencies, Requests.agency_ein == Agencies.ein).filter(
-              Agencies.is_active).all()
-          requests_closed = len([r for r in active_requests if r[0] == request_status.CLOSED])
-          requests_opened = len(active_requests) - requests_closed
-      else:
-          active_requests = Requests.query.with_entities(Requests.status).join(
-              Agencies, Requests.agency_ein == Agencies.ein).filter(
-              Agencies.ein == agency_ein, Agencies.is_active).all()
-          requests_closed = len([r for r in active_requests if r[0] == request_status.CLOSED])
-          requests_opened = len(active_requests) - requests_closed
-          if not (current_user.is_anonymous or current_user.is_public):
-              if (current_user.is_agency and current_user.is_agency_admin(agency_ein)) or current_user.is_super:
-                  is_visible = True
-                  if current_user.is_agency_admin(agency_ein) or current_user.is_super:
-                      active_users = sorted(
-                          [(user.guid, user.name)
-                           for user in Agencies.query.filter_by(ein=agency_ein).one().active_users],
-                          key=lambda x: x[1])
-                  elif current_user.is_agency_active(agency_ein):
-                      active_users = [(current_user.guid, current_user.name)]
-                  if active_users:
-                      active_users.insert(0, ('', ''))
-                      results = True
-
-  elif user_guid and (current_user.is_agency_active(agency_ein) or
-                      current_user.is_agency_admin(agency_ein) or
-                      current_user.is_super):
-      is_visible = True
-      ureqs = UserRequests.query.filter(UserRequests.user_guid == user_guid
-                                        ).all()
-
-      requests_closed = len([u for u in ureqs if u.request.status == request_status.CLOSED])
-      requests_opened = len([u for u in ureqs if u.request.status != request_status.CLOSED])
-
-  </code>
-  </pre>
-
-  <li>
-  As seen above, <code>requests_closed</code> and <code>requests_opened</code> are reused and
-  can be called in a single function.
-  </li>
-
-  <li>
-  Also the queries should be explained at least in one line about what exactly
-  is filtered and why is <code>key=lambda x: x[1]</code> used to sort
-  <code>active_users</code>. There should be a comment about this.<br>
-  (It's usage information can be found <a href=" https://medium.com/@johngrant/python-list-sorting-keys-lambdas-1903b2a4c949">here</a>.)
-
-  </li>
-	</ul>
                     </p>
                 </details>
 
@@ -3338,8 +3262,6 @@ No problems to report
 
                     <p>
 <!-- Include the extracted documentation here! -->
-
-</br>.. module:: report.views.</br></br>:synopsis: Handles the report URL endpoints for the OpenRecords application</br><hr><code>show_report():</code><br/></br>This function handles the rendering of the reports page</br></br>:return: redirect to reports page</br><hr><code>get():</code><br/></br>This function handles the retrieval of report data to generate the chart on the frontend.</br>Takes in agency_ein or user_guid from the frontend and filters for the number of requests closed and requests</br>opened.</br></br>:return: json object({"labels": ["Opened", "Closed"],</br>values": [150, 135],</br>active_users": [('', ''), ('o8pj0k', 'John Doe')]}), 200</br><hr><code>acknowledgment():</code><br/>Generates the acknowledgment report.</br></br>Returns:</br>Template with context.</br></br>
                    </p>
                 </details>
 

@@ -3239,24 +3239,6 @@
 
                     <p>
 <!-- Include the code review here! -->
-In this, Class ReportFilterForm() defines forms used for reporting statistics.
-And Class AcknowledgmentForm() generates reports with acknowledgment data.
-
-<h3>
-Code Issues
-</h3>
-
-<ul class="review">
-  <li>
-  The query in <code>class ReportFilterForm()</code> should be explained at
-  least in one line about what exactly
-  is filtered and why is <code>key=lambda x: x[1]</code> used to sort
-  <code>user_agencies</code>. There should be a comment about this.<br>
-  (It's usage information can be found <a href=" https://medium.com/@johngrant/python-list-sorting-keys-lambdas-1903b2a4c949">here</a>.)
-
-
-  </li>
-</ul>
                     </p>
                 </details>
 
@@ -3280,8 +3262,6 @@ No problems to report
 
                     <p>
 <!-- Include the extracted documentation here! -->
-
-</br>.. module:: report.forms.</br></br>:synopsis: Defines forms used for report statistics.</br><hr><code>ReportFilterForm(Form):</code><br/></br>Form for users to filter different report statistics.</br></br>agency: agency selected to filter by</br>user: active agency user selected to filter by</br><hr><code>__init__(self):</code><br/><hr><code>AcknowledgmentForm(Form):</code><br/>Form to generate a report with acknowledgment data.</br><hr><code>validate(self):</code><br/>
                    </p>
                 </details>
 

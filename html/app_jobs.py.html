@@ -3239,85 +3239,6 @@
 
                     <p>
 <!-- Include the code review here! -->
-The jobs scheduled using celery crontab are defined in this file.
-Functions are defined to update statuses for due requests or overdue requests;
-send notifications to agency.
-<br>
-The last piece of this application i.e function update_next_request_number()
-is the asynchronous celery task that gets the job of automatically updating
-the next request number done.
-
-<h3>
-Code Issues
-</h3>
-
-<ul class="review">
-  <li>
-  Missing docstring for <code>update_request_statuses()</code>
-  </li>
-  <li>
-  The <code>for</code> loop for overdue requests looks very similar to the <code>for</code> loop
-  for the due soon requests.
-  <br><br>
-  For the overdue requests:
-    <pre>
-        <code>
-        for request in requests_overdue:
-
-            if request.was_acknowledged:
-                agency_requests_overdue.append(request)
-            else:
-                agency_acknowledgments_overdue.append(request)
-
-            if request.status != request_status.OVERDUE:
-                create_object(
-                    Events(
-                        request.id,
-                        user_guid=None,
-                        type_=REQ_STATUS_CHANGED,
-                        previous_value={"status": request.status},
-                        new_value={"status": request_status.OVERDUE},
-                        response_id=None,
-                    )
-                )
-                update_object(
-                    {"status": request_status.OVERDUE},
-                    Requests,
-                    request.id)
-        </code>
-    </pre>
-    <br>
-    For the due soon requests:
-    <pre>
-        <code>
-        for request in requests_due_soon:
-
-            if request.was_acknowledged:
-                agency_requests_due_soon.append(request)
-            else:
-                agency_acknowledgments_due_soon.append(request)
-
-            if request.status != request_status.DUE_SOON:
-                create_object(
-                    Events(
-                        request.id,
-                        user_guid=None,
-                        type_=REQ_STATUS_CHANGED,
-                        previous_value={"status": request.status},
-                        new_value={"status": request_status.DUE_SOON},
-                        response_id=None,
-                    )
-                )
-                update_object(
-                    {"status": request_status.DUE_SOON},
-                    Requests,
-                    request.id)
-        </code>
-    </pre>
-  Recommend extracting the for loop into a separate function that has
-  the request list and the request status as parameters.
-  </li>
-</ul>
                     </p>
                 </details>
 
@@ -3341,8 +3262,6 @@ No problems to report
 
                     <p>
 <!-- Include the extracted documentation here! -->
-
-<hr><code>update_request_statuses():</code><br/><hr><code>_update_request_statuses():</code><br/></br>Update statuses for all requests that are now Due Soon or Overdue</br>and send a notification email to agency admins listing the requests.</br><hr><code>update_next_request_number():</code><br/></br>Celery task to automatically update the next request number of each agency to 1</br>:return:</br>
                    </p>
                 </details>
 

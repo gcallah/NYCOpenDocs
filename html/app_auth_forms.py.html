@@ -3239,12 +3239,6 @@
 
                     <p>
 <!-- Include the code review here! -->
-This file defines the forms used to manage Authentication requests.
-<br>
-It has classes to manage user/agent user account forms.
-<br>
-It has another class for basic login form with email, password and login button
-fields.
                     </p>
                 </details>
 
@@ -3268,8 +3262,6 @@ No problems to report
 
                     <p>
 <!-- Include the extracted documentation here! -->
-
-</br></br>.. module:: auth.forms</br></br>:synopsis: Defines the forms used to manage Authentication requests</br><hr><code>StripFieldsForm(Form):</code><br/></br>Any field data that can be stripped, will be stripped.</br>http://stackoverflow.com/questions/26232165/automatically-strip-all-values-in-wtforms</br><hr><code>Meta:</code><br/><hr><code>bind_field(self, form, unbound_field, options):</code><br/><hr><code>strip_filter(value):</code><br/><hr><code>ManageUserAccountForm(StripFieldsForm):</code><br/></br>This form manages the OpenRecords specific account fields for a user account:</br>Title: The job title for the user (e.g. Reporter); This is optional</br>Organization: The company for the user (e.g. New York Times); This is optional</br>Notification Email: The email to send OpenRecords notifications to</br>Phone Number: The user's phone number; This is optional</br>Fax Number: The user's fax number: This is optional</br>Mailing Address: The user's mailing address; Optional;</br>Format: Address One, Address Two, City, State, Zip (5 Digits)</br><hr><code>__init__(self, user=None):</code><br/></br>:type user: app.models.Users</br><hr><code>autofill(self):</code><br/><hr><code>validate(self):</code><br/> One mthod of contact must be provided. </br><hr><code>ManageAgencyUserAccountForm(StripFieldsForm):</code><br/></br>This form manages the OpenRecords specific account fields for a user account:</br>Title: The job title for the user (e.g. Reporter); This is optional</br>Organization: The company for the user (e.g. New York Times); This is optional</br>Notification Email: The email to send OpenRecords notifications to</br>Phone Number: The user's phone number; This is optional</br>Fax Number: The user's fax number: This is optional</br>Mailing Address: The user's mailing address; Optional;</br>Format: Address One, Address Two, City, State, Zip (5 Digits)</br><hr><code>__init__(self, user=None):</code><br/></br>:type user: app.models.Users</br><hr><code>autofill(self):</code><br/><hr><code>validate(self):</code><br/> One mthod of contact must be provided. </br><hr><code>BasicLoginForm(Form):</code><br/>
                    </p>
                 </details>
 

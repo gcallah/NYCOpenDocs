@@ -3239,76 +3239,6 @@
 
                     <p>
 <!-- Include the code review here! -->
-The user-request routes are to create a users permissions entry for a request,
-update the users permissions and remove a user from the request.
-
-<h3>
-Code Issues
-</h3>
-
-<ul class="review">
-  <li>
-  Docstrings for <code>create(request_id)</code> and <code>edit(request_id)</code> vaguely touches upon 
-  what the request body should have. However, it lacks a description regarding the example. What does 1 and 5 mean below?
-    <pre>
-        <code>
-        Expects a request body containing the user's guid and new permissions.
-            Ex:
-            {
-                'user': '7khz9y',
-                1: true,
-                5: false
-            }
-        </code>
-    </pre>
-  </li>
-  <li>
-  <code>create(request_id)</code>, <code>edit(request_id)</code>, and <code>delete(request_id)</code> 
-  functions have lines of code that can be extracted into separate functions
-    <ul>
-        <li>
-            Recommend creating a <code>valid_user(permission_type=None)</code> function for the conditional 
-            <br>As seen from lines 39-45
-            <pre>
-            <code>
-            if (
-                        current_user.is_agency and (
-                                    current_user.is_super or
-                                    current_user.is_agency_admin(current_request.agency.ein) or
-                                current_user_request.has_permission(permission.ADD_USER_TO_REQUEST)
-                    )
-            ):
-            </code>
-            </pre> 
-            Because both <code>create(request_id)</code> and <code>edit(request_id)</code> use a similar conditional but have different
-            permission types, both can refer to another function that takes in a permission type as a parameter and returns true or false.
-        </li>
-        <li>
-            Code for the <code>for</code> loop below can also be extracted into a separate function to reduce code repetition.
-            <pre>
-            <code>
-            for field in required_fields:
-                if user_data.get(field) is None:
-                    flash('Uh Oh, it looks like the {} is missing! '
-                        'This is probably NOT your fault.'.format(field), category='danger')
-                    return redirect(url_for('request.view', request_id=request_id))
-            </code>
-            </pre>
-        </li>
-        <li>
-            Extract exception code
-            <pre>
-            <code>
-            except UserRequestException as e:
-                sentry.captureException()
-                flash(str(e), category='warning')
-                return redirect(url_for('request.view', request_id=request_id))
-            </code>
-            </pre> 
-        </li>
-    </ul>
-  </li>
-</ul>
                     </p>
                 </details>
 
@@ -3332,8 +3262,6 @@ No problems to report
 
                     <p>
 <!-- Include the extracted documentation here! -->
-
-</br>...module:: user_request.views.</br></br>:synopsis: Endpoints for User Requests</br><hr><code>create(request_id):</code><br/></br>Creates a users permissions entry for a request and sends notification emails.</br></br>Expects a request body containing the user's guid and new permissions.</br>Ex:</br>{</br>user': '7khz9y',</br>1: true,</br>5: false</br>}</br>:return:</br><hr><code>edit(request_id):</code><br/></br>Updates a users permissions on a request and sends notification emails.</br></br>Expects a request body containing the user's guid and updated permissions.</br>Ex:</br>{</br>user': '7khz9y',</br>1: true,</br>5: false</br>}</br>:return:</br><hr><code>delete(request_id):</code><br/></br>Removes a user from a request and send notification emails.</br></br>Expects a request body containing user's guid and confirmation string.</br>Ex:</br>{</br>user': '7khz9y',</br>remove-confirmation-string': 'remove</br>}</br>:return:</br>
                    </p>
                 </details>
 

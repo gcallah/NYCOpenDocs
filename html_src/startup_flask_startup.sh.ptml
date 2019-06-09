@@ -29,6 +29,7 @@
 
                     <p>
 <!-- Include the code review here! -->
+<!--include templates/.startup_flask_startup.sh_hw.txt -->
                     </p>
                 </details>
 
@@ -51,6 +52,7 @@
 
                     <p>
 <!-- Include the extracted documentation here! -->
+<!--include templates/.startup_flask_startup.sh_ex.txt -->
                    </p>
                 </details>
 

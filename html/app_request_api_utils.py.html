@@ -1225,6 +1225,21 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_acknowledgment.css.html">
+                            add_acknowledgment.css
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_closing.css.html">
+                            add_closing.css
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_denial.css.html">
+                            add_denial.css
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_static_styles_add_extension.css.html">
                             add_extension.css
                         </a>
@@ -1619,6 +1634,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_footer.html.html">
+                            email_footer.html
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_not_onboarded.html.html">
                             email_not_onboarded.html
                         </a>
@@ -1626,11 +1646,6 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_private_file_upload.html.html">
                             email_private_file_upload.html
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_request_info.html.html">
-                            email_request_info.html
                         </a>
                     </li>
                     <li>
@@ -3239,6 +3254,29 @@
 
                     <p>
 <!-- Include the code review here! -->
+The file creates and stores event object for updating the request information
+into database.
+
+<h3>
+Code Issues
+</h3>
+
+	<ul class="review">
+		<li>
+    It is unclear what is the difference between the <code>previous_value</code>
+    and <code>new_value</code> in function
+    <code>create_request_info_event()</code>.
+		We know that the function updates events object request information.
+		It is difficult to understand in this file what part of information of the
+		events these values represent and what is the need of both the values.
+		Though it becomes more clear in the <code>views.py</code> file that it is
+		trying to update the agency title and agency request summary privacy
+		options, a short summary can be given in this file itself maybe in the
+		docstring.
+
+		</li>
+
+  </ul>
                     </p>
                 </details>
 
@@ -3250,7 +3288,7 @@
                     <p>
                         <pre>
 <!-- Include the linting report here! -->
-No problems to report
+app/request/api/utils.py:20:25: W292 no newline at end of file
                         </pre>
                    </p>
                 </details>
@@ -3262,6 +3300,8 @@ No problems to report
 
                     <p>
 <!-- Include the extracted documentation here! -->
+
+<hr><code>create_request_info_event(request_id, type_, previous_value, new_value):</code><br/></br>Create and store events object for updating the request information into database.</br>:param request_id: request ID</br>:param type_: event type</br>:param previous_value: previous value</br>:param new_value: new value</br>
                    </p>
                 </details>
 

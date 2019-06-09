@@ -1225,6 +1225,21 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_acknowledgment.css.html">
+                            add_acknowledgment.css
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_closing.css.html">
+                            add_closing.css
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_denial.css.html">
+                            add_denial.css
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_static_styles_add_extension.css.html">
                             add_extension.css
                         </a>
@@ -1619,6 +1634,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_footer.html.html">
+                            email_footer.html
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_not_onboarded.html.html">
                             email_not_onboarded.html
                         </a>
@@ -1626,11 +1646,6 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_private_file_upload.html.html">
                             email_private_file_upload.html
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_request_info.html.html">
-                            email_request_info.html
                         </a>
                     </li>
                     <li>
@@ -3239,6 +3254,7 @@
 
                     <p>
 <!-- Include the code review here! -->
+<p>We attempted to read from templates/tests_conftest.py_hw.txt but failed.</p>
                     </p>
                 </details>
 
@@ -3250,7 +3266,7 @@
                     <p>
                         <pre>
 <!-- Include the linting report here! -->
-No problems to report
+tests/conftest.py:38:15: E999 SyntaxError: invalid syntax
                         </pre>
                    </p>
                 </details>
@@ -3262,6 +3278,8 @@ No problems to report
 
                     <p>
 <!-- Include the extracted documentation here! -->
+
+ConfigTest Module</br></br>This module handles the setup for running tests agains the OpenRecords application.</br></br>.. _Flask Tutorial:</br>http://flask.pocoo.org/docs/1.0/tutorial/</br><hr><code>app():</code><br/></br>Create a session</br>Yields:</br>app (Flask): Instance of a Flask application</br></br><hr><code>client(app: Flask):</code><br/>Retrieve an instance of the Flask test_client.</br></br>.. _Flask Test Client:</br>http://flask.pocoo.org/docs/1.0/api/#flask.Flask.test_client</br></br>Args:</br>app (Flask): Instance of the Flask application</br></br>Returns:</br>app.test_client (Flask.test_client): Returns a client used to test the Flask application</br><hr><code>db(app: Flask):</code><br/></br>Create all of the database tables and yield an instance of the database.</br>Args:</br>app (Flask): Instance of the flask application.</br></br>Yields:</br>db (SQLAlchemy): Instance of the SQLAlchemy DB connector</br><hr><code>session(db: SQLAlchemy):</code><br/>Create a database session to be used for the function.</br></br>Args:</br>db (SQLAlchemy): Instance of the SQLAlchemy DB connector</br></br>Yields:</br>session_ (SQLAlchemy.session): Session object to be used by the function</br></br>
                    </p>
                 </details>
 

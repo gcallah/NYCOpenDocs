@@ -1225,6 +1225,21 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_acknowledgment.css.html">
+                            add_acknowledgment.css
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_closing.css.html">
+                            add_closing.css
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_denial.css.html">
+                            add_denial.css
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_static_styles_add_extension.css.html">
                             add_extension.css
                         </a>
@@ -1619,6 +1634,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_footer.html.html">
+                            email_footer.html
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_not_onboarded.html.html">
                             email_not_onboarded.html
                         </a>
@@ -1626,11 +1646,6 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_private_file_upload.html.html">
                             email_private_file_upload.html
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_request_info.html.html">
-                            email_request_info.html
                         </a>
                     </li>
                     <li>
@@ -3239,6 +3254,27 @@
 
                     <p>
 <!-- Include the code review here! -->
+The file handles authentication endpoints for NYC OpenRecords.
+<br>The routes are defined to:
+<br>
+<br>
+Handle login redirects for users,
+<br>
+Unified logout endpoint for all authentication types,
+<br>
+Allow users to manage their OpenRecords specific attributes,
+<br>
+View function to handle SAML SSO Workflow,
+<br>
+Access the SAML SP metadata for this application,
+<br>
+Login a user using the LDAP protocol,
+<br>
+Log a user out from the LDAP server,
+<br>
+Authenticate a user against the database (ignore password),
+<br>
+Log a user out from the server.
                     </p>
                 </details>
 
@@ -3250,7 +3286,8 @@
                     <p>
                         <pre>
 <!-- Include the linting report here! -->
-No problems to report
+app/auth/views.py:172:121: E501 line too long (127 > 120 characters)
+app/auth/views.py:380:121: E501 line too long (131 > 120 characters)
                         </pre>
                    </p>
                 </details>
@@ -3262,6 +3299,8 @@ No problems to report
 
                     <p>
 <!-- Include the extracted documentation here! -->
+
+</br>.. module:: auth.views.</br></br>:synopsis: Handles authentication endpoints for NYC OpenRecords</br></br><hr><code>login():</code><br/>Handle login redirects for users.</br></br>This application supports three methods for login: SAML 2.0, LDAP, and Local Authentication</br></br>SAML 2.0 integrates with the City of New York Authentication System (NYC.ID). Users will be redirected to the SAML</br>authentication endpoint. Please see app.auth.saml for details.</br></br>LDAP authentication will redirect the user to a Flask login form and authenticate them using the LDAP protocol.</br>Please see app.auth.ldap_login for details.</br></br>Local Auth is used for development and testing purposes only. It allows a user to login using any password, as long</br>as the email is valid and in the database.</br></br>The three methods are called in the preferred method for authentication: 1) SAML 2) LDAP 3) Local Auth</br></br>Based off of: https://flask-login.readthedocs.io/en/latest/#login-example</br></br>Args:</br>next (str): URL to send the user to after successful authentication.</br></br>Returns:</br>HTTP Response (werkzeug.wrappers.Response): Response redirecting the browser to the proper URL for login</br><hr><code>logout():</code><br/></br>Unified logout endpoint for all authentication types.</br></br>GET Args:</br>timeout (bool): If True, logout is being called due to a session timeout.</br>forced_logout (bool): If True, logout is being called due to a duplicate session.</br></br>Returns:</br>HTTP Response (werkzeug.wrappers.Response): Redirect to the appropriate logout endpoint.</br><hr><code>manage():</code><br/></br>Allow users to manage their OpenRecords specific attributes.</br></br>For POST requests, updates the users data in the database.</br>For GET requests, pulls the current user data from the database and pre-populates the form.</br></br>Requires users to have an active authentication session.</br></br>Returns:</br>Flask Response with Manage Page</br></br><hr><code>saml():</code><br/></br>View function to handle SAML SSO Workflow.</br></br>GET Parameters:</br>sso - Handle a regular login request (user clicks Login in the navbar)</br>sso2 - Handle a login request from the application (user attempts to access a privileged resource)</br>acs - Handle a login response from the IdP and return the user to the provided redirect URL (defaults to the home page)</br>slo - Generate a Logout request for the IdP</br>sls - Handle a Logout Response from the IdP and destroy the local session</br></br>Returns:</br>HTTP Response (werkzeug.wrappers.Response): Redirects the user to the proper location in the SAML Auth Workflow.</br></br><hr><code>metadata():</code><br/></br>Access the SAML SP metadata for this application</br></br>Returns:</br>HTTP Response (werkzeug.wrappers.Response): XML SP Metadata</br><hr><code>ldap_login():</code><br/></br>Login a user using the LDAP protocol</br></br>Args:</br>next (str): URL to redirect the user to if login is successful. (in request.args)</br></br>Returns:</br>HTTP Response (werkzeug.wrappers.Response): Redirects the user to the home page (if successful) or to the</br>login page again (if unsuccessful)</br></br><hr><code>ldap_logout():</code><br/></br>Log a user out from the LDAP server.</br>Args:</br>timed_out (bool): If True, the users client side session timed-out.</br></br>Returns:</br>HTTP Response (werkzeug.wrappers.Response): Redirects the user to the home page</br></br><hr><code>local_login():</code><br/></br>Authenticate a user against the database (ignore password).</br></br>Allows developers to test functionality as valid users without needing to use a third party service.</br></br>Returns:</br>HTTP Response (werkzeug.wrappers.Response): Redirects the user to the home page (if successful) or to the</br>login page again (if unsuccessful)</br><hr><code>local_logout(timed_out=False):</code><br/></br>Log a user out from the server.</br>Args:</br>timed_out (bool): If True, the users client side session timed-out.</br></br>Returns:</br>HTTP Response (werkzeug.wrappers.Response): Redirects the user to the home page</br>
                    </p>
                 </details>
 

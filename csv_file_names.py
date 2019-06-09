@@ -23,7 +23,7 @@ TEMPLATE_DIR = "templates/"
 
 
 def read_file_names():
-    names = open("templates/menu_input.txt", "r")
+    names = open("templates/collect_file_names.txt", "r")
     file_names = names.read()
     file_names = file_names.split("../NYCOpenRecords/")
     file_names.sort()

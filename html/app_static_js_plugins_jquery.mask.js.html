@@ -1225,6 +1225,21 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_acknowledgment.css.html">
+                            add_acknowledgment.css
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_closing.css.html">
+                            add_closing.css
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_denial.css.html">
+                            add_denial.css
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_static_styles_add_extension.css.html">
                             add_extension.css
                         </a>
@@ -1619,6 +1634,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_footer.html.html">
+                            email_footer.html
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_not_onboarded.html.html">
                             email_not_onboarded.html
                         </a>
@@ -1626,11 +1646,6 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_private_file_upload.html.html">
                             email_private_file_upload.html
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_request_info.html.html">
-                            email_request_info.html
                         </a>
                     </li>
                     <li>
@@ -3239,6 +3254,7 @@
 
                     <p>
 <!-- Include the code review here! -->
+Please refer to Igor Escobar's documentation for jquery Mask. 
                     </p>
                 </details>
 
@@ -3275,6 +3291,85 @@
 
                     <p>
 <!-- Include the extracted documentation here! -->
+
+/**
+<br> * jquery.mask.js
+<br> * @version: v1.14.0
+<br> * @author: Igor Escobar
+<br> *
+<br> *
+<br> *
+<br> *
+<br> * Permission is hereby granted, free of charge, to any person
+<br> * obtaining a copy of this software and associated documentation
+<br> * files (the "Software"), to deal in the Software without
+<br> * restriction, including without limitation the rights to use,
+<br> * copy, modify, merge, publish, distribute, sublicense, and/or sell
+<br> * copies of the Software, and to permit persons to whom the
+<br> * Software is furnished to do so, subject to the following
+<br> * conditions:
+<br> *
+<br> * The above copyright notice and this permission notice shall be
+<br> * included in all copies or substantial portions of the Software.
+<br> *
+<br> * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+<br> * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+<br> * OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+<br> * NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+<br> * HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+<br> * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+<br> * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+<br> * OTHER DEALINGS IN THE SOFTWARE.
+<br> */
+<br>/* jshint laxbreak: true */
+<br>/* global define */
+<br>(function (factory, jQuery, Zepto) {
+<br>&emsp;    if (typeof define === 'function' && define.amd) {
+<br>}(function ($) {
+<br>&emsp;    var Mask = function (el, mask, options) {
+<br>&emsp;&emsp;&emsp;            getCaret: function () {
+<br>&emsp;&emsp;&emsp;            setCaret: function(pos) {
+<br>&emsp;&emsp;&emsp;            events: function() {
+<br>&emsp;&emsp;&emsp;&emsp;                .on('keydown.mask', function(e) {
+<br>&emsp;&emsp;&emsp;&emsp;                .on('paste.mask drop.mask', function() {
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    setTimeout(function() {
+<br>&emsp;&emsp;&emsp;&emsp;                .on('change.mask', function(){
+<br>&emsp;&emsp;&emsp;&emsp;                .on('blur.mask', function(){
+<br>&emsp;&emsp;&emsp;&emsp;                .on('blur.mask', function() {
+<br>&emsp;&emsp;&emsp;&emsp;                .on('focus.mask', function (e) {
+<br>&emsp;&emsp;&emsp;&emsp;                .on('focusout.mask', function() {
+<br>&emsp;&emsp;&emsp;            getRegexMask: function() {
+<br>&emsp;&emsp;&emsp;            destroyEvents: function() {
+<br>&emsp;&emsp;&emsp;            val: function(v) {
+<br>&emsp;&emsp;&emsp;            getMCharsBeforeCount: function(index, onCleanVal) {
+<br>&emsp;&emsp;&emsp;            caretPos: function (originalCaretPos, oldLength, newLength, maskDif) {
+<br>&emsp;&emsp;&emsp;            behaviour: function(e) {
+<br>&emsp;&emsp;&emsp;            getMasked: function(skipMaskChars, val) {
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    check = function () {
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    check = function () {
+<br>&emsp;&emsp;&emsp;            callbacks: function (e) {
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;                    callback = function(name, criteria, args) {
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                        if (typeof options[name] === 'function' && criteria) {
+<br>&emsp;&emsp;        mask = typeof mask === 'function' ? mask(p.val(), undefined, el,  options) : mask;
+<br>&emsp;&emsp;        jMask.remove = function() {
+<br>&emsp;&emsp;        jMask.getCleanVal = function() {
+<br>&emsp;&emsp;        jMask.getMaskedVal = function(val) {
+<br>&emsp;       jMask.init = function(onlyMask) {
+<br>&emsp;    var HTMLAttributes = function () {
+<br>&emsp;    notSameMaskObject = function(field, mask, options) {
+<br>&emsp;&emsp;&emsp;            if (typeof mask === 'function') {
+<br>&emsp;    eventSupported = function(eventName) {
+<br>&emsp;&emsp;&emsp;            isSupported = typeof el[eventName] === 'function';
+<br>&emsp;    $.fn.mask = function(mask, options) {
+<br>&emsp;&emsp;&emsp;            maskFunction = function() {
+<br>&emsp;&emsp;&emsp;            $.maskWatchers[selector] = setInterval(function(){
+<br>&emsp;    $.fn.masked = function(val) {
+<br>&emsp;    $.fn.unmask = function() {
+<br>&emsp;&emsp;        return this.each(function() {
+<br>&emsp;    $.fn.cleanVal = function() {
+<br>&emsp;    $.applyDataMask = function(selector) {
+<br>&emsp;    setInterval(function() {
+<br>
                    </p>
                 </details>
 

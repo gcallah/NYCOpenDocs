@@ -1225,6 +1225,21 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_acknowledgment.css.html">
+                            add_acknowledgment.css
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_closing.css.html">
+                            add_closing.css
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_denial.css.html">
+                            add_denial.css
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_static_styles_add_extension.css.html">
                             add_extension.css
                         </a>
@@ -1619,6 +1634,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_footer.html.html">
+                            email_footer.html
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_not_onboarded.html.html">
                             email_not_onboarded.html
                         </a>
@@ -1626,11 +1646,6 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_private_file_upload.html.html">
                             email_private_file_upload.html
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_request_info.html.html">
-                            email_request_info.html
                         </a>
                     </li>
                     <li>
@@ -3239,6 +3254,55 @@
 
                     <p>
 <!-- Include the code review here! -->
+This file contains the NYCHolidays class, extended from the HolidayBase class. When calling the _populate method, observed holidays are added to its list of holidays, such as Labor Day and Thanksgiving.
+<br><br>
+'holidays library' is used to determine whether a specific date is holiday or not in a particular country.<br>
+Each country has two class names - an abbreviation and a full name.
+Some holidays can be states specific as well.
+<br><br>
+'observed' param: (Default: True) <br>
+January 1st, 2012 fell on a Sunday so the statutory holiday was observed on the 2nd. <br>
+Therefore, January 2nd, 2012 gets included in the holiday list of that year.
+<br><br>
+>>> us_holidays.get(date(2012 ,1, 2))
+<br>
+"New Year's Eve (Observed)"
+<br>
+<br>
+'expand' param: (Default: True) <br>
+It is a boolean value specifying whether or not to append holidays in new years to the holidays object. <br>
+This is set to False in function '_populate' meaning the Holiday object will no longer add holidays from new years. <br>
+So, the function adds Dec 31st from the previous year without triggering the entire year to be added.
+<br>
+<br>
+The file also checks the year since when the respective holidays are celebrated.
+<br>
+Example:<br>
+New Year's Day since 1870, Columbus Day since 1970
+
+<h3>
+Code Issues
+</h3>
+
+<ul class="review">
+  <li>
+  Needs a comment specifying how the class is used for the application
+  </li>
+  <li>
+  Lines 22-25 looks confusing since <code>expand</code> is used to replace <code>self.expand</code>'s value of False, 
+  which doesn't appear to be used.
+  <br>
+  <pre>
+    <code>
+    expand = self.expand
+    self.expand = False
+    self[date(year, 1, 1) + rd(days=-1)] = name + " (Observed)"
+    self.expand = expand
+    </code>
+  </pre>
+  Needs comments explaining what self.expand does - what does True and False mean for this attribute?
+  </li>
+</ul>
                     </p>
                 </details>
 
@@ -3262,6 +3326,8 @@ No problems to report
 
                     <p>
 <!-- Include the extracted documentation here! -->
+
+<hr><code>NYCHolidays(HolidayBase):</code><br/><hr><code>__init__(self, **kwargs):</code><br/><hr><code>_populate(self, year):</code><br/>
                    </p>
                 </details>
 

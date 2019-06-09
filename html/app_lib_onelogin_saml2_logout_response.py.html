@@ -1225,6 +1225,21 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_acknowledgment.css.html">
+                            add_acknowledgment.css
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_closing.css.html">
+                            add_closing.css
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_denial.css.html">
+                            add_denial.css
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_static_styles_add_extension.css.html">
                             add_extension.css
                         </a>
@@ -1619,6 +1634,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_footer.html.html">
+                            email_footer.html
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_not_onboarded.html.html">
                             email_not_onboarded.html
                         </a>
@@ -1626,11 +1646,6 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_private_file_upload.html.html">
                             email_private_file_upload.html
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_request_info.html.html">
-                            email_request_info.html
                         </a>
                     </li>
                     <li>
@@ -3239,6 +3254,7 @@
 
                     <p>
 <!-- Include the code review here! -->
+<p>We attempted to read from templates/app_lib_onelogin_saml2_logout_response.py_hw.txt but failed.</p>
                     </p>
                 </details>
 
@@ -3250,7 +3266,10 @@
                     <p>
                         <pre>
 <!-- Include the linting report here! -->
-No problems to report
+app/lib/onelogin/saml2/logout_response.py:41:121: E501 line too long (128 > 120 characters)
+app/lib/onelogin/saml2/logout_response.py:88:121: E501 line too long (135 > 120 characters)
+app/lib/onelogin/saml2/logout_response.py:97:121: E501 line too long (127 > 120 characters)
+app/lib/onelogin/saml2/logout_response.py:101:121: E501 line too long (165 > 120 characters)
                         </pre>
                    </p>
                 </details>
@@ -3262,6 +3281,8 @@ No problems to report
 
                     <p>
 <!-- Include the extracted documentation here! -->
+
+ OneLogin_Saml2_Logout_Response class</br></br>Copyright (c) 2010-2018 OneLogin, Inc.</br>MIT License</br></br>Logout Response class of OneLogin's Python Toolkit.</br></br><hr><code>OneLogin_Saml2_Logout_Response(object):</code><br/></br></br>This class  handles a Logout Response. It Builds or parses a Logout Response object</br>and validates it.</br></br><hr><code>__init__(self, settings, response=None):</code><br/></br>Constructs a Logout Response object (Initialize params from settings</br>and if provided load the Logout Response.</br></br>Arguments are:</br>* (OneLogin_Saml2_Settings)   settings. Setting data</br>* (string)                    response. An UUEncoded SAML Logout</br>response from the IdP.</br><hr><code>get_issuer(self):</code><br/></br>Gets the Issuer of the Logout Response Message</br>:return: The Issuer</br>:rtype: string</br><hr><code>get_status(self):</code><br/></br>Gets the Status</br>:return: The Status</br>:rtype: string</br><hr><code>is_valid(self, request_data, request_id=None, raise_exceptions=False):</code><br/></br>Determines if the SAML LogoutResponse is valid</br>:param request_id: The ID of the LogoutRequest sent by this SP to the IdP</br>:type request_id: string</br></br>:param raise_exceptions: Whether to return false on failure or raise an exception</br>:type raise_exceptions: Boolean</br></br>:return: Returns if the SAML LogoutResponse is or not valid</br>:rtype: boolean</br><hr><code>__query(self, query):</code><br/></br>Extracts a node from the Etree (Logout Response Message)</br>:param query: Xpath Expression</br>:type query: string</br>:return: The queried node</br>:rtype: Element</br><hr><code>build(self, in_response_to):</code><br/></br>Creates a Logout Response object.</br>:param in_response_to: InResponseTo value for the Logout Response.</br>:type in_response_to: string</br><hr><code>get_response(self, deflate=True):</code><br/></br>Returns a Logout Response object.</br>:param deflate: It makes the deflate process optional</br>:type: bool</br>:return: Logout Response maybe deflated and base64 encoded</br>:rtype: string</br><hr><code>get_error(self):</code><br/></br>After executing a validation process, if it fails this method returns the cause</br><hr><code>get_xml(self):</code><br/></br>Returns the XML that will be sent as part of the response</br>or that was received at the SP</br>:return: XML response body</br>:rtype: string</br>
                    </p>
                 </details>
 

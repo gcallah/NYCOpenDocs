@@ -1225,6 +1225,21 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_acknowledgment.css.html">
+                            add_acknowledgment.css
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_closing.css.html">
+                            add_closing.css
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_denial.css.html">
+                            add_denial.css
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_static_styles_add_extension.css.html">
                             add_extension.css
                         </a>
@@ -1619,6 +1634,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_footer.html.html">
+                            email_footer.html
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_not_onboarded.html.html">
                             email_not_onboarded.html
                         </a>
@@ -1626,11 +1646,6 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_private_file_upload.html.html">
                             email_private_file_upload.html
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_request_info.html.html">
-                            email_request_info.html
                         </a>
                     </li>
                     <li>
@@ -3239,6 +3254,10 @@
 
                     <p>
 <!-- Include the code review here! -->
+The route definitions are in views.py. The routes defined here are:
+<br>
+@admin.route('/')
+@admin.route('/<agency_ein>')
                     </p>
                 </details>
 
@@ -3250,7 +3269,8 @@
                     <p>
                         <pre>
 <!-- Include the linting report here! -->
-No problems to report
+app/admin/views.py:7:1: F401 'app.models.Users' imported but unused
+app/admin/views.py:7:1: F401 'app.models.AgencyUsers' imported but unused
                         </pre>
                    </p>
                 </details>
@@ -3262,6 +3282,8 @@ No problems to report
 
                     <p>
 <!-- Include the extracted documentation here! -->
+
+</br>...module:: admin.views.</br></br>:synopsis: Endpoints for Agency Adminstrator Interface</br><hr><code>main(agency_ein=None):</code><br/>
                    </p>
                 </details>
 

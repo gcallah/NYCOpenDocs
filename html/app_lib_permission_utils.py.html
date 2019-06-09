@@ -1225,6 +1225,21 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_acknowledgment.css.html">
+                            add_acknowledgment.css
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_closing.css.html">
+                            add_closing.css
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_denial.css.html">
+                            add_denial.css
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_static_styles_add_extension.css.html">
                             add_extension.css
                         </a>
@@ -1619,6 +1634,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_footer.html.html">
+                            email_footer.html
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_not_onboarded.html.html">
                             email_not_onboarded.html
                         </a>
@@ -1626,11 +1646,6 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_private_file_upload.html.html">
                             email_private_file_upload.html
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_request_info.html.html">
-                            email_request_info.html
                         </a>
                     </li>
                     <li>
@@ -3239,6 +3254,9 @@
 
                     <p>
 <!-- Include the code review here! -->
+This file contains util functions pertaining to validating permissions.
+The functions in this file check for user authentication, super user status, and allowed permissions.
+The last function 'get_permission(permission_type: str, response_type: Responses)' returns a dictionary of associated permissions for files, notes, instructions, and links.
                     </p>
                 </details>
 
@@ -3250,7 +3268,7 @@
                     <p>
                         <pre>
 <!-- Include the linting report here! -->
-No problems to report
+app/lib/permission_utils.py:21:30: E999 SyntaxError: invalid syntax
                         </pre>
                    </p>
                 </details>
@@ -3262,6 +3280,8 @@ No problems to report
 
                     <p>
 <!-- Include the extracted documentation here! -->
+
+<hr><code>has_permission(permission: int):</code><br/></br>Checks to see if the current_user has the appropriate permission for this endpoint.</br></br>:param f: View function that is being wrapped.</br>:param permissions: List of permission values.</br>:return:</br><hr><code>decorator(f):</code><br/><hr><code>decorated_function(request_id, *args, **kwargs):</code><br/><hr><code>has_super():</code><br/></br>Checks to see if the current_user is a super user.</br></br>:param f: Function that is being wrapped.</br>:return:</br><hr><code>decorator(f):</code><br/><hr><code>decorated_function(*args, **kwargs):</code><br/><hr><code>is_allowed(user: Users, request_id: str, permission: int):</code><br/></br></br>:param user:</br>:param request_id:</br>:param permissions:</br>:return:</br><hr><code>get_permission(permission_type: str, response_type: Responses):</code><br/></br></br>:param permission_type:</br>:param response_type:</br>:return:</br>
                    </p>
                 </details>
 

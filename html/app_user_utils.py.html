@@ -1225,6 +1225,21 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_acknowledgment.css.html">
+                            add_acknowledgment.css
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_closing.css.html">
+                            add_closing.css
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_denial.css.html">
+                            add_denial.css
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_static_styles_add_extension.css.html">
                             add_extension.css
                         </a>
@@ -1619,6 +1634,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_footer.html.html">
+                            email_footer.html
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_not_onboarded.html.html">
                             email_not_onboarded.html
                         </a>
@@ -1626,11 +1646,6 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_private_file_upload.html.html">
                             email_private_file_upload.html
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_request_info.html.html">
-                            email_request_info.html
                         </a>
                     </li>
                     <li>
@@ -3239,6 +3254,13 @@
 
                     <p>
 <!-- Include the code review here! -->
+It handles the user utilities to:
+<br>
+Make the specified user an admin for the agency,
+<br>
+Remove the specified users permissions for the agency identified by agency_ein,
+<br>
+Update the ElasticSearch index assigned_users for the provided request IDs,
                     </p>
                 </details>
 
@@ -3250,7 +3272,7 @@
                     <p>
                         <pre>
 <!-- Include the linting report here! -->
-No problems to report
+app/user/utils.py:21:45: E999 SyntaxError: invalid syntax
                         </pre>
                    </p>
                 </details>
@@ -3262,6 +3284,8 @@ No problems to report
 
                     <p>
 <!-- Include the extracted documentation here! -->
+
+<hr><code>make_user_admin(self, modified_user_guid: str, current_user_guid: str, agency_ein: str):</code><br/></br>Make the specified user an admin for the agency.</br></br>Args:</br>modified_user_guid (str): GUID of the user to be modified</br>current_user_guid (str): GUID of the current user</br>agency_ein (str): Agency the user is being added to</br></br>Returns:</br></br><hr><code>remove_user_permissions(self, modified_user_guid: str, current_user_guid: str, agency_ein: str, action: str = None):</code><br/></br>Remove the specified users permissions for the agency identified by agency_ein</br></br>Args:</br>modified_user_guid (str): GUID of the user to be modified</br>current_user_guid (str): GUID of the current user</br>agency_ein (str): Agency the user is being removed from</br></br>Returns:</br></br><hr><code>es_update_assigned_users(self, request_ids: list):</code><br/></br>Update the ElasticSearch index assigned_users for the provided request IDs</br>Args:</br>request_ids (list): List of Request IDs</br>
                    </p>
                 </details>
 

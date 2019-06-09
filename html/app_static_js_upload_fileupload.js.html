@@ -1225,6 +1225,21 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_acknowledgment.css.html">
+                            add_acknowledgment.css
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_closing.css.html">
+                            add_closing.css
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_denial.css.html">
+                            add_denial.css
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_static_styles_add_extension.css.html">
                             add_extension.css
                         </a>
@@ -1619,6 +1634,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_footer.html.html">
+                            email_footer.html
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_not_onboarded.html.html">
                             email_not_onboarded.html
                         </a>
@@ -1626,11 +1646,6 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_private_file_upload.html.html">
                             email_private_file_upload.html
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_request_info.html.html">
-                            email_request_info.html
                         </a>
                     </li>
                     <li>
@@ -3239,6 +3254,7 @@
 
                     <p>
 <!-- Include the code review here! -->
+The JS file handles uploading files in chunks and checking status of the upload. In this file, file deletion is also handled.
                     </p>
                 </details>
 
@@ -3269,6 +3285,53 @@
 
                     <p>
 <!-- Include the extracted documentation here! -->
+
+function bindFileUpload(target,
+<br>&emsp;    /*
+<br>&emsp;    Binds jquery file upload to the element identified by 'target'
+<br>
+<br>&emsp;    @param {string} target - jquery selector string (ex. "#fileupload")
+<br>&emsp;    @param {string} request_id - FOIL request id
+<br>&emsp;    @param {selector} duplicateFileModal - jQuery selector for duplicate file alert modal
+<br>&emsp;    @param {bool} for_update - editing a file?
+<br>&emsp;    @param {int} response_id - response id of file being replaced
+<br>&emsp;    @param {string} uploadTemplateId - jquery file upload uploadTemplateId
+<br>&emsp;    @param {string} downloadTemplateId - jquery file upload downloadTemplateId
+<br>&emsp;    @param {selector} nextButton - jquery selector for next button of file response workflow
+<br>&emsp;    */
+<br>&emsp;&emsp;        chunksend: function (e, data) {
+<br>&emsp;&emsp;        chunkdone: function (e, data) {
+<br>&emsp;&emsp;        chunkfail: function (e, data) {
+<br>&emsp;    }).bind("fileuploaddone", function (e, data) {
+<br>&emsp;    }).bind("fileuploadadd", function (e, data) {
+<br>&emsp;&emsp;&emsp;            $(this).fileupload("option").filesContainer.children().each(function () {
+<br>&emsp;&emsp;&emsp;            data.files = $.map(data.files, function (file, i) {
+<br>&emsp;    }).bind("fileuploadstarted", function (e, data) {
+<br>function encodeName(name) {
+<br>&emsp;    /*
+<br>&emsp;    Returns an encoded (base64 without padding) version of 'name' intended
+<br>&emsp;    for use as/in an html id attribute or for use in a url.
+<br>&emsp;    Padding is removed because '=' is an invalid character for an html id
+<br>&emsp;    and it is reserved character for urls.
+<br>&emsp;     */
+<br>function pollUploadStatus(upload_filename, htmlId, request_id, for_update, nextButton) {
+<br>&emsp;    /*
+<br>&emsp;    Sends a request to the upload status endpoint
+<br>&emsp;    every 2 seconds until it receives a message indicating
+<br>&emsp;    the upload has completed or until it receives an error
+<br>&emsp;    message, then updates the download template.
+<br>&emsp;     */
+<br>&emsp;&emsp;        success: function(response) {
+<br>function deleteUpload(request_id,
+<br>&emsp;    /*
+<br>&emsp;    Send a DELETE request to the upload endpoint.
+<br>&emsp;     */
+<br>function setRemoveBtn(request_id, button, sendDelete, for_update) {
+<br>&emsp;    /*
+<br>&emsp;    Reveal remove button and set its click event handler.
+<br>&emsp;     */
+<br>&emsp;    button.click(function(e) {
+<br>
                    </p>
                 </details>
 

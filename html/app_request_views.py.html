@@ -1225,6 +1225,21 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_acknowledgment.css.html">
+                            add_acknowledgment.css
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_closing.css.html">
+                            add_closing.css
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_denial.css.html">
+                            add_denial.css
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_static_styles_add_extension.css.html">
                             add_extension.css
                         </a>
@@ -1619,6 +1634,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_footer.html.html">
+                            email_footer.html
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_not_onboarded.html.html">
                             email_not_onboarded.html
                         </a>
@@ -1626,11 +1646,6 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_private_file_upload.html.html">
                             email_private_file_upload.html
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_request_info.html.html">
-                            email_request_info.html
                         </a>
                     </li>
                     <li>
@@ -3239,6 +3254,89 @@
 
                     <p>
 <!-- Include the code review here! -->
+<p>
+This module handles the request URL endpoints for the OpenRecords application.
+</p>
+
+<p>
+There are routes defined for the following:
+</p>
+
+<ul>
+<li>
+Create a new FOIL request sends a confirmation email after the Requests object
+is created.
+</li>
+
+<li>
+Testing purposes of the view a request back until backend functionality is
+implemented.
+</li>
+
+<li>
+Handle messaging to the requester if they submitted a request to a non-portal
+agency.
+</li>
+
+<li>
+Get selected category value from the request body and generate a list of
+sorted agencies from the category.
+</li>
+
+<li>
+Handle contacting the agency about a request as a requester.
+</li>
+</ul>
+
+<h3>
+Code Issues
+</h3>
+
+	<ul class="review">
+		<li>
+			The request route decorator should be explained so that someone coming to this code
+			for the first time knows what it is doing. (One comment for first decorator is enough.)
+		</li>
+
+		<li>
+			Function <code>new()</code> is very long (over 100 lines). Should be broken up
+			into smaller units for readability and unit testing.
+		</li>
+
+		<li>
+			<code>view_all()</code> has no docstring. Also, why does it need a holiday list?
+			Not saying it doesn't, just saying it is not explained.
+		</li>
+
+		<li>
+			This <code>if</code> is hard to follow because huge:
+			<pre>
+			<code>
+		if current_user in current_request.agency_users \
+            or current_request.agency_request_summary \
+            and (current_request.requester == current_user
+                 and current_request.status == request_status.CLOSED
+                 and not current_request.privacy['agency_request_summary']
+                 or current_request.status == request_status.CLOSED
+                 and current_request.agency_request_summary_release_date
+                 and current_request.agency_request_summary_release_date
+                 &lt; datetime.utcnow()
+                 and not current_request.privacy['agency_request_summary']):
+			</code>
+			</pre>
+			Recommend writing a predicate like <code>show_agency_req()</code>
+			and placing all conditions in there.
+		</li>
+
+		<li>
+			Lines 308-329 should be replaced by an attempt to get the
+			value from the dictionary with a default of <code>False</code>.
+			(<a href="https://docs.quantifiedcode.com/python-anti-patterns/correctness/not_using_get_to_return_a_default_value_from_a_dictionary.html">See here</a>.) 
+		</li>
+
+	</ul>
+
+
                     </p>
                 </details>
 
@@ -3250,7 +3348,13 @@
                     <p>
                         <pre>
 <!-- Include the linting report here! -->
-No problems to report
+app/request/views.py:197:121: E501 line too long (128 > 120 characters)
+app/request/views.py:244:16: E713 test for membership should be 'not in'
+app/request/views.py:341:121: E501 line too long (135 > 120 characters)
+app/request/views.py:375:37: E251 unexpected spaces around keyword / parameter equals
+app/request/views.py:375:39: E251 unexpected spaces around keyword / parameter equals
+app/request/views.py:418:80: W291 trailing whitespace
+app/request/views.py:419:13: W291 trailing whitespace
                         </pre>
                    </p>
                 </details>
@@ -3262,6 +3366,8 @@ No problems to report
 
                     <p>
 <!-- Include the extracted documentation here! -->
+
+</br>.. module:: request.views.</br></br>:synopsis: Handles the request URL endpoints for the OpenRecords application</br><hr><code>new():</code><br/></br>Create a new FOIL request</br>sends a confirmation email after the Requests object is created.</br></br>title: request title</br>description: request description</br>agency: agency selected for the request</br>submission: submission method for the request</br></br>:return: redirect to homepage on successful form validation</br>if form fields are missing or has improper values, backend error messages (WTForms) will appear</br><hr><code>view_all():</code><br/><hr><code>view(request_id):</code><br/></br>This function is for testing purposes of the view a request back until backend functionality is implemented.</br></br>:return: redirect to view request page</br><hr><code>non_portal_agency(agency_name):</code><br/></br>This function handles messaging to the requester if they submitted a request to a non-portal agency.</br></br>:return: redirect to non_portal_agency page.</br><hr><code>get_agencies_as_choices():</code><br/></br>Get selected category value from the request body and generate a list of sorted agencies from the category.</br></br>:return: list of agency choices</br><hr><code>contact_agency(request_id):</code><br/></br>This function handles contacting the agency about a request as a requester.</br>:return:</br>
                    </p>
                 </details>
 

@@ -1225,6 +1225,21 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_acknowledgment.css.html">
+                            add_acknowledgment.css
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_closing.css.html">
+                            add_closing.css
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_denial.css.html">
+                            add_denial.css
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_static_styles_add_extension.css.html">
                             add_extension.css
                         </a>
@@ -1619,6 +1634,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_footer.html.html">
+                            email_footer.html
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_not_onboarded.html.html">
                             email_not_onboarded.html
                         </a>
@@ -1626,11 +1646,6 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_private_file_upload.html.html">
                             email_private_file_upload.html
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_request_info.html.html">
-                            email_request_info.html
                         </a>
                     </li>
                     <li>
@@ -3239,6 +3254,7 @@
 
                     <p>
 <!-- Include the code review here! -->
+This CSS file contains styles for viewing all requests: open, closed, in-progress, due-soon, and overdue, as well as new requests. Styles are also set for advanced options.
                     </p>
                 </details>
 
@@ -3261,6 +3277,148 @@
 
                     <p>
 <!-- Include the extracted documentation here! -->
+
+div.row.search-row {
+<br>}
+<br><br>h1, h2, h3, h4, h5, h6 {
+<br>}
+<br><br>.helptext-wrapper > p {
+<br>}
+<br><br>button.helptext-button {
+<br>}
+<br><br>button.helptext-button:hover, button.helptext-button:focus {
+<br>}
+<br><br>button.helptext-button span[aria-hidden="true"] {
+<br>}
+<br><br>button.helptext-button span[aria-hidden="true"]::before {
+<br>}
+<br><br>button.helptext-button[aria-expanded="false"] span[aria-hidden="true"]::before {
+<br>}
+<br><br>button.helptext-button[aria-expanded="true"] span[aria-hidden="true"]::before {
+<br>}
+<br><br>button.helptext-button[aria-expanded="true"] {
+<br>}
+<br><br>button.btn-link {
+<br>}
+<br><br>button.btn-link::after {
+<br>}
+<br><br>button.btn-link[aria-expanded="true"]::after {
+<br>}
+<br><br>#advanced-options .h4 {
+<br>}
+<br><br>#advanced-options .fieldset {
+<br>}
+<br><br>#advanced-options div.checkbox .disabled {
+<br>}
+<br><br>#advanced-options div.checkbox .disabled::before {
+<br>}
+<br><br>div.search-results .searchResults-heading {
+<br>}
+<br><br>div.search-results .searchResults-heading h3 {
+<br>}
+<br><br>div.search-results .searchResults-heading h2, div.search-results .searchResults-heading h3 {
+<br>}
+<br><br>div.search-results .searchResults-heading div.table-legend {
+<br>}
+<br><br>div.search-results .searchResults-heading div.table-legend .legend-closed img {
+<br>}
+<br><br>div.search-results .searchResults-heading div.table-legend .legend-open img {
+<br>}
+<br><br>div.search-results .searchResults-heading div.table-legend .legend-progress img {
+<br>}
+<br><br>div.search-results .searchResults-heading div.table-legend .legend-overdue img {
+<br>}
+<br><br>div.search-results .searchResults-heading div.table-legend .legend-soon img {
+<br>}
+<br><br>div.search-results table thead {
+<br>}
+<br><br>div.search-results table thead th {
+<br>}
+<br><br>div.search-results table thead button {
+<br>}
+<br><br>div.search-results table thead button[data-sort-order="none"] span.glyphicon-arrow-up, div.search-results table thead button[data-sort-order="none"] span.glyphicon-arrow-down, div.search-results table thead button[data-sort-order="none"] span.sorted-desc, div.search-results table thead button[data-sort-order="none"] span.sorted-asc {
+<br>}
+<br><br>div.search-results table thead button[data-sort-order="asc"] span.glyphicon-arrow-down, div.search-results table thead button[data-sort-order="asc"] span.glyphicon-sort, div.search-results table thead button[data-sort-order="asc"] span.unsorted, div.search-results table thead button[data-sort-order="asc"] span.sorted-desc {
+<br>}
+<br><br>div.search-results table thead button[data-sort-order="desc"] span.unsorted, div.search-results table thead button[data-sort-order="desc"] span.sorted-asc, div.search-results table thead button[data-sort-order="desc"] span.glyphicon-arrow-up, div.search-results table thead button[data-sort-order="desc"] span.glyphicon-sort {
+<br>}
+<br><br>div.search-results table thead button span.glyphicon {
+<br>}
+<br><br>div.search-results table thead tr > *:first-child, div.search-results table tbody tr > *:first-child {
+<br>}
+<br><br>div.search-results table thead tr > *:first-child.open, div.search-results table tbody tr > *:first-child.open {
+<br>}
+<br><br>div.search-results table thead tr > *:first-child.closed, div.search-results table tbody tr > *:first-child.closed {
+<br>}
+<br><br>div.search-results table thead tr > *:first-child.soon, div.search-results table tbody tr > *:first-child.soon {
+<br>}
+<br><br>div.search-results table thead tr > *:first-child.progress, div.search-results table tbody tr > *:first-child.progress {
+<br>}
+<br><br>div.search-results table thead tr > *:first-child.overdue, div.search-results table tbody tr > *:first-child.overdue {
+<br>}
+<br><br>div.search-results table thead tr > *:first-child:not([class]), div.search-results table tbody tr > *:first-child:not([class]) {
+<br>}
+<br><br>div.search-results .pagination {
+<br>}
+<br><br>div.search-results .pagination .pagination-wrap {
+<br>}
+<br><br>div.search-results .pagination .pagination-wrap span {
+<br>}
+<br><br>div.search-results .pagination .newrecord-wrap {
+<br>}
+<br><br>@media (max-width: 600px) {
+<br>&emsp;    div.search-results .pagination .newrecord-wrap, div.search-results .pagination .pagination-wrap {
+<br>&emsp;    }
+<br><br>&emsp;    div.search-results .pagination .pagination-wrap {
+<br>&emsp;    }
+<br><br>}
+<br><br>.date-required {
+<br>}
+<br><br>.errorResults {
+<br>}
+<br><br>#advanced-options div:last-child {
+<br>}
+<br><br>.ui-datepicker {
+<br>}
+<br><br>.advanced-search-col {
+<br>}
+<br><br>.search-load-container {
+<br>}
+<br><br>.search-loader {
+<br>&emsp;    /* Safari */
+<br>}
+<br><br>/* Safari */
+<br>@-webkit-keyframes spin {
+<br>&emsp;    0% {
+<br>&emsp;    }
+<br><br>&emsp;    100% {
+<br>&emsp;    }
+<br><br>}
+<br><br>@keyframes spin {
+<br>&emsp;    0% {
+<br>&emsp;    }
+<br><br>&emsp;    100% {
+<br>&emsp;    }
+<br><br>}
+<br><br>#query {
+<br>&emsp;    /*width: 773px;*/
+<br>}
+<br><br>.search-results {
+<br>}
+<br><br>.agency-advanced-options {
+<br>}
+<br><br>.date-filter-section {
+<br>}
+<br><br>.date-filter {
+<br>}
+<br><br>.btn-link.clear-search-agency {
+<br>}
+<br><br>.btn-link.clear-search-public {
+<br>}
+<br><br>input#query {
+<br>}
+<br><br>input#query:focus {
+<br>}<br><br>
                    </p>
                 </details>
 

@@ -1225,6 +1225,21 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_acknowledgment.css.html">
+                            add_acknowledgment.css
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_closing.css.html">
+                            add_closing.css
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_denial.css.html">
+                            add_denial.css
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_static_styles_add_extension.css.html">
                             add_extension.css
                         </a>
@@ -1619,6 +1634,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_footer.html.html">
+                            email_footer.html
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_not_onboarded.html.html">
                             email_not_onboarded.html
                         </a>
@@ -1626,11 +1646,6 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_private_file_upload.html.html">
                             email_private_file_upload.html
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_request_info.html.html">
-                            email_request_info.html
                         </a>
                     </li>
                     <li>
@@ -3239,6 +3254,25 @@
 
                     <p>
 <!-- Include the code review here! -->
+The file handles the response URL endpoints for the OpenRecords application.
+The routes defined are with respect to a 'request_id' for permissions to
+add file, add note, acknowledge, deny, close, reopen, extend, add link, add
+offline instructions, generate envelopes and return email.
+<br>
+Other routes defined are to:
+<br>
+<br>
+Retrieve a list of dates that are holidays in the specified year,
+<br>
+Supports File Responses,
+<br>
+Return letter template for the generate letter workflow step,
+<br>
+Return a PDF envelope as an attachment,
+<br>
+Generate a response letter,
+<br>
+Return a PDF letter as an attachment.
                     </p>
                 </details>
 
@@ -3250,7 +3284,8 @@
                     <p>
                         <pre>
 <!-- Include the linting report here! -->
-No problems to report
+app/response/views.py:718:25: F811 redefinition of unused 'remove' from line 699
+app/response/views.py:787:33: E251 unexpected spaces around keyword / parameter equals
                         </pre>
                    </p>
                 </details>
@@ -3262,6 +3297,8 @@ No problems to report
 
                     <p>
 <!-- Include the extracted documentation here! -->
+
+</br>.. module:: response.views.</br></br>:synopsis: Handles the response URL endpoints for the OpenRecords application</br><hr><code>response_note(request_id):</code><br/></br>Note response endpoint that takes in the content of a note for a specific request from the frontend.</br>Check if required data from form is retrieved.</br>Flash error message if required form data is missing.</br>Call add_link to process the extension form data.</br></br>:param request_id: FOIL request ID for the specific note.</br>:return: redirect to view request page</br><hr><code>response_file(request_id):</code><br/></br>File response endpoint that takes in the metadata of a file for a specific request from the frontend.</br>Call process_upload_data to process the uploaded file form data.</br>Pass data into helper function in response.utils to update changes into database.</br>Send email notification to requester and bcc agency users if privacy is release.</br>Render specific template and send email notification bcc agency users if privacy is private.</br></br>:param request_id: FOIL request ID for the specific file.</br></br>:return: redirect to view request page</br><hr><code>response_acknowledgment(request_id):</code><br/><hr><code>response_denial(request_id):</code><br/><hr><code>response_closing(request_id):</code><br/></br>Endpoint for closing a request that takes in form data from the front end.</br>Required form data include:</br>-reasons: a list of closing reasons</br>-email-summary: string email body from the confirmation page</br></br>:param request_id: FOIL request ID</br></br>:return: redirect to view request page</br><hr><code>response_reopening(request_id):</code><br/></br>Endpoint for reopening a request that takes in form data from the frontend.</br>Required form data include:</br>-date: string of new date of request completion</br>-tz-name: name of the timezone the user is accessing the application in</br>-email-summary: string email body from the confirmation page</br></br>:param request_id: FOIL request ID</br></br>:return: redirect to view request page</br><hr><code>response_extension(request_id):</code><br/></br>Extension response endpoint that takes in the metadata of an extension for a specific request from the frontend.</br>Check if required data from form is retrieved.</br>Flash error message if required form data is missing.</br>Call add_extension to process the extension form data.</br></br>:param request_id: FOIL request ID for the specific extension.</br></br>:return: redirect to view request page</br><hr><code>response_link(request_id):</code><br/></br>Link response endpoint that takes in the metadata of a link for a specific request from the frontend.</br>Check if required data from form is retrieved.</br>Flash error message if required form data is missing.</br>Call add_link to process the extension form data.</br></br>:param request_id: FOIL request ID for the specific link.</br></br>:return: redirect to view request page</br><hr><code>response_instructions(request_id):</code><br/></br>Instruction response endpoint that takes in from the frontend, the content of a instruction for a specific request.</br>Check if required data from form is retrieved.</br>Flash error message if required form data is missing.</br>Call add_instruction to process the extension form data.</br></br>:param request_id: FOIL request ID for the specific note.</br></br>:return: redirect to view request page</br><hr><code>response_generate_envelope():</code><br/></br>Create an Envelope for the Request.</br>:return: redirect to view request page</br><hr><code>response_email():</code><br/></br>Return email template for a particular response workflow step.</br></br>Request Parameters:</br>- request_id: FOIL request ID</br>- type: response type</br>- privacy: selected privacy option</br>- extension: data for populating html template</br>- length: selected value of extension length (-1, 20, 30, 60, 90)</br>- custom_due_date: new custom due date of request (default is current request due_date)</br>- reason: reason for extension</br>- link: data for populating html template</br>- url: url link inputted by user from front end</br>- offline_instructions: data for populating html template</br>- instruction: json object with key and values of content and privacy</br>- note: data for populating html template</br>- note: json object with key and values of content and privacy</br>- file: data for populating html template</br>- files: json object with key and values of filename and privacy</br>- email_content: (on second next click) html template of specific response which may include edits</br></br>Ex:</br>{</br>request_id": "FOIL-XXX",</br>type": "extension",</br>extension": {</br>length": "20",</br>custom_due_date": "2016-11-14",</br>reason": "We need more time to process your request.</br>}</br>email_content": HTML</br>}</br></br>:return: the json response and HTTP status code</br>Ex1:</br>{</br>template": HTML rendered response template,</br>header": "The following will be emailed to all associated participants:</br>}</br></br>Ex2:</br>{</br>error": "No changes detected.</br>}</br><hr><code>response_sms(request_id):</code><br/><hr><code>response_push(request_id):</code><br/><hr><code>response_visiblity(request_id):</code><br/><hr><code>patch(response_id):</code><br/></br>Edit a response's fields and send a notification email.</br></br>Expects a request body containing field names and updated values.</br>Ex:</br>{</br>privacy': 'release_public',</br>title': 'new title</br>filename': 'uploaded_file_name.ext'  # REQUIRED for updates to Files metadata</br>}</br>Ex (for delete):</br>{</br>deleted': true,</br>confirmation': string checked against 'DELETE</br>if the strings do not match, the 'deleted' field will not be updated</br>}</br></br>:return: on success:</br>{</br>old': { original attributes and their values }</br>new': { updated attributes and their values }</br>}</br></br><hr><code>get_yearly_holidays(year):</code><br/></br>Retrieve a list of dates that are holidays in the specified year</br></br>:param year: 4-digit year.</br></br>:return: List of strings ["YYYY-MM-DD"]</br><hr><code>get_response_content(response_id):</code><br/></br>Currently only supports File Responses.</br></br>Request Parameters:</br>- token: (optional) ephemeral access token</br></br>:return: response file contents or</br>redirect to login if user not authenticated and no token provided or</br>400 error if response/file not found</br><hr><code>remove(resp):</code><br/><hr><code>remove(resp):</code><br/><hr><code>remove(resp):</code><br/><hr><code>response_generate_letter():</code><br/></br>Return letter template for the generate letter workflow step.</br></br>Request Parameters:</br>- request_id: FOIL request ID</br>- agency_ein: Agency ID (for the specified request)</br>- letter_template_id: Letter Template unique identifier</br></br>Ex:</br>{</br>request_id": "FOIL-XXX",</br>letter_template_id": 10</br>}</br></br>:return: the json response and HTTP status code</br>Ex1:</br>{</br>template": HTML rendered letter template,</br>header": "The following letter will be generated as a PDF:</br>}</br><hr><code>response_get_envelope(request_id, response_id):</code><br/></br>Return a PDF envelope as an attachment.</br></br>:param request_id: FOIL Request ID for which the letter exists</br>:param response_id: Response ID for the letter.</br>:return: PDF Attachment.</br><hr><code>response_letter(request_id):</code><br/></br></br>:param request_id:</br>:return:</br><hr><code>response_get_letter(request_id, response_id):</code><br/></br>Return a PDF letter as an attachment.</br></br>:param request_id: FOIL Request ID for which the letter exists</br>:param response_id: Response ID for the letter.</br>:return: PDF Attachment.</br>
                    </p>
                 </details>
 

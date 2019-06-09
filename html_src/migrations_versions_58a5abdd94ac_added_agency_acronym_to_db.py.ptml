@@ -29,6 +29,7 @@
 
                     <p>
 <!-- Include the code review here! -->
+<!--include templates/migrations_versions_58a5abdd94ac_added_agency_acronym_to_db.py_hw.txt -->
                     </p>
                 </details>
 
@@ -52,6 +53,7 @@
 
                     <p>
 <!-- Include the extracted documentation here! -->
+<!--include templates/migrations_versions_58a5abdd94ac_added_agency_acronym_to_db.py_ex.txt -->
                    </p>
                 </details>
 

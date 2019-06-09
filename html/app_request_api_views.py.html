@@ -1225,6 +1225,21 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_acknowledgment.css.html">
+                            add_acknowledgment.css
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_closing.css.html">
+                            add_closing.css
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_denial.css.html">
+                            add_denial.css
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_static_styles_add_extension.css.html">
                             add_extension.css
                         </a>
@@ -1619,6 +1634,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_footer.html.html">
+                            email_footer.html
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_not_onboarded.html.html">
                             email_not_onboarded.html
                         </a>
@@ -1626,11 +1646,6 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_private_file_upload.html.html">
                             email_private_file_upload.html
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_request_info.html.html">
-                            email_request_info.html
                         </a>
                     </li>
                     <li>
@@ -3239,6 +3254,78 @@
 
                     <p>
 <!-- Include the code review here! -->
+The file is responsible to handle the API request URL endpoints for the
+OpenRecords application.
+<br>
+The routes are defined to:
+<br>
+<br>
+Edits the privacy privacy options of a request's title and agency request
+summary,
+<br>
+Edits the title and agency request summary of a FOIL request through an API
+PUT method,
+<br>
+Returns a set of events (id, type, and template), ordered by date descending,
+and starting from a specific index,
+<br>
+Returns a set of responses (id, type, and template), ordered by date
+descending, and starting from a specified index.
+
+<h3>
+Code Issues
+</h3>
+
+	<ul class="review">
+		<li>
+    The function <code>get_request_events()</code> is almost 100 lines and the
+    <code>if</code> loop being long is difficult to follow since it is in a
+    <code>for</code> loop.
+
+		</li>
+
+    <li>
+    Similary, function <code>get_request_responses()</code> is also too long
+    with a lot of repetitive parameters in functions like <code>filter()</code>,
+     and <code>is_allowed()</code>.
+		<br>
+    Example:
+    Function <code>is_allowed()</code> is called 6 times in
+    <code>get_request_responses()</code> with only one variant -
+    <code>permission_type</code> (called in another function
+    <code>get_permission()</code> call).
+    <br>
+    A separate function can be made which is passed just the
+    <code>permission_type</code> which will inturn call <code>is_allowed</code>
+    function which will fetch from <code>permission_utils.py</code>.
+    This will reduce the number of lines of
+    <code>get_request_responses()</code>.
+		<br>
+		<br>
+
+    <pre>
+    <code>
+    edit_response_permission=is_allowed(user=current_user,
+                                        request_id=response.request_id,
+                                        permission=get_permission(permission_type='edit',
+                                                                  response_type=type(response))),
+    delete_response_permission=is_allowed(user=current_user,
+                                          request_id=response.request_id,
+                                          permission=get_permission(permission_type='delete',
+                                                                    response_type=type(response))),
+    edit_response_privacy_permission=is_allowed(user=current_user,
+                                                request_id=response.request_id,
+                                                permission=get_permission(
+                                                    permission_type='privacy',
+                                                    response_type=type(
+                                                        response))),
+
+    </code>
+    </pre>
+
+		</li>
+
+  </ul>
                     </p>
                 </details>
 
@@ -3250,7 +3337,9 @@
                     <p>
                         <pre>
 <!-- Include the linting report here! -->
-No problems to report
+app/request/api/views.py:221:31: E712 comparison to False should be 'if cond is False:' or 'if not cond:'
+app/request/api/views.py:232:31: E712 comparison to False should be 'if cond is False:' or 'if not cond:'
+app/request/api/views.py:245:31: E712 comparison to False should be 'if cond is False:' or 'if not cond:'
                         </pre>
                    </p>
                 </details>
@@ -3262,6 +3351,8 @@ No problems to report
 
                     <p>
 <!-- Include the extracted documentation here! -->
+
+</br>.. module:: api.request.views.</br></br>:synopsis: Handles the API request URL endpoints for the OpenRecords application</br><hr><code>edit_privacy():</code><br/></br>Edits the privacy privacy options of a request's title and agency request summary.</br>Retrieves updated privacy options from AJAX call on view_request page and stores changes into database.</br></br>:return: JSON Response with updated title and agency request summary privacy options</br><hr><code>edit_request_info():</code><br/></br>Edits the title and agency request summary of a FOIL request through an API PUT method.</br>Retrieves updated edited content from AJAX call on view_request page and stores changes into database.</br></br>:return: JSON Response with updated content: either request title or agency request summary)</br><hr><code>get_request_events():</code><br/></br>Returns a set of events (id, type, and template),</br>ordered by date descending, and starting from a specific index.</br></br>Request parameters:</br>- start: (int) starting index</br>- request_id: FOIL request id</br>- with_template: (default: False) include html rows for each event</br><hr><code>get_request_responses():</code><br/></br>Returns a set of responses (id, type, and template),</br>ordered by date descending, and starting from a specified index.</br>Request parameters:</br>- start: (int) starting index</br>- request_id: FOIL request id</br>- with_template: (default: False) include html (rows and modals) for each response</br>
                    </p>
                 </details>
 

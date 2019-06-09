@@ -1225,6 +1225,21 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_acknowledgment.css.html">
+                            add_acknowledgment.css
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_closing.css.html">
+                            add_closing.css
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_denial.css.html">
+                            add_denial.css
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_static_styles_add_extension.css.html">
                             add_extension.css
                         </a>
@@ -1619,6 +1634,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_footer.html.html">
+                            email_footer.html
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_not_onboarded.html.html">
                             email_not_onboarded.html
                         </a>
@@ -1626,11 +1646,6 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_private_file_upload.html.html">
                             email_private_file_upload.html
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_request_info.html.html">
-                            email_request_info.html
                         </a>
                     </li>
                     <li>
@@ -3239,6 +3254,17 @@
 
                     <p>
 <!-- Include the code review here! -->
+The function in this file uses Parsley to add a validator named maxFileSize and assigns the validator a type and an error message.
+
+<h3>
+Code Issues
+</h3>
+
+<ul class="review">
+  <li>
+  The custom validator for checking max file size needs a comment specifying the purpose of that validator. 
+  </li>
+</ul>
                     </p>
                 </details>
 
@@ -3266,6 +3292,16 @@
 
                     <p>
 <!-- Include the extracted documentation here! -->
+
+/**
+<br> * Created by atan on 9/27/16.
+<br> */
+<br>&emsp;    validateString: function (_value, maxSize, parsleyInstance) {
+<br>&emsp;    validateString: function (value) {
+<br>&emsp;    validateString: function (value) {
+<br>&emsp;    validateString: function (value) {
+<br>&emsp;    validateString: function (value) {
+<br>
                    </p>
                 </details>
 

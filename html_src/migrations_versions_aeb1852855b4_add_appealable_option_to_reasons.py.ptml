@@ -29,6 +29,7 @@
 
                     <p>
 <!-- Include the code review here! -->
+<!--include templates/migrations_versions_aeb1852855b4_add_appealable_option_to_reasons.py_hw.txt -->
                     </p>
                 </details>
 
@@ -52,6 +53,7 @@
 
                     <p>
 <!-- Include the extracted documentation here! -->
+<!--include templates/migrations_versions_aeb1852855b4_add_appealable_option_to_reasons.py_ex.txt -->
                    </p>
                 </details>
 

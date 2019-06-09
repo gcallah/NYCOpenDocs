@@ -7,7 +7,7 @@ CLASS_RE = "(^[ ]*class[ ]+.*)"
 class_match = re.compile(CLASS_RE)
 
 def read_file_names():
-    names = open("templates/menu_input.txt", "r")
+    names = open("templates/collect_file_names.txt", "r")
     # when echo is called, all the names were concatenated into
     # a single string
     file_names = names.read().split()

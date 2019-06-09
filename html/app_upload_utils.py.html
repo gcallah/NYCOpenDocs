@@ -1225,6 +1225,21 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_acknowledgment.css.html">
+                            add_acknowledgment.css
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_closing.css.html">
+                            add_closing.css
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_denial.css.html">
+                            add_denial.css
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_static_styles_add_extension.css.html">
                             add_extension.css
                         </a>
@@ -1619,6 +1634,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_footer.html.html">
+                            email_footer.html
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_not_onboarded.html.html">
                             email_not_onboarded.html
                         </a>
@@ -1626,11 +1646,6 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_private_file_upload.html.html">
                             email_private_file_upload.html
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_request_info.html.html">
-                            email_request_info.html
                         </a>
                     </li>
                     <li>
@@ -3239,6 +3254,22 @@
 
                     <p>
 <!-- Include the code review here! -->
+This file contains few helper functions for uploads like
+for parsing content range, checking for an existing uploaded file,
+validating the mime type of a file and returning a formatted key for an upload.
+<br>
+<br>
+Class VirusDetectedException raises and exception when scanner detects
+an infected file.
+<br>
+Celery is an asynchronous task queue/job queue based on distributed
+message passing. It is focused on real-time operation,
+but supports scheduling as well.
+<br>Functions are defined for scanning an uploaded file and moving
+the clean file to the data directory.
+<br>Function scan_file() scans for viruses using McAfee Virus Scan.
+If an infected file is detected, removes the file and
+raises VirusDetectedException.
                     </p>
                 </details>
 
@@ -3250,7 +3281,7 @@
                     <p>
                         <pre>
 <!-- Include the linting report here! -->
-No problems to report
+app/upload/utils.py:63:27: E712 comparison to False should be 'if cond is False:' or 'if not cond:'
                         </pre>
                    </p>
                 </details>
@@ -3262,6 +3293,8 @@ No problems to report
 
                     <p>
 <!-- Include the extracted documentation here! -->
+
+</br>.. module:: upload.utils</br></br>:synopsis: Helper functions for uploads</br><hr><code>parse_content_range(header):</code><br/></br>Extracts the starting byte position and resource length.</br></br>Content-Range = "Content-Range" ":" content-range-spec</br></br>content-range-spec      = byte-content-range-spec</br>byte-content-range-spec = bytes-unit SP</br>byte-range-resp-spec "/</br>( instance-length | "*" )</br>byte-range-resp-spec    = (first-byte-pos "-" last-byte-pos)</br>| "*</br>instance-length         = 1*DIGIT</br></br>:param header: the rhs of the content-range header</br>:return: the first-byte-pos and instance-length</br><hr><code>upload_exists(request_id, filename, response_id=None):</code><br/></br>Checks for an existing uploaded file. If a response id</br>is given, the file name associated with that response is ignored.</br></br>:param request_id: id of request associated with the upload</br>:param filename: the name of the uploaded file</br>:param response_id: id of response associated with the upload</br>:return: whether the file exists or not</br><hr><code>is_valid_file_type(obj):</code><br/></br>Validates the mime type of a file.</br>Content type header is ignored.</br></br>:param obj: the file storage object to check</br>:type obj: werkzeug.datastructures.FileStorage</br></br>:return: (whether the mime type is allowed or not,</br>the mime type)</br><hr><code>get_upload_key(request_id, upload_filename, for_update=False):</code><br/></br>Returns a formatted key for an upload.</br>Intended for tracking the status of an upload.</br></br>:param request_id: id of the request associated with the upload</br>:param upload_filename: the name of the uploaded file</br>:param for_update: will the uploaded file replace an existing file?</br>(this is required to make keys unique, as the uploaded file</br>may share the same name as the existing file)</br></br>:return: the formatted key</br>Ex.</br>FOIL-ID_filename.ext_new</br>FOIL_ID_filename.ext_update</br><hr><code>VirusDetectedException(Exception):</code><br/></br>Raise when scanner detects an infected file.</br><hr><code>__init__(self, filename):</code><br/><hr><code>scan_and_complete_upload(request_id, filepath, is_update=False, response_id=None):</code><br/></br>Scans an uploaded file (see scan_file) and moves</br>it to the data directory if it is clean. If is_update is set,</br>the file will also be placed under the 'updated' directory.</br>Updates redis accordingly.</br></br>:param request_id: id of request associated with the upload</br>:param filepath: path to uploaded and quarantined file</br>:param is_update: will the file replace an existing one?</br>:param response_id: id of response associated with the upload</br><hr><code>scan_file(filepath):</code><br/></br>Scans a file for viruses using McAfee Virus Scan. If an infected</br>file is detected, removes the file and raises VirusDetectedException.</br></br>:param filepath: path of file to scan</br>
                    </p>
                 </details>
 

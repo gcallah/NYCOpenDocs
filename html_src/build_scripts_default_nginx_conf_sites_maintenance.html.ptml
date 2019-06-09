@@ -29,6 +29,7 @@
 
                     <p>
 <!-- Include the code review here! -->
+<!--include templates/build_scripts_default_nginx_conf_sites_maintenance.html_hw.txt -->
                     </p>
                 </details>
 
@@ -51,6 +52,7 @@
 
                     <p>
 <!-- Include the extracted documentation here! -->
+<!--include templates/build_scripts_default_nginx_conf_sites_maintenance.html_ex.txt -->
                    </p>
                 </details>
 

@@ -29,6 +29,7 @@
 
                     <p>
 <!-- Include the code review here! -->
+<!--include templates/app_constants_bulk_updates.py_hw.txt -->
                     </p>
                 </details>
 
@@ -52,6 +53,7 @@
 
                     <p>
 <!-- Include the extracted documentation here! -->
+<!--include templates/app_constants_bulk_updates.py_ex.txt -->
                    </p>
                 </details>
 

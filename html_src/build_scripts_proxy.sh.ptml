@@ -29,6 +29,7 @@
 
                     <p>
 <!-- Include the code review here! -->
+<!--include templates/build_scripts_proxy.sh_hw.txt -->
                     </p>
                 </details>
 
@@ -51,6 +52,7 @@
 
                     <p>
 <!-- Include the extracted documentation here! -->
+<!--include templates/build_scripts_proxy.sh_ex.txt -->
                    </p>
                 </details>
 

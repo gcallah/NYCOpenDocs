@@ -1225,6 +1225,21 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_acknowledgment.css.html">
+                            add_acknowledgment.css
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_closing.css.html">
+                            add_closing.css
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_static_styles_add_denial.css.html">
+                            add_denial.css
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_static_styles_add_extension.css.html">
                             add_extension.css
                         </a>
@@ -1619,6 +1634,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_footer.html.html">
+                            email_footer.html
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_not_onboarded.html.html">
                             email_not_onboarded.html
                         </a>
@@ -1626,11 +1646,6 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_private_file_upload.html.html">
                             email_private_file_upload.html
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_request_info.html.html">
-                            email_request_info.html
                         </a>
                     </li>
                     <li>
@@ -3239,6 +3254,53 @@
 
                     <p>
 <!-- Include the code review here! -->
+This file contains functions for sending emails to a contact and for sending emails with attachments.
+The file also contains a function to return a list of emails of admins, users, and the agency default email.
+
+<br><br>
+Functions explanation:
+<br>
+'send_email(subject, to=list(), cc=list(), bcc=list(), template=None, email_content=None, **kwargs)'
+<br>
+This function sends asynchronous emails for the application by taking arguments from the frontend.
+<br>
+<br>
+'get_agency_emails(request_id, admins_only=False)'
+<br>
+It gets a list of the agency emails (assigned users and default email).
+It returns a list of agency emails or ['agency@email.com'] (for testing) using
+parameters FOIL request ID and the return list of agency admin emails.
+
+<h3>
+Code Issues
+</h3>
+
+<ul class="review">
+  <li>
+  Missing docstring for <code>send_async_email(msg)</code>
+  </li>
+  <li>
+  Missing docstring for <code>send_contact_email(subject, recipients, body, sender)</code>
+  </li>
+
+  <li>
+  Line 53 uses <code>assert</code>.
+  <br>
+  It was discovered that some projects used assert to enforce interface
+  constraints. However, assert is removed with compiling to optimized byte
+  code (python -o producing *.pyo files). This caused various protections
+  to be removed. The use of assert is also considered as general bad practice
+  in OpenStack codebases.
+  <p>
+  Instead a simple if condition can be used.
+  <code>
+  if not condition:
+      raise AssertionError()
+  </code>
+  </p>
+  </li>
+
+</ul>
                     </p>
                 </details>
 
@@ -3262,6 +3324,8 @@ No problems to report
 
                     <p>
 <!-- Include the extracted documentation here! -->
+
+</br>app.lib.email_utils</br>~~~~~~~~~~~~~~~~</br></br>Implements e-mail notifications for OpenRecords. Flask-mail is a dependency, and the following environment variables</br>need to be set in order for this to work: (Currently using Fake SMTP for testing)</br>MAIL_SERVER: 'localhost</br>MAIL_PORT: 2500</br>MAIL_USE_TLS: FALSE</br>MAIL_USERNAME: os.environ.get('MAIL_USERNAME')</br>MAIL_PASSWORD: os.environ.get('MAIL_PASSWORD')</br>DEFAULT_MAIL_SENDER: 'Records Admin <openrecords@records.nyc.gov></br></br><hr><code>send_async_email(msg):</code><br/><hr><code>send_contact_email(subject, recipients, body, sender):</code><br/><hr><code>send_email(subject, to=list(), cc=list(), bcc=list(), template=None, email_content=None, **kwargs):</code><br/></br>Function that sends asynchronous emails for the application.</br>Takes in arguments from the frontend.</br></br>:param to: Person(s) email is being sent to</br>:param cc: Person(s) being CC'ed on the email</br>:param bcc: Person(s) being BCC'ed on the email</br>:param subject: Subject of the email</br>:param template: HTML and TXT template of the email content</br>:param email_content: string of HTML email content that can be used as a message template</br>:param kwargs: Additional arguments the function may take in (ie: Message content)</br><hr><code>get_agency_emails(request_id, admins_only=False):</code><br/></br>Gets a list of the agency emails (assigned users and default email)</br></br>:param request_id: FOIL request ID to query UserRequests</br>:param admins_only: return list of agency admin emails only</br>:return: list of agency emails or ['agency@email.com'] (for testing)</br>
                    </p>
                 </details>
 

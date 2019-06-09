@@ -29,6 +29,7 @@
 
                     <p>
 <!-- Include the code review here! -->
+<!--include templates/migrations_versions_7e0434686370_added_custom_request_forms_table.py_hw.txt -->
                     </p>
                 </details>
 
@@ -52,6 +53,7 @@
 
                     <p>
 <!-- Include the extracted documentation here! -->
+<!--include templates/migrations_versions_7e0434686370_added_custom_request_forms_table.py_ex.txt -->
                    </p>
                 </details>
 

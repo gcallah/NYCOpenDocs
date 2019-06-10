@@ -16,7 +16,7 @@ and there are scripts included to put them in the right place.
 The entire build of the documentation system, from reading the GitHub repo to
 the final HTML pages, is controlled by a makefile
 [https://github.com/gcallah/NYCOpenDocs/blob/master/makefile]
-in the top-level directory. `make all` we build the system from the bottom up.
+in the top-level directory. `make all` will build the system from the bottom up.
 The build hierarchy is documented here:
 [https://github.com/gcallah/NYCOpenDocs/blob/master/NYCOpenDocsBuild.png]
 

@@ -6,8 +6,8 @@ PYTHON_LINT := $(shell find $(RECORDS_DIR) -name '*.py' -exec flake8 --max-line-
 PTML_DIR = html_src
 UTILS_DIR = utils
 HTML_DIR = html
-MENU_INP = $(TEMPLATE_DIR)/collect_file_namesut.txt
-MENU_INPUT = collect_file_namesut.txt
+MENU_INP = $(TEMPLATE_DIR)/collect_file_names.txt
+MENU_INPUT = collect_file_names.txt
 SITE_OUTLINE = $(TEMPLATE_DIR)/site_struct.txt
 NAV_BAR = $(TEMPLATE_DIR)/navbar.txt
 PTML_TEMPL = $(TEMPLATE_DIR)/template.ptml
@@ -26,6 +26,7 @@ requirements: FORCE
 	pip install flake8
 	# we need node also, but that's best installed from:
 	# https://nodejs.org/en/download/
+	npm install
 
 # update our submodules (utils and node_modules right now):
 submods: FORCE

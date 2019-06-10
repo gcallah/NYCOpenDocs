@@ -26,4 +26,22 @@ Code Issues
   <li>
   Missing docstring for <code>send_contact_email(subject, recipients, body, sender)</code>
   </li>
+
+  <li>
+  Line 53 uses <code>assert</code>.
+  <br>
+  It was discovered that some projects used assert to enforce interface
+  constraints. However, assert is removed with compiling to optimized byte
+  code (python -o producing *.pyo files). This caused various protections
+  to be removed. The use of assert is also considered as general bad practice
+  in OpenStack codebases.
+  <p>
+  Instead a simple if condition can be used.
+  <code>
+  if not condition:
+      raise AssertionError()
+  </code>
+  </p>
+  </li>
+
 </ul>

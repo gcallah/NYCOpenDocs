@@ -1,7 +1,1 @@
-migrations/versions/7e0434686370_added_custom_request_forms_table.py:13:1: E402 module level import not at top of file
-migrations/versions/7e0434686370_added_custom_request_forms_table.py:14:1: E402 module level import not at top of file
-migrations/versions/7e0434686370_added_custom_request_forms_table.py:15:1: E402 module level import not at top of file
-migrations/versions/7e0434686370_added_custom_request_forms_table.py:19:5: E266 too many leading '#' for block comment
-migrations/versions/7e0434686370_added_custom_request_forms_table.py:39:5: E266 too many leading '#' for block comment
-migrations/versions/7e0434686370_added_custom_request_forms_table.py:43:5: E266 too many leading '#' for block comment
-migrations/versions/7e0434686370_added_custom_request_forms_table.py:46:5: E266 too many leading '#' for block comment
+No problems to report

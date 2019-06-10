@@ -1,6 +1,1 @@
-migrations/versions/c7f05adcf7d9_added_point_of_contact.py:13:1: E402 module level import not at top of file
-migrations/versions/c7f05adcf7d9_added_point_of_contact.py:14:1: E402 module level import not at top of file
-migrations/versions/c7f05adcf7d9_added_point_of_contact.py:18:5: E266 too many leading '#' for block comment
-migrations/versions/c7f05adcf7d9_added_point_of_contact.py:22:5: E266 too many leading '#' for block comment
-migrations/versions/c7f05adcf7d9_added_point_of_contact.py:26:5: E266 too many leading '#' for block comment
-migrations/versions/c7f05adcf7d9_added_point_of_contact.py:28:5: E266 too many leading '#' for block comment
+No problems to report

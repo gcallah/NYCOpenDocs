@@ -1,6 +1,1 @@
-migrations/versions/b3c0c76ac2e6_add_envelope_functionality.py:13:1: E402 module level import not at top of file
-migrations/versions/b3c0c76ac2e6_add_envelope_functionality.py:14:1: E402 module level import not at top of file
-migrations/versions/b3c0c76ac2e6_add_envelope_functionality.py:18:5: E266 too many leading '#' for block comment
-migrations/versions/b3c0c76ac2e6_add_envelope_functionality.py:35:5: E266 too many leading '#' for block comment
-migrations/versions/b3c0c76ac2e6_add_envelope_functionality.py:39:5: E266 too many leading '#' for block comment
-migrations/versions/b3c0c76ac2e6_add_envelope_functionality.py:42:5: E266 too many leading '#' for block comment
+No problems to report

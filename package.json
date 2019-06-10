@@ -2,7 +2,7 @@
   "name": "nycopendocs",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": ".eslintrc.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/gcallah/NYCOpenDocs/issues"
   },
-  "homepage": "https://github.com/gcallah/NYCOpenDocs#readme"
+  "homepage": "https://github.com/gcallah/NYCOpenDocs#readme",
+  "dependencies": {
+    "eslint": "^5.16.0"
+  }
 }

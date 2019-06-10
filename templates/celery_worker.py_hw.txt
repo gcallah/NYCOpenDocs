@@ -1,0 +1,1 @@
+This file creates an application that allows celery tasks.

@@ -1,1 +1,5 @@
-No problems to report
+app/lib/onelogin/saml2/idp_metadata_parser.py:35:121: E501 line too long (132 > 120 characters)
+app/lib/onelogin/saml2/idp_metadata_parser.py:58:13: E722 do not use bare 'except'
+app/lib/onelogin/saml2/idp_metadata_parser.py:73:121: E501 line too long (132 > 120 characters)
+app/lib/onelogin/saml2/idp_metadata_parser.py:165:121: E501 line too long (176 > 120 characters)
+app/lib/onelogin/saml2/idp_metadata_parser.py:166:121: E501 line too long (176 > 120 characters)

@@ -75,9 +75,22 @@ Code Issues
 		<li>
 			Lines 308-329 should be replaced by an attempt to get the
 			value from the dictionary with a default of <code>False</code>.
-			(<a href="https://docs.quantifiedcode.com/python-anti-patterns/correctness/not_using_get_to_return_a_default_value_from_a_dictionary.html">See here</a>.) 
+			(<a href="https://docs.quantifiedcode.com/python-anti-patterns/correctness/not_using_get_to_return_a_default_value_from_a_dictionary.html">See here</a>.)
 		</li>
 
+		<li>
+	  Also, use of assert detected on line 225.
+	  The use of assert is also considered as general bad practice
+	  in OpenStack codebases.
+	  <p>
+	  Instead, a simple if condition can be used.
+	  <pre>
+	  <code>
+	  if not condition:
+	      raise AssertionError()
+	  </code>
+	  </pre>
+	  </p>
+	  </li>
+
 	</ul>
-
-

@@ -15,3 +15,15 @@ Function 'move(oldpath, newpath)' is used instead of 'rename' if,
 when using sftp, 'oldpath' represents a local file path and 'newpath' a remote path.
 <br><br>
 Function 'get_hash(path)' returns the sha1 hash of a file a string of hexadecimal digits.
+
+<h3>
+Code Issues
+</h3>
+
+<ul class="review">
+  <li>
+  Use of MD2, MD4, MD5, or SHA1 hash function is comparably insecure.
+  This can be avoided using SHA2 or SHA3 instead.
+  </li>
+
+</ul>

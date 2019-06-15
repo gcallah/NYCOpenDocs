@@ -295,6 +295,11 @@
                     </a>
                 </li>
                 <li>
+                    <a href="/NYCOpenDocs/html/app_constants_dates.py.html">
+                        dates.py
+                    </a>
+                </li>
+                <li>
                     <a href="/NYCOpenDocs/html/app_constants_determination_type.py.html">
                         determination_type.py
                     </a>
@@ -1225,21 +1230,6 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_acknowledgment.css.html">
-                            add_acknowledgment.css
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_closing.css.html">
-                            add_closing.css
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_denial.css.html">
-                            add_denial.css
-                        </a>
-                    </li>
-                    <li>
                         <a href="/NYCOpenDocs/html/app_static_styles_add_extension.css.html">
                             add_extension.css
                         </a>
@@ -1438,6 +1428,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_templates_admin_add_user.html.html">
+                            add_user.html
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_admin_main.html.html">
                             main.html
                         </a>
@@ -1574,6 +1569,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_agency_user_added.html.html">
+                            email_agency_user_added.html
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_agency_user_deactivated.html.html">
                             email_agency_user_deactivated.html
                         </a>
@@ -1634,11 +1634,6 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_footer.html.html">
-                            email_footer.html
-                        </a>
-                    </li>
-                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_not_onboarded.html.html">
                             email_not_onboarded.html
                         </a>
@@ -1646,6 +1641,11 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_private_file_upload.html.html">
                             email_private_file_upload.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_request_info.html.html">
+                            email_request_info.html
                         </a>
                     </li>
                     <li>
@@ -1704,8 +1704,18 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_response_quick_closing.html.html">
+                            email_response_quick_closing.html
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_response_reopening.html.html">
                             email_response_reopening.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_user_added.html.html">
+                            email_user_added.html
                         </a>
                     </li>
                     <li>
@@ -2275,6 +2285,16 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_response_add_note.js.html.html">
                             add_note.js.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_response_add_quick_closing.html.html">
+                            add_quick_closing.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_response_add_quick_closing.js.html.html">
+                            add_quick_closing.js.html
                         </a>
                     </li>
                     <li>
@@ -3271,6 +3291,28 @@ Function 'generate_envelope(template_name, data)' returns the LaTeX for an envel
 Function 'generate_envelope_pdf(document)' returns a PDF envelope.
 <br><br>
 Function 'escape_latex_characters(line)' replaces a string with the escaped LaTeX version of reserved characters.
+
+<h3>
+Code Issues
+</h3>
+
+<ul class="review">
+  <li>
+  Line 91 uses partially qualified path with Jinja2.
+  Jinja2 is a Python HTML templating system. It is typically used to build
+  web applications, though appears in other places well, notably the
+  Ansible automation system. When configuring the Jinja2 environment,
+  the option to use autoescaping on input can be specified.
+  When autoescaping is enabled, Jinja2 will filter input strings to escape
+  any HTML content submitted via template variables. Without escaping HTML
+  input the application becomes vulnerable to Cross Site Scripting (XSS)
+  attacks.
+  Unfortunately, autoescaping is False by default.
+  Thus this plugin test will warn on omission of an autoescape setting,
+  as well as an explicit setting of false.
+  </li>
+
+</ul>
                     </p>
                 </details>
 

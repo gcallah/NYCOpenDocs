@@ -1,1 +1,15 @@
 This Python file handles creating backup file report for OpenRecords.
+
+<h3>
+Code Issues
+</h3>
+
+<ul class="review">
+  <li>
+  Use of module subprocess is associated with security implications (line 4).
+  It is normally avoided unless used cautiously.
+  More information can be found <a href="https://hackernoon.com/10-common-security-gotchas-in-python-and-how-to-avoid-them-e19fbe265e03">here</a>.
+
+  </li>
+
+</ul>

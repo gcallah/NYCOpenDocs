@@ -295,6 +295,11 @@
                     </a>
                 </li>
                 <li>
+                    <a href="/NYCOpenDocs/html/app_constants_dates.py.html">
+                        dates.py
+                    </a>
+                </li>
+                <li>
                     <a href="/NYCOpenDocs/html/app_constants_determination_type.py.html">
                         determination_type.py
                     </a>
@@ -1225,21 +1230,6 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_acknowledgment.css.html">
-                            add_acknowledgment.css
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_closing.css.html">
-                            add_closing.css
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_denial.css.html">
-                            add_denial.css
-                        </a>
-                    </li>
-                    <li>
                         <a href="/NYCOpenDocs/html/app_static_styles_add_extension.css.html">
                             add_extension.css
                         </a>
@@ -1438,6 +1428,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_templates_admin_add_user.html.html">
+                            add_user.html
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_admin_main.html.html">
                             main.html
                         </a>
@@ -1574,6 +1569,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_agency_user_added.html.html">
+                            email_agency_user_added.html
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_agency_user_deactivated.html.html">
                             email_agency_user_deactivated.html
                         </a>
@@ -1634,11 +1634,6 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_footer.html.html">
-                            email_footer.html
-                        </a>
-                    </li>
-                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_not_onboarded.html.html">
                             email_not_onboarded.html
                         </a>
@@ -1646,6 +1641,11 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_private_file_upload.html.html">
                             email_private_file_upload.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_request_info.html.html">
+                            email_request_info.html
                         </a>
                     </li>
                     <li>
@@ -1704,8 +1704,18 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_response_quick_closing.html.html">
+                            email_response_quick_closing.html
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_response_reopening.html.html">
                             email_response_reopening.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_user_added.html.html">
+                            email_user_added.html
                         </a>
                     </li>
                     <li>
@@ -2275,6 +2285,16 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_response_add_note.js.html.html">
                             add_note.js.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_response_add_quick_closing.html.html">
+                            add_quick_closing.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_response_add_quick_closing.js.html.html">
+                            add_quick_closing.js.html
                         </a>
                     </li>
                     <li>
@@ -3262,6 +3282,18 @@ returning the user session ID. A file's metadata includes the file size, mime ty
 Function 'redis_set_file_metadata(request_or_response_id, filepath, is_update=False)' stores a file's size, mime type, and hash.
 <br><br>
 Function 'redis_get_file_metadata(request_or_response_id, filepath, is_update=False)' returns a tuple containing a file's size (int), mime type (str) and hash (str).
+<h3>
+Code Issues
+</h3>
+
+<ul class="review">
+  <li>
+  Use of modules cPickle and pickle is associated with security implications (line 5).
+  It is normally avoided unless used cautiously.
+  More information can be found <a href="https://www.smartfile.com/blog/python-pickle-security-problems-and-solutions/">here</a>.
+  </li>
+
+</ul>
                     </p>
                 </details>
 

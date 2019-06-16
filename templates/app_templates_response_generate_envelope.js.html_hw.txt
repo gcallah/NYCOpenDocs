@@ -1,1 +1,12 @@
 The function in this file checks for valid values in the form attributes for generating an envelope. Using parsley, the values of recipient and of address are checked because they are required. After checks are made, the form is then submitted.
+
+<h3>
+Code Issues
+</h3>
+
+<ul class="review">
+    <li>
+        Can refactor the line of code on line 23, which is used several times, by storing it into a variable to
+        reduce repetition of the constant.
+    </li>
+</ul>

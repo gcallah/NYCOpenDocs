@@ -295,6 +295,11 @@
                     </a>
                 </li>
                 <li>
+                    <a href="/NYCOpenDocs/html/app_constants_dates.py.html">
+                        dates.py
+                    </a>
+                </li>
+                <li>
                     <a href="/NYCOpenDocs/html/app_constants_determination_type.py.html">
                         determination_type.py
                     </a>
@@ -1423,6 +1428,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_templates_admin_add_user.html.html">
+                            add_user.html
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_admin_main.html.html">
                             main.html
                         </a>
@@ -1559,6 +1569,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_agency_user_added.html.html">
+                            email_agency_user_added.html
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_agency_user_deactivated.html.html">
                             email_agency_user_deactivated.html
                         </a>
@@ -1689,8 +1704,18 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_response_quick_closing.html.html">
+                            email_response_quick_closing.html
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_response_reopening.html.html">
                             email_response_reopening.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_user_added.html.html">
+                            email_user_added.html
                         </a>
                     </li>
                     <li>
@@ -2260,6 +2285,16 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_response_add_note.js.html.html">
                             add_note.js.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_response_add_quick_closing.html.html">
+                            add_quick_closing.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_response_add_quick_closing.js.html.html">
+                            add_quick_closing.js.html
                         </a>
                     </li>
                     <li>
@@ -3239,7 +3274,40 @@
 
                     <p>
 <!-- Include the code review here! -->
-<p>We attempted to read from templates/app_templates_request_new_request_anon.js.html_hw.txt but failed.</p>
+This file displays the agency information for a new request form by an anonymous user. Validation errors and checks are 
+added to necessary inputs that are needed prior to submitting the form.
+
+<h3>
+Code Issues
+</h3>
+
+<ul class="review">
+    <li>
+        Needs a comment clarifying what kiosk_mode means.
+    </li>
+    <li>
+        The keypress event handler for entering phone and fax numbers are the same. Can refactor the functioon in the event
+        handler by providing a function name, and then calling that function for both events.
+    </li>
+    <li>
+        Lines 170-226 involve setting attributes for HTML entities. However, some of these entities have more than on attribute
+        being set. Recommend implementing a function that sets a list or object of attributes for an entity. 
+    </li>
+    <li>
+        The <code>if</code> statement below has a mixture of || and &&. Recommend implementing a function that validates
+        address.
+        <pre>
+            <code>
+            if ($("#email").parsley().isValid() ||
+                $("#phone").parsley().isValid() ||
+                $("#fax").parsley().isValid() ||
+                ($("#address-line-1").parsley().isValid() && $("#state").parsley().isValid() && $(
+                    "#zipcode").parsley().isValid() && $("#city").parsley().isValid())
+            )
+            </code>
+        </pre>
+    </li>
+</ul>
                     </p>
                 </details>
 

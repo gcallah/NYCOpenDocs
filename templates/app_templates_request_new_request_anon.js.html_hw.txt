@@ -1,0 +1,34 @@
+This file displays the agency information for a new request form by an anonymous user. Validation errors and checks are 
+added to necessary inputs that are needed prior to submitting the form.
+
+<h3>
+Code Issues
+</h3>
+
+<ul class="review">
+    <li>
+        Needs a comment clarifying what kiosk_mode means.
+    </li>
+    <li>
+        The keypress event handler for entering phone and fax numbers are the same. Can refactor the functioon in the event
+        handler by providing a function name, and then calling that function for both events.
+    </li>
+    <li>
+        Lines 170-226 involve setting attributes for HTML entities. However, some of these entities have more than on attribute
+        being set. Recommend implementing a function that sets a list or object of attributes for an entity. 
+    </li>
+    <li>
+        The <code>if</code> statement below has a mixture of || and &&. Recommend implementing a function that validates
+        address.
+        <pre>
+            <code>
+            if ($("#email").parsley().isValid() ||
+                $("#phone").parsley().isValid() ||
+                $("#fax").parsley().isValid() ||
+                ($("#address-line-1").parsley().isValid() && $("#state").parsley().isValid() && $(
+                    "#zipcode").parsley().isValid() && $("#city").parsley().isValid())
+            )
+            </code>
+        </pre>
+    </li>
+</ul>

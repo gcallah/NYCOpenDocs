@@ -1,1 +1,12 @@
 The function in this file checks for valid values in the form attributes for generating a letter. Using parsley, the required fields are checked. Once the form has been validated after clicking the first next button, the user is able to click the second next button.
+
+<h3>
+Code Issues
+</h3>
+
+<ul class="review">
+    <li>
+        Recommend adding comments for each click handler describing what the action does. Also recommend adding comments on 
+        what is displayed after each click.
+    </li>
+</ul>

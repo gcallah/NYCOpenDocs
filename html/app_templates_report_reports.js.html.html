@@ -295,6 +295,11 @@
                     </a>
                 </li>
                 <li>
+                    <a href="/NYCOpenDocs/html/app_constants_dates.py.html">
+                        dates.py
+                    </a>
+                </li>
+                <li>
                     <a href="/NYCOpenDocs/html/app_constants_determination_type.py.html">
                         determination_type.py
                     </a>
@@ -1423,6 +1428,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_templates_admin_add_user.html.html">
+                            add_user.html
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_admin_main.html.html">
                             main.html
                         </a>
@@ -1559,6 +1569,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_agency_user_added.html.html">
+                            email_agency_user_added.html
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_agency_user_deactivated.html.html">
                             email_agency_user_deactivated.html
                         </a>
@@ -1689,8 +1704,18 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_response_quick_closing.html.html">
+                            email_response_quick_closing.html
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_response_reopening.html.html">
                             email_response_reopening.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_user_added.html.html">
+                            email_user_added.html
                         </a>
                     </li>
                     <li>
@@ -2260,6 +2285,16 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_response_add_note.js.html.html">
                             add_note.js.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_response_add_quick_closing.html.html">
+                            add_quick_closing.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_response_add_quick_closing.js.html.html">
+                            add_quick_closing.js.html
                         </a>
                     </li>
                     <li>
@@ -3241,6 +3276,71 @@
 <!-- Include the code review here! -->
 This file contains the scripts to draw the reports in a chart form, used for displaying the number of requests assigned to a specific agency from the database.
 The scripts also draw the reports dependent on the changes made in filters.
+
+<h3>
+Code Issues
+</h3>
+
+<ul class="review">
+    <li>
+        <code>drawChart(labels, values)</code> needs a docstring. 
+    </li>
+    <li>
+        The code below has a triangle formation appearing on the left. In addition, the click event handler 
+        for the submit button runs from liens 116 to 221. Recommend refactoring some of the functions
+        used for AJAX success into functions with function names. 
+        <pre>
+            <code>
+            submit.click(function () {
+                // Behavior when user is agency agency admin/super user and the user filter is visible
+                if ((agencyAdmin || superUser) && userFilterDiv.is(":visible")) {
+                    $.ajax({
+                        url: "/report/",
+                        type: "GET",
+                        data: {
+                            user_guid: agencyUserFilter.val(),
+                            agency_ein: agencyFilter.val()
+                        },
+                        success: function (data) {
+                            if (data.is_visible) {
+                                for (var i = 0; i < (data.values).length; ++i) {
+                                    reportChart.data.datasets[0].data[i] = data.values[i]
+                                }
+                                var maxTicks = Math.min(Math.max.apply(null, data.values), 10);
+                                reportChart.options.scales.yAxes[0].ticks.maxTicksLimit = 10;
+                                reportChart.options.scales.yAxes[0].ticks.stepSize = maxTicks < 10 ? 1 : false;
+                                reportChart.update();
+                                if ($("#agency-user-filter option:selected").text() === "") {
+
+            </code>
+        </pre>
+    </li>
+    <li>
+        Some of the code in the submit click handler that is seen in the first <code>if</code> statement
+        is repeated in the <code>else</code> statement paired that <code>if</code> statement. For example:
+        <pre>
+            <code>
+                for (var i = 0; i < (data.values).length; ++i) {
+                    reportChart.data.datasets[0].data[i] = data.values[i]
+                }
+                var maxTicks = Math.min(Math.max.apply(null, data.values), 10);
+                reportChart.options.scales.yAxes[0].ticks.maxTicksLimit = 10;
+                reportChart.options.scales.yAxes[0].ticks.stepSize = maxTicks < 10 ? 1 : false;
+                reportChart.update();
+            </code>
+        </pre>
+        The chunk of code above is repeated and can be refactored.
+    </li>
+    <li>
+        <code>$("#reportChart")</code>'s attribute is set many times with a repeating constant message: 
+        "Bar graph of all FOIL requests in OpenRecords. ". Recommend storing the constant message inside a variable.
+    </li>
+    <li>
+        Similar to above, <code>chartDescription</code>'s html is set with a constant string: 
+        <code>"This chart represents the aggregate data of all requests opened on OpenRecords, " + "along with the status of all requests. <strong>"</code>. Recommend storing the 
+        string inside a variable to make it easier to read the html that is being set.
+    </li>
+</ul>
                     </p>
                 </details>
 

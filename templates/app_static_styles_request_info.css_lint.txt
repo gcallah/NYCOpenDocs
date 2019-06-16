@@ -1,0 +1,68 @@
+
+
+csslint: There are 13 problems in .
+
+request_info.css
+1: warning at line 7, col 17
+Heading (h3) should not be qualified.
+.control-widget h3{
+
+request_info.css
+2: warning at line 13, col 1
+Rule doesn't have all its properties in alphabetical order.
+.request-info .lead {
+
+request_info.css
+3: warning at line 14, col 5
+Use of !important
+    padding: 0 !important;
+
+request_info.css
+4: warning at line 15, col 5
+Use of !important
+    margin: 0 !important;
+
+request_info.css
+5: warning at line 19, col 1
+Adjoining classes: .btn.active[data-active-class="primary"]
+.btn.active[data-active-class="primary"] {
+
+request_info.css
+6: warning at line 19, col 1
+Adjoining classes: .btn.active[data-active-class="primary"]
+.btn.active[data-active-class="primary"] {
+
+request_info.css
+7: warning at line 19, col 1
+Rule doesn't have all its properties in alphabetical order.
+.btn.active[data-active-class="primary"] {
+
+request_info.css
+8: warning at line 38, col 1
+Rule doesn't have all its properties in alphabetical order.
+.request-info .xedit:hover {
+
+request_info.css
+9: warning at line 63, col 1
+Don't use IDs in selectors.
+#request-title {
+
+request_info.css
+10: warning at line 63, col 1
+Rule doesn't have all its properties in alphabetical order.
+#request-title {
+
+request_info.css
+11: warning at line 76, col 1
+Don't use IDs in selectors.
+#agency-request-summary {
+
+request_info.css
+12: warning at line 76, col 1
+Rule doesn't have all its properties in alphabetical order.
+#agency-request-summary {
+
+request_info.css
+13: warning at line 100, col 5
+Use of !important
+    display: none !important;

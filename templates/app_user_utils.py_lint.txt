@@ -1,1 +1,1 @@
-app/user/utils.py:21:45: E999 SyntaxError: invalid syntax
+app/user/utils.py:24:45: E999 SyntaxError: invalid syntax

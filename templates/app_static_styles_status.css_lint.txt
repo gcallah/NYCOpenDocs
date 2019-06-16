@@ -1,0 +1,48 @@
+
+
+csslint: There are 9 problems in .
+
+status.css
+1: warning at line 1, col 1
+Rule doesn't have all its properties in alphabetical order.
+h1 span{
+
+status.css
+2: warning at line 9, col 1
+Rule doesn't have all its properties in alphabetical order.
+.panel-heading a:after {
+
+status.css
+3: warning at line 15, col 16
+Element (a.collapsed:after) is overqualified, just use .collapsed without element name.
+.panel-heading a.collapsed:after {
+
+status.css
+4: warning at line 40, col 1
+Don't use IDs in selectors.
+#requester-popover .popover {
+
+status.css
+5: warning at line 44, col 1
+Don't use IDs in selectors.
+#user-popover .popover {
+
+status.css
+6: warning at line 48, col 1
+Don't use IDs in selectors.
+#requesterModal label {
+
+status.css
+7: warning at line 52, col 1
+Don't use IDs in selectors.
+#requester-name {
+
+status.css
+8: warning at line 57, col 1
+Don't use IDs in selectors.
+#user-info .message {
+
+status.css
+9: warning at line 57, col 1
+Rule doesn't have all its properties in alphabetical order.
+#user-info .message {

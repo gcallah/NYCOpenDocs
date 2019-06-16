@@ -1,0 +1,18 @@
+
+
+csslint: There are 3 problems in .
+
+jquery.fileupload.css
+1: warning at line 13, col 1
+Rule doesn't have all its properties in alphabetical order.
+.fileinput-button {
+
+jquery.fileupload.css
+2: warning at line 17, col 1
+Rule doesn't have all its properties in alphabetical order.
+.fileinput-button input {
+
+jquery.fileupload.css
+3: warning at line 32, col 5
+Expected (<filter-function-list> | none) but found 'alpha(opacity=0)'.
+    filter: alpha(opacity=0);

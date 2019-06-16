@@ -1,0 +1,13 @@
+
+
+csslint: There are 2 problems in .
+
+add_instruction.css
+1: warning at line 2, col 1
+Rule doesn't have all its properties in alphabetical order.
+.instruction-control {
+
+add_instruction.css
+2: warning at line 14, col 1
+Don't use IDs in selectors.
+#instruction-content, .instruction-content {

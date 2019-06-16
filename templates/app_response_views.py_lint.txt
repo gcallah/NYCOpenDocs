@@ -1,2 +1,2 @@
-app/response/views.py:718:25: F811 redefinition of unused 'remove' from line 699
-app/response/views.py:787:33: E251 unexpected spaces around keyword / parameter equals
+app/response/views.py:755:25: F811 redefinition of unused 'remove' from line 736
+app/response/views.py:824:33: E251 unexpected spaces around keyword / parameter equals

@@ -3382,25 +3382,25 @@ Code Issues
 
 
    41:16   error    Expected '===' and instead saw '=='                                                                         eqeqeq
-  109:55   error    Unexpected string concatenation of literals                                                                 no-useless-concat
-  210:56   error    Unexpected string concatenation of literals                                                                 no-useless-concat
-  331:26   warning  Method 'success' has a complexity of 7                                                                      complexity
-  388:5    error    The body of a for-in should be wrapped in an if statement to filter unwanted properties from the prototype  guard-for-in
-  404:40   warning  Function has a complexity of 7                                                                              complexity
-  482:22   warning  Method 'success' has a complexity of 10                                                                     complexity
-  529:32   warning  Function has a complexity of 30                                                                             complexity
+  108:55   error    Unexpected string concatenation of literals                                                                 no-useless-concat
+  206:56   error    Unexpected string concatenation of literals                                                                 no-useless-concat
+  321:26   warning  Method 'success' has a complexity of 7                                                                      complexity
+  376:5    error    The body of a for-in should be wrapped in an if statement to filter unwanted properties from the prototype  guard-for-in
+  392:40   warning  Function has a complexity of 7                                                                              complexity
+  465:22   warning  Method 'success' has a complexity of 10                                                                     complexity
+  511:32   warning  Function has a complexity of 30                                                                             complexity
+  552:17   error    The body of a for-in should be wrapped in an if statement to filter unwanted properties from the prototype  guard-for-in
+  559:17   error    The body of a for-in should be wrapped in an if statement to filter unwanted properties from the prototype  guard-for-in
+  559:26   error    'id' is already defined                                                                                     no-redeclare
   571:17   error    The body of a for-in should be wrapped in an if statement to filter unwanted properties from the prototype  guard-for-in
-  578:17   error    The body of a for-in should be wrapped in an if statement to filter unwanted properties from the prototype  guard-for-in
-  578:26   error    'id' is already defined                                                                                     no-redeclare
-  590:17   error    The body of a for-in should be wrapped in an if statement to filter unwanted properties from the prototype  guard-for-in
-  590:26   error    'id' is already defined                                                                                     no-redeclare
-  611:17   error    The body of a for-in should be wrapped in an if statement to filter unwanted properties from the prototype  guard-for-in
-  611:26   error    'id' is already defined                                                                                     no-redeclare
-  748:1    warning  Function 'processCustomRequestFormData' has a complexity of 7                                               complexity
-  782:124  error    Don't make functions within a loop                                                                          no-loop-func
-  782:124  warning  Function has a complexity of 8                                                                              complexity
-  808:29   error    Use '===' to compare with null                                                                              no-eq-null
-  808:40   error    Expected '!==' and instead saw '!='                                                                         eqeqeq
+  571:26   error    'id' is already defined                                                                                     no-redeclare
+  592:17   error    The body of a for-in should be wrapped in an if statement to filter unwanted properties from the prototype  guard-for-in
+  592:26   error    'id' is already defined                                                                                     no-redeclare
+  726:1    warning  Function 'processCustomRequestFormData' has a complexity of 7                                               complexity
+  759:124  error    Don't make functions within a loop                                                                          no-loop-func
+  759:124  warning  Function has a complexity of 8                                                                              complexity
+  783:29   error    Use '===' to compare with null                                                                              no-eq-null
+  783:40   error    Expected '!==' and instead saw '!='                                                                         eqeqeq
 
 ✖ 20 problems (14 errors, 6 warnings)
                         </pre>
@@ -3537,6 +3537,16 @@ Code Issues
 <br>&emsp;     * Process the custom request form data into a JSON to be passed back on submit
 <br>&emsp;     */
 <br>&emsp;&emsp;&emsp;            $("#custom-request-form-content-" + target + " > .custom-request-form-field > .custom-request-form-data").each(function () {
+<br>/**
+<br> * Check for the presence of a SSN in a string.
+<br> * @param {string} text
+<br> * @returns {boolean} Whether the string contains an SSN
+<br> */
+<br>function checkSSN(text) {
+<br>/**
+<br> * Cancel form submission if user chooses to review Title and / or Description.
+<br> */
+<br>function handlePIIModalReview(){
 <br>
                    </p>
                 </details>

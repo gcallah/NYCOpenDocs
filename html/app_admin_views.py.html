@@ -3289,8 +3289,7 @@ The route definitions are in views.py. The routes defined here are:
                     <p>
                         <pre>
 <!-- Include the linting report here! -->
-app/admin/views.py:7:1: F401 'app.models.Users' imported but unused
-app/admin/views.py:7:1: F401 'app.models.AgencyUsers' imported but unused
+app/admin/views.py:98:35: E712 comparison to True should be 'if cond is True:' or 'if cond:'
                         </pre>
                    </p>
                 </details>
@@ -3303,7 +3302,7 @@ app/admin/views.py:7:1: F401 'app.models.AgencyUsers' imported but unused
                     <p>
 <!-- Include the extracted documentation here! -->
 
-</br>...module:: admin.views.</br></br>:synopsis: Endpoints for Agency Adminstrator Interface</br><hr><code>main(agency_ein=None):</code><br/>
+</br>...module:: admin.views.</br></br>:synopsis: Endpoints for Agency Adminstrator Interface</br><hr><code>main(agency_ein=None):</code><br/><hr><code>add_user():</code><br/>Adds a user to the users and agency_users tables.</br></br>Returns:</br>Template with context.</br>
                    </p>
                 </details>
 

@@ -1,2 +1,1 @@
-app/admin/views.py:7:1: F401 'app.models.Users' imported but unused
-app/admin/views.py:7:1: F401 'app.models.AgencyUsers' imported but unused
+app/admin/views.py:98:35: E712 comparison to True should be 'if cond is True:' or 'if cond:'

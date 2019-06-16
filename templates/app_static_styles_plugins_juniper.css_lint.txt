@@ -1,0 +1,13 @@
+
+
+csslint: There are 2 problems in .
+
+juniper.css
+1: warning at line 1, col 37
+Rule doesn't have all its properties in alphabetical order.
+div.parsley-container{display:block}ul.parsley-error-list{margin:0;padding:0;list-style-type:none}ul.parsley-error-list li{margin:0;padding:0}
+
+juniper.css
+2: warning at line 1, col 1
+Element (div.parsley-container) is overqualified, just use .parsley-container without element name.
+div.parsley-container{display:block}ul.parsley-error-list{margin:0;padding:0;list-style-type:none}ul.parsley-error-list li{margin:0;padding:0}

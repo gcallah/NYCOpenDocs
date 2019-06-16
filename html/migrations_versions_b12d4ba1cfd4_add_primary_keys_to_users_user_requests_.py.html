@@ -295,11 +295,6 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/NYCOpenDocs/html/app_constants_dates.py.html">
-                        dates.py
-                    </a>
-                </li>
-                <li>
                     <a href="/NYCOpenDocs/html/app_constants_determination_type.py.html">
                         determination_type.py
                     </a>
@@ -1428,11 +1423,6 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/NYCOpenDocs/html/app_templates_admin_add_user.html.html">
-                            add_user.html
-                        </a>
-                    </li>
-                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_admin_main.html.html">
                             main.html
                         </a>
@@ -1569,11 +1559,6 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_agency_user_added.html.html">
-                            email_agency_user_added.html
-                        </a>
-                    </li>
-                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_agency_user_deactivated.html.html">
                             email_agency_user_deactivated.html
                         </a>
@@ -1704,18 +1689,8 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_response_quick_closing.html.html">
-                            email_response_quick_closing.html
-                        </a>
-                    </li>
-                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_response_reopening.html.html">
                             email_response_reopening.html
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_user_added.html.html">
-                            email_user_added.html
                         </a>
                     </li>
                     <li>
@@ -2285,16 +2260,6 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_response_add_note.js.html.html">
                             add_note.js.html
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_templates_response_add_quick_closing.html.html">
-                            add_quick_closing.html
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_templates_response_add_quick_closing.js.html.html">
-                            add_quick_closing.js.html
                         </a>
                     </li>
                     <li>
@@ -3299,6 +3264,7 @@ No problems to report
                     <p>
 <!-- Include the extracted documentation here! -->
 
+Add primary keys to users, user_requests, and agency_users</br></br>Revision ID: b12d4ba1cfd4</br>Revises: 838a6ad16cf4</br>Create Date: 2019-03-18 16:44:35.911810</br></br><hr><code>upgrade():</code><br/>INSERT INTO users_new (guid, is_super, first_name, middle_initial, last_name, email, email_validated,</br>terms_of_use_accepted, title, organization, phone_number, fax_number, mailing_address,</br>notification_email, session_id, signature, active, has_nyc_account, is_anonymous_requester,</br>is_nyc_employee)</br></br>SELECT guid,</br>is_super,</br>first_name,</br>middle_initial,</br>last_name,</br>email,</br>email_validated,</br>terms_of_use_accepted,</br>title,</br>organization,</br>phone_number,</br>fax_number,</br>mailing_address,</br>notification_email,</br>session_id,</br>signature,</br>active,</br>has_nyc_account,</br>is_anonymous_requester,</br>is_nyc_employee</br>ALTER TABLE agency_users DROP CONSTRAINT IF EXISTS agency_users_user_guid_fkey1;</br>INSERT INTO users (guid, is_super, first_name, middle_initial, last_name, email, email_validated,</br>terms_of_use_accepted, title, organization, phone_number, fax_number, mailing_address,</br>notification_email, session_id, signature, active, has_nyc_account, is_anonymous_requester,</br>is_nyc_employee)</br></br>SELECT guid,</br>is_super,</br>first_name,</br>middle_initial,</br>last_name,</br>email,</br>email_validated,</br>terms_of_use_accepted,</br>title,</br>organization,</br>phone_number,</br>fax_number,</br>mailing_address,</br>notification_email,</br>session_id,</br>signature,</br>active,</br>has_nyc_account,</br>is_anonymous_requester,</br>is_nyc_employee</br>INSERT INTO user_requests_new (user_guid, request_id, permissions,</br>request_user_type, point_of_contact)</br>INSERT INTO user_requests (user_guid, request_id, permissions,</br>request_user_type, point_of_contact)</br>SELECT user_guid, request_id, permissions, request_user_type, point_of_contact</br>INSERT INTO agency_users_new (user_guid, agency_ein, is_agency_active,</br>is_agency_admin, is_primary_agency)</br>SELECT</br>user_guid,</br>agency_ein,</br>is_agency_active,</br>is_agency_admin,</br>is_primary_agency</br>INSERT INTO agency_users (user_guid, agency_ein, is_agency_active,</br>is_agency_admin, is_primary_agency)</br>SELECT</br>user_guid,</br>agency_ein,</br>is_agency_active,</br>is_agency_admin,</br>is_primary_agency</br><hr><code>downgrade():</code><br/>INSERT INTO users_new (guid, is_super, first_name, middle_initial, last_name, email, email_validated,</br>terms_of_use_accepted, title, organization, phone_number, fax_number, mailing_address,</br>notification_email, session_id, signature, active, has_nyc_account, is_anonymous_requester,</br>is_nyc_employee)</br></br>SELECT guid,</br>is_super,</br>first_name,</br>middle_initial,</br>last_name,</br>email,</br>email_validated,</br>terms_of_use_accepted,</br>title,</br>organization,</br>phone_number,</br>fax_number,</br>mailing_address,</br>notification_email,</br>session_id,</br>signature,</br>active,</br>has_nyc_account,</br>is_anonymous_requester,</br>is_nyc_employee</br>INSERT INTO users (guid, is_super, first_name, middle_initial, last_name, email, email_validated,</br>terms_of_use_accepted, title, organization, phone_number, fax_number, mailing_address,</br>notification_email, session_id, signature, active, has_nyc_account, is_anonymous_requester,</br>is_nyc_employee)</br></br>SELECT guid,</br>is_super,</br>first_name,</br>middle_initial,</br>last_name,</br>email,</br>email_validated,</br>terms_of_use_accepted,</br>title,</br>organization,</br>phone_number,</br>fax_number,</br>mailing_address,</br>notification_email,</br>session_id,</br>signature,</br>active,</br>has_nyc_account,</br>is_anonymous_requester,</br>is_nyc_employee</br>INSERT INTO user_requests_new (user_guid, request_id, permissions,</br>request_user_type, point_of_contact)</br>INSERT INTO user_requests (user_guid, request_id, permissions,</br>request_user_type, point_of_contact)</br>SELECT user_guid, request_id, permissions, request_user_type, point_of_contact</br>INSERT INTO agency_users_new (user_guid, agency_ein, is_agency_active,</br>is_agency_admin, is_primary_agency)</br>SELECT</br>user_guid,</br>agency_ein,</br>is_agency_active,</br>is_agency_admin,</br>is_primary_agency</br>INSERT INTO agency_users (user_guid, agency_ein, is_agency_active,</br>is_agency_admin, is_primary_agency)</br>SELECT</br>user_guid,</br>agency_ein,</br>is_agency_active,</br>is_agency_admin,</br>is_primary_agency</br>
                    </p>
                 </details>
 

@@ -3275,6 +3275,17 @@
                     <p>
 <!-- Include the code review here! -->
 This file contains xeditable scripts. It contains html templates for submit and cancel buttons. The script enables the user to modify the title and agency request summary on the page (using ajax). The html templates for those fields have parsley attributes applied to them. Upon submitting the form, which is allowed by pressing enter, they form is validated.
+
+<h3>
+Code Issues
+</h3>
+
+<ul class="review">
+    <li>
+        Lines 20, 25, 30, 35 use the variables <code>pk, url</code>. What do these variables represent? Recommend
+        using a more meaningful variable names for them.
+    </li>
+</ul>
                     </p>
                 </details>
 

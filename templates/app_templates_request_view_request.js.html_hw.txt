@@ -1,1 +1,12 @@
 This file contains a script that enables tinymce on specific textarea classes. Those classes then have properties defined, such as plugins, elementpath, toolbar.
+
+<h3>
+Code Issues
+</h3>
+
+<ul class="review">
+    <li>
+       Recommend storing constants into varialbes for future modifications of the tinyMCE parameters. For example, the height 
+       value is set to 180, but this value can be stored in a variable in case changes are made to the height value.
+    </li>
+</ul>

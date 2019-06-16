@@ -1,1 +1,11 @@
 This html file displays the files available for upload and the uploaded files. After selecting files for uploading, users can view the uploading progress and can cancel or remove the files.
+
+<h3>
+Code Issues
+</h3>
+
+<ul class="review">
+    <li>
+       No issues to report.
+    </li>
+</ul>

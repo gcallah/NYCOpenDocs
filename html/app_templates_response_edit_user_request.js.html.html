@@ -3275,6 +3275,20 @@
                     <p>
 <!-- Include the code review here! -->
 This file contains a script that handles editing a user's credentials. A user's permissions are determined by checking with what permissions have been selected. The script also checks to see if the permissions have changed at all.
+
+<h3>
+Code Issues
+</h3>
+
+<ul class="review">
+    <li>
+        Recommend providing docstrings for <code>setPermissions(perms)</code>, <code>setCurrentPermissions()</code>, 
+        and <code>setCurrentPointOfContact()</code>
+    </li>
+    <li>
+        Recommend adding a comment stating what does 0 mean for <code>if role.val() === 0</code>.
+    </li>
+</ul>
                     </p>
                 </details>
 

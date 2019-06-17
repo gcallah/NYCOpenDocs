@@ -1,5 +1,1 @@
 
-
-  214:31  warning  Function has a complexity of 9  complexity
-
-✖ 1 problem (0 errors, 1 warning)

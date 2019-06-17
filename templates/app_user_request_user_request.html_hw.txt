@@ -1,0 +1,2 @@
+This subdirectory contains the directory module structure for various
+user request endpoint routes defining actions for user requests.

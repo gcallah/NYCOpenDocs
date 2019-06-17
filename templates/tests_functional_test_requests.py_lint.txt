@@ -1,3 +1,1 @@
-tests/functional/test_requests.py:7:1: F401 'pytest' imported but unused
-tests/functional/test_requests.py:8:1: F401 'app.models.Requests' imported but unused
-tests/functional/test_requests.py:8:32: W292 no newline at end of file
+No problems to report

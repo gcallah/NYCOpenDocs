@@ -7,7 +7,7 @@ module.exports = {
         "es6": true,
         "node": true,
         "jquery": true,
-        // "mocha": true,
+        "amd": true,
     },
     "extends": ["eslint:recommended", "jquery"],
     "parserOptions": {

@@ -1,1 +1,1 @@
-No problems to report
+app/constants/__init__.py:122:2: W292 no newline at end of file

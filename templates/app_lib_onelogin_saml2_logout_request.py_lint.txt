@@ -1,1 +1,2 @@
-No problems to report
+app/lib/onelogin/saml2/logout_request.py:175:121: E501 line too long (125 > 120 characters)
+app/lib/onelogin/saml2/logout_request.py:286:121: E501 line too long (126 > 120 characters)

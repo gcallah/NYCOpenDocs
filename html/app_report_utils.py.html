@@ -295,6 +295,11 @@
                     </a>
                 </li>
                 <li>
+                    <a href="/NYCOpenDocs/html/app_constants_dates.py.html">
+                        dates.py
+                    </a>
+                </li>
+                <li>
                     <a href="/NYCOpenDocs/html/app_constants_determination_type.py.html">
                         determination_type.py
                     </a>
@@ -1423,6 +1428,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_templates_admin_add_user.html.html">
+                            add_user.html
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_admin_main.html.html">
                             main.html
                         </a>
@@ -1559,6 +1569,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_agency_user_added.html.html">
+                            email_agency_user_added.html
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_agency_user_deactivated.html.html">
                             email_agency_user_deactivated.html
                         </a>
@@ -1689,8 +1704,18 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_response_quick_closing.html.html">
+                            email_response_quick_closing.html
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_response_reopening.html.html">
                             email_response_reopening.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_user_added.html.html">
+                            email_user_added.html
                         </a>
                     </li>
                     <li>
@@ -2260,6 +2285,16 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_response_add_note.js.html.html">
                             add_note.js.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_response_add_quick_closing.html.html">
+                            add_quick_closing.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_response_add_quick_closing.js.html.html">
+                            add_quick_closing.js.html
                         </a>
                     </li>
                     <li>
@@ -3270,7 +3305,9 @@ Code Issues
                     <p>
                         <pre>
 <!-- Include the linting report here! -->
-No problems to report
+app/report/utils.py:17:59: E999 SyntaxError: invalid syntax
+app/report/utils.py:69:43: E127 continuation line over-indented for visual indent
+app/report/utils.py:69:121: E501 line too long (121 > 120 characters)
                         </pre>
                    </p>
                 </details>
@@ -3283,7 +3320,7 @@ No problems to report
                     <p>
 <!-- Include the extracted documentation here! -->
 
-<hr><code>generate_acknowledgment_report(self, current_user_guid: str, date_from: datetime, date_to: datetime):</code><br/>Celery task that generates the acknowledgment report for the user's agency with the specified date range.</br></br>Args:</br>current_user_guid: GUID of the current user</br>date_from: Date to filter report from</br>date_to: Date to filter report to</br><hr><code>generate_request_closing_user_report(agency_ein: str, date_from: str, date_to: str, email_to: list):</code><br/>Generates a report of requests that were closed in a time frame.</br></br>Generates a report of requests in a time frame with the following tabs:</br>1) Total number of opened and closed requests.</br>2) Total number of closed requests and percentage closed by user.</br>3) Total number of requests closed by user per day.</br>4) All of the requests created.</br>5) All of the requests closed.</br>6) All of the requests closed and the user who closed it.</br></br>Args:</br>agency_ein: Agency EIN</br>date_from: Date to filter from</br>date_to: Date to filter to</br>email_to: List of recipient emails</br>
+<hr><code>generate_acknowledgment_report(self, current_user_guid: str, date_from: datetime, date_to: datetime):</code><br/>Celery task that generates the acknowledgment report for the user's agency with the specified date range.</br></br>Args:</br>current_user_guid: GUID of the current user</br>date_from: Date to filter report from</br>date_to: Date to filter report to</br><hr><code>generate_request_closing_user_report(agency_ein: str, date_from: str, date_to: str, email_to: list):</code><br/>Generates a report of requests that were closed in a time frame.</br></br>Generates a report of requests in a time frame with the following tabs:</br>1) Total number of opened and closed requests.</br>2) Total number of closed requests and percentage closed by user.</br>3) Total number of requests closed by user per day.</br>4) All of the requests created.</br>5) All of the requests closed.</br>6) All of the requests closed and the user who closed it.</br></br>Args:</br>agency_ein: Agency EIN</br>date_from: Date to filter from</br>date_to: Date to filter to</br>email_to: List of recipient emails</br><hr><code>generate_monthly_metrics_report(self, agency_ein: str, date_from: str, date_to: str, email_to: list):</code><br/>Generates a report of monthly metrics about opened and closed requests.</br></br>Generates a report of requests in a time frame with the following tabs:</br>1) Metrics:</br>- Received for the current month</br>- Total remaining open for current month</br>- Closed in the current month that were received in the current month</br>- Total closed in current month no matter when received</br>- Total closed since portal started</br>- Total remaining Open/Pending</br>- Inquiries for current month</br>2) All requests that have been opened in the given month.</br>3) All requests that are still open or pending. Excludes all closed requests.</br>4) All requests that have been closed in the given month.</br>5) All requests that have been closed, since the portal started.</br>6) All requests that have been opened and closed in the same given month.</br>7) all emails received using the "Contact the Agency" button in the given month.</br></br>Args:</br>agency_ein: Agency EIN</br>date_from: Date to filter from</br>date_to: Date to filter to</br>email_to: List of recipient emails</br>
                    </p>
                 </details>
 

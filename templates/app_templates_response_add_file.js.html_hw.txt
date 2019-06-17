@@ -1,1 +1,12 @@
 This file contains a script that handle file form validation upon clicking the next buttons. If the user selects the event to add a file, the user is required to add a file. If file is not fully uploaded, the user cannot proceed to the next part of the form. Once the file form is validated, an array of files is created, with the matching privacy to each file.
+
+<h3>
+Code Issues
+</h3>
+
+<ul class="review">
+    <li>
+        For the first next button, at least 5 <code>if</code> statements are seen, but no <code>else</code> conditions. Recommend refactoring
+        into different functions to make the event handler code easier to read and refactor to use <code>else</code> statements.
+    </li>
+</ul>

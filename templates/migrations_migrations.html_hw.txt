@@ -1,0 +1,2 @@
+This directory deals with migrating data and files from OpenRecords V1
+database and file server.

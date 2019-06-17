@@ -1,0 +1,1 @@
+This directory consists of files containing constants that are used throughout the application.

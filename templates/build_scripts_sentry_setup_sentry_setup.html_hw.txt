@@ -1,0 +1,1 @@
+This directory contains configuration settings for setting up Sentry with Postgres database, nginx, and the application settings, such as working with Python.

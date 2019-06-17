@@ -18,6 +18,7 @@
   "homepage": "https://github.com/gcallah/NYCOpenDocs#readme",
   "dependencies": {
     "csslint": "^1.0.5",
-    "eslint": "^5.16.0"
+    "eslint": "^5.16.0",
+    "eslint-config-jquery": "^2.0.0"
   }
 }

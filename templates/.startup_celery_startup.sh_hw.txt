@@ -1,0 +1,1 @@
+This shell script kills any currently running celery tasks and starts a new one.

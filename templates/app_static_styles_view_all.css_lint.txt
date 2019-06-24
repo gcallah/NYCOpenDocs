@@ -64,22 +64,22 @@ Don't use IDs in selectors.
 
 view_all.css
 13: warning at line 109, col 1
-Rule doesn't have all its properties in alphabetical order.
-#advanced-options div.checkbox .disabled::before {
-
-view_all.css
-14: warning at line 109, col 1
 Don't use IDs in selectors.
 #advanced-options div.checkbox .disabled::before {
 
 view_all.css
+14: warning at line 109, col 1
+Rule doesn't have all its properties in alphabetical order.
+#advanced-options div.checkbox .disabled::before {
+
+view_all.css
 15: warning at line 115, col 5
-Using width with border can sometimes make elements larger than you expect.
+Using height with border can sometimes make elements larger than you expect.
     border: 2px solid #df0000;
 
 view_all.css
 16: warning at line 115, col 5
-Using height with border can sometimes make elements larger than you expect.
+Using width with border can sometimes make elements larger than you expect.
     border: 2px solid #df0000;
 
 view_all.css
@@ -89,32 +89,32 @@ div.search-results .searchResults-heading {
 
 view_all.css
 18: warning at line 131, col 43
-Heading (h3) has already been defined.
+Heading (h3) should not be qualified.
 div.search-results .searchResults-heading h3 {
 
 view_all.css
 19: warning at line 131, col 43
-Heading (h3) should not be qualified.
+Heading (h3) has already been defined.
 div.search-results .searchResults-heading h3 {
 
 view_all.css
-20: warning at line 135, col 89
-Heading (h3) has already been defined.
-div.search-results .searchResults-heading h2, div.search-results .searchResults-heading h3 {
-
-view_all.css
-21: warning at line 135, col 43
+20: warning at line 135, col 43
 Heading (h2) should not be qualified.
 div.search-results .searchResults-heading h2, div.search-results .searchResults-heading h3 {
 
 view_all.css
-22: warning at line 135, col 89
+21: warning at line 135, col 89
 Heading (h3) should not be qualified.
 div.search-results .searchResults-heading h2, div.search-results .searchResults-heading h3 {
 
 view_all.css
-23: warning at line 135, col 43
+22: warning at line 135, col 43
 Heading (h2) has already been defined.
+div.search-results .searchResults-heading h2, div.search-results .searchResults-heading h3 {
+
+view_all.css
+23: warning at line 135, col 89
+Heading (h3) has already been defined.
 div.search-results .searchResults-heading h2, div.search-results .searchResults-heading h3 {
 
 view_all.css
@@ -193,32 +193,32 @@ Negative text-indent doesn't work well with RTL. If you use text-indent for imag
     text-indent: -9999px;
 
 view_all.css
-39: warning at line 224, col 93
+39: warning at line 224, col 37
 The universal selector (*) is known to be slow.
 div.search-results table thead tr > *:first-child.open, div.search-results table tbody tr > *:first-child.open {
 
 view_all.css
-40: warning at line 224, col 37
+40: warning at line 224, col 93
 The universal selector (*) is known to be slow.
 div.search-results table thead tr > *:first-child.open, div.search-results table tbody tr > *:first-child.open {
 
 view_all.css
-41: warning at line 228, col 95
+41: warning at line 228, col 37
 The universal selector (*) is known to be slow.
 div.search-results table thead tr > *:first-child.closed, div.search-results table tbody tr > *:first-child.closed {
 
 view_all.css
-42: warning at line 228, col 37
+42: warning at line 228, col 95
 The universal selector (*) is known to be slow.
 div.search-results table thead tr > *:first-child.closed, div.search-results table tbody tr > *:first-child.closed {
 
 view_all.css
-43: warning at line 232, col 93
+43: warning at line 232, col 37
 The universal selector (*) is known to be slow.
 div.search-results table thead tr > *:first-child.soon, div.search-results table tbody tr > *:first-child.soon {
 
 view_all.css
-44: warning at line 232, col 37
+44: warning at line 232, col 93
 The universal selector (*) is known to be slow.
 div.search-results table thead tr > *:first-child.soon, div.search-results table tbody tr > *:first-child.soon {
 
@@ -233,22 +233,22 @@ The universal selector (*) is known to be slow.
 div.search-results table thead tr > *:first-child.progress, div.search-results table tbody tr > *:first-child.progress {
 
 view_all.css
-47: warning at line 240, col 96
+47: warning at line 240, col 37
 The universal selector (*) is known to be slow.
 div.search-results table thead tr > *:first-child.overdue, div.search-results table tbody tr > *:first-child.overdue {
 
 view_all.css
-48: warning at line 240, col 37
+48: warning at line 240, col 96
 The universal selector (*) is known to be slow.
 div.search-results table thead tr > *:first-child.overdue, div.search-results table tbody tr > *:first-child.overdue {
 
 view_all.css
-49: warning at line 244, col 101
+49: warning at line 244, col 37
 The universal selector (*) is known to be slow.
 div.search-results table thead tr > *:first-child:not([class]), div.search-results table tbody tr > *:first-child:not([class]) {
 
 view_all.css
-50: warning at line 244, col 37
+50: warning at line 244, col 101
 The universal selector (*) is known to be slow.
 div.search-results table thead tr > *:first-child:not([class]), div.search-results table tbody tr > *:first-child:not([class]) {
 
@@ -339,22 +339,22 @@ Rule doesn't have all its properties in alphabetical order.
 
 view_all.css
 68: warning at line 375, col 1
-Element (input#query) is overqualified, just use #query without element name.
+Don't use IDs in selectors.
 input#query {
 
 view_all.css
 69: warning at line 375, col 1
-Don't use IDs in selectors.
+Element (input#query) is overqualified, just use #query without element name.
 input#query {
 
 view_all.css
 70: warning at line 379, col 1
-Element (input#query:focus) is overqualified, just use #query without element name.
+Don't use IDs in selectors.
 input#query:focus {
 
 view_all.css
 71: warning at line 379, col 1
-Don't use IDs in selectors.
+Element (input#query:focus) is overqualified, just use #query without element name.
 input#query:focus {
 
 view_all.css

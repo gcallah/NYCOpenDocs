@@ -1,1 +1,1 @@
-No problems to report
+app/jobs.py:9:1: F401 'app.sentry' imported but unused

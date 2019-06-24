@@ -1,1 +1,1 @@
-No problems to report
+app/user/utils.py:24:45: E999 SyntaxError: invalid syntax

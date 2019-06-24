@@ -1,1 +1,7 @@
-No problems to report
+app/request/views.py:197:121: E501 line too long (128 > 120 characters)
+app/request/views.py:244:16: E713 test for membership should be 'not in'
+app/request/views.py:341:121: E501 line too long (135 > 120 characters)
+app/request/views.py:375:37: E251 unexpected spaces around keyword / parameter equals
+app/request/views.py:375:39: E251 unexpected spaces around keyword / parameter equals
+app/request/views.py:418:80: W291 trailing whitespace
+app/request/views.py:419:13: W291 trailing whitespace

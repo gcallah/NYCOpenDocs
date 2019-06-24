@@ -43,13 +43,13 @@ Adjoining classes: #request-history   .event-row.has-modal:hover
 #request-history .event-row.has-modal:hover {
 
 view_request.css
-9: warning at line 37, col 1
-Don't use IDs in selectors.
+9: warning at line 37, col 18
+Adjoining classes: #request-history   .event-row.has-modal:hover
 #request-history .event-row.has-modal:hover {
 
 view_request.css
-10: warning at line 37, col 18
-Adjoining classes: #request-history   .event-row.has-modal:hover
+10: warning at line 37, col 1
+Don't use IDs in selectors.
 #request-history .event-row.has-modal:hover {
 
 view_request.css

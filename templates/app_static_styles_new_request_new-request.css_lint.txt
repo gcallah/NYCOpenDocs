@@ -69,12 +69,12 @@ Rule doesn't have all its properties in alphabetical order.
 
 new-request.css
 14: warning at line 115, col 1
-Rule doesn't have all its properties in alphabetical order.
+Outlines should only be modified using :focus.
 span[role=button] {
 
 new-request.css
 15: warning at line 115, col 1
-Outlines should only be modified using :focus.
+Rule doesn't have all its properties in alphabetical order.
 span[role=button] {
 
 new-request.css

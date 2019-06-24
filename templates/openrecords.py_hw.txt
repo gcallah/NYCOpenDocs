@@ -1,0 +1,3 @@
+This file helps running pytest and coverage reports.
+It also has other functions to add users, generate reports, run unit tests,
+run deployment tasks, etc.

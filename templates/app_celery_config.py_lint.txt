@@ -1,2 +1,1 @@
-app/celery_config.py:15:10: E131 continuation line unaligned for hanging indent
-app/celery_config.py:15:10: E265 block comment should start with '# '
+No problems to report

@@ -228,13 +228,13 @@ Rule doesn't have all its properties in alphabetical order.
 .subscription-container {
 
 nyc_gov.css
-46: warning at line 425, col 13
-Heading (h2) should not be qualified.
+46: warning at line 425, col 1
+Rule doesn't have all its properties in alphabetical order.
 .footer-bar h2 {
 
 nyc_gov.css
-47: warning at line 425, col 1
-Rule doesn't have all its properties in alphabetical order.
+47: warning at line 425, col 13
+Heading (h2) should not be qualified.
 .footer-bar h2 {
 
 nyc_gov.css
@@ -283,13 +283,13 @@ Heading (h2) should not be qualified.
     .footer-bar h2 {
 
 nyc_gov.css
-57: warning at line 459, col 17
-Heading (h2) has already been defined.
+57: warning at line 459, col 5
+Rule doesn't have all its properties in alphabetical order.
     .footer-bar h2 {
 
 nyc_gov.css
-58: warning at line 459, col 5
-Rule doesn't have all its properties in alphabetical order.
+58: warning at line 459, col 17
+Heading (h2) has already been defined.
     .footer-bar h2 {
 
 nyc_gov.css

@@ -1,5 +1,7 @@
 
 
-  79:23  warning  Method 'validate' has a complexity of 15  complexity
+  12:11  error    'define' is already defined as a built-in global variable       no-redeclare
+  12:19  error    'window' is already defined as a built-in global variable       no-redeclare
+  79:23  warning  Method 'validate' has a complexity of 15. Maximum allowed is 6  complexity
 
-✖ 1 problem (0 errors, 1 warning)
+✖ 3 problems (2 errors, 1 warning)

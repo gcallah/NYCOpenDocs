@@ -1,1 +1,1 @@
-No problems to report
+app/search/constants.py:15:21: W292 no newline at end of file

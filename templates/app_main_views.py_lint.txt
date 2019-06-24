@@ -1,1 +1,1 @@
-No problems to report
+app/main/views.py:6:1: F811 redefinition of unused 'render_template' from line 6

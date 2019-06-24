@@ -1,5 +1,5 @@
 
 
-  223:54  warning  Function has a complexity of 18. Maximum allowed is 6  complexity
+  223:54  warning  Function has a complexity of 18  complexity
 
 ✖ 1 problem (0 errors, 1 warning)

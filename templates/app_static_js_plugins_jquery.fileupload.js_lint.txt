@@ -1,25 +1,18 @@
 
 
-    13:11  error    'define' is already defined as a built-in global variable                      no-redeclare
-    13:19  error    'require' is already defined as a built-in global variable                     no-redeclare
-    13:28  error    'window' is already defined as a built-in global variable                      no-redeclare
-    13:36  error    'document' is already defined as a built-in global variable                    no-redeclare
-    13:46  error    'location' is already defined as a built-in global variable                    no-redeclare
-    13:56  error    'Blob' is already defined as a built-in global variable                        no-redeclare
-    13:62  error    'FormData' is already defined as a built-in global variable                    no-redeclare
-    15:1   error    Unnecessary semicolon                                                          no-extra-semi
-    26:13  error    Unexpected require()                                                           global-require
-    27:13  error    Unexpected require()                                                           global-require
-    33:3   warning  Function has a complexity of 7. Maximum allowed is 6                           complexity
-   372:22  warning  Method '_onProgress' has a complexity of 9. Maximum allowed is 6               complexity
-   442:23  warning  Method '_initXHRData' has a complexity of 15. Maximum allowed is 6             complexity
-   571:28  warning  Method '_initFormSettings' has a complexity of 13. Maximum allowed is 6        complexity
-   721:25  warning  Method '_chunkedUpload' has a complexity of 10. Maximum allowed is 6           complexity
-   971:17  warning  Method '_onAdd' has a complexity of 22. Maximum allowed is 6                   complexity
-  1000:26  error    'i' is already defined                                                         no-redeclare
-  1011:26  error    'i' is already defined                                                         no-redeclare
-  1175:35  warning  Method '_getSingleFileInputFiles' has a complexity of 8. Maximum allowed is 6  complexity
-  1428:15  warning  Method 'send' has a complexity of 7. Maximum allowed is 6                      complexity
+    15:1   error    Unnecessary semicolon                                    no-extra-semi
+    26:13  error    Unexpected require()                                     global-require
+    27:13  error    Unexpected require()                                     global-require
+    33:3   warning  Function has a complexity of 7                           complexity
+   372:22  warning  Method '_onProgress' has a complexity of 9               complexity
+   442:23  warning  Method '_initXHRData' has a complexity of 15             complexity
+   571:28  warning  Method '_initFormSettings' has a complexity of 13        complexity
+   721:25  warning  Method '_chunkedUpload' has a complexity of 10           complexity
+   971:17  warning  Method '_onAdd' has a complexity of 22                   complexity
+  1000:26  error    'i' is already defined                                   no-redeclare
+  1011:26  error    'i' is already defined                                   no-redeclare
+  1175:35  warning  Method '_getSingleFileInputFiles' has a complexity of 8  complexity
+  1428:15  warning  Method 'send' has a complexity of 7                      complexity
 
-✖ 20 problems (12 errors, 8 warnings)
+✖ 13 problems (5 errors, 8 warnings)
   1 error and 0 warnings potentially fixable with the `--fix` option.

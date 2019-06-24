@@ -1,1 +1,1 @@
-No problems to report
+app/upload/utils.py:63:27: E712 comparison to False should be 'if cond is False:' or 'if not cond:'

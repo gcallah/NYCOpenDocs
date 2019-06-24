@@ -1,4 +1,4 @@
-This CSS file contains styles for the page that allows users to add notes to a request. Styles are set for the control div, label, and textarea for the contents of a note.
+This CSS file contains styles for the page that allows users to add notes to a request. Styles are set for the control div, label, and text area for the contents of a note.
 
 <br><br>
 * In the comment for instruction-label, the comment states that the styles are set for the <b>extension</b> form.

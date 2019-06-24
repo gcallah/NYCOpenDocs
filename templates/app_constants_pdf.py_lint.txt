@@ -1,3 +1,1 @@
-app/constants/pdf.py:2:28: W605 invalid escape sequence '\B'
-app/constants/pdf.py:4:31: W605 invalid escape sequence '\V'
-app/constants/pdf.py:6:30: W605 invalid escape sequence '\#'
+No problems to report

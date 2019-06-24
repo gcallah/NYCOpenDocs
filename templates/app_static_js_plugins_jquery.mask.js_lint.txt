@@ -1,14 +1,15 @@
 
 
-   46:34  error    Unexpected require()                         global-require
-   77:29  error    Empty block statement                        no-empty
-   96:29  error    Empty block statement                        no-empty
-  136:27  warning  Method 'getRegexMask' has a complexity of 7  complexity
-  231:24  warning  Method 'getMasked' has a complexity of 16    complexity
-  318:17  error    Expected return with your callback function  callback-return
-  319:17  error    Expected return with your callback function  callback-return
-  320:17  error    Expected return with your callback function  callback-return
-  416:25  warning  Function has a complexity of 7               complexity
-  426:21  error    Empty block statement                        no-empty
+   35:11  error    'define' is already defined as a built-in global variable          no-redeclare
+   46:34  error    Unexpected require()                                               global-require
+   77:29  error    Empty block statement                                              no-empty
+   96:29  error    Empty block statement                                              no-empty
+  136:27  warning  Method 'getRegexMask' has a complexity of 7. Maximum allowed is 6  complexity
+  231:24  warning  Method 'getMasked' has a complexity of 16. Maximum allowed is 6    complexity
+  318:17  error    Expected return with your callback function                        callback-return
+  319:17  error    Expected return with your callback function                        callback-return
+  320:17  error    Expected return with your callback function                        callback-return
+  416:25  warning  Function has a complexity of 7. Maximum allowed is 6               complexity
+  426:21  error    Empty block statement                                              no-empty
 
-✖ 10 problems (7 errors, 3 warnings)
+✖ 11 problems (8 errors, 3 warnings)

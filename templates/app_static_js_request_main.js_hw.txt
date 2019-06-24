@@ -1,9 +1,9 @@
-characterCounter and generate_character_counter_handler handles displaying character counters for fields. If current amount of characters is out of the valid range of characters, the text color is red, otherwise black. 
+characterCounter and generate_character_counter_handler handles displaying character counters for fields. If current amount of characters is out of the valid range of characters, the text color is red, otherwise black.
 <br>regexURLChecker checks whether the url link inputted is value by using a regex expression; return true or false.
 <br>notHolidayorWeekend checks whether the date inputted falls on a holiday or weekend.
 <br>getRequestAgencyInstructions(): Additional information for an agency is hidden or displayed depending on the type of users.
-<br>populateDropdown(): populates an empty droopdown and renders it
-<br>renderCustomRequestForm(target): This function renders fields based on the target given; this function also restricts certain key pressed for when choosing data and time; fields are assigned character counters. Popovers and tooltips are assigned to the data fields for placement, trigger, toggle, and content. If the entire form is not displayed, additional content is shown; otherwise, hide the additional content. 
+<br>populateDropdown(): populates an empty dropdown and renders it
+<br>renderCustomRequestForm(target): This function renders fields based on the target given; this function also restricts certain key pressed for when choosing data and time; fields are assigned character counters. Popovers and tooltips are assigned to the data fields for placement, trigger, toggle, and content. If the entire form is not displayed, additional content is shown; otherwise, hide the additional content.
 <br>handleCategorySwitch handles creating a new form upon a category change. Counters are reset and added divs are removed.
 <br>checkRequestTypeDropdowns() checks to ensure that the form has a selected type.
 <br>processCustomRequestFormData(): The form is jsonified but if the number of completed fields does not meet the minimum requirement, an alert is displayed.
@@ -47,14 +47,14 @@ Code Issues
   </pre>
   Recommend refactoring by using functions to reduce the amount of nested conditionals.
   </li>
-  
+
   <li>
-  <code>renderCustomRequestForm(target)</code> runs from lines 465 to 645. Recommend refactoring parts of the function, such as 
+  <code>renderCustomRequestForm(target)</code> runs from lines 465 to 645. Recommend refactoring parts of the function, such as
   rendering datepicker and timepicker plugins, by taking those chunks fo code and placing them into separate functions.
   </li>
 
   <li>
-  <code>if</code> statement runs from line 531 to 559. 
+  <code>if</code> statement runs from line 531 to 559.
   <pre>
   <code>
     if (e.keyCode !== 8 && // backspace
@@ -88,7 +88,7 @@ Code Issues
         e.keyCode !== 186) {// semi-colon
   </code>
   </pre>Recommend refactoring this long conditional into a function that returns
-  whether a valid key was pressed. An alternative would also be to have an array of invalid key codes and checking 
+  whether a valid key was pressed. An alternative would also be to have an array of invalid key codes and checking
   if the key code that was pressed is inside that array.
   </li>
 </ul>

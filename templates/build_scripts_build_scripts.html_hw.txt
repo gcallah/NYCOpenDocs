@@ -1,0 +1,5 @@
+This directory contains setup files and scripts for different purposes.
+For example the app_setup.sh is used for basic installation commands for
+Python, Redis and other installation packages.
+There are other setup files for Consul client process, nginx, vault binaries,
+database configurations, elastic search configurations, etc.

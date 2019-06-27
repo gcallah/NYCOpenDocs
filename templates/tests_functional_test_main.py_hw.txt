@@ -1,0 +1,27 @@
+This file contains tests pertaining to responses from app routes and forms. The app routes are tested for the correct 
+status codes and for correct response data. Some tests involve determining if certaing HTML entities exist in the response data.
+
+Routes that are tested:
+<ul>
+    <li>GET /index</li>
+    <li>POST /index</li>
+    <li>GET /status</li>
+    <li>POST /status</li>
+    <li>GET /contact</li>
+    <li>GET /technical-support</li>
+    <li>POST /contact</li>
+    <li>GET /faq</li>
+    <li>GET /about</li>
+</ul>
+
+
+<h3>
+Code Issues
+</h3>
+
+<ul class="review">
+    <li>
+        <code>test_post_technical_support</code> and <code>test_post_contact</code> have the same code and 
+        same docstring. Are they supposed to be the same function?
+    </li>
+</ul>

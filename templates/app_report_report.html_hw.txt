@@ -1,0 +1,2 @@
+This subdirectory contains the directory module structure for report files
+defining views and forms used for report statistics.

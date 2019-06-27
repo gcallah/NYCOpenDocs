@@ -1,0 +1,2 @@
+This subdirectory contains the directory module structure which handles all
+core URL endpoints for the timeclock application.

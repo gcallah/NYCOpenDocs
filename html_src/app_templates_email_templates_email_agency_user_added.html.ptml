@@ -3,7 +3,7 @@
     <head>
 <!--include head.txt -->
         <title>
-            email_footer.html
+            email_agency_user_added.html
         </title>
     </head>
 
@@ -19,7 +19,7 @@
                     </figcaption>
                 </figure>
                 <h1>
-                    email_footer.html
+                    email_agency_user_added.html
                 </h1>
 
                 <details>
@@ -29,7 +29,7 @@
 
                     <p>
 <!-- Include the code review here! -->
-<!--include templates/app_templates_email_templates_email_footer.html_hw.txt -->
+<!--include templates/app_templates_email_templates_email_agency_user_added.html_hw.txt -->
                     </p>
                 </details>
 
@@ -52,13 +52,13 @@
 
                     <p>
 <!-- Include the extracted documentation here! -->
-<!--include templates/app_templates_email_templates_email_footer.html_ex.txt -->
+<!--include templates/app_templates_email_templates_email_agency_user_added.html_ex.txt -->
                    </p>
                 </details>
 
 <!-- Include source code here! -->
                 <p>
-<a href="https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/email_templates/email_footer.html">Source code</a>
+<a href="https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/email_templates/email_agency_user_added.html">Source code</a>
                 </p>
             </div>
         </div>

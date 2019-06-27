@@ -1,0 +1,13 @@
+This file tests whether the created app instance is set to development or test configuration. If test configuration is explicitly set,
+the testing variable should be set.
+
+<h3>
+Code Issues
+</h3>
+
+<ul class="review">
+    <li>
+        No issues to report.
+    </li>
+</ul>
+

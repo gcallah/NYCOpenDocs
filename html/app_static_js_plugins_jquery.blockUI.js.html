@@ -1225,21 +1225,6 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_acknowledgment.css.html">
-                            add_acknowledgment.css
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_closing.css.html">
-                            add_closing.css
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_denial.css.html">
-                            add_denial.css
-                        </a>
-                    </li>
-                    <li>
                         <a href="/NYCOpenDocs/html/app_static_styles_add_extension.css.html">
                             add_extension.css
                         </a>
@@ -1634,11 +1619,6 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_footer.html.html">
-                            email_footer.html
-                        </a>
-                    </li>
-                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_not_onboarded.html.html">
                             email_not_onboarded.html
                         </a>
@@ -1646,6 +1626,11 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_private_file_upload.html.html">
                             email_private_file_upload.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_request_info.html.html">
+                            email_request_info.html
                         </a>
                     </li>
                     <li>
@@ -3255,6 +3240,22 @@
                     <p>
 <!-- Include the code review here! -->
 Refer to jQuery blockUI's documentation.
+
+<h3>
+Code Issues
+</h3>
+
+<ul class="review">
+  <li>
+  On line 15, unnecessary semicolon is detected.
+  JavaScript will more or less let you put semicolons after any statement
+  without complaining.
+  While not technically an error, extra semicolons can be a source of
+  confusion when reading code.
+  This is automatically fixable using the --fix flag on the command line.
+  </li>
+
+</ul>
                     </p>
                 </details>
 
@@ -3268,24 +3269,25 @@ Refer to jQuery blockUI's documentation.
 <!-- Include the linting report here! -->
 
 
-   15:1   error    Unnecessary semicolon                                          no-extra-semi
-   15:2   error    Move the invocation into the parens that contain the function  wrap-iife
-   90:32  error    Expected '===' and instead saw '=='                            eqeqeq
-  176:60  error    Script URL is a form of eval                                   no-script-url
-  250:3   warning  Function 'install' has a complexity of 73                      complexity
-  252:19  error    Expected '===' and instead saw '=='                            eqeqeq
-  274:26  error    Expected '!==' and instead saw '!='                            eqeqeq
-  375:20  warning  Function has a complexity of 12                                complexity
-  457:3   warning  Function 'remove' has a complexity of 10                       complexity
-  459:19  error    Expected '===' and instead saw '=='                            eqeqeq
-  504:3   warning  Function 'reset' has a complexity of 7                         complexity
-  528:30  error    Expected '===' and instead saw '=='                            eqeqeq
-  538:3   warning  Function 'bind' has a complexity of 11                         complexity
-  539:18  error    Expected '===' and instead saw '=='                            eqeqeq
-  564:3   warning  Function 'handler' has a complexity of 13                      complexity
-  566:55  error    Expected '===' and instead saw '=='                            eqeqeq
+   15:1   error    Unnecessary semicolon                                            no-extra-semi
+   15:2   error    Move the invocation into the parens that contain the function    wrap-iife
+   90:32  error    Expected '===' and instead saw '=='                              eqeqeq
+  176:60  error    Script URL is a form of eval                                     no-script-url
+  250:3   warning  Function 'install' has a complexity of 73. Maximum allowed is 6  complexity
+  252:19  error    Expected '===' and instead saw '=='                              eqeqeq
+  274:26  error    Expected '!==' and instead saw '!='                              eqeqeq
+  375:20  warning  Function has a complexity of 12. Maximum allowed is 6            complexity
+  457:3   warning  Function 'remove' has a complexity of 10. Maximum allowed is 6   complexity
+  459:19  error    Expected '===' and instead saw '=='                              eqeqeq
+  504:3   warning  Function 'reset' has a complexity of 7. Maximum allowed is 6     complexity
+  528:30  error    Expected '===' and instead saw '=='                              eqeqeq
+  538:3   warning  Function 'bind' has a complexity of 11. Maximum allowed is 6     complexity
+  539:18  error    Expected '===' and instead saw '=='                              eqeqeq
+  564:3   warning  Function 'handler' has a complexity of 13. Maximum allowed is 6  complexity
+  566:55  error    Expected '===' and instead saw '=='                              eqeqeq
+  613:11  error    'define' is already defined as a built-in global variable        no-redeclare
 
-✖ 16 problems (10 errors, 6 warnings)
+✖ 17 problems (11 errors, 6 warnings)
   4 errors and 0 warnings potentially fixable with the `--fix` option.
                         </pre>
                    </p>

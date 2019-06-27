@@ -1,0 +1,1813 @@
+
+
+csslint: There are 362 problems in .
+
+bootstrap-editable.css
+1: warning at line 9, col 1
+Rule doesn't have all its properties in alphabetical order.
+.editableform .control-group {
+
+bootstrap-editable.css
+2: warning at line 23, col 1
+Rule doesn't have all its properties in alphabetical order.
+.editable-buttons {
+
+bootstrap-editable.css
+3: warning at line 29, col 4
+Duplicate property '*display' found.
+   *display: inline;
+
+bootstrap-editable.css
+4: warning at line 29, col 4
+Property with star prefix found.
+   *display: inline;
+
+bootstrap-editable.css
+5: warning at line 32, col 1
+Adjoining classes: .editable-buttons.editable-buttons-bottom
+.editable-buttons.editable-buttons-bottom {
+
+bootstrap-editable.css
+6: warning at line 32, col 1
+Rule doesn't have all its properties in alphabetical order.
+.editable-buttons.editable-buttons-bottom {
+
+bootstrap-editable.css
+7: warning at line 38, col 1
+Rule doesn't have all its properties in alphabetical order.
+.editable-input {
+
+bootstrap-editable.css
+8: warning at line 41, col 5
+width can't be used with display: inline.
+    width: auto; /* bootstrap-responsive has width: 100% that breakes layout */
+
+bootstrap-editable.css
+9: warning at line 45, col 4
+Duplicate property '*display' found.
+   *display: inline;   
+
+bootstrap-editable.css
+10: warning at line 45, col 4
+Property with star prefix found.
+   *display: inline;   
+
+bootstrap-editable.css
+11: warning at line 53, col 19
+Element (button.ui-button-icon-only) is overqualified, just use .ui-button-icon-only without element name.
+.editable-buttons button.ui-button-icon-only {
+
+bootstrap-editable.css
+12: warning at line 58, col 1
+Rule doesn't have all its properties in alphabetical order.
+.editableform-loading {
+
+bootstrap-editable.css
+13: warning at line 69, col 2
+Rule doesn't have all its properties in alphabetical order.
+ .editable-error-block {
+
+bootstrap-editable.css
+14: warning at line 77, col 1
+Adjoining classes: .editable-error-block.ui-state-error
+.editable-error-block.ui-state-error {
+
+bootstrap-editable.css
+15: warning at line 87, col 1
+Rule doesn't have all its properties in alphabetical order.
+.editableform .editable-date {
+
+bootstrap-editable.css
+16: warning at line 94, col 1
+Rule doesn't have all its properties in alphabetical order.
+.editable-inline .add-on .icon-th {
+
+bootstrap-editable.css
+17: warning at line 101, col 1
+Rule doesn't have all its properties in alphabetical order.
+.editable-checklist label input[type="checkbox"], 
+
+bootstrap-editable.css
+18: warning at line 112, col 1
+Rule doesn't have all its properties in alphabetical order.
+.editable-wysihtml5 {
+
+bootstrap-editable.css
+19: warning at line 118, col 1
+Rule doesn't have all its properties in alphabetical order.
+.editable-clear {
+
+bootstrap-editable.css
+20: warning at line 126, col 1
+Rule doesn't have all its properties in alphabetical order.
+.editable-clear-x {
+
+bootstrap-editable.css
+21: warning at line 148, col 1
+Adjoining classes: .editable-container.editable-popup
+.editable-container.editable-popup {
+
+bootstrap-editable.css
+22: warning at line 149, col 5
+Use of !important
+    max-width: none !important; /* without this rule poshytip/tooltip does not stretch */
+
+bootstrap-editable.css
+23: warning at line 152, col 1
+Adjoining classes: .editable-container.popover
+.editable-container.popover {
+
+bootstrap-editable.css
+24: warning at line 156, col 1
+Adjoining classes: .editable-container.editable-inline
+.editable-container.editable-inline {
+
+bootstrap-editable.css
+25: warning at line 156, col 1
+Rule doesn't have all its properties in alphabetical order.
+.editable-container.editable-inline {
+
+bootstrap-editable.css
+26: warning at line 159, col 5
+width can't be used with display: inline.
+    width: auto;
+
+bootstrap-editable.css
+27: warning at line 162, col 5
+Property with star prefix found.
+    *display: inline;    
+
+bootstrap-editable.css
+28: warning at line 162, col 5
+Duplicate property '*display' found.
+    *display: inline;    
+
+bootstrap-editable.css
+29: warning at line 165, col 1
+Adjoining classes: .editable-container.ui-widget
+.editable-container.ui-widget {
+
+bootstrap-editable.css
+30: warning at line 169, col 1
+Rule doesn't have all its properties in alphabetical order.
+.editable-click, 
+
+bootstrap-editable.css
+31: warning at line 176, col 1
+Rule doesn't have all its properties in alphabetical order.
+.editable-click.editable-disabled, 
+
+bootstrap-editable.css
+32: warning at line 176, col 1
+Adjoining classes: .editable-click.editable-disabled
+.editable-click.editable-disabled, 
+
+bootstrap-editable.css
+33: warning at line 177, col 1
+Adjoining classes: a.editable-click.editable-disabled
+a.editable-click.editable-disabled, 
+
+bootstrap-editable.css
+34: warning at line 178, col 1
+Adjoining classes: a.editable-click.editable-disabled:hover
+a.editable-click.editable-disabled:hover {
+
+bootstrap-editable.css
+35: warning at line 178, col 1
+Adjoining classes: a.editable-click.editable-disabled:hover
+a.editable-click.editable-disabled:hover {
+
+bootstrap-editable.css
+36: warning at line 184, col 1
+Rule doesn't have all its properties in alphabetical order.
+.editable-empty, .editable-empty:hover, .editable-empty:focus{
+
+bootstrap-editable.css
+37: warning at line 195, col 1
+Rule is empty.
+.editable-unsaved:after {
+
+bootstrap-editable.css
+38: warning at line 208, col 1
+Rule doesn't have all its properties in alphabetical order.
+.form-horizontal .editable
+
+bootstrap-editable.css
+39: warning at line 224, col 1
+Rule doesn't have all its properties in alphabetical order.
+.datepicker {
+
+bootstrap-editable.css
+40: warning at line 238, col 1
+Adjoining classes: .datepicker.datepicker-rtl
+.datepicker.datepicker-rtl {
+
+bootstrap-editable.css
+41: warning at line 241, col 1
+Adjoining classes: .datepicker.datepicker-rtl   table   tr   td   span
+.datepicker.datepicker-rtl table tr td span {
+
+bootstrap-editable.css
+42: warning at line 244, col 1
+Rule doesn't have all its properties in alphabetical order.
+.datepicker-dropdown {
+
+bootstrap-editable.css
+43: warning at line 248, col 1
+Rule doesn't have all its properties in alphabetical order.
+.datepicker-dropdown:before {
+
+bootstrap-editable.css
+44: warning at line 254, col 3
+Fallback border-bottom-color (hex or RGB) should precede RGBA border-bottom-color.
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+
+bootstrap-editable.css
+45: warning at line 259, col 1
+Rule doesn't have all its properties in alphabetical order.
+.datepicker-dropdown:after {
+
+bootstrap-editable.css
+46: warning at line 272, col 18
+Element (div.datepicker-days) is overqualified, just use .datepicker-days without element name.
+.datepicker.days div.datepicker-days {
+
+bootstrap-editable.css
+47: warning at line 272, col 1
+Adjoining classes: .datepicker.days   div.datepicker-days
+.datepicker.days div.datepicker-days {
+
+bootstrap-editable.css
+48: warning at line 275, col 20
+Element (div.datepicker-months) is overqualified, just use .datepicker-months without element name.
+.datepicker.months div.datepicker-months {
+
+bootstrap-editable.css
+49: warning at line 275, col 1
+Adjoining classes: .datepicker.months   div.datepicker-months
+.datepicker.months div.datepicker-months {
+
+bootstrap-editable.css
+50: warning at line 278, col 1
+Adjoining classes: .datepicker.years   div.datepicker-years
+.datepicker.years div.datepicker-years {
+
+bootstrap-editable.css
+51: warning at line 278, col 19
+Element (div.datepicker-years) is overqualified, just use .datepicker-years without element name.
+.datepicker.years div.datepicker-years {
+
+bootstrap-editable.css
+52: warning at line 284, col 1
+Rule doesn't have all its properties in alphabetical order.
+.datepicker td,
+
+bootstrap-editable.css
+53: warning at line 298, col 22
+Element (td.day:hover) is overqualified, just use .day without element name.
+.datepicker table tr td.day:hover {
+
+bootstrap-editable.css
+54: warning at line 312, col 1
+Rule doesn't have all its properties in alphabetical order.
+.datepicker table tr td.today,
+
+bootstrap-editable.css
+55: warning at line 314, col 22
+Adjoining classes: .datepicker   table   tr   td.today.disabled
+.datepicker table tr td.today.disabled,
+
+bootstrap-editable.css
+56: warning at line 315, col 22
+Adjoining classes: .datepicker   table   tr   td.today.disabled:hover
+.datepicker table tr td.today.disabled:hover {
+
+bootstrap-editable.css
+57: warning at line 315, col 22
+Adjoining classes: .datepicker   table   tr   td.today.disabled:hover
+.datepicker table tr td.today.disabled:hover {
+
+bootstrap-editable.css
+58: warning at line 324, col 3
+Expected (<filter-function-list> | none) but found 'progid:DXImageTransform.Microsoft.gradient(startColorstr='#fdd49a' endColorstr='#fdf59a' GradientType=0)'.
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fdd49a', endColorstr='#fdf59a', GradientType=0);
+
+bootstrap-editable.css
+59: warning at line 327, col 3
+Expected (<filter-function-list> | none) but found 'progid:DXImageTransform.Microsoft.gradient(enabled=false)'.
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+
+bootstrap-editable.css
+60: warning at line 327, col 3
+Duplicate property 'filter' found.
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+
+bootstrap-editable.css
+61: warning at line 332, col 22
+Adjoining classes: .datepicker   table   tr   td.today.disabled:hover
+.datepicker table tr td.today.disabled:hover,
+
+bootstrap-editable.css
+62: warning at line 332, col 22
+Adjoining classes: .datepicker   table   tr   td.today.disabled:hover
+.datepicker table tr td.today.disabled:hover,
+
+bootstrap-editable.css
+63: warning at line 333, col 22
+Adjoining classes: .datepicker   table   tr   td.today.disabled:hover:hover
+.datepicker table tr td.today.disabled:hover:hover,
+
+bootstrap-editable.css
+64: warning at line 333, col 22
+Adjoining classes: .datepicker   table   tr   td.today.disabled:hover:hover
+.datepicker table tr td.today.disabled:hover:hover,
+
+bootstrap-editable.css
+65: warning at line 333, col 22
+Adjoining classes: .datepicker   table   tr   td.today.disabled:hover:hover
+.datepicker table tr td.today.disabled:hover:hover,
+
+bootstrap-editable.css
+66: warning at line 336, col 22
+Adjoining classes: .datepicker   table   tr   td.today.disabled:active
+.datepicker table tr td.today.disabled:active,
+
+bootstrap-editable.css
+67: warning at line 336, col 22
+Adjoining classes: .datepicker   table   tr   td.today.disabled:active
+.datepicker table tr td.today.disabled:active,
+
+bootstrap-editable.css
+68: warning at line 337, col 22
+Adjoining classes: .datepicker   table   tr   td.today.disabled:hover:active
+.datepicker table tr td.today.disabled:hover:active,
+
+bootstrap-editable.css
+69: warning at line 337, col 22
+Adjoining classes: .datepicker   table   tr   td.today.disabled:hover:active
+.datepicker table tr td.today.disabled:hover:active,
+
+bootstrap-editable.css
+70: warning at line 337, col 22
+Adjoining classes: .datepicker   table   tr   td.today.disabled:hover:active
+.datepicker table tr td.today.disabled:hover:active,
+
+bootstrap-editable.css
+71: warning at line 338, col 22
+Adjoining classes: .datepicker   table   tr   td.today.active
+.datepicker table tr td.today.active,
+
+bootstrap-editable.css
+72: warning at line 339, col 22
+Adjoining classes: .datepicker   table   tr   td.today:hover.active
+.datepicker table tr td.today:hover.active,
+
+bootstrap-editable.css
+73: warning at line 340, col 22
+Adjoining classes: .datepicker   table   tr   td.today.disabled.active
+.datepicker table tr td.today.disabled.active,
+
+bootstrap-editable.css
+74: warning at line 340, col 22
+Adjoining classes: .datepicker   table   tr   td.today.disabled.active
+.datepicker table tr td.today.disabled.active,
+
+bootstrap-editable.css
+75: warning at line 341, col 22
+Adjoining classes: .datepicker   table   tr   td.today.disabled:hover.active
+.datepicker table tr td.today.disabled:hover.active,
+
+bootstrap-editable.css
+76: warning at line 341, col 22
+Adjoining classes: .datepicker   table   tr   td.today.disabled:hover.active
+.datepicker table tr td.today.disabled:hover.active,
+
+bootstrap-editable.css
+77: warning at line 341, col 22
+Adjoining classes: .datepicker   table   tr   td.today.disabled:hover.active
+.datepicker table tr td.today.disabled:hover.active,
+
+bootstrap-editable.css
+78: warning at line 342, col 22
+Adjoining classes: .datepicker   table   tr   td.today.disabled
+.datepicker table tr td.today.disabled,
+
+bootstrap-editable.css
+79: warning at line 343, col 22
+Adjoining classes: .datepicker   table   tr   td.today:hover.disabled
+.datepicker table tr td.today:hover.disabled,
+
+bootstrap-editable.css
+80: warning at line 344, col 22
+Adjoining classes: .datepicker   table   tr   td.today.disabled.disabled
+.datepicker table tr td.today.disabled.disabled,
+
+bootstrap-editable.css
+81: warning at line 344, col 22
+Adjoining classes: .datepicker   table   tr   td.today.disabled.disabled
+.datepicker table tr td.today.disabled.disabled,
+
+bootstrap-editable.css
+82: warning at line 345, col 22
+Adjoining classes: .datepicker   table   tr   td.today.disabled:hover.disabled
+.datepicker table tr td.today.disabled:hover.disabled,
+
+bootstrap-editable.css
+83: warning at line 345, col 22
+Adjoining classes: .datepicker   table   tr   td.today.disabled:hover.disabled
+.datepicker table tr td.today.disabled:hover.disabled,
+
+bootstrap-editable.css
+84: warning at line 345, col 22
+Adjoining classes: .datepicker   table   tr   td.today.disabled:hover.disabled
+.datepicker table tr td.today.disabled:hover.disabled,
+
+bootstrap-editable.css
+85: warning at line 348, col 22
+Adjoining classes: .datepicker   table   tr   td.today.disabled[disabled]
+.datepicker table tr td.today.disabled[disabled],
+
+bootstrap-editable.css
+86: warning at line 348, col 22
+Adjoining classes: .datepicker   table   tr   td.today.disabled[disabled]
+.datepicker table tr td.today.disabled[disabled],
+
+bootstrap-editable.css
+87: warning at line 349, col 22
+Adjoining classes: .datepicker   table   tr   td.today.disabled:hover[disabled]
+.datepicker table tr td.today.disabled:hover[disabled] {
+
+bootstrap-editable.css
+88: warning at line 349, col 22
+Adjoining classes: .datepicker   table   tr   td.today.disabled:hover[disabled]
+.datepicker table tr td.today.disabled:hover[disabled] {
+
+bootstrap-editable.css
+89: warning at line 349, col 22
+Adjoining classes: .datepicker   table   tr   td.today.disabled:hover[disabled]
+.datepicker table tr td.today.disabled:hover[disabled] {
+
+bootstrap-editable.css
+90: warning at line 354, col 22
+Adjoining classes: .datepicker   table   tr   td.today.disabled:active
+.datepicker table tr td.today.disabled:active,
+
+bootstrap-editable.css
+91: warning at line 354, col 22
+Adjoining classes: .datepicker   table   tr   td.today.disabled:active
+.datepicker table tr td.today.disabled:active,
+
+bootstrap-editable.css
+92: warning at line 355, col 22
+Adjoining classes: .datepicker   table   tr   td.today.disabled:hover:active
+.datepicker table tr td.today.disabled:hover:active,
+
+bootstrap-editable.css
+93: warning at line 355, col 22
+Adjoining classes: .datepicker   table   tr   td.today.disabled:hover:active
+.datepicker table tr td.today.disabled:hover:active,
+
+bootstrap-editable.css
+94: warning at line 355, col 22
+Adjoining classes: .datepicker   table   tr   td.today.disabled:hover:active
+.datepicker table tr td.today.disabled:hover:active,
+
+bootstrap-editable.css
+95: warning at line 356, col 22
+Adjoining classes: .datepicker   table   tr   td.today.active
+.datepicker table tr td.today.active,
+
+bootstrap-editable.css
+96: warning at line 357, col 22
+Adjoining classes: .datepicker   table   tr   td.today:hover.active
+.datepicker table tr td.today:hover.active,
+
+bootstrap-editable.css
+97: warning at line 358, col 22
+Adjoining classes: .datepicker   table   tr   td.today.disabled.active
+.datepicker table tr td.today.disabled.active,
+
+bootstrap-editable.css
+98: warning at line 358, col 22
+Adjoining classes: .datepicker   table   tr   td.today.disabled.active
+.datepicker table tr td.today.disabled.active,
+
+bootstrap-editable.css
+99: warning at line 359, col 22
+Adjoining classes: .datepicker   table   tr   td.today.disabled:hover.active
+.datepicker table tr td.today.disabled:hover.active {
+
+bootstrap-editable.css
+100: warning at line 359, col 22
+Adjoining classes: .datepicker   table   tr   td.today.disabled:hover.active
+.datepicker table tr td.today.disabled:hover.active {
+
+bootstrap-editable.css
+101: warning at line 359, col 22
+Adjoining classes: .datepicker   table   tr   td.today.disabled:hover.active
+.datepicker table tr td.today.disabled:hover.active {
+
+bootstrap-editable.css
+102: warning at line 360, col 3
+Expected end of value but found '	'.
+  background-color: #fbf069 \9;
+
+bootstrap-editable.css
+103: warning at line 365, col 22
+Adjoining classes: .datepicker   table   tr   td.today.active:hover
+.datepicker table tr td.today.active:hover {
+
+bootstrap-editable.css
+104: warning at line 365, col 22
+Adjoining classes: .datepicker   table   tr   td.today.active:hover
+.datepicker table tr td.today.active:hover {
+
+bootstrap-editable.css
+105: warning at line 370, col 22
+Adjoining classes: .datepicker   table   tr   td.range.disabled
+.datepicker table tr td.range.disabled,
+
+bootstrap-editable.css
+106: warning at line 371, col 22
+Adjoining classes: .datepicker   table   tr   td.range.disabled:hover
+.datepicker table tr td.range.disabled:hover {
+
+bootstrap-editable.css
+107: warning at line 371, col 22
+Adjoining classes: .datepicker   table   tr   td.range.disabled:hover
+.datepicker table tr td.range.disabled:hover {
+
+bootstrap-editable.css
+108: warning at line 377, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today
+.datepicker table tr td.range.today,
+
+bootstrap-editable.css
+109: warning at line 377, col 1
+Rule doesn't have all its properties in alphabetical order.
+.datepicker table tr td.range.today,
+
+bootstrap-editable.css
+110: warning at line 378, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today:hover
+.datepicker table tr td.range.today:hover,
+
+bootstrap-editable.css
+111: warning at line 378, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today:hover
+.datepicker table tr td.range.today:hover,
+
+bootstrap-editable.css
+112: warning at line 379, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled
+.datepicker table tr td.range.today.disabled,
+
+bootstrap-editable.css
+113: warning at line 379, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled
+.datepicker table tr td.range.today.disabled,
+
+bootstrap-editable.css
+114: warning at line 380, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled:hover
+.datepicker table tr td.range.today.disabled:hover {
+
+bootstrap-editable.css
+115: warning at line 380, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled:hover
+.datepicker table tr td.range.today.disabled:hover {
+
+bootstrap-editable.css
+116: warning at line 380, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled:hover
+.datepicker table tr td.range.today.disabled:hover {
+
+bootstrap-editable.css
+117: warning at line 389, col 3
+Expected (<filter-function-list> | none) but found 'progid:DXImageTransform.Microsoft.gradient(startColorstr='#f3c17a' endColorstr='#f3e97a' GradientType=0)'.
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f3c17a', endColorstr='#f3e97a', GradientType=0);
+
+bootstrap-editable.css
+118: warning at line 392, col 3
+Expected (<filter-function-list> | none) but found 'progid:DXImageTransform.Microsoft.gradient(enabled=false)'.
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+
+bootstrap-editable.css
+119: warning at line 392, col 3
+Duplicate property 'filter' found.
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+
+bootstrap-editable.css
+120: warning at line 397, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today:hover
+.datepicker table tr td.range.today:hover,
+
+bootstrap-editable.css
+121: warning at line 397, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today:hover
+.datepicker table tr td.range.today:hover,
+
+bootstrap-editable.css
+122: warning at line 398, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today:hover:hover
+.datepicker table tr td.range.today:hover:hover,
+
+bootstrap-editable.css
+123: warning at line 398, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today:hover:hover
+.datepicker table tr td.range.today:hover:hover,
+
+bootstrap-editable.css
+124: warning at line 398, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today:hover:hover
+.datepicker table tr td.range.today:hover:hover,
+
+bootstrap-editable.css
+125: warning at line 399, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled:hover
+.datepicker table tr td.range.today.disabled:hover,
+
+bootstrap-editable.css
+126: warning at line 399, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled:hover
+.datepicker table tr td.range.today.disabled:hover,
+
+bootstrap-editable.css
+127: warning at line 399, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled:hover
+.datepicker table tr td.range.today.disabled:hover,
+
+bootstrap-editable.css
+128: warning at line 400, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled:hover:hover
+.datepicker table tr td.range.today.disabled:hover:hover,
+
+bootstrap-editable.css
+129: warning at line 400, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled:hover:hover
+.datepicker table tr td.range.today.disabled:hover:hover,
+
+bootstrap-editable.css
+130: warning at line 400, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled:hover:hover
+.datepicker table tr td.range.today.disabled:hover:hover,
+
+bootstrap-editable.css
+131: warning at line 400, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled:hover:hover
+.datepicker table tr td.range.today.disabled:hover:hover,
+
+bootstrap-editable.css
+132: warning at line 401, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today:active
+.datepicker table tr td.range.today:active,
+
+bootstrap-editable.css
+133: warning at line 401, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today:active
+.datepicker table tr td.range.today:active,
+
+bootstrap-editable.css
+134: warning at line 402, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today:hover:active
+.datepicker table tr td.range.today:hover:active,
+
+bootstrap-editable.css
+135: warning at line 402, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today:hover:active
+.datepicker table tr td.range.today:hover:active,
+
+bootstrap-editable.css
+136: warning at line 402, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today:hover:active
+.datepicker table tr td.range.today:hover:active,
+
+bootstrap-editable.css
+137: warning at line 403, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled:active
+.datepicker table tr td.range.today.disabled:active,
+
+bootstrap-editable.css
+138: warning at line 403, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled:active
+.datepicker table tr td.range.today.disabled:active,
+
+bootstrap-editable.css
+139: warning at line 403, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled:active
+.datepicker table tr td.range.today.disabled:active,
+
+bootstrap-editable.css
+140: warning at line 404, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled:hover:active
+.datepicker table tr td.range.today.disabled:hover:active,
+
+bootstrap-editable.css
+141: warning at line 404, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled:hover:active
+.datepicker table tr td.range.today.disabled:hover:active,
+
+bootstrap-editable.css
+142: warning at line 404, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled:hover:active
+.datepicker table tr td.range.today.disabled:hover:active,
+
+bootstrap-editable.css
+143: warning at line 404, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled:hover:active
+.datepicker table tr td.range.today.disabled:hover:active,
+
+bootstrap-editable.css
+144: warning at line 405, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.active
+.datepicker table tr td.range.today.active,
+
+bootstrap-editable.css
+145: warning at line 405, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.active
+.datepicker table tr td.range.today.active,
+
+bootstrap-editable.css
+146: warning at line 406, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today:hover.active
+.datepicker table tr td.range.today:hover.active,
+
+bootstrap-editable.css
+147: warning at line 406, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today:hover.active
+.datepicker table tr td.range.today:hover.active,
+
+bootstrap-editable.css
+148: warning at line 406, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today:hover.active
+.datepicker table tr td.range.today:hover.active,
+
+bootstrap-editable.css
+149: warning at line 407, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled.active
+.datepicker table tr td.range.today.disabled.active,
+
+bootstrap-editable.css
+150: warning at line 407, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled.active
+.datepicker table tr td.range.today.disabled.active,
+
+bootstrap-editable.css
+151: warning at line 407, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled.active
+.datepicker table tr td.range.today.disabled.active,
+
+bootstrap-editable.css
+152: warning at line 408, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled:hover.active
+.datepicker table tr td.range.today.disabled:hover.active,
+
+bootstrap-editable.css
+153: warning at line 408, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled:hover.active
+.datepicker table tr td.range.today.disabled:hover.active,
+
+bootstrap-editable.css
+154: warning at line 408, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled:hover.active
+.datepicker table tr td.range.today.disabled:hover.active,
+
+bootstrap-editable.css
+155: warning at line 408, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled:hover.active
+.datepicker table tr td.range.today.disabled:hover.active,
+
+bootstrap-editable.css
+156: warning at line 409, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled
+.datepicker table tr td.range.today.disabled,
+
+bootstrap-editable.css
+157: warning at line 409, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled
+.datepicker table tr td.range.today.disabled,
+
+bootstrap-editable.css
+158: warning at line 410, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today:hover.disabled
+.datepicker table tr td.range.today:hover.disabled,
+
+bootstrap-editable.css
+159: warning at line 410, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today:hover.disabled
+.datepicker table tr td.range.today:hover.disabled,
+
+bootstrap-editable.css
+160: warning at line 410, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today:hover.disabled
+.datepicker table tr td.range.today:hover.disabled,
+
+bootstrap-editable.css
+161: warning at line 411, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled.disabled
+.datepicker table tr td.range.today.disabled.disabled,
+
+bootstrap-editable.css
+162: warning at line 411, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled.disabled
+.datepicker table tr td.range.today.disabled.disabled,
+
+bootstrap-editable.css
+163: warning at line 411, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled.disabled
+.datepicker table tr td.range.today.disabled.disabled,
+
+bootstrap-editable.css
+164: warning at line 412, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled:hover.disabled
+.datepicker table tr td.range.today.disabled:hover.disabled,
+
+bootstrap-editable.css
+165: warning at line 412, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled:hover.disabled
+.datepicker table tr td.range.today.disabled:hover.disabled,
+
+bootstrap-editable.css
+166: warning at line 412, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled:hover.disabled
+.datepicker table tr td.range.today.disabled:hover.disabled,
+
+bootstrap-editable.css
+167: warning at line 412, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled:hover.disabled
+.datepicker table tr td.range.today.disabled:hover.disabled,
+
+bootstrap-editable.css
+168: warning at line 413, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today[disabled]
+.datepicker table tr td.range.today[disabled],
+
+bootstrap-editable.css
+169: warning at line 413, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today[disabled]
+.datepicker table tr td.range.today[disabled],
+
+bootstrap-editable.css
+170: warning at line 414, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today:hover[disabled]
+.datepicker table tr td.range.today:hover[disabled],
+
+bootstrap-editable.css
+171: warning at line 414, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today:hover[disabled]
+.datepicker table tr td.range.today:hover[disabled],
+
+bootstrap-editable.css
+172: warning at line 414, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today:hover[disabled]
+.datepicker table tr td.range.today:hover[disabled],
+
+bootstrap-editable.css
+173: warning at line 415, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled[disabled]
+.datepicker table tr td.range.today.disabled[disabled],
+
+bootstrap-editable.css
+174: warning at line 415, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled[disabled]
+.datepicker table tr td.range.today.disabled[disabled],
+
+bootstrap-editable.css
+175: warning at line 415, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled[disabled]
+.datepicker table tr td.range.today.disabled[disabled],
+
+bootstrap-editable.css
+176: warning at line 416, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled:hover[disabled]
+.datepicker table tr td.range.today.disabled:hover[disabled] {
+
+bootstrap-editable.css
+177: warning at line 416, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled:hover[disabled]
+.datepicker table tr td.range.today.disabled:hover[disabled] {
+
+bootstrap-editable.css
+178: warning at line 416, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled:hover[disabled]
+.datepicker table tr td.range.today.disabled:hover[disabled] {
+
+bootstrap-editable.css
+179: warning at line 416, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled:hover[disabled]
+.datepicker table tr td.range.today.disabled:hover[disabled] {
+
+bootstrap-editable.css
+180: warning at line 419, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today:active
+.datepicker table tr td.range.today:active,
+
+bootstrap-editable.css
+181: warning at line 419, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today:active
+.datepicker table tr td.range.today:active,
+
+bootstrap-editable.css
+182: warning at line 420, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today:hover:active
+.datepicker table tr td.range.today:hover:active,
+
+bootstrap-editable.css
+183: warning at line 420, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today:hover:active
+.datepicker table tr td.range.today:hover:active,
+
+bootstrap-editable.css
+184: warning at line 420, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today:hover:active
+.datepicker table tr td.range.today:hover:active,
+
+bootstrap-editable.css
+185: warning at line 421, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled:active
+.datepicker table tr td.range.today.disabled:active,
+
+bootstrap-editable.css
+186: warning at line 421, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled:active
+.datepicker table tr td.range.today.disabled:active,
+
+bootstrap-editable.css
+187: warning at line 421, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled:active
+.datepicker table tr td.range.today.disabled:active,
+
+bootstrap-editable.css
+188: warning at line 422, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled:hover:active
+.datepicker table tr td.range.today.disabled:hover:active,
+
+bootstrap-editable.css
+189: warning at line 422, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled:hover:active
+.datepicker table tr td.range.today.disabled:hover:active,
+
+bootstrap-editable.css
+190: warning at line 422, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled:hover:active
+.datepicker table tr td.range.today.disabled:hover:active,
+
+bootstrap-editable.css
+191: warning at line 422, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled:hover:active
+.datepicker table tr td.range.today.disabled:hover:active,
+
+bootstrap-editable.css
+192: warning at line 423, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.active
+.datepicker table tr td.range.today.active,
+
+bootstrap-editable.css
+193: warning at line 423, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.active
+.datepicker table tr td.range.today.active,
+
+bootstrap-editable.css
+194: warning at line 424, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today:hover.active
+.datepicker table tr td.range.today:hover.active,
+
+bootstrap-editable.css
+195: warning at line 424, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today:hover.active
+.datepicker table tr td.range.today:hover.active,
+
+bootstrap-editable.css
+196: warning at line 424, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today:hover.active
+.datepicker table tr td.range.today:hover.active,
+
+bootstrap-editable.css
+197: warning at line 425, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled.active
+.datepicker table tr td.range.today.disabled.active,
+
+bootstrap-editable.css
+198: warning at line 425, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled.active
+.datepicker table tr td.range.today.disabled.active,
+
+bootstrap-editable.css
+199: warning at line 425, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled.active
+.datepicker table tr td.range.today.disabled.active,
+
+bootstrap-editable.css
+200: warning at line 426, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled:hover.active
+.datepicker table tr td.range.today.disabled:hover.active {
+
+bootstrap-editable.css
+201: warning at line 426, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled:hover.active
+.datepicker table tr td.range.today.disabled:hover.active {
+
+bootstrap-editable.css
+202: warning at line 426, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled:hover.active
+.datepicker table tr td.range.today.disabled:hover.active {
+
+bootstrap-editable.css
+203: warning at line 426, col 22
+Adjoining classes: .datepicker   table   tr   td.range.today.disabled:hover.active
+.datepicker table tr td.range.today.disabled:hover.active {
+
+bootstrap-editable.css
+204: warning at line 427, col 3
+Expected end of value but found '	'.
+  background-color: #efe24b \9;
+
+bootstrap-editable.css
+205: warning at line 429, col 1
+Rule doesn't have all its properties in alphabetical order.
+.datepicker table tr td.selected,
+
+bootstrap-editable.css
+206: warning at line 431, col 22
+Adjoining classes: .datepicker   table   tr   td.selected.disabled
+.datepicker table tr td.selected.disabled,
+
+bootstrap-editable.css
+207: warning at line 432, col 22
+Adjoining classes: .datepicker   table   tr   td.selected.disabled:hover
+.datepicker table tr td.selected.disabled:hover {
+
+bootstrap-editable.css
+208: warning at line 432, col 22
+Adjoining classes: .datepicker   table   tr   td.selected.disabled:hover
+.datepicker table tr td.selected.disabled:hover {
+
+bootstrap-editable.css
+209: warning at line 441, col 3
+Expected (<filter-function-list> | none) but found 'progid:DXImageTransform.Microsoft.gradient(startColorstr='#b3b3b3' endColorstr='#808080' GradientType=0)'.
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b3b3b3', endColorstr='#808080', GradientType=0);
+
+bootstrap-editable.css
+210: warning at line 444, col 3
+Duplicate property 'filter' found.
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+
+bootstrap-editable.css
+211: warning at line 444, col 3
+Expected (<filter-function-list> | none) but found 'progid:DXImageTransform.Microsoft.gradient(enabled=false)'.
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+
+bootstrap-editable.css
+212: warning at line 450, col 22
+Adjoining classes: .datepicker   table   tr   td.selected.disabled:hover
+.datepicker table tr td.selected.disabled:hover,
+
+bootstrap-editable.css
+213: warning at line 450, col 22
+Adjoining classes: .datepicker   table   tr   td.selected.disabled:hover
+.datepicker table tr td.selected.disabled:hover,
+
+bootstrap-editable.css
+214: warning at line 451, col 22
+Adjoining classes: .datepicker   table   tr   td.selected.disabled:hover:hover
+.datepicker table tr td.selected.disabled:hover:hover,
+
+bootstrap-editable.css
+215: warning at line 451, col 22
+Adjoining classes: .datepicker   table   tr   td.selected.disabled:hover:hover
+.datepicker table tr td.selected.disabled:hover:hover,
+
+bootstrap-editable.css
+216: warning at line 451, col 22
+Adjoining classes: .datepicker   table   tr   td.selected.disabled:hover:hover
+.datepicker table tr td.selected.disabled:hover:hover,
+
+bootstrap-editable.css
+217: warning at line 454, col 22
+Adjoining classes: .datepicker   table   tr   td.selected.disabled:active
+.datepicker table tr td.selected.disabled:active,
+
+bootstrap-editable.css
+218: warning at line 454, col 22
+Adjoining classes: .datepicker   table   tr   td.selected.disabled:active
+.datepicker table tr td.selected.disabled:active,
+
+bootstrap-editable.css
+219: warning at line 455, col 22
+Adjoining classes: .datepicker   table   tr   td.selected.disabled:hover:active
+.datepicker table tr td.selected.disabled:hover:active,
+
+bootstrap-editable.css
+220: warning at line 455, col 22
+Adjoining classes: .datepicker   table   tr   td.selected.disabled:hover:active
+.datepicker table tr td.selected.disabled:hover:active,
+
+bootstrap-editable.css
+221: warning at line 455, col 22
+Adjoining classes: .datepicker   table   tr   td.selected.disabled:hover:active
+.datepicker table tr td.selected.disabled:hover:active,
+
+bootstrap-editable.css
+222: warning at line 456, col 22
+Adjoining classes: .datepicker   table   tr   td.selected.active
+.datepicker table tr td.selected.active,
+
+bootstrap-editable.css
+223: warning at line 457, col 22
+Adjoining classes: .datepicker   table   tr   td.selected:hover.active
+.datepicker table tr td.selected:hover.active,
+
+bootstrap-editable.css
+224: warning at line 458, col 22
+Adjoining classes: .datepicker   table   tr   td.selected.disabled.active
+.datepicker table tr td.selected.disabled.active,
+
+bootstrap-editable.css
+225: warning at line 458, col 22
+Adjoining classes: .datepicker   table   tr   td.selected.disabled.active
+.datepicker table tr td.selected.disabled.active,
+
+bootstrap-editable.css
+226: warning at line 459, col 22
+Adjoining classes: .datepicker   table   tr   td.selected.disabled:hover.active
+.datepicker table tr td.selected.disabled:hover.active,
+
+bootstrap-editable.css
+227: warning at line 459, col 22
+Adjoining classes: .datepicker   table   tr   td.selected.disabled:hover.active
+.datepicker table tr td.selected.disabled:hover.active,
+
+bootstrap-editable.css
+228: warning at line 459, col 22
+Adjoining classes: .datepicker   table   tr   td.selected.disabled:hover.active
+.datepicker table tr td.selected.disabled:hover.active,
+
+bootstrap-editable.css
+229: warning at line 460, col 22
+Adjoining classes: .datepicker   table   tr   td.selected.disabled
+.datepicker table tr td.selected.disabled,
+
+bootstrap-editable.css
+230: warning at line 461, col 22
+Adjoining classes: .datepicker   table   tr   td.selected:hover.disabled
+.datepicker table tr td.selected:hover.disabled,
+
+bootstrap-editable.css
+231: warning at line 462, col 22
+Adjoining classes: .datepicker   table   tr   td.selected.disabled.disabled
+.datepicker table tr td.selected.disabled.disabled,
+
+bootstrap-editable.css
+232: warning at line 462, col 22
+Adjoining classes: .datepicker   table   tr   td.selected.disabled.disabled
+.datepicker table tr td.selected.disabled.disabled,
+
+bootstrap-editable.css
+233: warning at line 463, col 22
+Adjoining classes: .datepicker   table   tr   td.selected.disabled:hover.disabled
+.datepicker table tr td.selected.disabled:hover.disabled,
+
+bootstrap-editable.css
+234: warning at line 463, col 22
+Adjoining classes: .datepicker   table   tr   td.selected.disabled:hover.disabled
+.datepicker table tr td.selected.disabled:hover.disabled,
+
+bootstrap-editable.css
+235: warning at line 463, col 22
+Adjoining classes: .datepicker   table   tr   td.selected.disabled:hover.disabled
+.datepicker table tr td.selected.disabled:hover.disabled,
+
+bootstrap-editable.css
+236: warning at line 466, col 22
+Adjoining classes: .datepicker   table   tr   td.selected.disabled[disabled]
+.datepicker table tr td.selected.disabled[disabled],
+
+bootstrap-editable.css
+237: warning at line 466, col 22
+Adjoining classes: .datepicker   table   tr   td.selected.disabled[disabled]
+.datepicker table tr td.selected.disabled[disabled],
+
+bootstrap-editable.css
+238: warning at line 467, col 22
+Adjoining classes: .datepicker   table   tr   td.selected.disabled:hover[disabled]
+.datepicker table tr td.selected.disabled:hover[disabled] {
+
+bootstrap-editable.css
+239: warning at line 467, col 22
+Adjoining classes: .datepicker   table   tr   td.selected.disabled:hover[disabled]
+.datepicker table tr td.selected.disabled:hover[disabled] {
+
+bootstrap-editable.css
+240: warning at line 467, col 22
+Adjoining classes: .datepicker   table   tr   td.selected.disabled:hover[disabled]
+.datepicker table tr td.selected.disabled:hover[disabled] {
+
+bootstrap-editable.css
+241: warning at line 472, col 22
+Adjoining classes: .datepicker   table   tr   td.selected.disabled:active
+.datepicker table tr td.selected.disabled:active,
+
+bootstrap-editable.css
+242: warning at line 472, col 22
+Adjoining classes: .datepicker   table   tr   td.selected.disabled:active
+.datepicker table tr td.selected.disabled:active,
+
+bootstrap-editable.css
+243: warning at line 473, col 22
+Adjoining classes: .datepicker   table   tr   td.selected.disabled:hover:active
+.datepicker table tr td.selected.disabled:hover:active,
+
+bootstrap-editable.css
+244: warning at line 473, col 22
+Adjoining classes: .datepicker   table   tr   td.selected.disabled:hover:active
+.datepicker table tr td.selected.disabled:hover:active,
+
+bootstrap-editable.css
+245: warning at line 473, col 22
+Adjoining classes: .datepicker   table   tr   td.selected.disabled:hover:active
+.datepicker table tr td.selected.disabled:hover:active,
+
+bootstrap-editable.css
+246: warning at line 474, col 22
+Adjoining classes: .datepicker   table   tr   td.selected.active
+.datepicker table tr td.selected.active,
+
+bootstrap-editable.css
+247: warning at line 475, col 22
+Adjoining classes: .datepicker   table   tr   td.selected:hover.active
+.datepicker table tr td.selected:hover.active,
+
+bootstrap-editable.css
+248: warning at line 476, col 22
+Adjoining classes: .datepicker   table   tr   td.selected.disabled.active
+.datepicker table tr td.selected.disabled.active,
+
+bootstrap-editable.css
+249: warning at line 476, col 22
+Adjoining classes: .datepicker   table   tr   td.selected.disabled.active
+.datepicker table tr td.selected.disabled.active,
+
+bootstrap-editable.css
+250: warning at line 477, col 22
+Adjoining classes: .datepicker   table   tr   td.selected.disabled:hover.active
+.datepicker table tr td.selected.disabled:hover.active {
+
+bootstrap-editable.css
+251: warning at line 477, col 22
+Adjoining classes: .datepicker   table   tr   td.selected.disabled:hover.active
+.datepicker table tr td.selected.disabled:hover.active {
+
+bootstrap-editable.css
+252: warning at line 477, col 22
+Adjoining classes: .datepicker   table   tr   td.selected.disabled:hover.active
+.datepicker table tr td.selected.disabled:hover.active {
+
+bootstrap-editable.css
+253: warning at line 478, col 3
+Expected end of value but found '	'.
+  background-color: #666666 \9;
+
+bootstrap-editable.css
+254: warning at line 480, col 1
+Rule doesn't have all its properties in alphabetical order.
+.datepicker table tr td.active,
+
+bootstrap-editable.css
+255: warning at line 482, col 22
+Adjoining classes: .datepicker   table   tr   td.active.disabled
+.datepicker table tr td.active.disabled,
+
+bootstrap-editable.css
+256: warning at line 483, col 22
+Adjoining classes: .datepicker   table   tr   td.active.disabled:hover
+.datepicker table tr td.active.disabled:hover {
+
+bootstrap-editable.css
+257: warning at line 483, col 22
+Adjoining classes: .datepicker   table   tr   td.active.disabled:hover
+.datepicker table tr td.active.disabled:hover {
+
+bootstrap-editable.css
+258: warning at line 492, col 3
+Expected (<filter-function-list> | none) but found 'progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088cc' endColorstr='#0044cc' GradientType=0)'.
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088cc', endColorstr='#0044cc', GradientType=0);
+
+bootstrap-editable.css
+259: warning at line 495, col 3
+Expected (<filter-function-list> | none) but found 'progid:DXImageTransform.Microsoft.gradient(enabled=false)'.
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+
+bootstrap-editable.css
+260: warning at line 495, col 3
+Duplicate property 'filter' found.
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+
+bootstrap-editable.css
+261: warning at line 501, col 22
+Adjoining classes: .datepicker   table   tr   td.active.disabled:hover
+.datepicker table tr td.active.disabled:hover,
+
+bootstrap-editable.css
+262: warning at line 501, col 22
+Adjoining classes: .datepicker   table   tr   td.active.disabled:hover
+.datepicker table tr td.active.disabled:hover,
+
+bootstrap-editable.css
+263: warning at line 502, col 22
+Adjoining classes: .datepicker   table   tr   td.active.disabled:hover:hover
+.datepicker table tr td.active.disabled:hover:hover,
+
+bootstrap-editable.css
+264: warning at line 502, col 22
+Adjoining classes: .datepicker   table   tr   td.active.disabled:hover:hover
+.datepicker table tr td.active.disabled:hover:hover,
+
+bootstrap-editable.css
+265: warning at line 502, col 22
+Adjoining classes: .datepicker   table   tr   td.active.disabled:hover:hover
+.datepicker table tr td.active.disabled:hover:hover,
+
+bootstrap-editable.css
+266: warning at line 505, col 22
+Adjoining classes: .datepicker   table   tr   td.active.disabled:active
+.datepicker table tr td.active.disabled:active,
+
+bootstrap-editable.css
+267: warning at line 505, col 22
+Adjoining classes: .datepicker   table   tr   td.active.disabled:active
+.datepicker table tr td.active.disabled:active,
+
+bootstrap-editable.css
+268: warning at line 506, col 22
+Adjoining classes: .datepicker   table   tr   td.active.disabled:hover:active
+.datepicker table tr td.active.disabled:hover:active,
+
+bootstrap-editable.css
+269: warning at line 506, col 22
+Adjoining classes: .datepicker   table   tr   td.active.disabled:hover:active
+.datepicker table tr td.active.disabled:hover:active,
+
+bootstrap-editable.css
+270: warning at line 506, col 22
+Adjoining classes: .datepicker   table   tr   td.active.disabled:hover:active
+.datepicker table tr td.active.disabled:hover:active,
+
+bootstrap-editable.css
+271: warning at line 507, col 22
+Adjoining classes: .datepicker   table   tr   td.active.active
+.datepicker table tr td.active.active,
+
+bootstrap-editable.css
+272: warning at line 508, col 22
+Adjoining classes: .datepicker   table   tr   td.active:hover.active
+.datepicker table tr td.active:hover.active,
+
+bootstrap-editable.css
+273: warning at line 509, col 22
+Adjoining classes: .datepicker   table   tr   td.active.disabled.active
+.datepicker table tr td.active.disabled.active,
+
+bootstrap-editable.css
+274: warning at line 509, col 22
+Adjoining classes: .datepicker   table   tr   td.active.disabled.active
+.datepicker table tr td.active.disabled.active,
+
+bootstrap-editable.css
+275: warning at line 510, col 22
+Adjoining classes: .datepicker   table   tr   td.active.disabled:hover.active
+.datepicker table tr td.active.disabled:hover.active,
+
+bootstrap-editable.css
+276: warning at line 510, col 22
+Adjoining classes: .datepicker   table   tr   td.active.disabled:hover.active
+.datepicker table tr td.active.disabled:hover.active,
+
+bootstrap-editable.css
+277: warning at line 510, col 22
+Adjoining classes: .datepicker   table   tr   td.active.disabled:hover.active
+.datepicker table tr td.active.disabled:hover.active,
+
+bootstrap-editable.css
+278: warning at line 511, col 22
+Adjoining classes: .datepicker   table   tr   td.active.disabled
+.datepicker table tr td.active.disabled,
+
+bootstrap-editable.css
+279: warning at line 512, col 22
+Adjoining classes: .datepicker   table   tr   td.active:hover.disabled
+.datepicker table tr td.active:hover.disabled,
+
+bootstrap-editable.css
+280: warning at line 513, col 22
+Adjoining classes: .datepicker   table   tr   td.active.disabled.disabled
+.datepicker table tr td.active.disabled.disabled,
+
+bootstrap-editable.css
+281: warning at line 513, col 22
+Adjoining classes: .datepicker   table   tr   td.active.disabled.disabled
+.datepicker table tr td.active.disabled.disabled,
+
+bootstrap-editable.css
+282: warning at line 514, col 22
+Adjoining classes: .datepicker   table   tr   td.active.disabled:hover.disabled
+.datepicker table tr td.active.disabled:hover.disabled,
+
+bootstrap-editable.css
+283: warning at line 514, col 22
+Adjoining classes: .datepicker   table   tr   td.active.disabled:hover.disabled
+.datepicker table tr td.active.disabled:hover.disabled,
+
+bootstrap-editable.css
+284: warning at line 514, col 22
+Adjoining classes: .datepicker   table   tr   td.active.disabled:hover.disabled
+.datepicker table tr td.active.disabled:hover.disabled,
+
+bootstrap-editable.css
+285: warning at line 517, col 22
+Adjoining classes: .datepicker   table   tr   td.active.disabled[disabled]
+.datepicker table tr td.active.disabled[disabled],
+
+bootstrap-editable.css
+286: warning at line 517, col 22
+Adjoining classes: .datepicker   table   tr   td.active.disabled[disabled]
+.datepicker table tr td.active.disabled[disabled],
+
+bootstrap-editable.css
+287: warning at line 518, col 22
+Adjoining classes: .datepicker   table   tr   td.active.disabled:hover[disabled]
+.datepicker table tr td.active.disabled:hover[disabled] {
+
+bootstrap-editable.css
+288: warning at line 518, col 22
+Adjoining classes: .datepicker   table   tr   td.active.disabled:hover[disabled]
+.datepicker table tr td.active.disabled:hover[disabled] {
+
+bootstrap-editable.css
+289: warning at line 518, col 22
+Adjoining classes: .datepicker   table   tr   td.active.disabled:hover[disabled]
+.datepicker table tr td.active.disabled:hover[disabled] {
+
+bootstrap-editable.css
+290: warning at line 523, col 22
+Adjoining classes: .datepicker   table   tr   td.active.disabled:active
+.datepicker table tr td.active.disabled:active,
+
+bootstrap-editable.css
+291: warning at line 523, col 22
+Adjoining classes: .datepicker   table   tr   td.active.disabled:active
+.datepicker table tr td.active.disabled:active,
+
+bootstrap-editable.css
+292: warning at line 524, col 22
+Adjoining classes: .datepicker   table   tr   td.active.disabled:hover:active
+.datepicker table tr td.active.disabled:hover:active,
+
+bootstrap-editable.css
+293: warning at line 524, col 22
+Adjoining classes: .datepicker   table   tr   td.active.disabled:hover:active
+.datepicker table tr td.active.disabled:hover:active,
+
+bootstrap-editable.css
+294: warning at line 524, col 22
+Adjoining classes: .datepicker   table   tr   td.active.disabled:hover:active
+.datepicker table tr td.active.disabled:hover:active,
+
+bootstrap-editable.css
+295: warning at line 525, col 22
+Adjoining classes: .datepicker   table   tr   td.active.active
+.datepicker table tr td.active.active,
+
+bootstrap-editable.css
+296: warning at line 526, col 22
+Adjoining classes: .datepicker   table   tr   td.active:hover.active
+.datepicker table tr td.active:hover.active,
+
+bootstrap-editable.css
+297: warning at line 527, col 22
+Adjoining classes: .datepicker   table   tr   td.active.disabled.active
+.datepicker table tr td.active.disabled.active,
+
+bootstrap-editable.css
+298: warning at line 527, col 22
+Adjoining classes: .datepicker   table   tr   td.active.disabled.active
+.datepicker table tr td.active.disabled.active,
+
+bootstrap-editable.css
+299: warning at line 528, col 22
+Adjoining classes: .datepicker   table   tr   td.active.disabled:hover.active
+.datepicker table tr td.active.disabled:hover.active {
+
+bootstrap-editable.css
+300: warning at line 528, col 22
+Adjoining classes: .datepicker   table   tr   td.active.disabled:hover.active
+.datepicker table tr td.active.disabled:hover.active {
+
+bootstrap-editable.css
+301: warning at line 528, col 22
+Adjoining classes: .datepicker   table   tr   td.active.disabled:hover.active
+.datepicker table tr td.active.disabled:hover.active {
+
+bootstrap-editable.css
+302: warning at line 529, col 3
+Expected end of value but found '	'.
+  background-color: #003399 \9;
+
+bootstrap-editable.css
+303: warning at line 531, col 1
+Rule doesn't have all its properties in alphabetical order.
+.datepicker table tr td span {
+
+bootstrap-editable.css
+304: warning at line 552, col 1
+Rule doesn't have all its properties in alphabetical order.
+.datepicker table tr td span.active,
+
+bootstrap-editable.css
+305: warning at line 554, col 25
+Adjoining classes: .datepicker   table   tr   td   span.active.disabled
+.datepicker table tr td span.active.disabled,
+
+bootstrap-editable.css
+306: warning at line 555, col 25
+Adjoining classes: .datepicker   table   tr   td   span.active.disabled:hover
+.datepicker table tr td span.active.disabled:hover {
+
+bootstrap-editable.css
+307: warning at line 555, col 25
+Adjoining classes: .datepicker   table   tr   td   span.active.disabled:hover
+.datepicker table tr td span.active.disabled:hover {
+
+bootstrap-editable.css
+308: warning at line 564, col 3
+Expected (<filter-function-list> | none) but found 'progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088cc' endColorstr='#0044cc' GradientType=0)'.
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088cc', endColorstr='#0044cc', GradientType=0);
+
+bootstrap-editable.css
+309: warning at line 567, col 3
+Expected (<filter-function-list> | none) but found 'progid:DXImageTransform.Microsoft.gradient(enabled=false)'.
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+
+bootstrap-editable.css
+310: warning at line 567, col 3
+Duplicate property 'filter' found.
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+
+bootstrap-editable.css
+311: warning at line 573, col 25
+Adjoining classes: .datepicker   table   tr   td   span.active.disabled:hover
+.datepicker table tr td span.active.disabled:hover,
+
+bootstrap-editable.css
+312: warning at line 573, col 25
+Adjoining classes: .datepicker   table   tr   td   span.active.disabled:hover
+.datepicker table tr td span.active.disabled:hover,
+
+bootstrap-editable.css
+313: warning at line 574, col 25
+Adjoining classes: .datepicker   table   tr   td   span.active.disabled:hover:hover
+.datepicker table tr td span.active.disabled:hover:hover,
+
+bootstrap-editable.css
+314: warning at line 574, col 25
+Adjoining classes: .datepicker   table   tr   td   span.active.disabled:hover:hover
+.datepicker table tr td span.active.disabled:hover:hover,
+
+bootstrap-editable.css
+315: warning at line 574, col 25
+Adjoining classes: .datepicker   table   tr   td   span.active.disabled:hover:hover
+.datepicker table tr td span.active.disabled:hover:hover,
+
+bootstrap-editable.css
+316: warning at line 577, col 25
+Adjoining classes: .datepicker   table   tr   td   span.active.disabled:active
+.datepicker table tr td span.active.disabled:active,
+
+bootstrap-editable.css
+317: warning at line 577, col 25
+Adjoining classes: .datepicker   table   tr   td   span.active.disabled:active
+.datepicker table tr td span.active.disabled:active,
+
+bootstrap-editable.css
+318: warning at line 578, col 25
+Adjoining classes: .datepicker   table   tr   td   span.active.disabled:hover:active
+.datepicker table tr td span.active.disabled:hover:active,
+
+bootstrap-editable.css
+319: warning at line 578, col 25
+Adjoining classes: .datepicker   table   tr   td   span.active.disabled:hover:active
+.datepicker table tr td span.active.disabled:hover:active,
+
+bootstrap-editable.css
+320: warning at line 578, col 25
+Adjoining classes: .datepicker   table   tr   td   span.active.disabled:hover:active
+.datepicker table tr td span.active.disabled:hover:active,
+
+bootstrap-editable.css
+321: warning at line 579, col 25
+Adjoining classes: .datepicker   table   tr   td   span.active.active
+.datepicker table tr td span.active.active,
+
+bootstrap-editable.css
+322: warning at line 580, col 25
+Adjoining classes: .datepicker   table   tr   td   span.active:hover.active
+.datepicker table tr td span.active:hover.active,
+
+bootstrap-editable.css
+323: warning at line 581, col 25
+Adjoining classes: .datepicker   table   tr   td   span.active.disabled.active
+.datepicker table tr td span.active.disabled.active,
+
+bootstrap-editable.css
+324: warning at line 581, col 25
+Adjoining classes: .datepicker   table   tr   td   span.active.disabled.active
+.datepicker table tr td span.active.disabled.active,
+
+bootstrap-editable.css
+325: warning at line 582, col 25
+Adjoining classes: .datepicker   table   tr   td   span.active.disabled:hover.active
+.datepicker table tr td span.active.disabled:hover.active,
+
+bootstrap-editable.css
+326: warning at line 582, col 25
+Adjoining classes: .datepicker   table   tr   td   span.active.disabled:hover.active
+.datepicker table tr td span.active.disabled:hover.active,
+
+bootstrap-editable.css
+327: warning at line 582, col 25
+Adjoining classes: .datepicker   table   tr   td   span.active.disabled:hover.active
+.datepicker table tr td span.active.disabled:hover.active,
+
+bootstrap-editable.css
+328: warning at line 583, col 25
+Adjoining classes: .datepicker   table   tr   td   span.active.disabled
+.datepicker table tr td span.active.disabled,
+
+bootstrap-editable.css
+329: warning at line 584, col 25
+Adjoining classes: .datepicker   table   tr   td   span.active:hover.disabled
+.datepicker table tr td span.active:hover.disabled,
+
+bootstrap-editable.css
+330: warning at line 585, col 25
+Adjoining classes: .datepicker   table   tr   td   span.active.disabled.disabled
+.datepicker table tr td span.active.disabled.disabled,
+
+bootstrap-editable.css
+331: warning at line 585, col 25
+Adjoining classes: .datepicker   table   tr   td   span.active.disabled.disabled
+.datepicker table tr td span.active.disabled.disabled,
+
+bootstrap-editable.css
+332: warning at line 586, col 25
+Adjoining classes: .datepicker   table   tr   td   span.active.disabled:hover.disabled
+.datepicker table tr td span.active.disabled:hover.disabled,
+
+bootstrap-editable.css
+333: warning at line 586, col 25
+Adjoining classes: .datepicker   table   tr   td   span.active.disabled:hover.disabled
+.datepicker table tr td span.active.disabled:hover.disabled,
+
+bootstrap-editable.css
+334: warning at line 586, col 25
+Adjoining classes: .datepicker   table   tr   td   span.active.disabled:hover.disabled
+.datepicker table tr td span.active.disabled:hover.disabled,
+
+bootstrap-editable.css
+335: warning at line 589, col 25
+Adjoining classes: .datepicker   table   tr   td   span.active.disabled[disabled]
+.datepicker table tr td span.active.disabled[disabled],
+
+bootstrap-editable.css
+336: warning at line 589, col 25
+Adjoining classes: .datepicker   table   tr   td   span.active.disabled[disabled]
+.datepicker table tr td span.active.disabled[disabled],
+
+bootstrap-editable.css
+337: warning at line 590, col 25
+Adjoining classes: .datepicker   table   tr   td   span.active.disabled:hover[disabled]
+.datepicker table tr td span.active.disabled:hover[disabled] {
+
+bootstrap-editable.css
+338: warning at line 590, col 25
+Adjoining classes: .datepicker   table   tr   td   span.active.disabled:hover[disabled]
+.datepicker table tr td span.active.disabled:hover[disabled] {
+
+bootstrap-editable.css
+339: warning at line 590, col 25
+Adjoining classes: .datepicker   table   tr   td   span.active.disabled:hover[disabled]
+.datepicker table tr td span.active.disabled:hover[disabled] {
+
+bootstrap-editable.css
+340: warning at line 595, col 25
+Adjoining classes: .datepicker   table   tr   td   span.active.disabled:active
+.datepicker table tr td span.active.disabled:active,
+
+bootstrap-editable.css
+341: warning at line 595, col 25
+Adjoining classes: .datepicker   table   tr   td   span.active.disabled:active
+.datepicker table tr td span.active.disabled:active,
+
+bootstrap-editable.css
+342: warning at line 596, col 25
+Adjoining classes: .datepicker   table   tr   td   span.active.disabled:hover:active
+.datepicker table tr td span.active.disabled:hover:active,
+
+bootstrap-editable.css
+343: warning at line 596, col 25
+Adjoining classes: .datepicker   table   tr   td   span.active.disabled:hover:active
+.datepicker table tr td span.active.disabled:hover:active,
+
+bootstrap-editable.css
+344: warning at line 596, col 25
+Adjoining classes: .datepicker   table   tr   td   span.active.disabled:hover:active
+.datepicker table tr td span.active.disabled:hover:active,
+
+bootstrap-editable.css
+345: warning at line 597, col 25
+Adjoining classes: .datepicker   table   tr   td   span.active.active
+.datepicker table tr td span.active.active,
+
+bootstrap-editable.css
+346: warning at line 598, col 25
+Adjoining classes: .datepicker   table   tr   td   span.active:hover.active
+.datepicker table tr td span.active:hover.active,
+
+bootstrap-editable.css
+347: warning at line 599, col 25
+Adjoining classes: .datepicker   table   tr   td   span.active.disabled.active
+.datepicker table tr td span.active.disabled.active,
+
+bootstrap-editable.css
+348: warning at line 599, col 25
+Adjoining classes: .datepicker   table   tr   td   span.active.disabled.active
+.datepicker table tr td span.active.disabled.active,
+
+bootstrap-editable.css
+349: warning at line 600, col 25
+Adjoining classes: .datepicker   table   tr   td   span.active.disabled:hover.active
+.datepicker table tr td span.active.disabled:hover.active {
+
+bootstrap-editable.css
+350: warning at line 600, col 25
+Adjoining classes: .datepicker   table   tr   td   span.active.disabled:hover.active
+.datepicker table tr td span.active.disabled:hover.active {
+
+bootstrap-editable.css
+351: warning at line 600, col 25
+Adjoining classes: .datepicker   table   tr   td   span.active.disabled:hover.active
+.datepicker table tr td span.active.disabled:hover.active {
+
+bootstrap-editable.css
+352: warning at line 601, col 3
+Expected end of value but found '	'.
+  background-color: #003399 \9;
+
+bootstrap-editable.css
+353: warning at line 607, col 13
+Element (th.datepicker-switch) is overqualified, just use .datepicker-switch without element name.
+.datepicker th.datepicker-switch {
+
+bootstrap-editable.css
+354: warning at line 618, col 1
+Rule doesn't have all its properties in alphabetical order.
+.datepicker .cw {
+
+bootstrap-editable.css
+355: warning at line 621, col 3
+Using width with padding can sometimes make elements larger than you expect.
+  padding: 0 2px 0 5px;
+
+bootstrap-editable.css
+356: warning at line 624, col 1
+Rule doesn't have all its properties in alphabetical order.
+.datepicker thead tr:first-child th.cw {
+
+bootstrap-editable.css
+357: warning at line 628, col 1
+Rule doesn't have all its properties in alphabetical order.
+.input-append.date .add-on i,
+
+bootstrap-editable.css
+358: warning at line 628, col 1
+Adjoining classes: .input-append.date   .add-on   i
+.input-append.date .add-on i,
+
+bootstrap-editable.css
+359: warning at line 629, col 1
+Adjoining classes: .input-prepend.date   .add-on   i
+.input-prepend.date .add-on i {
+
+bootstrap-editable.css
+360: warning at line 648, col 1
+Rule doesn't have all its properties in alphabetical order.
+.input-daterange .add-on {
+
+bootstrap-editable.css
+361: warning at line 653, col 3
+Using height with padding can sometimes make elements larger than you expect.
+  padding: 4px 5px;
+
+bootstrap-editable.css
+362: warning at line 660, col 3
+Using height with border can sometimes make elements larger than you expect.
+  border: 1px solid #ccc;

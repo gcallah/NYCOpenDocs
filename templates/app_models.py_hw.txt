@@ -6,3 +6,15 @@ AgencyUsers, Requests, Events, Responses, Reasons, UserRequests,
 ResponseTokens, Notes, Files, Links, Instructions, Emails,
 Envelopes, EnvelopeTemplates, Letters, LetterTemplates, Determinations,
 CommunicationMethods and CustomRequestForms.
+
+<h3>
+Code Issues
+</h3>
+
+<ul class="review">
+  <li>
+  On line 601 and 607, use of eval function is comparably insecure.
+  This can be avoided using <code>ast.literal_eval</code> instead.
+  </li>
+
+</ul>

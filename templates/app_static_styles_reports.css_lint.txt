@@ -1,0 +1,13 @@
+
+
+csslint: There are 2 problems in .
+
+reports.css
+1: warning at line 1, col 1
+Don't use IDs in selectors.
+#reportChart {
+
+reports.css
+2: warning at line 6, col 1
+Don't use IDs in selectors.
+#user-filter {

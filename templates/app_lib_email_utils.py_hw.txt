@@ -36,11 +36,13 @@ Code Issues
   to be removed. The use of assert is also considered as general bad practice
   in OpenStack codebases.
   <p>
-  Instead a simple if condition can be used.
+  Instead, a simple if condition can be used.
+  <pre>
   <code>
   if not condition:
       raise AssertionError()
   </code>
+  </pre>
   </p>
   </li>
 

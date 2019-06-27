@@ -1,1 +1,12 @@
 The function in this file confirms the removal of a user and checks to make sure that the input fields and removal attributes match.
+
+<h3>
+Code Issues
+</h3>
+
+<ul class="review">
+    <li>
+        On lines 26-28, why is it necessary to have an event handler for pasting content? Needs a comment for 
+        clarification.
+    </li>
+</ul>

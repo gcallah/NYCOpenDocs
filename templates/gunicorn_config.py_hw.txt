@@ -1,2 +1,12 @@
 This shell script contains configuration variables for setting up gunicorn. The configuration variables pertain to the timeout time and keep-alive time for requests, 
-logging settings (such as path location), server settings for forking, and path locations for the SSL key and certification files, 
+logging settings (such as path location), server settings for forking, and path locations for the SSL key and certification files.
+
+<h3>
+Code Issues
+</h3>
+
+<ul class="review">
+    <li>
+        No issues to report.
+    </li>
+</ul>

@@ -6,9 +6,10 @@ module.exports = {
         "browser": true,
         "es6": true,
         "node": true,
-        // "mocha": true,
+        "jquery": true,
+        "amd": true,
     },
-    "extends": "eslint:recommended",
+    "extends": ["eslint:recommended", "jquery"],
     "parserOptions": {
         "ecmaVersion": 8
     },

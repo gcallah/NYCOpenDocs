@@ -6,3 +6,15 @@ returning the user session ID. A file's metadata includes the file size, mime ty
 Function 'redis_set_file_metadata(request_or_response_id, filepath, is_update=False)' stores a file's size, mime type, and hash.
 <br><br>
 Function 'redis_get_file_metadata(request_or_response_id, filepath, is_update=False)' returns a tuple containing a file's size (int), mime type (str) and hash (str).
+<h3>
+Code Issues
+</h3>
+
+<ul class="review">
+  <li>
+  Use of modules cPickle and pickle is associated with security implications (line 5).
+  It is normally avoided unless used cautiously.
+  More information can be found <a href="https://www.smartfile.com/blog/python-pickle-security-problems-and-solutions/">here</a>.
+  </li>
+
+</ul>

@@ -1,0 +1,28 @@
+
+
+csslint: There are 5 problems in .
+
+admin.css
+1: warning at line 9, col 1
+Adjoining classes: .row.user-fields
+.row.user-fields {
+
+admin.css
+2: warning at line 14, col 1
+Adjoining classes: .row.user-info
+.row.user-info {
+
+admin.css
+3: warning at line 14, col 1
+Rule doesn't have all its properties in alphabetical order.
+.row.user-info {
+
+admin.css
+4: warning at line 19, col 1
+Adjoining classes: .row.user-info:nth-child(even)
+.row.user-info:nth-child(even) {
+
+admin.css
+5: warning at line 19, col 1
+Adjoining classes: .row.user-info:nth-child(even)
+.row.user-info:nth-child(even) {

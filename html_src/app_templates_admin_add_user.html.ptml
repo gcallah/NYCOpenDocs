@@ -3,7 +3,7 @@
     <head>
 <!--include head.txt -->
         <title>
-            add_closing.css
+            add_user.html
         </title>
     </head>
 
@@ -19,7 +19,7 @@
                     </figcaption>
                 </figure>
                 <h1>
-                    add_closing.css
+                    add_user.html
                 </h1>
 
                 <details>
@@ -29,7 +29,7 @@
 
                     <p>
 <!-- Include the code review here! -->
-<!--include templates/app_static_styles_add_closing.css_hw.txt -->
+<!--include templates/app_templates_admin_add_user.html_hw.txt -->
                     </p>
                 </details>
 
@@ -52,13 +52,13 @@
 
                     <p>
 <!-- Include the extracted documentation here! -->
-<!--include templates/app_static_styles_add_closing.css_ex.txt -->
+<!--include templates/app_templates_admin_add_user.html_ex.txt -->
                    </p>
                 </details>
 
 <!-- Include source code here! -->
                 <p>
-<a href="https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/add_closing.css">Source code</a>
+<a href="https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/admin/add_user.html">Source code</a>
                 </p>
             </div>
         </div>

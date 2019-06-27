@@ -1225,21 +1225,6 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_acknowledgment.css.html">
-                            add_acknowledgment.css
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_closing.css.html">
-                            add_closing.css
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_denial.css.html">
-                            add_denial.css
-                        </a>
-                    </li>
-                    <li>
                         <a href="/NYCOpenDocs/html/app_static_styles_add_extension.css.html">
                             add_extension.css
                         </a>
@@ -1634,11 +1619,6 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_footer.html.html">
-                            email_footer.html
-                        </a>
-                    </li>
-                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_not_onboarded.html.html">
                             email_not_onboarded.html
                         </a>
@@ -1646,6 +1626,11 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_private_file_upload.html.html">
                             email_private_file_upload.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_request_info.html.html">
+                            email_request_info.html
                         </a>
                     </li>
                     <li>
@@ -3270,6 +3255,33 @@ the clean file to the data directory.
 <br>Function scan_file() scans for viruses using McAfee Virus Scan.
 If an infected file is detected, removes the file and
 raises VirusDetectedException.
+<h3>
+Code Issues
+</h3>
+
+<ul class="review">
+  <li>
+  Use of module subprocess is associated with security implications (line 9).
+  It is normally avoided unless used cautiously.
+  More information can be found <a href="https://hackernoon.com/10-common-security-gotchas-in-python-and-how-to-avoid-them-e19fbe265e03">here</a>.
+  </li>
+
+  <li>
+  Also, use of assert detected on line 144 and 146.
+  The use of assert is also considered as general bad practice
+  in OpenStack codebases.
+  <p>
+  Instead, a simple if condition can be used.
+  <pre>
+  <code>
+  if not condition:
+      raise AssertionError()
+  </code>
+  </pre>
+  </p>
+  </li>
+
+</ul>
                     </p>
                 </details>
 
@@ -3281,7 +3293,7 @@ raises VirusDetectedException.
                     <p>
                         <pre>
 <!-- Include the linting report here! -->
-app/upload/utils.py:63:27: E712 comparison to False should be 'if cond is False:' or 'if not cond:'
+No problems to report
                         </pre>
                    </p>
                 </details>

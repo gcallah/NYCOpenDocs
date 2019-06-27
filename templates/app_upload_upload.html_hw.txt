@@ -1,0 +1,2 @@
+This subdirectory contains the directory module structure for upload files
+defining helper functions for various uploads.

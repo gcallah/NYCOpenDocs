@@ -1,6 +1,8 @@
 
 
-  133:19  warning  Method 'send' has a complexity of 7  complexity
-  416:34  error    Empty block statement                no-empty
+   13:11  error    'define' is already defined as a built-in global variable  no-redeclare
+   13:19  error    'window' is already defined as a built-in global variable  no-redeclare
+  133:19  warning  Method 'send' has a complexity of 7. Maximum allowed is 6  complexity
+  416:34  error    Empty block statement                                      no-empty
 
-✖ 2 problems (1 error, 1 warning)
+✖ 4 problems (3 errors, 1 warning)

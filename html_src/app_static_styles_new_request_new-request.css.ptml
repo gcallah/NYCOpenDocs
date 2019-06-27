@@ -41,6 +41,7 @@
                     <p>
                         <pre>
 <!-- Include the linting report here! -->
+<!--include templates/app_static_styles_new_request_new-request.css_lint.txt -->
                         </pre>
                    </p>
                 </details>

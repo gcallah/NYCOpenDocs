@@ -1225,21 +1225,6 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_acknowledgment.css.html">
-                            add_acknowledgment.css
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_closing.css.html">
-                            add_closing.css
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_denial.css.html">
-                            add_denial.css
-                        </a>
-                    </li>
-                    <li>
                         <a href="/NYCOpenDocs/html/app_static_styles_add_extension.css.html">
                             add_extension.css
                         </a>
@@ -1634,11 +1619,6 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_footer.html.html">
-                            email_footer.html
-                        </a>
-                    </li>
-                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_not_onboarded.html.html">
                             email_not_onboarded.html
                         </a>
@@ -1646,6 +1626,11 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_private_file_upload.html.html">
                             email_private_file_upload.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_request_info.html.html">
+                            email_request_info.html
                         </a>
                     </li>
                     <li>
@@ -3255,6 +3240,100 @@
                     <p>
 <!-- Include the code review here! -->
 The JS functions alternate displaying the letter and email generation of acknowledging a request depending on what the user chooses. The form uses Parsley to validate the information, and the JS scripts checks to make sure that the informaton required is completed. 
+
+<h3>
+Code Issues
+</h3>
+
+<ul class="review">
+    <li>
+        On line 80, <code>notHolidayOrWeekend</code> is not a set or initialized. How is this variable name being used for <code>datepicker</code>
+        and how is it being initialized?
+    </li>
+    <li>
+        The chunk of code below sets multiple attributes for <code>email_info</code>. Recommend refactoring to use a function
+        that takes in a HTML entity and an object of attributes as parameters to set the attributes. In addition, there are some
+        attributes that are shared between the <code>if</code> and <code>else</code> statements.
+        <pre>
+        <code>
+            if ($(this).val() === dateSelectVal) {
+                email_date.parent().show();
+                email_info.attr("data-parsley-required", "");
+                email_info.attr("data-parsley-required-message",
+                    "<span class=\"glyphicon glyphicon-exclamation-sign\"></span>&nbsp;" +
+                    "Error, additional information is required when selecting a custom due date.");
+                email_info.attr("data-parsley-minlength", "20");
+                email_info.attr("data-parsley-length-message",
+                    "<span class=\"glyphicon glyphicon-exclamation-sign\"></span>&nbsp;" +
+                    "Error, additional information must have 20 characters or more.");
+            } else {
+                email_date.parent().hide();
+                email_info.removeAttr("data-parsley-required", "");
+                email_info.removeAttr("data-parsley-minlength", "20");
+                email_info.removeClass("parsley-error");
+                second.find(".parsley-errors-list").children().remove();
+            }
+        </code>
+        </pre>
+    </li>
+    <li>
+        <code>next2.click</code> handler runs from line 143 to 244. Recommend refactoring the code into separate functions. 
+        In addition, some AJAX calls and conditional statements look very similar, aside from the fact that different
+        variables are used depending if the code pertains to emails or letters. Maybe have functions that have a flag
+        that note if you are handling emails or letters.
+    </li>
+    <li>
+        For the code snippet below, the <code>if</code> and <code>else</code> statements look very similar. The only noticeable 
+        differences are the different urls used for the AJAX request and the different variables used in the data object. Recommend implementing a function that makes the AJAX call and takes
+        in the url, data content variable as a parameter.
+        <pre>
+        <code>
+            if (method.val() === 'emails') {
+                $.ajax({
+                    url: "/response/email",
+                    type: "POST",
+                    data: {
+                        request_id: "{{ request.id }}",
+                        type: "acknowledgment",
+                        email_content: third.find("#acknowledgment-body").val()
+                    },
+                    success: function (data) {
+                        fourth.find(".summary").html(data.template);
+                        fourth.find("input[name='summary']").val(data.template);
+                        fourth.find("input[name='tz-name']").val(jstz.determine().name());
+                        fourth.find(".confirmation-header").text(data.header);
+                        fourth.find(".method").val(method.val());
+                        confirmation.unblock();
+                        submit.prop('disabled', false);
+                    }
+                });
+            } else {
+                $.ajax({
+                    url: "/response/letter",
+                    type: "POST",
+                    data: {
+                        request_id: "{{ request.id }}",
+                        type: "acknowledgment",
+                        letter_content: third.find("#acknowledgment-body").val()
+                    },
+                    success: function (data) {
+                        fourth.find(".summary").html(data.template);
+                        fourth.find("input[name='summary']").val(data.template);
+                        fourth.find("input[name='tz-name']").val(jstz.determine().name());
+                        fourth.find(".confirmation-header").text(data.header);
+                        fourth.find(".method").val(method.val());
+                        confirmation.unblock();
+                        submit.prop('disabled', false);
+                    }
+                })
+            }
+        </code>
+        </pre>
+    </li>
+    <li>
+        Recommend adding comments to describe what is displayed for the different next and prev clicks.
+    </li>
+</ul>
                     </p>
                 </details>
 

@@ -1225,21 +1225,6 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_acknowledgment.css.html">
-                            add_acknowledgment.css
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_closing.css.html">
-                            add_closing.css
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_denial.css.html">
-                            add_denial.css
-                        </a>
-                    </li>
-                    <li>
                         <a href="/NYCOpenDocs/html/app_static_styles_add_extension.css.html">
                             add_extension.css
                         </a>
@@ -1634,11 +1619,6 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_footer.html.html">
-                            email_footer.html
-                        </a>
-                    </li>
-                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_not_onboarded.html.html">
                             email_not_onboarded.html
                         </a>
@@ -1646,6 +1626,11 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_private_file_upload.html.html">
                             email_private_file_upload.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_request_info.html.html">
+                            email_request_info.html
                         </a>
                     </li>
                     <li>
@@ -3254,12 +3239,12 @@
 
                     <p>
 <!-- Include the code review here! -->
-characterCounter and generate_character_counter_handler handles displaying character counters for fields. If current amount of characters is out of the valid range of characters, the text color is red, otherwise black. 
+characterCounter and generate_character_counter_handler handles displaying character counters for fields. If current amount of characters is out of the valid range of characters, the text color is red, otherwise black.
 <br>regexURLChecker checks whether the url link inputted is value by using a regex expression; return true or false.
 <br>notHolidayorWeekend checks whether the date inputted falls on a holiday or weekend.
 <br>getRequestAgencyInstructions(): Additional information for an agency is hidden or displayed depending on the type of users.
-<br>populateDropdown(): populates an empty droopdown and renders it
-<br>renderCustomRequestForm(target): This function renders fields based on the target given; this function also restricts certain key pressed for when choosing data and time; fields are assigned character counters. Popovers and tooltips are assigned to the data fields for placement, trigger, toggle, and content. If the entire form is not displayed, additional content is shown; otherwise, hide the additional content. 
+<br>populateDropdown(): populates an empty dropdown and renders it
+<br>renderCustomRequestForm(target): This function renders fields based on the target given; this function also restricts certain key pressed for when choosing data and time; fields are assigned character counters. Popovers and tooltips are assigned to the data fields for placement, trigger, toggle, and content. If the entire form is not displayed, additional content is shown; otherwise, hide the additional content.
 <br>handleCategorySwitch handles creating a new form upon a category change. Counters are reset and added divs are removed.
 <br>checkRequestTypeDropdowns() checks to ensure that the form has a selected type.
 <br>processCustomRequestFormData(): The form is jsonified but if the number of completed fields does not meet the minimum requirement, an alert is displayed.
@@ -3303,14 +3288,14 @@ Code Issues
   </pre>
   Recommend refactoring by using functions to reduce the amount of nested conditionals.
   </li>
-  
+
   <li>
-  <code>renderCustomRequestForm(target)</code> runs from lines 465 to 645. Recommend refactoring parts of the function, such as 
+  <code>renderCustomRequestForm(target)</code> runs from lines 465 to 645. Recommend refactoring parts of the function, such as
   rendering datepicker and timepicker plugins, by taking those chunks fo code and placing them into separate functions.
   </li>
 
   <li>
-  <code>if</code> statement runs from line 531 to 559. 
+  <code>if</code> statement runs from line 531 to 559.
   <pre>
   <code>
     if (e.keyCode !== 8 && // backspace
@@ -3344,7 +3329,7 @@ Code Issues
         e.keyCode !== 186) {// semi-colon
   </code>
   </pre>Recommend refactoring this long conditional into a function that returns
-  whether a valid key was pressed. An alternative would also be to have an array of invalid key codes and checking 
+  whether a valid key was pressed. An alternative would also be to have an array of invalid key codes and checking
   if the key code that was pressed is inside that array.
   </li>
 </ul>
@@ -3361,26 +3346,26 @@ Code Issues
 <!-- Include the linting report here! -->
 
 
-   41:16   error    Expected '===' and instead saw '=='                                                                         eqeqeq
-  109:55   error    Unexpected string concatenation of literals                                                                 no-useless-concat
-  210:56   error    Unexpected string concatenation of literals                                                                 no-useless-concat
-  331:26   warning  Method 'success' has a complexity of 7                                                                      complexity
-  388:5    error    The body of a for-in should be wrapped in an if statement to filter unwanted properties from the prototype  guard-for-in
-  404:40   warning  Function has a complexity of 7                                                                              complexity
-  482:22   warning  Method 'success' has a complexity of 10                                                                     complexity
-  529:32   warning  Function has a complexity of 30                                                                             complexity
-  571:17   error    The body of a for-in should be wrapped in an if statement to filter unwanted properties from the prototype  guard-for-in
-  578:17   error    The body of a for-in should be wrapped in an if statement to filter unwanted properties from the prototype  guard-for-in
-  578:26   error    'id' is already defined                                                                                     no-redeclare
-  590:17   error    The body of a for-in should be wrapped in an if statement to filter unwanted properties from the prototype  guard-for-in
-  590:26   error    'id' is already defined                                                                                     no-redeclare
-  611:17   error    The body of a for-in should be wrapped in an if statement to filter unwanted properties from the prototype  guard-for-in
-  611:26   error    'id' is already defined                                                                                     no-redeclare
-  748:1    warning  Function 'processCustomRequestFormData' has a complexity of 7                                               complexity
-  782:124  error    Don't make functions within a loop                                                                          no-loop-func
-  782:124  warning  Function has a complexity of 8                                                                              complexity
-  808:29   error    Use '===' to compare with null                                                                              no-eq-null
-  808:40   error    Expected '!==' and instead saw '!='                                                                         eqeqeq
+   41:16   error    Expected '===' and instead saw '=='                                                                                                                                                                                                                                                                                                                                                                                            eqeqeq
+  109:55   error    Unexpected string concatenation of literals                                                                                                                                                                                                                                                                                                                                                                                    no-useless-concat
+  210:56   error    Unexpected string concatenation of literals                                                                                                                                                                                                                                                                                                                                                                                    no-useless-concat
+  331:26   warning  Method 'success' has a complexity of 7. Maximum allowed is 6                                                                                                                                                                                                                                                                                                                                                                   complexity
+  388:5    error    The body of a for-in should be wrapped in an if statement to filter unwanted properties from the prototype                                                                                                                                                                                                                                                                                                                     guard-for-in
+  404:40   warning  Function has a complexity of 7. Maximum allowed is 6                                                                                                                                                                                                                                                                                                                                                                           complexity
+  482:22   warning  Method 'success' has a complexity of 10. Maximum allowed is 6                                                                                                                                                                                                                                                                                                                                                                  complexity
+  529:32   warning  Function has a complexity of 30. Maximum allowed is 6                                                                                                                                                                                                                                                                                                                                                                          complexity
+  571:17   error    The body of a for-in should be wrapped in an if statement to filter unwanted properties from the prototype                                                                                                                                                                                                                                                                                                                     guard-for-in
+  578:17   error    The body of a for-in should be wrapped in an if statement to filter unwanted properties from the prototype                                                                                                                                                                                                                                                                                                                     guard-for-in
+  578:26   error    'id' is already defined                                                                                                                                                                                                                                                                                                                                                                                                        no-redeclare
+  590:17   error    The body of a for-in should be wrapped in an if statement to filter unwanted properties from the prototype                                                                                                                                                                                                                                                                                                                     guard-for-in
+  590:26   error    'id' is already defined                                                                                                                                                                                                                                                                                                                                                                                                        no-redeclare
+  611:17   error    The body of a for-in should be wrapped in an if statement to filter unwanted properties from the prototype                                                                                                                                                                                                                                                                                                                     guard-for-in
+  611:26   error    'id' is already defined                                                                                                                                                                                                                                                                                                                                                                                                        no-redeclare
+  748:1    warning  Function 'processCustomRequestFormData' has a complexity of 7. Maximum allowed is 6                                                                                                                                                                                                                                                                                                                                            complexity
+  782:124  error    Function declared in a loop contains unsafe references to variable(s) 'fieldNumber', 'fieldKey', 'fieldKey', 'fieldNumber', 'fieldKey', 'fieldKey', 'fieldNumber', 'formKey', 'fieldKey', 'formKey', 'fieldKey', 'formKey', 'fieldKey', 'completedFields', 'previousRadioId', 'formKey', 'fieldKey', 'completedFields', 'fieldNumber', 'previousRadioId', 'formKey', 'fieldKey', 'completedFields', 'fieldNumber', 'fieldKey'  no-loop-func
+  782:124  warning  Function has a complexity of 8. Maximum allowed is 6                                                                                                                                                                                                                                                                                                                                                                           complexity
+  808:29   error    Use '===' to compare with null                                                                                                                                                                                                                                                                                                                                                                                                 no-eq-null
+  808:40   error    Expected '!==' and instead saw '!='                                                                                                                                                                                                                                                                                                                                                                                            eqeqeq
 
 ✖ 20 problems (14 errors, 6 warnings)
                         </pre>

@@ -1225,21 +1225,6 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_acknowledgment.css.html">
-                            add_acknowledgment.css
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_closing.css.html">
-                            add_closing.css
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_denial.css.html">
-                            add_denial.css
-                        </a>
-                    </li>
-                    <li>
                         <a href="/NYCOpenDocs/html/app_static_styles_add_extension.css.html">
                             add_extension.css
                         </a>
@@ -1634,11 +1619,6 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_footer.html.html">
-                            email_footer.html
-                        </a>
-                    </li>
-                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_not_onboarded.html.html">
                             email_not_onboarded.html
                         </a>
@@ -1646,6 +1626,11 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_private_file_upload.html.html">
                             email_private_file_upload.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_request_info.html.html">
+                            email_request_info.html
                         </a>
                     </li>
                     <li>
@@ -3254,7 +3239,7 @@
 
                     <p>
 <!-- Include the code review here! -->
-This CSS file has styles set for parsley errors in input, select, and textarea. Styles are also set for displaying a list of parsley errors.
+This CSS file has styles set for parsley errors in input, select, and text area. Styles are also set for displaying a list of parsley errors.
                     </p>
                 </details>
 
@@ -3266,6 +3251,29 @@ This CSS file has styles set for parsley errors in input, select, and textarea. 
                     <p>
                         <pre>
 <!-- Include the linting report here! -->
+
+
+csslint: There are 4 problems in .
+
+parsley.css
+1: warning at line 1, col 1
+Rule is empty.
+input.parsley-success,
+
+parsley.css
+2: warning at line 9, col 1
+Rule doesn't have all its properties in alphabetical order.
+input.parsley-error,
+
+parsley.css
+3: warning at line 17, col 1
+Rule doesn't have all its properties in alphabetical order.
+.parsley-errors-list {
+
+parsley.css
+4: warning at line 33, col 1
+Adjoining classes: .parsley-errors-list.filled
+.parsley-errors-list.filled {
                         </pre>
                    </p>
                 </details>

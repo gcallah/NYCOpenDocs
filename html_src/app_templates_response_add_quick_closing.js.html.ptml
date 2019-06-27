@@ -3,7 +3,7 @@
     <head>
 <!--include head.txt -->
         <title>
-            add_acknowledgment.css
+            add_quick_closing.js.html
         </title>
     </head>
 
@@ -19,7 +19,7 @@
                     </figcaption>
                 </figure>
                 <h1>
-                    add_acknowledgment.css
+                    add_quick_closing.js.html
                 </h1>
 
                 <details>
@@ -29,7 +29,7 @@
 
                     <p>
 <!-- Include the code review here! -->
-<!--include templates/app_static_styles_add_acknowledgment.css_hw.txt -->
+<!--include templates/app_templates_response_add_quick_closing.js.html_hw.txt -->
                     </p>
                 </details>
 
@@ -52,13 +52,13 @@
 
                     <p>
 <!-- Include the extracted documentation here! -->
-<!--include templates/app_static_styles_add_acknowledgment.css_ex.txt -->
+<!--include templates/app_templates_response_add_quick_closing.js.html_ex.txt -->
                    </p>
                 </details>
 
 <!-- Include source code here! -->
                 <p>
-<a href="https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/static/styles/add_acknowledgment.css">Source code</a>
+<a href="https://github.com/CityOfNewYork/NYCOpenRecords/blob/master/app/templates/response/add_quick_closing.js.html">Source code</a>
                 </p>
             </div>
         </div>

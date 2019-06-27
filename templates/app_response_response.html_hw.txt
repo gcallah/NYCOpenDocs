@@ -1,0 +1,2 @@
+This subdirectory contains the directory module structure for response files
+handling the functions for responses.

@@ -1,1 +1,17 @@
 Refer to jQuery blockUI's documentation.
+
+<h3>
+Code Issues
+</h3>
+
+<ul class="review">
+  <li>
+  On line 15, unnecessary semicolon is detected.
+  JavaScript will more or less let you put semicolons after any statement
+  without complaining.
+  While not technically an error, extra semicolons can be a source of
+  confusion when reading code.
+  This is automatically fixable using the --fix flag on the command line.
+  </li>
+
+</ul>

@@ -1,0 +1,721 @@
+
+
+csslint: There are 144 problems in .
+
+jquery-ui.css
+1: warning at line 26, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-helper-reset {
+
+jquery-ui.css
+2: warning at line 26, col 1
+Outlines should only be modified using :focus.
+.ui-helper-reset {
+
+jquery-ui.css
+3: warning at line 36, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-helper-clearfix:before,
+
+jquery-ui.css
+4: warning at line 45, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-helper-zfix {
+
+jquery-ui.css
+5: warning at line 52, col 2
+Expected (<filter-function-list> | none) but found 'Alpha(Opacity=0)'.
+	filter:Alpha(Opacity=0); /* support: IE8 */
+
+jquery-ui.css
+6: warning at line 63, col 2
+Use of !important
+	cursor: default !important;
+
+jquery-ui.css
+7: warning at line 70, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-icon {
+
+jquery-ui.css
+8: warning at line 75, col 2
+Negative text-indent doesn't work well with RTL. If you use text-indent for image replacement explicitly set direction for that item to ltr.
+	text-indent: -99999px;
+
+jquery-ui.css
+9: warning at line 80, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-widget-icon-block {
+
+jquery-ui.css
+10: warning at line 90, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-widget-overlay {
+
+jquery-ui.css
+11: warning at line 100, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-resizable-handle {
+
+jquery-ui.css
+12: warning at line 111, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-resizable-n {
+
+jquery-ui.css
+13: warning at line 118, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-resizable-s {
+
+jquery-ui.css
+14: warning at line 125, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-resizable-e {
+
+jquery-ui.css
+15: warning at line 132, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-resizable-w {
+
+jquery-ui.css
+16: warning at line 139, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-resizable-se {
+
+jquery-ui.css
+17: warning at line 146, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-resizable-sw {
+
+jquery-ui.css
+18: warning at line 153, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-resizable-nw {
+
+jquery-ui.css
+19: warning at line 160, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-resizable-ne {
+
+jquery-ui.css
+20: warning at line 171, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-selectable-helper {
+
+jquery-ui.css
+21: warning at line 180, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-accordion .ui-accordion-header {
+
+jquery-ui.css
+22: warning at line 188, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-accordion .ui-accordion-content {
+
+jquery-ui.css
+23: warning at line 193, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-autocomplete {
+
+jquery-ui.css
+24: warning at line 199, col 1
+Outlines should only be modified using :focus.
+.ui-menu {
+
+jquery-ui.css
+25: warning at line 199, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-menu {
+
+jquery-ui.css
+26: warning at line 209, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-menu .ui-menu-item {
+
+jquery-ui.css
+27: warning at line 215, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-menu .ui-menu-item-wrapper {
+
+jquery-ui.css
+28: warning at line 219, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-menu .ui-menu-divider {
+
+jquery-ui.css
+29: warning at line 240, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-menu .ui-icon {
+
+jquery-ui.css
+30: warning at line 253, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-button {
+
+jquery-ui.css
+31: warning at line 280, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-button-icon-only {
+
+jquery-ui.css
+32: warning at line 282, col 2
+The box-sizing property isn't supported in IE6 and IE7.
+	box-sizing: border-box;
+
+jquery-ui.css
+33: warning at line 283, col 2
+Negative text-indent doesn't work well with RTL. If you use text-indent for image replacement explicitly set direction for that item to ltr.
+	text-indent: -9999px;
+
+jquery-ui.css
+34: warning at line 288, col 1
+Adjoining classes: input.ui-button.ui-button-icon-only
+input.ui-button.ui-button-icon-only {
+
+jquery-ui.css
+35: warning at line 293, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-button-icon-only .ui-icon {
+
+jquery-ui.css
+36: warning at line 301, col 1
+Adjoining classes: .ui-button.ui-icon-notext   .ui-icon
+.ui-button.ui-icon-notext .ui-icon {
+
+jquery-ui.css
+37: warning at line 301, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-button.ui-icon-notext .ui-icon {
+
+jquery-ui.css
+38: warning at line 305, col 2
+Negative text-indent doesn't work well with RTL. If you use text-indent for image replacement explicitly set direction for that item to ltr.
+	text-indent: -9999px;
+
+jquery-ui.css
+39: warning at line 310, col 1
+Rule doesn't have all its properties in alphabetical order.
+input.ui-button.ui-icon-notext .ui-icon {
+
+jquery-ui.css
+40: warning at line 310, col 1
+Adjoining classes: input.ui-button.ui-icon-notext   .ui-icon
+input.ui-button.ui-icon-notext .ui-icon {
+
+jquery-ui.css
+41: warning at line 325, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-controlgroup {
+
+jquery-ui.css
+42: warning at line 335, col 20
+Adjoining classes: .ui-controlgroup > .ui-controlgroup-item.ui-visual-focus
+.ui-controlgroup > .ui-controlgroup-item.ui-visual-focus {
+
+jquery-ui.css
+43: warning at line 338, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-controlgroup-vertical > .ui-controlgroup-item {
+
+jquery-ui.css
+44: warning at line 347, col 2
+The box-sizing property isn't supported in IE6 and IE7.
+	box-sizing: border-box;
+
+jquery-ui.css
+45: warning at line 361, col 29
+Adjoining classes: .ui-controlgroup-horizontal   .ui-controlgroup-label.ui-widget-content
+.ui-controlgroup-horizontal .ui-controlgroup-label.ui-widget-content {
+
+jquery-ui.css
+46: warning at line 364, col 27
+Adjoining classes: .ui-controlgroup-vertical   .ui-controlgroup-label.ui-widget-content
+.ui-controlgroup-vertical .ui-controlgroup-label.ui-widget-content {
+
+jquery-ui.css
+47: warning at line 379, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-checkboxradio-label .ui-icon-background {
+
+jquery-ui.css
+48: warning at line 384, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-checkboxradio-radio-label .ui-icon-background {
+
+jquery-ui.css
+49: warning at line 391, col 1
+Adjoining classes: .ui-checkboxradio-radio-label.ui-checkboxradio-checked   .ui-icon
+.ui-checkboxradio-radio-label.ui-checkboxradio-checked .ui-icon,
+
+jquery-ui.css
+50: warning at line 391, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-checkboxradio-radio-label.ui-checkboxradio-checked .ui-icon,
+
+jquery-ui.css
+51: warning at line 392, col 1
+Adjoining classes: .ui-checkboxradio-radio-label.ui-checkboxradio-checked:hover   .ui-icon
+.ui-checkboxradio-radio-label.ui-checkboxradio-checked:hover .ui-icon {
+
+jquery-ui.css
+52: warning at line 392, col 1
+Adjoining classes: .ui-checkboxradio-radio-label.ui-checkboxradio-checked:hover   .ui-icon
+.ui-checkboxradio-radio-label.ui-checkboxradio-checked:hover .ui-icon {
+
+jquery-ui.css
+53: warning at line 402, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-datepicker {
+
+jquery-ui.css
+54: warning at line 404, col 2
+Using width with padding can sometimes make elements larger than you expect.
+	padding: .2em .2em 0;
+
+jquery-ui.css
+55: warning at line 407, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-datepicker .ui-datepicker-header {
+
+jquery-ui.css
+56: warning at line 411, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-datepicker .ui-datepicker-prev,
+
+jquery-ui.css
+57: warning at line 434, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-datepicker .ui-datepicker-prev span,
+
+jquery-ui.css
+58: warning at line 443, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-datepicker .ui-datepicker-title {
+
+jquery-ui.css
+59: warning at line 452, col 16
+Element (select.ui-datepicker-month) is overqualified, just use .ui-datepicker-month without element name.
+.ui-datepicker select.ui-datepicker-month,
+
+jquery-ui.css
+60: warning at line 453, col 16
+Element (select.ui-datepicker-year) is overqualified, just use .ui-datepicker-year without element name.
+.ui-datepicker select.ui-datepicker-year {
+
+jquery-ui.css
+61: warning at line 456, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-datepicker table {
+
+jquery-ui.css
+62: warning at line 462, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-datepicker th {
+
+jquery-ui.css
+63: warning at line 479, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-datepicker .ui-datepicker-buttonpane {
+
+jquery-ui.css
+64: warning at line 487, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-datepicker .ui-datepicker-buttonpane button {
+
+jquery-ui.css
+65: warning at line 500, col 1
+Adjoining classes: .ui-datepicker.ui-datepicker-multi
+.ui-datepicker.ui-datepicker-multi {
+
+jquery-ui.css
+66: warning at line 506, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-datepicker-multi .ui-datepicker-group table {
+
+jquery-ui.css
+67: warning at line 526, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-datepicker-row-break {
+
+jquery-ui.css
+68: warning at line 536, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-datepicker-rtl .ui-datepicker-prev {
+
+jquery-ui.css
+69: warning at line 544, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-datepicker-rtl .ui-datepicker-prev:hover {
+
+jquery-ui.css
+70: warning at line 562, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header,
+
+jquery-ui.css
+71: warning at line 569, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-datepicker .ui-icon {
+
+jquery-ui.css
+72: warning at line 571, col 2
+Negative text-indent doesn't work well with RTL. If you use text-indent for image replacement explicitly set direction for that item to ltr.
+	text-indent: -99999px;
+
+jquery-ui.css
+73: warning at line 577, col 1
+Outlines should only be modified using :focus.
+.ui-dialog {
+
+jquery-ui.css
+74: warning at line 577, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-dialog {
+
+jquery-ui.css
+75: warning at line 588, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-dialog .ui-dialog-title {
+
+jquery-ui.css
+76: warning at line 596, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-dialog .ui-dialog-titlebar-close {
+
+jquery-ui.css
+77: warning at line 602, col 2
+Using width with padding can sometimes make elements larger than you expect.
+	padding: 1px;
+
+jquery-ui.css
+78: warning at line 602, col 2
+Using height with padding can sometimes make elements larger than you expect.
+	padding: 1px;
+
+jquery-ui.css
+79: warning at line 605, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-dialog .ui-dialog-content {
+
+jquery-ui.css
+80: warning at line 612, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-dialog .ui-dialog-buttonpane {
+
+jquery-ui.css
+81: warning at line 622, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-dialog .ui-dialog-buttonpane button {
+
+jquery-ui.css
+82: warning at line 630, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-dialog .ui-resizable-e {
+
+jquery-ui.css
+83: warning at line 634, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-dialog .ui-resizable-s {
+
+jquery-ui.css
+84: warning at line 638, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-dialog .ui-resizable-w {
+
+jquery-ui.css
+85: warning at line 642, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-dialog .ui-resizable-se,
+
+jquery-ui.css
+86: warning at line 649, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-dialog .ui-resizable-se {
+
+jquery-ui.css
+87: warning at line 653, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-dialog .ui-resizable-sw {
+
+jquery-ui.css
+88: warning at line 668, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-progressbar {
+
+jquery-ui.css
+89: warning at line 673, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-progressbar .ui-progressbar-value {
+
+jquery-ui.css
+90: warning at line 677, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-progressbar .ui-progressbar-overlay {
+
+jquery-ui.css
+91: warning at line 680, col 2
+Expected (<filter-function-list> | none) but found 'alpha(opacity=25)'.
+	filter: alpha(opacity=25); /* support: IE8 */
+
+jquery-ui.css
+92: warning at line 686, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-selectmenu-menu {
+
+jquery-ui.css
+93: warning at line 699, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-selectmenu-menu .ui-menu .ui-selectmenu-optgroup {
+
+jquery-ui.css
+94: warning at line 717, col 1
+Adjoining classes: .ui-selectmenu-button.ui-button
+.ui-selectmenu-button.ui-button {
+
+jquery-ui.css
+95: warning at line 722, col 1
+Adjoining classes: .ui-selectmenu-icon.ui-icon
+.ui-selectmenu-icon.ui-icon {
+
+jquery-ui.css
+96: warning at line 730, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-slider .ui-slider-handle {
+
+jquery-ui.css
+97: warning at line 739, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-slider .ui-slider-range {
+
+jquery-ui.css
+98: warning at line 749, col 1
+Adjoining classes: .ui-slider.ui-state-disabled   .ui-slider-handle
+.ui-slider.ui-state-disabled .ui-slider-handle,
+
+jquery-ui.css
+99: warning at line 750, col 1
+Adjoining classes: .ui-slider.ui-state-disabled   .ui-slider-range
+.ui-slider.ui-state-disabled .ui-slider-range {
+
+jquery-ui.css
+100: warning at line 757, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-slider-horizontal .ui-slider-handle {
+
+jquery-ui.css
+101: warning at line 761, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-slider-horizontal .ui-slider-range {
+
+jquery-ui.css
+102: warning at line 772, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-slider-vertical {
+
+jquery-ui.css
+103: warning at line 776, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-slider-vertical .ui-slider-handle {
+
+jquery-ui.css
+104: warning at line 791, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-spinner {
+
+jquery-ui.css
+105: warning at line 798, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-spinner-input {
+
+jquery-ui.css
+106: warning at line 808, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-spinner-button {
+
+jquery-ui.css
+107: warning at line 822, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-spinner a.ui-spinner-button {
+
+jquery-ui.css
+108: warning at line 833, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-tabs {
+
+jquery-ui.css
+109: warning at line 841, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-tabs .ui-tabs-nav li {
+
+jquery-ui.css
+110: warning at line 862, col 23
+Element (li.ui-tabs-loading) is overqualified, just use .ui-tabs-loading without element name.
+.ui-tabs .ui-tabs-nav li.ui-tabs-loading .ui-tabs-anchor {
+
+jquery-ui.css
+111: warning at line 868, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-tabs .ui-tabs-panel {
+
+jquery-ui.css
+112: warning at line 874, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-tooltip {
+
+jquery-ui.css
+113: warning at line 900, col 1
+Adjoining classes: .ui-widget.ui-widget-content
+.ui-widget.ui-widget-content {
+
+jquery-ui.css
+114: warning at line 903, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-widget-content {
+
+jquery-ui.css
+115: warning at line 911, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-widget-header {
+
+jquery-ui.css
+116: warning at line 923, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-state-default,
+
+jquery-ui.css
+117: warning at line 930, col 6
+Adjoining classes: html   .ui-button.ui-state-disabled:hover
+html .ui-button.ui-state-disabled:hover,
+
+jquery-ui.css
+118: warning at line 930, col 6
+Adjoining classes: html   .ui-button.ui-state-disabled:hover
+html .ui-button.ui-state-disabled:hover,
+
+jquery-ui.css
+119: warning at line 931, col 6
+Adjoining classes: html   .ui-button.ui-state-disabled:active
+html .ui-button.ui-state-disabled:active {
+
+jquery-ui.css
+120: warning at line 931, col 6
+Adjoining classes: html   .ui-button.ui-state-disabled:active
+html .ui-button.ui-state-disabled:active {
+
+jquery-ui.css
+121: warning at line 947, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-state-hover,
+
+jquery-ui.css
+122: warning at line 977, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-state-active,
+
+jquery-ui.css
+123: warning at line 982, col 1
+Adjoining classes: .ui-button.ui-state-active:hover
+.ui-button.ui-state-active:hover {
+
+jquery-ui.css
+124: warning at line 982, col 1
+Adjoining classes: .ui-button.ui-state-active:hover
+.ui-button.ui-state-active:hover {
+
+jquery-ui.css
+125: warning at line 988, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-icon-background,
+
+jquery-ui.css
+126: warning at line 1002, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-state-highlight,
+
+jquery-ui.css
+127: warning at line 1009, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-state-checked {
+
+jquery-ui.css
+128: warning at line 1018, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-state-error,
+
+jquery-ui.css
+129: warning at line 1040, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-priority-secondary,
+
+jquery-ui.css
+130: warning at line 1044, col 2
+Expected (<filter-function-list> | none) but found 'Alpha(Opacity=70)'.
+	filter:Alpha(Opacity=70); /* support: IE8 */
+
+jquery-ui.css
+131: warning at line 1047, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-state-disabled,
+
+jquery-ui.css
+132: warning at line 1051, col 2
+Expected (<filter-function-list> | none) but found 'Alpha(Opacity=35)'.
+	filter:Alpha(Opacity=35); /* support: IE8 */
+
+jquery-ui.css
+133: warning at line 1055, col 2
+Expected (<filter-function-list> | none) but found 'Alpha(Opacity=35)'.
+	filter:Alpha(Opacity=35); /* support: IE8 - See #6059 */
+
+jquery-ui.css
+134: warning at line 1062, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-icon {
+
+jquery-ui.css
+135: warning at line 1071, col 2
+Background image '../../img/ui-icons_444444_256x240.png' was used multiple times, first declared at line 1068, col 2.
+	background-image: url("../../img/ui-icons_444444_256x240.png");
+
+jquery-ui.css
+136: warning at line 1084, col 12
+Adjoining classes: .ui-button   .ui-state-highlight.ui-icon
+.ui-button .ui-state-highlight.ui-icon {
+
+jquery-ui.css
+137: warning at line 1304, col 1
+Rule doesn't have all its properties in alphabetical order.
+.ui-widget-overlay {
+
+jquery-ui.css
+138: warning at line 1307, col 2
+Expected (<filter-function-list> | none) but found 'Alpha(Opacity=30)'.
+	filter: Alpha(Opacity=30); /* support: IE8 */
+
+jquery-ui.css
+139: warning at line 1310, col 26
+Values of 0 shouldn't have units specified.
+	-webkit-box-shadow: 0px 0px 5px #666666;
+
+jquery-ui.css
+140: warning at line 1310, col 22
+Values of 0 shouldn't have units specified.
+	-webkit-box-shadow: 0px 0px 5px #666666;
+
+jquery-ui.css
+141: warning at line 1311, col 14
+Values of 0 shouldn't have units specified.
+	box-shadow: 0px 0px 5px #666666;
+
+jquery-ui.css
+142: warning at line 1311, col 18
+Values of 0 shouldn't have units specified.
+	box-shadow: 0px 0px 5px #666666;
+
+jquery-ui.css
+143: warning
+Too many floats (11), you're probably using them for layout. Consider using a grid system instead.
+
+jquery-ui.css
+144: warning
+Too many font-size declarations (14), abstraction needed.

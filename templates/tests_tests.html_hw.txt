@@ -1,0 +1,1 @@
+This directory contains tests for app creation, configuration, and unit testing. It also contains helper functions for testing.

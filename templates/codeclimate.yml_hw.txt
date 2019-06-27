@@ -1,0 +1,1 @@
+This file configures Code Climate with setting valid paths and enabling engines, such as CSSlint, fixme, and radon.

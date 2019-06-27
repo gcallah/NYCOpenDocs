@@ -1225,21 +1225,6 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_acknowledgment.css.html">
-                            add_acknowledgment.css
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_closing.css.html">
-                            add_closing.css
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_denial.css.html">
-                            add_denial.css
-                        </a>
-                    </li>
-                    <li>
                         <a href="/NYCOpenDocs/html/app_static_styles_add_extension.css.html">
                             add_extension.css
                         </a>
@@ -1634,11 +1619,6 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_footer.html.html">
-                            email_footer.html
-                        </a>
-                    </li>
-                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_not_onboarded.html.html">
                             email_not_onboarded.html
                         </a>
@@ -1646,6 +1626,11 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_private_file_upload.html.html">
                             email_private_file_upload.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_request_info.html.html">
+                            email_request_info.html
                         </a>
                     </li>
                     <li>
@@ -3254,7 +3239,7 @@
 
                     <p>
 <!-- Include the code review here! -->
-The function in this JS file allows the user to handle certain actions on the admin page. The current user can view agencies, which then changes the URL. Upon clicking the activate or deactivate buttons, an agency can activate or deactivate an agency. 
+The function in this JS file allows the user to handle certain actions on the admin page. The current user can view agencies, which then changes the URL. Upon clicking the activate or deactivate buttons, an agency can activate or deactivate an agency.
 <br> The user can also check off another user to change the status, such as becoming a superuser in the agency or removing the user.
 
 <h3>
@@ -3266,6 +3251,33 @@ Code Issues
   The click event listener function for activating and deactivating an agency looks very similar. Recommend creating a separate
   click event function that takes in a data object. For example, after refactoring, the call to activate
   an agency can look like <code>$("#activate").click(actOrDeact({is_active:true}))</code>.
+  </li>
+
+  <li>
+  On line 118, use of unexpected alert is detected.
+  JavaScripts' alert, confirm, and prompt functions are widely considered
+  to be obtrusive as UI elements and should be replaced by a more appropriate
+  custom UI implementation. Furthermore, alert is often used while debugging
+  code, which should be removed before deployment to production.
+  The following patterns are considered problems:
+
+  <p>
+  <pre>
+  <code>
+  //Bad:
+  alert("here!");
+  confirm("Are you sure?");
+  prompt("What's your name?", "John Doe");
+
+  //Good:
+  customAlert("Something happened!");
+  customConfirm("Are you sure?");
+  customPrompt("Who are you?");
+  
+  </code>
+  </pre>
+  </p>
+
   </li>
 </ul>
                     </p>

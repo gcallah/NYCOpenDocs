@@ -1,0 +1,16 @@
+This file contains helper functions, such as clearing the database, that are used for testing.
+
+
+<h3>
+Code Issues
+</h3>
+
+<ul class="review">
+    <li>
+        Needs a comment stating why it is necessary to reverse the sorted tables on line 21.
+    </li>
+    <li>
+        <code>create_request</code> function appears to be incomplete. Will the function be used? If so, there needs 
+        to be a comment stating what its purpose is and how it will be used.
+    </li>
+</ul>

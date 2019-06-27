@@ -1225,21 +1225,6 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_acknowledgment.css.html">
-                            add_acknowledgment.css
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_closing.css.html">
-                            add_closing.css
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/NYCOpenDocs/html/app_static_styles_add_denial.css.html">
-                            add_denial.css
-                        </a>
-                    </li>
-                    <li>
                         <a href="/NYCOpenDocs/html/app_static_styles_add_extension.css.html">
                             add_extension.css
                         </a>
@@ -1634,11 +1619,6 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_footer.html.html">
-                            email_footer.html
-                        </a>
-                    </li>
-                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_not_onboarded.html.html">
                             email_not_onboarded.html
                         </a>
@@ -1646,6 +1626,11 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_private_file_upload.html.html">
                             email_private_file_upload.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_request_info.html.html">
+                            email_request_info.html
                         </a>
                     </li>
                     <li>
@@ -3254,7 +3239,33 @@
 
                     <p>
 <!-- Include the code review here! -->
-<p>We attempted to read from templates/tests_functional_test_main.py_hw.txt but failed.</p>
+This file contains tests pertaining to responses from app routes and forms. The app routes are tested for the correct 
+status codes and for correct response data. Some tests involve determining if certaing HTML entities exist in the response data.
+
+Routes that are tested:
+<ul>
+    <li>GET /index</li>
+    <li>POST /index</li>
+    <li>GET /status</li>
+    <li>POST /status</li>
+    <li>GET /contact</li>
+    <li>GET /technical-support</li>
+    <li>POST /contact</li>
+    <li>GET /faq</li>
+    <li>GET /about</li>
+</ul>
+
+
+<h3>
+Code Issues
+</h3>
+
+<ul class="review">
+    <li>
+        <code>test_post_technical_support</code> and <code>test_post_contact</code> have the same code and 
+        same docstring. Are they supposed to be the same function?
+    </li>
+</ul>
                     </p>
                 </details>
 
@@ -3266,7 +3277,7 @@
                     <p>
                         <pre>
 <!-- Include the linting report here! -->
-tests/functional/test_main.py:15:22: E999 SyntaxError: invalid syntax
+No problems to report
                         </pre>
                    </p>
                 </details>

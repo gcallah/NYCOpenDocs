@@ -34,7 +34,7 @@ submods: FORCE
 
 # run a linting tool on python and javascript code:
 lint: FORCE
-	./lint_report.sh
+	./lint_report.sh $(RECORDS_DIR)
 
 # force a new build of all html files:
 clean_html: FORCE
@@ -69,7 +69,7 @@ $(HTML_DIR)/%.html: $(PTML_DIR)/%.ptml $(INCS)
 	git add $@
 
 # this is the target to build all of the html files from ptml:
-html_from_ptml: $(HTMLFILES) $(INCS) extract_docs ptml_files lint
+html_from_ptml: extract_docs lint ptml_files $(HTMLFILES) $(INCS)
 	echo "Building html from ptml."
 	cp $(HTML_DIR)/index.html index.html
 

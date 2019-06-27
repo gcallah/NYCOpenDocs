@@ -1,0 +1,2 @@
+This subdirectory contains the directory module structure for library files for
+emails, pdf, dates, etc.

@@ -1,0 +1,118 @@
+
+
+csslint: There are 23 problems in .
+
+new-request.css
+1: warning at line 3, col 1
+Don't use IDs in selectors.
+#request-description {
+
+new-request.css
+2: warning at line 11, col 1
+Rule doesn't have all its properties in alphabetical order.
+.example-title {
+
+new-request.css
+3: warning at line 16, col 1
+Rule doesn't have all its properties in alphabetical order.
+.example-request {
+
+new-request.css
+4: warning at line 33, col 1
+Don't use IDs in selectors.
+#state {
+
+new-request.css
+5: warning at line 37, col 1
+Don't use IDs in selectors.
+#zipcode {
+
+new-request.css
+6: warning at line 41, col 1
+Don't use IDs in selectors.
+#upload-control {
+
+new-request.css
+7: warning at line 45, col 1
+Don't use IDs in selectors.
+#filename {
+
+new-request.css
+8: warning at line 62, col 1
+Don't use IDs in selectors.
+#request-form {
+
+new-request.css
+9: warning at line 70, col 1
+Rule doesn't have all its properties in alphabetical order.
+.captcha {
+
+new-request.css
+10: warning at line 79, col 1
+Rule doesn't have all its properties in alphabetical order.
+.recaptcha-error {
+
+new-request.css
+11: warning at line 84, col 1
+Don't use IDs in selectors.
+#processing-submission img {
+
+new-request.css
+12: warning at line 91, col 1
+Rule doesn't have all its properties in alphabetical order.
+.modal-content {
+
+new-request.css
+13: warning at line 101, col 1
+Rule doesn't have all its properties in alphabetical order.
+.clear-file-button {
+
+new-request.css
+14: warning at line 115, col 1
+Outlines should only be modified using :focus.
+span[role=button] {
+
+new-request.css
+15: warning at line 115, col 1
+Rule doesn't have all its properties in alphabetical order.
+span[role=button] {
+
+new-request.css
+16: warning at line 128, col 1
+Rule doesn't have all its properties in alphabetical order.
+span[role=button]:hover,
+
+new-request.css
+17: warning at line 136, col 1
+Rule doesn't have all its properties in alphabetical order.
+.hide {
+
+new-request.css
+18: warning at line 147, col 1
+Rule doesn't have all its properties in alphabetical order.
+input[type=text] .file-text-input {
+
+new-request.css
+19: warning at line 149, col 5
+margin-left can't be used with display: table-cell.
+    margin-left: -5px;
+
+new-request.css
+20: warning at line 153, col 5
+Using width with padding can sometimes make elements larger than you expect.
+    padding: 8px 8px;
+
+new-request.css
+21: warning at line 156, col 5
+Using width with border can sometimes make elements larger than you expect.
+    border: 2px solid #265986;
+
+new-request.css
+22: warning at line 161, col 1
+Rule doesn't have all its properties in alphabetical order.
+.file-text-input:focus {
+
+new-request.css
+23: warning at line 171, col 1
+Rule doesn't have all its properties in alphabetical order.
+.parsley-maxFileSize {

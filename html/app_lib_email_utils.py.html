@@ -264,6 +264,11 @@
                 </a>
             </li>
             <li>
+                <a href="/NYCOpenDocs/html/app_commands.py.html">
+                    commands.py
+                </a>
+            </li>
+            <li>
                 <a href="#Submenu7" data-toggle="collapse" aria-expanded="false">
                     constants
                 </a>
@@ -292,6 +297,11 @@
                 <li>
                     <a href="/NYCOpenDocs/html/app_constants_communication_methods.py.html">
                         communication_methods.py
+                    </a>
+                </li>
+                <li>
+                    <a href="/NYCOpenDocs/html/app_constants_dates.py.html">
+                        dates.py
                     </a>
                 </li>
                 <li>
@@ -1423,6 +1433,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_templates_admin_add_user.html.html">
+                            add_user.html
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_admin_main.html.html">
                             main.html
                         </a>
@@ -1559,6 +1574,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_agency_user_added.html.html">
+                            email_agency_user_added.html
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_agency_user_deactivated.html.html">
                             email_agency_user_deactivated.html
                         </a>
@@ -1689,8 +1709,18 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_response_quick_closing.html.html">
+                            email_response_quick_closing.html
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_response_reopening.html.html">
                             email_response_reopening.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_user_added.html.html">
+                            email_user_added.html
                         </a>
                     </li>
                     <li>
@@ -1873,6 +1903,11 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_request__edit_requester_info.html.html">
                             _edit_requester_info.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_request__pii_warning_modal.html.html">
+                            _pii_warning_modal.html
                         </a>
                     </li>
                     <li>
@@ -2260,6 +2295,16 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_response_add_note.js.html.html">
                             add_note.js.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_response_add_quick_closing.html.html">
+                            add_quick_closing.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_response_add_quick_closing.js.html.html">
+                            add_quick_closing.js.html
                         </a>
                     </li>
                     <li>
@@ -3312,7 +3357,7 @@ No problems to report
                     <p>
 <!-- Include the extracted documentation here! -->
 
-</br>app.lib.email_utils</br>~~~~~~~~~~~~~~~~</br></br>Implements e-mail notifications for OpenRecords. Flask-mail is a dependency, and the following environment variables</br>need to be set in order for this to work: (Currently using Fake SMTP for testing)</br>MAIL_SERVER: 'localhost</br>MAIL_PORT: 2500</br>MAIL_USE_TLS: FALSE</br>MAIL_USERNAME: os.environ.get('MAIL_USERNAME')</br>MAIL_PASSWORD: os.environ.get('MAIL_PASSWORD')</br>DEFAULT_MAIL_SENDER: 'Records Admin <openrecords@records.nyc.gov></br></br><hr><code>send_async_email(msg):</code><br/><hr><code>send_contact_email(subject, recipients, body, sender):</code><br/><hr><code>send_email(subject, to=list(), cc=list(), bcc=list(), reply_to='', template=None, email_content=None, **kwargs):</code><br/>Function that sends asynchronous emails for the application.</br>Takes in arguments from the frontend.</br></br>Args:</br>to: Person(s) email is being sent to</br>cc: Person(s) being CC'ed on the email</br>bcc: Person(s) being BCC'ed on the email</br>reply_to: reply-to address</br>subject: Subject of the email</br>template: HTML and TXT template of the email content</br>email_content: string of HTML email content that can be used as a message template</br>kwargs: Additional arguments the function may take in (ie: Message content)</br><hr><code>get_agency_emails(request_id, admins_only=False):</code><br/></br>Gets a list of the agency emails (assigned users and default email)</br></br>:param request_id: FOIL request ID to query UserRequests</br>:param admins_only: return list of agency admin emails only</br>:return: list of agency emails or ['agency@email.com'] (for testing)</br>
+</br>app.lib.email_utils</br>~~~~~~~~~~~~~~~~</br></br>Implements e-mail notifications for OpenRecords. Flask-mail is a dependency, and the following environment variables</br>need to be set in order for this to work: (Currently using Fake SMTP for testing)</br>MAIL_SERVER: 'localhost</br>MAIL_PORT: 2500</br>MAIL_USE_TLS: FALSE</br>MAIL_USERNAME: os.environ.get('MAIL_USERNAME')</br>MAIL_PASSWORD: os.environ.get('MAIL_PASSWORD')</br>DEFAULT_MAIL_SENDER: 'Records Admin <openrecords@records.nyc.gov></br></br><hr><code>send_async_email(msg):</code><br/><hr><code>send_contact_email(subject, recipients, body, sender):</code><br/><hr><code>send_email(subject, to=list(), cc=list(), bcc=list(), reply_to='', template=None, email_content=None, **kwargs):</code><br/>Function that sends asynchronous emails for the application.</br>Takes in arguments from the frontend.</br></br>Args:</br>to: Person(s) email is being sent to</br>cc: Person(s) being CC'ed on the email</br>bcc: Person(s) being BCC'ed on the email</br>reply_to: reply-to address</br>subject: Subject of the email</br>template: HTML and TXT template of the email content</br>email_content: string of HTML email content that can be used as a message template</br>kwargs: Additional arguments the function may take in (ie: Message content)</br><hr><code>get_assigned_users_emails(request_id: str):</code><br/>Gets a list of all the assigned users' emails on a request and the agency's default email.</br></br>Args:</br>request_id: Request ID</br></br>Returns:</br>A unique list of all the  assigned users' emails on a request and the agency's default email.</br><hr><code>get_agency_admin_emails(agency: Agencies):</code><br/>Gets a list of all the agency administrators' emails in an agency.</br></br>Args:</br>agency: An Agencies instance</br></br>Returns:</br>A unique list of all the agency administrators' emails in an agency.</br>
                    </p>
                 </details>
 

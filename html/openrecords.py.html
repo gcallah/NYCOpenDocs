@@ -264,6 +264,11 @@
                 </a>
             </li>
             <li>
+                <a href="/NYCOpenDocs/html/app_commands.py.html">
+                    commands.py
+                </a>
+            </li>
+            <li>
                 <a href="#Submenu7" data-toggle="collapse" aria-expanded="false">
                     constants
                 </a>
@@ -292,6 +297,11 @@
                 <li>
                     <a href="/NYCOpenDocs/html/app_constants_communication_methods.py.html">
                         communication_methods.py
+                    </a>
+                </li>
+                <li>
+                    <a href="/NYCOpenDocs/html/app_constants_dates.py.html">
+                        dates.py
                     </a>
                 </li>
                 <li>
@@ -1423,6 +1433,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_templates_admin_add_user.html.html">
+                            add_user.html
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_admin_main.html.html">
                             main.html
                         </a>
@@ -1559,6 +1574,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_agency_user_added.html.html">
+                            email_agency_user_added.html
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_agency_user_deactivated.html.html">
                             email_agency_user_deactivated.html
                         </a>
@@ -1689,8 +1709,18 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_response_quick_closing.html.html">
+                            email_response_quick_closing.html
+                        </a>
+                    </li>
+                    <li>
                         <a href="/NYCOpenDocs/html/app_templates_email_templates_email_response_reopening.html.html">
                             email_response_reopening.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_email_templates_email_user_added.html.html">
+                            email_user_added.html
                         </a>
                     </li>
                     <li>
@@ -1873,6 +1903,11 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_request__edit_requester_info.html.html">
                             _edit_requester_info.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_request__pii_warning_modal.html.html">
+                            _pii_warning_modal.html
                         </a>
                     </li>
                     <li>
@@ -2260,6 +2295,16 @@
                     <li>
                         <a href="/NYCOpenDocs/html/app_templates_response_add_note.js.html.html">
                             add_note.js.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_response_add_quick_closing.html.html">
+                            add_quick_closing.html
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/NYCOpenDocs/html/app_templates_response_add_quick_closing.js.html.html">
+                            add_quick_closing.js.html
                         </a>
                     </li>
                     <li>
@@ -3253,7 +3298,20 @@ run deployment tasks, etc.
                     <p>
                         <pre>
 <!-- Include the linting report here! -->
-No problems to report
+openrecords.py:48:1: E402 module level import not at top of file
+openrecords.py:49:1: E402 module level import not at top of file
+openrecords.py:50:1: E402 module level import not at top of file
+openrecords.py:52:1: E402 module level import not at top of file
+openrecords.py:54:1: E402 module level import not at top of file
+openrecords.py:55:1: E402 module level import not at top of file
+openrecords.py:56:1: E402 module level import not at top of file
+openrecords.py:57:1: E402 module level import not at top of file
+openrecords.py:59:1: E402 module level import not at top of file
+openrecords.py:60:1: E402 module level import not at top of file
+openrecords.py:78:1: E402 module level import not at top of file
+openrecords.py:79:1: E402 module level import not at top of file
+openrecords.py:80:1: E402 module level import not at top of file
+openrecords.py:81:1: E402 module level import not at top of file
                         </pre>
                    </p>
                 </details>
@@ -3266,7 +3324,7 @@ No problems to report
                     <p>
 <!-- Include the extracted documentation here! -->
 
-</br>`.`  `.`         ...`       ....         ...`</br>`;'',  :##+   +##`#####,    .######`  +##.+####</br>.'''`      `### +##'    ###,:##:    ###`'##+   .###</br>`'''''''''''.   ''''''''''''.   .''''''''`      ,''''''''.    ;'''''''''':   .''''''''''.     `'''''''',</br>`''':::::;''''  '''';;;;;;;;. .'''':.,:''''`  :'''',.,:''''.  ;'''::::,''''. .''';;;;''''',  ;'''.``.''''`</br>`'''.     .'''. ''''         ,'''.      :''' :'''`      ,'''. ;'''      '''; .'''`     ,''', ''',     :,:.</br>`'''.    `''''  ''''''''''': ''';           `''',        ''': ;'''     ,'''` .'''`      ;''' .''''''':.</br>`'''''''''''.   '''''''''''; ''':           `'''.        '''; ;'''''''''':   .'''`      ;'''    ,''''''''.</br>`'''.     ''''  ''''         :'''`      :''' ''''       .'''. ;'''     ,'''` .'''`      ''':,:::      ;'''`</br>`'''.     .'''  ''''          '''',    :'''.  ''''.    :''':  ;'''      ''', .'''.   .;'''' .''':     ;</br>`'''.      '''. ''''''''''''.  .''''''''''     .''''''''''`   ;'''      ;''; .'''''''''''.    '''''''''';</br></br></br>import os</br>from dotenv import load_dotenv</br></br>basedir = os.path.abspath(os.path.dirname(__file__))</br></br>dotenv_path = os.path.join(basedir, '.env')</br>load_dotenv(dotenv_path)</br></br>from datetime import datetime</br>from urllib.parse import unquote</br>import sys</br></br>import click</br></br>from flask import url_for</br>from flask.cli import main</br>from flask_migrate import Migrate, upgrade</br>from werkzeug.contrib.profiler import ProfilerMiddleware</br></br>from app import create_app, db</br>from app.models import (</br>Agencies,</br>AgencyUsers,</br>CustomRequestForms,</br>Determinations,</br>Emails,</br>EnvelopeTemplates,</br>Envelopes,</br>Events,</br>LetterTemplates,</br>Letters,</br>Reasons,</br>Requests,</br>Responses,</br>Roles,</br>UserRequests,</br>Users,</br>)</br>from app.report.utils import generate_request_closing_user_report</br>from app.request.utils import generate_guid</br>from app.search.utils import recreate</br>from app.user.utils import make_user_admin</br></br>if os.getenv('FLASK_ENV') != 'production':</br>import pytest</br></br>app = create_app(os.getenv("FLASK_CONFIG") or "default")</br></br>migrate = Migrate(app, db)</br></br>COV = None</br>if os.environ.get("FLASK_COVERAGE"):</br>import coverage</br></br>COV = coverage.coverage(</br>branch=True, include="app/*", config_file=os.path.join(os.curdir, ".coveragerc")</br>)</br>COV.start()</br></br></br>@app.shell_context_processor</br><hr><code>make_shell_context():</code><br/>def make_shell_context():</br>return dict(</br>app=app,</br>db=db,</br>Users=Users,</br>Agencies=Agencies,</br>Determinations=Determinations,</br>Requests=Requests,</br>Responses=Responses,</br>Events=Events,</br>Reasons=Reasons,</br>Roles=Roles,</br>UserRequests=UserRequests,</br>AgencyUsers=AgencyUsers,</br>Emails=Emails,</br>Letters=Letters,</br>LetterTemplates=LetterTemplates,</br>Envelopes=Envelopes,</br>EnvelopeTemplates=EnvelopeTemplates,</br>CustomRequestForms=CustomRequestForms,</br>)</br></br></br>@app.cli.command()</br>@click.option("--first_name", prompt="First Name")</br>@click.option("--middle_initial", default="", prompt="Middle Initial")</br>@click.option("--last_name", prompt="Last Name")</br>@click.option("--email", prompt="Email Address")</br>@click.option("--agency_ein", prompt="Agency EIN (e.g. 0002)")</br>@click.option(</br>--is_admin", default=False, prompt="Should user be made an agency administrator?</br>)</br>@click.option(</br>--is_active", default=False, prompt="Should user be activated immediately?</br>)</br><hr><code>add_user(</code><br/>def add_user(</br>first_name: str,</br>last_name: str,</br>email: str,</br>agency_ein: str,</br>middle_initial: str = None,</br>is_admin: bool = False,</br>is_active: bool = False,</br>):</br></br>if not first_name:</br>raise click.UsageError("First name is required")</br>if not last_name:</br>raise click.UsageError("Last name is required")</br>if not email:</br>raise click.UsageError("Email Address is required")</br>if not agency_ein:</br>raise click.UsageError("Agency EIN is required")</br></br>user = Users(</br>guid=generate_guid,</br>email=email,</br>first_name=first_name,</br>middle_initial=middle_initial,</br>last_name=last_name,</br>is_nyc_employee=True,</br>)</br>db.session.add(user)</br></br>agency_user = AgencyUsers(</br>user_guid=user.guid,</br>agency_ein=agency_ein,</br>is_agency_active=is_active,</br>is_agency_admin=is_admin,</br>is_primary_agency=True,</br>)</br></br>db.session.add(agency_user)</br>db.session.commit()</br>if is_admin:</br>redis_key = "{current_user_guid}-{update_user_guid}-{agency_ein}-{timestamp}".format(</br>current_user_guid="openrecords_support",</br>update_user_guid=user.guid,</br>agency_ein=agency_ein,</br>timestamp=datetime.now(),</br>)</br>make_user_admin.apply_async(</br>args=(user.guid, "openrecords_support", agency_ein), task_id=redis_key</br>)</br></br>print(user)</br></br></br>@app.cli.command()</br>@click.option("--agency_ein", prompt="Agency EIN (e.g. 0002)")</br>@click.option("--date_from", prompt="Date From (e.g. 2000-01-01")</br>@click.option("--date_to", prompt="Date To (e.g. 2000-02-01)")</br>@click.option("--emails", prompt="Emails (e.g. test@mailinator.com,test2@mailinator.com)")</br><hr><code>generate_closing_report(agency_ein: str, date_from: str, date_to: str, emails: str):</code><br/>def generate_closing_report(agency_ein: str, date_from: str, date_to: str, emails: str):</br></br>email_list = emails.split(',')</br>generate_request_closing_user_report(agency_ein, date_from, date_to, email_list)</br></br></br>@app.cli.command</br><hr><code>es_recreate():</code><br/>def es_recreate():</br></br>recreate()</br></br></br>@app.cli.command</br><hr><code>routes():</code><br/>def routes():</br></br></br>output = []</br>for rule in app.url_map.iter_rules():</br>options = {}</br>for arg in rule.arguments:</br>if arg == "year":</br>options[arg] = "{}".format(datetime.now().year)</br>continue</br>options[arg] = "[{}]".format(arg)</br></br>methods = ",".join(rule.methods)</br>url = url_for(rule.endpoint, **options)</br></br>if str(datetime.now().year) in url:</br>url = url.replace(str(datetime.now().year), "[year]")</br>line = unquote("{:50} {:20} {}".format(rule.endpoint, methods, url))</br></br>output.append(line)</br></br>for line in sorted(output):</br>print(line)</br></br></br>@app.cli.command()</br>@click.option("--test-name", help="Specify tests (file, class, or specific test)")</br>@click.option(</br>--coverage/--no-coverage", "use_coverage", default=False, help="Run tests under code coverage.</br>)</br>@click.option("--verbose", is_flag=True, default=False, help="Py.Test verbose mode")</br><hr><code>test(test_name: str = None, use_coverage: bool = False, verbose: bool = False):</code><br/>def test(test_name: str = None, use_coverage: bool = False, verbose: bool = False):</br>Run the unit tests.</br>Run the unit tests.</br></br>if use_coverage and not os.environ.get("FLASK_COVERAGE"):</br>os.environ["FLASK_COVERAGE"] = "1</br>os.execvp(sys.executable, [sys.executable] + sys.argv)</br></br>command = []</br></br>if verbose:</br>command.append("-v")</br></br>if test_name:</br>command.append("tests/{test_name}".format(test_name=test_name))</br>else:</br>command.append("tests/")</br></br>pytest.main(command)</br></br>if COV:</br>COV.stop()</br>COV.save()</br>print("Coverage Summary:")</br>COV.report()</br>COV.html_report()</br>COV.xml_report()</br></br></br>@app.cli.command()</br>@click.option(</br>--length",</br>default=25,</br>help="Number of functions to include in the profiler report.",</br>)</br>@click.option(</br>--profile-dir", default=None, help="Directory where profiler data files are saved.</br>)</br><hr><code>profile(length, profile_dir):</code><br/>def profile(length, profile_dir):</br></br></br>app.wsgi_app = ProfilerMiddleware(</br>app.wsgi_app, restrictions=[length], profile_dir=profile_dir</br>)</br>app.run()</br></br></br>@app.cli.command()</br><hr><code>deploy():</code><br/>def deploy():</br></br></br># migrate database to latest revision</br>upgrade()</br></br># pre-populate</br>list(</br>map(</br>lambda x: x.populate(),</br>(</br>Roles,</br>Agencies,</br>Reasons,</br>Users,</br>LetterTemplates,</br>EnvelopeTemplates,</br>CustomRequestForms,</br>),</br>)</br>)</br>recreate()</br></br></br>if __name__ == "__main__":</br>main()</br>
+</br>`.`  `.`         ...`       ....         ...`</br>`;'',  :##+   +##`#####,    .######`  +##.+####</br>.'''`      `### +##'    ###,:##:    ###`'##+   .###</br>`'''''''''''.   ''''''''''''.   .''''''''`      ,''''''''.    ;'''''''''':   .''''''''''.     `'''''''',</br>`''':::::;''''  '''';;;;;;;;. .'''':.,:''''`  :'''',.,:''''.  ;'''::::,''''. .''';;;;''''',  ;'''.``.''''`</br>`'''.     .'''. ''''         ,'''.      :''' :'''`      ,'''. ;'''      '''; .'''`     ,''', ''',     :,:.</br>`'''.    `''''  ''''''''''': ''';           `''',        ''': ;'''     ,'''` .'''`      ;''' .''''''':.</br>`'''''''''''.   '''''''''''; ''':           `'''.        '''; ;'''''''''':   .'''`      ;'''    ,''''''''.</br>`'''.     ''''  ''''         :'''`      :''' ''''       .'''. ;'''     ,'''` .'''`      ''':,:::      ;'''`</br>`'''.     .'''  ''''          '''',    :'''.  ''''.    :''':  ;'''      ''', .'''.   .;'''' .''':     ;</br>`'''.      '''. ''''''''''''.  .''''''''''     .''''''''''`   ;'''      ;''; .'''''''''''.    '''''''''';</br></br></br>import os</br>from dotenv import load_dotenv</br></br>basedir = os.path.abspath(os.path.dirname(__file__))</br></br>dotenv_path = os.path.join(basedir, '.env')</br>load_dotenv(dotenv_path)</br></br>from datetime import datetime</br>from urllib.parse import unquote</br>import sys</br></br>import click</br></br>from flask import url_for</br>from flask.cli import main</br>from flask_migrate import Migrate, upgrade</br>from werkzeug.contrib.profiler import ProfilerMiddleware</br></br>from app import create_app, db</br>from app.models import (</br>Agencies,</br>AgencyUsers,</br>CustomRequestForms,</br>Determinations,</br>Emails,</br>EnvelopeTemplates,</br>Envelopes,</br>Events,</br>LetterTemplates,</br>Letters,</br>Reasons,</br>Requests,</br>Responses,</br>Roles,</br>UserRequests,</br>Users,</br>)</br>from app.report.utils import generate_request_closing_user_report, generate_monthly_metrics_report</br>from app.request.utils import generate_guid</br>from app.search.utils import recreate</br>from app.user.utils import make_user_admin</br></br>if os.getenv('FLASK_ENV') != 'production':</br>import pytest</br></br>app = create_app(os.getenv("FLASK_CONFIG") or "default")</br></br>migrate = Migrate(app, db)</br></br>COV = None</br>if os.environ.get("FLASK_COVERAGE"):</br>import coverage</br></br>COV = coverage.coverage(</br>branch=True, include="app/*", config_file=os.path.join(os.curdir, ".coveragerc")</br>)</br>COV.start()</br></br></br>@app.shell_context_processor</br><hr><code>make_shell_context():</code><br/>def make_shell_context():</br>return dict(</br>app=app,</br>db=db,</br>Users=Users,</br>Agencies=Agencies,</br>Determinations=Determinations,</br>Requests=Requests,</br>Responses=Responses,</br>Events=Events,</br>Reasons=Reasons,</br>Roles=Roles,</br>UserRequests=UserRequests,</br>AgencyUsers=AgencyUsers,</br>Emails=Emails,</br>Letters=Letters,</br>LetterTemplates=LetterTemplates,</br>Envelopes=Envelopes,</br>EnvelopeTemplates=EnvelopeTemplates,</br>CustomRequestForms=CustomRequestForms,</br>)</br></br></br>@app.cli.command()</br>@click.option("--first_name", prompt="First Name")</br>@click.option("--middle_initial", default="", prompt="Middle Initial")</br>@click.option("--last_name", prompt="Last Name")</br>@click.option("--email", prompt="Email Address")</br>@click.option("--agency_ein", prompt="Agency EIN (e.g. 0002)")</br>@click.option(</br>--is_admin", default=False, prompt="Should user be made an agency administrator?</br>)</br>@click.option(</br>--is_active", default=False, prompt="Should user be activated immediately?</br>)</br><hr><code>add_user(</code><br/>def add_user(</br>first_name: str,</br>last_name: str,</br>email: str,</br>agency_ein: str,</br>middle_initial: str = None,</br>is_admin: bool = False,</br>is_active: bool = False,</br>):</br></br>if not first_name:</br>raise click.UsageError("First name is required")</br>if not last_name:</br>raise click.UsageError("Last name is required")</br>if not email:</br>raise click.UsageError("Email Address is required")</br>if not agency_ein:</br>raise click.UsageError("Agency EIN is required")</br></br>user = Users(</br>guid=generate_guid(),</br>first_name=first_name,</br>middle_initial=middle_initial,</br>last_name=last_name,</br>email=email,</br>email_validated=False,</br>is_nyc_employee=True,</br>is_anonymous_requester=False,</br>)</br>db.session.add(user)</br></br>agency_user = AgencyUsers(</br>user_guid=user.guid,</br>agency_ein=agency_ein,</br>is_agency_active=is_active,</br>is_agency_admin=is_admin,</br>is_primary_agency=True,</br>)</br></br>db.session.add(agency_user)</br>db.session.commit()</br>if is_admin:</br>redis_key = "{current_user_guid}-{update_user_guid}-{agency_ein}-{timestamp}".format(</br>current_user_guid="openrecords_support",</br>update_user_guid=user.guid,</br>agency_ein=agency_ein,</br>timestamp=datetime.now(),</br>)</br>make_user_admin.apply_async(</br>args=(user.guid, "openrecords_support", agency_ein), task_id=redis_key</br>)</br></br>print(user)</br></br></br>@app.cli.command()</br>@click.option("--agency_ein", prompt="Agency EIN (e.g. 0002)")</br>@click.option("--date_from", prompt="Date From (e.g. 2000-01-01")</br>@click.option("--date_to", prompt="Date To (e.g. 2000-02-01)")</br>@click.option("--emails", prompt="Emails (e.g. test@mailinator.com,test2@mailinator.com)")</br><hr><code>generate_closing_report(agency_ein: str, date_from: str, date_to: str, emails: str):</code><br/>def generate_closing_report(agency_ein: str, date_from: str, date_to: str, emails: str):</br></br>email_list = emails.split(',')</br>generate_request_closing_user_report(agency_ein, date_from, date_to, email_list)</br></br></br>@app.cli.command()</br>@click.option("--agency_ein", prompt="Agency EIN (e.g. 0002)")</br>@click.option("--date_from", prompt="Date From (e.g. 2000-01-01")</br>@click.option("--date_to", prompt="Date To (e.g. 2000-02-01)")</br>@click.option("--emails", prompt="Emails (e.g. test@mailinator.com,test2@mailinator.com)")</br><hr><code>generate_monthly_report(agency_ein: str, date_from: str, date_to: str, emails: str):</code><br/>def generate_monthly_report(agency_ein: str, date_from: str, date_to: str, emails: str):</br></br>email_list = emails.split(',')</br>generate_monthly_metrics_report(agency_ein, date_from, date_to, email_list)</br></br></br>@app.cli.command()</br><hr><code>es_recreate():</code><br/>def es_recreate():</br></br>recreate()</br></br></br>@app.cli.command</br><hr><code>routes():</code><br/>def routes():</br></br></br>output = []</br>for rule in app.url_map.iter_rules():</br>options = {}</br>for arg in rule.arguments:</br>if arg == "year":</br>options[arg] = "{}".format(datetime.now().year)</br>continue</br>options[arg] = "[{}]".format(arg)</br></br>methods = ",".join(rule.methods)</br>url = url_for(rule.endpoint, **options)</br></br>if str(datetime.now().year) in url:</br>url = url.replace(str(datetime.now().year), "[year]")</br>line = unquote("{:50} {:20} {}".format(rule.endpoint, methods, url))</br></br>output.append(line)</br></br>for line in sorted(output):</br>print(line)</br></br></br>@app.cli.command()</br>@click.option("--test-name", help="Specify tests (file, class, or specific test)")</br>@click.option(</br>--coverage/--no-coverage", "use_coverage", default=False, help="Run tests under code coverage.</br>)</br>@click.option("--verbose", is_flag=True, default=False, help="Py.Test verbose mode")</br><hr><code>test(test_name: str = None, use_coverage: bool = False, verbose: bool = False):</code><br/>def test(test_name: str = None, use_coverage: bool = False, verbose: bool = False):</br>Run the unit tests.</br>Run the unit tests.</br></br>if use_coverage and not os.environ.get("FLASK_COVERAGE"):</br>os.environ["FLASK_COVERAGE"] = "1</br>os.execvp(sys.executable, [sys.executable] + sys.argv)</br></br>command = []</br></br>if verbose:</br>command.append("-v")</br></br>if test_name:</br>command.append("tests/{test_name}".format(test_name=test_name))</br>else:</br>command.append("tests/")</br></br>pytest.main(command)</br></br>if COV:</br>COV.stop()</br>COV.save()</br>print("Coverage Summary:")</br>COV.report()</br>COV.html_report()</br>COV.xml_report()</br></br></br>@app.cli.command()</br>@click.option(</br>--length",</br>default=25,</br>help="Number of functions to include in the profiler report.",</br>)</br>@click.option(</br>--profile-dir", default=None, help="Directory where profiler data files are saved.</br>)</br><hr><code>profile(length, profile_dir):</code><br/>def profile(length, profile_dir):</br></br></br>app.wsgi_app = ProfilerMiddleware(</br>app.wsgi_app, restrictions=[length], profile_dir=profile_dir</br>)</br>app.run()</br></br></br>@app.cli.command()</br><hr><code>deploy():</code><br/>def deploy():</br></br></br># migrate database to latest revision</br>upgrade()</br></br># pre-populate</br>list(</br>map(</br>lambda x: x.populate(),</br>(</br>Roles,</br>Agencies,</br>Reasons,</br>Users,</br>LetterTemplates,</br>EnvelopeTemplates,</br>CustomRequestForms,</br>),</br>)</br>)</br>recreate()</br></br></br>if __name__ == "__main__":</br>main()</br>
                    </p>
                 </details>
 

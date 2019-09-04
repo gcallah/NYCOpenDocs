@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 app/response/utils.py:47:1: F401 'app.constants.TINYMCE_EDITABLE_P_TAG' imported but unused
 app/response/utils.py:1739:45: E127 continuation line over-indented for visual indent
 app/response/utils.py:2233:121: E501 line too long (121 > 120 characters)
 app/response/utils.py:2430:121: E501 line too long (121 > 120 characters)
+=======
+No problems to report
+>>>>>>> 718b911092f1cdcd93d785941247f1d49175f4a5

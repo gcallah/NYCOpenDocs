@@ -1,1 +1,1 @@
-This CSS file has styles set for parsley errors in input, select, and textarea. Styles are also set for displaying a list of parsley errors.
+This CSS file has styles set for parsley errors in input, select, and text area. Styles are also set for displaying a list of parsley errors.

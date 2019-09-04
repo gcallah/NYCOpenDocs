@@ -1,2 +1,6 @@
+<<<<<<< HEAD
 app/report/utils.py:69:43: E127 continuation line over-indented for visual indent
 app/report/utils.py:69:121: E501 line too long (121 > 120 characters)
+=======
+No problems to report
+>>>>>>> 718b911092f1cdcd93d785941247f1d49175f4a5

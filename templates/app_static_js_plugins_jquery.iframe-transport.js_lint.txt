@@ -1,9 +1,13 @@
 
 
-  14:1   error    Unnecessary semicolon           no-extra-semi
-  21:17  error    Unexpected require()            global-require
-  47:64  error    Script URL is a form of eval    no-script-url
-  75:36  warning  Function has a complexity of 9  complexity
+  12:11  error    'define' is already defined as a built-in global variable    no-redeclare
+  12:19  error    'require' is already defined as a built-in global variable   no-redeclare
+  12:28  error    'window' is already defined as a built-in global variable    no-redeclare
+  12:36  error    'document' is already defined as a built-in global variable  no-redeclare
+  14:1   error    Unnecessary semicolon                                        no-extra-semi
+  21:17  error    Unexpected require()                                         global-require
+  47:64  error    Script URL is a form of eval                                 no-script-url
+  75:36  warning  Function has a complexity of 9. Maximum allowed is 6         complexity
 
-✖ 4 problems (3 errors, 1 warning)
+✖ 8 problems (7 errors, 1 warning)
   1 error and 0 warnings potentially fixable with the `--fix` option.

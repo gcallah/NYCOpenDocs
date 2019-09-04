@@ -1,2 +1,7 @@
-Contains a definition schema for agency features. In the schema, there consists of an ID for agency features and definitions, which are the properties of the agency features. 
-<br>Properties include monitoring agency request and specific request instructions. Each property has an ID, type, and its own properties, such as title and file path. Properties are defined with valids associated with the agency features.
+Contains a definition schema for agency features.
+In the schema, there consists of an ID for agency features and definitions,
+which are the properties of the agency features.
+<br>Properties include monitoring agency request and specific request
+instructions. Each property has an ID, type, and its own properties, such
+as title and file path. Properties are defined associated with 
+the agency features.

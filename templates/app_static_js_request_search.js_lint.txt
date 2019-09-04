@@ -1,20 +1,11 @@
 
 
-<<<<<<< HEAD
    77:5   warning  Function 'valiDate' has a complexity of 10                             complexity
   145:43  error    Unexpected trailing comma                                              comma-dangle
   243:41  error    Empty block statement                                                  no-empty
   450:13  error    Expected an assignment or function call and instead saw an expression  no-unused-expressions
   462:30  error    Missing radix parameter                                                radix
   472:30  error    Missing radix parameter                                                radix
-=======
-   78:5   warning  Function 'valiDate' has a complexity of 10. Maximum allowed is 6       complexity
-  153:43  error    Unexpected trailing comma                                              comma-dangle
-  254:40  error    Empty block statement                                                  no-empty
-  465:13  error    Expected an assignment or function call and instead saw an expression  no-unused-expressions
-  477:30  error    Missing radix parameter                                                radix
-  487:30  error    Missing radix parameter                                                radix
->>>>>>> 718b911092f1cdcd93d785941247f1d49175f4a5
 
 ✖ 6 problems (5 errors, 1 warning)
   1 error and 0 warnings potentially fixable with the `--fix` option.

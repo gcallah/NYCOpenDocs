@@ -1,1 +1,7 @@
-No problems to report
+migrations/versions/971f341c0204_adding_agency_features_json_column_to_.py:13:1: E402 module level import not at top of file
+migrations/versions/971f341c0204_adding_agency_features_json_column_to_.py:14:1: E402 module level import not at top of file
+migrations/versions/971f341c0204_adding_agency_features_json_column_to_.py:15:1: E402 module level import not at top of file
+migrations/versions/971f341c0204_adding_agency_features_json_column_to_.py:19:5: E266 too many leading '#' for block comment
+migrations/versions/971f341c0204_adding_agency_features_json_column_to_.py:26:5: E266 too many leading '#' for block comment
+migrations/versions/971f341c0204_adding_agency_features_json_column_to_.py:30:5: E266 too many leading '#' for block comment
+migrations/versions/971f341c0204_adding_agency_features_json_column_to_.py:32:5: E266 too many leading '#' for block comment

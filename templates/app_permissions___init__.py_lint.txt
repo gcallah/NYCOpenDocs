@@ -1,1 +1,2 @@
-No problems to report
+app/permissions/__init__.py:5:1: E402 module level import not at top of file
+app/permissions/__init__.py:5:1: F401 '.views' imported but unused

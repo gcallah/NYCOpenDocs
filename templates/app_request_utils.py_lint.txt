@@ -1,7 +1,3 @@
-<<<<<<< HEAD
 app/request/utils.py:41:1: F401 'app.lib.date_utils.get_following_date' imported but unused
 app/request/utils.py:41:1: F401 'app.lib.date_utils.is_business_day' imported but unused
 app/request/utils.py:387:121: E501 line too long (135 > 120 characters)
-=======
-No problems to report
->>>>>>> 718b911092f1cdcd93d785941247f1d49175f4a5

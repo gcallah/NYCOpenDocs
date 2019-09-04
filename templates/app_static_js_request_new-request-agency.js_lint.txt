@@ -1,9 +1,5 @@
 
 
-<<<<<<< HEAD
   221:54  warning  Function has a complexity of 18  complexity
-=======
-  223:54  warning  Function has a complexity of 18. Maximum allowed is 6  complexity
->>>>>>> 718b911092f1cdcd93d785941247f1d49175f4a5
 
 ✖ 1 problem (0 errors, 1 warning)

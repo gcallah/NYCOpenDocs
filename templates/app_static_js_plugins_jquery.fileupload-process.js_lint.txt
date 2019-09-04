@@ -1,6 +1,1 @@
 
-
-  13:11  error  'define' is already defined as a built-in global variable  no-redeclare
-  13:19  error  'window' is already defined as a built-in global variable  no-redeclare
-
-✖ 2 problems (2 errors, 0 warnings)

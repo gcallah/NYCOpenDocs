@@ -1,7 +1,3 @@
-<<<<<<< HEAD
 app/request/views.py:261:16: E713 test for membership should be 'not in'
 app/request/views.py:481:80: W291 trailing whitespace
 app/request/views.py:482:13: W291 trailing whitespace
-=======
-No problems to report
->>>>>>> 718b911092f1cdcd93d785941247f1d49175f4a5

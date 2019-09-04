@@ -1,6 +1,2 @@
-<<<<<<< HEAD
 app/__init__.py:27:1: F401 'app.constants.OPENRECORDS_DL_EMAIL' imported but unused
 app/__init__.py:81:1: W293 blank line contains whitespace
-=======
-No problems to report
->>>>>>> 718b911092f1cdcd93d785941247f1d49175f4a5

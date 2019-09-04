@@ -1,1 +1,4 @@
-No problems to report
+app/user_request/utils.py:27:121: E501 line too long (121 > 120 characters)
+app/user_request/utils.py:144:5: F841 local variable 'tmp' is assigned to but never used
+app/user_request/utils.py:202:5: F841 local variable 'tmp' is assigned to but never used
+app/user_request/utils.py:335:121: E501 line too long (175 > 120 characters)

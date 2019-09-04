@@ -1,1 +1,1 @@
-No problems to report
+app/lib/json_schema.py:13:43: W291 trailing whitespace

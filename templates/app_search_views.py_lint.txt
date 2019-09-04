@@ -1,5 +1,1 @@
-<<<<<<< HEAD
 app/search/views.py:15:1: F401 'app.search.constants.ALL_RESULTS_CHUNKSIZE' imported but unused
-=======
-No problems to report
->>>>>>> 718b911092f1cdcd93d785941247f1d49175f4a5

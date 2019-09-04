@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 app/lib/pdf.py:38:121: E501 line too long (121 > 120 characters)
 app/lib/pdf.py:116:31: W605 invalid escape sequence '\&'
 app/lib/pdf.py:117:31: W605 invalid escape sequence '\%'
@@ -7,6 +6,3 @@ app/lib/pdf.py:119:31: W605 invalid escape sequence '\#'
 app/lib/pdf.py:120:31: W605 invalid escape sequence '\_'
 app/lib/pdf.py:121:31: W605 invalid escape sequence '\{'
 app/lib/pdf.py:122:31: W605 invalid escape sequence '\}'
-=======
-No problems to report
->>>>>>> 718b911092f1cdcd93d785941247f1d49175f4a5

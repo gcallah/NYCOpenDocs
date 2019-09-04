@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 app/request/forms.py:246:80: E711 comparison to None should be 'if cond is None:'
 app/request/forms.py:252:79: E711 comparison to None should be 'if cond is None:'
 app/request/forms.py:258:82: E711 comparison to None should be 'if cond is None:'
 app/request/forms.py:348:48: E711 comparison to None should be 'if cond is None:'
 app/request/forms.py:402:44: E711 comparison to None should be 'if cond is None:'
 app/request/forms.py:409:44: E711 comparison to None should be 'if cond is None:'
-=======
-No problems to report
->>>>>>> 718b911092f1cdcd93d785941247f1d49175f4a5

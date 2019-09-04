@@ -1,1 +1,1 @@
-No problems to report
+app/admin/views.py:98:35: E712 comparison to True should be 'if cond is True:' or 'if cond:'

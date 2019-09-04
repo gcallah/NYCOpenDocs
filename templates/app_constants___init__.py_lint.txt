@@ -1,5 +1,1 @@
-<<<<<<< HEAD
 app/constants/__init__.py:123:2: W292 no newline at end of file
-=======
-No problems to report
->>>>>>> 718b911092f1cdcd93d785941247f1d49175f4a5

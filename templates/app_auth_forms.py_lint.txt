@@ -1,5 +1,1 @@
-<<<<<<< HEAD
 app/auth/forms.py:13:1: F401 'app.models.Agencies' imported but unused
-=======
-No problems to report
->>>>>>> 718b911092f1cdcd93d785941247f1d49175f4a5

@@ -12,4 +12,3 @@ openrecords.py:78:1: E402 module level import not at top of file
 openrecords.py:79:1: E402 module level import not at top of file
 openrecords.py:80:1: E402 module level import not at top of file
 openrecords.py:81:1: E402 module level import not at top of file
-openrecords.py:137:19: E999 SyntaxError: invalid syntax

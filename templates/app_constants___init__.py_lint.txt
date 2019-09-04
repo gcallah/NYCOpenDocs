@@ -1,1 +1,1 @@
-app/constants/__init__.py:122:2: W292 no newline at end of file
+app/constants/__init__.py:123:2: W292 no newline at end of file

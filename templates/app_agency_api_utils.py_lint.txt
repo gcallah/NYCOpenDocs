@@ -1,4 +1,3 @@
-app/agency/api/utils.py:10:43: E999 SyntaxError: invalid syntax
 app/agency/api/utils.py:50:17: E131 continuation line unaligned for hanging indent
 app/agency/api/utils.py:52:74: E711 comparison to None should be 'if cond is None:'
 app/agency/api/utils.py:54:17: E131 continuation line unaligned for hanging indent
